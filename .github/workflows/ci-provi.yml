@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ provi ]
 
 jobs:
   update:
@@ -23,6 +23,6 @@ jobs:
           cd joegatt.net-server
           eval "$(ssh-agent -s)"
           ssh-add ~/.ssh/id_rsa_deploykey_unsigned
-          cd aphroconfuso.mt
-          git checkout main
+          cd aphroconfuso.mt-provi
+          git checkout provi
           git pull
