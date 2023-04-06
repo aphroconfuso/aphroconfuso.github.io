@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Eleventy Base Blog v8</title>
+		<meta name="description" content="I am writing about my experiences as a naval navel-gazer.">
+		<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="Eleventy Base Blog v8">
+		<link rel="alternate" href="/feed/feed.json" type="application/json" title="Eleventy Base Blog v8">
+		
+		<style>* { box-sizing: border-box; }
+/* Defaults */
+:root {
+	--font-family: -apple-system, system-ui, sans-serif;
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--color-gray-20: #e0e0e0;
+	--color-gray-50: #C0C0C0;
+	--color-gray-90: #333;
+
+	--background-color: #fff;
+
+	--text-color: var(--color-gray-90);
+	--text-color-link: #082840;
+	--text-color-link-active: #5f2b48;
+	--text-color-link-visited: #17050F;
+
+	--syntax-tab-size: 2;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-gray-20: #e0e0e0;
+		--color-gray-50: #C0C0C0;
+		--color-gray-90: #dad8d8;
+
+		/* --text-color is assigned to --color-gray-_ above */
+		--text-color-link: #1493fb;
+		--text-color-link-active: #6969f7;
+		--text-color-link-visited: #a6a6f8;
+
+		--background-color: #15202b;
+	}
+}
+
+
+/* Global stylesheet */
+* {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0 auto;
+	font-family: var(--font-family);
+	color: var(--text-color);
+	background-color: var(--background-color);
+}
+html {
+	overflow-y: scroll;
+}
+body {
+	max-width: 40em;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+p:last-child {
+	margin-bottom: 0;
+}
+p {
+	line-height: 1.5;
+}
+
+li {
+	line-height: 1.5;
+}
+
+a[href] {
+	color: var(--text-color-link);
+}
+a[href]:visited {
+	color: var(--text-color-link-visited);
+}
+a[href]:hover,
+a[href]:active {
+	color: var(--text-color-link-active);
+}
+
+main {
+	padding: 1rem;
+}
+main :first-child {
+	margin-top: 0;
+}
+
+header {
+	border-bottom: 1px dashed var(--color-gray-20);
+}
+header:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.links-nextprev {
+	list-style: none;
+	border-top: 1px dashed var(--color-gray-20);
+	padding: 1em 0;
+}
+
+table {
+	margin: 1em 0;
+}
+table td,
+table th {
+	padding-right: 1em;
+}
+
+pre,
+code {
+	font-family: var(--font-family-monospace);
+}
+pre:not([class*="language-"]) {
+	margin: .5em 0;
+	line-height: 1.375; /* 22px /16 */
+	-moz-tab-size: var(--syntax-tab-size);
+	-o-tab-size: var(--syntax-tab-size);
+	tab-size: var(--syntax-tab-size);
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+}
+code {
+	word-break: break-all;
+}
+
+/* Header */
+header {
+	display: flex;
+	gap: 1em .5em;
+	flex-wrap: wrap;
+	align-items: center;
+	padding: 1em;
+}
+.home-link {
+	font-size: 1em; /* 16px /16 */
+	font-weight: 700;
+	margin-right: 2em;
+}
+.home-link:link:not(:hover) {
+	text-decoration: none;
+}
+
+/* Nav */
+.nav {
+	display: flex;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.nav-item {
+	display: inline-block;
+	margin-right: 1em;
+}
+.nav-item a[href]:not(:hover) {
+	text-decoration: none;
+}
+.nav a[href][aria-current="page"] {
+	text-decoration: underline;
+}
+
+/* Posts list */
+.postlist {
+	list-style: none;
+	padding: 0;
+	padding-left: 1.5rem;
+}
+.postlist-item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	counter-increment: start-from -1;
+	margin-bottom: 1em;
+}
+.postlist-item:before {
+	display: inline-block;
+	pointer-events: none;
+	content: "" counter(start-from, decimal-leading-zero) ". ";
+	line-height: 100%;
+	text-align: right;
+	margin-left: -1.5rem;
+}
+.postlist-date,
+.postlist-item:before {
+	font-size: 0.8125em; /* 13px /16 */
+	color: var(--color-gray-90);
+}
+.postlist-date {
+	word-spacing: -0.5px;
+}
+.postlist-link {
+	font-size: 1.1875em; /* 19px /16 */
+	font-weight: 700;
+	flex-basis: calc(100% - 1.5rem);
+	padding-left: .25em;
+	padding-right: .5em;
+	text-underline-position: from-font;
+	text-underline-offset: 0;
+	text-decoration-thickness: 1px;
+}
+.postlist-item-active .postlist-link {
+	font-weight: bold;
+}
+
+/* Tags */
+.post-tag {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-transform: capitalize;
+	font-style: italic;
+}
+.postlist-item > .post-tag {
+	align-self: center;
+}
+
+/* Tags list */
+.post-metadata {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: .5em;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.post-metadata time {
+	margin-right: 1em;
+}
+
+/* Direct Links / Markdown Headers */
+.header-anchor {
+	text-decoration: none;
+	font-style: normal;
+	font-size: 1em;
+	margin-left: .1em;
+}
+a[href].header-anchor,
+a[href].header-anchor:visited {
+	color: transparent;
+}
+a[href].header-anchor:focus,
+a[href].header-anchor:hover {
+	text-decoration: underline;
+}
+a[href].header-anchor:focus,
+:hover > a[href].header-anchor {
+	color: #aaa;
+}
+
+h2 + .header-anchor {
+	font-size: 1.5em;
+}</style>
+	</head>
+	<body>
+		<a href="#skip" class="visually-hidden">Skip to main content</a>
+
+		<header>
+			<a href="/" class="home-link">Eleventy Base Blog v8</a>
+			<nav>
+				<h2 class="visually-hidden">Top level navigation menu</h2>
+				<ul class="nav">
+					<li class="nav-item"><a href="/">Home</a></li>
+					<li class="nav-item"><a href="/xblog/">Archive</a></li>
+					<li class="nav-item"><a href="/about/">About Me</a></li>
+					<li class="nav-item"><a href="/stejjer/">Story</a></li>
+					<li class="nav-item"><a href="/kontributuri/">Contributors</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main id="skip">
+			
+<ol reversed class="postlist" style="counter-reset: start-from NaN">
+
+</ol>
+
+
+
+
+  
+
+  <h1>Franza Sabiħa</h1>
+<p>L-isem "Franza" ġej mill-kelma bil-Latin Francia, li letteralment tfisser "Art il-Franki".[13]</p>
+<p>Il-fruntieri ta' Franza moderna huma bejn wieħed u ieħor l-istess bħal dawk tal-Gallja l-antika fejn kienu joqgħodu l-Galli Ċeltiċ. Ġulju Ċesri kkonkwista l-Gallja u waqgħet taħt Ruma fl-ewwe seklu QK.[14] Bilmod il-Galli adottataw il-lingwa tar-Rumani (il-Latin li minnu evolva l-Franċiż) u l-kultura Rumana. Il-Kristjaneżmu deher l-ewwel darba fit-tieni u tielet seklu WK u kien stabbilit fir-raba' u ħames seklu.</p>
+<p><br>Franza fl-1477. Linji ħomor: Il-limiti tar-Renju ta' Franza; Ikħal ċar: id-dominju rjali<br>Fis-seklu 4 WK, it-tribujiet Ġermaniċi, prinċipalment il-Franki invadew il-Galli. Hekk beda l-isem Francie. L-isem modern "Franza" ġej mill-isem tar-Rejiet Kapetinġi ta' Franza madwar Pariġi. Il-Franki kienu l-ewwel tribù tal-Ewropa wara l-waqgħa tal-Imperu Ruman kkonvertew għall-Kristjaneżmu minflok l-Arjaneżmu. Il-Franċiż kienu jsejħu lilhom infushom "ir-Renju l-iżjed Kristjan ta' Franza".[15]</p>
+<p>It-Trattat ta' Verdun (843), qasam l-imperu ta' Karlumanju fi tliet partijiet.[16] L-ikbar parti kienet Francia tal-Punent. Bejn wieħed u ieħor kienet l-istess bħal Franza moderna.</p>
+<p>Id-dinastija Karolinġa ggvernat Franza sal-987, meta Hugues Capet sar Re ta'Franza. Dixxendenti tiegħu, il-Kapetinġi diretti, id-Dar ta' Valois u d-Dar ta' Bourbon unifikaw il-pajjiż permezz ta' ħafna gwerer u wirt dinatiku. Il-monarkija kienet fl-aqwa tagħha matul il-Seklu 17 fir-renju ta' Lwiġi XIV ta' Franza.[17] Dak iż-żmien Franza kellha l-akbar popolazzjoni fl- Ewropa. Il-pajjiż kellu influwenzata fuq il-politika, l-ekonomija, u l-kultura Ewropea. Il-Franċiż sar il-lingwa komuni tad-diplomazija fl-affarijiet Internazzjonali. Ħafna mill-Illuminiżmu ġie minn Franza. Ix-xjenzati Franċiżi għamlu skoperti xjentifiċi importanti fis-Seklu 18. Barra minn hekk Franza invadiet ħafna artijiet fl-Ameriki, l-Afrika u l-Asja.[18]</p>
+<p>Franza kellha monarkija sar-Rivoluzzjoni Franċiża fl-1789. Ir-Re Lwiġi XVI u martu Marie Antoinette ġew maqtulin fl-1793.[19] Eluf ta' ċittadini Franċiżi oħra kienu wkoll maqtula. Napuljun Bonaparte ħa kontroll tar-Repubblika fl-1799. Aktar tard għamel lilu nnifsu Imperatur tal-Ewwel Imperu (1804-1814). L-armati tiegħu ikkonkwistaw il=parti l-kbira tal-Ewropa kontinentali.</p>
+<p>Fl-1815 wara l-aħħar telfa ta' Napuljun fil-Battalja ta' Waterloo, qamet monarkija oħra. Iktar tard fl-1852, Louis-Napuljun Bonaparte ħoloq it-Tieni Imperu . Louis-Napoléon tneħħa wara t-telfa fil-Gwerra Franko-Prussjana tal-1870. It-Tielet Repubblika ħadet post ir-reġim tiegħu.[21]</p>
+<p>Fis-sekli 18 u 19 Franza bniet imperu kolonjali kbir . Il-imperu kien fih partijiet mill-Afrika tal-Punent u l-Asja tax-Xlokk. Il-kultura u l-politika ta' dawn ir-reġjuni kienu influwenzati minn Franza. Ħafna eks-kolonji għandhom il-Franċiż bħala lingwa uffiċjali.[22]</p>
+<p>Il-pajjiż ra l=ġlied kemm fl-Ewwel Gwerra Dinjija u kemm fit-tieni. Matul l-Ewwel Gwerra Dinjija, miljuni mietu fit-trinek, aktar minn miljun minnhom fil-Battalja tas-Somme.[23] Matul il-Tieni Gwerra Dinjija, in-Nazisti okkupaw Franza. L-Alleati niżlu l-art fin-Normandija fis-6 ta' Ġunju u nvadew in-Normandija u bdiet il-Battalja tan-Normandija. Il-forzi Ġermaniżi tilfu 'l Franza fi ftit xhur.</p>
+
+
+
+
+		</main>
+
+		<footer></footer>
+
+		<!-- Current page: /undefined/ -->
+	</body>
+</html>
