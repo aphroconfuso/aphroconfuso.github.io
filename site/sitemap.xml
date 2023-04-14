@@ -2,11 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 	
 	<url>
-		<loc>https://example.com/xblog/</loc>
-		<lastmod>2023-03-29</lastmod>
-	</url>
-	
-	<url>
 		<loc>https://example.com/</loc>
 		<lastmod>2023-03-29</lastmod>
 	</url>
@@ -17,17 +12,17 @@
 	</url>
 	
 	<url>
-		<loc>https://example.com/il-germanja-sabiha/</loc>
-		<lastmod>2023-03-29</lastmod>
-	</url>
-	
-	<url>
 		<loc>https://example.com/stejjer/</loc>
 		<lastmod>2023-03-29</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://example.com/joe-gatt/</loc>
+		<loc>https://example.com/loranne-vella-joe-gatt-franza-sabi%C4%A7a/</loc>
+		<lastmod>2023-03-29</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://example.com/loranne-vella/</loc>
 		<lastmod>2023-04-04</lastmod>
 	</url>
 	
