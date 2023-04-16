@@ -30,4 +30,9 @@
 		<loc>https://example.com/kontributuri/</loc>
 		<lastmod>2023-04-04</lastmod>
 	</url>
+	
+	<url>
+		<loc>https://example.com/dwarna/</loc>
+		<lastmod>2023-04-15</lastmod>
+	</url>
 </urlset>
