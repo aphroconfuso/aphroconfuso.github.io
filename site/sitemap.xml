@@ -2,11 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 	
 	<url>
-		<loc>https://aphroconfuso.mt/</loc>
-		<lastmod>2023-03-29</lastmod>
-	</url>
-	
-	<url>
 		<loc>https://aphroconfuso.mt/tags/</loc>
 		<lastmod>2023-03-29</lastmod>
 	</url>
@@ -17,7 +12,7 @@
 	</url>
 	
 	<url>
-		<loc>https://aphroconfuso.mt/-franza-sabi%C4%A7a/</loc>
+		<loc>https://aphroconfuso.mt/omar-nshea-gilgamex-dak-li-ra-l-qieg%C4%A7/</loc>
 		<lastmod>2023-03-29</lastmod>
 	</url>
 	
@@ -43,6 +38,46 @@
 	
 	<url>
 		<loc>https://aphroconfuso.mt/cookies/</loc>
+		<lastmod>2023-04-18</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/termini/</loc>
+		<lastmod>2023-04-18</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/privatezza/</loc>
+		<lastmod>2023-04-18</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/newsletter/</loc>
+		<lastmod>2023-04-18</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/kolofon/</loc>
+		<lastmod>2023-04-18</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/podcast/</loc>
+		<lastmod>2023-04-18</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/bookmarks/</loc>
+		<lastmod>2023-04-18</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/ittri/</loc>
+		<lastmod>2023-04-18</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/</loc>
 		<lastmod>2023-04-18</lastmod>
 	</url>
 </urlset>
