@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom" xml:base="en">
-	<title>Eleventy Base Blog v8</title>
-	<subtitle>I am writing about my experiences as a naval navel-gazer.</subtitle>
-	<link href="https://example.com/feed/feed.xml" rel="self"/>
-	<link href="https://example.com/"/>
-	<updated>2023-04-17T09:25:43Z</updated>
-	<id>https://example.com/</id>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="mt">
+	<title>Aphroconfuso</title>
+	<subtitle>Ġurnal letterarju.</subtitle>
+	<link href="https://aphroconfuso.mt/feed/feed.xml" rel="self"/>
+	<link href="https://aphroconfuso.mt/"/>
+	<updated>2023-04-18T08:51:37Z</updated>
+	<id>https://aphroconfuso.mt/</id>
 	<author>
-		<name>Your Name Here</name>
-		<email>youremailaddress@example.com</email>
+		<name>Aphroconfuso</name>
+		<email>l-edituri@aphroconfuso.mt</email>
 	</author>
 </feed>

@@ -2,37 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 	
 	<url>
-		<loc>https://example.com/</loc>
+		<loc>https://aphroconfuso.mt/</loc>
 		<lastmod>2023-03-29</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://example.com/tags/</loc>
+		<loc>https://aphroconfuso.mt/tags/</loc>
 		<lastmod>2023-03-29</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://example.com/stejjer/</loc>
+		<loc>https://aphroconfuso.mt/stejjer/</loc>
 		<lastmod>2023-03-29</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://example.com/-franza-sabi%C4%A7a/</loc>
+		<loc>https://aphroconfuso.mt/-franza-sabi%C4%A7a/</loc>
 		<lastmod>2023-03-29</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://example.com/noah-fabri/</loc>
+		<loc>https://aphroconfuso.mt/noah-fabri/</loc>
 		<lastmod>2023-04-04</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://example.com/kontributuri/</loc>
+		<loc>https://aphroconfuso.mt/kontributuri/</loc>
 		<lastmod>2023-04-04</lastmod>
 	</url>
 	
 	<url>
-		<loc>https://example.com/dwarna/</loc>
+		<loc>https://aphroconfuso.mt/dwarna/</loc>
 		<lastmod>2023-04-15</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/a%C4%8B%C4%8Bessibilit%C3%A0/</loc>
+		<lastmod>2023-04-18</lastmod>
 	</url>
 </urlset>
