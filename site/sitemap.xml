@@ -42,11 +42,6 @@
 	</url>
 	
 	<url>
-		<loc>https://aphroconfuso.mt/termini/</loc>
-		<lastmod>2023-04-18</lastmod>
-	</url>
-	
-	<url>
 		<loc>https://aphroconfuso.mt/privatezza/</loc>
 		<lastmod>2023-04-18</lastmod>
 	</url>
@@ -93,6 +88,11 @@
 	
 	<url>
 		<loc>https://aphroconfuso.mt/appuntamenti/</loc>
+		<lastmod>2023-04-20</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/drittijiet/</loc>
 		<lastmod>2023-04-20</lastmod>
 	</url>
 </urlset>
