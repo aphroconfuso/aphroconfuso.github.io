@@ -27,9 +27,6 @@ const checkMode = () => {
   const cookies = getCookie('cookies');
   const newsletter = getCookie('newsletter');
   document.getElementById("newsletter-container").classList.add('hide-placeholder');
-  if (!cookies) {
-    document.getElementById("newsletter-container").classList.remove('hide-user-settings-banner');
-  }
   if (!!location.hash && document.referrer.indexOf('//newsletter.aphroconfuso.mt')) {
     // REVIEW escape is deprecated
     const salted = decodeURIComponent(escape(window.atob((location.hash.substring(1)))));
