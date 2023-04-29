@@ -24,6 +24,9 @@ const getCookie = (cname) => {
 }
 
 const checkMode = () => {
+	if (!document.getElementById("newsletter-container")) {
+		return;
+	}
   const cookies = getCookie('cookies');
 	const newsletter = getCookie('newsletter');
   document.getElementById("newsletter-container").classList.add('hide-placeholder');
@@ -62,29 +65,16 @@ const checkMode = () => {
 checkMode();
 
 
+const addRemoveFontSizeClass = (size) => {
+	document.body.classList.remove('font-size-1','font-size-2','font-size-3','font-size-4');
+	document.body.classList.add(`font-size-${size}`);
+}
+
 const addFontSizeListeners = () => {
-	console.log('Add listeners');
-
-	document.getElementById("font-size-1").addEventListener('click', () => {
-		console.log('CLICKED 1');
-		document.body.classList.add('font-size-1');
-		document.body.classList.remove('font-size-2');
-		document.body.classList.remove('font-size-3');
-	});
-
-	document.getElementById("font-size-2").addEventListener('click', () => {
-		console.log('CLICKED 2');
-		document.body.classList.remove('font-size-1');
-		document.body.classList.add('font-size-2');
-		document.body.classList.remove('font-size-3');
-	});
-
-	document.getElementById("font-size-3").addEventListener('click', () => {
-		console.log('CLICKED 3');
-		document.body.classList.remove('font-size-1');
-		document.body.classList.remove('font-size-2');
-		document.body.classList.add('font-size-3');
-	});
+	document.getElementById("font-size-1").addEventListener('click', () => addRemoveFontSizeClass(1));
+	document.getElementById("font-size-2").addEventListener('click', () => addRemoveFontSizeClass(2));
+	document.getElementById("font-size-3").addEventListener('click', () => addRemoveFontSizeClass(3));
+	document.getElementById("font-size-4").addEventListener('click', () => addRemoveFontSizeClass(4));
 };
 
 addFontSizeListeners();
