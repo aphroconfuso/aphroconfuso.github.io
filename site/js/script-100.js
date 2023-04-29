@@ -25,7 +25,7 @@ const getCookie = (cname) => {
 
 const checkMode = () => {
   const cookies = getCookie('cookies');
-  const newsletter = getCookie('newsletter');
+	const newsletter = getCookie('newsletter');
   document.getElementById("newsletter-container").classList.add('hide-placeholder');
   if (!!location.hash && document.referrer.indexOf('//newsletter.aphroconfuso.mt')) {
     // REVIEW escape is deprecated
