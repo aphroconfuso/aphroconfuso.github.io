@@ -20,7 +20,7 @@
 		<meta property="og:image:type" content="image/jpeg">
 		<meta property="og:image:width" content="1200">
 		<meta property="og:image:height" content="630">
-		<link rel="stylesheet" href="/css/style-8cf34433.css">
+		<link rel="stylesheet" href="/css/style-ceff982b.css">
 		<script src="/js/script-100.js" defer></script>
 		<script>
 			var _paq = window._paq = window._paq || [];
@@ -103,10 +103,10 @@
 <p><strong>azzjonijiet</strong> bħal ikklikkjar fuq links u buttuni speċifiċi, skrolljar, eċċ.</p>
 <p>Jekk fis-settings tal-brawżer tiegħek għażilt “Do Not Track,” aħna nirrispettaw din l-għażla. Biex tagħmel din l-għażla, segwi l-istruzzjonijiet skond il-brawżer li tuża: <a href="https://support.google.com/chrome/answer/2790761?hl=en&amp;co=GENIE.Platform%3DDesktop">Chrome</a>, <a href="https://support.apple.com/en-gb/guide/safari/sfri40732/mac">Safari</a>, <a href="https://answers.microsoft.com/en-us/windows/forum/all/do-not-track-setting-in-edge/b3d7b40f-dfce-47f7-b9ab-9d0e940ccf97">Edge</a>, <a href="https://support.mozilla.org/en-US/kb/how-do-i-turn-do-not-track-feature">Firefox</a>, <a href="https://help.opera.com/en/latest/security-and-privacy/#:~:text=To%20set%20this%3A-,Go%20to%20Settings.,request%20with%20your%20browsing%20traffic">Opera</a>, eċċ.</p>
 <p>Mod ieħor kif twaqqafna milli niġbru statistika dwar iż-żjarat tiegħek huwa billi tagħżel hawn taħt.</p>
-					<div id="optInOutWrapper">
+					<p id="optInOutWrapper">
 						<input type="checkbox" id="optInOut" />
 						<label for="optInOut">&nbsp;</label>
-					</div>
+					</p>
 					<script>
 						document.addEventListener("DOMContentLoaded", function (event) {
 							function setOptOutText(element) {
@@ -123,8 +123,8 @@
 								window._paq.push([function () {
 									element.checked = !this.isUserOptedOut();
 									document.querySelector('label[for=optInOut]').innerHTML = this.isUserOptedOut()
-										? "<p>Bħalissa qed twaqqafna milli niġbru statistika dwar <u>iż-żjarat</u> tiegħek. Agħfas iċ-checkbox jekk trid tħallina niġbru din <u>l-informazzjoni</u>.</p>"
-										: "<p>Bħalissa qed niġbru informazzjoni dwar <u>iż-żjarat</u> tiegħek mingħajr ma nżommu ebda informazzjoni li tista’ tidentifikak personalment. Agħfas iċ-checkbox jekk trid twaqqafna milli niġbru din <u>l-informazzjoni</u>.</p>";
+										? "<p>Bħalissa qed twaqqafna milli niġbru statistika dwar <l-m>iż-żjarat</l-m> tiegħek. <span style=\"text-decoration:underline;cursor:pointer;\">Agħfas hawn</span> jekk trid tħallina niġbru din <l-m>l-informazzjoni</l-m>.</p>"
+										: "<p>Bħalissa qed niġbru informazzjoni dwar <l-m>iż-żjarat</l-m> tiegħek mingħajr ma nżommu ebda informazzjoni li tista’ tidentifikak personalment. <span style=\"text-decoration:underline;cursor:pointer;\">Agħfas hawn</span> jekk trid twaqqafna milli niġbru din <l-m>l-informazzjoni</l-m>.</p>";
 								}]);
 							}
 							var optOut = document.getElementById("optInOut");
