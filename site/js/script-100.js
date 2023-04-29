@@ -68,15 +68,21 @@ const addFontSizeListeners = () => {
 	document.getElementById("font-size-1").addEventListener('click', () => {
 		console.log('CLICKED 1');
 		document.body.classList.add('font-size-1');
+		document.body.classList.remove('font-size-2');
+		document.body.classList.remove('font-size-3');
 	});
 
 	document.getElementById("font-size-2").addEventListener('click', () => {
 		console.log('CLICKED 2');
+		document.body.classList.remove('font-size-1');
 		document.body.classList.add('font-size-2');
+		document.body.classList.remove('font-size-3');
 	});
 
 	document.getElementById("font-size-3").addEventListener('click', () => {
 		console.log('CLICKED 3');
+		document.body.classList.remove('font-size-1');
+		document.body.classList.remove('font-size-2');
 		document.body.classList.add('font-size-3');
 	});
 };
