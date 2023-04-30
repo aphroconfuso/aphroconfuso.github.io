@@ -153,9 +153,9 @@ const heartbeat = (wordsPerPixel, screenHeight, bodyStart, bodyEnd) => {
 		// Is it a plausible speed?
 		if (wordsRead > 100 && wordsPerSecond > 1 && wordsPerSecond < 3) {
 			console.log('Reporting:', wordsRead, 'words read');
-			const title = document.querySelector("meta[name=title]").content;
-			const author = document.querySelector("meta[name=author]").content;
-			_paq.push(['trackEvent', 'Qari', title, 'progress', parseInt(wordsRead)]);
+			const title = document.querySelector("h1").innerText;
+			const author = document.querySelector("h2").innerText;
+			window._paq.push(['trackEvent', 'Qari', title, 'progress', parseInt(wordsRead)]);
 			lastReportedScrollPosition = newScrollPosition;
 			lastReportedReadingTime = timeNow;
 			return;
