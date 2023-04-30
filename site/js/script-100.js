@@ -23,6 +23,8 @@ const getCookie = (cname) => {
   return "";
 }
 
+const getScrollPosition = () => window.pageYOffset || document.documentElement.scrollTop;
+
 const scrolling = () => {
   // if (!document.body.classList.contains('story')) {
   //   return;
@@ -88,6 +90,10 @@ const scrolling = () => {
 // 	document.getElementById("newsletter-container").classList.remove('hide-form');
 // 	return;
 // }
+const initialiseAfterNewsletter = () => {
+	return;
+	// initialiseNewsletter();
+}
 
 const addRemoveFontSizeClass = (size) => {
 	document.body.classList.remove('font-size-1','font-size-2','font-size-3','font-size-4');
@@ -107,13 +113,8 @@ const initialiseFontSizeListeners = () => {
 	document.getElementById("font-size-4").addEventListener('click', () => addRemoveFontSizeClass(4));
 };
 
-// const initialiseAfterNewsletter = () => {
-// 	initialiseNewsletter();
-// }
-
 // ANALITIKA u BOOKMARKS
 
-let wordcount;
 const readingTimeStart = new Date();
 
 const initialiseReadingHeartbeat = () => {
@@ -128,15 +129,21 @@ const initialiseReadingHeartbeat = () => {
 }
 
 
-const heartbeat = () {
-
+const heartbeat = () => {
+	console.log('x');
 }
 
+var lastScrollPosition, progress, hideScrollTools, pageHeight;
+
+var wordcount;
 const initialiseAfterWindow = () => {
-	if (wordcount) { initialiseReadingHeartbeat(wordcount); };
+	console.log('Initialising');
+	if (!!wordcount) { initialiseReadingHeartbeat(wordcount); };
 	window.addEventListener('scroll', (event) => {
 		scrolling();
 	});
+	lastScrollPosition = getScrollPosition();
+	pageHeight = document.body.scrollHeight;
 }
 
 const initialiseAfterBody = () => {
@@ -146,3 +153,5 @@ const initialiseAfterBody = () => {
 const initialiseAfterNav = () => {
 	initialiseFontSizeListeners();
 }
+
+window.onload = initialiseAfterWindow;
