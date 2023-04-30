@@ -30,7 +30,7 @@ const scrolling = () => {
   //   return;
   // }
   const newScrollPosition = getScrollPosition();
-  console.log(newScrollPosition);
+  // console.log(newScrollPosition);
   if (newScrollPosition < 120 || newScrollPosition < lastScrollPosition) {
     document.body.classList.add('show-nav');
   } else {
@@ -115,34 +115,74 @@ const initialiseFontSizeListeners = () => {
 
 // ANALITIKA u BOOKMARKS
 
-const readingTimeStart = new Date();
+var lastReportedReadingTime;
 
 const initialiseReadingHeartbeat = () => {
+	lastReportedReadingTime = new Date() / 1000;
 	const body = document.getElementById('body-text');
 	const bodyHeight = body.offsetHeight;
 	const bodyStart = body.offsetTop;
 	const bodyEnd = bodyStart + bodyHeight;
 	const screenHeight = window.innerHeight;
-	const wordsPerScreen = parseInt(wordcount * screenHeight / bodyHeight);
-
-	console.log(wordcount, bodyHeight, screenHeight, wordsPerScreen);
+	const wordsPerScreen = wordcount * screenHeight / bodyHeight;
+	const wordsPerPixel = wordcount / bodyHeight;
+	const heartbeatId = setInterval(heartbeat, 2000, wordsPerPixel, screenHeight);
 }
 
+const heartbeat = (wordsPerPixel, screenHeight, bodyStart, bodyEnd) => {
+	console.log('Heartbeat...');
+	// dismiss: too soon, etc?
+	// record scrollPosition
+	// is scrollposition higher than previos one?
+	// has a plausible amount of time passed?
+	// ===> report, set bookmark, update
+	const timeNow = new Date() / 1000;
+	const secondsElapsed =  timeNow - lastReportedReadingTime;
+	const newScrollPosition = getScrollPosition();
 
-const heartbeat = () => {
-	console.log('x');
+	// console.log(newScrollPosition, lastReportedScrollPosition, secondsElapsed);
+	if (newScrollPosition > bodyStart || newScrollPosition > bodyEnd) {
+		return;
+	}
+
+	if (newScrollPosition > lastReportedScrollPosition) {
+		const pixelProgress = newScrollPosition - lastReportedScrollPosition;
+		const wordsRead = wordsPerPixel * pixelProgress;
+		const wordsPerSecond = wordsRead / secondsElapsed;
+
+		// console.log('wordsRead: ', wordsRead, 'wordsPerSecond: ', wordsPerSecond);
+
+		// Is it a plausible speed?
+		if (wordsRead > 100 && wordsPerSecond > 1 && wordsPerSecond < 3) {
+			console.log('Reporting:', wordsRead, 'words read');
+			const title = document.querySelector("meta[name=title]").content;
+			const author = document.querySelector("meta[name=author]").content;
+			_paq.push(['trackEvent', 'Qari', author, title, parseInt(wordsRead)]);
+			lastReportedScrollPosition = newScrollPosition;
+			lastReportedReadingTime = timeNow;
+			return;
+		}
+		// Shall we reset?
+		if (pixelProgress > screenHeight) {
+			console.log('Resetting...');
+			lastReportedScrollPosition = newScrollPosition;
+			lastReportedReadingTime = timeNow;
+		}
+		return;
+	}
 }
 
-var lastScrollPosition, progress, hideScrollTools, pageHeight;
+var lastScrollPosition, lastReportedScrollPosition, progress, hideScrollTools, pageHeight;
 
 var wordcount;
 const initialiseAfterWindow = () => {
-	console.log('Initialising');
+	console.log('Initialising...');
 	if (!!wordcount) { initialiseReadingHeartbeat(wordcount); };
 	window.addEventListener('scroll', (event) => {
 		scrolling();
 	});
 	lastScrollPosition = getScrollPosition();
+	lastReportedScrollPosition = lastScrollPosition;
 	pageHeight = document.body.scrollHeight;
 }
 
