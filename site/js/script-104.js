@@ -155,7 +155,7 @@ const heartbeat = (wordsPerPixel, screenHeight, bodyStart, bodyEnd) => {
 			console.log('Reporting:', wordsRead, 'words read');
 			const title = document.querySelector("h1").innerText;
 			const author = document.querySelector("h2").innerText;
-			window._paq.push(['trackEvent', 'Qari', title, 'progress', parseInt(wordsRead)]);
+			window._paq.push(['trackEvent', 'Qari', title, 'kliem', parseInt(wordsRead)]);
 			lastReportedScrollPosition = newScrollPosition;
 			lastReportedReadingTime = timeNow;
 			return;
