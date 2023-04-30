@@ -91,3 +91,19 @@ const initiateAfterBody = () => {
 const initiateAfterNav = () => {
 	initiateFontSizeListeners();
 }
+
+// ANALITIKA u BOOKMARKS
+
+// const readingTimeStart = new Date();
+
+// const initialiseReadingHeartbeat = (wordcount) => {
+// 	const bodyHeight = ;
+// 	const bodyStart = ;
+// 	const bodyEnd = ;
+// 	const screenHeight = ;
+// 	const wordsPerScreen = ;
+
+// 	console.log(wordcount, bodyHeight, screenHeight, wordsPerScreen, bodyStart, bodyEnd, readingTimeStart);
+// }
+
+// initialiseReadingHeartbeat(5000);
