@@ -124,11 +124,10 @@ const initialiseReadingHeartbeat = () => {
 	const screenHeight = window.innerHeight;
 	const wordsPerScreen = wordcount * screenHeight / bodyHeight;
 	const wordsPerPixel = wordcount / bodyHeight;
-	const heartbeatId = setInterval(heartbeat, 2000, wordsPerPixel, screenHeight);
+	const heartbeatId = setInterval(heartbeat, 3000, wordsPerPixel, screenHeight);
 }
 
 const heartbeat = (wordsPerPixel, screenHeight, bodyStart, bodyEnd) => {
-	console.log('Heartbeat...');
 	// dismiss: too soon, etc?
 	// record scrollPosition
 	// is scrollposition higher than previos one?
@@ -148,11 +147,11 @@ const heartbeat = (wordsPerPixel, screenHeight, bodyStart, bodyEnd) => {
 		const wordsRead = wordsPerPixel * pixelProgress;
 		const wordsPerSecond = wordsRead / secondsElapsed;
 
-		console.log('wordsRead: ', wordsRead, 'wordsPerSecond: ', wordsPerSecond);
+		// console.log('wordsRead: ', wordsRead, 'wordsPerSecond: ', wordsPerSecond);
 
 		// Is it a plausible speed?
 		if (wordsRead > 100 && wordsPerSecond > 1 && wordsPerSecond < 3) {
-			console.log('Reporting:', wordsRead, 'words read');
+			// console.log('Reporting:', wordsRead, 'words read');
 			const title = document.querySelector("h1").innerText;
 			const author = document.querySelector("h2").innerText;
 			window._paq.push(['trackEvent', 'Qari', title, 'kliem', parseInt(wordsRead)]);
@@ -161,9 +160,9 @@ const heartbeat = (wordsPerPixel, screenHeight, bodyStart, bodyEnd) => {
 			return;
 		}
 		// Shall we reset?
-		// if (pixelProgress > screenHeight) {
+		// if (pixelProgress > screenHeight || pixelProgress < 0) {
 		// 	console.log('Resetting...', pixelProgress, screenHeight);
-		// 	// _paq.push(['trackEvent', 'Qari', title, 'waqfet']);
+		// 	_paq.push(['trackEvent', 'Qari', title, 'waqfet']);
 		// 	lastReportedScrollPosition = newScrollPosition;
 		// 	lastReportedReadingTime = timeNow;
 		// }
@@ -175,7 +174,7 @@ var lastScrollPosition, lastReportedScrollPosition, progress, hideScrollTools, p
 
 var wordcount;
 const initialiseAfterWindow = () => {
-	console.log('Initialising...');
+	// console.log('Initialising...');
 	if (!!wordcount) { initialiseReadingHeartbeat(wordcount); };
 	window.addEventListener('scroll', (event) => {
 		scrolling();
