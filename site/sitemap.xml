@@ -47,11 +47,6 @@
 	</url>
 	
 	<url>
-		<loc>https://aphroconfuso.mt/podcast/</loc>
-		<lastmod>2023-04-18</lastmod>
-	</url>
-	
-	<url>
 		<loc>https://aphroconfuso.mt/bookmarks/</loc>
 		<lastmod>2023-04-18</lastmod>
 	</url>
@@ -89,5 +84,10 @@
 	<url>
 		<loc>https://aphroconfuso.mt/en/</loc>
 		<lastmod>2023-04-26</lastmod>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/podcast/</loc>
+		<lastmod>2023-05-05</lastmod>
 	</url>
 </urlset>
