@@ -137,7 +137,7 @@ const heartbeat = (wordsPerPixel, screenHeight, bodyStart, bodyEnd) => {
 	const secondsElapsed =  timeNow - lastReportedReadingTime;
 	const newScrollPosition = getScrollPosition();
 
-	// console.log(newScrollPosition, lastReportedScrollPosition, secondsElapsed);
+	console.log(newScrollPosition, lastReportedScrollPosition, secondsElapsed);
 	if (newScrollPosition > bodyStart || newScrollPosition > bodyEnd) {
 		return;
 	}
@@ -147,14 +147,15 @@ const heartbeat = (wordsPerPixel, screenHeight, bodyStart, bodyEnd) => {
 		const wordsRead = wordsPerPixel * pixelProgress;
 		const wordsPerSecond = wordsRead / secondsElapsed;
 
-		// console.log('wordsRead: ', wordsRead, 'wordsPerSecond: ', wordsPerSecond);
+		console.log('wordsRead: ', wordsRead, 'wordsPerSecond: ', wordsPerSecond);
 
 		// Is it a plausible speed?
 		if (wordsRead > 100 && wordsPerSecond > 1 && wordsPerSecond < 3) {
-			// console.log('Reporting:', wordsRead, 'words read');
+			console.log('Reporting:', wordsRead, 'words read');
 			const title = document.querySelector("h1").innerText;
 			const author = document.querySelector("h2").innerText;
 			window._paq.push(['trackEvent', 'Qari', title, 'kliem', parseInt(wordsRead)]);
+			window._paq.push(['trackEvent', 'Qari', 'Kliem', title, parseInt(wordsRead)]);
 			lastReportedScrollPosition = newScrollPosition;
 			lastReportedReadingTime = timeNow;
 			return;
