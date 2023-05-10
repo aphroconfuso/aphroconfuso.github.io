@@ -90,4 +90,9 @@
 		<loc>https://aphroconfuso.mt/podcast/</loc>
 		<lastmod>2023-05-05</lastmod>
 	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/admin/</loc>
+		<lastmod>2023-05-06</lastmod>
+	</url>
 </urlset>
