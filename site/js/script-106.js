@@ -1,3 +1,25 @@
+var body,
+	bodyEnd,
+	bodyHeight,
+	bodyStart,
+	hideScrollTools,
+	lastReportedReadingTime,
+	lastReportedScrollPosition,
+	lastScrollPosition,
+	pageHeight,
+	percentageProgress,
+	screenHeight,
+	timeStarted,
+	title,
+	wordcount,
+	wordsPerPixel;
+
+var storyCompleted = false;
+
+const thresholdWords = 100;
+const minWordsperSecond = 0.5;
+const maxWordsPerSecond = 4;
+
 const setCookie = (cname, cvalue, exdays = 36500) => {
   const d = new Date();
   d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -28,7 +50,6 @@ const scrolling = () => {
   //   return;
   // }
   const newScrollPosition = getScrollPosition();
-  // console.log(newScrollPosition);
   if (newScrollPosition < 120 || newScrollPosition < lastScrollPosition) {
     document.body.classList.add('show-nav');
   } else {
@@ -41,56 +62,15 @@ const scrolling = () => {
     hideScrollTools = setTimeout(() => {
       document.body.classList.remove('scrolling')
     }, 5000);
-
-    progress = parseInt((newScrollPosition * 100) / pageHeight);
-    document.querySelector('#progress').innerHTML = `${ progress }%`;
-
+    percentageProgress = parseInt(((newScrollPosition - bodyStart) * 100) / bodyHeight);
+    document.querySelector('#progress').innerHTML = `${ percentageProgress }%`;
     lastScrollPosition = newScrollPosition;
   }
   return;
 }
 
-// const initialiseNewsletter = () => {
-// 	if (!document.getElementById("newsletter-container")) {
-// 		return;
-// 	}
-//   const cookies = getCookie('cookies');
-// 	const newsletter = getCookie('newsletter');
-//   document.getElementById("newsletter-container").classList.add('hide-placeholder');
-//   if (!!location.hash && document.referrer.indexOf('//newsletter.aphroconfuso.mt')) {
-//     // REVIEW escape is deprecated
-//     const salted = decodeURIComponent(escape(window.atob((location.hash.substring(1)))));
-//     [salt, message] = salted.split('|');
-//     if (salt === 'aaaASUDHASUWYQQU55%$ASGDGAS*Jhh23423') {
-//       if (message.indexOf('biex tikkonferma l-abbonament')) {
-// 				_paq.push(['trackEvent', 'Newsletter', 'Abbonament', 'Pendenti']);
-//         setCookie('newsletter', 'pendenti');
-//       }
-// 			if (message.indexOf('abbonament ikkonfermat')) {
-// 				_paq.push(['trackEvent', 'Newsletter', 'Abbonament', 'Komplut']);
-//         setCookie('newsletter', 'abbonat*');
-//       }
-// 			document.getElementById('message').setAttribute('data-content-piece', '«' + message + '»');
-// 			document.getElementById('message').innerHTML = '<p>' + message + '</p>';
-//       document.getElementById("newsletter-container").classList.remove('hide-message');
-//       location.hash = '';
-//       return;
-//     }
-//   }
-//   if (newsletter === 'abbonat*') {
-// 		document.getElementById("newsletter-container").classList.remove('hide-subscribed');
-//    	return;
-//   }
-//   if (newsletter === 'pendenti') {
-//     document.getElementById("newsletter-container").classList.remove('hide-pending');
-//     return;
-//   }
-// 	document.getElementById("newsletter-container").classList.remove('hide-form');
-// 	return;
-// }
 const initialiseAfterNewsletter = () => {
 	return;
-	// initialiseNewsletter();
 }
 
 const addRemoveFontSizeClass = (size) => {
@@ -111,51 +91,43 @@ const initialiseFontSizeListeners = () => {
 	document.getElementById("font-size-4").addEventListener('click', () => addRemoveFontSizeClass(4));
 };
 
-// ANALITIKA u BOOKMARKS
-
-var lastReportedReadingTime;
-
 const initialiseReadingHeartbeat = () => {
 	lastReportedReadingTime = new Date() / 1000;
-	const body = document.getElementById('body-text');
-	const bodyHeight = body.offsetHeight;
-	const bodyStart = body.offsetTop;
-	const bodyEnd = bodyStart + bodyHeight;
-	const screenHeight = window.innerHeight;
-	const wordsPerScreen = wordcount * screenHeight / bodyHeight;
-	const wordsPerPixel = wordcount / bodyHeight;
-	const heartbeatId = setInterval(heartbeat, 3000, wordsPerPixel, screenHeight);
+	timeStarted = lastReportedReadingTime;
+	setInterval(heartbeat, 3000, wordsPerPixel, screenHeight, bodyStart, bodyEnd, title);
 }
 
-const heartbeat = (wordsPerPixel, screenHeight, bodyStart, bodyEnd) => {
-	// dismiss: too soon, etc?
-	// record scrollPosition
-	// is scrollposition higher than previos one?
-	// has a plausible amount of time passed?
-	// ===> report, set bookmark, update
+const heartbeat = (wordsPerPixel, screenHeight, bodyStart, bodyEnd, title) => {
 	const timeNow = new Date() / 1000;
-	const secondsElapsed =  timeNow - lastReportedReadingTime;
+	const secondsElapsed = timeNow - lastReportedReadingTime;
 	const newScrollPosition = getScrollPosition();
 
-	console.log(newScrollPosition, lastReportedScrollPosition, secondsElapsed);
-	if (newScrollPosition > bodyStart || newScrollPosition > bodyEnd) {
-		return;
-	}
+	// console.log(newScrollPosition, lastReportedScrollPosition, secondsElapsed);
+	// if (newScrollPosition < bodyStart || newScrollPosition > bodyEnd) {
+	// 	return;
+	// }
+
+	// report complete(toggle reported once;
+	// report oneGo
 
 	if (newScrollPosition > lastReportedScrollPosition) {
 		const pixelProgress = newScrollPosition - lastReportedScrollPosition;
 		const wordsRead = wordsPerPixel * pixelProgress;
 		const wordsPerSecond = wordsRead / secondsElapsed;
 
-		console.log('wordsRead: ', wordsRead, 'wordsPerSecond: ', wordsPerSecond);
-
 		// Is it a plausible speed?
-		if (wordsRead > 100 && wordsPerSecond > 1 && wordsPerSecond < 3) {
-			console.log('Reporting:', wordsRead, 'words read');
-			const title = document.querySelector("h1").innerText;
-			const author = document.querySelector("h2").innerText;
+		if (wordsRead > thresholdWords && wordsPerSecond > minWordsperSecond && wordsPerSecond < maxWordsPerSecond) {
+			// console.log('Reporting:', wordsRead, 'words read');
+
+			// console.log(parseInt(wordsRead), (secondsElapsed / 60).toFixed(2), 'mins', percentageProgress, '%', wordsPerSecond.toFixed(2), 'wps')
+
 			window._paq.push(['trackEvent', 'Qari', title, 'kliem', parseInt(wordsRead)]);
-			window._paq.push(['trackEvent', 'Qari', 'Kliem', title, parseInt(wordsRead)]);
+			window._paq.push(['trackEvent', 'Inqraw', 'Kliem', title, parseInt(wordsRead)]);
+			window._paq.push(['trackEvent', 'Inqraw', 'Minuti', title, (secondsElapsed / 60).toFixed(2)]);
+			window._paq.push(['trackEvent', 'Inqraw', 'Perċentwali', title, parseInt(percentageProgress)]);
+			window._paq.push(['trackEvent', 'Inqraw', 'Ħeffa', title, wordsPerSecond.toFixed(2)]);
+
+			// save bookmark
 			lastReportedScrollPosition = newScrollPosition;
 			lastReportedReadingTime = timeNow;
 			return;
@@ -171,12 +143,17 @@ const heartbeat = (wordsPerPixel, screenHeight, bodyStart, bodyEnd) => {
 	}
 }
 
-var lastScrollPosition, lastReportedScrollPosition, progress, hideScrollTools, pageHeight;
-
-var wordcount;
 const initialiseAfterWindow = () => {
-	// console.log('Initialising...');
-	if (!!wordcount) { initialiseReadingHeartbeat(wordcount); };
+	if (!!wordcount) {
+		body = document.getElementById('body-text');
+		bodyHeight = body.offsetHeight;
+		bodyStart = body.offsetTop;
+		title = document.querySelector("h1").innerText;
+		bodyEnd = bodyStart + bodyHeight;
+		screenHeight = window.innerHeight;
+		wordsPerPixel = wordcount / bodyHeight;
+		initialiseReadingHeartbeat(wordcount);
+	};
 	window.addEventListener('scroll', (event) => {
 		scrolling();
 	});
