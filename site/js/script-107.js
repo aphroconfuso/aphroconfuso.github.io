@@ -102,14 +102,6 @@ const heartbeat = (wordsPerPixel, screenHeight, bodyStart, bodyEnd, title) => {
 	const secondsElapsed = timeNow - lastReportedReadingTime;
 	const newScrollPosition = getScrollPosition();
 
-	// console.log(newScrollPosition, lastReportedScrollPosition, secondsElapsed);
-	// if (newScrollPosition < bodyStart || newScrollPosition > bodyEnd) {
-	// 	return;
-	// }
-
-	// report complete(toggle reported once;
-	// report oneGo
-
 	if (newScrollPosition > lastReportedScrollPosition) {
 		const pixelProgress = newScrollPosition - lastReportedScrollPosition;
 		const wordsRead = wordsPerPixel * pixelProgress;
@@ -117,15 +109,10 @@ const heartbeat = (wordsPerPixel, screenHeight, bodyStart, bodyEnd, title) => {
 
 		// Is it a plausible speed?
 		if (wordsRead > thresholdWords && wordsPerSecond > minWordsperSecond && wordsPerSecond < maxWordsPerSecond) {
-			// console.log('Reporting:', wordsRead, 'words read');
-
-			// console.log(parseInt(wordsRead), (secondsElapsed / 60).toFixed(2), 'mins', percentageProgress, '%', wordsPerSecond.toFixed(2), 'wps')
-
-			window._paq.push(['trackEvent', 'Qari', title, 'kliem', parseInt(wordsRead)]);
-			window._paq.push(['trackEvent', 'Inqraw', 'Kliem', title, parseInt(wordsRead)]);
-			window._paq.push(['trackEvent', 'Inqraw', 'Minuti', title, (secondsElapsed / 60).toFixed(2)]);
-			window._paq.push(['trackEvent', 'Inqraw', 'Perċentwali', title, parseInt(percentageProgress)]);
-			window._paq.push(['trackEvent', 'Inqraw', 'Ħeffa', title, wordsPerSecond.toFixed(2)]);
+			window._paq.push(['trackEvent', 'Qari', 'Kliem', title, parseInt(wordsRead)]);
+			window._paq.push(['trackEvent', 'Qari', 'Minuti', title, (secondsElapsed / 60).toFixed(2)]);
+			window._paq.push(['trackEvent', 'Qari', 'Perċentwali', title, parseInt(percentageProgress)]);
+			window._paq.push(['trackEvent', 'Qari', 'Ħeffa', title, wordsPerSecond.toFixed(2)]);
 
 			// save bookmark
 			lastReportedScrollPosition = newScrollPosition;
@@ -133,12 +120,6 @@ const heartbeat = (wordsPerPixel, screenHeight, bodyStart, bodyEnd, title) => {
 			return;
 		}
 		// Shall we reset?
-		// if (pixelProgress > screenHeight || pixelProgress < 0) {
-		// 	console.log('Resetting...', pixelProgress, screenHeight);
-		// 	_paq.push(['trackEvent', 'Qari', title, 'waqfet']);
-		// 	lastReportedScrollPosition = newScrollPosition;
-		// 	lastReportedReadingTime = timeNow;
-		// }
 		return;
 	}
 }
