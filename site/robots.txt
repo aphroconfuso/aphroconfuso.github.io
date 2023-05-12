@@ -3,3 +3,5 @@ Allow: /
 Disallow: /admin/
 Disallow: /css/
 Disallow: /img/
+
+Sitemap: https://aphroconfuso.mt/sitemap.xml
