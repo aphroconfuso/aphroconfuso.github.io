@@ -124,7 +124,17 @@ const heartbeat = (wordsPerPixel, screenHeight, bodyStart, bodyEnd, title) => {
 	}
 }
 
+const initialiseAfterBody = () => {
+	initialiseFontSize();
+}
+
+const initialiseAfterNav = () => {
+	initialiseFontSizeListeners();
+}
+
 const initialiseAfterWindow = () => {
+	initialiseAfterBody();
+	initialiseAfterNav();
 	if (!!wordcount) {
 		body = document.getElementById('body-text');
 		bodyHeight = body.offsetHeight;
@@ -141,14 +151,6 @@ const initialiseAfterWindow = () => {
 	lastScrollPosition = getScrollPosition();
 	lastReportedScrollPosition = lastScrollPosition;
 	pageHeight = document.body.scrollHeight;
-}
-
-const initialiseAfterBody = () => {
-	initialiseFontSize();
-}
-
-const initialiseAfterNav = () => {
-	initialiseFontSizeListeners();
 }
 
 window.onload = initialiseAfterWindow;
