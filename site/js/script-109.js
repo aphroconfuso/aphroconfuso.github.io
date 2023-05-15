@@ -11,7 +11,6 @@ var body,
 	screenHeight,
 	timeStarted,
 	title,
-	author,
 	wordcount,
 	wordsPerPixel;
 
@@ -80,83 +79,6 @@ const addRemoveFontSizeClass = (size) => {
 	setCookie('font', size);
 }
 
-const heartbeat = (wordsPerPixel, screenHeight, bodyStart, bodyEnd, title) => {
-	const timeNow = new Date() / 1000;
-	const secondsElapsed = timeNow - lastReportedReadingTime;
-	const newScrollPosition = getScrollPosition();
-
-	if (newScrollPosition > lastReportedScrollPosition) {
-		const pixelProgress = newScrollPosition - lastReportedScrollPosition;
-		const wordsRead = wordsPerPixel * pixelProgress;
-		const wordsPerSecond = wordsRead / secondsElapsed;
-
-		// Is it a plausible speed?
-		if (wordsRead > thresholdWords && wordsPerSecond > minWordsperSecond && wordsPerSecond < maxWordsPerSecond) {
-			window._paq.push(['trackEvent', 'Qari', 'kliem', title, parseInt(wordsRead)]);
-			window._paq.push(['trackEvent', 'Qari', 'minuti', title, (secondsElapsed / 60).toFixed(2)]);
-			window._paq.push(['trackEvent', 'Qari', 'perċentwali', title, parseInt(percentageProgress)]);
-			window._paq.push(['trackEvent', 'Qari', 'ħeffa', title, wordsPerSecond.toFixed(2)]);
-
-			// save bookmark
-			addBookmark(location.pathname, {
-				title,
-				author,
-				description: 'xxx',
-				wordcount,
-				speed: wordsPerSecond.toFixed(2),
-				percentage: percentageProgress,
-				scrollPosition: newScrollPosition
-			});
-			lastReportedScrollPosition = newScrollPosition;
-			lastReportedReadingTime = timeNow;
-			return;
-		}
-		// Shall we reset?
-		return;
-	}
-}
-
-// BOOKMARKS *************************************************************************************
-
-let bookmarksList = {};
-
-const getBookmarksList = () => {
-	const list = localStorage.getItem("bookmarks");
-	console.log(list, !!list);
-	if (list) {
-		bookmarksList = JSON.parse(list);
-	}
-}
-
-const saveBookmarksList = () => {localStorage.setItem("bookmarks", JSON.stringify(bookmarksList));}
-
-// BETTER TO STORE AS ARRAY OF OBJECTS?
-const addBookmark = (url, bookmark) => {
-	const thisKey = url.replace(/\//g, '');
-	console.log('adding: ', thisKey, bookmark);
-	console.log('...', bookmarksList);
-	bookmarksList[thisKey] = bookmark;
-	saveBookmarksList();
-	updateBookmarksMenu();
-	saveBookmarksList();
-}
-
-const updateBookmarksMenu = () => {
-	if (!bookmarksList) {
-		return;
-	}
-	count = Object.keys(JSON.parse(bookmarksList)).length;
-	console.log(count);
-	document.getElementById("bookmarksTotal").innerHTML = ` (${ count })`
-}
-
-const deleteBookmark = () => {}
-
-const clearAllBookmarks = () => { localStorage.clear(); }
-
-
-// INITIALISE ******************************************************************************
-
 const initialiseFontSize = () => {
 	const fontSize = getCookie('font') || 1;
 	addRemoveFontSizeClass(fontSize);
@@ -175,6 +97,41 @@ const initialiseReadingHeartbeat = () => {
 	setInterval(heartbeat, 3000, wordsPerPixel, screenHeight, bodyStart, bodyEnd, title);
 }
 
+const heartbeat = (wordsPerPixel, screenHeight, bodyStart, bodyEnd, title) => {
+	const timeNow = new Date() / 1000;
+	const secondsElapsed = timeNow - lastReportedReadingTime;
+	const newScrollPosition = getScrollPosition();
+
+	if (newScrollPosition > lastReportedScrollPosition) {
+		const pixelProgress = newScrollPosition - lastReportedScrollPosition;
+		const wordsRead = wordsPerPixel * pixelProgress;
+		const wordsPerSecond = wordsRead / secondsElapsed;
+
+		// Is it a plausible speed?
+		if (wordsRead > thresholdWords && wordsPerSecond > minWordsperSecond && wordsPerSecond < maxWordsPerSecond) {
+			window._paq.push(['trackEvent', 'Qari', 'kliem', title, parseInt(wordsRead)]);
+			window._paq.push(['trackEvent', 'Qari', 'minuti', title, (secondsElapsed / 60).toFixed(2)]);
+			window._paq.push(['trackEvent', 'Qari', 'perċentwali', title, parseInt(percentageProgress)]);
+			window._paq.push(['trackEvent', 'Qari', 'ħeffa', title, wordsPerSecond.toFixed(2)]);
+
+			// save bookmark
+			lastReportedScrollPosition = newScrollPosition;
+			lastReportedReadingTime = timeNow;
+			return;
+		}
+		// Shall we reset?
+		return;
+	}
+}
+
+const initialiseAfterBody = () => {
+	initialiseFontSize();
+}
+
+const initialiseAfterNav = () => {
+	initialiseFontSizeListeners();
+}
+
 const initialiseAfterWindow = () => {
 	initialiseAfterBody();
 	initialiseAfterNav();
@@ -183,7 +140,6 @@ const initialiseAfterWindow = () => {
 		bodyHeight = body.offsetHeight;
 		bodyStart = body.offsetTop;
 		title = document.querySelector("h1").innerText;
-		author = document.querySelector("h2").innerText;
 		bodyEnd = bodyStart + bodyHeight;
 		screenHeight = window.innerHeight;
 		wordsPerPixel = wordcount / bodyHeight;
@@ -195,16 +151,6 @@ const initialiseAfterWindow = () => {
 	lastScrollPosition = getScrollPosition();
 	lastReportedScrollPosition = lastScrollPosition;
 	pageHeight = document.body.scrollHeight;
-	updateBookmarksMenu();
-}
-
-const initialiseAfterBody = () => {
-	initialiseFontSize();
-	getBookmarksList();
-}
-
-const initialiseAfterNav = () => {
-	initialiseFontSizeListeners();
 }
 
 window.onload = initialiseAfterWindow;
