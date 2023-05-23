@@ -27,9 +27,39 @@
 		<meta property="og:image:type" content="image/jpeg">
 		<meta property="og:image:width" content="1200">
 		<meta property="og:image:height" content="630">
-		<link rel="stylesheet" href="/css/style-871545a9.css">
+		<link rel="stylesheet" href="/css/style-aa1f0a36.css">
 		<script src="/js/script-109.js" defer></script>
 		<script>
+			const setCookie = (cname, cvalue, exdays = 36500) => {
+				const d = new Date();
+				d.setTime(d.getTime() + (exdays*24*60*60*1000));
+				let expires = "expires="+ d.toUTCString();
+				document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+			}
+			const getCookie = (cname) => {
+				let name = cname + "=";
+				let decodedCookie = decodeURIComponent(document.cookie);
+				let ca = decodedCookie.split(';');
+				for(let i = 0; i < ca.length; i++) {
+					let c = ca[i];
+					while (c.charAt(0) == ' ') {
+						c = c.substring(1);
+					}
+					if (c.indexOf(name) == 0) {
+						return c.substring(name.length, c.length);
+					}
+				}
+				return "";
+			}
+			const addRemoveFontSizeClass = (size) => {
+				document.body.classList.remove('font-size-1','font-size-2','font-size-3','font-size-4');
+				document.body.classList.add(`font-size-${ size }`);
+				setCookie('font', size);
+			}
+			const initialiseFontSize = () => {
+				const fontSize = getCookie('font') || 1;
+				addRemoveFontSizeClass(fontSize);
+			}
 			var _paq = window._paq = window._paq || [];
 			_paq.push(['disableCookies']);
 			_paq.push(['enableJSErrorTracking']);
@@ -47,6 +77,7 @@
 		</script>
 	</head>
 	<body class="show-nav">
+		<script>initialiseFontSize();</script>
 		<div id="top-wrapper">
 			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
 			<nav id="top-nav">
@@ -394,7 +425,15 @@
 						<li><a href="https://mastodon.world/@aphroconfuso">Mastodon</a></li>
 						<li><a href="https://youtube.com/@aphroconfuso">Youtube</a></li>
 						<li><a href="https://open.spotify.com/user/31rly4s75gfxs6li6bcxc5bqlgza">Spotify</a></li>
-						
+					</menu>
+					<menu id="podcast">
+						<li class="header">Podcast</li>
+						<li><a href="https://podcasts.apple.com/us/podcast/aphroconfuso/id1686567243">Apple</a></li>
+						<li><a href="https://www.audible.co.uk/pd/Aphroconfuso-Podcast/B0C3WHLZRB">Audible</a></li>
+						<li><a href="https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5hY2FzdC5jb20vcHVibGljL3Nob3dzL2FwaHJvY29uZnVzbw">Google</a></li>
+						<li><a href="https://pca.st/podcast/af8c44c0-c823-013b-f432-0acc26574db2">Pocket Casts</a></li>
+						<li><a href="https://feeds.acast.com/public/shows/aphroconfuso">RSS feed</a></li>
+						<li><a href="https://open.spotify.com/show/75Lt3UMvC1jE15SGrNFMww">Spotify</a></li>
 					</menu>
 					<div id="logotype-container">
 						<a href="/"><img src="/img/logotype.svg" class="logotype" alt="logo: Aphroconfuso" /></a>
