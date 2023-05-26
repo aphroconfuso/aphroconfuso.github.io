@@ -39,9 +39,11 @@ const scrolling = () => {
     hideScrollTools = setTimeout(() => {
       document.body.classList.remove('scrolling')
     }, 5000);
-    percentageProgress = parseInt(((newScrollPosition - bodyStart) * 100) / bodyHeight);
-    document.querySelector('#progress').innerHTML = `${ percentageProgress }%`;
-    lastScrollPosition = newScrollPosition;
+		percentageProgress = parseInt(((newScrollPosition - bodyStart) * 100) / bodyHeight);
+		if (percentageProgress >= 0) {
+			document.querySelector('#progress').innerHTML = `${ percentageProgress }% ${ newScrollPosition - bodyStart } ${ bodyHeight }`;
+		}
+		lastScrollPosition = newScrollPosition;
   }
   return;
 }
@@ -104,14 +106,16 @@ const initialiseAfterWindow = () => {
 		bodyEnd = bodyStart + bodyHeight;
 		screenHeight = window.innerHeight;
 		wordsPerPixel = wordcount / bodyHeight;
+		window.addEventListener('scroll', (event) => {
+			scrolling();
+		});
+		lastScrollPosition = getScrollPosition();
+		lastReportedScrollPosition = lastScrollPosition;
+		pageHeight = document.body.scrollHeight;
 		initialiseReadingHeartbeat(wordcount);
+		var splide = new Splide('.splide');
+		splide.mount();
 	};
-	window.addEventListener('scroll', (event) => {
-		scrolling();
-	});
-	lastScrollPosition = getScrollPosition();
-	lastReportedScrollPosition = lastScrollPosition;
-	pageHeight = document.body.scrollHeight;
 }
 
 window.onload = initialiseAfterWindow;
