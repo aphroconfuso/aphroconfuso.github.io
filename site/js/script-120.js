@@ -41,7 +41,10 @@ const scrolling = () => {
     }, 5000);
 		percentageProgress = parseInt(((newScrollPosition - bodyStart) * 100) / bodyHeight);
 		if (percentageProgress >= 0) {
-			document.querySelector('#progress').innerHTML = `${ percentageProgress }% ${ newScrollPosition - bodyStart } ${ bodyHeight }`;
+			if (percentageProgress > 100) {
+				percentageProgress = 100;
+			}
+			document.querySelector('#progress').innerHTML = `${ percentageProgress }%`;
 		}
 		lastScrollPosition = newScrollPosition;
   }
@@ -99,12 +102,12 @@ const initialiseAfterNav = () => {
 const initialiseAfterWindow = () => {
 	initialiseAfterNav();
 	if (!!wordcount) {
+		screenHeight = window.innerHeight;
 		body = document.getElementById('body-text');
-		bodyHeight = body.offsetHeight;
+		bodyHeight = body.offsetHeight - screenHeight;
 		bodyStart = body.offsetTop;
 		title = document.querySelector("h1").innerText;
 		bodyEnd = bodyStart + bodyHeight;
-		screenHeight = window.innerHeight;
 		wordsPerPixel = wordcount / bodyHeight;
 		window.addEventListener('scroll', (event) => {
 			scrolling();
