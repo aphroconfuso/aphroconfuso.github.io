@@ -127,6 +127,21 @@ const initialiseAfterWindow = () => {
 		for ( var i = 0; i < slideshows.length; i++ ) {
 			new Splide( slideshows[ i ] ).mount();
 		}
+		const lightbox = document.getElementById('lightbox');
+		const openLightbox = () => {
+			lightbox.classList.add('open');
+		}
+		const closeLightbox = () => {
+			lightbox.classList.remove('open');
+		}
+		document.onkeydown = function(evt) {
+			evt = evt || window.event;
+			if (evt.keyCode === 27) {
+				closeLightbox();
+			}
+		};
+		document.getElementById('slideshow-open').addEventListener('click', () => openLightbox());
+		document.getElementById('slideshow-close').addEventListener('click', () => closeLightbox());
 	};
 }
 
