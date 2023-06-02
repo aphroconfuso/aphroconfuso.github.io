@@ -140,8 +140,8 @@ const initialiseAfterWindow = () => {
 				closeLightbox();
 			}
 		};
-		document.getElementById('slideshow-open').addEventListener('click', () => openLightbox());
-		document.getElementById('slideshow-close').addEventListener('click', () => closeLightbox());
+		document.getElementById('lightbox-open').addEventListener('click', () => openLightbox());
+		document.getElementById('lightbox-close').addEventListener('click', () => closeLightbox());
 	};
 }
 
