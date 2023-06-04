@@ -125,7 +125,10 @@ const initialiseAfterWindow = () => {
 		}
 		var slideshows = document.getElementsByClassName('splide');
 		for ( var i = 0; i < slideshows.length; i++ ) {
-			new Splide( slideshows[ i ] ).mount();
+			const newSplide = new Splide(slideshows[i]).mount();
+			newSplide.on('visible', function (slide) {
+				window._paq.push(['trackEvent', 'Stampi', 'slideshow', title, slide.index + 1]);
+			});
 		}
 		const lightbox = document.getElementById('lightbox');
 		const openLightbox = () => {
