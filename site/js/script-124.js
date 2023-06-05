@@ -149,6 +149,7 @@ const initialiseAfterWindow = () => {
 				}
 			};
 		}
+		Calamansi.autoload();
 	};
 }
 
