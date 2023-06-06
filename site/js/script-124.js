@@ -149,7 +149,21 @@ const initialiseAfterWindow = () => {
 				}
 			};
 		}
+		var currentTime, previousTime, skippedTime;
 		Calamansi.autoload();
+		// trackEnded, pause, play, stop
+		// const player = ....;
+		CalamansiEvents.on('timeupdate', function (player) {
+			console.log('duration:', player.audio.duration);
+			currentTime = parseInt(player.audio.currentTime);
+			skippedTime = currentTime - previousTime;
+			console.log(currentTime, previousTime, skippedTime);
+			if (skippedTime > 1) {
+				console.log('skipped:', skippedTime);
+			}
+			// skipped while stopped?
+			previousTime = currentTime;
+		});
 	};
 }
 
