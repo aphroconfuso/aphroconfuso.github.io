@@ -160,9 +160,21 @@ const initialiseAfterWindow = () => {
 			console.log(currentTime, previousTime, skippedTime);
 			if (skippedTime > 1) {
 				console.log('skipped:', skippedTime);
+				// resetTime?
 			}
 			// skipped while stopped?
 			previousTime = currentTime;
+
+			if (parseInt(currentTime / 30) === currentTime);
+			// window._paq.push(['trackEvent', 'Smiegħ', 'kliem', title, parseInt(wordsRead)]);
+			window._paq.push(['trackEvent', 'Smiegħ', 'minuti', title, 0.5]);
+			window._paq.push(['trackEvent', 'Smiegħ', 'perċentwali', title, ((currentTime * 100) / player.audio.duration).toFixed(2)]);
+			// window._paq.push(['trackEvent', 'Smiegħ', 'kliem (maqbużin)', title, parseInt(wordsRead)]);
+			// window._paq.push(['trackEvent', 'Smiegħ', 'play', title]);
+			// window._paq.push(['trackEvent', 'Smiegħ', 'pause', title]);
+			// window._paq.push(['trackEvent', 'Smiegħ', 'stop', title]);
+			// window._paq.push(['trackEvent', 'Smiegħ', 'end', title]);
+			// window._paq.push(['trackEvent', 'Smiegħ', 'ħeffa', title, wordsPerSecond.toFixed(2)]);
 		});
 	};
 }
