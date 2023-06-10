@@ -14,8 +14,16 @@
 		<link rel="stylesheet" href="/splide-4.1.3/dist/css/splide.min.css">
 	
 	
-		<link rel="stylesheet" href="/calamansi/calamansi.min.css">
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/amplitudejs@v5.3.2/dist/amplitude.js"></script>
+		
 	
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@aphroconfuso">
+	<meta name="twitter:creator" content="@aphroconfuso">
+	<meta name="twitter:title" content="Omar N’Shea: Gilgamex, Dak li Ra l-Qiegħ">
+	<meta name="twitter:description" content="L-idea li Gilgamex isib ruħu f’daru fil-kultura u l-lingwa Maltija ma bdietx b’Montebello. Bejn l-1899 u l-1915 Alfons Maria Galea ppubblika sensiela bl-isem Kotba tal-Mogħdija taż-Żmien. Fl-1913 kien ħareġ in-numru 130 ta’ din is-sensiela bl-isem Kif l-Għerf tal-Kangħanin Tnissel fil-Griegi, miktub minn F. Calleja “tal-Alġier”. Kemm kienet tajba t-tixrida ta’ dan il-ktieb ma tantx huwa ċar; li nafu hu li ma kienx hawn ħafna kopji għall-bejgħ għax Calleja kien ħallas għall-pubblikazzjoni minn butu.">
+	<meta name="twitter:image" content="https://stampi.aphroconfuso.mt/social_The_Newly_Discovered_Tablet_V_of_the_Epic_of_Gilgamesh_The_Sulaymaniyah_Museum_Iraq_2275d0f385.jpg">
+	<meta name="twitter:image:alt" content="Maduma mxaqqa tal-fuħħar b-sinjali kunejformi mnaqqxa fiha.">
 
 		<meta content="black" name="apple-mobile-web-app-status-bar-style">
 		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
@@ -143,17 +151,73 @@
 				
 				
 					<aside id="podcastNote">
-						<figure>
-							<figcaption>Listen to T-Rex:</figcaption>
-								<audio controls src="https://sphinx.acast.com/p/open/s/63ef6b4c3642ca00119bcf72/e/644c12d50ace130011a72f8d/media.mp3">
-							</audio>
-						</figure>
 
+<style>
+	div.amplitude-play-pause {
+  width: 74px;
+  height: 74px;
+  cursor: pointer;
+  float: left;
+  margin-left: 10px;
+}
+
+div.amplitude-play-pause.amplitude-paused {
+  background: url('../img/play.svg') red;
+  background-size: cover;
+}
+
+div.amplitude-play-pause.amplitude-playing {
+  background: url('../img/pause.svg') green;
+  background-size: cover;
+}
+</style>
+
+<input type="range" class="amplitude-song-slider" step=".1"/>
+<div class="bottom-container">
+      <progress class="amplitude-song-played-progress" amplitude-main-song-played-progress="true" id="song-played-progress"></progress>
+</div>
+<div class="time-container">
+  <span class="current-time">
+    <span class="amplitude-current-minutes" amplitude-main-current-minutes="true"></span>:<span class="amplitude-current-seconds" amplitude-main-current-seconds="true"></span>
+  </span>
+  <span class="duration">
+    <span class="amplitude-duration-minutes" amplitude-main-duration-minutes="true"></span>:<span class="amplitude-duration-seconds" amplitude-main-duration-seconds="true"></span>
+  </span>
+</div>
+<div class="control-container">
+  |<div class="amplitude-play-pause" amplitude-main-play-pause="true" id="play-pause"></div>|
+</div>
+
+<script>
+Amplitude.init({
+  songs: [
+    {
+      name: "Song Name One",
+      artist: "Artist Name",
+      album: "Album Name",
+      url: "https://sphinx.acast.com/p/open/s/63ef6b4c3642ca00119bcf72/e/644c12d50ace130011a72f8d/media.mp3",
+      cover_art_url: "/path/to/artwork.jpg"
+    }
+  ]
+});
+
+const audio = Amplitude.getAudio();
+audio.addEventListener('timeupdate', (player) => console.log(audio.currentTime) );
+</script>
+
+
+
+
+						<figure>
 						<script src="/calamansi/calamansi.min.js" defer></script>
-						<span class="calamansi" data-skin="/calamansi/skins/basic" data-source="https://sphinx.acast.com/p/open/s/63ef6b4c3642ca00119bcf72/e/644c12d50ace130011a72f8d/media.mp3">Omar N’Shea jaqra “Gilgamex, Dak li Ra l-Qiegħ”, qari ta’ </span>
 						
-							<p>Omar N’Shea jaqra “Gilgamex, Dak li Ra l-Qiegħ”. Abbona fil-<a href="/podcast">podcast</a> ta’ Aphroconfuso biex tisma’ kull ma nippubblikaw.</p>
-						
+							<figcaption>
+								
+								
+									<p>Omar N’Shea jaqra “Gilgamex, Dak li Ra l-Qiegħ”. Abbona fil-<a href="/podcast">podcast</a> ta’ Aphroconfuso biex tisma’ kull ma nippubblikaw.</p>
+								
+							</figcaption>
+						</figure>
 					</aside>
 				
 			</section>

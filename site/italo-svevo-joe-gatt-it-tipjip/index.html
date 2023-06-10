@@ -14,8 +14,16 @@
 		<link rel="stylesheet" href="/splide-4.1.3/dist/css/splide.min.css">
 	
 	
-		<link rel="stylesheet" href="/calamansi/calamansi.min.css">
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/amplitudejs@v5.3.2/dist/amplitude.js"></script>
+		
 	
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@aphroconfuso">
+	<meta name="twitter:creator" content="@aphroconfuso">
+	<meta name="twitter:title" content="Italo Svevo: It-Tipjip (tr Joe Gatt)">
+	<meta name="twitter:description" content="L-ewwel sigaretti li pejjipt m’għadekx issibhom għall-bejgħ. Għall-ħabta tal-1870 l-Awstrija kellhom minn dawk li kienu jinbiegħu f’kaxxa tal-kartun żgħira bit-tikketta tal-ajkla b’żewġt irjus. Ara: madwar waħda minn dawn il-kaxxi mill-ewwel jinġabru diversi persuni, kollha b’xi karatteristika minn tagħhom li hi biżżejjed biex tfakkarni x’jisimhom, imma mhux tant li nemozzjona ruħi b’dan l-inkontru bla ħsieb. Nipprova nislet iżjed u mmur sal-pultruna: il-persuni jgħosfru u posthom jeħduh koċċ buffi jiddieħqu bija. Immur lura mifxul lejn il-mejda.">
+	<meta name="twitter:image" content="https://stampi.aphroconfuso.mt/social_macedonia_37faeffc6a.jpg">
+	<meta name="twitter:image:alt" content="Riklam tas-sigaretti Macedonia. Tfajla liebsa qmis, ingravata u cardigan b&#39;sigarett f&#39;isha.">
 
 		<meta content="black" name="apple-mobile-web-app-status-bar-style">
 		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
@@ -134,17 +142,73 @@
 				
 				
 					<aside id="podcastNote">
-						<figure>
-							<figcaption>Listen to T-Rex:</figcaption>
-								<audio controls src="https://sphinx.acast.com/p/open/s/63ef6b4c3642ca00119bcf72/e/644c12d50ace130011a72f8d/media.mp3">
-							</audio>
-						</figure>
 
+<style>
+	div.amplitude-play-pause {
+  width: 74px;
+  height: 74px;
+  cursor: pointer;
+  float: left;
+  margin-left: 10px;
+}
+
+div.amplitude-play-pause.amplitude-paused {
+  background: url('../img/play.svg') red;
+  background-size: cover;
+}
+
+div.amplitude-play-pause.amplitude-playing {
+  background: url('../img/pause.svg') green;
+  background-size: cover;
+}
+</style>
+
+<input type="range" class="amplitude-song-slider" step=".1"/>
+<div class="bottom-container">
+      <progress class="amplitude-song-played-progress" amplitude-main-song-played-progress="true" id="song-played-progress"></progress>
+</div>
+<div class="time-container">
+  <span class="current-time">
+    <span class="amplitude-current-minutes" amplitude-main-current-minutes="true"></span>:<span class="amplitude-current-seconds" amplitude-main-current-seconds="true"></span>
+  </span>
+  <span class="duration">
+    <span class="amplitude-duration-minutes" amplitude-main-duration-minutes="true"></span>:<span class="amplitude-duration-seconds" amplitude-main-duration-seconds="true"></span>
+  </span>
+</div>
+<div class="control-container">
+  |<div class="amplitude-play-pause" amplitude-main-play-pause="true" id="play-pause"></div>|
+</div>
+
+<script>
+Amplitude.init({
+  songs: [
+    {
+      name: "Song Name One",
+      artist: "Artist Name",
+      album: "Album Name",
+      url: "https://sphinx.acast.com/p/open/s/63ef6b4c3642ca00119bcf72/e/644c12d50ace130011a72f8d/media.mp3",
+      cover_art_url: "/path/to/artwork.jpg"
+    }
+  ]
+});
+
+const audio = Amplitude.getAudio();
+audio.addEventListener('timeupdate', (player) => console.log(audio.currentTime) );
+</script>
+
+
+
+
+						<figure>
 						<script src="/calamansi/calamansi.min.js" defer></script>
-						<span class="calamansi" data-skin="/calamansi/skins/basic" data-source="https://sphinx.acast.com/p/open/s/63ef6b4c3642ca00119bcf72/e/644c12d50ace130011a72f8d/media.mp3">Joe Gatt jaqra “It-Tipjip”, qari ta’ </span>
 						
-							<p>Ara wkoll: “<a href="/joe-gatt-il-kuxjenza-fit-truf"><l-m>Il-Kuxjenza</l-m> fit-Truf</a>", nota dwar din <l-m>it-traduzzjoni</l-m>.</p>
-						
+							<figcaption>
+								
+								
+									<p>Ara wkoll: “<a href="/joe-gatt-il-kuxjenza-fit-truf"><l-m>Il-Kuxjenza</l-m> fit-Truf</a>", nota dwar din <l-m>it-traduzzjoni</l-m>.</p>
+								
+							</figcaption>
+						</figure>
 					</aside>
 				
 			</section>
