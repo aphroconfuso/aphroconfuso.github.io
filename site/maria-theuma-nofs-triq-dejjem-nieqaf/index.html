@@ -80,7 +80,7 @@ griżmejh. X’għabra?">
 		<meta property="og:image:height" content="630">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml" />
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json" />
-		<link rel="stylesheet" href="/css/style-6084cd07.css">
+		<link rel="stylesheet" href="/css/style-957349b4.css">
 		<script src="/js/script-124.js" defer></script>
 		<script>
 			const setCookie = (cname, cvalue, exdays = 36500) => {
@@ -178,137 +178,29 @@ griżmejh. X’għabra?">
 				
 				
 					<aside id="podcastNote">
-
-<style>
-	div.amplitude-play-pause {
-  width: 74px;
-  height: 74px;
-  cursor: pointer;
-  float: left;
-  margin-left: 10px;
-}
-
-div.amplitude-play-pause.amplitude-paused {
-  background: url('../img/play.svg') red;
-  background-size: cover;
-}
-
-div.amplitude-play-pause.amplitude-playing {
-  background: url('../img/pause.svg') green;
-  background-size: cover;
-}
-
-
-/********** Range Input Styles **********/
-/*Range Reset*/
-input[type="range"] {
-   -webkit-appearance: none;
-    appearance: none;
-    background: transparent;
-    cursor: pointer;
-    width: 100%;
-}
-
-/* Removes default focus */
-input[type="range"]:focus {
-  outline: none;
-}
-
-/***** Chrome, Safari, Opera and Edge Chromium styles *****/
-/* slider track */
-input[type="range"]::-webkit-slider-runnable-track {
-   background-color: transparent;
-		border: 1px solid red;
-   height: 0.5rem;
-}
-
-/* slider thumb */
-input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none; /* Override default look */
-   appearance: none;
-   margin-top: -12px; /* Centers thumb on the track */
-
-   /*custom styles*/
-   background-color: #5cd5eb;
-   height: 2rem;
-   width: 1rem;
-}
-
-input[type="range"]:focus::-webkit-slider-thumb {
-  border: 1px solid #053a5f;
-  outline: 3px solid #053a5f;
-  outline-offset: 0.125rem;
-}
-
-/******** Firefox styles ********/
-/* slider track */
-input[type="range"]::-moz-range-track {
-   background-color: transparent;
-
-	border: 1px solid red;
-   height: 0.5rem;
-}
-
-/* slider thumb */
-input[type="range"]::-moz-range-thumb {
-   border: none; /*Removes extra border that FF applies*/
-   border-radius: 0; /*Removes default border-radius that FF applies*/
-
-   /*custom styles*/
-   background-color: #5cd5eb;
-   height: 2rem;
-   width: 1rem;
-}
-
-
-
-
-
-</style>
-
-<input type="range" class="amplitude-song-slider" step=".1"/>
-<div class="bottom-container">
-      <progress class="amplitude-song-played-progress" amplitude-main-song-played-progress="true" id="song-played-progress"></progress>
-</div>
-<div class="time-container">
-  <span class="current-time">
-    <span class="amplitude-current-minutes" amplitude-main-current-minutes="true"></span>:<span class="amplitude-current-seconds" amplitude-main-current-seconds="true"></span>
-  </span>
-  <span class="duration">
-    <span class="amplitude-duration-minutes" amplitude-main-duration-minutes="true"></span>:<span class="amplitude-duration-seconds" amplitude-main-duration-seconds="true"></span>
-  </span>
-</div>
-<div class="control-container">
-  |<div class="amplitude-play-pause" amplitude-main-play-pause="true" id="play-pause"></div>|
-</div>
-
-<script>
-Amplitude.init({
-  songs: [
-    {
-      name: "Song Name One",
-      artist: "Artist Name",
-      album: "Album Name",
-      url: "https://sphinx.acast.com/p/open/s/63ef6b4c3642ca00119bcf72/e/644c12d50ace130011a72f8d/media.mp3",
-      cover_art_url: "/path/to/artwork.jpg"
-    }
-  ]
-});
-
-const audio = Amplitude.getAudio();
-audio.addEventListener('timeupdate', (player) => console.log(audio.currentTime) );
-</script>
-
-
-
-
-						<figure>
-						<script src="/calamansi/calamansi.min.js" defer></script>
-						
+						<figure class="audio">
+							<div id="player">
+								<div class="control-container">
+									<div class="amplitude-play-pause" amplitude-main-play-pause="true" id="play-pause">
+										<svg class="clmns--svg" id="play" xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 18 24">
+											<path fill="#B1ADA9" fill-rule="evenodd" d="M18 12L0 24V0" />
+										</svg>
+										<svg class="clmns--svg" id="pause" xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 18 24">
+											<path fill="#B1ADA9" fill-rule="evenodd" d="M0 0h6v24H0zM12 0h6v24h-6z" />
+										</svg>
+									</div>
+								</div>
+								<div id="range">
+									<input type="range" class="amplitude-song-slider" step=".1">
+									<progress class="amplitude-song-played-progress" amplitude-main-song-played-progress="true" id="song-played-progress"></progress>
+								</div>
+								<div class="time-container">
+										<span class="amplitude-current-minutes" amplitude-main-current-minutes="true"></span>:<span class="amplitude-current-seconds" amplitude-main-current-seconds="true"></span>/<span class="amplitude-duration-minutes" amplitude-main-duration-minutes="true"></span>:<span class="amplitude-duration-seconds" amplitude-main-duration-seconds="true"></span>
+								</div>
+							</div>
 							<figcaption>
 								
-								
-									<p>Maria Theuma taqra “Nofs triq, dejjem nieqaf”. Abbona fil-<a href="/podcast">podcast</a> ta’ Aphroconfuso biex tisma’ kull ma nippubblikaw.</p>
+									<p>Maria Theuma taqra “Nofs triq, dejjem nieqaf”. Abbona <l-m>fil-<a href="/podcast">podcast</a></l-m> ta’ Aphroconfuso biex tisma’ kulma nippubblikaw.</p>
 								
 							</figcaption>
 						</figure>
@@ -399,6 +291,7 @@ audio.addEventListener('timeupdate', (player) => console.log(audio.currentTime) 
 	</aside>
 	<script>
 		wordcount = 683;
+		podcastUrl = 'https://sphinx.acast.com/p/open/s/63ef6b4c3642ca00119bcf72/e/644c12d50ace130011a72f8d/media.mp3' || null;
 	</script>
 	
 

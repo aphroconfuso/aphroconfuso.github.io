@@ -8,6 +8,7 @@ var body,
 	lastScrollPosition,
 	pageHeight,
 	percentageProgress,
+	podcastUrl,
 	screenHeight,
 	timeStarted,
 	title,
@@ -149,6 +150,43 @@ const initialiseAfterWindow = () => {
 				}
 			};
 		}
+		if (podcastUrl) {
+			Amplitude.init({
+				songs: [
+					{
+						url: podcastUrl
+					}
+				]
+			});
+			const audio = Amplitude.getAudio();
+			audio.addEventListener('timeupdate', () => console.log(audio.currentTime) );
+
+// document.getElementById('song-played-progress').addEventListener('click', function( e ){
+//           if( Amplitude.getActiveIndex() == 0 ){
+//             var offset = this.getBoundingClientRect();
+//             var x = e.pageX - offset.left;
+
+//             Amplitude.setSongPlayedPercentage( ( parseFloat( x ) / parseFloat( this.offsetWidth) ) * 100 );
+//           }
+//         });
+
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		// var currentTime, previousTime, skippedTime;
 		// Calamansi.autoload();
 
