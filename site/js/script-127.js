@@ -168,8 +168,7 @@ const initialiseAfterWindow = () => {
 			});
 		}
 
-
-
+		document.getElementById('audio').classList.add('initialised');
 
 
 
