@@ -15,6 +15,8 @@
 		<link rel="stylesheet" href="/splide-4.1.3/dist/css/splide.min.css">
 	
 	
+		<script src="/amplitude/amplitude.min.js"></script>
+	
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@aphroconfuso">
 	<meta name="twitter:creator" content="@aphroconfuso">
@@ -138,10 +140,28 @@
 			</section>
 			<section id="grid-max-panel-right-top">
 				
-					<aside id="podcast-note">
-						<p>Ara wkoll: “<a href="/joe-gatt-il-kuxjenza-fit-truf"><l-m>Il-Kuxjenza</l-m> fit-Truf</a>", nota dwar din <l-m>it-traduzzjoni</l-m>.</p>
-					</aside>
 				
+					<aside id="podcast-note">
+						<figure id="audio">
+							<div id="player">
+								<div class="control-container">
+									<button class="amplitude-play-pause" amplitude-main-play-pause="true" id="play-pause">
+								</div>
+								<div id="range">
+									<input type="range" id="range-input" class="amplitude-song-slider" step=".1">
+									<progress class="amplitude-song-played-progress" amplitude-main-song-played-progress="true" id="song-played-progress"></progress>
+								</div>
+								<div class="time-container">
+										<span class="amplitude-current-minutes" amplitude-main-current-minutes="true"></span>:<span class="amplitude-current-seconds" amplitude-main-current-seconds="true"></span>/<span class="amplitude-duration-minutes" amplitude-main-duration-minutes="true"></span>:<span class="amplitude-duration-seconds" amplitude-main-duration-seconds="true"></span>
+								</div>
+							</div>
+							<figcaption>
+								
+									<p>Ara wkoll: “<a href="/joe-gatt-il-kuxjenza-fit-truf"><l-m>Il-Kuxjenza</l-m> fit-Truf</a>", nota dwar din <l-m>it-traduzzjoni</l-m>.</p>
+								
+							</figcaption>
+						</figure>
+					</aside>
 				
 			</section>
 			<section id="grid-body">
@@ -403,7 +423,7 @@
 	</aside>
 	<script>
 		wordcount = 6475;
-		podcastUrl = '' || null;
+		podcastUrl = 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3' || null;
 	</script>
 	
 
