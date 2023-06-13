@@ -125,12 +125,14 @@ const initialiseAfterWindow = () => {
 			speed: 2000,
 			padding: '2rem 0',
 		}
-		var slideshows = document.getElementsByClassName('splide');
-		for ( var i = 0; i < slideshows.length; i++ ) {
-			const newSplide = new Splide(slideshows[i]).mount();
-			newSplide.on('visible', function (slide) {
-				window._paq.push(['trackEvent', 'Stampi', 'slideshow', title, slide.index + 1]);
-			});
+		const slideshows = document.getElementsByClassName('splide');
+		if (slideshows.length) {
+			for ( var i = 0; i < slideshows.length; i++ ) {
+				const newSplide = new Splide(slideshows[i]).mount();
+				newSplide.on('visible', function (slide) {
+					window._paq.push(['trackEvent', 'Stampi', 'slideshow', title, slide.index + 1]);
+				});
+			}
 		}
 		const lightbox = document.getElementById('lightbox');
 		const openLightbox = () => {
@@ -196,12 +198,10 @@ const initialiseAfterWindow = () => {
 				}
 				if (currentTime % 30 === 0) {
 					// Set audio bookmark
-
 					console.log(['trackEvent', 'Smiegħ', 'kliem', title, 'parseInt(wordsHeard)']);
 					console.log(['trackEvent', 'Smiegħ', 'minuti', title, 0.5]);
 					console.log(['trackEvent', 'Smiegħ', 'perċentwali', title, ((currentTime * 100) / duration).toFixed(2)]);
 					console.log(['trackEvent', 'Smiegħ', 'kliem maqbużin', title, 'parseInt(wordsHeard)']);
-
 					// window._paq.push(['trackEvent', 'Smiegħ', 'kliem', title, parseInt(wordsRead)]);
 					// window._paq.push(['trackEvent', 'Smiegħ', 'minuti', title, 0.5]);
 					// window._paq.push(['trackEvent', 'Smiegħ', 'perċentwali', title, ((currentTime * 100) / duration).toFixed(2)]);
