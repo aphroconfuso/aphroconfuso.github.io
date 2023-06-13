@@ -13,7 +13,8 @@ var body,
 	timeStarted,
 	title,
 	wordcount,
-	wordsPerPixel;
+	wordsPerPixel,
+	currentTime, previousTime, skippedTime, elapsedTime;
 
 var storyCompleted = false;
 
@@ -150,6 +151,8 @@ const initialiseAfterWindow = () => {
 				}
 			};
 		}
+
+		// Podcast ***
 		if (podcastUrl) {
 			Amplitude.init({
 				songs: [
@@ -159,65 +162,59 @@ const initialiseAfterWindow = () => {
 				]
 			});
 			const audio = Amplitude.getAudio();
-			audio.addEventListener('timeupdate', () => console.log(audio.currentTime) );
+			const duration = parseInt(audio.duration);
+			previousTime = 0;
+			audio.addEventListener('play', () => {
+				console.log('play');
+			});
+			audio.addEventListener('pause', () => {
+				console.log('pause', 'percentage');
+				// Set audio bookmark
+			});
+			audio.addEventListener('seek', () => {
+				console.log('seek');
+			});
+			audio.addEventListener('ended', () => {
+				console.log('ended');
+				// Delete bookmark or completed
+			});
+			audio.addEventListener('waiting', () => {
+				console.log('waiting');
+			});
 
+			audio.addEventListener('timeupdate', () => {
+				currentTime = parseInt(audio.currentTime);
+				if (currentTime === 0 || (currentTime === previousTime)) {
+					return;
+				}
+				elapsedTime = currentTime - previousTime;
+				console.log(currentTime, currentTime, (currentTime / 30), elapsedTime);
+				if (elapsedTime > 1) {
+					console.log(['trackEvent', 'Smiegħ', 'kliem maqbużin', title, elapsedTime]);
+					// window._paq.push(['trackEvent', 'Smiegħ', 'kliem maqbużin', title, parseInt(wordsRead)]);
+					// resetTime?
+				}
+				if (currentTime % 30 === 0) {
+					// Set audio bookmark
+
+					console.log(['trackEvent', 'Smiegħ', 'kliem', title, 'parseInt(wordsHeard)']);
+					console.log(['trackEvent', 'Smiegħ', 'minuti', title, 0.5]);
+					console.log(['trackEvent', 'Smiegħ', 'perċentwali', title, ((currentTime * 100) / duration).toFixed(2)]);
+					console.log(['trackEvent', 'Smiegħ', 'kliem maqbużin', title, 'parseInt(wordsHeard)']);
+
+					// window._paq.push(['trackEvent', 'Smiegħ', 'kliem', title, parseInt(wordsRead)]);
+					// window._paq.push(['trackEvent', 'Smiegħ', 'minuti', title, 0.5]);
+					// window._paq.push(['trackEvent', 'Smiegħ', 'perċentwali', title, ((currentTime * 100) / duration).toFixed(2)]);
+				}
+				previousTime = currentTime;
+			});
 			document.getElementById('range').addEventListener('click', function(e){
 					var offset = this.getBoundingClientRect();
 					var x = e.pageX - offset.left;
 					Amplitude.setSongPlayedPercentage((parseFloat(x) / parseFloat( this.offsetWidth) ) * 100);
 			});
+			document.getElementById('audio').classList.add('initialised');
 		}
-
-		document.getElementById('audio').classList.add('initialised');
-
-
-
-
-
-
-
-
-
-
-
-
-
-		// var currentTime, previousTime, skippedTime;
-		// Calamansi.autoload();
-
-		// var player = new Calamansi(document.querySelector('#player'), {
-		// 	skin: '/calamansi/skins/basic'
-		// });
-		// player.audio.load('https://sphinx.acast.com/p/open/s/63ef6b4c3642ca00119bcf72/e/644c12d50ace130011a72f8d/media.mp3');
-		// CalamansiEvents.on('initialized', function (player) {
-		// 	console.log('INIT');
-		// });
-
-		// trackEnded, pause, play, stop
-		// const player = ....;
-		// CalamansiEvents.on('timeupdate', function (player) {
-		// 	console.log('duration:', player.audio.duration);
-		// 	currentTime = parseInt(player.audio.currentTime);
-		// 	skippedTime = currentTime - previousTime;
-		// 	console.log(currentTime, previousTime, skippedTime);
-		// 	if (skippedTime > 1) {
-		// 		console.log('skipped:', skippedTime);
-		// 		// resetTime?
-		// 	}
-		// 	// skipped while stopped?
-		// 	previousTime = currentTime;
-
-		// 	if (parseInt(currentTime / 30) === currentTime);
-		// 	// window._paq.push(['trackEvent', 'Smiegħ', 'kliem', title, parseInt(wordsRead)]);
-		// 	window._paq.push(['trackEvent', 'Smiegħ', 'minuti', title, 0.5]);
-		// 	window._paq.push(['trackEvent', 'Smiegħ', 'perċentwali', title, ((currentTime * 100) / player.audio.duration).toFixed(2)]);
-		// 	// window._paq.push(['trackEvent', 'Smiegħ', 'kliem (maqbużin)', title, parseInt(wordsRead)]);
-		// 	// window._paq.push(['trackEvent', 'Smiegħ', 'play', title]);
-		// 	// window._paq.push(['trackEvent', 'Smiegħ', 'pause', title]);
-		// 	// window._paq.push(['trackEvent', 'Smiegħ', 'stop', title]);
-		// 	// window._paq.push(['trackEvent', 'Smiegħ', 'end', title]);
-		// 	// window._paq.push(['trackEvent', 'Smiegħ', 'ħeffa', title, wordsPerSecond.toFixed(2)]);
-		// });
 	};
 }
 
