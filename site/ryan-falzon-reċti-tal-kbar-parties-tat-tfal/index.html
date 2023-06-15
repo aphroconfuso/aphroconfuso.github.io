@@ -13,6 +13,8 @@
 	
 	
 	
+		<script src="/amplitude/amplitude.min.js"></script>
+	
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@aphroconfuso">
 	<meta name="twitter:creator" content="@aphroconfuso">
@@ -84,7 +86,7 @@
 			(function () {
 				var u = "//analitika.aphroconfuso.mt/";
 				_paq.push(['setTrackerUrl', u + 'matomo.php']);
-				_paq.push(['setSiteId', '1']);
+				_paq.push(['setSiteId', location.host === 'aphroconfuso.mt' ? '1' : '2']);
 				var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
 				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
 			})();
@@ -137,6 +139,28 @@
 			</section>
 			<section id="grid-max-panel-right-top">
 				
+				
+					<aside id="podcast-note">
+						<figure id="audio">
+							<div id="player">
+								<div class="control-container">
+									<button class="amplitude-play-pause" amplitude-main-play-pause="true" id="play-pause">
+								</div>
+								<div id="range">
+									<input type="range" id="range-input" class="amplitude-song-slider" step=".1">
+									<progress class="amplitude-song-played-progress" amplitude-main-song-played-progress="true" id="song-played-progress"></progress>
+								</div>
+								<div class="time-container">
+										<span class="amplitude-current-minutes" amplitude-main-current-minutes="true"></span>:<span class="amplitude-current-seconds" amplitude-main-current-seconds="true"></span>/<span class="amplitude-duration-minutes" amplitude-main-duration-minutes="true"></span>:<span class="amplitude-duration-seconds" amplitude-main-duration-seconds="true"></span>
+								</div>
+							</div>
+							<figcaption>
+								
+									<p>Ryan Falzon jaqra “Reċti tal-Kbar, Parties tat-Tfal”. Abbona <l-m>fil-<a href="/podcast">podcast</a></l-m> ta’ Aphroconfuso biex tisma’ kulma nippubblikaw.</p>
+								
+							</figcaption>
+						</figure>
+					</aside>
 				
 			</section>
 			<section id="grid-body">
@@ -330,7 +354,7 @@
 	</aside>
 	<script>
 		wordcount = 2545;
-		podcastUrl = '' || null;
+		podcastUrl = 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3' || null;
 	</script>
 	
 
