@@ -19,15 +19,12 @@ var body,
 var storyCompleted = false;
 
 const thresholdWords = 100;
-const minWordsperSecond = 0.5;
-const maxWordsPerSecond = 4;
+const minWordsperSecond = 1; // was 0.5
+const maxWordsPerSecond = 5; // was 4
 
 const getScrollPosition = () => window.pageYOffset || document.documentElement.scrollTop;
 
 const scrolling = () => {
-  // if (!document.body.classList.contains('story')) {
-  //   return;
-  // }
   const newScrollPosition = getScrollPosition();
   if (newScrollPosition < 120 || newScrollPosition < lastScrollPosition) {
     document.body.classList.add('show-nav');
@@ -154,7 +151,6 @@ const initialiseAfterWindow = () => {
 			};
 		}
 
-		// Podcast ***
 		if (podcastUrl) {
 			Amplitude.init({
 				songs: [
@@ -181,7 +177,7 @@ const initialiseAfterWindow = () => {
 				// Delete bookmark or completed
 			});
 			audio.addEventListener('waiting', () => {
-				console.log('waiting');
+				console.log('buffer...');
 			});
 
 			audio.addEventListener('timeupdate', () => {
