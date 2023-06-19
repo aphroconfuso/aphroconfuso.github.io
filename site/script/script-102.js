@@ -1,10 +1,14 @@
 var
+	audioLoaded,
 	author,
 	body,
 	bodyEnd,
 	bodyHeight,
 	bodyStart,
+	bodyText,
+	bookmarksList,
 	currentTime,
+	duration,
 	elapsedTime,
 	hideScrollTools,
 	lastReportedReadingTime,
@@ -16,18 +20,21 @@ var
 	placeText,
 	podcastUrl,
 	previousTime,
+	progressElement,
 	screenHeight,
 	skippedTime,
+	slugifiedUrl,
+	storyCompleted,
 	timeStarted,
 	title,
 	wordcount,
 	wordsPerPixel,
-	wordsPerSecond;
+	wordsPerSecond,
+	wordsPerSecondAudio;
 
-const progressElement = document.getElementById('progress');
-
-var bookmarksList = {};
-var storyCompleted = false;
+audioLoaded = false;
+percentageProgress = 0;
+storyCompleted = false;
 
 const thresholdWords = 100;
 const minWordsperSecond = 1; // was 0.5
@@ -62,10 +69,10 @@ const scrolling = () => {
 }
 
 const addBookmarkNow = () => {
-	addBookmark(location.pathname, {
+	addBookmark('text', {
 		title,
 		author,
-		placeText: 'xxx',
+		placeText: getCurrentBlurb(percentageProgress),
 		wordcount,
 		speed: wordsPerSecond && wordsPerSecond.toFixed(2),
 		percentage: percentageProgress,
@@ -104,21 +111,22 @@ const heartbeat = (wordsPerPixel, screenHeight, bodyStart, bodyEnd, title) => {
 
 // BOOKMARKS *************************************************************************************
 
-const getBookmarksList = () => {
+const initialiseBookmarksList = () => {
 	bookmarksList = JSON.parse(localStorage.getItem("bookmarks") || "{}");
-	showFullBookmarks();
 }
 
 const saveBookmarksList = () => {localStorage.setItem("bookmarks", JSON.stringify(bookmarksList));}
 
-// BETTER TO STORE AS ARRAY OF OBJECTS?
-const addBookmark = (url, bookmark) => {
-	console.log('Adding ', url, bookmark);
-	const thisKey = url.replace(/\//g, '');
-	bookmarksList[thisKey] = bookmark;
+const addBookmark = (type, bookmark) => {
+	bookmarksList[`${type}-${slugifiedUrl}`] = bookmark;
 	saveBookmarksList();
 	updateBookmarksMenu();
-	saveBookmarksList();
+}
+
+const getCurrentBlurb = (percent) => {
+	const currentPlace = parseInt(percent * bodyText.length / 100);
+	const blurb = bodyText.substring(currentPlace - 250, currentPlace + 250);
+	return blurb;
 }
 
 const updateBookmarksMenu = () => {
@@ -126,22 +134,17 @@ const updateBookmarksMenu = () => {
 		return;
 	}
 	count = Object.keys(bookmarksList).length;
-	console.log(count);
 	document.getElementById("bookmarksTotal").innerHTML = ` (${ count })`
 }
 
 const showFullBookmarks = () => {
-		console.log('full...');
 	const tbody = document.querySelector("ol");
 	const template = document.querySelector("template");
-	console.log(template);
 	if (!template) {
-		console.log('returning...');
 		return;
 	}
 	Object.keys(bookmarksList).forEach = (key) => {
 		const bookmark = bookmarksList[key];
-		console.log(bookmark);
 		const clone = template.content.cloneNode(true);
 		let h1 = clone.querySelectorAll("h1");
 		let h2 = clone.querySelectorAll("h2");
@@ -156,6 +159,9 @@ const deleteBookmark = () => {}
 
 const clearAllBookmarks = () => { localStorage.clear(); }
 
+const getPreviousAudioTime = () => {
+	return bookmarksList[`audio-${slugifiedUrl}`].playPosition || 0;
+}
 
 // INITIALISE ***********************************************************************
 
@@ -210,8 +216,15 @@ const initialiseMessage = () => {
 }
 
 const initialiseAfterWindow = () => {
+	bodyText = document.getElementById('body-text').innerText.replace(/\s+/g, ' ');
+	progressElement = document.getElementById('progress');
+	slugifiedUrl = location.pathname.replace(/\//g, '');
+
 	initialiseAfterNav();
 	initialiseMessage();
+	initialiseBookmarksList();
+	showFullBookmarks();
+
 	if (!!wordcount) {
 		screenHeight = window.innerHeight;
 		body = document.getElementById('body-text');
@@ -273,24 +286,54 @@ const initialiseAfterWindow = () => {
 				]
 			});
 			const audio = Amplitude.getAudio();
-			const duration = parseInt(audio.duration);
-			previousTime = 0;
+
+			audio.addEventListener('canplaythrough', () => {
+			if (audioLoaded) {
+				return;
+			}
+				duration = parseInt(audio.duration);
+				wordsPerSecondAudio = wordcount / duration;
+				previousTime = getPreviousAudioTime();
+				if (previousTime !== 0) {
+					audio.currentTime = previousTime;
+				}
+				audioLoaded = true;
+			});
+
+			const addAudioBookmarkNow = (percentage) => {
+				let playPosition = audio.currentTime.toFixed(0);
+				percentageAudio = percentage || (parseInt(audio.currentTime) * 100 / duration).toFixed(2);
+				if (percentageAudio < 15) {
+					percentageAudio = 0;
+				}
+				addBookmark('audio', {
+					title,
+					author,
+					placeText: getCurrentBlurb(percentageProgress),
+					duration,
+					percentageAudio,
+					playPosition
+				});
+			}
+
 			audio.addEventListener('play', () => {
-				console.log('play');
+				console.log(['trackEvent', 'Smiegħ', 'play', title]);
 			});
 			audio.addEventListener('pause', () => {
-				console.log('pause', 'percentage');
-				// Set audio bookmark
+				percentageAudio = (parseInt(audio.currentTime) * 100 / duration).toFixed(2);
+				console.log(['trackEvent', 'Smiegħ', 'pause', title, percentageAudio]);
 			});
 			audio.addEventListener('seek', () => {
-				console.log('seek');
+				percentageAudio = (parseInt(audio.currentTime) * 100 / duration).toFixed(2);
+				console.log(['trackEvent', 'Smiegħ', 'seek', title, percentageAudio]);
+				addAudioBookmarkNow(percentageAudio);
 			});
 			audio.addEventListener('ended', () => {
-				console.log('ended');
+				console.log(['trackEvent', 'Smiegħ', 'spiċċa', title]);
 				// Delete bookmark or completed
 			});
 			audio.addEventListener('waiting', () => {
-				console.log('buffer...');
+				console.log(['trackEvent', 'Smiegħ', 'buffering', title, 1]);
 			});
 
 			audio.addEventListener('timeupdate', () => {
@@ -299,23 +342,17 @@ const initialiseAfterWindow = () => {
 					return;
 				}
 				elapsedTime = currentTime - previousTime;
-				if (elapsedTime > 1) {
-					console.log(['trackEvent', 'Smiegħ', 'kliem maqbuż', title, elapsedTime]);
-					// window._paq.push(['trackEvent', 'Smiegħ', 'kliem maqbużin', title, parseInt(wordsRead)]);
+				if (elapsedTime > 3) {
+					console.log(['trackEvent', 'Smiegħ', 'kliem maqbuż', parseInt(elapsedTime * wordsPerSecondAudio)]);
 					// resetTime?
 				}
-				if (currentTime % 30 === 0) {
-					// save bookmark
+				if (currentTime % 10 === 0) {
+					addAudioBookmarkNow();
 				}
 				if (currentTime % 30 === 0) {
-					// Set audio bookmark
-					console.log(['trackEvent', 'Smiegħ', 'kliem', title, 'parseInt(wordsHeard)']);
+					console.log(['trackEvent', 'Smiegħ', 'kliem', title, parseInt(elapsedTime * wordsPerSecondAudio)]);
 					console.log(['trackEvent', 'Smiegħ', 'minuti', title, 0.5]);
 					console.log(['trackEvent', 'Smiegħ', 'perċentwali', title, ((currentTime * 100) / duration).toFixed(2)]);
-					console.log(['trackEvent', 'Smiegħ', 'kliem maqbużin', title, 'parseInt(wordsHeard)']);
-					// window._paq.push(['trackEvent', 'Smiegħ', 'kliem', title, parseInt(wordsRead)]);
-					// window._paq.push(['trackEvent', 'Smiegħ', 'minuti', title, 0.5]);
-					// window._paq.push(['trackEvent', 'Smiegħ', 'perċentwali', title, ((currentTime * 100) / duration).toFixed(2)]);
 				}
 				previousTime = currentTime;
 			});
