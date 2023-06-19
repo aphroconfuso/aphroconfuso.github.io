@@ -40,6 +40,7 @@ const thresholdWords = 100;
 const minWordsperSecond = 1; // was 0.5
 const maxWordsPerSecond = 5; // was 4
 
+const bookmarksMenuElement = document.getElementById("bookmarksTotal");
 const getScrollPosition = () => window.pageYOffset || document.documentElement.scrollTop;
 
 const scrolling = () => {
@@ -61,7 +62,8 @@ const scrolling = () => {
 			if (percentageProgress > 100) {
 				percentageProgress = 100;
 			}
-			progressElement.innerText = `${ percentageProgress }%`;
+			// FIXME this throws an error
+			progressElement.innerHTML = `${ percentageProgress }%`;
 		}
 		lastScrollPosition = newScrollPosition;
   }
@@ -123,6 +125,12 @@ const addBookmark = (type, bookmark) => {
 	updateBookmarksMenu();
 }
 
+const deleteBookmark = (type) => {
+	delete bookmarksList[`${type}-${slugifiedUrl}`];
+	saveBookmarksList();
+	updateBookmarksMenu();
+}
+
 const getCurrentBlurb = (percent) => {
 	const currentPlace = parseInt(percent * bodyText.length / 100);
 	const blurb = bodyText.substring(currentPlace - 250, currentPlace + 250);
@@ -134,7 +142,9 @@ const updateBookmarksMenu = () => {
 		return;
 	}
 	count = Object.keys(bookmarksList).length;
-	document.getElementById("bookmarksTotal").innerHTML = ` (${ count })`
+	if (bookmarksMenuElement) {
+		bookmarksMenuElement.innerHTML = ` (${ count })`;
+	}
 }
 
 const showFullBookmarks = () => {
@@ -155,12 +165,10 @@ const showFullBookmarks = () => {
 	}
 }
 
-const deleteBookmark = () => {}
-
 const clearAllBookmarks = () => { localStorage.clear(); }
 
 const getPreviousAudioTime = () => {
-	return bookmarksList[`audio-${slugifiedUrl}`].playPosition || 0;
+	return bookmarksList[`audio-${slugifiedUrl}`] && bookmarksList[`audio-${slugifiedUrl}`].playPosition || 0;
 }
 
 // INITIALISE ***********************************************************************
@@ -216,7 +224,6 @@ const initialiseMessage = () => {
 }
 
 const initialiseAfterWindow = () => {
-	bodyText = document.getElementById('body-text').innerText.replace(/\s+/g, ' ');
 	progressElement = document.getElementById('progress');
 	slugifiedUrl = location.pathname.replace(/\//g, '');
 
@@ -226,6 +233,7 @@ const initialiseAfterWindow = () => {
 	showFullBookmarks();
 
 	if (!!wordcount) {
+		bodyText = document.getElementById('body-text').innerText.replace(/\s+/g, ' ');
 		screenHeight = window.innerHeight;
 		body = document.getElementById('body-text');
 		bodyHeight = body.offsetHeight - screenHeight;
@@ -317,23 +325,24 @@ const initialiseAfterWindow = () => {
 			}
 
 			audio.addEventListener('play', () => {
-				console.log(['trackEvent', 'Smiegħ', 'play', title]);
+				window._paq.push(['trackEvent', 'Smiegħ', 'play', title]);
 			});
 			audio.addEventListener('pause', () => {
 				percentageAudio = (parseInt(audio.currentTime) * 100 / duration).toFixed(2);
-				console.log(['trackEvent', 'Smiegħ', 'pause', title, percentageAudio]);
+				window._paq.push(['trackEvent', 'Smiegħ', 'pause', title, percentageAudio]);
+				addAudioBookmarkNow(percentageAudio);
 			});
 			audio.addEventListener('seek', () => {
 				percentageAudio = (parseInt(audio.currentTime) * 100 / duration).toFixed(2);
-				console.log(['trackEvent', 'Smiegħ', 'seek', title, percentageAudio]);
+				window._paq.push(['trackEvent', 'Smiegħ', 'seek', title, percentageAudio]);
 				addAudioBookmarkNow(percentageAudio);
 			});
 			audio.addEventListener('ended', () => {
-				console.log(['trackEvent', 'Smiegħ', 'spiċċa', title]);
-				// Delete bookmark or completed
+				window._paq.push(['trackEvent', 'Smiegħ', 'spiċċa', title]);
+				deleteBookmark('audio');
 			});
 			audio.addEventListener('waiting', () => {
-				console.log(['trackEvent', 'Smiegħ', 'buffering', title, 1]);
+				window._paq.push(['trackEvent', 'Smiegħ', 'buffering', title, 1]);
 			});
 
 			audio.addEventListener('timeupdate', () => {
@@ -343,16 +352,15 @@ const initialiseAfterWindow = () => {
 				}
 				elapsedTime = currentTime - previousTime;
 				if (elapsedTime > 3) {
-					console.log(['trackEvent', 'Smiegħ', 'kliem maqbuż', parseInt(elapsedTime * wordsPerSecondAudio)]);
-					// resetTime?
+					window._paq.push(['trackEvent', 'Smiegħ', 'kliem maqbuż', parseInt(elapsedTime * wordsPerSecondAudio)]);
 				}
 				if (currentTime % 10 === 0) {
 					addAudioBookmarkNow();
 				}
 				if (currentTime % 30 === 0) {
-					console.log(['trackEvent', 'Smiegħ', 'kliem', title, parseInt(elapsedTime * wordsPerSecondAudio)]);
-					console.log(['trackEvent', 'Smiegħ', 'minuti', title, 0.5]);
-					console.log(['trackEvent', 'Smiegħ', 'perċentwali', title, ((currentTime * 100) / duration).toFixed(2)]);
+					window._paq.push(['trackEvent', 'Smiegħ', 'kliem', title, parseInt(elapsedTime * wordsPerSecondAudio)]);
+					window._paq.push(['trackEvent', 'Smiegħ', 'minuti', title, 0.5]);
+					window._paq.push(['trackEvent', 'Smiegħ', 'perċentwali', title, ((currentTime * 100) / duration).toFixed(2)]);
 				}
 				previousTime = currentTime;
 			});
