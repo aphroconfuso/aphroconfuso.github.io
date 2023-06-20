@@ -7,6 +7,8 @@ var
 	bodyStart,
 	bodyText,
 	bookmarksList,
+	charactersPerPixel,
+	charactersPerScreen,
 	currentTime,
 	duration,
 	elapsedTime,
@@ -137,7 +139,7 @@ const deleteBookmark = (type) => {
 
 const getCurrentBlurb = (percent) => {
 	const currentPlace = parseInt(percent * bodyText.length / 100);
-	const blurb = bodyText.substring(currentPlace, currentPlace + (wordsPerScreen * 5.5));
+	const blurb = bodyText.substring(currentPlace, currentPlace + (charactersPerScreen));
 	return blurb;
 }
 
@@ -237,15 +239,18 @@ const initialiseAfterWindow = () => {
 	showFullBookmarks();
 
 	if (!!wordcount) {
-		bodyText = document.getElementById('body-text').innerText.replace(/\s+/g, ' ');
+		// TODO: Fix enjambed
+		bodyText = Array.from(document.getElementById("grid-body").getElementsByClassName("body-text"), e => e.innerText).join(' ').replace(/\s+/g, ' ');
 		screenHeight = window.innerHeight;
-		body = document.getElementById('body-text');
+		body = document.getElementById('grid-body');
 		bodyHeight = body.offsetHeight - screenHeight;
 		bodyStart = body.offsetTop;
 		title = document.querySelector("h1").innerText;
 		author = document.querySelector("meta[name=author]").content;
 		bodyEnd = bodyStart + bodyHeight;
+		charactersPerPixel = bodyText.length / bodyHeight;
 		wordsPerPixel = wordcount / bodyHeight;
+		charactersPerScreen = parseInt(charactersPerPixel * screenHeight);
 		wordsPerScreen = parseInt(wordsPerPixel * screenHeight);
 		window.addEventListener('scroll', (event) => {
 			scrolling();
@@ -314,11 +319,8 @@ const initialiseAfterWindow = () => {
 			});
 
 			const addAudioBookmarkNow = (percentage) => {
-				let playPosition = audio.currentTime.toFixed(0);
+				let playPosition = parseInt(audio.currentTime);
 				percentageAudio = percentage || (parseInt(audio.currentTime) * 100 / duration).toFixed(2);
-				if (percentageAudio < 15) {
-					percentageAudio = 0;
-				}
 				addBookmark('audio', {
 					title,
 					author,
@@ -340,6 +342,10 @@ const initialiseAfterWindow = () => {
 			audio.addEventListener('seek', () => {
 				percentageAudio = (parseInt(audio.currentTime) * 100 / duration).toFixed(2);
 				window._paq.push(['trackEvent', 'Smiegħ', 'seek', title, percentageAudio]);
+				if (currentTime === 0) {
+					deleteBookmark('audio');
+					return;
+				}
 				addAudioBookmarkNow(percentageAudio);
 			});
 			audio.addEventListener('ended', () => {
@@ -349,23 +355,22 @@ const initialiseAfterWindow = () => {
 			audio.addEventListener('waiting', () => {
 				window._paq.push(['trackEvent', 'Smiegħ', 'buffering', title, 1]);
 			});
-
 			audio.addEventListener('timeupdate', () => {
 				currentTime = parseInt(audio.currentTime);
-				if (currentTime === 0 || (currentTime === previousTime)) {
+				if (currentTime === 0 || currentTime === previousTime) {
 					return;
 				}
 				elapsedTime = currentTime - previousTime;
-				if (elapsedTime > 3) {
+				if (elapsedTime > 10) {
 					window._paq.push(['trackEvent', 'Smiegħ', 'kliem maqbuż', parseInt(elapsedTime * wordsPerSecondAudio)]);
 				}
 				if (currentTime % 10 === 0) {
 					addAudioBookmarkNow();
 				}
 				if (currentTime % 30 === 0) {
-					window._paq.push(['trackEvent', 'Smiegħ', 'kliem', title, parseInt(elapsedTime * wordsPerSecondAudio)]);
-					window._paq.push(['trackEvent', 'Smiegħ', 'minuti', title, 0.5]);
-					window._paq.push(['trackEvent', 'Smiegħ', 'perċentwali', title, ((currentTime * 100) / duration).toFixed(2)]);
+					window._paq.push(['trackEvent', 'Smiegħ', 'kliem (awdjo)', title, parseInt(elapsedTime * wordsPerSecondAudio)]);
+					window._paq.push(['trackEvent', 'Smiegħ', 'minuti (awdjo)', title, 0.5]);
+					window._paq.push(['trackEvent', 'Smiegħ', 'perċentwali (awdjo)', title, ((currentTime * 100) / duration).toFixed(2)]);
 				}
 				previousTime = currentTime;
 			});
