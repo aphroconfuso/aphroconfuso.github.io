@@ -44,6 +44,13 @@
 	</url>
 	
 	<url>
+		<loc>https://aphroconfuso.mt/lulju-2023/</loc>
+		<lastmod>2023-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
 		<loc>https://aphroconfuso.mt/ġunju-2023/</loc>
 		<lastmod>2023-06-26</lastmod>
     <changefreq>monthly</changefreq>
