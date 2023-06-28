@@ -27,9 +27,10 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/appuntamenti/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-ab215e3b.css">
-		<script defer src="/script/script-108.js"></script>
+		<link rel="stylesheet" href="/css/style-5b0232ee.css">
+		<script defer src="/script/script-109.js"></script>
 		<script>
+			const	slugifiedUrl = location.pathname.replace(/\//g, '');
 			const setCookie = (cname, cvalue, exdays = 36500) => {
 				const d = new Date();
 				d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -56,9 +57,12 @@
 				document.body.classList.add(`font-size-${ size }`);
 				setCookie('font', size);
 			}
-			const initialiseFontSize = () => {
+			const initialiseAfterBody = () => {
 				const fontSize = getCookie('font') || 1;
 				addRemoveFontSizeClass(fontSize);
+				if (getCookie(`tw-${slugifiedUrl}`)) {
+					document.body.classList.add('trigger-warning-closed');
+				}
 			}
 			var _paq = window._paq = window._paq || [];
 			_paq.push(['disableCookies']);
@@ -77,7 +81,7 @@
 		</script>
 	</head>
 	<body class="show-nav">
-		<script>initialiseFontSize();</script>
+		<script>initialiseAfterBody();</script>
 		<div id="top-wrapper">
 			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
 			<nav id="top-nav">
@@ -131,7 +135,7 @@
 								<h1>Lulju 2023</h1>
 							</header>
 							<div class="body-text">
-								<p><p>Test jiġi hawn</p></p>
+								<p><p>Meta Platun ried ifaħħar lil Saffo, sejħilha <l-m>l-Għaxar</l-m> Muża. <l-m>Id-disgħa</l-m> li ġa kien hemm, biex jgħaddu <l-m>lill-bnedmin</l-m> l-għerf poetiku, artistiku u xjentifiku <l-m>mill-qċaċet</l-m> tal-muntanji fejn kienu jgħammru, kienu jsibu xi raġel Grieg u jfesfsulu f’widintu, biex imbagħad minnu jitkellmu <l-m>l-allat</l-m>. Anki jekk kliem Saffo xi darba tlissen b’leħen <l-m>l-allat</l-m>, illum jaslilna umli u tentattiv, kelma ’l hawn, kelma ’l hemm fuq bċejjeċ ta’ papiru li jdumu sekli sħaħ biex jitfaċċaw. <l-m>It-traduzzjoni</l-m> l-ġdida ta’ Warren Bartolo <l-m>tal-frammenti</l-m> ta’ Saffo, tgħidilna Loranne Vella, tidħol inkiss inkiss <l-m>mat-test</l-m> oriġinali. Biex iġibilna lil Saffo <l-m>bil-Malti</l-m>, <l-m>it-traduttur</l-m> jindiehes magħha, jgħix magħha, joħroġha miegħu, iħalliha ssir parti minn ħajtu ta’ kuljum. Ma jagħmilx vjolenza fuq <l-m>il-poeżija</l-m> imma jħallilna <l-m>l-ispazji</l-m> tal-istorja, ta’ fejn għebu <l-m>l-biċċiet</l-m>. Test ifframmentat nistgħu nidħlu fih daqskemm jista’ jidħol fina hu. <l-m>L-istess</l-m> tagħmel Rowena Grech <l-m>bil-ħrejjef</l-m> u <l-m>l-mitoloġija</l-m>, meta taqbad mit u tiddomestikah, tħallih jaħkimha imma wkoll taħkmu hi billi tiġġissem bih. Rowena tidħol <l-m>fl-istorja</l-m> billi tirrakkuntaha <l-m>mill-ġdid</l-m>, billi <l-m>l-istorja</l-m> tilbisha, tiffotografaha, iżżarmaha permezz <l-m>tat-teknoloġiji</l-m> kollha li għandha u ġġiegħel ’<l-m>l-istorja</l-m> tħares lejha nnifisha <l-m>fil-mera</l-m> tal-midja soċjali. F’“Medusa”<span class="pull">,</span> Rowena, bħalma tagħmel f’bosta <l-m>mill-istejjer</l-m> li tirrakkonta, tidħol <l-m>fl-istorja</l-m>, issib <l-m>il-mara</l-m> fiha u ġġibha <l-m>fid-dinja</l-m> tagħna. Ma tagħtiniex <l-m>l-istorja</l-m> tal-eroj, li jagħmel atti ta’ barra minn hawn, u jirbaħ, u jaħkem, u jistupra, u joqtol. Naqraw, minflok, <l-m>l-isforz</l-m> li <l-m>l-protagonista</l-m> tagħmel biex tieħu <l-m>l-forma</l-m> u ssir karattru sħiħ, li titlibbes biha nnifisha. Loranne tikkwota <l-m>l-idea</l-m> ta’ Ursula K. Le Guin li minbarra <l-m>l-istejjer</l-m> vjolenti li ilna nafu <l-m>mill-mitoloġija</l-m>, hemm tip ieħor ta’ storja li ftit ġiet miktuba. “Hemm stejjer <l-m>bil-lanza</l-m>, <l-m>bit-taqtigħa</l-m> sfrenata, imdemmija, dwar dak <l-m>il-wieħed</l-m> li <l-m>fl-aħħar</l-m> joħroġ rebbieħ. Imbagħad hemm <l-m>l-istejjer</l-m> bil-qoffa, li narawha timtela <l-m>bil-mod</l-m> il-mod, nedhew niflu kull frotta li titqiegħed fiha, nistagħġbu <l-m>bil-ġmiel</l-m>, <l-m>bl-ilwien</l-m>, <l-m>bl-emozzjonijiet</l-m> li jitqanqlu fina hekk kif narawha timtela sa ma tfur. Iżda kull fejn inħarsu, <l-m>l-aktar</l-m> li naraw huma <l-m>l-istejjer</l-m> bil-lanza, għax <l-m>l-istejjer</l-m> bil-qoffa ma tantx jagħmlu ħoss.<span class="pullsemi">”</span> Forsi Platun għolla ’l Saffo <l-m>għal-livell</l-m> ta’ Muża għax ma riedx jara żewġ nisa jfesfsu f’widnejn xulxin. Wara kollox, bilfors kellu jkun hemm xi spjegazzjoni sopranaturali <l-m>għall-fatt</l-m> li Saffo kienet ħakmet <l-m>l-immaġinazzjoni</l-m> tal-qarrejja tagħha bi vrus dwar <l-m>l-imħabba</l-m>, <l-m>il-ġmiel</l-m>, <l-m>il-biżgħat</l-m>. <l-m>Il-kwotidjan</l-m>, <l-m>id-domestiku</l-m>, jaf joħloq theżżiża, <l-m>bil-mod</l-m> kwiet u persistenti tiegħu, daqs <l-m>l-ikbar</l-m> terremot.</p></p>
 							</div>
 						</a>
 					</li>

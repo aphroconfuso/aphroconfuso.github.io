@@ -34,9 +34,10 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-ab215e3b.css">
-		<script defer src="/script/script-108.js"></script>
+		<link rel="stylesheet" href="/css/style-5b0232ee.css">
+		<script defer src="/script/script-109.js"></script>
 		<script>
+			const	slugifiedUrl = location.pathname.replace(/\//g, '');
 			const setCookie = (cname, cvalue, exdays = 36500) => {
 				const d = new Date();
 				d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -63,9 +64,12 @@
 				document.body.classList.add(`font-size-${ size }`);
 				setCookie('font', size);
 			}
-			const initialiseFontSize = () => {
+			const initialiseAfterBody = () => {
 				const fontSize = getCookie('font') || 1;
 				addRemoveFontSizeClass(fontSize);
+				if (getCookie(`tw-${slugifiedUrl}`)) {
+					document.body.classList.add('trigger-warning-closed');
+				}
 			}
 			var _paq = window._paq = window._paq || [];
 			_paq.push(['disableCookies']);
@@ -84,7 +88,7 @@
 		</script>
 	</head>
 	<body class="show-nav">
-		<script>initialiseFontSize();</script>
+		<script>initialiseAfterBody();</script>
 		<div id="top-wrapper">
 			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
 			<nav id="top-nav">
@@ -120,7 +124,7 @@
 				<section class="generic-body-text">
 					<div class="text-container">
 						<p>
-							<span class="editorial-month-year">Lulju 2023</span> Test jiġi hawn
+							<span class="editorial-month-year">Lulju 2023</span> Meta Platun ried ifaħħar lil Saffo, sejħilha <l-m>l-Għaxar</l-m> Muża. <l-m>Id-disgħa</l-m> li ġa kien hemm, biex jgħaddu <l-m>lill-bnedmin</l-m> l-għerf poetiku, artistiku u xjentifiku <l-m>mill-qċaċet</l-m> tal-muntanji fejn kienu jgħammru, kienu jsibu xi raġel Grieg u jfesfsulu f’widintu, biex imbagħad minnu jitkellmu <l-m>l-allat</l-m>. Anki jekk kliem Saffo xi darba tlissen b’leħen <l-m>l-allat</l-m>, illum jaslilna umli u tentattiv, kelma ’l hawn, kelma ’l hemm fuq bċejjeċ ta’ papiru li jdumu sekli sħaħ biex jitfaċċaw. <l-m>It-traduzzjoni</l-m> l-ġdida ta’ Warren Bartolo <l-m>tal-frammenti</l-m> ta’ Saffo, tgħidilna Loranne Vella, tidħol inkiss inkiss <l-m>mat-test</l-m> oriġinali. Biex iġibilna lil Saffo <l-m>bil-Malti</l-m>, <l-m>it-traduttur</l-m> jindiehes magħha, jgħix magħha, joħroġha miegħu, iħalliha ssir parti minn ħajtu ta’ kuljum. Ma jagħmilx vjolenza fuq <l-m>il-poeżija</l-m> imma jħallilna <l-m>l-ispazji</l-m> tal-istorja, ta’ fejn għebu <l-m>l-biċċiet</l-m>. Test ifframmentat nistgħu nidħlu fih daqskemm jista’ jidħol fina hu. <l-m>L-istess</l-m> tagħmel Rowena Grech <l-m>bil-ħrejjef</l-m> u <l-m>l-mitoloġija</l-m>, meta taqbad mit u tiddomestikah, tħallih jaħkimha imma wkoll taħkmu hi billi tiġġissem bih. Rowena tidħol <l-m>fl-istorja</l-m> billi tirrakkuntaha <l-m>mill-ġdid</l-m>, billi <l-m>l-istorja</l-m> tilbisha, tiffotografaha, iżżarmaha permezz <l-m>tat-teknoloġiji</l-m> kollha li għandha u ġġiegħel ’<l-m>l-istorja</l-m> tħares lejha nnifisha <l-m>fil-mera</l-m> tal-midja soċjali. F’“Medusa”<span class="pull">,</span> Rowena, bħalma tagħmel f’bosta <l-m>mill-istejjer</l-m> li tirrakkonta, tidħol <l-m>fl-istorja</l-m>, issib <l-m>il-mara</l-m> fiha u ġġibha <l-m>fid-dinja</l-m> tagħna. Ma tagħtiniex <l-m>l-istorja</l-m> tal-eroj, li jagħmel atti ta’ barra minn hawn, u jirbaħ, u jaħkem, u jistupra, u joqtol. Naqraw, minflok, <l-m>l-isforz</l-m> li <l-m>l-protagonista</l-m> tagħmel biex tieħu <l-m>l-forma</l-m> u ssir karattru sħiħ, li titlibbes biha nnifisha. Loranne tikkwota <l-m>l-idea</l-m> ta’ Ursula K. Le Guin li minbarra <l-m>l-istejjer</l-m> vjolenti li ilna nafu <l-m>mill-mitoloġija</l-m>, hemm tip ieħor ta’ storja li ftit ġiet miktuba. “Hemm stejjer <l-m>bil-lanza</l-m>, <l-m>bit-taqtigħa</l-m> sfrenata, imdemmija, dwar dak <l-m>il-wieħed</l-m> li <l-m>fl-aħħar</l-m> joħroġ rebbieħ. Imbagħad hemm <l-m>l-istejjer</l-m> bil-qoffa, li narawha timtela <l-m>bil-mod</l-m> il-mod, nedhew niflu kull frotta li titqiegħed fiha, nistagħġbu <l-m>bil-ġmiel</l-m>, <l-m>bl-ilwien</l-m>, <l-m>bl-emozzjonijiet</l-m> li jitqanqlu fina hekk kif narawha timtela sa ma tfur. Iżda kull fejn inħarsu, <l-m>l-aktar</l-m> li naraw huma <l-m>l-istejjer</l-m> bil-lanza, għax <l-m>l-istejjer</l-m> bil-qoffa ma tantx jagħmlu ħoss.<span class="pullsemi">”</span> Forsi Platun għolla ’l Saffo <l-m>għal-livell</l-m> ta’ Muża għax ma riedx jara żewġ nisa jfesfsu f’widnejn xulxin. Wara kollox, bilfors kellu jkun hemm xi spjegazzjoni sopranaturali <l-m>għall-fatt</l-m> li Saffo kienet ħakmet <l-m>l-immaġinazzjoni</l-m> tal-qarrejja tagħha bi vrus dwar <l-m>l-imħabba</l-m>, <l-m>il-ġmiel</l-m>, <l-m>il-biżgħat</l-m>. <l-m>Il-kwotidjan</l-m>, <l-m>id-domestiku</l-m>, jaf joħloq theżżiża, <l-m>bil-mod</l-m> kwiet u persistenti tiegħu, daqs <l-m>l-ikbar</l-m> terremot.
 						</p>
 					</div>
 				</section>
@@ -265,13 +269,13 @@ Mela darba, ħmistax-il sena ilu, meta kont għadni tifla, kont ngħix <l-m>mal-
 				</div>
 			
 					<div class="ga5 mga4">
-					<a class="gunju-2023 promo-picture-1 promo" href="/charlene-galea-ġismi-battikata/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Homepage', 'għal: Ġismi Battikata', 5]);">
+					<a class="mejju-2023 promo-picture-1 promo" href="/omar-nshea-gilgamex-dak-li-ra-l-qiegħ/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Homepage', 'għal: Gilgamex, Dak li Ra l-Qiegħ', 5]);">
 						<header>
-							<h3>Ġunju 2023</h3>
-							<h1>Ġismi Battikata</h1>
+							<h3>Mejju 2023</h3>
+							<h1>Gilgamex, Dak li Ra l-Qiegħ</h1>
 							<h2>
 								
-									Charlene Galea
+									Omar N’Shea
 								
 							</h2>
 						</header>
@@ -285,22 +289,22 @@ Mela darba, ħmistax-il sena ilu, meta kont għadni tifla, kont ngħix <l-m>mal-
 	<picture>
 		
 			<source media="(min-width: 749px)" type="image/avif" srcset="
-				https://stampi.aphroconfuso.mt/twothirds_landscape_avif_charlene_promo_1_5da98f6db5.avif 1x,
-				https://stampi.aphroconfuso.mt/twothirds_landscape_avif_x2_charlene_promo_1_5da98f6db5.avif 2x,
-				https://stampi.aphroconfuso.mt/twothirds_landscape_avif_x3_charlene_promo_1_5da98f6db5.avif 3x
+				https://stampi.aphroconfuso.mt/twothirds_landscape_avif_The_Newly_Discovered_Tablet_V_of_the_Epic_of_Gilgamesh_The_Sulaymaniyah_Museum_Iraq_2275d0f385.avif 1x,
+				https://stampi.aphroconfuso.mt/twothirds_landscape_avif_x2_The_Newly_Discovered_Tablet_V_of_the_Epic_of_Gilgamesh_The_Sulaymaniyah_Museum_Iraq_2275d0f385.avif 2x,
+				https://stampi.aphroconfuso.mt/twothirds_landscape_avif_x3_The_Newly_Discovered_Tablet_V_of_the_Epic_of_Gilgamesh_The_Sulaymaniyah_Museum_Iraq_2275d0f385.avif 3x
 			">
 			<source media="(min-width: 749px)" type="image/jpeg" srcset="
-				https://stampi.aphroconfuso.mt/twothirds_landscape_jpeg_charlene_promo_1_5da98f6db5.jpg 1x,
-				https://stampi.aphroconfuso.mt/twothirds_landscape_jpeg_x2_charlene_promo_1_5da98f6db5.jpg 2x,
-				https://stampi.aphroconfuso.mt/twothirds_landscape_jpeg_x3_charlene_promo_1_5da98f6db5.jpg 3x
+				https://stampi.aphroconfuso.mt/twothirds_landscape_jpeg_The_Newly_Discovered_Tablet_V_of_the_Epic_of_Gilgamesh_The_Sulaymaniyah_Museum_Iraq_2275d0f385.jpg 1x,
+				https://stampi.aphroconfuso.mt/twothirds_landscape_jpeg_x2_The_Newly_Discovered_Tablet_V_of_the_Epic_of_Gilgamesh_The_Sulaymaniyah_Museum_Iraq_2275d0f385.jpg 2x,
+				https://stampi.aphroconfuso.mt/twothirds_landscape_jpeg_x3_The_Newly_Discovered_Tablet_V_of_the_Epic_of_Gilgamesh_The_Sulaymaniyah_Museum_Iraq_2275d0f385.jpg 3x
 			">
 			
-				<source media="(min-width: 1px)" type="image/avif" srcset="https://stampi.aphroconfuso.mt/twothirds_landscape_avif_charlene_promo_1_5da98f6db5.avif">
-				<source media="(min-width: 1px)" type="image/jpeg" srcset="https://stampi.aphroconfuso.mt/twothirds_landscape_jpeg_charlene_promo_1_5da98f6db5.jpg">
+				<source media="(min-width: 1px)" type="image/avif" srcset="https://stampi.aphroconfuso.mt/twothirds_landscape_avif_The_Newly_Discovered_Tablet_V_of_the_Epic_of_Gilgamesh_The_Sulaymaniyah_Museum_Iraq_2275d0f385.avif">
+				<source media="(min-width: 1px)" type="image/jpeg" srcset="https://stampi.aphroconfuso.mt/twothirds_landscape_jpeg_The_Newly_Discovered_Tablet_V_of_the_Epic_of_Gilgamesh_The_Sulaymaniyah_Museum_Iraq_2275d0f385.jpg">
 			
 		
 		<img
-			src="https://stampi.aphroconfuso.mt/social_charlene_promo_1_5da98f6db5.jpg"
+			src="https://stampi.aphroconfuso.mt/social_The_Newly_Discovered_Tablet_V_of_the_Epic_of_Gilgamesh_The_Sulaymaniyah_Museum_Iraq_2275d0f385.jpg"
 			alt=""
 		>
 	</picture>
@@ -310,7 +314,7 @@ Mela darba, ħmistax-il sena ilu, meta kont għadni tifla, kont ngħix <l-m>mal-
 						
 						<div class="body-text">
 							
-								<p>Nixtieq niżfnilkom żifna minn ġo qalbi, bla mużika, u żifna b’diska favurita, u araw kif dan ġismi jirrelata differenti, kif jiċċaqlaq differenti. Agħlqu għajnejkom. Missu parti ta’ ġisimkom, tkun liema tkun. Ħossu <l-m>l-ġilda</l-m>. Ħossu <l-m>t-temperatura</l-m> ta’ <l-m>dal-ġisem</l-m>. Ċaqalqu <l-m>bil-mod</l-m> dil-parti. Ċaqalqu aktar <l-m>bl-għaġla</l-m> dil-parti. Agħtuha ċans terġa’ tissetilja. Ħudu nifs ’il ġewwa u żommuh. Ftakru f’xi memorja ta’ <l-m>dil-parti</l-m> tal-ġisem. Araw stampa ikbar ta’ fejn kontu ma’ din <l-m>il-parti</l-m>. Ma’ min kontu &hairsp;—&hairsp; waħidkom jew ma’ nies oħra? Kemm kellkom żmien? <l-m>X’affarijiet</l-m> oħra tiftakru &hairsp;—&hairsp; ħwejjeġ, diska, ikel, leħen? <l-m>X’burdata</l-m> impulsiva ttikom din <l-m>l-istampa</l-m> u din <l-m>il-parti</l-m> tal-ġisem? Xena astratta jew xena konkreta? Iftħu għajnejkom u rritornaw. <l-m>L-istoriku</l-m> jista’ jkun kontemporanju, għax malli għadda f’mument temporanju ħloqt storja oħra b’ġismek. Min jaf kemm-il storja ntesiet jew weħlet ma’ xi parti ta’ moħħna li tlifna <l-m>l-aċċess</l-m> għaliha. Ejja ħa nibdew minn storja qasira. Stenn, qabel ninsa! <l-m>L-ikbar</l-m> biża’ tiegħi &hairsp;—&hairsp; tal-età tiegħi &hairsp;—&hairsp; mhuwiex <l-m>iż-żmien</l-m>, lanqas <l-m>l-uġigħ</l-m>, lanqas <l-m>il-moħħ</l-m> magħluq <l-m>tal-Maltin</l-m>, imma <l-m>l-kwistjoni</l-m> ta’ <l-m>x’ħa</l-m> jiġri minni jekk ma nsibx fejn, jew jekk ma nkunx nista’<span class="pullsemi">,</span> niċċaqlaq iżjed.</p>
+								<p>L-idea li Gilgamex isib ruħu f’daru <l-m>fil-kultura</l-m> u <l-m>l-lingwa</l-m> Maltija ma bdietx b’Montebello. Bejn <l-m>l-1899</l-m> u <l-m>l-1915</l-m> Alfons Maria Galea ppubblika sensiela <l-m>bl-isem</l-m> Kotba <l-m>tal-Mogħdija</l-m> taż-Żmien. <l-m>Fl-1913</l-m> kien ħareġ <l-m>in-numru</l-m> 130 ta’ din <l-m>is-sensiela</l-m> bl-isem Kif <l-m>l-Għerf</l-m> tal-Kangħanin Tnissel <l-m>fil-Griegi</l-m>, miktub minn F. Calleja “<l-m>tal-Alġier</l-m>”<span class="pull">.</span> Kemm kienet tajba <l-m>t-tixrida</l-m> ta’ dan <l-m>il-ktieb</l-m> ma tantx huwa ċar; li nafu hu li ma kienx hawn ħafna kopji <l-m>għall-bejgħ</l-m> għax Calleja kien ħallas <l-m>għall-pubblikazzjoni</l-m> minn butu. Dan ta’ Calleja ma kienx diskors politikament jew kulturalment newtrali. Wara <l-m>l-idea</l-m> tat-tfittxija <l-m>għall-identità</l-m> Maltija fost <l-m>il-frammenti</l-m> mnaqqxin <l-m>bil-kitbiet</l-m> tal-Kangħanin u <l-m>l-Mesopotamiċi</l-m>, kien hemm <l-m>ix-xaqlib</l-m> politiku li informa <l-m>l-kostruzzjoni</l-m> tal-identità. Fuq naħa kien hemm nies bħal Fortunato Mizzi li kienu ilhom isostnu li <l-m>l-Maltin</l-m> kienu Taljani bħala razza u li <l-m>t-tagħlim</l-m> tat-Taljan seta’ jwassal biex <l-m>il-Maltin</l-m> jagħrfu lilhom infushom, u b’hekk iwarrbu <l-m>l-lingwa</l-m> Maltija li għalihom kellha wisq wirt Għarbi, u jwarrbu wkoll <l-m>il-lingwa</l-m> Ingliża biex irażżnu <l-m>l-ħakma</l-m> imperjalista fuq <l-m>il-gżira</l-m>. Fuq <l-m>in-naħa</l-m> l-oħra kien hemm dawk, bħal Sigismondo Savona, li kienu kontra <l-m>l-idea</l-m> tal-identità Taljana <l-m>tal-Maltin</l-m>.</p>
 							
 					</div>
 					</a>
@@ -397,13 +401,13 @@ Mela darba, ħmistax-il sena ilu, meta kont għadni tifla, kont ngħix <l-m>mal-
 				</div>
 			
 					<div class="ga10 mga10">
-					<a class="mejju-2023 promo-picture-1 promo" href="/omar-nshea-gilgamex-dak-li-ra-l-qiegħ/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Homepage', 'għal: Gilgamex, Dak li Ra l-Qiegħ', 10]);">
+					<a class="gunju-2023 promo-picture-1 promo" href="/charlene-galea-ġismi-battikata/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Homepage', 'għal: Ġismi Battikata', 10]);">
 						<header>
-							<h3>Mejju 2023</h3>
-							<h1>Gilgamex, Dak li Ra l-Qiegħ</h1>
+							<h3>Ġunju 2023</h3>
+							<h1>Ġismi Battikata</h1>
 							<h2>
 								
-									Omar N’Shea
+									Charlene Galea
 								
 							</h2>
 						</header>
@@ -417,22 +421,22 @@ Mela darba, ħmistax-il sena ilu, meta kont għadni tifla, kont ngħix <l-m>mal-
 	<picture>
 		
 			<source media="(min-width: 749px)" type="image/avif" srcset="
-				https://stampi.aphroconfuso.mt/twothirds_landscape_avif_The_Newly_Discovered_Tablet_V_of_the_Epic_of_Gilgamesh_The_Sulaymaniyah_Museum_Iraq_2275d0f385.avif 1x,
-				https://stampi.aphroconfuso.mt/twothirds_landscape_avif_x2_The_Newly_Discovered_Tablet_V_of_the_Epic_of_Gilgamesh_The_Sulaymaniyah_Museum_Iraq_2275d0f385.avif 2x,
-				https://stampi.aphroconfuso.mt/twothirds_landscape_avif_x3_The_Newly_Discovered_Tablet_V_of_the_Epic_of_Gilgamesh_The_Sulaymaniyah_Museum_Iraq_2275d0f385.avif 3x
+				https://stampi.aphroconfuso.mt/twothirds_landscape_avif_charlene_promo_1_5da98f6db5.avif 1x,
+				https://stampi.aphroconfuso.mt/twothirds_landscape_avif_x2_charlene_promo_1_5da98f6db5.avif 2x,
+				https://stampi.aphroconfuso.mt/twothirds_landscape_avif_x3_charlene_promo_1_5da98f6db5.avif 3x
 			">
 			<source media="(min-width: 749px)" type="image/jpeg" srcset="
-				https://stampi.aphroconfuso.mt/twothirds_landscape_jpeg_The_Newly_Discovered_Tablet_V_of_the_Epic_of_Gilgamesh_The_Sulaymaniyah_Museum_Iraq_2275d0f385.jpg 1x,
-				https://stampi.aphroconfuso.mt/twothirds_landscape_jpeg_x2_The_Newly_Discovered_Tablet_V_of_the_Epic_of_Gilgamesh_The_Sulaymaniyah_Museum_Iraq_2275d0f385.jpg 2x,
-				https://stampi.aphroconfuso.mt/twothirds_landscape_jpeg_x3_The_Newly_Discovered_Tablet_V_of_the_Epic_of_Gilgamesh_The_Sulaymaniyah_Museum_Iraq_2275d0f385.jpg 3x
+				https://stampi.aphroconfuso.mt/twothirds_landscape_jpeg_charlene_promo_1_5da98f6db5.jpg 1x,
+				https://stampi.aphroconfuso.mt/twothirds_landscape_jpeg_x2_charlene_promo_1_5da98f6db5.jpg 2x,
+				https://stampi.aphroconfuso.mt/twothirds_landscape_jpeg_x3_charlene_promo_1_5da98f6db5.jpg 3x
 			">
 			
-				<source media="(min-width: 1px)" type="image/avif" srcset="https://stampi.aphroconfuso.mt/twothirds_landscape_avif_The_Newly_Discovered_Tablet_V_of_the_Epic_of_Gilgamesh_The_Sulaymaniyah_Museum_Iraq_2275d0f385.avif">
-				<source media="(min-width: 1px)" type="image/jpeg" srcset="https://stampi.aphroconfuso.mt/twothirds_landscape_jpeg_The_Newly_Discovered_Tablet_V_of_the_Epic_of_Gilgamesh_The_Sulaymaniyah_Museum_Iraq_2275d0f385.jpg">
+				<source media="(min-width: 1px)" type="image/avif" srcset="https://stampi.aphroconfuso.mt/twothirds_landscape_avif_charlene_promo_1_5da98f6db5.avif">
+				<source media="(min-width: 1px)" type="image/jpeg" srcset="https://stampi.aphroconfuso.mt/twothirds_landscape_jpeg_charlene_promo_1_5da98f6db5.jpg">
 			
 		
 		<img
-			src="https://stampi.aphroconfuso.mt/social_The_Newly_Discovered_Tablet_V_of_the_Epic_of_Gilgamesh_The_Sulaymaniyah_Museum_Iraq_2275d0f385.jpg"
+			src="https://stampi.aphroconfuso.mt/social_charlene_promo_1_5da98f6db5.jpg"
 			alt=""
 		>
 	</picture>
@@ -442,7 +446,7 @@ Mela darba, ħmistax-il sena ilu, meta kont għadni tifla, kont ngħix <l-m>mal-
 						
 						<div class="body-text">
 							
-								<p>L-idea li Gilgamex isib ruħu f’daru <l-m>fil-kultura</l-m> u <l-m>l-lingwa</l-m> Maltija ma bdietx b’Montebello. Bejn <l-m>l-1899</l-m> u <l-m>l-1915</l-m> Alfons Maria Galea ppubblika sensiela <l-m>bl-isem</l-m> Kotba <l-m>tal-Mogħdija</l-m> taż-Żmien. <l-m>Fl-1913</l-m> kien ħareġ <l-m>in-numru</l-m> 130 ta’ din <l-m>is-sensiela</l-m> bl-isem Kif <l-m>l-Għerf</l-m> tal-Kangħanin Tnissel <l-m>fil-Griegi</l-m>, miktub minn F. Calleja “<l-m>tal-Alġier</l-m>”<span class="pull">.</span> Kemm kienet tajba <l-m>t-tixrida</l-m> ta’ dan <l-m>il-ktieb</l-m> ma tantx huwa ċar; li nafu hu li ma kienx hawn ħafna kopji <l-m>għall-bejgħ</l-m> għax Calleja kien ħallas <l-m>għall-pubblikazzjoni</l-m> minn butu. Dan ta’ Calleja ma kienx diskors politikament jew kulturalment newtrali. Wara <l-m>l-idea</l-m> tat-tfittxija <l-m>għall-identità</l-m> Maltija fost <l-m>il-frammenti</l-m> mnaqqxin <l-m>bil-kitbiet</l-m> tal-Kangħanin u <l-m>l-Mesopotamiċi</l-m>, kien hemm <l-m>ix-xaqlib</l-m> politiku li informa <l-m>l-kostruzzjoni</l-m> tal-identità. Fuq naħa kien hemm nies bħal Fortunato Mizzi li kienu ilhom isostnu li <l-m>l-Maltin</l-m> kienu Taljani bħala razza u li <l-m>t-tagħlim</l-m> tat-Taljan seta’ jwassal biex <l-m>il-Maltin</l-m> jagħrfu lilhom infushom, u b’hekk iwarrbu <l-m>l-lingwa</l-m> Maltija li għalihom kellha wisq wirt Għarbi, u jwarrbu wkoll <l-m>il-lingwa</l-m> Ingliża biex irażżnu <l-m>l-ħakma</l-m> imperjalista fuq <l-m>il-gżira</l-m>. Fuq <l-m>in-naħa</l-m> l-oħra kien hemm dawk, bħal Sigismondo Savona, li kienu kontra <l-m>l-idea</l-m> tal-identità Taljana <l-m>tal-Maltin</l-m>.</p>
+								<p>Nixtieq niżfnilkom żifna minn ġo qalbi, bla mużika, u żifna b’diska favurita, u araw kif dan ġismi jirrelata differenti, kif jiċċaqlaq differenti. Agħlqu għajnejkom. Missu parti ta’ ġisimkom, tkun liema tkun. Ħossu <l-m>l-ġilda</l-m>. Ħossu <l-m>t-temperatura</l-m> ta’ <l-m>dal-ġisem</l-m>. Ċaqalqu <l-m>bil-mod</l-m> dil-parti. Ċaqalqu aktar <l-m>bl-għaġla</l-m> dil-parti. Agħtuha ċans terġa’ tissetilja. Ħudu nifs ’il ġewwa u żommuh. Ftakru f’xi memorja ta’ <l-m>dil-parti</l-m> tal-ġisem. Araw stampa ikbar ta’ fejn kontu ma’ din <l-m>il-parti</l-m>. Ma’ min kontu &hairsp;—&hairsp; waħidkom jew ma’ nies oħra? Kemm kellkom żmien? <l-m>X’affarijiet</l-m> oħra tiftakru &hairsp;—&hairsp; ħwejjeġ, diska, ikel, leħen? <l-m>X’burdata</l-m> impulsiva ttikom din <l-m>l-istampa</l-m> u din <l-m>il-parti</l-m> tal-ġisem? Xena astratta jew xena konkreta? Iftħu għajnejkom u rritornaw. <l-m>L-istoriku</l-m> jista’ jkun kontemporanju, għax malli għadda f’mument temporanju ħloqt storja oħra b’ġismek. Min jaf kemm-il storja ntesiet jew weħlet ma’ xi parti ta’ moħħna li tlifna <l-m>l-aċċess</l-m> għaliha. Ejja ħa nibdew minn storja qasira. Stenn, qabel ninsa! <l-m>L-ikbar</l-m> biża’ tiegħi &hairsp;—&hairsp; tal-età tiegħi &hairsp;—&hairsp; mhuwiex <l-m>iż-żmien</l-m>, lanqas <l-m>l-uġigħ</l-m>, lanqas <l-m>il-moħħ</l-m> magħluq <l-m>tal-Maltin</l-m>, imma <l-m>l-kwistjoni</l-m> ta’ <l-m>x’ħa</l-m> jiġri minni jekk ma nsibx fejn, jew jekk ma nkunx nista’<span class="pullsemi">,</span> niċċaqlaq iżjed.</p>
 							
 					</div>
 					</a>

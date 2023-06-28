@@ -39,9 +39,10 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/kurt-borg-ġilda/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-ab215e3b.css">
-		<script defer src="/script/script-108.js"></script>
+		<link rel="stylesheet" href="/css/style-5b0232ee.css">
+		<script defer src="/script/script-109.js"></script>
 		<script>
+			const	slugifiedUrl = location.pathname.replace(/\//g, '');
 			const setCookie = (cname, cvalue, exdays = 36500) => {
 				const d = new Date();
 				d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -68,9 +69,12 @@
 				document.body.classList.add(`font-size-${ size }`);
 				setCookie('font', size);
 			}
-			const initialiseFontSize = () => {
+			const initialiseAfterBody = () => {
 				const fontSize = getCookie('font') || 1;
 				addRemoveFontSizeClass(fontSize);
+				if (getCookie(`tw-${slugifiedUrl}`)) {
+					document.body.classList.add('trigger-warning-closed');
+				}
 			}
 			var _paq = window._paq = window._paq || [];
 			_paq.push(['disableCookies']);
@@ -89,7 +93,7 @@
 		</script>
 	</head>
 	<body class="show-nav">
-		<script>initialiseFontSize();</script>
+		<script>initialiseAfterBody();</script>
 		<div id="top-wrapper">
 			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
 			<nav id="top-nav">
@@ -136,9 +140,13 @@
 			</section>
 			<section id="grid-max-panel-right-top">
 				
-				<aside id="podcast-note">
-					
-					</aside>
+				
+				
+					<aside id="trigger-warning">
+						<button id="trigger-warning-close" class="close">×</button>
+						<p>Dan <l-m>ix-xogħol</l-m> jitratta temi ta’ stupru.</p>
+					</section>
+				
 			</section>
 			<section id="grid-body">
 				

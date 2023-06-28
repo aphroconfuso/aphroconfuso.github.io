@@ -25,7 +25,6 @@ var
 	progressElement,
 	screenHeight,
 	skippedTime,
-	slugifiedUrl,
 	storyCompleted,
 	timeStarted,
 	title,
@@ -233,7 +232,6 @@ const initialiseMessage = () => {
 
 const initialiseAfterWindow = () => {
 	progressElement = document.getElementById('progress');
-	slugifiedUrl = location.pathname.replace(/\//g, '');
 
 	initialiseAfterNav();
 	initialiseMessage();
@@ -280,9 +278,11 @@ const initialiseAfterWindow = () => {
 		const lightbox = document.getElementById('lightbox');
 		const openLightbox = () => {
 			lightbox.classList.add('open');
+			window._paq.push(['trackEvent', 'Stampi', 'lightbox - iftaħ', title]);
 		}
 		const closeLightbox = () => {
 			lightbox.classList.remove('open');
+			window._paq.push(['trackEvent', 'Stampi', 'lightbox - għalaq', title]);
 		}
 		const lightboxOpen = document.getElementById('lightbox-open');
 		const lightboxClose = document.getElementById('lightbox-close');
@@ -296,6 +296,15 @@ const initialiseAfterWindow = () => {
 				}
 			};
 		}
+
+		const closeTriggerWarning = () => {
+			document.body.classList.add('trigger-warning-closed');
+			setCookie(`tw-${ slugifiedUrl }`, 'magħluq', 3);
+			window._paq.push(['trackEvent', 'Stampi', 'lightbox - għalaq', title]);
+		}
+		const triggerWarningClose = document.getElementById('trigger-warning-close');
+		triggerWarningClose && triggerWarningClose.addEventListener('click', () => closeTriggerWarning());
+
 
 		if (podcastUrl) {
 			Amplitude.init({
