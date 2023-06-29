@@ -277,32 +277,6 @@ const initialiseAfterWindow = () => {
 					window._paq.push(['trackEvent', 'Stampi', 'slideshow', title, slide.index + 1]);
 				});
 			}
-			// Fullscreen
-			const elem = document.documentElement;
-			const portrait = window.matchMedia("(orientation: portrait)");
-			const landscape = window.matchMedia("(orientation: landscape)");
-			portrait.addEventListener("change", function (e) {
-				if (e.matches) {
-					if (document.exitFullscreen) {
-						document.exitFullscreen();
-					} else if (document.webkitExitFullscreen) {
-						document.webkitExitFullscreen();
-					} else if (document.msExitFullscreen) {
-						document.msExitFullscreen();
-					}
-				}
-			});
-			landscape.addEventListener("change", function (e) {
-				if (e.matches) {
-					if (elem.requestFullscreen) {
-						elem.requestFullscreen();
-					} else if (elem.webkitRequestFullscreen) {
-						elem.webkitRequestFullscreen();
-					} else if (elem.msRequestFullscreen) {
-						elem.msRequestFullscreen();
-					}
-				}
-			});
 		}
 		const lightbox = document.getElementById('lightbox');
 		const openLightbox = () => {
