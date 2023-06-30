@@ -2,7 +2,7 @@
    "name":"Aphroconfuso",
    "short_name":"Aphroconfuso",
    "description":"Ġurnal letterarju",
-   "start_url":"/",
+	 "start_url":"/",
    "background_color":"#f9f9f3",
    "theme_color":"#f9f9f3",
    "icons":[
