@@ -1,0 +1,14 @@
+{
+	"version": "https://jsonfeed.org/version/1.1",
+	"title": "Aphroconfuso",
+	"language": "mt",
+	"home_page_url": "https://aphroconfuso.mt/",
+	"feed_url": "https://aphroconfuso.mt/feed/feed.json",
+	"description": "Ġurnal letterarju.",
+	"author": {
+		"name": "Aphroconfuso",
+		"url": "https://aphroconfuso.mt"
+	},
+	"items": [
+	]
+}
