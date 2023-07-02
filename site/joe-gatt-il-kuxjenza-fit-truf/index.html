@@ -39,9 +39,10 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/joe-gatt-il-kuxjenza-fit-truf/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-13704c42.css">
-		<script defer src="/script/script-108.js"></script>
+		<link rel="stylesheet" href="/css/style-8dd24ff2.css">
+		<script defer src="/script/script-113.js"></script>
 		<script>
+			const	slugifiedUrl = location.pathname.replace(/\//g, '');
 			const setCookie = (cname, cvalue, exdays = 36500) => {
 				const d = new Date();
 				d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -68,9 +69,12 @@
 				document.body.classList.add(`font-size-${ size }`);
 				setCookie('font', size);
 			}
-			const initialiseFontSize = () => {
+			const initialiseAfterBody = () => {
 				const fontSize = getCookie('font') || 1;
 				addRemoveFontSizeClass(fontSize);
+				if (getCookie(`tw-${slugifiedUrl}`)) {
+					document.body.classList.add('trigger-warning-closed');
+				}
 			}
 			var _paq = window._paq = window._paq || [];
 			_paq.push(['disableCookies']);
@@ -89,7 +93,7 @@
 		</script>
 	</head>
 	<body class="show-nav">
-		<script>initialiseFontSize();</script>
+		<script>initialiseAfterBody();</script>
 		<div id="top-wrapper">
 			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
 			<nav id="top-nav">
@@ -140,12 +144,8 @@
 						<p>Nota dwar <a href="/italo-svevo-joe-gatt-it-tipjip"><l-m>it-traduzzjoni</l-m> għall-Malti ta’ “<l-m>It-Tipjip</l-m>”</a>, kapitlu minn <em><l-m>Il-Kuxjenza</l-m> ta’ Zeno</em> ta’ Italo Svevo.</p>
 					</aside>
 				
-				<aside id="podcast-note">
-					
-					
-						<p>Nota dwar <a href="/italo-svevo-joe-gatt-it-tipjip"><l-m>it-traduzzjoni</l-m> għall-Malti ta’ “<l-m>It-Tipjip</l-m>”</a>, kapitlu minn <em><l-m>Il-Kuxjenza</l-m> ta’ Zeno</em> ta’ Italo Svevo.</p>
-					
-					</aside>
+				
+				
 			</section>
 			<section id="grid-body">
 				
@@ -170,9 +170,9 @@
 					
 				
 				
-					<aside class="endnote body-text">
+					<section class="endnote body-text">
 						<p><a href="https://www.worldcat.org/title/742515862">Maltese and Other Languages: A Linguistic History of Malta</a> ta’ Joseph M. Brincat (Midsea Books, 2021) jagħti <l-m>l-istorja</l-m> tal-Malti <l-m>mill-bidu</l-m> nett. <a href="https://www.worldcat.org/title/1154300472">The Malta Language Question: A Case Study in Cultural Imperialism</a> ta’ Geoffrey Hull (Said International, 1993) daqsxejn kaotiku imma dettaljat ħafna u anki Brincat jużah biex jgħid <l-m>l-istorja</l-m> tiegħu. Tullio de Mauro, <l-m>fil-ktieb</l-m> tiegħu <a href="https://www.worldcat.org/title/767737003">Storia linguistica <l-m>dell’Italia</l-m> unita</a> 2011 (Einaudi, 1963) kien qal li meta <l-m>l-Italja</l-m> ngħaqdet, 2.5% biss <l-m>tan-nies</l-m> fit-territorju issa Taljan kienu <l-m>fil-fatt</l-m> jitkellmu lingwa li tinftiehem lil hinn <l-m>mir-reġjun</l-m> tagħhom, u madwar 10% kienu jifhmuha. Anki min ma jaqbilx ma’ dawn <l-m>il-figuri</l-m>, jagħti figuri baxxi ħafna. La coscienza di Zeno huwa disponibbli f’ħafna edizzjonijiet. <l-m>L-edizzjoni</l-m> ta’ <a href="https://www.worldcat.org/title/1267955817">Einaudi</a> (2019) fiha esej tajba ħafna <l-m>tal-editur</l-m>, Mario Lavagetto.</p>
-					</aside>
+					</section>
 				
 			</section>
 			<section id="grid-max-panel-left-bottom">
@@ -311,6 +311,8 @@
 		</div>
 		<div id="email"><a href="mailto:l-edituri@aphroconfuso.mt" class="email">l-edituri@aphroconfuso.mt</a></div>
 		<div id="copyright"><a href="/drittijiet/" class="copyright">&copy; 2023 Aphroconfuso u l-kontributuri rispettivi</a></div>
+		<div id="qrcode"><img src="/img/qr/joe-gatt-il-kuxjenza-fit-truf.png" width="180" height="180" alt="QR code" /></div>
+		<div id="url">https://aphroconfuso.mt/joe-gatt-il-kuxjenza-fit-truf/</div>
 	</nav>
 </footer>
 

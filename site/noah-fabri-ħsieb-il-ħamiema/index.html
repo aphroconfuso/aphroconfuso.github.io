@@ -43,9 +43,10 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/noah-fabri-ħsieb-il-ħamiema/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-13704c42.css">
-		<script defer src="/script/script-108.js"></script>
+		<link rel="stylesheet" href="/css/style-8dd24ff2.css">
+		<script defer src="/script/script-113.js"></script>
 		<script>
+			const	slugifiedUrl = location.pathname.replace(/\//g, '');
 			const setCookie = (cname, cvalue, exdays = 36500) => {
 				const d = new Date();
 				d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -72,9 +73,12 @@
 				document.body.classList.add(`font-size-${ size }`);
 				setCookie('font', size);
 			}
-			const initialiseFontSize = () => {
+			const initialiseAfterBody = () => {
 				const fontSize = getCookie('font') || 1;
 				addRemoveFontSizeClass(fontSize);
+				if (getCookie(`tw-${slugifiedUrl}`)) {
+					document.body.classList.add('trigger-warning-closed');
+				}
 			}
 			var _paq = window._paq = window._paq || [];
 			_paq.push(['disableCookies']);
@@ -93,7 +97,7 @@
 		</script>
 	</head>
 	<body class="show-nav">
-		<script>initialiseFontSize();</script>
+		<script>initialiseAfterBody();</script>
 		<div id="top-wrapper">
 			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
 			<nav id="top-nav">
@@ -140,30 +144,30 @@
 			</section>
 			<section id="grid-max-panel-right-top">
 				
-				<aside id="podcast-note">
-					
-							<figure id="audio">
-								<div id="player">
-									<div class="control-container">
-										<button class="amplitude-play-pause" amplitude-main-play-pause="true" id="play-pause">
-									</div>
-									<div id="range">
-										<input type="range" id="range-input" class="amplitude-song-slider" step=".1">
-										<progress class="amplitude-song-played-progress" amplitude-main-song-played-progress="true" id="song-played-progress"></progress>
-									</div>
-									<div class="time-container">
-											<span class="amplitude-current-minutes" amplitude-main-current-minutes="true"></span>:<span class="amplitude-current-seconds" amplitude-main-current-seconds="true"></span>/<span class="amplitude-duration-minutes" amplitude-main-duration-minutes="true"></span>:<span class="amplitude-duration-seconds" amplitude-main-duration-seconds="true"></span>
-									</div>
+				
+					<aside id="podcast-note">
+						<figure id="audio">
+							<div id="player">
+								<div class="control-container">
+									<button class="amplitude-play-pause" amplitude-main-play-pause="true" id="play-pause">
 								</div>
-								<figcaption>
-									
-										<p>Noah Fabri taqra “Ħsieb il-Ħamiema”. Abbona <l-m><l-m>fil-</l-m><a href="/podcast">podcast</a></l-m> ta’ Aphroconfuso biex tisma’ kulma nippubblikaw.</p>
-									
-								</figcaption>
-							</figure>
-					
-					
+								<div id="range">
+									<input type="range" id="range-input" class="amplitude-song-slider" step=".1">
+									<progress class="amplitude-song-played-progress" amplitude-main-song-played-progress="true" id="song-played-progress"></progress>
+								</div>
+								<div class="time-container">
+										<span class="amplitude-current-minutes" amplitude-main-current-minutes="true"></span>:<span class="amplitude-current-seconds" amplitude-main-current-seconds="true"></span>/<span class="amplitude-duration-minutes" amplitude-main-duration-minutes="true"></span>:<span class="amplitude-duration-seconds" amplitude-main-duration-seconds="true"></span>
+								</div>
+							</div>
+							<figcaption>
+								
+									<p>Noah Fabri taqra “Ħsieb il-Ħamiema”. Abbona <l-m><l-m>fil-</l-m><a href="/podcast">podcast</a></l-m> ta’ Aphroconfuso biex tisma’ kulma nippubblikaw.</p>
+								
+							</figcaption>
+						</figure>
 					</aside>
+				
+				
 			</section>
 			<section id="grid-body">
 				
@@ -367,6 +371,8 @@
 		</div>
 		<div id="email"><a href="mailto:l-edituri@aphroconfuso.mt" class="email">l-edituri@aphroconfuso.mt</a></div>
 		<div id="copyright"><a href="/drittijiet/" class="copyright">&copy; 2023 Aphroconfuso u l-kontributuri rispettivi</a></div>
+		<div id="qrcode"><img src="/img/qr/noah-fabri-ħsieb-il-ħamiema.png" width="180" height="180" alt="QR code" /></div>
+		<div id="url">https://aphroconfuso.mt/noah-fabri-ħsieb-il-ħamiema/</div>
 	</nav>
 </footer>
 

@@ -25,7 +25,6 @@ var
 	progressElement,
 	screenHeight,
 	skippedTime,
-	slugifiedUrl,
 	storyCompleted,
 	timeStarted,
 	title,
@@ -55,7 +54,10 @@ const scrolling = () => {
   } else {
     document.querySelector('#menu-toggle').checked = false;
     document.body.classList.remove('show-nav');
-  }
+	}
+	if (!wordcount) {
+		return;
+	}
   if (newScrollPosition !== lastScrollPosition) {
     document.body.classList.add('scrolling');
     clearTimeout(hideScrollTools);
@@ -233,12 +235,14 @@ const initialiseMessage = () => {
 
 const initialiseAfterWindow = () => {
 	progressElement = document.getElementById('progress');
-	slugifiedUrl = location.pathname.replace(/\//g, '');
 
 	initialiseAfterNav();
 	initialiseMessage();
 	initialiseBookmarksList();
 	showFullBookmarks();
+	window.addEventListener('scroll', (event) => {
+		scrolling();
+	});
 
 	if (!!wordcount) {
 		// TODO: Fix enjambed
@@ -254,9 +258,6 @@ const initialiseAfterWindow = () => {
 		wordsPerPixel = wordcount / bodyHeight;
 		charactersPerScreen = parseInt(charactersPerPixel * screenHeight);
 		wordsPerScreen = parseInt(wordsPerPixel * screenHeight);
-		window.addEventListener('scroll', (event) => {
-			scrolling();
-		});
 		lastScrollPosition = getScrollPosition();
 		lastReportedScrollPosition = lastScrollPosition;
 		pageHeight = document.body.scrollHeight;
@@ -280,9 +281,11 @@ const initialiseAfterWindow = () => {
 		const lightbox = document.getElementById('lightbox');
 		const openLightbox = () => {
 			lightbox.classList.add('open');
+			window._paq.push(['trackEvent', 'Stampi', 'lightbox - iftaħ', title]);
 		}
 		const closeLightbox = () => {
 			lightbox.classList.remove('open');
+			window._paq.push(['trackEvent', 'Stampi', 'lightbox - għalaq', title]);
 		}
 		const lightboxOpen = document.getElementById('lightbox-open');
 		const lightboxClose = document.getElementById('lightbox-close');
@@ -296,6 +299,15 @@ const initialiseAfterWindow = () => {
 				}
 			};
 		}
+
+		const closeTriggerWarning = () => {
+			document.body.classList.add('trigger-warning-closed');
+			setCookie(`tw-${ slugifiedUrl }`, 'magħluq', 3);
+			window._paq.push(['trackEvent', 'Stampi', 'lightbox - għalaq', title]);
+		}
+		const triggerWarningClose = document.getElementById('trigger-warning-close');
+		triggerWarningClose && triggerWarningClose.addEventListener('click', () => closeTriggerWarning());
+
 
 		if (podcastUrl) {
 			Amplitude.init({

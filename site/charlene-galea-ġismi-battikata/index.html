@@ -44,9 +44,10 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/charlene-galea-ġismi-battikata/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-13704c42.css">
-		<script defer src="/script/script-108.js"></script>
+		<link rel="stylesheet" href="/css/style-8dd24ff2.css">
+		<script defer src="/script/script-113.js"></script>
 		<script>
+			const	slugifiedUrl = location.pathname.replace(/\//g, '');
 			const setCookie = (cname, cvalue, exdays = 36500) => {
 				const d = new Date();
 				d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -73,9 +74,12 @@
 				document.body.classList.add(`font-size-${ size }`);
 				setCookie('font', size);
 			}
-			const initialiseFontSize = () => {
+			const initialiseAfterBody = () => {
 				const fontSize = getCookie('font') || 1;
 				addRemoveFontSizeClass(fontSize);
+				if (getCookie(`tw-${slugifiedUrl}`)) {
+					document.body.classList.add('trigger-warning-closed');
+				}
 			}
 			var _paq = window._paq = window._paq || [];
 			_paq.push(['disableCookies']);
@@ -94,7 +98,7 @@
 		</script>
 	</head>
 	<body class="show-nav">
-		<script>initialiseFontSize();</script>
+		<script>initialiseAfterBody();</script>
 		<div id="top-wrapper">
 			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
 			<nav id="top-nav">
@@ -141,30 +145,30 @@
 			</section>
 			<section id="grid-max-panel-right-top">
 				
-				<aside id="podcast-note">
-					
-							<figure id="audio">
-								<div id="player">
-									<div class="control-container">
-										<button class="amplitude-play-pause" amplitude-main-play-pause="true" id="play-pause">
-									</div>
-									<div id="range">
-										<input type="range" id="range-input" class="amplitude-song-slider" step=".1">
-										<progress class="amplitude-song-played-progress" amplitude-main-song-played-progress="true" id="song-played-progress"></progress>
-									</div>
-									<div class="time-container">
-											<span class="amplitude-current-minutes" amplitude-main-current-minutes="true"></span>:<span class="amplitude-current-seconds" amplitude-main-current-seconds="true"></span>/<span class="amplitude-duration-minutes" amplitude-main-duration-minutes="true"></span>:<span class="amplitude-duration-seconds" amplitude-main-duration-seconds="true"></span>
-									</div>
+				
+					<aside id="podcast-note">
+						<figure id="audio">
+							<div id="player">
+								<div class="control-container">
+									<button class="amplitude-play-pause" amplitude-main-play-pause="true" id="play-pause">
 								</div>
-								<figcaption>
-									
-										<p>Charlene Galea taqra “Ġismi Battikata”. Abbona <l-m><l-m>fil-</l-m><a href="/podcast">podcast</a></l-m> ta’ Aphroconfuso biex tisma’ kulma nippubblikaw.</p>
-									
-								</figcaption>
-							</figure>
-					
-					
+								<div id="range">
+									<input type="range" id="range-input" class="amplitude-song-slider" step=".1">
+									<progress class="amplitude-song-played-progress" amplitude-main-song-played-progress="true" id="song-played-progress"></progress>
+								</div>
+								<div class="time-container">
+										<span class="amplitude-current-minutes" amplitude-main-current-minutes="true"></span>:<span class="amplitude-current-seconds" amplitude-main-current-seconds="true"></span>/<span class="amplitude-duration-minutes" amplitude-main-duration-minutes="true"></span>:<span class="amplitude-duration-seconds" amplitude-main-duration-seconds="true"></span>
+								</div>
+							</div>
+							<figcaption>
+								
+									<p>Charlene Galea taqra “Ġismi Battikata”. Abbona <l-m><l-m>fil-</l-m><a href="/podcast">podcast</a></l-m> ta’ Aphroconfuso biex tisma’ kulma nippubblikaw.</p>
+								
+							</figcaption>
+						</figure>
 					</aside>
+				
+				
 			</section>
 			<section id="grid-body">
 				
@@ -204,6 +208,8 @@
 					
 					<figure class="editorial-image">
 	
+	
+	
 	<picture>
 		
 			<source media="(min-width: 749px)" type="image/avif" srcset="
@@ -216,16 +222,10 @@
 				https://stampi.aphroconfuso.mt/twothirds_uncropped_jpeg_x2_charlene_galea_gismi_battikata_5_4_ratio_01_b71042ffe1.jpg 2x,
 				https://stampi.aphroconfuso.mt/twothirds_uncropped_jpeg_x3_charlene_galea_gismi_battikata_5_4_ratio_01_b71042ffe1.jpg 3x
 			">
-			<source media="(min-width: 1px)" type="image/avif" srcset="
-				https://stampi.aphroconfuso.mt/square_avif_charlene_galea_gismi_battikata_5_4_ratio_01_b71042ffe1.avif 1x,
-				https://stampi.aphroconfuso.mt/square_avif_x2_charlene_galea_gismi_battikata_5_4_ratio_01_b71042ffe1.avif 2x,
-				https://stampi.aphroconfuso.mt/square_avif_x3_charlene_galea_gismi_battikata_5_4_ratio_01_b71042ffe1.avif 3x
-			">
-			<source media="(min-width: 1px)" type="image/jpeg" srcset="
-				https://stampi.aphroconfuso.mt/square_jpeg_charlene_galea_gismi_battikata_5_4_ratio_01_b71042ffe1.jpg 1x,
-				https://stampi.aphroconfuso.mt/square_jpeg_x2_charlene_galea_gismi_battikata_5_4_ratio_01_b71042ffe1.jpg 2x,
-				https://stampi.aphroconfuso.mt/square_jpeg_x3_charlene_galea_gismi_battikata_5_4_ratio_01_b71042ffe1.jpg 3x
-			">
+			
+				<source media="(min-width: 1px)" type="image/avif" srcset="https://stampi.aphroconfuso.mt/twothirds_uncropped_avif_charlene_galea_gismi_battikata_5_4_ratio_01_b71042ffe1.avif">
+				<source media="(min-width: 1px)" type="image/jpeg" srcset="https://stampi.aphroconfuso.mt/twothirds_uncropped_jpeg_charlene_galea_gismi_battikata_5_4_ratio_01_b71042ffe1.jpg">
+			
 		
 		<img
 			src="https://stampi.aphroconfuso.mt/social_charlene_galea_gismi_battikata_5_4_ratio_01_b71042ffe1.jpg"
@@ -241,6 +241,8 @@
 					
 					<figure class="editorial-image">
 	
+	
+	
 	<picture>
 		
 			<source media="(min-width: 749px)" type="image/avif" srcset="
@@ -253,16 +255,10 @@
 				https://stampi.aphroconfuso.mt/twothirds_uncropped_jpeg_x2_charlene_galea_gismi_battikata_5_4_ratio_03_b09cd4f806.jpg 2x,
 				https://stampi.aphroconfuso.mt/twothirds_uncropped_jpeg_x3_charlene_galea_gismi_battikata_5_4_ratio_03_b09cd4f806.jpg 3x
 			">
-			<source media="(min-width: 1px)" type="image/avif" srcset="
-				https://stampi.aphroconfuso.mt/square_avif_charlene_galea_gismi_battikata_5_4_ratio_03_b09cd4f806.avif 1x,
-				https://stampi.aphroconfuso.mt/square_avif_x2_charlene_galea_gismi_battikata_5_4_ratio_03_b09cd4f806.avif 2x,
-				https://stampi.aphroconfuso.mt/square_avif_x3_charlene_galea_gismi_battikata_5_4_ratio_03_b09cd4f806.avif 3x
-			">
-			<source media="(min-width: 1px)" type="image/jpeg" srcset="
-				https://stampi.aphroconfuso.mt/square_jpeg_charlene_galea_gismi_battikata_5_4_ratio_03_b09cd4f806.jpg 1x,
-				https://stampi.aphroconfuso.mt/square_jpeg_x2_charlene_galea_gismi_battikata_5_4_ratio_03_b09cd4f806.jpg 2x,
-				https://stampi.aphroconfuso.mt/square_jpeg_x3_charlene_galea_gismi_battikata_5_4_ratio_03_b09cd4f806.jpg 3x
-			">
+			
+				<source media="(min-width: 1px)" type="image/avif" srcset="https://stampi.aphroconfuso.mt/twothirds_uncropped_avif_charlene_galea_gismi_battikata_5_4_ratio_03_b09cd4f806.avif">
+				<source media="(min-width: 1px)" type="image/jpeg" srcset="https://stampi.aphroconfuso.mt/twothirds_uncropped_jpeg_charlene_galea_gismi_battikata_5_4_ratio_03_b09cd4f806.jpg">
+			
 		
 		<img
 			src="https://stampi.aphroconfuso.mt/social_charlene_galea_gismi_battikata_5_4_ratio_03_b09cd4f806.jpg"
@@ -278,6 +274,8 @@
 					
 					<figure class="editorial-image">
 	
+	
+	
 	<picture>
 		
 			<source media="(min-width: 749px)" type="image/avif" srcset="
@@ -290,16 +288,10 @@
 				https://stampi.aphroconfuso.mt/twothirds_uncropped_jpeg_x2_charlene_galea_gismi_battikata_5_4_ratio_05_7da07485ec.jpg 2x,
 				https://stampi.aphroconfuso.mt/twothirds_uncropped_jpeg_x3_charlene_galea_gismi_battikata_5_4_ratio_05_7da07485ec.jpg 3x
 			">
-			<source media="(min-width: 1px)" type="image/avif" srcset="
-				https://stampi.aphroconfuso.mt/square_avif_charlene_galea_gismi_battikata_5_4_ratio_05_7da07485ec.avif 1x,
-				https://stampi.aphroconfuso.mt/square_avif_x2_charlene_galea_gismi_battikata_5_4_ratio_05_7da07485ec.avif 2x,
-				https://stampi.aphroconfuso.mt/square_avif_x3_charlene_galea_gismi_battikata_5_4_ratio_05_7da07485ec.avif 3x
-			">
-			<source media="(min-width: 1px)" type="image/jpeg" srcset="
-				https://stampi.aphroconfuso.mt/square_jpeg_charlene_galea_gismi_battikata_5_4_ratio_05_7da07485ec.jpg 1x,
-				https://stampi.aphroconfuso.mt/square_jpeg_x2_charlene_galea_gismi_battikata_5_4_ratio_05_7da07485ec.jpg 2x,
-				https://stampi.aphroconfuso.mt/square_jpeg_x3_charlene_galea_gismi_battikata_5_4_ratio_05_7da07485ec.jpg 3x
-			">
+			
+				<source media="(min-width: 1px)" type="image/avif" srcset="https://stampi.aphroconfuso.mt/twothirds_uncropped_avif_charlene_galea_gismi_battikata_5_4_ratio_05_7da07485ec.avif">
+				<source media="(min-width: 1px)" type="image/jpeg" srcset="https://stampi.aphroconfuso.mt/twothirds_uncropped_jpeg_charlene_galea_gismi_battikata_5_4_ratio_05_7da07485ec.jpg">
+			
 		
 		<img
 			src="https://stampi.aphroconfuso.mt/social_charlene_galea_gismi_battikata_5_4_ratio_05_7da07485ec.jpg"
@@ -315,6 +307,8 @@
 					
 					<figure class="editorial-image">
 	
+	
+	
 	<picture>
 		
 			<source media="(min-width: 749px)" type="image/avif" srcset="
@@ -327,16 +321,10 @@
 				https://stampi.aphroconfuso.mt/twothirds_uncropped_jpeg_x2_charlene_galea_gismi_battikata_5_4_ratio_06_45766b4e10.jpg 2x,
 				https://stampi.aphroconfuso.mt/twothirds_uncropped_jpeg_x3_charlene_galea_gismi_battikata_5_4_ratio_06_45766b4e10.jpg 3x
 			">
-			<source media="(min-width: 1px)" type="image/avif" srcset="
-				https://stampi.aphroconfuso.mt/square_avif_charlene_galea_gismi_battikata_5_4_ratio_06_45766b4e10.avif 1x,
-				https://stampi.aphroconfuso.mt/square_avif_x2_charlene_galea_gismi_battikata_5_4_ratio_06_45766b4e10.avif 2x,
-				https://stampi.aphroconfuso.mt/square_avif_x3_charlene_galea_gismi_battikata_5_4_ratio_06_45766b4e10.avif 3x
-			">
-			<source media="(min-width: 1px)" type="image/jpeg" srcset="
-				https://stampi.aphroconfuso.mt/square_jpeg_charlene_galea_gismi_battikata_5_4_ratio_06_45766b4e10.jpg 1x,
-				https://stampi.aphroconfuso.mt/square_jpeg_x2_charlene_galea_gismi_battikata_5_4_ratio_06_45766b4e10.jpg 2x,
-				https://stampi.aphroconfuso.mt/square_jpeg_x3_charlene_galea_gismi_battikata_5_4_ratio_06_45766b4e10.jpg 3x
-			">
+			
+				<source media="(min-width: 1px)" type="image/avif" srcset="https://stampi.aphroconfuso.mt/twothirds_uncropped_avif_charlene_galea_gismi_battikata_5_4_ratio_06_45766b4e10.avif">
+				<source media="(min-width: 1px)" type="image/jpeg" srcset="https://stampi.aphroconfuso.mt/twothirds_uncropped_jpeg_charlene_galea_gismi_battikata_5_4_ratio_06_45766b4e10.jpg">
+			
 		
 		<img
 			src="https://stampi.aphroconfuso.mt/social_charlene_galea_gismi_battikata_5_4_ratio_06_45766b4e10.jpg"
@@ -352,6 +340,8 @@
 					
 					<figure class="editorial-image">
 	
+	
+	
 	<picture>
 		
 			<source media="(min-width: 749px)" type="image/avif" srcset="
@@ -364,16 +354,10 @@
 				https://stampi.aphroconfuso.mt/twothirds_uncropped_jpeg_x2_charlene_galea_gismi_battikata_5_4_ratio_02_524767c201.jpg 2x,
 				https://stampi.aphroconfuso.mt/twothirds_uncropped_jpeg_x3_charlene_galea_gismi_battikata_5_4_ratio_02_524767c201.jpg 3x
 			">
-			<source media="(min-width: 1px)" type="image/avif" srcset="
-				https://stampi.aphroconfuso.mt/square_avif_charlene_galea_gismi_battikata_5_4_ratio_02_524767c201.avif 1x,
-				https://stampi.aphroconfuso.mt/square_avif_x2_charlene_galea_gismi_battikata_5_4_ratio_02_524767c201.avif 2x,
-				https://stampi.aphroconfuso.mt/square_avif_x3_charlene_galea_gismi_battikata_5_4_ratio_02_524767c201.avif 3x
-			">
-			<source media="(min-width: 1px)" type="image/jpeg" srcset="
-				https://stampi.aphroconfuso.mt/square_jpeg_charlene_galea_gismi_battikata_5_4_ratio_02_524767c201.jpg 1x,
-				https://stampi.aphroconfuso.mt/square_jpeg_x2_charlene_galea_gismi_battikata_5_4_ratio_02_524767c201.jpg 2x,
-				https://stampi.aphroconfuso.mt/square_jpeg_x3_charlene_galea_gismi_battikata_5_4_ratio_02_524767c201.jpg 3x
-			">
+			
+				<source media="(min-width: 1px)" type="image/avif" srcset="https://stampi.aphroconfuso.mt/twothirds_uncropped_avif_charlene_galea_gismi_battikata_5_4_ratio_02_524767c201.avif">
+				<source media="(min-width: 1px)" type="image/jpeg" srcset="https://stampi.aphroconfuso.mt/twothirds_uncropped_jpeg_charlene_galea_gismi_battikata_5_4_ratio_02_524767c201.jpg">
+			
 		
 		<img
 			src="https://stampi.aphroconfuso.mt/social_charlene_galea_gismi_battikata_5_4_ratio_02_524767c201.jpg"
@@ -540,6 +524,8 @@
 					
 					<figure class="editorial-image">
 	
+	
+	
 	<picture>
 		
 			<source media="(min-height: 900px)" type="image/avif" srcset="https://stampi.aphroconfuso.mt/large_uncropped_avif_x3_charlene_galea_gismi_battikata_5_4_ratio_01_b71042ffe1.avif">
@@ -562,6 +548,8 @@
 				<li class="splide__slide">
 					
 					<figure class="editorial-image">
+	
+	
 	
 	<picture>
 		
@@ -586,6 +574,8 @@
 					
 					<figure class="editorial-image">
 	
+	
+	
 	<picture>
 		
 			<source media="(min-height: 900px)" type="image/avif" srcset="https://stampi.aphroconfuso.mt/large_uncropped_avif_x3_charlene_galea_gismi_battikata_5_4_ratio_05_7da07485ec.avif">
@@ -609,6 +599,8 @@
 					
 					<figure class="editorial-image">
 	
+	
+	
 	<picture>
 		
 			<source media="(min-height: 900px)" type="image/avif" srcset="https://stampi.aphroconfuso.mt/large_uncropped_avif_x3_charlene_galea_gismi_battikata_5_4_ratio_06_45766b4e10.avif">
@@ -631,6 +623,8 @@
 				<li class="splide__slide">
 					
 					<figure class="editorial-image">
+	
+	
 	
 	<picture>
 		
@@ -714,6 +708,8 @@
 		</div>
 		<div id="email"><a href="mailto:l-edituri@aphroconfuso.mt" class="email">l-edituri@aphroconfuso.mt</a></div>
 		<div id="copyright"><a href="/drittijiet/" class="copyright">&copy; 2023 Aphroconfuso u l-kontributuri rispettivi</a></div>
+		<div id="qrcode"><img src="/img/qr/charlene-galea-ġismi-battikata.png" width="180" height="180" alt="QR code" /></div>
+		<div id="url">https://aphroconfuso.mt/charlene-galea-ġismi-battikata/</div>
 	</nav>
 </footer>
 
