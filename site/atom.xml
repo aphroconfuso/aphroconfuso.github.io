@@ -5,24 +5,12 @@
 	<language>mt</language>
 	<link href="https://aphroconfuso.mt/atom.xml" rel="self"/>
 	<link href="https://aphroconfuso.mt/"/>
-	<updated>2023-09-05T15:05:13Z</updated>
+	<updated>2023-09-05T15:28:58Z</updated>
 	<id>https://aphroconfuso.mt</id>
 	<author>
 		<name>Aphroconfuso</name>
 		<email>l-edituri@aphroconfuso.mt</email>
 	</author>
-		
-		<entry>
-			<title>It-Tipjip</title>
-			<author>
-				<name>Italo Svevo (tr Joe Gatt)</name>
-			</author>
-			<link href="https://aphroconfuso.mt/italo-svevo-joe-gatt-it-tipjip/"/>
-			<published>2023-05-01T05:00:00.000Z</published>
-			<updated>2023-06-26T14:53:58.949Z</updated>
-			<id>https://aphroconfuso.mt/italo-svevo-joe-gatt-it-tipjip/</id>
-			<content type="html">L-ewwel sigaretti li pejjipt m’għadekx issibhom għall-bejgħ. Għall-ħabta tal-1870 l-Awstrija kellhom minn dawk li kienu jinbiegħu f’kaxxa tal-kartun żgħira bit-tikketta tal-ajkla b’żewġt irjus. Ara: madwar waħda minn dawn il-kaxxi mill-ewwel jinġabru diversi persuni, kollha b’xi karatteristika minn tagħhom li hi biżżejjed biex tfakkarni x’jisimhom, imma mhux tant li nemozzjona ruħi b’dan l-inkontru bla ħsieb. Nipprova nislet iżjed u mmur sal-pultruna: il-persuni jgħosfru u posthom jeħduh koċċ buffi jiddieħqu bija. Immur lura mifxul lejn il-mejda.</content>
-		</entry>
 		
 		<entry>
 			<title>Bur Mgħeż</title>
@@ -84,6 +72,18 @@ Irene.
 Japplikalhom il-concealer safrani, bl-isponża,  
 sakemm jgħattihom għalkollox. 
 Marisa, Mylene.</content>
+		</entry>
+		
+		<entry>
+			<title>It-Tipjip</title>
+			<author>
+				<name>Italo Svevo (tr Joe Gatt)</name>
+			</author>
+			<link href="https://aphroconfuso.mt/italo-svevo-joe-gatt-it-tipjip/"/>
+			<published>2023-05-01T05:00:00.000Z</published>
+			<updated>2023-09-05T15:27:53.024Z</updated>
+			<id>https://aphroconfuso.mt/italo-svevo-joe-gatt-it-tipjip/</id>
+			<content type="html">L-ewwel sigaretti li pejjipt m’għadekx issibhom għall-bejgħ. Għall-ħabta tal-1870 l-Awstrija kellhom minn dawk li kienu jinbiegħu f’kaxxa tal-kartun żgħira bit-tikketta tal-ajkla b’żewġt irjus. Ara: madwar waħda minn dawn il-kaxxi mill-ewwel jinġabru diversi persuni, kollha b’xi karatteristika minn tagħhom li hi biżżejjed biex tfakkarni x’jisimhom, imma mhux tant li nemozzjona ruħi b’dan l-inkontru bla ħsieb. Nipprova nislet iżjed u mmur sal-pultruna: il-persuni jgħosfru u posthom jeħduh koċċ buffi jiddieħqu bija. Immur lura mifxul lejn il-mejda.</content>
 		</entry>
 		
 		<entry>
@@ -181,18 +181,6 @@ griżmejh. X’għabra?</content>
 		</entry>
 		
 		<entry>
-			<title>Il-Kuxjenza fit-Truf</title>
-			<author>
-				<name>Joe Gatt</name>
-			</author>
-			<link href="https://aphroconfuso.mt/joe-gatt-il-kuxjenza-fit-truf/"/>
-			<published>2023-05-01T05:00:00.000Z</published>
-			<updated>2023-09-02T09:35:16.901Z</updated>
-			<id>https://aphroconfuso.mt/joe-gatt-il-kuxjenza-fit-truf/</id>
-			<content type="html">Bħalma żgur skoprew ħafna qabli, meta tkun qed tittraduċi mit-Taljan, il-Malti li qed taħdem bih ma tħossux uniformi. Fih ħafna li hu lixx u duttili, imma fih ukoll l-għoqiedi u l-ingroppi. Fil-Malti hemm ħafna Taljan li jgħaddi mingħajr ma tagħti kasu; imbagħad hemm it-Taljan tal-avukati. Filli tiskrupla għax tħossok m’int qed tagħmel xejn ħlief tbiddel ftit l-ortografija—“io avanzo tale ipotesi per spiegare la mia debolezza giovanile, ma senza una decisa convinzione”—filli ttik rasek għax tinduna li qed tinstema’ iktar Taljan mit-test oriġinali.</content>
-		</entry>
-		
-		<entry>
 			<title>Bil-Moħbi fil-Beraħ</title>
 			<author>
 				<name>Omar N’Shea</name>
@@ -214,6 +202,18 @@ griżmejh. X’għabra?</content>
 			<updated>2023-08-14T17:11:25.840Z</updated>
 			<id>https://aphroconfuso.mt/miriam-galea-lejl-u-nhar/</id>
 			<content type="html">Il-ħitan bojod joqtluk naqra naqra kuljum.  Tipprova ma tismax is-skiet, itanbar stinat tul il-kurituri, iżda t-tektik ħafif fuq il-keyboards, it-tpetpit solitarju tal-cursor, l-ilħna mbiegħda f’uffiċċju minnhom jibqgħu ma jidfnuhx.  Fil-kamra tal-arkivji xi ħadd jixgħel il-photocopier, li tobżoq folja wara l-oħra, mimlija ċifri, kliem kbir kollu rpużat, taħbiliet ta’ ideat suġġeriti u konsiderazzjonijiet meqjusa f’dokumenti Taljanizzati tal-Unjoni Ewropea.  It-terremot f’Haiti, il-kriżi finanzjarja, il-faqar dinji, l-iżvilupp fil-pajjiżi eks-Komunisti, il-bidla fil-klima, id-dinja li qed titbaskat, tinstamat, tinħall f’taħlita tossika ta’ plastik jinten, jaħraq l-imnifsejn, jistordi l-menti, iżarrat ix-xagħar, inixxef il-ġilda.  U l-photocopier tofroq karta minn oħra, tifrixhom pulit fuq xulxin bħal suldati stenduti, nodfa, stirati, bojod bħal-lożor.  Il-ħoss tal-magna jkompli jħeddlek, mill-uffiċċju ta’ ħdejk tasallek konverżazzjoni bil-Franċiż.</content>
+		</entry>
+		
+		<entry>
+			<title>Il-Kuxjenza fit-Truf</title>
+			<author>
+				<name>Joe Gatt</name>
+			</author>
+			<link href="https://aphroconfuso.mt/joe-gatt-il-kuxjenza-fit-truf/"/>
+			<published>2023-05-01T05:00:00.000Z</published>
+			<updated>2023-09-05T15:28:36.015Z</updated>
+			<id>https://aphroconfuso.mt/joe-gatt-il-kuxjenza-fit-truf/</id>
+			<content type="html">Bħalma żgur skoprew ħafna qabli, meta tkun qed tittraduċi mit-Taljan, il-Malti li qed taħdem bih ma tħossux uniformi. Fih ħafna li hu lixx u duttili, imma fih ukoll l-għoqiedi u l-ingroppi. Fil-Malti hemm ħafna Taljan li jgħaddi mingħajr ma tagħti kasu; imbagħad hemm it-Taljan tal-avukati. Filli tiskrupla għax tħossok m’int qed tagħmel xejn ħlief tbiddel ftit l-ortografija—“io avanzo tale ipotesi per spiegare la mia debolezza giovanile, ma senza una decisa convinzione”—filli ttik rasek għax tinduna li qed tinstema’ iktar Taljan mit-test oriġinali.</content>
 		</entry>
 		
 		<entry>
