@@ -48,10 +48,10 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/ca/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-8ebe9b4e.css">
+		<link rel="stylesheet" href="/css/style-181c4ff9.css">
 		<script defer src="/script/script-113.js"></script>
 		<script>
-			const	slugifiedUrl = location.pathname.replace(/\//g, '');
+			const	urlSlug = location.pathname.replace(/\//g, '');
 			const setCookie = (cname, cvalue, exdays = 36500) => {
 				const d = new Date();
 				d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -81,7 +81,7 @@
 			const initialiseAfterBody = () => {
 				const fontSize = getCookie('font') || 1;
 				addRemoveFontSizeClass(fontSize);
-				if (getCookie(`tw-${slugifiedUrl}`)) {
+				if (getCookie(`tw-${urlSlug}`)) {
 					document.body.classList.add('trigger-warning-closed');
 				}
 			}
@@ -115,14 +115,16 @@
 				<menu>
 					<li><a href="/appuntamenti/">Appuntamenti</a></li>
 					<li><a href="/kontributuri/">Kontributuri</a></li>
+					
 					<li><a href="/werrej/">Werrej</a></li>
 					<li><a href="/podcast/">Podcast</a></li>
 					<li class="hide-laptop">&nbsp;</li>
 					<li><a href="/dwarna/">Dwarna</a></li>
 					<li><a href="/kolofon/">Kolofon</a></li>
+					
 					<li><a href="/newsletter/">Newsletter</a></li>
-					<li><a href="/gwida-tal-istil/" class="hide-laptop">Gwida tal-Istil</a></li>
-					<li id="text-size-adjust" class="hide-laptop">
+					<li class="hide-laptop"><a href="/gwida-tal-istil/">Gwida tal-Istil</a></li>
+					<li class="hide-laptop" id="text-size-adjust">
 						<a id="font-size-1" href="#">a</a>
 						<a id="font-size-2" href="#">a</a>
 						<a id="font-size-3" href="#">a</a>

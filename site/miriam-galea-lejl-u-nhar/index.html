@@ -44,10 +44,10 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/miriam-galea-lejl-u-nhar/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-8ebe9b4e.css">
+		<link rel="stylesheet" href="/css/style-181c4ff9.css">
 		<script defer src="/script/script-113.js"></script>
 		<script>
-			const	slugifiedUrl = location.pathname.replace(/\//g, '');
+			const	urlSlug = location.pathname.replace(/\//g, '');
 			const setCookie = (cname, cvalue, exdays = 36500) => {
 				const d = new Date();
 				d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -77,7 +77,7 @@
 			const initialiseAfterBody = () => {
 				const fontSize = getCookie('font') || 1;
 				addRemoveFontSizeClass(fontSize);
-				if (getCookie(`tw-${slugifiedUrl}`)) {
+				if (getCookie(`tw-${urlSlug}`)) {
 					document.body.classList.add('trigger-warning-closed');
 				}
 			}
@@ -111,14 +111,16 @@
 				<menu>
 					<li><a href="/appuntamenti/">Appuntamenti</a></li>
 					<li><a href="/kontributuri/">Kontributuri</a></li>
+					
 					<li><a href="/werrej/">Werrej</a></li>
 					<li><a href="/podcast/">Podcast</a></li>
 					<li class="hide-laptop">&nbsp;</li>
 					<li><a href="/dwarna/">Dwarna</a></li>
 					<li><a href="/kolofon/">Kolofon</a></li>
+					
 					<li><a href="/newsletter/">Newsletter</a></li>
-					<li><a href="/gwida-tal-istil/" class="hide-laptop">Gwida tal-Istil</a></li>
-					<li id="text-size-adjust" class="hide-laptop">
+					<li class="hide-laptop"><a href="/gwida-tal-istil/">Gwida tal-Istil</a></li>
+					<li class="hide-laptop" id="text-size-adjust">
 						<a id="font-size-1" href="#">a</a>
 						<a id="font-size-2" href="#">a</a>
 						<a id="font-size-3" href="#">a</a>
@@ -130,18 +132,20 @@
 			<div id="message"><!-- --></div>
 			<main id="skipto">
 				
-	<article class="content awwissu-2023 storja story-17">
+	<article class="content awwissu-2023 storja story story-17">
 		<header>
-			<h4><a href="/awwissu-2023/">Awwissu 2023</a></h5>
-			<h1>
-				Lejl u Nhar
-				
-			</h1>
-			<h2>
 			
-				<a href="/miriam-galea/">Miriam Galea</a>
+				<h4><a href="/awwissu-2023/">Awwissu 2023</a></h5>
+				<h1>
+					Lejl u Nhar
+					
+				</h1>
+				<h2>
+					
+						<a href="/miriam-galea/">Miriam Galea</a>
+					
+				</h2>
 			
-		</h2>
 			
 			
 		</header>
@@ -307,16 +311,19 @@
 		<ul class="promo-list">
 	
 	
-		<li>
-			<a class="promo gunju-2023" href="/charlene-galea-ġismi-battikata/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Lejl u Nhar', 'għal: Ġismi Battikata', 1]);">
-				<header>
-	<h4>Ġunju 2023</h4>
-	<h1>
-		Ġismi Battikata
-		
-	</h1>
 	
-		<h2>Charlene Galea</h2>
+		<li>
+			<a class="promo gunju-2023 promo-storja story-" href="/charlene-galea-ġismi-battikata/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Lejl u Nhar', 'għal: ', 1]);">
+				<header>
+	
+		<h4>Ġunju 2023</h4>
+		<h1>
+			Ġismi Battikata
+			
+		</h1>
+		
+			<h2>Charlene Galea</h2>
+		
 	
 	
 </header>
@@ -330,15 +337,17 @@
 		</li>
 	
 		<li>
-			<a class="promo mejju-2023" href="/noah-fabri-ħsieb-il-ħamiema/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Lejl u Nhar', 'għal: Ħsieb il-Ħamiema', 2]);">
+			<a class="promo mejju-2023 promo-storja story-" href="/noah-fabri-ħsieb-il-ħamiema/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Lejl u Nhar', 'għal: ', 2]);">
 				<header>
-	<h4>Mejju 2023</h4>
-	<h1>
-		Ħsieb <l-m>il-Ħamiema</l-m>
-		
-	</h1>
 	
-		<h2>Noah Fabri</h2>
+		<h4>Mejju 2023</h4>
+		<h1>
+			Ħsieb <l-m>il-Ħamiema</l-m>
+			
+		</h1>
+		
+			<h2>Noah Fabri</h2>
+		
 	
 	
 </header>
@@ -353,15 +362,17 @@
 		</li>
 	
 		<li>
-			<a class="promo awwissu-2023" href="/matthew-schembri-mona-lisa-karnival-ieħor/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Lejl u Nhar', 'għal: mona lisa | karnival ieħor', 3]);">
+			<a class="promo awwissu-2023 promo-poezija story-" href="/matthew-schembri-mona-lisa-karnival-ieħor/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Lejl u Nhar', 'għal: ', 3]);">
 				<header>
-	<h4>Awwissu 2023</h4>
-	<h1>
-		mona lisa | karnival ieħor
-		
-	</h1>
 	
-		<h2>Matthew Schembri</h2>
+		<h4>Awwissu 2023</h4>
+		<h1>
+			mona lisa | karnival ieħor
+			
+		</h1>
+		
+			<h2>Matthew Schembri</h2>
+		
 	
 	
 </header>
@@ -378,8 +389,10 @@
 
 	</aside>
 	<script>
-		wordcount = 2235;
+		monthYear = 'awwissu-2023' || null;
 		podcastUrl = 'https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1694022301428-f268084cf509848751ac7a4da10a9396.mp3' || null;
+		storyId = '17' || null;
+		wordcount = 2235 || null;
 	</script>
 	
 		

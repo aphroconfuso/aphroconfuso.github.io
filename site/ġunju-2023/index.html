@@ -27,10 +27,10 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/ġunju-2023/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-8ebe9b4e.css">
+		<link rel="stylesheet" href="/css/style-181c4ff9.css">
 		<script defer src="/script/script-113.js"></script>
 		<script>
-			const	slugifiedUrl = location.pathname.replace(/\//g, '');
+			const	urlSlug = location.pathname.replace(/\//g, '');
 			const setCookie = (cname, cvalue, exdays = 36500) => {
 				const d = new Date();
 				d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -60,7 +60,7 @@
 			const initialiseAfterBody = () => {
 				const fontSize = getCookie('font') || 1;
 				addRemoveFontSizeClass(fontSize);
-				if (getCookie(`tw-${slugifiedUrl}`)) {
+				if (getCookie(`tw-${urlSlug}`)) {
 					document.body.classList.add('trigger-warning-closed');
 				}
 			}
@@ -94,14 +94,16 @@
 				<menu>
 					<li><a href="/appuntamenti/">Appuntamenti</a></li>
 					<li><a href="/kontributuri/">Kontributuri</a></li>
+					
 					<li><a href="/werrej/">Werrej</a></li>
 					<li><a href="/podcast/">Podcast</a></li>
 					<li class="hide-laptop">&nbsp;</li>
 					<li><a href="/dwarna/">Dwarna</a></li>
 					<li><a href="/kolofon/">Kolofon</a></li>
+					
 					<li><a href="/newsletter/">Newsletter</a></li>
-					<li><a href="/gwida-tal-istil/" class="hide-laptop">Gwida tal-Istil</a></li>
-					<li id="text-size-adjust" class="hide-laptop">
+					<li class="hide-laptop"><a href="/gwida-tal-istil/">Gwida tal-Istil</a></li>
+					<li class="hide-laptop" id="text-size-adjust">
 						<a id="font-size-1" href="#">a</a>
 						<a id="font-size-2" href="#">a</a>
 						<a id="font-size-3" href="#">a</a>
@@ -132,38 +134,19 @@
 			<ul class="promo-list">
 	
 	
-		<li>
-			<a class="promo gunju-2023" href="/kurt-borg-ġilda/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Ġunju 2023', 'għal: Ġilda', 1]);">
-				<header>
-	<h4>Ġunju 2023</h4>
-	<h1>
-		Ġilda
-		
-	</h1>
-	
-		<h2>Kurt Borg</h2>
-	
-	
-</header>
-
-				<div class="body-text">
-					
-						<p>Hemm karru <l-m>bil-ġwienaħ</l-m> misjuq minn kuċċier miġbud minn żewġt iżwiemel. Żiemel minnhom abjad, b’għonqu wieqaf dritt, grazzjuż. <l-m>L-ieħor</l-m> iswed, magħmul ikrah u goff. <l-m>Bil-frosta</l-m> f’idu, <l-m>il-kuċċier</l-m> qed jittajjar lejn <l-m>is-sħab</l-m> u lil hinn minnu. <l-m>Iż-żwiemel</l-m>, speċjalment <l-m>l-iswed</l-m>, kultant jissaraw <l-m>mal-kuċċier</l-m>, jisfidawh, jisfrattaw, għoddhom jaqilbu <l-m>l-karru</l-m>. <l-m>Il-kuċċier</l-m> iqum bilwieqfa jwiddeb <l-m>liż-żwiemel</l-m>. B’idejh <l-m>it-tnejn</l-m> jiġbed b’kemm jiflaħ fuq <l-m>ir-riedni</l-m> marbutin <l-m>mal-ilġiem</l-m> ta’ ġo ħalqhom. <l-m>Iż-żwiemel</l-m> jogħtru taħt <l-m>is-saħħa</l-m> tal-kuċċier u, bla ma jridu, jobduh. Imma <l-m>t-taqbida</l-m> bejniethom tkompli. Żiemel minnhom jiġbed ’l hawn u <l-m>l-ieħor</l-m> jiġbed ’l hemm sa ma <l-m>l-kuċċier</l-m> jitlef <l-m>il-kontroll</l-m>, <l-m>il-karru</l-m> jinqasam u jegħleb <l-m>mis-smewwiet</l-m> għall-art.</p>
-					
-				</div>
-			</a>
-		</li>
 	
 		<li>
-			<a class="promo gunju-2023" href="/charlene-galea-ġismi-battikata/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Ġunju 2023', 'għal: Ġismi Battikata', 2]);">
+			<a class="promo gunju-2023 promo-storja story-13" href="/charlene-galea-ġismi-battikata/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Ġunju 2023', 'għal: ', 1]);">
 				<header>
-	<h4>Ġunju 2023</h4>
-	<h1>
-		Ġismi Battikata
-		
-	</h1>
 	
-		<h2>Charlene Galea</h2>
+		<h4>Ġunju 2023</h4>
+		<h1>
+			Ġismi Battikata
+			
+		</h1>
+		
+			<h2>Charlene Galea</h2>
+		
 	
 	
 </header>
@@ -171,6 +154,30 @@
 				<div class="body-text">
 					
 						<p>Ġismi żar ħafna postijiet projbiti jew perikolużi. Ġismi għadu ħaj. Xi daqqa ’l hemm u ’l hawn qala’ wkoll. Relazzjonijiet ta’ mħabba tossika ħallew marki interni u mentali li affettwaw kif jirrelata dan ġismi ma’ ġisem ieħor&hairsp;—&hairsp;sigurtà, kumplessità, thewdin <l-m>tal-moħħ</l-m>. <l-m>L-istonku</l-m> qala’ minn ġewwa u minn barra. Inpoġġi idi fuqu, hekk, biex inżiegħel <l-m>l-uġigħ</l-m> ta’ dan <l-m>l-għar&hairsp;</l-m>—&hairsp;mudlam b’xaqq ta’ dawl&hairsp;—&hairsp;b’daħla ċkejkna ta’ tama għal ġenna mingħajr erwieħ&hairsp;—&hairsp;imma għal futur li nemmen li ħa jkun ta’ iktar mistrieħ. <l-m>Il-kumpless</l-m> ta’ kull ġisem, kemm tiegħi u kemm tiegħek, saru prodotti għal iktar tħeġġiġ <l-m>għall-konsumeriżmu</l-m>. Taqbel miegħi?</p>
+					
+				</div>
+			</a>
+		</li>
+	
+		<li>
+			<a class="promo gunju-2023 promo-esej story-14" href="/kurt-borg-ġilda/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Ġunju 2023', 'għal: ', 2]);">
+				<header>
+	
+		<h4>Ġunju 2023</h4>
+		<h1>
+			Ġilda
+			
+		</h1>
+		
+			<h2>Kurt Borg</h2>
+		
+	
+	
+</header>
+
+				<div class="body-text">
+					
+						<p>Hemm karru <l-m>bil-ġwienaħ</l-m> misjuq minn kuċċier miġbud minn żewġt iżwiemel. Żiemel minnhom abjad, b’għonqu wieqaf dritt, grazzjuż. <l-m>L-ieħor</l-m> iswed, magħmul ikrah u goff. <l-m>Bil-frosta</l-m> f’idu, <l-m>il-kuċċier</l-m> qed jittajjar lejn <l-m>is-sħab</l-m> u lil hinn minnu. <l-m>Iż-żwiemel</l-m>, speċjalment <l-m>l-iswed</l-m>, kultant jissaraw <l-m>mal-kuċċier</l-m>, jisfidawh, jisfrattaw, għoddhom jaqilbu <l-m>l-karru</l-m>. <l-m>Il-kuċċier</l-m> iqum bilwieqfa jwiddeb <l-m>liż-żwiemel</l-m>. B’idejh <l-m>it-tnejn</l-m> jiġbed b’kemm jiflaħ fuq <l-m>ir-riedni</l-m> marbutin <l-m>mal-ilġiem</l-m> ta’ ġo ħalqhom. <l-m>Iż-żwiemel</l-m> jogħtru taħt <l-m>is-saħħa</l-m> tal-kuċċier u, bla ma jridu, jobduh. Imma <l-m>t-taqbida</l-m> bejniethom tkompli. Żiemel minnhom jiġbed ’l hawn u <l-m>l-ieħor</l-m> jiġbed ’l hemm sa ma <l-m>l-kuċċier</l-m> jitlef <l-m>il-kontroll</l-m>, <l-m>il-karru</l-m> jinqasam u jegħleb <l-m>mis-smewwiet</l-m> għall-art.</p>
 					
 				</div>
 			</a>

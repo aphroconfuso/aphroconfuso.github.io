@@ -25,10 +25,10 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/werrej/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-8ebe9b4e.css">
+		<link rel="stylesheet" href="/css/style-181c4ff9.css">
 		<script defer src="/script/script-113.js"></script>
 		<script>
-			const	slugifiedUrl = location.pathname.replace(/\//g, '');
+			const	urlSlug = location.pathname.replace(/\//g, '');
 			const setCookie = (cname, cvalue, exdays = 36500) => {
 				const d = new Date();
 				d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -58,7 +58,7 @@
 			const initialiseAfterBody = () => {
 				const fontSize = getCookie('font') || 1;
 				addRemoveFontSizeClass(fontSize);
-				if (getCookie(`tw-${slugifiedUrl}`)) {
+				if (getCookie(`tw-${urlSlug}`)) {
 					document.body.classList.add('trigger-warning-closed');
 				}
 			}
@@ -92,14 +92,16 @@
 				<menu>
 					<li><a href="/appuntamenti/">Appuntamenti</a></li>
 					<li><a href="/kontributuri/">Kontributuri</a></li>
+					
 					<li><a href="/werrej/">Werrej</a></li>
 					<li><a href="/podcast/">Podcast</a></li>
 					<li class="hide-laptop">&nbsp;</li>
 					<li><a href="/dwarna/">Dwarna</a></li>
 					<li><a href="/kolofon/">Kolofon</a></li>
+					
 					<li><a href="/newsletter/">Newsletter</a></li>
-					<li><a href="/gwida-tal-istil/" class="hide-laptop">Gwida tal-Istil</a></li>
-					<li id="text-size-adjust" class="hide-laptop">
+					<li class="hide-laptop"><a href="/gwida-tal-istil/">Gwida tal-Istil</a></li>
+					<li class="hide-laptop" id="text-size-adjust">
 						<a id="font-size-1" href="#">a</a>
 						<a id="font-size-2" href="#">a</a>
 						<a id="font-size-3" href="#">a</a>
@@ -129,19 +131,23 @@
 				
 				
 				
+				
 				<ul class="promo-list">
 	
 	
-		<li>
-			<a class="promo awwissu-2023" href="/omar-nshea-bil-moħbi-fil-beraħ/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Bil-Moħbi fil-Beraħ', 1]);">
-				<header>
-	<h4>Awwissu 2023</h4>
-	<h1>
-		Bil-Moħbi <l-m>fil-Beraħ</l-m>
-		
-	</h1>
 	
-		<h2>Omar <l-m>N’Shea</l-m></h2>
+		<li>
+			<a class="promo awwissu-2023 promo-esej story-19" href="/omar-nshea-bil-moħbi-fil-beraħ/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: ', 1]);">
+				<header>
+	
+		<h4>Awwissu 2023</h4>
+		<h1>
+			Bil-Moħbi <l-m>fil-Beraħ</l-m>
+			
+		</h1>
+		
+			<h2>Omar <l-m>N’Shea</l-m></h2>
+		
 	
 	
 </header>
@@ -155,17 +161,19 @@
 		</li>
 	
 		<li>
-			<a class="promo settembru-2023" href="/omar-nshea-bur-mgħeż-1-ftit-qabel-dfint-l-ommi-mort-infittex-qabar/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Bur Mgħeż', 2]);">
+			<a class="promo settembru-2023 promo-esej story-20" href="/omar-nshea-bur-mgħeż-1-ftit-qabel-dfint-l-ommi-mort-infittex-qabar/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: ', 2]);">
 				<header>
-	<h4>Settembru 2023</h4>
-	<h1>
-		Bur Mgħeż
-		
-			<span class="episodeNumber">#1</span>
-		
-	</h1>
 	
-		<h2>Omar <l-m>N’Shea</l-m></h2>
+		<h4>Settembru 2023</h4>
+		<h1>
+			Bur Mgħeż
+			
+				<span class="episodeNumber">#1</span>
+			
+		</h1>
+		
+			<h2>Omar <l-m>N’Shea</l-m></h2>
+		
 	
 	
 		<h3>Ftit qabel dfint ’l ommi, mort infittex qabar</h3>
@@ -181,15 +189,17 @@
 		</li>
 	
 		<li>
-			<a class="promo gunju-2023" href="/kurt-borg-ġilda/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Ġilda', 3]);">
+			<a class="promo gunju-2023 promo-esej story-14" href="/kurt-borg-ġilda/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: ', 3]);">
 				<header>
-	<h4>Ġunju 2023</h4>
-	<h1>
-		Ġilda
-		
-	</h1>
 	
-		<h2>Kurt Borg</h2>
+		<h4>Ġunju 2023</h4>
+		<h1>
+			Ġilda
+			
+		</h1>
+		
+			<h2>Kurt Borg</h2>
+		
 	
 	
 </header>
@@ -203,15 +213,17 @@
 		</li>
 	
 		<li>
-			<a class="promo gunju-2023" href="/charlene-galea-ġismi-battikata/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Ġismi Battikata', 4]);">
+			<a class="promo gunju-2023 promo-storja story-13" href="/charlene-galea-ġismi-battikata/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: ', 4]);">
 				<header>
-	<h4>Ġunju 2023</h4>
-	<h1>
-		Ġismi Battikata
-		
-	</h1>
 	
-		<h2>Charlene Galea</h2>
+		<h4>Ġunju 2023</h4>
+		<h1>
+			Ġismi Battikata
+			
+		</h1>
+		
+			<h2>Charlene Galea</h2>
+		
 	
 	
 </header>
@@ -225,15 +237,17 @@
 		</li>
 	
 		<li>
-			<a class="promo mejju-2023" href="/omar-nshea-gilgamex-dak-li-ra-l-qiegħ/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Gilgamex, Dak li Ra l-Qiegħ', 5]);">
+			<a class="promo mejju-2023 promo-esej story-7" href="/omar-nshea-gilgamex-dak-li-ra-l-qiegħ/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: ', 5]);">
 				<header>
-	<h4>Mejju 2023</h4>
-	<h1>
-		Gilgamex, Dak li Ra <l-m>l-Qiegħ</l-m>
-		
-	</h1>
 	
-		<h2>Omar <l-m>N’Shea</l-m></h2>
+		<h4>Mejju 2023</h4>
+		<h1>
+			Gilgamex, Dak li Ra <l-m>l-Qiegħ</l-m>
+			
+		</h1>
+		
+			<h2>Omar <l-m>N’Shea</l-m></h2>
+		
 	
 	
 </header>
@@ -247,15 +261,17 @@
 		</li>
 	
 		<li>
-			<a class="promo mejju-2023" href="/noah-fabri-ħsieb-il-ħamiema/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Ħsieb il-Ħamiema', 6]);">
+			<a class="promo mejju-2023 promo-storja story-6" href="/noah-fabri-ħsieb-il-ħamiema/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: ', 6]);">
 				<header>
-	<h4>Mejju 2023</h4>
-	<h1>
-		Ħsieb <l-m>il-Ħamiema</l-m>
-		
-	</h1>
 	
-		<h2>Noah Fabri</h2>
+		<h4>Mejju 2023</h4>
+		<h1>
+			Ħsieb <l-m>il-Ħamiema</l-m>
+			
+		</h1>
+		
+			<h2>Noah Fabri</h2>
+		
 	
 	
 </header>
@@ -270,15 +286,17 @@
 		</li>
 	
 		<li>
-			<a class="promo mejju-2023" href="/joe-gatt-il-kuxjenza-fit-truf/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Il-Kuxjenza fit-Truf', 7]);">
+			<a class="promo mejju-2023 promo-esej story-11" href="/joe-gatt-il-kuxjenza-fit-truf/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: ', 7]);">
 				<header>
-	<h4>Mejju 2023</h4>
-	<h1>
-		Il-Kuxjenza <l-m>fit-Truf</l-m>
-		
-	</h1>
 	
-		<h2>Joe Gatt</h2>
+		<h4>Mejju 2023</h4>
+		<h1>
+			Il-Kuxjenza <l-m>fit-Truf</l-m>
+			
+		</h1>
+		
+			<h2>Joe Gatt</h2>
+		
 	
 	
 </header>
@@ -292,15 +310,17 @@
 		</li>
 	
 		<li>
-			<a class="promo lulju-2023" href="/loranne-vella-il-lanza-il-labra-il-qoffa-l-azzarin/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Il-Lanza, il-Labra, il-Qoffa, l-Azzarin', 8]);">
+			<a class="promo lulju-2023 promo-esej story-16" href="/loranne-vella-il-lanza-il-labra-il-qoffa-l-azzarin/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: ', 8]);">
 				<header>
-	<h4>Lulju 2023</h4>
-	<h1>
-		Il-Lanza, <l-m>il-Labra</l-m>, <l-m>il-Qoffa</l-m>, <l-m>l-Azzarin</l-m>
-		
-	</h1>
 	
-		<h2>Loranne Vella</h2>
+		<h4>Lulju 2023</h4>
+		<h1>
+			Il-Lanza, <l-m>il-Labra</l-m>, <l-m>il-Qoffa</l-m>, <l-m>l-Azzarin</l-m>
+			
+		</h1>
+		
+			<h2>Loranne Vella</h2>
+		
 	
 	
 </header>
@@ -314,15 +334,17 @@
 		</li>
 	
 		<li>
-			<a class="promo awwissu-2023" href="/miriam-galea-lejl-u-nhar/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Lejl u Nhar', 9]);">
+			<a class="promo awwissu-2023 promo-storja story-17" href="/miriam-galea-lejl-u-nhar/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: ', 9]);">
 				<header>
-	<h4>Awwissu 2023</h4>
-	<h1>
-		Lejl u Nhar
-		
-	</h1>
 	
-		<h2>Miriam Galea</h2>
+		<h4>Awwissu 2023</h4>
+		<h1>
+			Lejl u Nhar
+			
+		</h1>
+		
+			<h2>Miriam Galea</h2>
+		
 	
 	
 </header>
@@ -336,15 +358,17 @@
 		</li>
 	
 		<li>
-			<a class="promo lulju-2023" href="/rowena-grech-medusa/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Medusa', 10]);">
+			<a class="promo lulju-2023 promo-storja story-15" href="/rowena-grech-medusa/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: ', 10]);">
 				<header>
-	<h4>Lulju 2023</h4>
-	<h1>
-		Medusa
-		
-	</h1>
 	
-		<h2>Rowena Grech</h2>
+		<h4>Lulju 2023</h4>
+		<h1>
+			Medusa
+			
+		</h1>
+		
+			<h2>Rowena Grech</h2>
+		
 	
 	
 </header>
@@ -360,15 +384,17 @@ Mela darba, ħmistax-il sena ilu, meta kont għadni tifla, kont ngħix <l-m>mal-
 		</li>
 	
 		<li>
-			<a class="promo awwissu-2023" href="/matthew-schembri-mona-lisa-karnival-ieħor/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: mona lisa | karnival ieħor', 11]);">
+			<a class="promo awwissu-2023 promo-poezija story-18" href="/matthew-schembri-mona-lisa-karnival-ieħor/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: ', 11]);">
 				<header>
-	<h4>Awwissu 2023</h4>
-	<h1>
-		mona lisa | karnival ieħor
-		
-	</h1>
 	
-		<h2>Matthew Schembri</h2>
+		<h4>Awwissu 2023</h4>
+		<h1>
+			mona lisa | karnival ieħor
+			
+		</h1>
+		
+			<h2>Matthew Schembri</h2>
+		
 	
 	
 </header>
@@ -382,15 +408,17 @@ Mela darba, ħmistax-il sena ilu, meta kont għadni tifla, kont ngħix <l-m>mal-
 		</li>
 	
 		<li>
-			<a class="promo mejju-2023" href="/maria-theuma-nofs-triq-dejjem-nieqaf/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Nofs triq, dejjem nieqaf', 12]);">
+			<a class="promo mejju-2023 promo-poezija story-9" href="/maria-theuma-nofs-triq-dejjem-nieqaf/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: ', 12]);">
 				<header>
-	<h4>Mejju 2023</h4>
-	<h1>
-		Nofs triq, dejjem nieqaf
-		
-	</h1>
 	
-		<h2>Maria Theuma</h2>
+		<h4>Mejju 2023</h4>
+		<h1>
+			Nofs triq, dejjem nieqaf
+			
+		</h1>
+		
+			<h2>Maria Theuma</h2>
+		
 	
 	
 </header>
@@ -404,15 +432,17 @@ Mela darba, ħmistax-il sena ilu, meta kont għadni tifla, kont ngħix <l-m>mal-
 		</li>
 	
 		<li>
-			<a class="promo mejju-2023" href="/romeo-roxman-gatt-qarn/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Qarn', 13]);">
+			<a class="promo mejju-2023 promo-memoir story-8" href="/romeo-roxman-gatt-qarn/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: ', 13]);">
 				<header>
-	<h4>Mejju 2023</h4>
-	<h1>
-		Qarn
-		
-	</h1>
 	
-		<h2>Romeo Roxman Gatt</h2>
+		<h4>Mejju 2023</h4>
+		<h1>
+			Qarn
+			
+		</h1>
+		
+			<h2>Romeo Roxman Gatt</h2>
+		
 	
 	
 </header>
@@ -426,15 +456,17 @@ Mela darba, ħmistax-il sena ilu, meta kont għadni tifla, kont ngħix <l-m>mal-
 		</li>
 	
 		<li>
-			<a class="promo mejju-2023" href="/ryan-falzon-reċti-tal-kbar-parties-tat-tfal/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Reċti tal-Kbar, Parties tat-Tfal', 14]);">
+			<a class="promo mejju-2023 promo-storja story-5" href="/ryan-falzon-reċti-tal-kbar-parties-tat-tfal/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: ', 14]);">
 				<header>
-	<h4>Mejju 2023</h4>
-	<h1>
-		Reċti <l-m>tal-Kbar</l-m>, Parties <l-m>tat-Tfal</l-m>
-		
-	</h1>
 	
-		<h2>Ryan Falzon</h2>
+		<h4>Mejju 2023</h4>
+		<h1>
+			Reċti <l-m>tal-Kbar</l-m>, Parties <l-m>tat-Tfal</l-m>
+			
+		</h1>
+		
+			<h2>Ryan Falzon</h2>
+		
 	
 	
 </header>
@@ -449,17 +481,19 @@ Mela darba, ħmistax-il sena ilu, meta kont għadni tifla, kont ngħix <l-m>mal-
 		</li>
 	
 		<li>
-			<a class="promo mejju-2023" href="/italo-svevo-joe-gatt-it-tipjip/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: It-Tipjip', 15]);">
+			<a class="promo mejju-2023 promo-xihaga-ohra story-10" href="/italo-svevo-joe-gatt-it-tipjip/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: ', 15]);">
 				<header>
-	<h4>Mejju 2023</h4>
-	<h1>
-		It-Tipjip
-		
-	</h1>
 	
-		<h2 class="translated">
-			Italo Svevo <span class="translator">Joe Gatt</span>
-		</h2>
+		<h4>Mejju 2023</h4>
+		<h1>
+			It-Tipjip
+			
+		</h1>
+		
+			<h2 class="translated">
+				Italo Svevo <span class="translator">Joe Gatt</span>
+			</h2>
+		
 	
 	
 </header>
