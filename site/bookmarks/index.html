@@ -5,9 +5,8 @@
 		<meta charset="utf-8">
 		
 	<title>Bookmarks · Aphroconfuso</title>
-<meta content="Ġurnal letterarju." name="description">
-<meta property="og:image" content="https://stampi.aphroconfuso.mt/social_aphroconfuso_logo_wallpaper_f1b0208899.jpg">
-
+	<meta content="Ġurnal letterarju." name="description">
+	<meta property="og:image" content="https://stampi.aphroconfuso.mt/social_aphroconfuso_logo_wallpaper_f1b0208899.jpg">
 
 		<meta content="black" name="apple-mobile-web-app-status-bar-style">
 		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
@@ -28,10 +27,10 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/bookmarks/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-8ebe9b4e.css">
+		<link rel="stylesheet" href="/css/style-97de36ad.css">
 		<script defer src="/script/script-113.js"></script>
 		<script>
-			const	slugifiedUrl = location.pathname.replace(/\//g, '');
+			const	urlSlug = location.pathname.replace(/\//g, '');
 			const setCookie = (cname, cvalue, exdays = 36500) => {
 				const d = new Date();
 				d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -61,7 +60,7 @@
 			const initialiseAfterBody = () => {
 				const fontSize = getCookie('font') || 1;
 				addRemoveFontSizeClass(fontSize);
-				if (getCookie(`tw-${slugifiedUrl}`)) {
+				if (getCookie(`tw-${urlSlug}`)) {
 					document.body.classList.add('trigger-warning-closed');
 				}
 			}
@@ -95,14 +94,16 @@
 				<menu>
 					<li><a href="/appuntamenti/">Appuntamenti</a></li>
 					<li><a href="/kontributuri/">Kontributuri</a></li>
+					
 					<li><a href="/werrej/">Werrej</a></li>
 					<li><a href="/podcast/">Podcast</a></li>
 					<li class="hide-laptop">&nbsp;</li>
 					<li><a href="/dwarna/">Dwarna</a></li>
 					<li><a href="/kolofon/">Kolofon</a></li>
+					
 					<li><a href="/newsletter/">Newsletter</a></li>
-					<li><a href="/gwida-tal-istil/" class="hide-laptop">Gwida tal-Istil</a></li>
-					<li id="text-size-adjust" class="hide-laptop">
+					<li class="hide-laptop"><a href="/gwida-tal-istil/">Gwida tal-Istil</a></li>
+					<li class="hide-laptop" id="text-size-adjust">
 						<a id="font-size-1" href="#">a</a>
 						<a id="font-size-2" href="#">a</a>
 						<a id="font-size-3" href="#">a</a>
@@ -114,31 +115,49 @@
 			<div id="message"><!-- --></div>
 			<main id="skipto">
 				
-	<article class="generic">
-	<header>
-		<h4>&nbsp;</h5>
-		<h1>Bookmarks</h1>
-		<h2>&nbsp;</h2>
-	</header>
-	<div class="container-generic">
-		<section id="grid-max-panel-left-top">
-			<!-- -->
-		</section>
-		<section id="grid-max-panel-right-top">
-			<!-- X -->
-		</section>
-		<section id="grid-body">
-			<div class="generic-body-text"><p>[vojta għalissa]</p></div>
-		</section>
-		<section id="grid-max-panel-left-bottom">
-			<!-- X -->
-		</section>
-		<section id="grid-max-panel-right-bottom">
-			<!-- X -->
-		</section>
-	</div>
-</article>
-
+	<article class="generic" id="bookmarks">
+		<header>
+			<h4>&nbsp;</h5>
+			<h1>Bookmarks</h1>
+			<h2>&nbsp;</h2>
+		</header>
+		<div class="container-generic bookmarks">
+			<section id="grid-max-panel-left-top">
+				<!-- -->
+			</section>
+			<section id="grid-max-panel-right-top">
+				<!-- X -->
+			</section>
+			<section id="grid-body">
+				<div id="bookmarks-container" class="generic-body-text">
+					<p>[vojta għalissa]</p>
+					<template id="bookmark-item">
+						<li>
+							<a>
+								<header>
+									<h4></h4>
+									<h1></h1>
+									<h2></h2>
+									<h3></h3>
+									<h5></h5>
+								</header>
+								<div class="body-text">
+									<p></p>
+								</div>
+							</a>
+						</li>
+					</template>
+					<ul id="bookmark-list" class="promo-list"></ul>
+				</div>
+			</section>
+			<section id="grid-max-panel-left-bottom">
+				<!-- X -->
+			</section>
+			<section id="grid-max-panel-right-bottom">
+				<!-- X -->
+			</section>
+		</div>
+	</article>
 
 			</main>
 		</div>
