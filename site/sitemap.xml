@@ -9,20 +9,6 @@
 	</url>
 	
 	<url>
-		<loc>https://aphroconfuso.mt/kolofon/</loc>
-		<lastmod>2023-10-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-	</url>
-	
-	<url>
-		<loc>https://aphroconfuso.mt/drittijiet/</loc>
-		<lastmod>2023-10-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-	</url>
-	
-	<url>
 		<loc>https://aphroconfuso.mt/aċċessibbiltà/</loc>
 		<lastmod>2023-10-14</lastmod>
     <changefreq>monthly</changefreq>
@@ -73,6 +59,13 @@
 	
 	<url>
 		<loc>https://aphroconfuso.mt/appuntamenti/</loc>
+		<lastmod>2023-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/kolofon/</loc>
 		<lastmod>2023-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -191,7 +184,21 @@
 	</url>
 	
 	<url>
+		<loc>https://aphroconfuso.mt/drittijiet/</loc>
+		<lastmod>2023-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
 		<loc>https://aphroconfuso.mt/404.html</loc>
+		<lastmod>2023-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/</loc>
 		<lastmod>2023-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -381,13 +388,6 @@
 	
 	<url>
 		<loc>https://aphroconfuso.mt/gwida-tal-istil/</loc>
-		<lastmod>2023-10-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-	</url>
-	
-	<url>
-		<loc>https://aphroconfuso.mt/</loc>
 		<lastmod>2023-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
