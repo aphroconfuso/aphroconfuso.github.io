@@ -92,6 +92,7 @@ const addBookmarkNow = () => {
 		storyId,
 		title,
 		wordcount,
+		wordsPerSecond: wordsPerSecond.toFixed(2),
 	});
 }
 
@@ -141,10 +142,12 @@ const addBookmark = (type = 'text', bookmark) => {
 	updateBookmarksMenu();
 }
 
-const deleteBookmark = (type = 'text', slug = storyId) => {
-	delete bookmarksList[`${type}-${urlSlug}`];
+const deleteBookmark = (type = 'text', slug = urlSlug, id = urlId) => {
+	console.log('delete', slug);
+	delete bookmarksList[`${ type }-${ slug }`];
 	saveBookmarksList();
 	updateBookmarksMenu();
+	document.getElementById(`bookmark-${ id }`).remove();
 }
 
 const getCurrentBlurb = (percent) => {
@@ -176,18 +179,22 @@ const showFullBookmarkList = () => {
 		return;
 	}
 	let bookmarksArray = [];
-	bookmarkKeysArray.forEach((key, index) => bookmarksArray.push(bookmarksList[key]));
-	bookmarksArray.sort((a, b) => new Date(b.dateTime) - new Date(a.dateTime)).forEach(bookmark => {
+	bookmarkKeysArray.forEach(key => bookmarksArray.push(bookmarksList[key]));
+	bookmarksArray.sort((a, b) => new Date(b.dateTime) - new Date(a.dateTime)).forEach((bookmark, index) => {
 		const clone = template.content.cloneNode(true);
+		clone.querySelector("li").id = `bookmark-${ bookmark.storyId }`;
 		clone.querySelector("a").href = `/${ bookmark.urlSlug }/#b-${ bookmark.scrollPosition }`;
 		clone.querySelector("a").classList.add("promo", `promo-${ bookmark.monthYear }`, bookmark.monthYear);
-		clone.querySelector("a").onClick="_paq.push(['trackEvent', 'Promo', 'minn: Bookmarks', 'għal: ${ bookmark.title }', ${ index }]);"
+		clone.querySelector("a").id = `link-${ bookmark.storyId }`;
 		clone.querySelector("h1").textContent = bookmark.title;
 		clone.querySelector("h2").textContent = bookmark.author;
 		clone.querySelector("h4").textContent = bookmark.monthYear;
 		clone.querySelector("h5").textContent = `${bookmark.percentage}%`;
+		clone.querySelector("button").id = `delete-${ bookmark.storyId }`;
 		clone.querySelector(".body-text p").textContent = bookmark.placeText.replace(/.*?\w\b\s+/, "… ");
 		list.appendChild(clone);
+		document.getElementById(`delete-${ bookmark.storyId }`).addEventListener("click", () => deleteBookmark('text', bookmark.urlSlug, bookmark.storyId));
+		document.getElementById(`link-${ bookmark.storyId }`).addEventListener("click", () => _paq.push(['trackEvent', 'Promo', 'minn: Bookmarks', `għal: ${ bookmark.title }`, index]));
 	});
 }
 
