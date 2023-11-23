@@ -92,7 +92,7 @@ const addBookmarkNow = () => {
 		storyId,
 		title,
 		wordcount,
-		wordsPerSecond: wordsPerSecond.toFixed(2),
+		wordsPerSecond: wordsPerSecond && wordsPerSecond.toFixed(2),
 	});
 }
 
