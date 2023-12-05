@@ -187,8 +187,14 @@ const showBookmarksInPromos = (bookmarksArray) => {
 			bookmarkLink.classList.add("bookmark");
 			bookmarkLink.href = `/${ urlSlug }/#b-${ scrollPosition }`;
 			element.appendChild(bookmarkLink);
-			element.querySelector("h1").classList.add("outlined");
-			element.querySelector("h2").classList.add("outlined");
+		});
+		document.querySelectorAll(`article.story-${ storyId } header`).forEach((element) => {
+			const bookmarkLink = document.createElement("a");
+			bookmarkLink.textContent = `${percentage}%`;
+			bookmarkLink.classList.add("bookmark");
+			bookmarkLink.href = `/${ urlSlug }/#b-${ scrollPosition }`;
+			bookmarkLink.addEventListener('click', () => window.scrollTo({top: scrollPosition, left: 0, behavior: 'smooth'}))
+			element.appendChild(bookmarkLink);
 		});
 	});
 }
