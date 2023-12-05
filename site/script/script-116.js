@@ -83,7 +83,7 @@ const scrolling = () => {
 }
 
 const addBookmarkNow = () => {
-	if (!percentageProgress || (wordcount * (percentageProgress / 100) < bookmarkThresholdWords) || percentageProgress > 98) {
+	if (!percentageProgress || (wordcount * (percentageProgress / 100)) < bookmarkThresholdWords || percentageProgress > 98) {
 		return;
 	}
 	addBookmark('text', {
@@ -92,10 +92,10 @@ const addBookmarkNow = () => {
 		percentage: percentageProgress,
 		placeText: getCurrentBlurb(percentageProgress),
 		scrollPosition: newScrollPosition,
-		urlSlug,
 		speed: wordsPerSecond && wordsPerSecond.toFixed(2),
 		storyId,
 		title,
+		urlSlug,
 		wordcount,
 		wordsPerSecond: wordsPerSecond && wordsPerSecond.toFixed(2),
 	});
@@ -136,7 +136,7 @@ const initialiseBookmarksList = () => {
 	bookmarksList = JSON.parse(localStorage.getItem("bookmarks") || "{}");
 }
 
-const saveBookmarksList = () => {localStorage.setItem("bookmarks", JSON.stringify(bookmarksList));}
+const saveBookmarksList = () => localStorage.setItem("bookmarks", JSON.stringify(bookmarksList));
 
 const addBookmark = (type = 'text', bookmark) => {
 	bookmarksList[`${ type }-${urlSlug}`] = {
@@ -156,6 +156,7 @@ const deleteBookmark = (type = 'text', slug = urlSlug, id = storyId) => {
 	bookmark && bookmark.remove();
 }
 
+// FIXME: recalibrate
 const getCurrentBlurb = (percent) => {
 	const currentPlace = parseInt(percent * bodyText.length / 100);
 	const blurb = bodyText.substring(currentPlace, currentPlace + (charactersPerScreen));
@@ -172,12 +173,13 @@ const updateBookmarksMenu = (bookmarksArray) => {
 	}
 }
 
-const showBookmarks = (bookmarksArray) => {
+const showBookmarksInPromos = (bookmarksArray) => {
 	bookmarksArray.forEach((bookmark) => {
-		const {percentage, scrollPosition, storyId, urlSlug, wordcount } = bookmark;
-		if (!!percentage || (wordcount * (percentage / 100) < bookmarkThresholdWords) || percentage > 98) {
-			deleteBookmark('text', urlSlug, storyId);
-			return;
+		const { monthYear, percentage, scrollPosition, storyId, urlSlug, wordcount} = bookmark;
+		// PURGE
+		if (!percentage || (wordcount * (percentage / 100)) < bookmarkThresholdWords || percentage > 98 || !urlSlug || !monthYear) {
+			delete bookmarksList[`text-${ urlSlug }`];
+			saveBookmarksList();
 		}
 		document.querySelectorAll(`a.story-${ storyId }`).forEach((element) => {
 			const bookmarkLink = document.createElement("a");
@@ -185,12 +187,10 @@ const showBookmarks = (bookmarksArray) => {
 			bookmarkLink.classList.add("bookmark");
 			bookmarkLink.href = `/${ urlSlug }/#b-${ scrollPosition }`;
 			element.appendChild(bookmarkLink);
+			element.querySelector("h1").classList.add("outlined");
+			element.querySelector("h2").classList.add("outlined");
 		});
 	});
-	count = bookmarksArray.length;
-	if (bookmarksMenuElement) {
-		bookmarksMenuElement.textcontent = ` (${ count })`;
-	}
 }
 
 const showFullBookmarkList = () => {
@@ -206,30 +206,33 @@ const showFullBookmarkList = () => {
 	// bookmarkKeysArray.forEach(key => bookmarksList[key].type === 'text' && bookmarksArray.push(bookmarksList[key]));
 	bookmarkKeysArray.forEach(key => key.startsWith('text-') && bookmarksArray.push(bookmarksList[key]));
 	console.log(bookmarksArray);
-	showBookmarks(bookmarksArray);
+	updateBookmarksMenu(bookmarksArray);
+	showBookmarksInPromos(bookmarksArray);
 
 	if (list && browserTemplating && template) {
 		bookmarksArray.sort((a, b) => new Date(b.dateTime) - new Date(a.dateTime)).forEach((bookmark, index) => {
+			const { author, monthYear, percentage, placeText, storyId, title, urlSlug, scrollPosition } = bookmark;
 			const clone = template.content.cloneNode(true);
-			clone.querySelector("li").id = `bookmark-${ bookmark.storyId }`;
-			clone.querySelector("a").href = `/${ bookmark.urlSlug }/#b-${ bookmark.scrollPosition }`;
-			clone.querySelector("a").classList.add("promo", `promo-${ bookmark.monthYear }`, bookmark.monthYear);
-			clone.querySelector("a").id = `link-${ bookmark.storyId }`;
-			clone.querySelector("h1").textContent = bookmark.title;
-			clone.querySelector("h2").textContent = bookmark.author;
-			clone.querySelector("h4").textContent = bookmark.monthYear;
-			clone.querySelector("h5").textContent = `${bookmark.percentage}%`;
-			clone.querySelector("button").id = `delete-${ bookmark.storyId }`;
-			clone.querySelector(".body-text p").textContent = bookmark.placeText.replace(/.*?\w\b\s+/, "… ");
+			clone.querySelector("li").id = `bookmark-${ storyId }`;
+			clone.querySelector("a").href = `/${ urlSlug }/#b-${ scrollPosition }`;
+			clone.querySelector("a").classList.add(`promo-${ monthYear }`, monthYear, `story-${ storyId }`);
+			clone.querySelector("a").id = `link-${ storyId }`;
+			clone.querySelector(".bookmark").textContent = `${percentage}%`;
+			clone.querySelector("h1").textContent = title;
+			clone.querySelector("h2").textContent = author;
+			clone.querySelector("h4").textContent = monthYear.replace(/-/, ' ').replace(/gunju/, 'ġunju').replace(/dicembru/, 'diċembru');
+			clone.querySelector("button").id = `delete-${ storyId }`;
+			clone.querySelector(".body-text p").textContent = placeText.replace(/.*?\w\b\s+/, "… ");
 			list.appendChild(clone);
-			document.getElementById(`delete-${ bookmark.storyId }`).addEventListener("click", () => deleteBookmark('text', bookmark.urlSlug, bookmark.storyId));
-			document.getElementById(`link-${ bookmark.storyId }`).addEventListener("click", () => _paq.push(['trackEvent', 'Promo', 'minn: Bookmarks', `għal: ${ bookmark.title }`, index]));
+			document.getElementById(`delete-${ storyId }`).addEventListener("click", () => deleteBookmark('text', urlSlug, storyId));
+			document.getElementById(`link-${ storyId }`).addEventListener("click", () => _paq.push(['trackEvent', 'Promo', 'minn: Bookmarks', `għal: ${ title }`, index]));
 		});
 	}
-	showBookmarks(bookmarksArray);
+	// FIXME add bookmark to template
+	// showBookmarksInPromos(bookmarksArray);
 }
 
-const clearAllBookmarks = () => { localStorage.clear(); }
+const clearAllBookmarks = () => localStorage.clear();
 
 const getPreviousAudioTime = () => {
 	return bookmarksList[`audio-${urlSlug}`] && bookmarksList[`audio-${urlSlug}`].playPosition || 0;
