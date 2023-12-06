@@ -147,6 +147,7 @@ const initialiseBookmarksList = () => {
 			const item = bookmarksList[key];
 			item.key = key;
 			item.urlSlug = item.urlSlug || key.split('text-')[1];
+			const { monthYear, percentage, urlSlug, wordcount} = item;
 			const valid = percentage && urlSlug && monthYear && percentage < 98 && (wordcount * (percentage / 100) > bookmarkThresholdWords);
 			if (!valid) {
 				delete bookmarksList[`text-${ urlSlug }`];
