@@ -177,11 +177,12 @@ const calculateScrollPosition = (percentage) => parseInt(bodyStart + bodyHeight 
 
 const showBookmarksInPromos = (bookmarksArray) => {
 	bookmarksArray.forEach((bookmark) => {
-		const { monthYear, percentage, scrollPosition, storyId, urlSlug, wordcount} = bookmark;
+		const { monthYear, percentage, storyId, urlSlug, wordcount} = bookmark;
 		// PURGE
 		if (!percentage || !urlSlug || !monthYear || percentage > 98 || (wordcount * (percentage / 100) < bookmarkThresholdWords)) {
 			delete bookmarksList[`text-${ urlSlug }`];
 			saveBookmarksList();
+			return;
 		}
 		document.querySelectorAll(`a.story-${ storyId }`).forEach((element) => {
 			const bookmarkLink = document.createElement("a");
