@@ -6,7 +6,9 @@ var
 	bodyHeight,
 	bodyStart,
 	bodyText,
+	bookmarksArray,
 	bookmarksList,
+	bookmarksMenuElement,
 	charactersPerPixel,
 	charactersPerScreen,
 	currentTime,
@@ -38,6 +40,7 @@ var
 	wordsPerScreen;
 
 audioLoaded = false;
+bookmarksArray = [];
 percentageProgress = 0;
 storyCompleted = false;
 
@@ -47,8 +50,6 @@ const bookmarkThresholdWords = 250;
 const maxWordsPerSecond = 5;
 const minWordsperSecond = 1;
 const thresholdWords = 100;
-
-const bookmarksMenuElement = document.getElementById("bookmarksTotal");
 
 const getScrollPosition = () => window.pageYOffset || document.documentElement.scrollTop;
 
@@ -74,8 +75,7 @@ const scrolling = () => {
 			if (percentageProgress > 100) {
 				percentageProgress = 100;
 			}
-			// FIXME this throws an error
-			progressElement.textcontent = `${ percentageProgress }%`;
+			progressElement.textContent = percentageProgress > 0 && percentageProgress < 100 ? `${ percentageProgress }%`: '';
 		}
 		lastScrollPosition = newScrollPosition;
   }
@@ -145,13 +145,13 @@ const addBookmark = (type = 'text', bookmark) => {
 		...bookmark
 	};
 	saveBookmarksList();
-	updateBookmarksMenu(bookmarksList);
+	updateBookmarksMenu(bookmarksArray);
 }
 
 const deleteBookmark = (type = 'text', slug = urlSlug, id = storyId) => {
 	delete bookmarksList[`${ type }-${ slug }`];
 	saveBookmarksList();
-	updateBookmarksMenu(bookmarksList);
+	updateBookmarksMenu(bookmarksArray);
 	const bookmark = document.getElementById(`bookmark-${ id }`);
 	bookmark && bookmark.remove();
 }
@@ -167,17 +167,19 @@ const updateBookmarksMenu = (bookmarksArray) => {
 	if (!bookmarksArray) {
 		return;
 	}
-	count = bookmarksArray.length;
 	if (bookmarksMenuElement) {
-		bookmarksMenuElement.textcontent = ` (${ count })`;
+		count = bookmarksArray.length;
+		bookmarksMenuElement.textContent = ` ${ count }`;
 	}
 }
+
+const calculateScrollPosition = (percentage) => parseInt(bodyStart + bodyHeight * (percentage/100));
 
 const showBookmarksInPromos = (bookmarksArray) => {
 	bookmarksArray.forEach((bookmark) => {
 		const { monthYear, percentage, scrollPosition, storyId, urlSlug, wordcount} = bookmark;
 		// PURGE
-		if (!percentage || (wordcount * (percentage / 100)) < bookmarkThresholdWords || percentage > 98 || !urlSlug || !monthYear) {
+		if (!percentage || !urlSlug || !monthYear || (wordcount * (percentage / 100) < bookmarkThresholdWords) || percentage > 98) {
 			delete bookmarksList[`text-${ urlSlug }`];
 			saveBookmarksList();
 		}
@@ -185,15 +187,15 @@ const showBookmarksInPromos = (bookmarksArray) => {
 			const bookmarkLink = document.createElement("a");
 			bookmarkLink.textContent = `${percentage}%`;
 			bookmarkLink.classList.add("bookmark");
-			bookmarkLink.href = `/${ urlSlug }/#b-${ scrollPosition }`;
+			bookmarkLink.href = `/${ urlSlug }/#b-${ percentage }`;
 			element.appendChild(bookmarkLink);
 		});
 		document.querySelectorAll(`article.story-${ storyId } header`).forEach((element) => {
 			const bookmarkLink = document.createElement("a");
 			bookmarkLink.textContent = `${percentage}%`;
 			bookmarkLink.classList.add("bookmark");
-			bookmarkLink.href = `/${ urlSlug }/#b-${ scrollPosition }`;
-			bookmarkLink.addEventListener('click', () => window.scrollTo({top: scrollPosition, left: 0, behavior: 'smooth'}))
+			bookmarkLink.href = `/${ urlSlug }/#b-${ percentage }`;
+			bookmarkLink.addEventListener('click', () => window.scrollTo({top: calculateScrollPosition(percentage), left: 0, behavior: 'smooth'}))
 			element.appendChild(bookmarkLink);
 		});
 	});
@@ -201,17 +203,12 @@ const showBookmarksInPromos = (bookmarksArray) => {
 
 const showFullBookmarkList = () => {
 	const bookmarkKeysArray = Object.keys(bookmarksList);
-	const showBookmarksNumber = document.getElementById('bookmarks-number');
-	if (showBookmarksNumber) showBookmarksNumber.textContent = bookmarkKeysArray.length;
-
 	const list = document.getElementById("bookmark-list");
 	const browserTemplating = ("content" in document.createElement("template"));
 	const template = document.getElementById("bookmark-item");
 
-	let bookmarksArray = [];
 	// bookmarkKeysArray.forEach(key => bookmarksList[key].type === 'text' && bookmarksArray.push(bookmarksList[key]));
 	bookmarkKeysArray.forEach(key => key.startsWith('text-') && bookmarksArray.push(bookmarksList[key]));
-	console.log(bookmarksArray);
 	updateBookmarksMenu(bookmarksArray);
 	showBookmarksInPromos(bookmarksArray);
 
@@ -220,13 +217,13 @@ const showFullBookmarkList = () => {
 			const { author, monthYear, percentage, placeText, storyId, title, urlSlug, scrollPosition } = bookmark;
 			const clone = template.content.cloneNode(true);
 			clone.querySelector("li").id = `bookmark-${ storyId }`;
-			clone.querySelector("a").href = `/${ urlSlug }/#b-${ scrollPosition }`;
+			clone.querySelector("a").href = `/${ urlSlug }/#b-${ percentage }`;
 			clone.querySelector("a").classList.add(`promo-${ monthYear }`, monthYear, `story-${ storyId }`);
 			clone.querySelector("a").id = `link-${ storyId }`;
 			clone.querySelector(".bookmark").textContent = `${percentage}%`;
 			clone.querySelector("h1").textContent = title;
 			clone.querySelector("h2").textContent = author;
-			clone.querySelector("h4").textContent = monthYear.replace(/-/, ' ').replace(/gunju/, 'ġunju').replace(/dicembru/, 'diċembru');
+			clone.querySelector("h4").textContent = monthYear && monthYear.replace(/-/, ' ').replace(/gunju/, 'ġunju').replace(/dicembru/, 'diċembru');
 			clone.querySelector("button").id = `delete-${ storyId }`;
 			clone.querySelector(".body-text p").textContent = placeText.replace(/.*?\w\b\s+/, "… ");
 			list.appendChild(clone);
@@ -234,8 +231,6 @@ const showFullBookmarkList = () => {
 			document.getElementById(`link-${ storyId }`).addEventListener("click", () => _paq.push(['trackEvent', 'Promo', 'minn: Bookmarks', `għal: ${ title }`, index]));
 		});
 	}
-	// FIXME add bookmark to template
-	// showBookmarksInPromos(bookmarksArray);
 }
 
 const clearAllBookmarks = () => localStorage.clear();
@@ -269,7 +264,7 @@ const initialiseAfterNav = () => {
 
 const initialiseScrollPosition = () => {
 	if (location.hash && location.hash.startsWith('#b-')) {
-		window.scrollTo({top: location.hash.substring(3), left: 0, behavior: 'smooth'});
+		window.scrollTo({top: calculateScrollPosition(location.hash.substring(3)), left: 0, behavior: 'smooth'});
 		location.hash = '';
 	}
 }
@@ -295,7 +290,7 @@ const initialiseMessage = () => {
 	}
 	if (!!message) {
 		document.getElementById('message').setAttribute('data-content-piece', '«' + message + '»');
-		document.getElementById('message').textcontent = '<p>' + message + '</p>';
+		document.getElementById('message').textContent = '<p>' + message + '</p>';
 		document.getElementById('message').classList.add('active');
 		setTimeout(() => document.getElementById('message').classList.remove('active'), 10000);
 		location.hash = '';
@@ -304,10 +299,8 @@ const initialiseMessage = () => {
 
 const initialiseAfterWindow = () => {
 	progressElement = document.getElementById('progress');
-
+	bookmarksMenuElement = document.getElementById('bookmarks-number');
 	initialiseAfterNav();
-	initialiseScrollPosition();
-	initialiseMessage();
 	initialiseBookmarksList();
 	showFullBookmarkList();
 	window.addEventListener('scroll', (event) => {
@@ -321,6 +314,7 @@ const initialiseAfterWindow = () => {
 		body = document.getElementById('grid-body');
 		bodyHeight = body.offsetHeight - screenHeight;
 		bodyStart = body.offsetTop;
+		initialiseScrollPosition();
 		title = document.querySelector("article > header h1") ? document.querySelector("article > header h1").innerText : 'Djarju: ' + document.querySelector("article > header h3").innerText;
 		author = document.querySelector("meta[name=author]").content;
 		bodyEnd = bodyStart + bodyHeight;
@@ -469,6 +463,8 @@ const initialiseAfterWindow = () => {
 			document.getElementById('audio').classList.add('initialised');
 		}
 	};
+
+	initialiseMessage();
 }
 
 window.onload = initialiseAfterWindow;
