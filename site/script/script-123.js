@@ -51,10 +51,8 @@ const audioBookmarkingInterval = 10;
 const audioReportingInterval = 30;
 const bookmarkThresholdWords = 250;
 const maxWordsPerSecond = 5;
-const minWordsperSecond = 1;
+const minWordsPerSecond = 1;
 const thresholdWords = 100;
-
-const helloWorld = () => document.write('script-122.js');
 
 const getScrollPosition = () => window.pageYOffset || document.documentElement.scrollTop;
 
@@ -119,7 +117,7 @@ const heartbeat = (wordsPerPixel, title) => {
 		const wordsPerSecond = wordsRead / secondsElapsed;
 
 		// Is it a plausible speed?
-		if (wordsRead > thresholdWords && wordsPerSecond > minWordsperSecond && wordsPerSecond < maxWordsPerSecond) {
+		if (wordsRead > thresholdWords && wordsPerSecond > minWordsPerSecond && wordsPerSecond < maxWordsPerSecond) {
 			window._paq.push(['trackEvent', 'Qari', 'kliem', title, parseInt(wordsRead)]);
 			window._paq.push(['trackEvent', 'Qari', 'minuti', title, (secondsElapsed / 60).toFixed(2)]);
 			window._paq.push(['trackEvent', 'Qari', 'perċentwali', title, parseInt(percentageProgress)]);
@@ -174,9 +172,9 @@ const addBookmark = (type = 'text', bookmark) => {
 const deleteBookmark = (type = 'text', slug = urlSlug, id = storyId) => {
 	delete bookmarksList[`${ type }-${ slug }`];
 	saveBookmarksList();
+	bookmarksArray = bookmarksArray.filter(i => i.urlSlug !== slug);
 	updateBookmarksMenu(bookmarksArray);
-	const bookmark = document.getElementById(`bookmark-${ id }`);
-	bookmark && bookmark.remove();
+	document.getElementById(`bookmark-${ id }`)?.remove();
 }
 
 // FIXME: recalibrate
@@ -187,13 +185,12 @@ const getCurrentBlurb = (percent) => {
 }
 
 const updateBookmarksMenu = (bookmarksArray) => {
-	if (!bookmarksArray) {
+	if (!(bookmarksArray && bookmarksMenuElement)) return;
+	if (bookmarksArray.length === 0) {
+		bookmarksMenuElement.textContent = '';
 		return;
-	}
-	if (bookmarksMenuElement) {
-		count = bookmarksArray.length;
-		bookmarksMenuElement.textContent = ` ${ count }`;
-	}
+	};
+	bookmarksMenuElement.textContent = ` ${ bookmarksArray.length }`;
 }
 
 const calculateScrollPosition = (percentage) => Math.round(bodyStart + bodyHeight * (percentage/100));
@@ -393,9 +390,8 @@ const initialiseAfterWindow = () => {
 			setCookie(`tw-${ urlSlug }`, 'magħluq', 3);
 			window._paq.push(['trackEvent', 'Stampi', 'lightbox - għalaq', title]);
 		}
-		const triggerWarningClose = document.getElementById('trigger-warning-close');
-		triggerWarningClose && triggerWarningClose.addEventListener('click', () => closeTriggerWarning());
 
+		document.getElementById('trigger-warning-close')?.addEventListener('click', () => closeTriggerWarning());
 
 		if (podcastUrl) {
 			Amplitude.init({
