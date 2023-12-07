@@ -166,15 +166,20 @@ const addBookmark = (type = 'text', bookmark) => {
 		...bookmark
 	};
 	saveBookmarksList();
+	if (type === 'audio') return;
 	updateBookmarksMenu(bookmarksArray);
+	window._paq.push(['trackEvent', 'Bookmarks', 'żid', bookmark.title, bookmark.percentage]);
 }
 
 const deleteBookmark = (type = 'text', slug = urlSlug, id = storyId) => {
 	delete bookmarksList[`${ type }-${ slug }`];
 	saveBookmarksList();
+	if (type === 'audio') return;
+	const bookmark = bookmarksArray.find(i => i.urlSlug);
 	bookmarksArray = bookmarksArray.filter(i => i.urlSlug !== slug);
 	updateBookmarksMenu(bookmarksArray);
 	document.getElementById(`bookmark-${ id }`)?.remove();
+	window._paq.push(['trackEvent', 'Bookmarks', 'armi', bookmark.title, bookmark.percentage]);
 }
 
 // FIXME: recalibrate
@@ -222,7 +227,8 @@ const showFullBookmarkList = () => {
 	const template = document.getElementById("bookmark-item");
 
 	updateBookmarksMenu(bookmarksArray);
-	showBookmarksInPromos(bookmarksArray);
+	// DISABLED
+	// showBookmarksInPromos(bookmarksArray);
 
 	if (list && browserTemplating && template) {
 		bookmarksArray.sort((a, b) => new Date(b.dateTime) - new Date(a.dateTime)).forEach((bookmark, index) => {
