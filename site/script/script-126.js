@@ -86,7 +86,6 @@ const scrolling = () => {
 
 const addBookmarkNow = () => {
 	if (!percentageProgress || (wordcount * (percentageProgress / 100)) < bookmarkThresholdWords || percentageProgress > 98) {
-		console.log('NOT SAVING BM 2');
 		return;
 	}
 	addBookmark('text', {
@@ -120,7 +119,6 @@ const heartbeat = (wordsPerPixel, title) => {
 
 		// Is it a plausible speed?
 		if (wordsRead > thresholdWords && wordsPerSecond > minWordsPerSecond && wordsPerSecond < maxWordsPerSecond) {
-			console.log('REPORTING');
 			window._paq.push(['trackEvent', 'Qari', 'kliem', title, parseInt(wordsRead)]);
 			window._paq.push(['trackEvent', 'Qari', 'minuti', title, (secondsElapsed / 60).toFixed(2)]);
 			window._paq.push(['trackEvent', 'Qari', 'perċentwali', title, parseInt(Math.round(percentageProgress))]);
@@ -171,7 +169,6 @@ const addBookmark = (type = 'text', bookmark) => {
 	saveBookmarksList();
 	if (type === 'audio') return;
 	updateBookmarksMenu(bookmarksArray);
-	console.log('Adding bookmark');
 	window._paq.push(['trackEvent', 'Bookmarks', 'żid', bookmark.title, bookmark.percentage]);
 }
 
@@ -232,7 +229,7 @@ const showFullBookmarkList = () => {
 
 	updateBookmarksMenu(bookmarksArray);
 	// DISABLED
-	// showBookmarksInPromos(bookmarksArray);
+	showBookmarksInPromos(bookmarksArray);
 
 	if (list && browserTemplating && template) {
 		bookmarksArray.sort((a, b) => new Date(b.dateTime) - new Date(a.dateTime)).forEach((bookmark, index) => {
