@@ -359,13 +359,6 @@
 	</url>
 	
 	<url>
-		<loc>https://aphroconfuso.mt/loranne-vella-il-lanza-il-labra-il-qoffa-l-azzarin/</loc>
-		<lastmod>2023-12-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1</priority>
-	</url>
-	
-	<url>
 		<loc>https://aphroconfuso.mt/charlene-galea-ġismi-battikata/</loc>
 		<lastmod>2023-12-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -479,6 +472,13 @@
 	
 	<url>
 		<loc>https://aphroconfuso.mt/omar-nshea-bil-moħbi-fil-beraħ/</loc>
+		<lastmod>2023-12-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/loranne-vella-il-lanza-il-labra-il-qoffa-l-azzarin/</loc>
 		<lastmod>2023-12-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
