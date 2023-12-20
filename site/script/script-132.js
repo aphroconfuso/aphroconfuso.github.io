@@ -191,6 +191,7 @@ const getCurrentBlurb = (percent) => {
 }
 
 const updateBookmarksMenu = (bookmarksArray) => {
+	console.log('updating updateBookmarksMenu...');
 	if (!(bookmarksArray && bookmarksMenuElement)) return;
 	if (bookmarksArray.length === 0) {
 		bookmarksMenuElement.textContent = '';
@@ -210,7 +211,6 @@ const showBookmarksInPromos = (bookmarksArray, pageUrlSlug) => {
 			bookmarkLink.classList.add("bookmark");
 			bookmarkLink.href = `/${ urlSlug }/#b-${ percentage }`;
 			bookmarkLink.addEventListener("click", () => {_paq.push(['trackEvent', 'Promo', `minn: ${ pageUrlSlug }`, `għal: ${ title }`])});
-
 			element.appendChild(bookmarkLink);
 		});
 		document.querySelectorAll(`article.story-${ storyId } header`).forEach((element) => {
@@ -229,13 +229,14 @@ const showBookmarksInPromos = (bookmarksArray, pageUrlSlug) => {
 
 const showFullBookmarkList = () => {
 	const list = document.getElementById("bookmark-list");
-	if (!list) return;
 	const bookmarksContainer = document.getElementById("bookmarks-container");
 	const browserTemplating = ("content" in document.createElement("template"));
 	const template = document.getElementById("bookmark-item");
 
 	updateBookmarksMenu(bookmarksArray);
 	showBookmarksInPromos(bookmarksArray, urlSlug);
+
+	if (!list) return;
 
 	if (bookmarksArray.length === 1) {
 		bookmarksContainer && bookmarksContainer.classList.add("bookmarks-one");
@@ -252,7 +253,7 @@ const showFullBookmarkList = () => {
 			const clone = template.content.cloneNode(true);
 
 			if (title.startsWith('Djarju: ')) {
-				({title, sequenceEpisodeTitle} = title.split(': '));
+				({ mainTitle, sequenceEpisodeTitle } = title.split(': '));
 				storyType = 'djarju';
 			}
 			clone.querySelector("li").id = `bookmark-${ storyId }`;
@@ -260,7 +261,7 @@ const showFullBookmarkList = () => {
 			clone.querySelector("a").classList.add(`promo-${ monthYear }`, monthYear, `story-${ storyId }`, storyType);
 			clone.querySelector("a").id = `link-${ storyId }`;
 			clone.querySelector(".bookmark").textContent = `${Math.round(percentage)}%`;
-			clone.querySelector("h1").textContent = title;
+			clone.querySelector("h1").textContent = mainTitle && title;
 			clone.querySelector("h2").textContent = author;
 			if (sequenceEpisodeTitle) clone.querySelector("h3").textContent = sequenceEpisodeTitle;
 			clone.querySelector("h4").textContent = monthYear && monthYear.replace(/-/, ' ').replace(/gunju/, 'ġunju').replace(/dicembru/, 'diċembru');
