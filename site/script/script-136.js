@@ -191,7 +191,6 @@ const getCurrentBlurb = (percent) => {
 }
 
 const updateBookmarksMenu = (bookmarksArray) => {
-	console.log('updating updateBookmarksMenu...');
 	if (!(bookmarksArray && bookmarksMenuElement)) return;
 	if (bookmarksArray.length === 0) {
 		bookmarksMenuElement.textContent = '';
