@@ -86,7 +86,6 @@ const scrolling = () => {
 
 const addBookmarkNow = () => {
 	if (!percentageProgress || (wordcount * (percentageProgress / 100)) < bookmarkThresholdWords || percentageProgress > 98) {
-		console.log('NOT SAVING BM 2');
 		return;
 	}
 	addBookmark('text', {
@@ -120,7 +119,6 @@ const heartbeat = (wordsPerPixel, title) => {
 
 		// Is it a plausible speed?
 		if (wordsRead > thresholdWords && wordsPerSecond > minWordsPerSecond && wordsPerSecond < maxWordsPerSecond) {
-			console.log('REPORTING');
 			window._paq.push(['trackEvent', 'Qari', 'kliem', title, parseInt(wordsRead)]);
 			window._paq.push(['trackEvent', 'Qari', 'minuti', title, (secondsElapsed / 60).toFixed(2)]);
 			window._paq.push(['trackEvent', 'Qari', 'perċentwali', title, parseInt(Math.round(percentageProgress))]);
@@ -171,7 +169,6 @@ const addBookmark = (type = 'text', bookmark) => {
 	saveBookmarksList();
 	if (type === 'audio') return;
 	updateBookmarksMenu(bookmarksArray);
-	console.log('Adding bookmark');
 	window._paq.push(['trackEvent', 'Bookmarks', 'żid', bookmark.title, bookmark.percentage]);
 }
 
@@ -194,6 +191,7 @@ const getCurrentBlurb = (percent) => {
 }
 
 const updateBookmarksMenu = (bookmarksArray) => {
+	console.log('updating updateBookmarksMenu...');
 	if (!(bookmarksArray && bookmarksMenuElement)) return;
 	if (bookmarksArray.length === 0) {
 		bookmarksMenuElement.textContent = '';
@@ -204,14 +202,15 @@ const updateBookmarksMenu = (bookmarksArray) => {
 
 const calculateScrollPosition = (percentage) => Math.round(bodyStart + bodyHeight * (percentage/100));
 
-const showBookmarksInPromos = (bookmarksArray) => {
+const showBookmarksInPromos = (bookmarksArray, pageUrlSlug) => {
 	bookmarksArray.forEach((bookmark) => {
-		const { percentage, storyId, urlSlug } = bookmark;
+		const { percentage, storyId, title, urlSlug } = bookmark;
 		document.querySelectorAll(`a.story-${ storyId }`).forEach((element) => {
 			const bookmarkLink = document.createElement("a");
 			bookmarkLink.textContent = `${Math.round(percentage)}%`;
 			bookmarkLink.classList.add("bookmark");
 			bookmarkLink.href = `/${ urlSlug }/#b-${ percentage }`;
+			bookmarkLink.addEventListener("click", () => {_paq.push(['trackEvent', 'Promo', `minn: ${ pageUrlSlug }`, `għal: ${ title }`])});
 			element.appendChild(bookmarkLink);
 		});
 		document.querySelectorAll(`article.story-${ storyId } header`).forEach((element) => {
@@ -219,7 +218,10 @@ const showBookmarksInPromos = (bookmarksArray) => {
 			bookmarkLink.textContent = `${Math.round(percentage)}%`;
 			bookmarkLink.classList.add("bookmark");
 			bookmarkLink.href = `/${ urlSlug }/#b-${ percentage }`;
-			bookmarkLink.addEventListener('click', () => window.scrollTo({top: calculateScrollPosition(percentage), left: 0, behavior: 'smooth'}))
+			bookmarkLink.addEventListener('click', () => {
+				_paq.push(['trackEvent', 'Promo', `Scroll`, `għal: ${ title }`, Math.round(percentage)]);
+				window.scrollTo({top: calculateScrollPosition(percentage), left: 0, behavior: 'smooth'});
+			})
 			element.appendChild(bookmarkLink);
 		});
 	});
@@ -227,16 +229,27 @@ const showBookmarksInPromos = (bookmarksArray) => {
 
 const showFullBookmarkList = () => {
 	const list = document.getElementById("bookmark-list");
+	const bookmarksContainer = document.getElementById("bookmarks-container");
 	const browserTemplating = ("content" in document.createElement("template"));
 	const template = document.getElementById("bookmark-item");
 
 	updateBookmarksMenu(bookmarksArray);
-	// DISABLED
-	// showBookmarksInPromos(bookmarksArray);
+	showBookmarksInPromos(bookmarksArray, urlSlug);
+
+	if (!list) return;
+
+	if (bookmarksArray.length === 1) {
+		bookmarksContainer && bookmarksContainer.classList.add("bookmarks-one");
+	} else if (bookmarksArray.length) {
+		bookmarksContainer && bookmarksContainer.classList.add("bookmarks-multiple");
+		document.getElementById("bookmarks-number-inline").textContent = bookmarksArray.length;
+	} else {
+		bookmarksContainer && bookmarksContainer.classList.add("bookmarks-none");
+	}
 
 	if (list && browserTemplating && template) {
 		bookmarksArray.sort((a, b) => new Date(b.dateTime) - new Date(a.dateTime)).forEach((bookmark, index) => {
-			const { author, monthYear, percentage, placeText, storyId, storyType, sequenceEpisodeTitle, title, urlSlug } = bookmark;
+			var { author, monthYear, percentage, placeText, storyId, storyType, sequenceEpisodeTitle, title, urlSlug } = bookmark;
 			const clone = template.content.cloneNode(true);
 
 			if (title.startsWith('Djarju: ')) {
