@@ -239,7 +239,7 @@ const showFullBookmarkList = () => {
 		document.getElementById("bookmarks-container").classList.add("bookmarks-one");
 	} else if (bookmarksArray.length) {
 		document.getElementById("bookmarks-container").classList.add("bookmarks-multiple");
-		document.getElementById("bookmarks-number").textContent = bookmarksArray.length;
+		document.getElementById("bookmarks-number-inline").textContent = bookmarksArray.length;
 	} else {
 		document.getElementById("bookmarks-container").classList.add("bookmarks-none");
 	}
