@@ -62,8 +62,57 @@ l-ispots tal-konsulenzi romantiċi tat-tfal bravi Nsara aged 13 and up">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
 		<link rel="stylesheet" href="/css/style-a9287d35.css">
-		<script defer src="/script/script-136.js"></script>
 		<script>
+			var
+				audioLoaded,
+				author,
+				body,
+				bodyEnd,
+				bodyHeight,
+				bodyStart,
+				bodyText,
+				bookmarksArray,
+				bookmarksList,
+				bookmarksMenuElement,
+				charactersPerPixel,
+				charactersPerScreen,
+				currentTime,
+				duration,
+				elapsedTime,
+				hideScrollTools,
+				lastReportedReadingTime,
+				lastReportedScrollPosition,
+				lastScrollPosition,
+				message,
+				monthYear,
+				newScrollPosition,
+				pageHeight,
+				percentageProgress,
+				placeText,
+				podcastUrl,
+				previousTime,
+				progressElement,
+				readingSpeed,
+				screenHeight,
+				skippedTime,
+				storyCompleted,
+				storyId,
+				storyType,
+				subtitle,
+				sequenceEpisodeTitle,
+				timeStarted,
+				title,
+				wordcount,
+				wordsPerPixel,
+				wordsPerSecond,
+				wordsPerSecondAudio,
+				wordsPerScreen;
+
+			audioLoaded = false;
+			bookmarksArray = [];
+			percentageProgress = 0;
+			storyCompleted = false;
+
 			const	urlSlug = location.pathname.replace(/\//g, '');
 			const setCookie = (cname, cvalue, exdays = 36500) => {
 				const d = new Date();
@@ -113,6 +162,7 @@ l-ispots tal-konsulenzi romantiċi tat-tfal bravi Nsara aged 13 and up">
 				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
 			})();
 		</script>
+		<script defer src="/script/script-200.js"></script>
 	</head>
 	<body class="show-nav">
 		<script>initialiseAfterBody();</script>
