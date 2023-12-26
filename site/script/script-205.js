@@ -98,8 +98,8 @@ const initialiseBookmarksList = () => {
 			const item = bookmarksList[key];
 			item.key = key;
 			item.urlSlug = item.urlSlug || key.split('text-')[1];
-			const { monthYear, percentage, urlSlug, wordcount} = item;
-			const valid = percentage && urlSlug && monthYear && percentage < 98 && (wordcount * (percentage / 100) > bookmarkThresholdWords);
+			const { monthYear, percentage, title, urlSlug, wordcount } = item;
+			const valid = percentage && title && urlSlug && monthYear && percentage < 98 && (wordcount * (percentage / 100) > bookmarkThresholdWords);
 			if (!valid) {
 				delete bookmarksList[`text-${ urlSlug }`];
 				return;
@@ -160,10 +160,10 @@ const showBookmarksInPromos = (bookmarksArray) => {
 			bookmarkLink.textContent = `${roundedPercentage}%`;
 			bookmarkLink.classList.add("bookmark");
 			bookmarkLink.href = `/${ urlSlug }/#b-${ percentage }`;
-			bookmarkLink.addEventListener("click", () => {_paq.push(['trackEvent', 'Promo bookmark', `minn: ${ pageTitle } (bookmark)`, `għal: ${ title }`, roundedPercentage])});
+			bookmarkLink.addEventListener("click", () => {_paq.push(['trackEvent', 'Promo', `minn: ${ pageTitle } (bookmark)`, `għal: ${ title } (${ roundedPercentage }%)`, roundedPercentage])});
 			element.appendChild(bookmarkLink);
 		});
-		document.querySelectorAll(`article.story-${ storyId } header`).forEach((element) => {
+		document.querySelectorAll(`article.story-${ storyId } > header`).forEach((element) => {
 			const bookmarkLink = document.createElement("a");
 			bookmarkLink.textContent = `${roundedPercentage}%`;
 			bookmarkLink.classList.add("bookmark");
@@ -205,7 +205,6 @@ const showFullBookmarkList = () => {
 		bookmarksArray.sort((a, b) => new Date(b.dateTime) - new Date(a.dateTime)).forEach((bookmark, index) => {
 			var { author, monthYear, percentage, placeText, storyId, storyType, sequenceEpisodeTitle, title, urlSlug } = bookmark;
 			const clone = template.content.cloneNode(true);
-
 			if (title.startsWith('Djarju: ')) {
 				({title, sequenceEpisodeTitle} = title.split(': '));
 				storyType = 'djarju';
