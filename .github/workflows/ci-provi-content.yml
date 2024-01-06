@@ -1,7 +1,11 @@
 name: CI Provi Content
+run-name: 🚀 (by ${{ inputs.email }})
 
 on:
   workflow_dispatch:
+    inputs:
+      email:
+        default: 'unknown@example.com'
   push:
     branches: [ provi ]
 
