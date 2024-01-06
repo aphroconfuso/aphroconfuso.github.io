@@ -1,7 +1,8 @@
 name: CI-Provi-Content
 
 on:
-  push:
+	workflow_dispatch:
+	push:
     branches: [ provi ]
 
 jobs:
