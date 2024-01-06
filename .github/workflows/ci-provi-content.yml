@@ -1,8 +1,8 @@
-name: CI
+name: CI-Provi-Content
 
 on:
   push:
-    branches: [ main ]
+    branches: [ provi ]
 
 jobs:
   update:
@@ -23,6 +23,17 @@ jobs:
           cd joegatt.net-server
           eval "$(ssh-agent -s)"
           ssh-add ~/.ssh/id_rsa_deploykey_unsigned
+          cd aphroconfuso.mt-eleventy
           cd aphroconfuso.mt
-          git checkout main
+          git checkout provi
+          git pull
+          cd ..
+          npm run build
+          cd aphroconfuso.mt
+          git add .
+          git commit -m "Avanti! (auto)"
+          cd ..
+          cd ..
+          cd aphroconfuso.mt-provi
+          git checkout provi
           git pull
