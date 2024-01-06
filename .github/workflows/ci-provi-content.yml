@@ -33,7 +33,7 @@ jobs:
           git checkout provi
           git pull
           cd ..
-          npm run build
+          npx @11ty/eleventy
           cd aphroconfuso.mt
           git add .
           git commit -m "Avanti! (auto)"
