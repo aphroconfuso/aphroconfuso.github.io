@@ -33,7 +33,6 @@ jobs:
           git checkout provi
           git pull
           cd ..
-          nvm use v16
           npx @11ty/eleventy
           cd aphroconfuso.mt
           git add .
