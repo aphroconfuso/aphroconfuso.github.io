@@ -25,6 +25,9 @@ jobs:
         key: ${{ secrets.DEPLOYER_CI_PRIVATE_KEY }}
         passphrase: ${{ secrets.DEPLOYER_CI_PRIVATE_KEY_PASSWORD }}
         script: |
+          export NVM_DIR="$HOME/.nvm"
+          [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+          nvm use v16
           cd joegatt.net-server
           eval "$(ssh-agent -s)"
           ssh-add ~/.ssh/id_rsa_deploykey_unsigned
