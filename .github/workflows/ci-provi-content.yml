@@ -37,6 +37,7 @@ jobs:
           cd aphroconfuso.mt
           git add .
           git commit -m "Avanti! (auto)"
+          git push
           cd ..
           cd ..
           cd aphroconfuso.mt-provi
