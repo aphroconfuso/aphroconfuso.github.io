@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="mt" translate="no">
+
+	<head>
+		<meta charset="utf-8">
+		
+	<title>À propos de nous · Aphroconfuso</title>
+	<meta content="Ġurnal letterarju." name="description">
+	<meta property="og:image" content="/stampi/social_aphroconfuso_logo_wallpaper_f1b0208899.jpg">
+	
+		<link rel="alternate" hreflang="ar" href="https://aphroconfuso.mt/ar/" />
+	
+		<link rel="alternate" hreflang="nl" href="https://aphroconfuso.mt/nl/" />
+	
+		<link rel="alternate" hreflang="en" href="https://aphroconfuso.mt/en/" />
+	
+		<link rel="alternate" hreflang="de" href="https://aphroconfuso.mt/de/" />
+	
+		<link rel="alternate" hreflang="it" href="https://aphroconfuso.mt/it/" />
+	
+		<link rel="alternate" hreflang="ro" href="https://aphroconfuso.mt/ro/" />
+	
+		<link rel="alternate" hreflang="pl" href="https://aphroconfuso.mt/pl/" />
+	
+		<link rel="alternate" hreflang="fr" href="https://aphroconfuso.mt/fr/" />
+	
+		<link rel="alternate" hreflang="es" href="https://aphroconfuso.mt/es/" />
+	
+		<link rel="alternate" hreflang="ca" href="https://aphroconfuso.mt/ca/" />
+	
+
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+		<meta content="width=device-width, initial-scale=1" name="viewport">
+		<meta content="width=device-width" initial-scale="1.0" maximum-scale="1.0" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="yes" name="mobile-web-app-capable">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#f9f9f3">
+		<link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon-16x16.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32x32.png">
+		<link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
+		<link rel="mask-icon" href="/img/icons/safari-pinned-tab.svg" color="#5bbad5">
+		<meta property="og:image:type" content="image/jpeg">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
+		<link rel="canonical" href="https://aphroconfuso.mt/fr/">
+		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
+		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
+		<link rel="stylesheet" href="/css/style-23ce6eb6.css">
+		<script>
+			var
+				audioLoaded,
+				author,
+				body,
+				bodyEnd,
+				bodyHeight,
+				bodyStart,
+				bodyText,
+				bookmarksArray,
+				bookmarksList,
+				bookmarksMenuElement,
+				charactersPerPixel,
+				charactersPerScreen,
+				currentTime,
+				duration,
+				elapsedTime,
+				hideScrollTools,
+				lastReportedReadingTime,
+				lastReportedScrollPosition,
+				lastScrollPosition,
+				message,
+				monthYear,
+				newScrollPosition,
+				pageHeight,
+				percentageProgress,
+				placeText,
+				podcastUrl,
+				previousTime,
+				progressElement,
+				readingSpeed,
+				screenHeight,
+				skippedTime,
+				storyCompleted,
+				storyId,
+				storyType,
+				pageSubtitle,
+				sequenceEpisodeTitle,
+				timeStarted,
+				pageTitle,
+				wordcount,
+				wordsPerPixel,
+				wordsPerSecond,
+				wordsPerSecondAudio,
+				wordsPerScreen;
+
+			audioLoaded = false;
+			bookmarksArray = [];
+			percentageProgress = 0;
+			storyCompleted = false;
+
+			const	urlSlug = location.pathname.replace(/\//g, '');
+			const setCookie = (cname, cvalue, exdays = 36500) => {
+				const d = new Date();
+				d.setTime(d.getTime() + (exdays*24*60*60*1000));
+				let expires = "expires="+ d.toUTCString();
+				document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+			}
+			const getCookie = (cname) => {
+				let name = cname + "=";
+				let decodedCookie = decodeURIComponent(document.cookie);
+				let ca = decodedCookie.split(';');
+				for(let i = 0; i < ca.length; i++) {
+					let c = ca[i];
+					while (c.charAt(0) == ' ') {
+						c = c.substring(1);
+					}
+					if (c.indexOf(name) == 0) {
+						return c.substring(name.length, c.length);
+					}
+				}
+				return "";
+			}
+			const addRemoveFontSizeClass = (size) => {
+				document.body.classList.remove('font-size-1','font-size-2','font-size-3','font-size-4');
+				document.body.classList.add(`font-size-${ size }`);
+				setCookie('font', size);
+			}
+			const initialiseAfterBody = () => {
+				const fontSize = getCookie('font') || 1;
+				addRemoveFontSizeClass(fontSize);
+				if (getCookie(`tw-${urlSlug}`)) {
+					document.body.classList.add('trigger-warning-closed');
+				}
+			}
+			var _paq = window._paq = window._paq || [];
+			_paq.push(['disableCookies']);
+			_paq.push(['enableJSErrorTracking']);
+			_paq.push(['enableHeartBeatTimer']);
+			_paq.push(['enableLinkTracking']);
+			_paq.push(['trackPageView']);
+			_paq.push(['trackVisibleContentImpressions']);
+			(function () {
+				var u = "//analitika.aphroconfuso.mt/";
+				_paq.push(['setTrackerUrl', u + 'matomo.php']);
+				_paq.push(['setSiteId', location.host === 'aphroconfuso.mt' ? '1' : '2']);
+				var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
+			})();
+		</script>
+		<script defer src="/script/script-207.js"></script>
+	</head>
+	<body class="show-nav">
+		<script>initialiseAfterBody();</script>
+		<div id="top-wrapper">
+			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
+			<nav id="top-nav">
+				<a id="logo-container" href="/"><img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" /></a>
+				<input id="menu-toggle" type="checkbox" />
+				<label class='menu-button-container' for="menu-toggle">
+					<span style="display: none">Mobile biss: iftaħ il-menu</span>
+					<div class='menu-button'></div>
+				</label>
+				<menu>
+					<li><a href="/appuntamenti/">Appuntamenti</a></li>
+					<li><a href="/kontributuri/">Kontributuri</a></li>
+					
+					<li><a href="/werrej/">Werrej</a></li>
+					<li><a href="/podcast/">Podcast</a></li>
+					<li class="hide-laptop">&nbsp;</li>
+					<li><a href="/dwarna/">Dwarna</a></li>
+					<li><a href="/kolofon/">Kolofon</a></li>
+					<li><a href="/newsletter/">Newsletter</a></li>
+					<li><a href="/bookmarks/">Bookmarks<span id="bookmarks-number"></span></a></li>
+					<li class="hide-laptop" id="text-size-adjust">
+						<a id="font-size-1" href="#">a</a>
+						<a id="font-size-2" href="#">a</a>
+						<a id="font-size-3" href="#">a</a>
+						<a id="font-size-4" href="#">a</a>
+					</li>
+				</menu>
+				<div id="brownline"></div>
+			</nav>
+			<div id="message"><!-- --></div>
+			<main id="skipto">
+				
+	<article class="generic" dir="ltr" lang="fr">
+		<header>
+			<h4>&nbsp;</h5>
+			<h1>À propos de nous</h1>
+			<h2>&nbsp;</h2>
+		</header>
+		<div class="container">
+			<section id="grid-max-panel-left-top">
+				<!-- -->
+			</section>
+			<section id="grid-max-panel-right-top">
+				<!-- X -->
+			</section>
+			<section id="grid-body">
+				<div class="generic-body-text"><p>Aphroconfuso est une revue littéraire en langue maltaise lancée le 1er mai 2023. Nous tirons notre nom de la première description imprimée des habitants des îles maltaises, <em>Insulae Melitae Descriptio</em> de Jean Quintin d’Autun, imprimée à Lyon en 1536. “Siculo sunt homines ingenio, Aphro confuso: ad praelia parum fortes &amp; commodi.” Les habitants ont un caractère sicilien, avec un mélange d'Africains : ils ne sont pas assez forts pour la guerre, ni adaptés à celle-ci. Le nom est plus pertinent en tant que symptôme qu'en tant que programme spécifique. Nous voulons être confiants et curieux à propos de l'identité maltaise, en explorant ses nouveaux horizons au-delà des binaires bien connus de maltais/anglais.</p>
+<p>Nous souhaitons publier des essais, des récits et des poèmes, ainsi que des œuvres littéraires plus difficiles à classer. Nous nous intéressons à la traduction, à la coexistence d'une petite langue parmi les langues mondiales, ainsi qu'à l'expression d'idées mondiales dans notre langue. Dans notre premier numéro, par exemple, nous avons publié un mémoire de transition ; un essai sur l'histoire de la traduction de Gilgamesh en maltais, dans le contexte du mouvement panarabiste, ainsi qu'une proposition de nouvelle traduction de Gilgamesh ; à l'occasion du centenaire de la première publication de <em>La coscienza di Zeno</em>, nous avons publié une traduction de son premier chapitre et une note d'accompagnement sur les langues périphériques ; un poème épique qui se déroule dans la Malte contemporaine et qui exploite l'histoire mythologique des îles maltaises ; une satire de la vie maltaise contemporaine et de la vente de sa propre image ; et l'histoire de deux femmes du Burkina Faso qui élèvent une fille à Malte. Notre intérêt est ouvert, en particulier aux expériences féministes et aux réalités marginales et queer.</p>
+<p>Bien que nous soyons ouverts à tous les autres formats, nous pensons qu'il y a de grands avantages à publier notre journal en ligne. Nous voulons créer une revue durable et ne voulons pas rechercher son prestige uniquement lorsque/si nous utilisons éventuellement la forme imprimée. C'est pourquoi nous définissons Aphroconfuso comme une revue littéraire en ligne. Cependant, nous n'excluons aucun autre format qui pourrait compléter le format en ligne. Il peut s'agir de publications imprimées, de podcasts, de livres audio, de livres électroniques, d'événements physiques ou en ligne, etc.</p></div>
+			</section>
+			<section id="grid-max-panel-left-bottom">
+				<!-- X -->
+			</section>
+			<section id="grid-max-panel-right-bottom">
+				<!-- X -->
+			</section>
+		</div>
+	</article>
+
+			</main>
+		</div>
+		<div id="bottom-wrapper">
+			<img id="deco" role="none" src="/img/deco-100.svg" alt="Dekorazzjoni art-nouveau" />
+			
+				<div id="newsletter-container-bottom" class="newsletter-container">
+					<section id="form" data-track-content data-content-name="Homepage" data-content-piece="formola">
+						<iframe src="https://newsletter.aphroconfuso.mt/subscription/form" scrolling="no" title="Abbona fin-newsletter"></iframe>
+					</section>
+				</div>
+			
+			<footer data-track-content data-content-name="Footer" data-content-piece="fr">
+	<nav class="footer-content">
+		<menu id="housekeeping">
+			<li class="header">Dwarna</li>
+			<li><a href="/kolofon/">Kolofon</a></li>
+			<li><a href="/proċess-editorjali/">Proċess</a></li>
+			<li><a href="/gwida-tal-istil/">Gwida tal-istil</a></li>
+			<li><a href="/cookies/">Cookies</a></li>
+			<li><a href="/privatezza/">Privatezza</a></li>
+			<li><a href="/aċċessibbiltà/">Aċċessibbiltà</a></li>
+			<li><a href="/podcast/">Podcast</a></li>
+			<li><a href="/newsletter/">Newsletter</a></li>
+			<li class="hide-tablet"><a href="/drittijiet/">Drittijiet</a></li>
+		</menu>
+		<menu id="media">
+			<li class="header">Midja</li>
+			<li><a href="/ar/" class="arabic">العربية</a></li>
+			<li><a href="/ca/">Català</a></li>
+			<li><a href="/de/">Deutsch</a></li>
+			<li><a href="/en/">English</a></li>
+			<li><a href="/es/">Español</a></li>
+			<li><a href="/fr/">Français</a></li>
+			<li><a href="/it/">Italiano</a></li>
+			<li><a href="/nl/">Nederlands</a></li>
+			<li class="hide-tablet"><a href="/ro/">Română</a></li>
+		</menu>
+		<menu id="socials">
+			<li class="header">Segwina</li>
+			<li><a href="https://facebook.com/aphroconfuso">Facebook</a></li>
+			<li><a href="https://instagram.com/aphroconfuso">Instagram</a></li>
+			<li><a href="https://twitter.com/aphroconfuso">Twitter</a></li>
+			<li><a href="https://mastodon.world/@aphroconfuso">Mastodon</a></li>
+			<li><a href="https://youtube.com/@aphroconfuso">Youtube</a></li>
+			<li><a href="https://open.spotify.com/user/31rly4s75gfxs6li6bcxc5bqlgza">Spotify</a></li>
+		</menu>
+		<menu id="podcast">
+			<li class="header">Podcast</li>
+			<li><a href="https://podcasts.apple.com/us/podcast/aphroconfuso/id1686567243">Apple</a></li>
+			<li><a href="https://www.audible.co.uk/pd/Aphroconfuso-Podcast/B0C3WHLZRB">Audible</a></li>
+			<li><a href="https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5hY2FzdC5jb20vcHVibGljL3Nob3dzL2FwaHJvY29uZnVzbw">Google</a></li>
+			<li><a href="https://pca.st/podcast/af8c44c0-c823-013b-f432-0acc26574db2">Pocket Casts</a></li>
+			<li><a href="https://feeds.acast.com/public/shows/aphroconfuso">RSS feed</a></li>
+			<li><a href="https://open.spotify.com/show/75Lt3UMvC1jE15SGrNFMww">Spotify</a></li>
+		</menu>
+		<div id="logotype-container">
+			<a href="/"><img src="/img/logotype.svg" class="logotype" alt="logo: Aphroconfuso" /></a>
+		</div>
+		<div id="email"><a href="mailto:l-edituri@aphroconfuso.mt" class="email">l-edituri@aphroconfuso.mt</a></div>
+		<div id="copyright"><a href="/drittijiet/" class="copyright">&copy; 2023 Aphroconfuso u l-kontributuri rispettivi</a></div>
+		<div id="qrcode"><img src="/img/qr/fr.png" width="180" height="180" alt="QR code" /></div>
+		<div id="url">https://aphroconfuso.mt/fr/</div>
+	</nav>
+</footer>
+
+		</div>
+		<aside id="scroll-tools" class="monthly-outlined">
+			<p><span id="progress"><!-- --></span></p>
+		</aside>
+	</body>
+</html>
