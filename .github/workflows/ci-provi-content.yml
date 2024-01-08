@@ -3,9 +3,9 @@ run-name: 🚀 (by ${{ inputs.email }})
 
 on:
   workflow_dispatch:
-    inputs:
-      email:
-        default: 'unknown@example.com'
+    # inputs:
+    #   email:
+    #     default: 'unknown@example.com'
   push:
     branches: [ provi ]
 
@@ -27,7 +27,7 @@ jobs:
         script: |
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-          nvm use v16
+          # nvm use v16
           cd joegatt.net-server
           eval "$(ssh-agent -s)"
           ssh-add ~/.ssh/id_rsa_deploykey_unsigned
