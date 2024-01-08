@@ -1,0 +1,49 @@
+name: CI Provi Content
+run-name: 🚀 (by ${{ inputs.email }})
+
+on:
+  workflow_dispatch:
+    # inputs:
+    #   email:
+    #     default: 'unknown@example.com'
+  push:
+    branches: [ provi ]
+
+jobs:
+  update:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: Repository checkout
+      uses: actions/checkout@v4
+    - name: Connects to VPS via SSH
+      uses: appleboy/ssh-action@v0.1.3
+      with:
+        host: ${{ secrets.DEPLOYER_CI_IP_ADDRESS }}
+        port: ${{ secrets.DEPLOYER_CI_PORT }}
+        username: ${{ secrets.DEPLOYER_CI_USER_NAME }}
+        key: ${{ secrets.DEPLOYER_CI_PRIVATE_KEY }}
+        passphrase: ${{ secrets.DEPLOYER_CI_PRIVATE_KEY_PASSWORD }}
+        script: |
+          export NVM_DIR="$HOME/.nvm"
+          [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+          # nvm use v16
+          cd joegatt.net-server
+          eval "$(ssh-agent -s)"
+          ssh-add ~/.ssh/id_rsa_deploykey_unsigned
+          cd aphroconfuso.mt-eleventy
+          cd aphroconfuso.mt
+          git checkout provi
+          git pull
+          cd ..
+          sh ~/.nvm/nvm.sh && nvm use 16
+          npx @11ty/eleventy
+          cd aphroconfuso.mt
+          git add .
+          git commit -m "Avanti! (auto)"
+          git push
+          cd ..
+          cd ..
+          cd aphroconfuso.mt-provi
+          git checkout provi
+          git pull
