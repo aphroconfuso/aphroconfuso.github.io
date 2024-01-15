@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="mt" translate="no">
+
+	<head>
+		<meta charset="utf-8">
+		
+	<title>Noah Fabri · Aphroconfuso</title>
+	<meta content="Noah Fabri studja l-antropoloġija. Hija tikteb il-mużika, il-proża u għat-teatru. Tipparteċipa f’komunitajiet tal-arti DIY fejn tgħallmet diversi prattiki kollaborattivi li bihom toħloq xogħolha. Hija parti mill-kollettiv mużikali Karmaġenn li ħareġ żewġ albums bejn l-2019 u l-2023. Noah ġieli jesp…" name="description">
+	<meta property="og:image" content="/stampi/social_aphroconfuso_logo_wallpaper_f1b0208899.jpg">
+
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+		<meta content="width=device-width, initial-scale=1" name="viewport">
+		<meta content="width=device-width" initial-scale="1.0" maximum-scale="1.0" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="yes" name="mobile-web-app-capable">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#f9f9f3">
+		<link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon-16x16.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32x32.png">
+		<link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
+		<link rel="mask-icon" href="/img/icons/safari-pinned-tab.svg" color="#5bbad5">
+		<meta property="og:image:type" content="image/jpeg">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
+		<link rel="canonical" href="https://aphroconfuso.mt/noah-fabri/">
+		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
+		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
+		<link rel="stylesheet" href="/css/style-afbcf7cf.css">
+		<script>
+			var
+				audioLoaded,
+				author,
+				body,
+				bodyEnd,
+				bodyHeight,
+				bodyStart,
+				bodyText,
+				bookmarksArray,
+				bookmarksList,
+				bookmarksMenuElement,
+				charactersPerPixel,
+				charactersPerScreen,
+				currentTime,
+				duration,
+				elapsedTime,
+				hideScrollTools,
+				lastReportedReadingTime,
+				lastReportedScrollPosition,
+				lastScrollPosition,
+				message,
+				monthYear,
+				newScrollPosition,
+				pageHeight,
+				percentageProgress,
+				placeText,
+				podcastUrl,
+				previousTime,
+				progressElement,
+				readingSpeed,
+				screenHeight,
+				skippedTime,
+				storyCompleted,
+				storyId,
+				storyType,
+				pageSubtitle,
+				sequenceEpisodeTitle,
+				timeStarted,
+				pageTitle,
+				wordcount,
+				wordsPerPixel,
+				wordsPerSecond,
+				wordsPerSecondAudio,
+				wordsPerScreen;
+
+			audioLoaded = false;
+			bookmarksArray = [];
+			percentageProgress = 0;
+			storyCompleted = false;
+
+			const	urlSlug = location.pathname.replace(/\//g, '');
+			const setCookie = (cname, cvalue, exdays = 36500) => {
+				const d = new Date();
+				d.setTime(d.getTime() + (exdays*24*60*60*1000));
+				let expires = "expires="+ d.toUTCString();
+				document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+			}
+			const getCookie = (cname) => {
+				let name = cname + "=";
+				let decodedCookie = decodeURIComponent(document.cookie);
+				let ca = decodedCookie.split(';');
+				for(let i = 0; i < ca.length; i++) {
+					let c = ca[i];
+					while (c.charAt(0) == ' ') {
+						c = c.substring(1);
+					}
+					if (c.indexOf(name) == 0) {
+						return c.substring(name.length, c.length);
+					}
+				}
+				return "";
+			}
+			const addRemoveFontSizeClass = (size) => {
+				document.body.classList.remove('font-size-1','font-size-2','font-size-3','font-size-4');
+				document.body.classList.add(`font-size-${ size }`);
+				setCookie('font', size);
+			}
+			const initialiseAfterBody = () => {
+				const fontSize = getCookie('font') || 1;
+				addRemoveFontSizeClass(fontSize);
+				if (getCookie(`tw-${urlSlug}`)) {
+					document.body.classList.add('trigger-warning-closed');
+				}
+			}
+			var _paq = window._paq = window._paq || [];
+			_paq.push(['disableCookies']);
+			_paq.push(['enableJSErrorTracking']);
+			_paq.push(['enableHeartBeatTimer']);
+			_paq.push(['enableLinkTracking']);
+			_paq.push(['trackPageView']);
+			_paq.push(['trackVisibleContentImpressions']);
+			(function () {
+				var u = "//analitika.aphroconfuso.mt/";
+				_paq.push(['setTrackerUrl', u + 'matomo.php']);
+				_paq.push(['setSiteId', location.host === 'aphroconfuso.mt' ? '1' : '2']);
+				var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
+			})();
+		</script>
+		<script defer src="/script/script-207.js"></script>
+	</head>
+	<body class="show-nav">
+		<script>initialiseAfterBody();</script>
+		<div id="top-wrapper">
+			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
+			<nav id="top-nav">
+				<a id="logo-container" href="/"><img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" /></a>
+				<input id="menu-toggle" type="checkbox" />
+				<label class='menu-button-container' for="menu-toggle">
+					<span style="display: none">Mobile biss: iftaħ il-menu</span>
+					<div class='menu-button'></div>
+				</label>
+				<menu>
+					<li><a href="/appuntamenti/">Appuntamenti</a></li>
+					<li><a href="/kontributuri/">Kontributuri</a></li>
+					<li><a href="/werrej/">Werrej</a></li>
+					<li><a href="/djarju/">Djarju</a></li>
+					<li><a href="/podcast/">Podcast</a></li>
+					<li class="hide-laptop">&nbsp;</li>
+					<li><a href="/dwarna/">Dwarna</a></li>
+					<li class="hide-laptop"><a href="/kolofon/">Kolofon</a></li>
+					<li><a href="/newsletter/">Newsletter</a></li>
+					<li class="hide-laptop"><a href="/privatezza/">Privatezza</a></li>
+					<li><a href="/bookmarks/">Bookmarks<span id="bookmarks-number"></span></a></li>
+					<li class="hide-laptop" id="text-size-adjust">
+						<a id="font-size-1" href="#">a</a>
+						<a id="font-size-2" href="#">a</a>
+						<a id="font-size-3" href="#">a</a>
+						<a id="font-size-4" href="#">a</a>
+					</li>
+				</menu>
+				<div id="brownline"></div>
+			</nav>
+			<div id="message"><!-- --></div>
+			<main id="skipto">
+				
+<article class="generic">
+	<header>
+		<h4><a href="/kontributuri">Kontributuri</a></h5>
+		<h1>Noah Fabri</h1>
+		<h2></h2>
+	</header>
+	<div class="container-generic contributor">
+		<section id="grid-body">
+			<div class="generic-body-text">
+				<p>Noah Fabri studja <l-m>l-antropoloġija</l-m>. Hija tikteb <l-m>il-mużika</l-m>, <l-m>il-proża</l-m> u <l-m>għat-teatru</l-m>. Tipparteċipa f’komunitajiet <l-m>tal-arti</l-m> DIY fejn tgħallmet diversi prattiki kollaborattivi li bihom toħloq xogħolha. Hija parti <l-m>mill-kollettiv</l-m> mużikali Karmaġenn li ħareġ żewġ albums bejn <l-m>l-2019</l-m> u <l-m>l-2023</l-m>. Noah ġieli jesperimenta <l-m>bl-arti</l-m> viżiva, u <l-m>fl-2021</l-m> tella’ <l-m>l-performances</l-m> <em>Inbigħu <l-m>l-Imqaret</l-m></em> u <em>Huma Min Huma?</em> F’dik <l-m>is-sena</l-m> wkoll ippubblikat <em>Dar Imħawra</em>, ktieb <l-m>bl-illustrazzjonijiet</l-m> ta’ Martina Farrugia, magħmul <l-m>bl-idejn</l-m> miż-żewġ artisti. <l-m>L-interess</l-m> tagħha <l-m>fil-mixi</l-m>, <l-m>l-ispazju</l-m> pubbliku, u <l-m>l-ġeneru</l-m> jidher ukoll <l-m>fil-film</l-m> <em><l-m>In-Nani</l-m> F’Art <l-m>Il-Ġganti</l-m></em> (2021). <l-m>L-istorja</l-m> “The Wedding Dress” dehret <l-m>fl-ewwel</l-m> antoloġija ta’ Praspar Press (2021). Noah huwa wkoll parti minn Geġwiġija, komunità mibnija madwar librerija temporanja. <l-m>L-ewwel</l-m> rumanz tagħha ħiereġ iktar tard <l-m>fl-2023</l-m>.</p>
+				<p class="continuity">Kitba ta’ <span class="contributor">Noah</span> fil-ġurnal:</p>
+			</div>
+			
+			
+			<ul class="promo-list">
+	
+	
+		
+
+<li>
+	<a class="promo dicembru-2023 promo-esej story-31" href="/noah-fabri-insalata/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Noah Fabri', 'għal: Insalata', 1]);">
+		<header>
+	
+		<h4>Diċembru 2023</h4>
+		<h1>
+			Insalata
+			
+		</h1>
+		
+			<h2>Noah Fabri</h2>
+		
+	
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Il-memorja <l-m>fl-ikel</l-m> tinfed b’mod sottili. Jien u nagħmel <l-m>l-insalata</l-m> kont qed niftakar, mingħajr ma kelli għalfejn nitkellem, sempliċiment billi nirrepeti b’ġismi <l-m>l-azzjonijiet</l-m> li għaddewli ommi u ommha. Meta nikkunsidraw <l-m>l-ikel</l-m>, irridu naħsbu fuq lingwa sħiħa mhux mitkellma, irridu naħsbu fuq <l-m>il-ħin</l-m> b’mod differenti, irridu nidħlu fi ħsieb fuq livell għalkollox differenti minn dak kapitalist li jorganizzalna <l-m>l-ħajja</l-m> ta’ kuljum <l-m>fid-dinja</l-m> pubblika <l-m>tal-lum</l-m>. <l-m>Fil-verità</l-m>, <l-m>fil-privat</l-m> u fi ċrieki żgħar, kull wieħed u waħda minna għandna <l-m>l-possibbiltà</l-m> biex naħsbu b’ontoloġija kompletament differenti minn dik <l-m>tal-Illuminiżmu</l-m>. U iktar ma nsajru flimkien u naqsmu <l-m>l-ikel</l-m> u <l-m>l-għajnuna</l-m> bejnietna, iktar dawn iċ-ċrieki nistgħu nkabbruhom. <l-m>L-ikel</l-m> jgħaqqad u jagħti dar u post <l-m>għall-kenn</l-m> lil min joffrih u jaqsmu. Huwa importanti li nagħrfu <l-m>l-valur</l-m> politiku li nieħdu ħsieb xulxin, xi ħaġa li <l-m>t-teorija</l-m> femminista ilha tinsisti dwarha. Meta taqsam ikla kważi dejjem tkun qed toħloq familja, u għalija <l-m>l-familja</l-m> ta’ veru tinħoloq meta nieklu flimkien b’mod intenzjonali.</p>
+			
+		</div>
+	</a>
+</li>
+
+	
+		
+
+<li>
+	<a class="promo mejju-2023 promo-storja story-6" href="/noah-fabri-ħsieb-il-ħamiema/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Noah Fabri', 'għal: Ħsieb il-Ħamiema', 2]);">
+		<header>
+	
+		<h4>Mejju 2023</h4>
+		<h1>
+			Ħsieb <l-m>il-Ħamiema</l-m>
+			
+		</h1>
+		
+			<h2>Noah Fabri</h2>
+		
+	
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Faqqgħet <l-m>bħall-qniepen</l-m> tal-knisja <l-m>t-twerżiqa</l-m> ta’ sajjetta <l-m>tas-sirena</l-m> tal-pulizija. Maimouna kienet ilha tliet snin taħdem <l-m>fil-ħanut</l-m> ħdejn <l-m>il-pont</l-m> li jaqsam <l-m>il-Ħamrun</l-m> u <l-m>l-Marsa</l-m>. Kienet taf kull rokna u xkaffa, kull loġika organizzatorja, u kull bidla li kienet saret fuq <l-m>il-post</l-m>. <l-m>L-irwejjaħ</l-m> tal-ħitan ma baqgħetx ixxommhom, <l-m>ix-xufiera</l-m> li kienu jġibu <l-m>l-konsenji</l-m> saret tafhom sew, <l-m>il-klijenti</l-m>, sintendi, saru qishom <l-m>tal-familja</l-m>, qalb <l-m>it-tibdil</l-m> u <l-m>ċ-ċaqliq</l-m> tan-nies, u <l-m>l-kollegi</l-m> waslu u telqu <l-m>bħall-għasafar</l-m> tal-passa. Xorta rnexxielha żżomm ċertu distanza mentali <l-m>mill-imgħallem</l-m> u <l-m>l-ħajja</l-m> tal-ħanut; minkejja li kienet tħobb taħdem, dan <l-m>l-aħħar</l-m> l-idea <l-m>tax-xogħol</l-m> innifisha kienet qed taraha velenu <l-m>tal-moħħ</l-m>.
+</p>
+			
+		</div>
+	</a>
+</li>
+
+	
+</ul>
+
+			
+			<ul class="promo-list">
+	
+	
+</ul>
+
+			
+			<ul class="promo-list">
+	
+	
+</ul>
+
+		</section>
+		<section id="grid-max-panel-left-top">
+			<section id="grid-max-panel-left-top">
+	<section class="contributors-menu">
+		
+			<ul>
+				
+					<li><a href="/simon-bartolo/">Simon Bartolo</a></li>
+				
+			
+		
+			
+				
+					<li><a href="/warren-bartolo/">Warren Bartolo</a></li>
+				
+			
+		
+			
+				
+					<li><a href="/kurt-borg/">Kurt Borg</a></li>
+				
+			
+		
+			
+				
+					<li class="active">Noah Fabri</li>
+				
+			
+		
+			
+				
+					<li><a href="/ryan-falzon/">Ryan Falzon</a></li>
+				
+			
+		
+			
+				
+					<li><a href="/charlene-galea/">Charlene Galea</a></li>
+				
+			
+		
+			
+				
+					<li><a href="/miriam-galea/">Miriam Galea</a></li>
+				
+			
+		
+			
+				
+					<li><a href="/joe-gatt/">Joe Gatt</a></li>
+				
+			
+		
+			
+				
+					<li><a href="/romeo-roxman-gatt/">Romeo Roxman Gatt</a></li>
+				
+			
+		
+			
+				
+					<li><a href="/rowena-grech/">Rowena Grech</a></li>
+				
+			
+		
+			
+				
+					<li><a href="/davinia-hamilton/">Davinia Hamilton</a></li>
+				
+			
+		
+			
+				
+					<li><a href="/omar-nshea/">Omar N’Shea</a></li>
+				
+			
+		
+			
+				
+					<li><a href="/kris-polidano/">Kris Polidano</a></li>
+				
+			
+		
+			
+				
+					<li><a href="/matteo-pullicino/">Matteo Pullicino</a></li>
+				
+			
+		
+			
+				
+					<li><a href="/matthew-schembri/">Matthew Schembri</a></li>
+				
+			
+		
+			
+				
+					<li><a href="/maria-theuma/">Maria Theuma</a></li>
+				
+			
+		
+			
+				
+					<li><a href="/leslie-vassallo/">Leslie Vassallo</a></li>
+				
+			
+		
+			
+				
+					<li><a href="/loranne-vella/">Loranne Vella</a></li>
+				
+			</ul>
+		
+	</section>
+</section>
+
+		</section>
+	</div>
+</article>
+
+			</main>
+		</div>
+		<div id="bottom-wrapper">
+			<img id="deco" role="none" src="/img/deco-100.svg" alt="Dekorazzjoni art-nouveau" />
+			
+				<div id="newsletter-container-bottom" class="newsletter-container">
+					<section id="form" data-track-content data-content-name="Homepage" data-content-piece="formola">
+						<iframe src="https://newsletter.aphroconfuso.mt/subscription/form" scrolling="no" title="Abbona fin-newsletter"></iframe>
+					</section>
+				</div>
+			
+			<footer data-track-content data-content-name="Footer" data-content-piece="noah-fabri">
+	<nav class="footer-content">
+		<menu id="housekeeping">
+			<li class="header">Dwarna</li>
+			<li><a href="/kolofon/">Kolofon</a></li>
+			<li><a href="/proċess-editorjali/">Proċess</a></li>
+			<li><a href="/gwida-tal-istil/">Gwida tal-istil</a></li>
+			<li><a href="/cookies/">Cookies</a></li>
+			<li><a href="/privatezza/">Privatezza</a></li>
+			<li><a href="/aċċessibbiltà/">Aċċessibbiltà</a></li>
+			<li><a href="/podcast/">Podcast</a></li>
+			<li><a href="/newsletter/">Newsletter</a></li>
+			<li class="hide-tablet"><a href="/drittijiet/">Drittijiet</a></li>
+		</menu>
+		<menu id="media">
+			<li class="header">Midja</li>
+			<li><a href="/ar/" class="arabic">العربية</a></li>
+			<li><a href="/ca/">Català</a></li>
+			<li><a href="/de/">Deutsch</a></li>
+			<li><a href="/en/">English</a></li>
+			<li><a href="/es/">Español</a></li>
+			<li><a href="/fr/">Français</a></li>
+			<li><a href="/it/">Italiano</a></li>
+			<li><a href="/nl/">Nederlands</a></li>
+			<li class="hide-tablet"><a href="/ro/">Română</a></li>
+		</menu>
+		<menu id="socials">
+			<li class="header">Segwina</li>
+			<li><a href="https://facebook.com/aphroconfuso">Facebook</a></li>
+			<li><a href="https://instagram.com/aphroconfuso">Instagram</a></li>
+			<li><a href="https://twitter.com/aphroconfuso">Twitter</a></li>
+			<li><a href="https://mastodon.world/@aphroconfuso">Mastodon</a></li>
+			<li><a href="https://youtube.com/@aphroconfuso">Youtube</a></li>
+			<li><a href="https://open.spotify.com/user/31rly4s75gfxs6li6bcxc5bqlgza">Spotify</a></li>
+		</menu>
+		<menu id="podcast">
+			<li class="header">Podcast</li>
+			<li><a href="https://podcasts.apple.com/us/podcast/aphroconfuso/id1686567243">Apple</a></li>
+			<li><a href="https://www.audible.co.uk/pd/Aphroconfuso-Podcast/B0C3WHLZRB">Audible</a></li>
+			<li><a href="https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5hY2FzdC5jb20vcHVibGljL3Nob3dzL2FwaHJvY29uZnVzbw">Google</a></li>
+			<li><a href="https://pca.st/podcast/af8c44c0-c823-013b-f432-0acc26574db2">Pocket Casts</a></li>
+			<li><a href="https://feeds.acast.com/public/shows/aphroconfuso">RSS feed</a></li>
+			<li><a href="https://open.spotify.com/show/75Lt3UMvC1jE15SGrNFMww">Spotify</a></li>
+		</menu>
+		<div id="logotype-container">
+			<a href="/"><img src="/img/logotype.svg" class="logotype" alt="logo: Aphroconfuso" /></a>
+		</div>
+		<div id="email"><a href="mailto:l-edituri@aphroconfuso.mt" class="email">l-edituri@aphroconfuso.mt</a></div>
+		<div id="copyright"><a href="/drittijiet/" class="copyright">&copy; 2023 Aphroconfuso u l-kontributuri rispettivi</a></div>
+		<div id="qrcode"><img src="/img/qr/noah-fabri.png" width="180" height="180" alt="QR code" /></div>
+		<div id="url">https://aphroconfuso.mt/noah-fabri/</div>
+	</nav>
+</footer>
+
+		</div>
+		<aside id="scroll-tools" class="monthly-outlined">
+			<p><span id="progress"><!-- --></span></p>
+		</aside>
+	</body>
+</html>
