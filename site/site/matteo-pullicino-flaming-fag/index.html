@@ -16,6 +16,8 @@ hekk tgħallimt f’dawk il-mortwarji skolastiċi: / is-sabiħ jitlob li jiġi m
 	
 	
 	
+		<script src="/amplitude/amplitude.min.js"></script>
+	
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@aphroconfuso">
 	<meta name="twitter:creator" content="@aphroconfuso">
@@ -79,12 +81,14 @@ hekk tgħallimt f’dawk il-mortwarji skolastiċi: / is-sabiħ jitlob li jiġi m
 				previousTime,
 				progressElement,
 				readingSpeed,
+				reportingTitle,
 				screenHeight,
 				skippedTime,
 				storyCompleted,
 				storyId,
 				storyType,
 				pageSubtitle,
+				sequenceEpisodeNumber,
 				sequenceEpisodeTitle,
 				timeStarted,
 				pageTitle,
@@ -148,7 +152,7 @@ hekk tgħallimt f’dawk il-mortwarji skolastiċi: / is-sabiħ jitlob li jiġi m
 				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
 			})();
 		</script>
-		<script defer src="/script/script-207.js"></script>
+		<script defer src="/script/script-209.js"></script>
 	</head>
 	<body class="show-nav">
 		<script>initialiseAfterBody();</script>
@@ -211,6 +215,29 @@ hekk tgħallimt f’dawk il-mortwarji skolastiċi: / is-sabiħ jitlob li jiġi m
 			</section>
 			<section id="grid-max-panel-right-top">
 				
+				
+					<aside id="podcast-note">
+						<figure id="audio">
+							<div id="player">
+								<div class="control-container">
+									<button class="amplitude-play-pause" amplitude-main-play-pause="true" id="play-pause">
+								</div>
+								<div id="range">
+									<input type="range" id="range-input" class="amplitude-song-slider" step=".1">
+									<progress class="amplitude-song-played-progress" amplitude-main-song-played-progress="true" id="song-played-progress"></progress>
+								</div>
+								<div class="time-container">
+										<span class="amplitude-current-minutes" amplitude-main-current-minutes="true"></span>:<span class="amplitude-current-seconds" amplitude-main-current-seconds="true"></span>/<span class="amplitude-duration-minutes" amplitude-main-duration-minutes="true"></span>:<span class="amplitude-duration-seconds" amplitude-main-duration-seconds="true"></span>
+								</div>
+							</div>
+							<figcaption>
+								
+									<p>Matteo jaqra “Flaming Fag”. Abbona <l-m><l-m>fil-</l-m><a href="/podcast/">podcast</a></l-m> biex tisma’ kulma nippubblikaw.</p>
+								
+								
+							</figcaption>
+						</figure>
+					</aside>
 				
 				
 				<div class="promo bookmark-shortcut"><!-- --></div>
@@ -354,7 +381,8 @@ hekk tgħallimt f’dawk il-mortwarji skolastiċi: / is-sabiħ jitlob li jiġi m
 	<script>
 		author = "Matteo Pullicino" || null;
 		monthYear = "dicembru-2023" || null;
-		podcastUrl = null;
+		podcastUrl = "https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1705599050876-f4c151251490014f363c7dd0c2b4ca79.mp3";
+		reportingTitle = "Flaming Fag" || null;
 		sequenceEpisodeNumber = null;
 		sequenceEpisodeTitle = null;
 		storyId = "32" || null;
