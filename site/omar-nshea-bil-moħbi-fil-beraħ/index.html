@@ -41,10 +41,11 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/omar-nshea-bil-moħbi-fil-beraħ/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-d7c0683b.css">
+		<link rel="stylesheet" href="/css/style-e5e8d917.css">
 		<script>
 			var
 				audioLoaded,
+				audioUrls,
 				author,
 				body,
 				bodyEnd,
@@ -79,7 +80,6 @@
 				storyCompleted,
 				storyId,
 				storyType,
-				pageSubtitle,
 				sequenceEpisodeNumber,
 				sequenceEpisodeTitle,
 				timeStarted,
@@ -144,7 +144,7 @@
 				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
 			})();
 		</script>
-		<script defer src="/script/script-209.js"></script>
+		<script defer src="/script/script-211.js"></script>
 	</head>
 	<body class="show-nav">
 		<script>initialiseAfterBody();</script>
@@ -184,7 +184,7 @@
 	<article class="content awwissu-2023 esej story story-19">
 		<header>
 			
-				<h4><a href="/awwissu-2023/">Awwissu 2023</a></h5>
+				<p class="header-label"><a href="/awwissu-2023/">Awwissu 2023</a></p>
 				<h1>
 					Bil-Moħbi <l-m>fil-Beraħ</l-m>
 					
@@ -208,27 +208,32 @@
 			<section id="grid-max-panel-right-top">
 				
 				
-					<aside id="podcast-note">
-						<figure id="audio">
-							<div id="player">
-								<div class="control-container">
-									<button class="amplitude-play-pause" amplitude-main-play-pause="true" id="play-pause">
-								</div>
-								<div id="range">
-									<input type="range" id="range-input" class="amplitude-song-slider" step=".1">
-									<progress class="amplitude-song-played-progress" amplitude-main-song-played-progress="true" id="song-played-progress"></progress>
-								</div>
-								<div class="time-container">
-										<span class="amplitude-current-minutes" amplitude-main-current-minutes="true"></span>:<span class="amplitude-current-seconds" amplitude-main-current-seconds="true"></span>/<span class="amplitude-duration-minutes" amplitude-main-duration-minutes="true"></span>:<span class="amplitude-duration-seconds" amplitude-main-duration-seconds="true"></span>
-								</div>
-							</div>
-							<figcaption>
-								
-									<p>Omar jaqra “Bil-Moħbi <l-m>fil-Beraħ</l-m>”. Abbona <l-m><l-m>fil-</l-m><a href="/podcast/">podcast</a></l-m> biex tisma’ kulma nippubblikaw.</p>
-								
-								
-							</figcaption>
-						</figure>
+					<aside id="audio">
+					
+					<figure class="audio awwissu-2023 " id="audio-0">
+	<div class="player" id="player-0">
+		<div class="control-container">
+			<button class="amplitude-play-pause" amplitude-play-pause="true" id="play-pause-0" data-amplitude-song-index="0">
+		</div>
+		<div class="range" id="range-0">
+			<input type="range" id="range-input-0" class="amplitude-song-slider" step=".1" data-amplitude-song-index="0">
+			<progress class="amplitude-song-played-progress" amplitude-song-played-progress="true" id="song-played-progress-0" data-amplitude-song-index="0"></progress>
+		</div>
+		<div class="time-container">
+			<span class="amplitude-time-remaining" amplitude-time-remaining="true" data-amplitude-song-index="0">777</span>
+			
+		</div>
+	</div>
+		
+			<figcaption>
+				
+					<p>Omar jaqra “Bil-Moħbi <l-m>fil-Beraħ</l-m>”. Abbona <l-m><l-m>fil-</l-m><a href="/podcast/">podcast</a></l-m> biex tisma’ kulma nippubblikaw.</p>
+				
+				
+			</figcaption>
+		
+</figure>
+
 					</aside>
 				
 				
@@ -294,7 +299,6 @@
 				
 				
 				
-				
 					<aside id="letters-solicit">
 						<p>Iktbilna dwar dan ix-xogħol fuq <l-m>l-indirizz</l-m> <a href="mailto:ittri@aphroconfuso.mt?subject=Bil-Moħbi fil-Beraħ ta’ Omar N’Shea" class="outline">ittri@aphroconfuso.mt</a>. Jekk jogħġbok inkludi ismek u fejn toqgħod. Kontribuzzjonijiet anonimi ma jiġux ikkunsidrati.</p>
 					</aside>
@@ -316,7 +320,7 @@
 	<a class="promo dicembru-2023 promo-esej story-33" href="/omar-nshea-joey-tilbes-it-tabù-tinża/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Bil-Moħbi fil-Beraħ', 'għal: Joey Tilbes, it-Tabù Tinża&#92;&#39;', 1]);">
 		<header>
 	
-		<h4>Diċembru 2023</h4>
+		<p class="header-label">Diċembru 2023</p>
 		<h1>
 			Joey Tilbes, <l-m>it-Tabù</l-m> Tinża’
 			
@@ -333,6 +337,7 @@
 				<p>Joey kienet tinżel imlibbsa u mpittra, saff eyeshadow abjad <l-m>mad-dawra</l-m>, faxx lapes <l-m>max-xfar</l-m>, u kulur skur ilellex fuq <l-m>il-kappell</l-m> t’għajnejha. Gloss u glitter aħmar, ras nokkli <l-m>bil-backcombing</l-m> u <l-m>l-ġnub</l-m> miġbudin u llixxati lura b’pettne <l-m>tad-djamantini</l-m>. Meta kienet tilbes ta’ mara, kienet tħobb tagħżel xi libsa <l-m>tal-Haro</l-m>, li kellhom ħanut <l-m>tal-ħwejjeġ</l-m> Tas-Sliema, moda impurtata f’Malta minn familja Anglo-Iżraeljana li kienu jgħixu hawn. Kellhom stabbiliment <l-m>tal-ħwejjeġ</l-m> ieħor <l-m>il-Belt</l-m>, u <l-m>r-restorant</l-m> LeRoy ġewwa Tigné. Lil din <l-m>il-familja</l-m> tal-Haro, <l-m>iz-zija</l-m> t’ommi, Salvina kienet <l-m>għall-ewwel</l-m> isseftrilhom u mbagħad bdiet tieħu ħsieb <l-m>it-tfal</l-m> tagħhom għax kienet taf titkellem <l-m>bl-Ingliż</l-m>. Kienet fuq tagħha u ommi dejjem tiġri magħha u ġieli kienet tmur magħha għandhom. Din <l-m>id-dar</l-m> lil ommi fetħitilha orizzonti ġodda u internazzjonali ħafna, u <l-m>l-Haro</l-m> kien nissel fiha sens ta’ moda, avolja qliezet u qomos <l-m>tal-irġiel</l-m> biss kienet tilbes. Junior, imma, kien galantom u jberbaq sew fuq Antoinette u <l-m>l-gwardarobbi</l-m> tal-Iklin kienu kmamar sħaħ <l-m>fil-basement</l-m> tad-dar, li <l-m>fil-weekend</l-m> spiss jispiċċaw mimlijin sinjorini jitpittru quddiem mera rettangolari kollha bozoz <l-m>mad-dawra</l-m> u ħwejjeġ, parrokki, u tkaken għaddejjin minn id <l-m>għall-oħra</l-m> ħa jaraw min se jilbes xiex. Antoinette kellha mijiet ta’ lbiesi, tant li ġieli <l-m>l-kontestanti</l-m> tax-shows bħal Miss Sunshine kienu jilbsu kważi biss ħwejjeġ <l-m>mill-gwardarobba</l-m> tagħha, qisha <l-m>l-benefattriċi</l-m> tat-travestì. Wara joħorġu jiżżagħblu <l-m>l-Hungry</l-m> Tiger u jiġu lura <l-m>l-għada</l-m>, kulħadd daħna, kollha daħq, żuffjett, ikkampjar, riħa ta’ xorb u sigaretti, u min jorqod ’l hemm u min jorqod ’l hawn. Imma <l-m>l-parrokki</l-m> kienu dejjem jidħlu lura <l-m>ġol-kaxxi</l-m> tal-kartun roża b’ħabel gold biex iġġorrhom minnu, imqiegħda hemm ġew fuq irjus tondi <l-m>tal-ġablow</l-m> li fuqhom Joey kienet tpinġi għajnejn, imnieħer u xufftejn <l-m>bil-make-up</l-m> t’Antoinette, u meta jiġu lura <l-m>miż-żagħbil</l-m> tal-lejl, kienet taqla’ <l-m>l-eyelashes</l-m> foloz u twaħħalhom fuqha. <l-m>Il-parrokki</l-m> kienu joħduhom darba <l-m>fix-xahar</l-m> il-Village Gossip, għand Manwel u <l-m>l-Mimì</l-m>, għal wash u blow dry.</p>
 			
 		</div>
+		
 	</a>
 </li>
 
@@ -343,7 +348,7 @@
 	<a class="promo ottubru-2023 promo-esej story-25" href="/joe-gatt-kontra-tagħna-għaliex-magħna/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Bil-Moħbi fil-Beraħ', 'għal: Kontra Tagħna Għaliex Magħna', 2]);">
 		<header>
 	
-		<h4>Ottubru 2023</h4>
+		<p class="header-label">Ottubru 2023</p>
 		<h1>
 			Kontra Tagħna Għaliex Magħna
 			
@@ -360,6 +365,7 @@
 				<p>Meta wara sentejn f’idejn <l-m>il-Franċiżi</l-m>, <l-m>fl-1800</l-m> l-ġżejjer Maltin sabu ruħhom taħt <l-m>il-ħakma</l-m> Ingliża, skont <l-m>it-Trattat</l-m> ta’ Amiens kellhom jerġgħu jgħaddu lura għand <l-m>il-Kavallieri</l-m> biex ikomplu jmexxuha huma bħala pajjiż “newtrali”<span class="pull">.</span> <l-m>Il-qassisin</l-m>, <l-m>in-nutara</l-m>, <l-m>l-avukati</l-m> u <l-m>l-kummerċjanti</l-m> Maltin <l-m>tal-“Congresso</l-m>”<span class="pull">,</span> li sa ftit qabel kienu qed imexxu <l-m>l-insurrezzjoni</l-m> kontra <l-m>l-Franċiżi</l-m>, beżgħu li dan kien ifisser li malajr jerġgħu jiġu taħthom għax <l-m>l-Ordni</l-m> kienet iddgħajfet sew u żgur ma kinitx tiflaħ għal Napuljun. Għalhekk, <l-m>il-104</l-m> membri ta’ dan <l-m>il-kungress</l-m> kitbu “Dichiarazione dei Diritti degli Abitanti delle Isole di Malta e Gozo”<span class="pull">.</span> Ma kinitx dikjarazzjoni radikali bħal dik <l-m>tal-Indipendenza</l-m> ta’ Haiti ta’ sentejn wara, li abolixxiet <l-m>l-iskjavitù</l-m>, ċaħdet kull rabta <l-m>mal-kolonjalisti</l-m> Ewropej u ħalfet <l-m>il-libertà</l-m> jew <l-m>il-mewt</l-m>. Dik Maltija kienet dikjarazzjoni liberali <l-m>bl-eku</l-m> Illuminista ta’ dik <l-m>tal-Indipendenza</l-m> tal-Istati Uniti <l-m>fl-1776</l-m> u <l-m>tad-“Dikjarazzjoni</l-m> tad-Drittijiet <l-m>tal-Bniedem</l-m> u <l-m>ċ-Ċittadin</l-m>” fi Franza, <l-m>tlettax-il</l-m> sena wara. F’disa’ punti, <l-m>id-dikjarazzjoni</l-m> elenkat speċi ta’ kuntratt. Iktar milli stqarrija ta’ drittijiet indirizzata lejn <l-m>l-ispirtu</l-m> etern <l-m>tal-Bniedem</l-m>, kien quid pro quo ċar u pragmatiku indirizzat <l-m>lir-Re</l-m> tar-Renju Unit <l-m>tal-Gran</l-m> Brittanja u <l-m>l-Irlanda</l-m> u <l-m>d-dixxendenti</l-m> tiegħu bħala sovrani fuq <l-m>il-gżejjer</l-m> “għal dejjem”<span class="pull">.</span> Dan <l-m>in-nisel</l-m> nobbli, <l-m>min-naħa</l-m> tiegħu, kellu jagħti <l-m>lill-pajjiż</l-m> kostituzzjoni li biha kunsill elett <l-m>mill-“poplu</l-m>” ikollu dritt jiġbor <l-m>it-taxxi</l-m> u jmexxi ’<l-m>l-pajjiż</l-m>. <l-m>Ir-Re</l-m> ma kellu jindaħal la <l-m>fit-tmexxija</l-m> interna <l-m>tal-pajjiż</l-m> u lanqas <l-m>fil-ħajja</l-m> reliġjuża tiegħu. <l-m>In-nies </l-m>— insomma, “gli uomini liberi” — kellhom <l-m>id-dritt</l-m> josservaw liema reliġjon riedu, igawdu <l-m>l-proprjetà</l-m> tagħhom u jkunu suġġetti biss <l-m>għal-Liġi</l-m>. U <l-m>għar-Re</l-m>, li kien <l-m>il-protettur</l-m> tar-reliġjon. U <l-m>għall-Papa</l-m>, li kellu jkun <l-m>l-uniku</l-m> referenza fejn jidħlu affarijiet spiritwali; hu u <l-m>l-ġenerali</l-m> tal-ordnijiet monastiċi. Intbagħtet <l-m>lir-Re</l-m> Ġorġ III, imma nafu biha għax baqgħu kopji tagħha Malta. <l-m>Fl-arkivji</l-m> impekkabbli <l-m>tal-Gran</l-m> Brittanja m’hemm ebda ħjiel tagħha. Jekk <l-m>lir-Re</l-m> waslitlu, ma nafux <l-m>x’għamel</l-m> biha. <l-m>L-Ingliżi</l-m> bdew imexxu <l-m>l-gżejjer</l-m> bħala dittatorjat militari. Fost <l-m>l-uffiċjali</l-m> Ingliżi, li ma taw kas la ta’ din <l-m>id-dikjarazzjoni</l-m> u lanqas ta’ appelli oħrajn <l-m>għall-awtonomija</l-m>, kien hemm <l-m>l-ewwel</l-m> Duka ta’ Wellington li jgħidu li qal: Kieku allura nistgħu nagħtu kostituzzjoni lil bastiment <l-m>tal-gwerra</l-m>!</p>
 			
 		</div>
+		
 	</a>
 </li>
 
@@ -370,7 +376,7 @@
 	<a class="promo awwissu-2023 promo-storja story-17" href="/miriam-galea-lejl-u-nhar/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Bil-Moħbi fil-Beraħ', 'għal: Lejl u Nhar', 3]);">
 		<header>
 	
-		<h4>Awwissu 2023</h4>
+		<p class="header-label">Awwissu 2023</p>
 		<h1>
 			Lejl u Nhar
 			
@@ -387,6 +393,7 @@
 				<p>Issa <l-m>x-xemx</l-m> laħqet niżlet u ngħidilkom li hawn dlam ċappa. U aqta’ xiex, Marija għadha ma xegħlitx <l-m>id-dawl</l-m>! Intasbet bilqiegħda fuq banketta <l-m>fl-intrata</l-m>. Minn hawn tista’ tara <l-m>x-shower</l-m>. Filgħodu minn <l-m>ġol-ħġieġa</l-m> jgħaddi <l-m>d-dawl</l-m> li jidħol <l-m>mit-tieqa</l-m>. <l-m>Ix-xugaman</l-m> il-kbir kollu strixxi ta’ kuluri differenti mdendel <l-m>mal-bieb</l-m>. Iktar tużah <l-m>għall-baħar</l-m> milli biex tinħasel. Imma <l-m>x’waħda</l-m> din issa, kemm hawn dlam. Marija ma titħarrikx. Wara ftit tqum tnaqqar żewġ gallettiet. Tixgħel <l-m>it-tubu</l-m> tal-kċina. <l-m>Is-sodda</l-m> għadha mħarbta u <l-m>l-art</l-m> mimlija ħwejjeġ li ppruvat <l-m>is-Sibt</l-m> filgħaxija. <l-m>It-tajts</l-m> is-suwed taħt <l-m>is-sodda</l-m>, <l-m>il-flokk</l-m> l-isfar fuq <l-m>il-pultruna</l-m>, <l-m>il-kowt</l-m> il-griż kobba fuq <l-m>it-tapit</l-m>. Marija tixgħel ftit mużika baxxa.</p>
 			
 		</div>
+		
 	</a>
 </li>
 
@@ -395,9 +402,12 @@
 
 	</aside>
 	<script>
+		
+			audioUrls = { "songs": [{"pageSlug":"omar-nshea-bil-moħbi-fil-beraħ","reportingTitle":"Bil-Moħbi fil-Beraħ","url":"https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1703011648302-29e67d6ef286fd847c99b7d0696d6591.mp3","monthYear":"Awwissu 2023"}] };
+		
 		author = "Omar N’Shea" || null;
 		monthYear = "awwissu-2023" || null;
-		podcastUrl = "https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1703011648302-29e67d6ef286fd847c99b7d0696d6591.mp3";
+		podcastUrl = null;
 		reportingTitle = "Bil-Moħbi fil-Beraħ" || null;
 		sequenceEpisodeNumber = null;
 		sequenceEpisodeTitle = null;

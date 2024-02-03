@@ -2,5 +2,6 @@ User-agent: *
 Allow: /
 Disallow: /admin/*
 Disallow: /img/*
+Allow: /img/icons/*
 
 Sitemap: https://aphroconfuso.mt/sitemap.xml
