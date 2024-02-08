@@ -27,10 +27,11 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/bookmarks/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-e43d4b53.css">
+		<link rel="stylesheet" href="/css/style-e5e8d917.css">
 		<script>
 			var
 				audioLoaded,
+				audioUrls,
 				author,
 				body,
 				bodyEnd,
@@ -65,7 +66,6 @@
 				storyCompleted,
 				storyId,
 				storyType,
-				pageSubtitle,
 				sequenceEpisodeNumber,
 				sequenceEpisodeTitle,
 				timeStarted,
@@ -130,7 +130,7 @@
 				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
 			})();
 		</script>
-		<script defer src="/script/script-209.js"></script>
+		<script defer src="/script/script-212.js"></script>
 	</head>
 	<body class="show-nav">
 		<script>initialiseAfterBody();</script>
@@ -169,7 +169,7 @@
 				
 	<article class="generic" id="bookmarks">
 		<header>
-			<h4>&nbsp;</h5>
+			<p class="header-label">&nbsp;</p>
 			<h1>Bookmarks</h1>
 			<h2>&nbsp;</h2>
 		</header>
@@ -191,7 +191,7 @@
 						<li>
 							<a class="promo bookmark-promo">
 								<header>
-									<h4></h4>
+									<p class="header-label"></p>
 									<h1></h1>
 									<h2></h2>
 									<h3></h3>
@@ -199,7 +199,10 @@
 								<div class="body-text">
 									<p></p>
 								</div>
-								<span class="bookmark"></span>
+								<aside>
+									<p></p>
+								</aside>
+								<span class="bookmark"><span></span></span>
 							</a>
 							<button>✕</button>
 						</li>
