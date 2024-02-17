@@ -12,8 +12,7 @@
 	
 	
 	
-		
-		<script src="/amplitude/amplitude.min.js"></script>
+		<script src="/green-audio-player/script.js"></script>
 	
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@aphroconfuso">
@@ -42,7 +41,7 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/kurt-borg-ġilda/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-e5e8d917.css">
+		<link rel="stylesheet" href="/css/style-ecc8dd40.css">
 		<script>
 			var
 				audioLoaded,
@@ -94,6 +93,7 @@
 			audioLoaded = false;
 			bookmarksArray = [];
 			percentageProgress = 0;
+			previousTime = [];
 			storyCompleted = false;
 
 			const	urlSlug = location.pathname.replace(/\//g, '');
@@ -211,24 +211,16 @@
 				
 					<aside id="audio">
 					
-					<figure class="audio gunju-2023 " id="audio-0">
+					<figure class="audio gunju-2023 ">
 	<div class="player" id="player-0">
-		<div class="control-container">
-			<button class="amplitude-play-pause" amplitude-play-pause="true" id="play-pause-0" data-amplitude-song-index="0">
-		</div>
-		<div class="range" id="range-0">
-			<input type="range" id="range-input-0" class="amplitude-song-slider" step=".1" data-amplitude-song-index="0">
-			<progress class="amplitude-song-played-progress" amplitude-song-played-progress="true" id="song-played-progress-0" data-amplitude-song-index="0"></progress>
-		</div>
-		<div class="time-container">
-			<span class="amplitude-time-remaining" amplitude-time-remaining="true" data-amplitude-song-index="0">777</span>
-			
-		</div>
+		<audio id="audio-0">
+			<source src="https://open.acast.com/public/streams/63ef6b4c3642ca00119bcf72/episodes/64a67b7b547a490011c17145.mp3" type="audio/mpeg">
+		</audio>
 	</div>
 		
 			<figcaption>
 				
-					<p>Kurt jaqra “Ġilda”. Abbona <l-m><l-m>fil-</l-m><a href="/podcast/">podcast</a></l-m> biex tisma’ kulma nippubblikaw.</p>
+					<p>Kurt Borg jaqra “Ġilda”. Abbona <l-m><l-m>fil-</l-m><a href="/podcast/">podcast</a></l-m> biex tisma’ kulma nippubblikaw.</p>
 				
 				
 			</figcaption>
@@ -422,10 +414,10 @@
 
 	</aside>
 	<script>
-		audioUrls = { "songs": [{"pageSlug":"kurt-borg-ġilda","reportingTitle":"Ġilda","url":"https://open.acast.com/public/streams/63ef6b4c3642ca00119bcf72/episodes/64a67b7b547a490011c17145.mp3","monthYear":"Ġunju 2023"}] };
+		audioUrls = { "songs": [{"author":"Kurt Borg","storyId":"14","monthYear":"Ġunju 2023","pageSlug":"kurt-borg-ġilda","podcastLengthMinutes":53,"podcastNote":null,"reads":"jaqra","reportingTitle":"Ġilda","sequenceEpisodeNumber":null,"sequenceEpisodeTitle":null,"title":"Ġilda","translatorName":false,"type":"Esej","url":"https://open.acast.com/public/streams/63ef6b4c3642ca00119bcf72/episodes/64a67b7b547a490011c17145.mp3"}] };
 		author = "Kurt Borg" || null;
 		monthYear = "gunju-2023" || null;
-		podcastUrl = null;
+		podcastUrl = "https://open.acast.com/public/streams/63ef6b4c3642ca00119bcf72/episodes/64a67b7b547a490011c17145.mp3";
 		reportingTitle = "Ġilda" || null;
 		sequenceEpisodeNumber = null;
 		sequenceEpisodeTitle = null;
@@ -479,7 +471,7 @@
 			<li><a href="https://facebook.com/aphroconfuso">Facebook</a></li>
 			<li><a href="https://instagram.com/aphroconfuso">Instagram</a></li>
 			<li><a href="https://twitter.com/aphroconfuso">Twitter</a></li>
-			<li><a href="https://mastodon.world/@aphroconfuso">Mastodon</a></li>
+			<li><a href="https://mastodon.world/@aphroconfuso" rel="me">Mastodon</a></li>
 			<li><a href="https://youtube.com/@aphroconfuso">Youtube</a></li>
 			<li><a href="https://open.spotify.com/user/31rly4s75gfxs6li6bcxc5bqlgza">Spotify</a></li>
 		</menu>

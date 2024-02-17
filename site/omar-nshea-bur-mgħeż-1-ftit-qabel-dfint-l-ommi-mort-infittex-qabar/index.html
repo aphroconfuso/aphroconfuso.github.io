@@ -15,8 +15,7 @@
 		<link rel="stylesheet" href="/splide-4.1.3/dist/css/splide.min.css">
 	
 	
-		
-		<script src="/amplitude/amplitude.min.js"></script>
+		<script src="/green-audio-player/script.js"></script>
 	
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@aphroconfuso">
@@ -45,7 +44,7 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/omar-nshea-bur-mgħeż-1-ftit-qabel-dfint-l-ommi-mort-infittex-qabar/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-e5e8d917.css">
+		<link rel="stylesheet" href="/css/style-ecc8dd40.css">
 		<script>
 			var
 				audioLoaded,
@@ -97,6 +96,7 @@
 			audioLoaded = false;
 			bookmarksArray = [];
 			percentageProgress = 0;
+			previousTime = [];
 			storyCompleted = false;
 
 			const	urlSlug = location.pathname.replace(/\//g, '');
@@ -269,24 +269,16 @@
 				
 					<aside id="audio">
 					
-					<figure class="audio settembru-2023 " id="audio-0">
+					<figure class="audio settembru-2023 ">
 	<div class="player" id="player-0">
-		<div class="control-container">
-			<button class="amplitude-play-pause" amplitude-play-pause="true" id="play-pause-0" data-amplitude-song-index="0">
-		</div>
-		<div class="range" id="range-0">
-			<input type="range" id="range-input-0" class="amplitude-song-slider" step=".1" data-amplitude-song-index="0">
-			<progress class="amplitude-song-played-progress" amplitude-song-played-progress="true" id="song-played-progress-0" data-amplitude-song-index="0"></progress>
-		</div>
-		<div class="time-container">
-			<span class="amplitude-time-remaining" amplitude-time-remaining="true" data-amplitude-song-index="0">777</span>
-			
-		</div>
+		<audio id="audio-0">
+			<source src="https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1700053677078-c0d614b4af3232aa62c8676279625465.mp3" type="audio/mpeg">
+		</audio>
 	</div>
 		
 			<figcaption>
 				
-					<p>Omar jaqra “Bur Mgħeż”. Abbona <l-m><l-m>fil-</l-m><a href="/podcast/">podcast</a></l-m> biex tisma’ kulma nippubblikaw.</p>
+					<p>Omar <l-m>N’Shea</l-m> jaqra “Bur Mgħeż”. Abbona <l-m><l-m>fil-</l-m><a href="/podcast/">podcast</a></l-m> biex tisma’ kulma nippubblikaw.</p>
 				
 				
 					<p>Fuq il-<a href="/podcast/">podcast</a> tista’ wkoll tisma’ taħdita ma’ Omar dwar kif sar jaf b’Bur Mgħeż, kif għamel <l-m>ir-riċerka</l-m> tiegħu dwar <l-m>is-sit</l-m> u xi ħsibijiet dwar <l-m>id-dixxiplina</l-m> tal-arkeoloġija u <l-m>l-”metodoloġija”</l-m> letterarja.</p>
@@ -864,10 +856,10 @@
 
 	</aside>
 	<script>
-		audioUrls = { "songs": [{"pageSlug":"omar-nshea-bur-mgħeż-1-ftit-qabel-dfint-l-ommi-mort-infittex-qabar","reportingTitle":"Bur Mgħeż #1","url":"https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1700053677078-c0d614b4af3232aa62c8676279625465.mp3","monthYear":"Settembru 2023"}] };
+		audioUrls = { "songs": [{"author":"Omar N’Shea","storyId":"20","monthYear":"Settembru 2023","pageSlug":"omar-nshea-bur-mgħeż-1-ftit-qabel-dfint-l-ommi-mort-infittex-qabar","podcastLengthMinutes":59,"podcastNote":"<p>Fuq il-<a href=\"/podcast/\">podcast</a> tista’ wkoll tisma’ taħdita ma’ Omar dwar kif sar jaf b’Bur Mgħeż, kif għamel ir-riċerka tiegħu dwar is-sit u xi ħsibijiet dwar id-dixxiplina tal-arkeoloġija u l-\"metodoloġija\" letterarja.</p>","reads":"jaqra","reportingTitle":"Bur Mgħeż #1","sequenceEpisodeNumber":1,"sequenceEpisodeTitle":"Ftit qabel dfint ’l ommi, mort infittex qabar","title":"Bur Mgħeż","translatorName":false,"type":"Esej","url":"https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1700053677078-c0d614b4af3232aa62c8676279625465.mp3"}] };
 		author = "Omar N’Shea" || null;
 		monthYear = "settembru-2023" || null;
-		podcastUrl = null;
+		podcastUrl = "https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1700053677078-c0d614b4af3232aa62c8676279625465.mp3";
 		reportingTitle = "Bur Mgħeż #1" || null;
 		sequenceEpisodeNumber = "1";
 		sequenceEpisodeTitle = "Ftit qabel dfint ’l ommi, mort infittex qabar";
@@ -1233,7 +1225,7 @@
 			<li><a href="https://facebook.com/aphroconfuso">Facebook</a></li>
 			<li><a href="https://instagram.com/aphroconfuso">Instagram</a></li>
 			<li><a href="https://twitter.com/aphroconfuso">Twitter</a></li>
-			<li><a href="https://mastodon.world/@aphroconfuso">Mastodon</a></li>
+			<li><a href="https://mastodon.world/@aphroconfuso" rel="me">Mastodon</a></li>
 			<li><a href="https://youtube.com/@aphroconfuso">Youtube</a></li>
 			<li><a href="https://open.spotify.com/user/31rly4s75gfxs6li6bcxc5bqlgza">Spotify</a></li>
 		</menu>
