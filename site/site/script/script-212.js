@@ -51,12 +51,12 @@ const addBookmarkNow = () => {
 		placeText: getCurrentBlurb(percentageProgress),
 		sequenceEpisodeNumber,
 		sequenceEpisodeTitle,
-		speed: wordsPerSecond && wordsPerSecond.toFixed(2),
 		storyId,
 		storyType,
 		title: pageTitle,
 		translator,
 		urlSlug,
+		v: 3,
 		wordcount,
 		wordsPerSecond: wordsPerSecond && wordsPerSecond.toFixed(2),
 	});
@@ -98,41 +98,74 @@ const saveBookmarksList = () => localStorage.setItem("bookmarks", JSON.stringify
 const initialiseBookmarksList = () => {
 	bookmarksList = JSON.parse(localStorage.getItem("bookmarks") || "{}");
 	const bookmarkKeysArray = Object.keys(bookmarksList);
-	bookmarkKeysArray.forEach((key) => {
-		if (key.startsWith('text-')) {
-			const item = bookmarksList[key];
-			item.key = key;
-			item.urlSlug = item.urlSlug || key.split('text-')[1];
-			const { monthYear, percentage, title, urlSlug, wordcount } = item;
-			const valid = percentage && title && urlSlug && monthYear && percentage < 98 && (wordcount * (percentage / 100) > bookmarkThresholdWords);
-			if (!valid) {
-				delete bookmarksList[key];
-				return;
-			};
+	bookmarkKeysArray.forEach((oldKey) => {
+		const item = bookmarksList[oldKey];
+
+		const { dateTime, monthYear, percentage, playPosition, title, urlSlug, wordcount } = item;
+		const [, oldKeyType, oldKeyId] = oldKey.split(/(text|audio)-/);
+		// console.log('oldKeyType', oldKeyType);
+		let updateFormat = false;
+		let discardBookmark = false;
+
+		// Check validity - remove after 01.06.2024
+		if (oldKeyType === 'text') {
+			updateFormat = !(percentage && title && urlSlug && monthYear);
+			discardBookmark = percentage >= 98 || (wordcount * (percentage / 100) < bookmarkThresholdWords);
+		}
+		if (oldKeyType === 'audio') {
+			discardBookmark = playPosition && playPosition < 300;
+		}
+
+		// check validity - too old
+		var threeMonthsAgo = new Date();
+		threeMonthsAgo.setMonth(threeMonthsAgo.getMonth() - 3);
+		if (new Date(dateTime) < threeMonthsAgo) updateFormat = true;
+
+		if (!discardBookmark && oldKeyType === 'undefined' || !parseInt(oldKeyId)) {
+			updateFormat = true;
+
+			// Fix missing keys
+			const newKey = `${ item.type }-${ item.storyId }`;
+			item.key = newKey;
+			item.type = item.type || 'audio';
+			item.v = 2;
+
+			// Convert to id-keyed
+			bookmarksList[newKey] = item;
+		}
+
+		if (oldKeyType === 'text' && !discardBookmark) {
 			bookmarksArray.push(item);
 		}
+
+		console.log(bookmarksArray);
+
+		if (updateFormat || discardBookmark) delete bookmarksList[oldKey];
 	});
 	saveBookmarksList();
 }
 
-const addBookmark = (type = 'text', bookmark) => {
-	bookmarksList[`${ type }-${urlSlug}`] = {
+const addBookmark = (type = 'text', thisStoryId = storyId, bookmark) => {
+	console.log(bookmark);
+	bookmarksList[`${ type }-${ thisStoryId }`] = {
 		dateTime: new Date(),
 		type,
 		...bookmark
 	};
+	console.log(bookmarksList);
 	saveBookmarksList();
 	if (type === 'audio') return;
 	updateBookmarksMenu(bookmarksArray);
 	window._paq.push(['trackEvent', 'Bookmarks', 'żid', bookmark.title, bookmark.percentage]);
 }
 
-const deleteBookmark = (type = 'text', slug = urlSlug, id = storyId) => {
-	delete bookmarksList[`${ type }-${ slug }`];
+const deleteBookmark = (type = 'text', id = storyId) => {
+	delete bookmarksList[`${ type }-${ id }`];
 	saveBookmarksList();
 	if (type === 'audio') return;
-	const bookmark = bookmarksArray.find(i => i.urlSlug);
-	bookmarksArray = bookmarksArray.filter(i => i.urlSlug !== slug);
+	const bookmark = bookmarksArray.find(i => i.id);
+	bookmarksArray = bookmarksArray.filter(i => i.id !== id);
+	console.log('DELETE', id, bookmark);
 	updateBookmarksMenu(bookmarksArray);
 	const removeBookmark = document.getElementById(`bookmark-${ id }`);
 	removeBookmark.style.opacity = '0';
@@ -218,7 +251,7 @@ const showFullBookmarkList = () => {
 		const bookmarksCount = bookmarksArray.length
 		let numberPhrase = bookmarksCount + ' bookmarks';
 		if (bookmarksCount >= 11) numberPhrase = bookmarksCount + '-il bookmark';
-		if (bookmarksCount >= 20) numberPhrase = bookmarksCount + ' bookmarks';
+		if (bookmarksCount >= 20) numberPhrase = bookmarksCount + ' bookmark';
 		document.getElementById("bookmarks-number-inline").textContent = numberPhrase;
 	} else {
 		bookmarksContainer && bookmarksContainer.classList.add("bookmarks-none");
@@ -256,7 +289,7 @@ const showFullBookmarkList = () => {
 			clone.querySelector(".body-text p").textContent = placeText.replace(/.*?\w\b\s+/, "… ");
 			clone.querySelector("aside p").textContent = `Fadallek ${ remaining }, madwar ${ minutes } qari`;
 			list.appendChild(clone);
-			document.getElementById(`delete-${ storyId }`).addEventListener("click", (event) => { deleteBookmark('text', urlSlug, storyId); event.stopPropagation(); });
+			document.getElementById(`delete-${ storyId }`).addEventListener("click", (event) => { deleteBookmark('text', storyId); event.stopPropagation(); });
 			document.getElementById(`link-${ storyId }`).addEventListener("click", () => _paq.push(['trackEvent', 'Promo', 'minn: Bookmarks', `għal: ${ reportingTitle }`, index]));
 		});
 	}
@@ -264,8 +297,9 @@ const showFullBookmarkList = () => {
 
 const clearAllBookmarks = () => localStorage.clear();
 
-const getPreviousAudioTime = () => {
-	return bookmarksList[`audio-${urlSlug}`] && bookmarksList[`audio-${urlSlug}`].playPosition || 0;
+const getPreviousAudioTime = (id) => {
+	console.log('PREVIOUS TIME', bookmarksList, id);
+	return bookmarksList[`audio-${ id }`] && bookmarksList[`audio-${ id }`].playPosition || 0;
 }
 
 // INITIALISE ***********************************************************************
@@ -418,89 +452,120 @@ const initialiseAfterWindow = () => {
 		document.getElementById('trigger-warning-close')?.addEventListener('click', () => closeTriggerWarning());
 
 		if (audioUrls && audioUrls.songs.length) {
-			Amplitude.init(audioUrls);
-			var audio, activeReportingTitle;
-			audio = Amplitude.getAudio();
-			audio.addEventListener('canplaythrough', () => {
-				if (audioLoaded) return;
-				duration = parseInt(audio.duration);
-				wordsPerSecondAudio = wordcount / duration;
-				previousTime = getPreviousAudioTime();
-				if (previousTime !== 0) {
-					audio.currentTime = previousTime;
-				}
-				audioLoaded = true;
-			});
+			audioUrls.songs.forEach((song, index) => {
+				const { storyId, reportingTitle: thisReportingTitle } = song;
+				console.log(index, storyId, getPreviousAudioTime(storyId));
+				GreenAudioPlayer.init({
+					selector: `#player-${ index }`,
+					stopOthersOnPlay: true,
+					startTime: getPreviousAudioTime(storyId)
+				});
 
-			const addAudioBookmarkNow = (percentage) => {
-				let playPosition = parseInt(audio.currentTime);
-				const percentageAudio = percentage || (parseInt(audio.currentTime) * 100 / duration).toFixed(2);
+				const audioReportingTitle = thisReportingTitle !== reportingTitle ? `${ thisReportingTitle } (${ reportingTitle })` : thisReportingTitle;
 
-				addBookmark('audio', {
-					author,
-					duration,
-					monthYear,
-					percentageAudio,
-					placeText: getCurrentBlurb(percentageAudio),
-					playPosition,
-					// activeUrlSlug,
-					activeReportingTitle,
-					sequenceEpisodeNumber,
-					sequenceEpisodeTitle,
-					storyId,
-					title: pageTitle,
-					translator,
+
+				// use player 1 player 2, etc
+				// Amplitude.init(audioUrls);
+				// var audio, audioReportingTitle;
+				const audio = document.querySelector(`#audio-${ index }`);
+
+				console.log(audio, audioReportingTitle);
+
+				audio.addEventListener('canplaythrough', () => {
+					if (song.loaded) return;
+					// duration = parseInt(audio.duration);
+					// wordsPerSecondAudio = song.wordcount / duration;
+					song.loaded = true;
+					songEvents(index, song, audio);
+				});
+			// audio.addEventListener('canplaythrough', () => {
+			// 	if (audioLoaded) return;
+			// duration = parseInt(audio.duration);
+			// wordsPerSecondAudio = song.wordcount / duration;
+			// 	previousTime = getPreviousAudioTime();
+			// 	if (previousTime !== 0) {
+			// 		audio.currentTime = previousTime;
+			// 	}
+			// 	audioLoaded = true;
+				// });
+
+				console.log(duration);
+
+
+			const getPercentageAudio = (audio) => (audio.currentTime * 100 / audio.duration).toFixed(2);
+
+			const addAudioBookmarkNow = (percentage, song, audio) => {
+
+				const audioPercentage = percentage || getPercentageAudio(audio);
+
+				console.log('audio bookmarking...', song.storyId, song.title, audioPercentage, audio.currentTime);
+				addBookmark('audio', song.storyId, {
+					author: song.author,
+					duration: audio.duration,
+					monthYear: song.monthYear,
+					percentageAudio: audioPercentage,
+					placeText: getCurrentBlurb(audioPercentage),
+					playPosition: parseInt(audio.currentTime),
+					sequenceEpisodeNumber: song.sequenceEpisodeNumber,
+					sequenceEpisodeTitle: song.sequenceEpisodeTitle,
+					storyId: song.storyId,
+					title: song.title,
+					translator:song.translator,
+					urlSlug: song.urlSlug,
 				});
 			}
 
+				const songEvents = (index, song, audio) => {
+					wordsPerSecondAudio = 2.5;
+					// *****
+
+					// audio.currentTime = getPreviousAudioTime(song.storyId);
+
 			audio.addEventListener('play', () => {
-				audio = Amplitude.getAudio();
-				activeReportingTitle = Amplitude.getActiveSongMetadata().reportingTitle;
-				window._paq.push(['trackEvent', 'Smiegħ', 'play', activeReportingTitle]);
+				window._paq.push(['trackEvent', 'Smiegħ', 'play', audioReportingTitle]);
+				console.log(`Player ${ index }`, 'play', audioReportingTitle);
 			});
 			audio.addEventListener('pause', () => {
-				activeReportingTitle = Amplitude.getActiveSongMetadata().reportingTitle;
-				percentageAudio = (parseInt(audio.currentTime) * 100 / duration).toFixed(2);
-				window._paq.push(['trackEvent', 'Smiegħ', 'pause', activeReportingTitle, percentageAudio]);
-				addAudioBookmarkNow(percentageAudio);
+				percentageAudio = getPercentageAudio(audio);
+				window._paq.push(['trackEvent', 'Smiegħ', 'pause', audioReportingTitle, percentageAudio]);
+				addAudioBookmarkNow(percentageAudio, song, audio);
 			});
 			audio.addEventListener('seek', () => {
-				percentageAudio = (parseInt(audio.currentTime) * 100 / duration).toFixed(2);
-				window._paq.push(['trackEvent', 'Smiegħ', 'seek', activeReportingTitle, percentageAudio]);
+				percentageAudio = getPercentageAudio(audio);
+				window._paq.push(['trackEvent', 'Smiegħ', 'seek', audioReportingTitle, percentageAudio]);
 				if (currentTime === 0) {
-					deleteBookmark('audio');
+					deleteBookmark('audio', song.storyId);
 					return;
 				}
-				addAudioBookmarkNow(percentageAudio);
+				addAudioBookmarkNow(percentageAudio, song, audio);
 			});
 			audio.addEventListener('ended', () => {
-				window._paq.push(['trackEvent', 'Smiegħ', 'spiċċa', activeReportingTitle]);
-				deleteBookmark('audio');
+				window._paq.push(['trackEvent', 'Smiegħ', 'spiċċa', audioReportingTitle]);
+				deleteBookmark('audio', song.storyId);
 			});
 			audio.addEventListener('waiting', () => {
-				window._paq.push(['trackEvent', 'Smiegħ', 'buffering', activeReportingTitle, 1]);
+				window._paq.push(['trackEvent', 'Smiegħ', 'buffering', audioReportingTitle, 1]);
+				console.log(`Player ${ index }`, 'waiting', audioReportingTitle);
 			});
 			audio.addEventListener('timeupdate', () => {
 				currentTime = parseInt(audio.currentTime);
-				if (currentTime === 0 || currentTime === previousTime) return;
-				elapsedTime = currentTime - previousTime;
+				if (currentTime === 0 || currentTime === previousTime[index]) return;
+				elapsedTime = currentTime - previousTime[index];
 				if (elapsedTime > 10) window._paq.push(['trackEvent', 'Smiegħ', 'kliem maqbuż', parseInt(elapsedTime * wordsPerSecondAudio)]);
-				if (currentTime % audioBookmarkingInterval === 0) addAudioBookmarkNow();
+				if (currentTime % audioBookmarkingInterval === 0) addAudioBookmarkNow(null, song, audio);
 				if (currentTime % audioReportingInterval === 0) {
-					window._paq.push(['trackEvent', 'Smiegħ', 'kliem (awdjo)', activeReportingTitle, parseInt(audioReportingInterval * wordsPerSecondAudio)]);
-					window._paq.push(['trackEvent', 'Smiegħ', 'minuti (awdjo)', activeReportingTitle, 0.5]);
-					window._paq.push(['trackEvent', 'Smiegħ', 'perċentwali (awdjo)', activeReportingTitle, ((currentTime * 100) / duration).toFixed(2)]);
+					window._paq.push(['trackEvent', 'Smiegħ', 'kliem (awdjo)', audioReportingTitle, parseInt(audioReportingInterval * wordsPerSecondAudio)]);
+					window._paq.push(['trackEvent', 'Smiegħ', 'minuti (awdjo)', audioReportingTitle, 0.5]);
+					window._paq.push(['trackEvent', 'Smiegħ', 'perċentwali (awdjo)', audioReportingTitle, ((currentTime * 100) / duration).toFixed(2)]);
 				}
-				previousTime = currentTime;
+				previousTime[index] = currentTime;
 			});
 
-			document.querySelectorAll('.audio .range').forEach(element => {
-				element.addEventListener('click', function (e) {
-					var offset = this.getBoundingClientRect();
-					var x = e.pageX - offset.left;
-					Amplitude.setSongPlayedPercentage((parseFloat(x) / parseFloat(this.offsetWidth)) * 100);
-				})
-			});
+				}
+
+
+					});
+
 			document.querySelectorAll('.audio').forEach(element => element.classList.add('initialised'));
 		}
 	};
