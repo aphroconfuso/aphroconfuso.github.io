@@ -15,8 +15,7 @@
 		<link rel="stylesheet" href="/splide-4.1.3/dist/css/splide.min.css">
 	
 	
-		
-		<script src="/amplitude/amplitude.min.js"></script>
+		<script src="/green-audio-player/script.js"></script>
 	
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@aphroconfuso">
@@ -45,7 +44,7 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/miriam-galea-lejl-u-nhar/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-e5e8d917.css">
+		<link rel="stylesheet" href="/css/style-5c749871.css">
 		<script>
 			var
 				audioLoaded,
@@ -97,6 +96,7 @@
 			audioLoaded = false;
 			bookmarksArray = [];
 			percentageProgress = 0;
+			previousTime = [];
 			storyCompleted = false;
 
 			const	urlSlug = location.pathname.replace(/\//g, '');
@@ -148,7 +148,7 @@
 				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
 			})();
 		</script>
-		<script defer src="/script/script-212.js"></script>
+		<script defer src="/script/script-216.js"></script>
 	</head>
 	<body class="show-nav">
 		<script>initialiseAfterBody();</script>
@@ -193,12 +193,17 @@
 					Lejl u Nhar
 					
 				</h1>
-				<h2>
-					
-						<a href="/miriam-galea/">Miriam Galea</a>
-					
-				</h2>
 			
+			
+<h2>
+	
+		
+		
+			
+				
+					<a href="/miriam-galea/">Miriam Galea</a>
+</h2>
+
 			
 			
 		</header>
@@ -214,31 +219,25 @@
 				
 					<aside id="audio">
 					
-					<figure class="audio awwissu-2023 " id="audio-0">
+					<figure class="audio awwissu-2023 storja">
 	<div class="player" id="player-0">
-		<div class="control-container">
-			<button class="amplitude-play-pause" amplitude-play-pause="true" id="play-pause-0" data-amplitude-song-index="0">
-		</div>
-		<div class="range" id="range-0">
-			<input type="range" id="range-input-0" class="amplitude-song-slider" step=".1" data-amplitude-song-index="0">
-			<progress class="amplitude-song-played-progress" amplitude-song-played-progress="true" id="song-played-progress-0" data-amplitude-song-index="0"></progress>
-		</div>
-		<div class="time-container">
-			<span class="amplitude-time-remaining" amplitude-time-remaining="true" data-amplitude-song-index="0">777</span>
-			
-		</div>
+		<audio id="audio-0">
+			<source src="https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1694022301428-f268084cf509848751ac7a4da10a9396.mp3" type="audio/mpeg">
+		</audio>
 	</div>
 		
 			<figcaption>
 				
-					<p>Miriam taqra “Lejl u Nhar”. Abbona <l-m><l-m>fil-</l-m><a href="/podcast/">podcast</a></l-m> biex tisma’ kulma nippubblikaw.</p>
-				
+					<p>
+						Miriam taqra “Lejl u Nhar”.
+					</p>
 				
 			</figcaption>
 		
 </figure>
 
 					</aside>
+				
 				
 				
 				<div class="promo bookmark-shortcut"><!-- --></div>
@@ -310,12 +309,12 @@
 	<picture>
 		
 			<source media="(min-width: 749px)" type="image/avif" srcset="
-				/stampi/large_uncropped_avif_miriam_galea_lejl_u_nhar_378e9839f6.avif 1x,
+				
 				/stampi/large_uncropped_avif_x2_miriam_galea_lejl_u_nhar_378e9839f6.avif 2x,
 				/stampi/large_uncropped_avif_x3_miriam_galea_lejl_u_nhar_378e9839f6.avif 3x
 			">
 			<source media="(min-width: 749px)" type="image/jpeg" srcset="
-				/stampi/large_uncropped_jpeg_miriam_galea_lejl_u_nhar_378e9839f6.jpg 1x,
+				
 				/stampi/large_uncropped_jpeg_x2_miriam_galea_lejl_u_nhar_378e9839f6.jpg 2x,
 				/stampi/large_uncropped_jpeg_x3_miriam_galea_lejl_u_nhar_378e9839f6.jpg 3x
 			">
@@ -384,10 +383,17 @@
 			Ġismi Battikata
 			
 		</h1>
-		
-			<h2>Charlene Galea</h2>
-		
 	
+	
+<h2>
+	
+		
+		
+			
+				
+					<span class="author">Charlene Galea</span>
+</h2>
+
 	
 </header>
 
@@ -412,10 +418,17 @@
 			Qamar Aħmar
 			
 		</h1>
-		
-			<h2>Simon Bartolo</h2>
-		
 	
+	
+<h2>
+	
+		
+		
+			
+				
+					<span class="author">Simon Bartolo</span>
+</h2>
+
 	
 </header>
 
@@ -440,10 +453,17 @@
 			mona lisa | karnival ieħor
 			
 		</h1>
-		
-			<h2>Matthew Schembri</h2>
-		
 	
+	
+<h2>
+	
+		
+		
+			
+				
+					<span class="author">Matthew Schembri</span>
+</h2>
+
 	
 </header>
 
@@ -461,10 +481,10 @@
 
 	</aside>
 	<script>
-		audioUrls = { "songs": [{"pageSlug":"miriam-galea-lejl-u-nhar","reportingTitle":"Lejl u Nhar","url":"https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1694022301428-f268084cf509848751ac7a4da10a9396.mp3","monthYear":"Awwissu 2023"}] };
+		audioUrls = { "songs": [{"author":"Miriam Galea","storyId":"17","monthYear":"Awwissu 2023","pageSlug":"miriam-galea-lejl-u-nhar","podcastLengthMinutes":24,"podcastNote":null,"reportingTitle":"Lejl u Nhar","sequenceEpisodeNumber":null,"sequenceEpisodeTitle":null,"title":"Lejl u Nhar","type":"Storja","url":"https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1694022301428-f268084cf509848751ac7a4da10a9396.mp3"}] };
 		author = "Miriam Galea" || null;
 		monthYear = "awwissu-2023" || null;
-		podcastUrl = null;
+		podcastUrl = "https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1694022301428-f268084cf509848751ac7a4da10a9396.mp3";
 		reportingTitle = "Lejl u Nhar" || null;
 		sequenceEpisodeNumber = null;
 		sequenceEpisodeTitle = null;
@@ -565,7 +585,7 @@
 			<li><a href="https://facebook.com/aphroconfuso">Facebook</a></li>
 			<li><a href="https://instagram.com/aphroconfuso">Instagram</a></li>
 			<li><a href="https://twitter.com/aphroconfuso">Twitter</a></li>
-			<li><a href="https://mastodon.world/@aphroconfuso">Mastodon</a></li>
+			<li><a href="https://mastodon.world/@aphroconfuso" rel="me">Mastodon</a></li>
 			<li><a href="https://youtube.com/@aphroconfuso">Youtube</a></li>
 			<li><a href="https://open.spotify.com/user/31rly4s75gfxs6li6bcxc5bqlgza">Spotify</a></li>
 		</menu>

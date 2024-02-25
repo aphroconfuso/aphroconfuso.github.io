@@ -22,8 +22,7 @@ l-ispots tal-konsulenzi romantiċi tat-tfal bravi Nsara aged 13 and up" name="de
 	
 	
 	
-		
-		<script src="/amplitude/amplitude.min.js"></script>
+		<script src="/green-audio-player/script.js"></script>
 	
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@aphroconfuso">
@@ -62,7 +61,7 @@ l-ispots tal-konsulenzi romantiċi tat-tfal bravi Nsara aged 13 and up">
 		<link rel="canonical" href="https://aphroconfuso.mt/kris-polidano-na-i-hom/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-e5e8d917.css">
+		<link rel="stylesheet" href="/css/style-5c749871.css">
 		<script>
 			var
 				audioLoaded,
@@ -114,6 +113,7 @@ l-ispots tal-konsulenzi romantiċi tat-tfal bravi Nsara aged 13 and up">
 			audioLoaded = false;
 			bookmarksArray = [];
 			percentageProgress = 0;
+			previousTime = [];
 			storyCompleted = false;
 
 			const	urlSlug = location.pathname.replace(/\//g, '');
@@ -165,7 +165,7 @@ l-ispots tal-konsulenzi romantiċi tat-tfal bravi Nsara aged 13 and up">
 				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
 			})();
 		</script>
-		<script defer src="/script/script-212.js"></script>
+		<script defer src="/script/script-216.js"></script>
 	</head>
 	<body class="show-nav">
 		<script>initialiseAfterBody();</script>
@@ -210,12 +210,17 @@ l-ispots tal-konsulenzi romantiċi tat-tfal bravi Nsara aged 13 and up">
 					-Na -I -Hom
 					
 				</h1>
-				<h2>
-					
-						<a href="/kris-polidano/">Kris Polidano</a>
-					
-				</h2>
 			
+			
+<h2>
+	
+		
+		
+			
+				
+					<a href="/kris-polidano/">Kris Polidano</a>
+</h2>
+
 			
 			
 		</header>
@@ -231,31 +236,25 @@ l-ispots tal-konsulenzi romantiċi tat-tfal bravi Nsara aged 13 and up">
 				
 					<aside id="audio">
 					
-					<figure class="audio novembru-2023 " id="audio-0">
+					<figure class="audio novembru-2023 poezija">
 	<div class="player" id="player-0">
-		<div class="control-container">
-			<button class="amplitude-play-pause" amplitude-play-pause="true" id="play-pause-0" data-amplitude-song-index="0">
-		</div>
-		<div class="range" id="range-0">
-			<input type="range" id="range-input-0" class="amplitude-song-slider" step=".1" data-amplitude-song-index="0">
-			<progress class="amplitude-song-played-progress" amplitude-song-played-progress="true" id="song-played-progress-0" data-amplitude-song-index="0"></progress>
-		</div>
-		<div class="time-container">
-			<span class="amplitude-time-remaining" amplitude-time-remaining="true" data-amplitude-song-index="0">777</span>
-			
-		</div>
+		<audio id="audio-0">
+			<source src="https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1702652637541-55bcadf7b32412869fd602ea514eecf2.mp3" type="audio/mpeg">
+		</audio>
 	</div>
 		
 			<figcaption>
 				
-					<p>Kris taqra “-Na -I -Hom”. Abbona <l-m><l-m>fil-</l-m><a href="/podcast/">podcast</a></l-m> biex tisma’ kulma nippubblikaw.</p>
-				
+					<p>
+						Kris taqra “-Na -I -Hom”.
+					</p>
 				
 			</figcaption>
 		
 </figure>
 
 					</aside>
+				
 				
 				
 				<div class="promo bookmark-shortcut"><!-- --></div>
@@ -300,10 +299,17 @@ l-ispots tal-konsulenzi romantiċi tat-tfal bravi Nsara aged 13 and up">
 			mona lisa | karnival ieħor
 			
 		</h1>
-		
-			<h2>Matthew Schembri</h2>
-		
 	
+	
+<h2>
+	
+		
+		
+			
+				
+					<span class="author">Matthew Schembri</span>
+</h2>
+
 	
 </header>
 
@@ -328,10 +334,17 @@ l-ispots tal-konsulenzi romantiċi tat-tfal bravi Nsara aged 13 and up">
 			Nofs triq, dejjem nieqaf
 			
 		</h1>
-		
-			<h2>Maria Theuma</h2>
-		
 	
+	
+<h2>
+	
+		
+		
+			
+				
+					<span class="author">Maria Theuma</span>
+</h2>
+
 	
 </header>
 
@@ -356,10 +369,17 @@ l-ispots tal-konsulenzi romantiċi tat-tfal bravi Nsara aged 13 and up">
 			Ħsieb <l-m>il-Ħamiema</l-m>
 			
 		</h1>
-		
-			<h2>Noah Fabri</h2>
-		
 	
+	
+<h2>
+	
+		
+		
+			
+				
+					<span class="author">Noah Fabri</span>
+</h2>
+
 	
 </header>
 
@@ -378,10 +398,10 @@ l-ispots tal-konsulenzi romantiċi tat-tfal bravi Nsara aged 13 and up">
 
 	</aside>
 	<script>
-		audioUrls = { "songs": [{"pageSlug":"kris-polidano-na-i-hom","reportingTitle":"-Na -I -Hom","url":"https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1702652637541-55bcadf7b32412869fd602ea514eecf2.mp3","monthYear":"Novembru 2023"}] };
+		audioUrls = { "songs": [{"author":"Kris Polidano","storyId":"27","monthYear":"Novembru 2023","pageSlug":"kris-polidano-na-i-hom","podcastLengthMinutes":4,"podcastNote":null,"reportingTitle":"-Na -I -Hom","sequenceEpisodeNumber":null,"sequenceEpisodeTitle":null,"title":"-Na -I -Hom","type":"Poezija","url":"https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1702652637541-55bcadf7b32412869fd602ea514eecf2.mp3"}] };
 		author = "Kris Polidano" || null;
 		monthYear = "novembru-2023" || null;
-		podcastUrl = null;
+		podcastUrl = "https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1702652637541-55bcadf7b32412869fd602ea514eecf2.mp3";
 		reportingTitle = "-Na -I -Hom" || null;
 		sequenceEpisodeNumber = null;
 		sequenceEpisodeTitle = null;
@@ -435,7 +455,7 @@ l-ispots tal-konsulenzi romantiċi tat-tfal bravi Nsara aged 13 and up">
 			<li><a href="https://facebook.com/aphroconfuso">Facebook</a></li>
 			<li><a href="https://instagram.com/aphroconfuso">Instagram</a></li>
 			<li><a href="https://twitter.com/aphroconfuso">Twitter</a></li>
-			<li><a href="https://mastodon.world/@aphroconfuso">Mastodon</a></li>
+			<li><a href="https://mastodon.world/@aphroconfuso" rel="me">Mastodon</a></li>
 			<li><a href="https://youtube.com/@aphroconfuso">Youtube</a></li>
 			<li><a href="https://open.spotify.com/user/31rly4s75gfxs6li6bcxc5bqlgza">Spotify</a></li>
 		</menu>
