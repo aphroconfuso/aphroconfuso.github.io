@@ -30,13 +30,6 @@
 	</url>
 	
 	<url>
-		<loc>https://aphroconfuso.mt/</loc>
-		<lastmod>2024-03-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-	</url>
-	
-	<url>
 		<loc>https://aphroconfuso.mt/appuntamenti/</loc>
 		<lastmod>2024-03-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -583,6 +576,13 @@
 	</url>
 	
 	<url>
+		<loc>https://aphroconfuso.mt/marzu-2024/</loc>
+		<lastmod>2024-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
 		<loc>https://aphroconfuso.mt/frar-2024/</loc>
 		<lastmod>2024-03-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -654,6 +654,13 @@
 	
 	<url>
 		<loc>https://aphroconfuso.mt/indħil-barrani/</loc>
+		<lastmod>2024-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/</loc>
 		<lastmod>2024-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
