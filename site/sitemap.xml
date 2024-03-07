@@ -366,6 +366,13 @@
 	</url>
 	
 	<url>
+		<loc>https://aphroconfuso.mt/djarju/</loc>
+		<lastmod>2024-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
 		<loc>https://aphroconfuso.mt/davinia-hamilton-likantropi/</loc>
 		<lastmod>2024-03-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -657,12 +664,5 @@
 		<lastmod>2024-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
-	</url>
-	
-	<url>
-		<loc>https://aphroconfuso.mt/djarju/</loc>
-		<lastmod>2024-03-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
 	</url>
 </urlset>
