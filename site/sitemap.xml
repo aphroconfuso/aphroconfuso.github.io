@@ -219,13 +219,6 @@
 	</url>
 	
 	<url>
-		<loc>https://aphroconfuso.mt/ar/</loc>
-		<lastmod>2024-03-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-	</url>
-	
-	<url>
 		<loc>https://aphroconfuso.mt/ittri/</loc>
 		<lastmod>2024-03-11</lastmod>
     <changefreq>monthly</changefreq>
@@ -671,5 +664,12 @@
 		<lastmod>2024-03-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/ar/</loc>
+		<lastmod>2024-03-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
 	</url>
 </urlset>
