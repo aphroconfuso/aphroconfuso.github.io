@@ -37,6 +37,20 @@
 	</url>
 	
 	<url>
+		<loc>https://aphroconfuso.mt/raylene-abdilla/</loc>
+		<lastmod>2024-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/aaron-aquilina/</loc>
+		<lastmod>2024-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
 		<loc>https://aphroconfuso.mt/karl-baldacchino/</loc>
 		<lastmod>2024-03-19</lastmod>
     <changefreq>monthly</changefreq>
@@ -443,14 +457,14 @@
 	</url>
 	
 	<url>
-		<loc>https://aphroconfuso.mt/leslie-vassallo-marċ-maqbuż/</loc>
+		<loc>https://aphroconfuso.mt/leslie-vassallo-wirja/</loc>
 		<lastmod>2024-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
 	</url>
 	
 	<url>
-		<loc>https://aphroconfuso.mt/leslie-vassallo-wirja/</loc>
+		<loc>https://aphroconfuso.mt/leslie-vassallo-marċ-maqbuż/</loc>
 		<lastmod>2024-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
@@ -548,28 +562,7 @@
 	</url>
 	
 	<url>
-		<loc>https://aphroconfuso.mt/italo-svevo-joe-gatt-it-tipjip/</loc>
-		<lastmod>2024-03-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1</priority>
-	</url>
-	
-	<url>
-		<loc>https://aphroconfuso.mt/maria-theuma-nofs-triq-dejjem-nieqaf/</loc>
-		<lastmod>2024-03-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1</priority>
-	</url>
-	
-	<url>
 		<loc>https://aphroconfuso.mt/romeo-roxman-gatt-qarn/</loc>
-		<lastmod>2024-03-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1</priority>
-	</url>
-	
-	<url>
-		<loc>https://aphroconfuso.mt/noah-fabri-ħsieb-il-ħamiema/</loc>
 		<lastmod>2024-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
@@ -590,6 +583,13 @@
 	</url>
 	
 	<url>
+		<loc>https://aphroconfuso.mt/italo-svevo-joe-gatt-it-tipjip/</loc>
+		<lastmod>2024-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+	</url>
+	
+	<url>
 		<loc>https://aphroconfuso.mt/ryan-falzon-reċti-tal-kbar-parties-tat-tfal/</loc>
 		<lastmod>2024-03-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -597,7 +597,42 @@
 	</url>
 	
 	<url>
+		<loc>https://aphroconfuso.mt/noah-fabri-ħsieb-il-ħamiema/</loc>
+		<lastmod>2024-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/maria-theuma-nofs-triq-dejjem-nieqaf/</loc>
+		<lastmod>2024-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/il-kliem-fit-teorija-alterità/</loc>
+		<lastmod>2024-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+	</url>
+	
+	<url>
 		<loc>https://aphroconfuso.mt/kurt-borg-poddata-2024-02-22-noti-editorjali-4-kurt-borg/</loc>
+		<lastmod>2024-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/il-kliem-fit-teorija-xewqa-xenqa/</loc>
+		<lastmod>2024-03-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/il-kliem-fit-teorija-queer-kwir/</loc>
 		<lastmod>2024-03-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
