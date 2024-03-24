@@ -455,7 +455,7 @@ const initialiseAfterWindow = () => {
 
 		if (audioUrls && audioUrls.songs.length) {
 			audioUrls.songs.forEach((song, index) => {
-				const { storyId, reportingTitle: thisReportingTitle } = song;
+				const {storyId, reportingTitle: thisReportingTitle} = song;
 				GreenAudioPlayer.init({
 					selector: `#player-${ index }`,
 					stopOthersOnPlay: true,
@@ -477,38 +477,38 @@ const initialiseAfterWindow = () => {
 					song.loaded = true;
 					songEvents(index, song, audio);
 				});
-			// audio.addEventListener('canplaythrough', () => {
-			// 	if (audioLoaded) return;
-			// duration = parseInt(audio.duration);
-			// wordsPerSecondAudio = song.wordcount / duration;
-			// 	previousTime = getPreviousAudioTime();
-			// 	if (previousTime !== 0) {
-			// 		audio.currentTime = previousTime;
-			// 	}
-			// 	audioLoaded = true;
+				// audio.addEventListener('canplaythrough', () => {
+				// 	if (audioLoaded) return;
+				// duration = parseInt(audio.duration);
+				// wordsPerSecondAudio = song.wordcount / duration;
+				// 	previousTime = getPreviousAudioTime();
+				// 	if (previousTime !== 0) {
+				// 		audio.currentTime = previousTime;
+				// 	}
+				// 	audioLoaded = true;
 				// });
 
 
-			const getPercentageAudio = (audio) => (audio.currentTime * 100 / audio.duration).toFixed(2);
+				const getPercentageAudio = (audio) => (audio.currentTime * 100 / audio.duration).toFixed(2);
 
-			const addAudioBookmarkNow = (percentage, song, audio) => {
+				const addAudioBookmarkNow = (percentage, song, audio) => {
 
-				const audioPercentage = percentage || getPercentageAudio(audio);
-				addBookmark('audio', song.storyId, {
-					author: song.author,
-					duration: audio.duration,
-					monthYear: song.monthYear,
-					percentageAudio: audioPercentage,
-					placeText: getCurrentBlurb(audioPercentage),
-					playPosition: parseInt(audio.currentTime),
-					sequenceEpisodeNumber: song.sequenceEpisodeNumber,
-					sequenceEpisodeTitle: song.sequenceEpisodeTitle,
-					storyId: song.storyId,
-					title: song.title,
-					translator:song.translator,
-					urlSlug: song.pageSlug,
-				});
-			}
+					const audioPercentage = percentage || getPercentageAudio(audio);
+					addBookmark('audio', song.storyId, {
+						author: song.author,
+						duration: audio.duration,
+						monthYear: song.monthYear,
+						percentageAudio: audioPercentage,
+						placeText: getCurrentBlurb(audioPercentage),
+						playPosition: parseInt(audio.currentTime),
+						sequenceEpisodeNumber: song.sequenceEpisodeNumber,
+						sequenceEpisodeTitle: song.sequenceEpisodeTitle,
+						storyId: song.storyId,
+						title: song.title,
+						translator: song.translator,
+						urlSlug: song.pageSlug,
+					});
+				}
 
 				const songEvents = (index, song, audio) => {
 					wordsPerSecondAudio = 2.5;
@@ -516,50 +516,57 @@ const initialiseAfterWindow = () => {
 
 					// audio.currentTime = getPreviousAudioTime(song.storyId);
 
-			audio.addEventListener('play', () => {
-				window._paq.push(['trackEvent', 'Smiegħ', 'play', audioReportingTitle]);
-				// console.log(`Player ${ index }`, 'play', audioReportingTitle);
-			});
-			audio.addEventListener('pause', () => {
-				percentageAudio = getPercentageAudio(audio);
-				window._paq.push(['trackEvent', 'Smiegħ', 'pause', audioReportingTitle, percentageAudio]);
-				addAudioBookmarkNow(percentageAudio, song, audio);
-			});
-			audio.addEventListener('seek', () => {
-				percentageAudio = getPercentageAudio(audio);
-				window._paq.push(['trackEvent', 'Smiegħ', 'seek', audioReportingTitle, percentageAudio]);
-				if (currentTime === 0) {
-					deleteBookmark('audio', song.storyId);
-					return;
-				}
-				addAudioBookmarkNow(percentageAudio, song, audio);
-			});
-			audio.addEventListener('ended', () => {
-				window._paq.push(['trackEvent', 'Smiegħ', 'spiċċa', audioReportingTitle]);
-				deleteBookmark('audio', song.storyId);
-			});
-			audio.addEventListener('waiting', () => {
-				window._paq.push(['trackEvent', 'Smiegħ', 'buffering', audioReportingTitle, 1]);
-				// console.log(`Player ${ index }`, 'waiting', audioReportingTitle);
-			});
-			audio.addEventListener('timeupdate', () => {
-				currentTime = parseInt(audio.currentTime);
-				if (currentTime === 0 || currentTime === previousTime[index]) return;
-				elapsedTime = currentTime - previousTime[index];
-				if (elapsedTime > 10) window._paq.push(['trackEvent', 'Smiegħ', 'kliem maqbuż', parseInt(elapsedTime * wordsPerSecondAudio)]);
-				if (currentTime % audioBookmarkingInterval === 0) addAudioBookmarkNow(null, song, audio);
-				if (currentTime % audioReportingInterval === 0) {
-					window._paq.push(['trackEvent', 'Smiegħ', 'kliem (awdjo)', audioReportingTitle, parseInt(audioReportingInterval * wordsPerSecondAudio)]);
-					window._paq.push(['trackEvent', 'Smiegħ', 'minuti (awdjo)', audioReportingTitle, 0.5]);
-					window._paq.push(['trackEvent', 'Smiegħ', 'perċentwali (awdjo)', audioReportingTitle, ((currentTime * 100) / duration).toFixed(2)]);
-				}
-				previousTime[index] = currentTime;
-			});
-
-				}
-
-
+					audio.addEventListener('play', () => {
+						window._paq.push(['trackEvent', 'Smiegħ', 'play', audioReportingTitle]);
+						// console.log(`Player ${ index }`, 'play', audioReportingTitle);
 					});
+					audio.addEventListener('pause', () => {
+						percentageAudio = getPercentageAudio(audio);
+						window._paq.push(['trackEvent', 'Smiegħ', 'pause', audioReportingTitle, percentageAudio]);
+						addAudioBookmarkNow(percentageAudio, song, audio);
+					});
+					audio.addEventListener('seek', () => {
+						percentageAudio = getPercentageAudio(audio);
+						window._paq.push(['trackEvent', 'Smiegħ', 'seek', audioReportingTitle, percentageAudio]);
+						if (currentTime === 0) {
+							deleteBookmark('audio', song.storyId);
+							return;
+						}
+						addAudioBookmarkNow(percentageAudio, song, audio);
+					});
+					audio.addEventListener('ended', () => {
+						window._paq.push(['trackEvent', 'Smiegħ', 'spiċċa', audioReportingTitle]);
+						deleteBookmark('audio', song.storyId);
+					});
+					audio.addEventListener('waiting', () => {
+						window._paq.push(['trackEvent', 'Smiegħ', 'buffering', audioReportingTitle, 1]);
+						// console.log(`Player ${ index }`, 'waiting', audioReportingTitle);
+					});
+					audio.addEventListener('timeupdate', () => {
+						currentTime = parseInt(audio.currentTime);
+						if (currentTime === 0 || currentTime === previousTime[index]) return;
+						elapsedTime = currentTime - previousTime[index];
+						if (elapsedTime > 10) window._paq.push(['trackEvent', 'Smiegħ', 'kliem maqbuż', parseInt(elapsedTime * wordsPerSecondAudio)]);
+						if (currentTime % audioBookmarkingInterval === 0) addAudioBookmarkNow(null, song, audio);
+						if (currentTime % audioReportingInterval === 0) {
+							window._paq.push(['trackEvent', 'Smiegħ', 'kliem (awdjo)', audioReportingTitle, parseInt(audioReportingInterval * wordsPerSecondAudio)]);
+							window._paq.push(['trackEvent', 'Smiegħ', 'minuti (awdjo)', audioReportingTitle, 0.5]);
+							window._paq.push(['trackEvent', 'Smiegħ', 'perċentwali (awdjo)', audioReportingTitle, ((currentTime * 100) / duration).toFixed(2)]);
+						}
+						previousTime[index] = currentTime;
+					});
+
+				}
+
+
+			});
+
+			const elementsToMove = Array.from(document.querySelectorAll('figure[data-put-after]'));
+			elementsToMove && elementsToMove.forEach(elementToMove => {
+				const putAfter = elementToMove.getAttribute('data-put-after');
+				const newParentElement = Array.from(document.querySelectorAll('#grid-body p, #grid-body blockquote')).filter(p => p.textContent.includes(putAfter))[0];
+				if (!!newParentElement) newParentElement.after(elementToMove);
+			});
 
 			document.querySelectorAll('.audio').forEach(element => element.classList.add('initialised'));
 		}
