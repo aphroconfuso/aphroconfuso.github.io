@@ -149,6 +149,13 @@
 	</url>
 	
 	<url>
+		<loc>https://aphroconfuso.mt/jimmy-grima/</loc>
+		<lastmod>2024-03-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
 		<loc>https://aphroconfuso.mt/davinia-hamilton/</loc>
 		<lastmod>2024-03-28</lastmod>
     <changefreq>monthly</changefreq>
@@ -310,6 +317,13 @@
 	</url>
 	
 	<url>
+		<loc>https://aphroconfuso.mt/april-2024/</loc>
+		<lastmod>2024-03-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
 		<loc>https://aphroconfuso.mt/marzu-2024/</loc>
 		<lastmod>2024-03-28</lastmod>
     <changefreq>monthly</changefreq>
@@ -387,6 +401,13 @@
 	</url>
 	
 	<url>
+		<loc>https://aphroconfuso.mt/jimmy-grima-splużjonijiet-1-il-kwiet-u-l-lejl/</loc>
+		<lastmod>2024-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+	</url>
+	
+	<url>
 		<loc>https://aphroconfuso.mt/davinia-hamilton-likantropi/</loc>
 		<lastmod>2024-03-28</lastmod>
     <changefreq>weekly</changefreq>
@@ -457,14 +478,14 @@
 	</url>
 	
 	<url>
-		<loc>https://aphroconfuso.mt/leslie-vassallo-marċ-maqbuż/</loc>
+		<loc>https://aphroconfuso.mt/leslie-vassallo-wirja/</loc>
 		<lastmod>2024-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
 	</url>
 	
 	<url>
-		<loc>https://aphroconfuso.mt/leslie-vassallo-wirja/</loc>
+		<loc>https://aphroconfuso.mt/leslie-vassallo-marċ-maqbuż/</loc>
 		<lastmod>2024-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
@@ -562,14 +583,7 @@
 	</url>
 	
 	<url>
-		<loc>https://aphroconfuso.mt/joe-gatt-il-kuxjenza-fit-truf/</loc>
-		<lastmod>2024-03-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1</priority>
-	</url>
-	
-	<url>
-		<loc>https://aphroconfuso.mt/noah-fabri-ħsieb-il-ħamiema/</loc>
+		<loc>https://aphroconfuso.mt/romeo-roxman-gatt-qarn/</loc>
 		<lastmod>2024-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
@@ -590,7 +604,14 @@
 	</url>
 	
 	<url>
-		<loc>https://aphroconfuso.mt/romeo-roxman-gatt-qarn/</loc>
+		<loc>https://aphroconfuso.mt/noah-fabri-ħsieb-il-ħamiema/</loc>
+		<lastmod>2024-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/joe-gatt-il-kuxjenza-fit-truf/</loc>
 		<lastmod>2024-03-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
