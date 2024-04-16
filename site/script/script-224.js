@@ -213,7 +213,7 @@ const showBookmarksInPromos = (bookmarksArray) => {
 			bookmarkLink.classList.add("bookmark");
 			bookmarkLink.href = `/${ urlSlug }/#b-${ percentage }`;
 			bookmarkLink.addEventListener('click', () => {
-				analytics(['trackEvent', 'Bookmark fil-paġna', reportingTitle, `${ roundedPercentage }% BIDDEL`, roundedPercentage]);
+				analytics(['trackEvent', 'Bookmark fil-paġna', reportingTitle, reportingTitle, roundedPercentage]);
 				window.scrollTo({top: calculateScrollPosition(percentage), left: 0, behavior: 'smooth'});
 			})
 			element.appendChild(bookmarkLink);
