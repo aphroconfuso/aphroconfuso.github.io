@@ -138,6 +138,10 @@ Mela darba, ħmistax-il sena ilu, meta kont għadni tifla, kont ngħix mal-ġeni
 				}
 			}
 			var _paq = window._paq = window._paq || [];
+			const analytics = (arrayInfo) => {
+				if (location.host !== 'aphroconfuso.mt') console.log(arrayInfo);
+				_paq.push(arrayInfo);
+			}
 			_paq.push(['disableCookies']);
 			_paq.push(['enableJSErrorTracking']);
 			_paq.push(['enableHeartBeatTimer']);

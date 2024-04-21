@@ -139,6 +139,10 @@ hekk tgħallimt f’dawk il-mortwarji skolastiċi: / is-sabiħ jitlob li jiġi m
 				}
 			}
 			var _paq = window._paq = window._paq || [];
+			const analytics = (arrayInfo) => {
+				if (location.host !== 'aphroconfuso.mt') console.log(arrayInfo);
+				_paq.push(arrayInfo);
+			}
 			_paq.push(['disableCookies']);
 			_paq.push(['enableJSErrorTracking']);
 			_paq.push(['enableHeartBeatTimer']);
