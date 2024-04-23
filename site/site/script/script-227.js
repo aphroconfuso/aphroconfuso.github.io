@@ -11,11 +11,6 @@ const fixReportingTitle = (storyType, sequenceEpisodeNumber, author, pageTitle) 
 	return pageTitle;
 }
 
-const analytics = (arrayInfo) => {
-	if (location.host !== 'aphroconfuso.mt') console.log(arrayInfo);
-	window._paq.push(arrayInfo);
-}
-
 const getScrollPosition = () => window.pageYOffset || document.documentElement.scrollTop;
 
 const scrolling = () => {
