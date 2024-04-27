@@ -151,6 +151,10 @@ l-ispots tal-konsulenzi romantiċi tat-tfal bravi Nsara aged 13 and up">
 				}
 			}
 			var _paq = window._paq = window._paq || [];
+			const analytics = (arrayInfo) => {
+				if (location.host !== 'aphroconfuso.mt') console.log(arrayInfo);
+				_paq.push(arrayInfo);
+			}
 			_paq.push(['disableCookies']);
 			_paq.push(['enableJSErrorTracking']);
 			_paq.push(['enableHeartBeatTimer']);
@@ -165,7 +169,7 @@ l-ispots tal-konsulenzi romantiċi tat-tfal bravi Nsara aged 13 and up">
 				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
 			})();
 		</script>
-		<script defer src="/script/script-227.js"></script>
+		<script defer src="/script/script-228.js"></script>
 	</head>
 	<body class="show-nav">
 		<script>initialiseAfterBody();</script>
