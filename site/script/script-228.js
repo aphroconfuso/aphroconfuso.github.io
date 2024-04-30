@@ -56,7 +56,7 @@ const addBookmarkNow = () => {
 		title: pageTitle,
 		translator,
 		urlSlug,
-		v: 4,
+		v: 5,
 		wordcount,
 		wordsPerSecond: wordsPerSecond && wordsPerSecond.toFixed(2),
 	});
@@ -276,11 +276,13 @@ const showFullBookmarkList = () => {
 			var remaining = parseInt(wordcount * ((100 - percentage) / 100));
 			var readersWordsPerSecond = 2.9;
 			const minutes = numberify(parseInt(remaining / (readersWordsPerSecond * 60)), ['minuta', 'minuti']);
+			const issueMonthFixed = issueMonth && issueMonth.replace(/-/, ' ')
 			remaining = numberify(prettifyNumbers(remaining));
 			// wordcount = numberify(prettifyNumbers(wordcount));
+			// issueMonth still contains year
 			clone.querySelector("li:first-of-type.header-label").id = `bookmark-${ storyId }`;
 			clone.querySelector("a").href = `/${ urlSlug }/#b-${ percentage }`;
-			clone.querySelector("a").classList.add(`promo-${ issueMonth }`, issueMonth, `story-${ storyId }`, storyType);
+			clone.querySelector("a").classList.add(`promo-${ issueMonthFixed }`, issueMonthFixed, `story-${ storyId }`, storyType);
 			clone.querySelector("a").id = `link-${ storyId }`;
 			clone.querySelector(".bookmark span.bookmark-percentage").textContent = `${Math.round(percentage)}%`;
 			clone.querySelector("h1").innerHTML = title;
