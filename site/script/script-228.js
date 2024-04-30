@@ -501,7 +501,7 @@ const initialiseAfterWindow = () => {
 					addBookmark('audio', song.storyId, {
 						author: song.author,
 						duration: audio.duration,
-						issueMonth: song.issueMonth,
+						issueMonthYear: song.issueMonthYear,
 						percentageAudio: audioPercentage,
 						placeText: getCurrentBlurb(audioPercentage),
 						playPosition: parseInt(audio.currentTime),
