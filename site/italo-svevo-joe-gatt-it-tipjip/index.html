@@ -41,7 +41,7 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/italo-svevo-joe-gatt-it-tipjip/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-41eda743.css">
+		<link rel="stylesheet" href="/css/style-fc542ca0.css">
 		<script>
 			var
 				audioLoaded,
@@ -65,7 +65,7 @@
 				lastReportedScrollPosition,
 				lastScrollPosition,
 				message,
-				monthYear,
+				issueMonth,
 				newScrollPosition,
 				pageHeight,
 				percentageProgress,
@@ -151,18 +151,34 @@
 		</script>
 		<script defer src="/script/script-228.js"></script>
 	</head>
-	<body class="show-nav">
+	<body class="show-nav this-month-april">
 		<script>initialiseAfterBody();</script>
 		<div id="top-wrapper">
 			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
 			<nav id="top-nav">
-				<a id="logo-container" href="/"><img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" /></a>
+				<div id="logo-container-wrapper">
+					<div id="logo-container">
+						<a href="/">
+							<img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" />
+						</a>
+					</div>
+					<menu class="hide-mobile" id="menu-carousels">
+						<li class="abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
+					</menu>
+					<menu class="hide-mobile" id="menu-collections">
+						<li class="main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+						<li class="main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					</menu>
+				</div>
 				<input id="menu-toggle" type="checkbox" />
 				<label class='menu-button-container' for="menu-toggle">
 					<span style="display: none">Mobile biss: iftaħ il-menu</span>
 					<div class='menu-button'></div>
 				</label>
-				<menu>
+				<menu id="menu-main">
+					<li class="hide-laptop main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+					<li class="hide-laptop main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					<li class="hide-laptop abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
 					<li><a href="/appuntamenti/">Appuntamenti</a></li>
 					<li><a href="/kontributuri/">Kontributuri</a></li>
 					<li><a href="/werrej/">Werrej</a></li>
@@ -186,7 +202,7 @@
 			<div id="message"><!-- --></div>
 			<main id="skipto">
 				
-	<article class="content mejju-2023 xihaga-ohra story story-10">
+	<article class="content mejju xihaga-ohra story story-10">
 		<header>
 			<ul>
 				<li class="header-label">
@@ -226,7 +242,7 @@
 				
 					<aside id="audio">
 					
-					<figure class="audio mejju-2023 xihaga-ohra">
+					<figure class="audio mejju xihaga-ohra">
 	<div class="player" id="player-0">
 		<audio id="audio-0">
 			<source src="https://assets.pippa.io/shows/undefined/1695743362825-f46af5fbedd1326a28ca52d31fda7aec.mp3" type="audio/mpeg">
@@ -454,7 +470,7 @@
 		
 
 <li >
-	<a class="promo mejju-2023 promo-esej story-11" href="/joe-gatt-il-kuxjenza-fit-truf/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: It-Tipjip', 'għal: Il-Kuxjenza fit-Truf', 1]);">
+	<a class="promo  mejju promo-esej story-11" href="/joe-gatt-il-kuxjenza-fit-truf/" onclick="analytics(['trackEvent', 'Promo', 'minn: It-Tipjip', 'għal: Il-Kuxjenza fit-Truf', 1]);">
 		<header>
 	<ul>
 	
@@ -495,7 +511,7 @@
 		
 
 <li >
-	<a class="promo lulju-2023 promo-storja story-15" href="/rowena-grech-medusa/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: It-Tipjip', 'għal: Medusa', 2]);">
+	<a class="promo  lulju promo-storja story-15" href="/rowena-grech-medusa/" onclick="analytics(['trackEvent', 'Promo', 'minn: It-Tipjip', 'għal: Medusa', 2]);">
 		<header>
 	<ul>
 	
@@ -538,7 +554,7 @@ Mela darba, ħmistax-il sena ilu, meta kont għadni tifla, kont ngħix <l-m>mal-
 		
 
 <li >
-	<a class="promo novembru-2023 promo-poezija story-27" href="/kris-polidano-na-i-hom/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: It-Tipjip', 'għal: -Na -I -Hom', 3]);">
+	<a class="promo  novembru promo-poezija story-27" href="/kris-polidano-na-i-hom/" onclick="analytics(['trackEvent', 'Promo', 'minn: It-Tipjip', 'għal: -Na -I -Hom', 3]);">
 		<header>
 	<ul>
 	
@@ -580,10 +596,11 @@ Mela darba, ħmistax-il sena ilu, meta kont għadni tifla, kont ngħix <l-m>mal-
 
 	</aside>
 	<script>
-		audioUrls = { "songs": [{"author":"Italo Svevo","storyId":"10","monthYear":"Mejju 2023","pageSlug":"italo-svevo-joe-gatt-it-tipjip","podcastLengthMinutes":54,"podcastNote":"<p>Ara wkoll: “<a href=\"/joe-gatt-il-kuxjenza-fit-truf/\">Il-Kuxjenza fit-Truf</a>\", nota dwar din it-traduzzjoni.</p>","reportingTitle":"It-Tipjip","sequenceEpisodeNumber":null,"sequenceEpisodeTitle":null,"title":"It-Tipjip","type":"Xihaga_ohra","url":"https://assets.pippa.io/shows/undefined/1695743362825-f46af5fbedd1326a28ca52d31fda7aec.mp3"}] };
+		audioUrls = { "songs": [{"author":"Italo Svevo","storyId":"10","issueMonth":"Mejju","pageSlug":"italo-svevo-joe-gatt-it-tipjip","podcastLengthMinutes":54,"podcastNote":"<p>Ara wkoll: “<a href=\"/joe-gatt-il-kuxjenza-fit-truf/\">Il-Kuxjenza fit-Truf</a>\", nota dwar din it-traduzzjoni.</p>","reportingTitle":"It-Tipjip","sequenceEpisodeNumber":null,"sequenceEpisodeTitle":null,"title":"It-Tipjip","type":"Xihaga_ohra","url":"https://assets.pippa.io/shows/undefined/1695743362825-f46af5fbedd1326a28ca52d31fda7aec.mp3"}] };
 		author = "Italo Svevo" || null;
 		collections = "" || null;
-		monthYear = "mejju-2023" || null;
+		issueMonth = "mejju" || null;
+		issueMonthYear = "mejju-2023" || null;
 		podcastUrl = "https://assets.pippa.io/shows/undefined/1695743362825-f46af5fbedd1326a28ca52d31fda7aec.mp3";
 		reportingTitle = "It-Tipjip" || null;
 		sequenceEpisodeNumber = null;

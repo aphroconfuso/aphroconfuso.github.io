@@ -46,7 +46,7 @@ const addBookmarkNow = () => {
 	}
 	addBookmark('text', storyId, {
 		author,
-		monthYear,
+		issueMonth,
 		percentage: percentageProgress,
 		placeText: getCurrentBlurb(percentageProgress),
 		sequenceEpisodeNumber,
@@ -56,7 +56,7 @@ const addBookmarkNow = () => {
 		title: pageTitle,
 		translator,
 		urlSlug,
-		v: 4,
+		v: 5,
 		wordcount,
 		wordsPerSecond: wordsPerSecond && wordsPerSecond.toFixed(2),
 	});
@@ -101,7 +101,7 @@ const initialiseBookmarksList = () => {
 	bookmarkKeysArray.forEach((oldKey) => {
 		const item = bookmarksList[oldKey];
 
-		const { dateTime, monthYear, percentage, playPosition, title, urlSlug, wordcount } = item;
+		const { dateTime, issueMonth, percentage, playPosition, title, urlSlug, wordcount } = item;
 		const [, oldKeyType, oldKeyId] = oldKey.split(/(text|audio)-/);
 		// // console.log('oldKeyType', oldKeyType);
 		let updateFormat = false;
@@ -109,7 +109,7 @@ const initialiseBookmarksList = () => {
 
 		// Check validity - remove after 01.06.2024
 		if (oldKeyType === 'text') {
-			updateFormat = !(percentage && title && urlSlug && monthYear);
+			updateFormat = !(percentage && title && urlSlug && issueMonth);
 			discardBookmark = percentage >= 98 || (wordcount * (percentage / 100) < bookmarkThresholdWords);
 		}
 		if (oldKeyType === 'audio') {
@@ -225,7 +225,7 @@ const numberify = (number, words = ['kelma', 'kelmiet']) => {
 	if (!number) return "null";
 	const digits = parseInt(number.toString().slice(-2));
 	if (digits >= 2 && digits <= 10) return `${ number } ${ words[1] }`;
-	if (digits >= 11 && digits <= 20) return `${ number }-il ${ words[0]}`;
+	if (digits >= 11 && digits <= 19) return `${ number }-il ${ words[0]}`;
 	return `${ number } ${ words[0] }`;
 };
 
@@ -261,7 +261,7 @@ const showFullBookmarkList = () => {
 
 	if (list && browserTemplating && template) {
 		bookmarksArray.sort((a, b) => new Date(b.dateTime) - new Date(a.dateTime)).forEach((bookmark, index) => {
-			var { author, monthYear, percentage, placeText, storyId, storyType, reportingTitle, sequenceEpisodeNumber, sequenceEpisodeTitle, title, urlSlug, wordcount, translator } = bookmark;
+			var { author, issueMonth, percentage, placeText, storyId, storyType, reportingTitle, sequenceEpisodeNumber, sequenceEpisodeTitle, title, urlSlug, wordcount, translator } = bookmark;
 			const clone = template.content.cloneNode(true);
 			// THIS SHOULD BECOME OBSOLETE (IMPLEMENTED 17.01.2024)
 			if (!reportingTitle) {
@@ -276,11 +276,13 @@ const showFullBookmarkList = () => {
 			var remaining = parseInt(wordcount * ((100 - percentage) / 100));
 			var readersWordsPerSecond = 2.9;
 			const minutes = numberify(parseInt(remaining / (readersWordsPerSecond * 60)), ['minuta', 'minuti']);
+			const issueMonthFixed = issueMonth && issueMonth.replace(/-/, ' ')
 			remaining = numberify(prettifyNumbers(remaining));
 			// wordcount = numberify(prettifyNumbers(wordcount));
+			// issueMonth still contains year
 			clone.querySelector("li:first-of-type.header-label").id = `bookmark-${ storyId }`;
 			clone.querySelector("a").href = `/${ urlSlug }/#b-${ percentage }`;
-			clone.querySelector("a").classList.add(`promo-${ monthYear }`, monthYear, `story-${ storyId }`, storyType);
+			clone.querySelector("a").classList.add(`promo-${ issueMonthFixed }`, issueMonthFixed, `story-${ storyId }`, storyType);
 			clone.querySelector("a").id = `link-${ storyId }`;
 			clone.querySelector(".bookmark span.bookmark-percentage").textContent = `${Math.round(percentage)}%`;
 			clone.querySelector("h1").innerHTML = title;
@@ -291,7 +293,7 @@ const showFullBookmarkList = () => {
 			}
 			if (sequenceEpisodeTitle) clone.querySelector("h3").textContent = sequenceEpisodeTitle;
 			// TODO: Add collections
-			clone.querySelector("li:first-of-type.header-label").textContent = monthYear && monthYear.replace(/-/, ' ').replace(/gunju/, 'ġunju').replace(/dicembru/, 'diċembru');
+			clone.querySelector("li:first-of-type.header-label").textContent = issueMonth && issueMonth.replace(/-/, ' ').replace(/gunju/, 'ġunju').replace(/dicembru/, 'diċembru');
 			clone.querySelector("button").id = `delete-${ storyId }`;
 			clone.querySelector(".body-text p").textContent = placeText.replace(/.*?\w\b\s+/, "… ");
 			clone.querySelector("aside p").textContent = `Fadallek ${ remaining }, madwar ${ minutes } qari`;
@@ -501,7 +503,7 @@ const initialiseAfterWindow = () => {
 					addBookmark('audio', song.storyId, {
 						author: song.author,
 						duration: audio.duration,
-						monthYear: song.monthYear,
+						issueMonthYear: song.issueMonthYear,
 						percentageAudio: audioPercentage,
 						placeText: getCurrentBlurb(audioPercentage),
 						playPosition: parseInt(audio.currentTime),

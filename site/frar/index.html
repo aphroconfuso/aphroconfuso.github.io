@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="mt" translate="no">
+
+	<head>
+		<meta charset="utf-8">
+		
+	<title>Frar · Aphroconfuso</title>
+	<meta content="Kemm huma rilevanti l-ideat li nimpurtaw minn barra, minn kuntest ieħor, minn ilsien ieħor? Din kienet il-mistoqsija inizjali li tat spunt għal sensiela ta’ workshops li għamilna ma’ Librerija Geġwiġija bejn Settembru tas-sena l-oħra u l-bidu ta’ Frar. Il-kitbiet ta’ Monique Wittig kienu emblematiċ…" name="description">
+	<meta property="og:image" content="/stampi/social_aphroconfuso_logo_social_kbir_kwadrat_d073f4e24a.jpg">
+
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+		<meta content="width=device-width, initial-scale=1" name="viewport">
+		<meta content="width=device-width" initial-scale="1.0" maximum-scale="1.0" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="yes" name="mobile-web-app-capable">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#f9f9f3">
+		<link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon-16x16.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32x32.png">
+		<link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
+		<link rel="mask-icon" href="/img/icons/safari-pinned-tab.svg" color="#5bbad5">
+		<meta property="og:image:type" content="image/jpeg">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
+		<link rel="canonical" href="https://aphroconfuso.mt/frar/">
+		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
+		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
+		<link rel="stylesheet" href="/css/style-be919758.css">
+		<script>
+			var
+				audioLoaded,
+				audioUrls,
+				author,
+				body,
+				bodyEnd,
+				bodyHeight,
+				bodyStart,
+				bodyText,
+				bookmarksArray,
+				bookmarksList,
+				bookmarksMenuElement,
+				charactersPerPixel,
+				charactersPerScreen,
+				currentTime,
+				duration,
+				elapsedTime,
+				hideScrollTools,
+				lastReportedReadingTime,
+				lastReportedScrollPosition,
+				lastScrollPosition,
+				message,
+				issueMonth,
+				newScrollPosition,
+				pageHeight,
+				percentageProgress,
+				placeText,
+				podcastUrl,
+				previousTime,
+				progressElement,
+				readingSpeed,
+				reportingTitle,
+				screenHeight,
+				skippedTime,
+				storyCompleted,
+				storyId,
+				storyType,
+				sequenceEpisodeNumber,
+				sequenceEpisodeTitle,
+				timeStarted,
+				pageTitle,
+				wordcount,
+				wordsPerPixel,
+				wordsPerSecond,
+				wordsPerSecondAudio,
+				wordsPerScreen;
+
+			audioLoaded = false;
+			bookmarksArray = [];
+			percentageProgress = 0;
+			previousTime = [];
+			storyCompleted = false;
+
+			const	urlSlug = location.pathname.replace(/\//g, '');
+			const setCookie = (cname, cvalue, exdays = 36500) => {
+				const d = new Date();
+				d.setTime(d.getTime() + (exdays*24*60*60*1000));
+				let expires = "expires="+ d.toUTCString();
+				document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+			}
+			const getCookie = (cname) => {
+				let name = cname + "=";
+				let decodedCookie = decodeURIComponent(document.cookie);
+				let ca = decodedCookie.split(';');
+				for(let i = 0; i < ca.length; i++) {
+					let c = ca[i];
+					while (c.charAt(0) == ' ') {
+						c = c.substring(1);
+					}
+					if (c.indexOf(name) == 0) {
+						return c.substring(name.length, c.length);
+					}
+				}
+				return "";
+			}
+			const addRemoveFontSizeClass = (size) => {
+				document.body.classList.remove('font-size-1','font-size-2','font-size-3','font-size-4');
+				document.body.classList.add(`font-size-${ size }`);
+				setCookie('font', size);
+			}
+			const initialiseAfterBody = () => {
+				const fontSize = getCookie('font') || 1;
+				addRemoveFontSizeClass(fontSize);
+				if (getCookie(`tw-${urlSlug}`)) {
+					document.body.classList.add('trigger-warning-closed');
+				}
+			}
+			var _paq = window._paq = window._paq || [];
+			const analytics = (arrayInfo) => {
+				if (location.host !== 'aphroconfuso.mt') console.log(arrayInfo);
+				_paq.push(arrayInfo);
+			}
+			_paq.push(['disableCookies']);
+			_paq.push(['enableJSErrorTracking']);
+			_paq.push(['enableHeartBeatTimer']);
+			_paq.push(['enableLinkTracking']);
+			_paq.push(['trackPageView']);
+			_paq.push(['trackVisibleContentImpressions']);
+			(function () {
+				var u = "//analitika.aphroconfuso.mt/";
+				_paq.push(['setTrackerUrl', u + 'matomo.php']);
+				_paq.push(['setSiteId', location.host === 'aphroconfuso.mt' ? '1' : '2']);
+				var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
+			})();
+		</script>
+		<script defer src="/script/script-228.js"></script>
+	</head>
+	<body class="show-nav this-month-undefined">
+		<script>initialiseAfterBody();</script>
+		<div id="top-wrapper">
+			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
+			<nav id="top-nav">
+				<div id="logo-container-wrapper">
+					<div id="logo-container">
+						<a href="/">
+							<img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" />
+						</a>
+					</div>
+					<menu class="hide-mobile" id="menu-carousels">
+						<li class="abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
+					</menu>
+					<menu class="hide-mobile" id="menu-collections">
+						<li class="main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+						<li class="main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					</menu>
+				</div>
+				<input id="menu-toggle" type="checkbox" />
+				<label class='menu-button-container' for="menu-toggle">
+					<span style="display: none">Mobile biss: iftaħ il-menu</span>
+					<div class='menu-button'></div>
+				</label>
+				<menu id="menu-main">
+					<li class="hide-laptop main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+					<li class="hide-laptop main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					<li class="hide-laptop abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
+					<li><a href="/appuntamenti/">Appuntamenti</a></li>
+					<li><a href="/kontributuri/">Kontributuri</a></li>
+					<li><a href="/werrej/">Werrej</a></li>
+					<li><a href="/djarju/">Djarju</a></li>
+					<li><a href="/podcast/">Podcast</a></li>
+					<li class="hide-laptop">&nbsp;</li>
+					<li><a href="/dwarna/">Dwarna</a></li>
+					<li class="hide-laptop"><a href="/kolofon/">Kolofon</a></li>
+					<li><a href="/newsletter/">Newsletter</a></li>
+					<li class="hide-laptop"><a href="/privatezza/">Privatezza</a></li>
+					<li><a href="/bookmarks/">Bookmarks<span id="bookmarks-number"></span></a></li>
+					<li class="hide-laptop" id="text-size-adjust">
+						<a id="font-size-1" href="#">a</a>
+						<a id="font-size-2" href="#">a</a>
+						<a id="font-size-3" href="#">a</a>
+						<a id="font-size-4" href="#">a</a>
+					</li>
+				</menu>
+				<div id="brownline"></div>
+			</nav>
+			<div id="message"><!-- --></div>
+			<main id="skipto">
+				
+<article class="generic frar">
+	<header>
+		<ul><li class="header-label"><a href="/appuntamenti/">Appuntamenti</a></li></ul>
+		<h1>Frar</h1>
+		<h2></h2>
+	</header>
+	<div class="container-generic">
+		<section id="grid-body">
+			<div class="generic-body-text editorial">
+				<div class="text-container">
+					<p><i class="fx-1">Kemm</l-m> huma rilevanti</i> <l-m>l-ideat</l-m> li nimpurtaw minn barra, minn kuntest ieħor, minn ilsien ieħor? Din kienet <l-m>il-mistoqsija</l-m> inizjali li tat spunt għal sensiela ta’ workshops li għamilna ma’ Librerija Geġwiġija bejn Settembru <l-m>tas-sena</l-m> l-oħra u <l-m>l-bidu</l-m> ta’ Frar. <l-m>Il-kitbiet</l-m> ta’ Monique Wittig kienu emblematiċi għalina f’dan <l-m>ir-rigward</l-m>. <l-m>Il-prassi</l-m> politika tagħha dejjem kienet letterarja u użat <l-m>il-lingwa</l-m> nnifisha, <l-m>il-logħob</l-m> bil-kliem u <l-m>l-forom</l-m>, biex tagħmel <l-m>ix-xogħol</l-m> tal-ħsieb tagħha. Illum <l-m>il-kitba</l-m> ta’ Wittig — kitba minn ilsien ieħor, minn kuntest ieħor, minn żmien ieħor — f’daqqa waħda tinħass kontemporanja sew. <l-m>It-traduzzjoni</l-m> kienet qisha ipoteżi inizjali; mod kif nimpurtaw <l-m>l-ideat</l-m>, imma mhux mingħajr ma naħsbu sew fuq <l-m>x’qed</l-m> nagħmlu: <l-m>it-toqol</l-m> li tingħata kull kelma <l-m>fil-femminiżmu</l-m> u <l-m>t-teoriji</l-m> tal-ġeneru jaf jintilef jew jirdoppja meta jaqsam fruntiera <l-m>tal-lingwa</l-m>. Ideat li kienu rilevanti Franza <l-m>fis-sebgħinijiet</l-m> mhux neċessarjament jagħmlu sens għalina llum. <l-m>Ir-reżistenza</l-m> fil-lingwa nnifisha — li rridu naqilbuha, naħdmuha — tista’ tkun mhux intopp imma għodda biex <l-m>l-ideat</l-m>, flok nibilgħuhom sħaħ, nimmetabolizzawhom. <l-m>Il-workshops</l-m> kienu għalhekk opportunità biex dan nagħmluh madwar <l-m>il-mejda</l-m> flimkien, bħal meta nieklu flimkien. <l-m>Il-qari</l-m> individwali <l-m>bil-mod</l-m> il-mod ċeda <l-m>għall-qari</l-m> kollettiv, u <l-m>l-metodi</l-m> li kull parteċipant juża biex jaħdem <l-m>mat-test</l-m> bil-kitba personali tiegħu stagħna <l-m>bl-għajnuna</l-m> u <l-m>s-sehem</l-m> tal-grupp kollu. <l-m>Ir-riżultat</l-m> mhuwiex uniformità ta’ idea b’leħen wieħed imma test b’ilħna li jitkellmu flimkien għalkemm mhux dejjem qed jgħidu <l-m>l-istess</l-m> ħaġa. Monique Wittig innifisha kienet involuta f’mument storiku ta’ trasferenza ta’ ideat bejn <l-m>iż-żewġ</l-m> naħat <l-m>tal-Atlantiku</l-m>, kemm meta qalbet <l-m>għall-Franċiż</l-m> ix-xogħol ta’ Marcuse, <l-m>bil-parteċipazzjoni</l-m> tiegħu stess, kif ukoll meta hi marret tgħix <l-m>l-Amerka</l-m> u kkollaborat ma’ Sande Zeig biex taqleb <l-m>il-ktieb</l-m> tagħhom <em>Brouillon pour un dictionnaire des amantes</em> <l-m>għall-Ingliż</l-m>. Minn <l-m>dax-xahar</l-m> se nagħtu bidu għal kullana ta’ traduzzjonijiet ta’ esejs dwar <l-m>il-qagħda</l-m> politika kontemporanja. <l-m>L-ewwel</l-m> wieħed se jkun <l-m>l-esej</l-m> “Kollox Iperpolitiku: Ġenealoġija <l-m>tal-Preżent</l-m>” ta’ Anton Jäger, maqlub <l-m>għall-Malti</l-m> minn Karl Baldacchino. F’dan <l-m>l-esej</l-m> Jäger jipprova jsib “qafas ġdid adegwat” biex nifhmu <l-m>l-epoka</l-m> ta’ wara <l-m>l-2008</l-m> fil-Punent. Waħda <l-m>mill-karatteristiċi</l-m> ta’ din <l-m>l-era</l-m> hija <l-m>l-mobbiltà</l-m> tremenda ta’ ideat minn persuna għal oħra, minn grupp għal ieħor u minn pajjiż għal ieħor. Jäger irid isib mod kif għandu jinftiehem dan <l-m>il-mument</l-m> politiku ġdid, mingħajr ma jassumi li nistgħu nibqgħu nużaw <l-m>l-istess</l-m> kategoriji u <l-m>l-istess</l-m> vokabularju li dejjem użajna. “<l-m>Mil-lum</l-m> kollox reġa’ sar politiku, u b’mod ferventi.<span class="pullsemi">”</span> Iżda lanqas <l-m>il-kelma</l-m> “politika” stess m’għandna nassumu li għadha tfisser <l-m>l-istess</l-m> ħaġa li kienet tfisser għoxrin sena ilu, jew <l-m>is-seklu</l-m> li għadda. “Minkejja <l-m>l-passjonijiet</l-m> bla fruntieri li qed jaħkmu u jittrasformaw xi wħud <l-m>mill-aktar</l-m> istituzzjonijiet b’saħħithom tagħna,<span class="pullsemi">”</span> jgħid Jäger, “verament ftit huma <l-m>n-nies</l-m> involuti <l-m>fit-tip</l-m> ta’ kunflitti ta’ interessi organizzati li xi darba konna niddeskrivu, f’sens klassiku <l-m>tas-seklu</l-m> għoxrin, bħala <l-m>‘politika’” <span class="end-dot">.</span></l-m></p>
+				</div>
+			</div>
+			<p class="continuity">Din hija l-kitba ppubblikata dax-xahar:</p>
+			
+			
+			
+			<ul class="promo-list">
+	
+	
+		
+
+<li >
+	<a class="promo  frar promo-esej story-40" href="/jien_a-il-mara-tas-suldat/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Frar', 'għal: Il-Mara tas-Suldat', 1]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Frar</li>
+	
+	
+	</ul>
+	
+		<h1>
+			Il-Mara <l-m>tas-Suldat</l-m>
+			
+		</h1>
+	
+	
+<h2>
+	
+	
+		
+		
+			
+				
+					<span class="author">Jien_a</span>
+			
+			
+			
+			
+			
+			
+			
+			
+</h2>
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Fil-bidu, jekk qatt kien hemm bidu, <l-m>il-maħbubin</l-m> kollha sejħu lilhom infushom amazzuni. Huma u jgħixu flimkien, jinħabbu, jiċċelebraw lilhom infushom, jilagħbu, <l-m>fiż-żmien</l-m> meta <l-m>x-xogħol</l-m> kien għadu logħba, <l-m>il-maħbubin</l-m> fil-ġnien <l-m>tal-art</l-m> baqgħu jsejħu lilhom infushom amazzuni tul Żmien <l-m>id-Deheb</l-m> kollu. Imbagħad, xħin twaqqfu <l-m>l-ewwel</l-m> bliet, bosta maħbubin kissru <l-m>l-armonija</l-m> oriġinali u sejħu lilhom infushom ommijiet. Minn dan <l-m>iż-żmien</l-m> ’l hemm, <l-m>il-kelma</l-m> amazzuna saret tfisser għalihom tifla, li qatt ma tikber, immatura, dik li qatt ma tħaddan <l-m>id-destin</l-m> tagħha. <l-m>L-amazzuni</l-m> tkeċċew <l-m>mill-bliet</l-m> tal-ommijiet. Kien f’dak <l-m>il-mument</l-m> li dawn saru vjolenti u bdew jiġġieldu biex jiddefendu <l-m>l-armonija</l-m>. Għalihom, <l-m>l-isem</l-m> antik amazzuni baqa’ <l-m>bit-tifsira</l-m> oriġinali. U minn issa beda jfisser xi ħaġa aktar: dawk li jħarsu <l-m>l-armonija</l-m>. Minn hemm ’il quddiem stajt issib amazzuni f’kull żmien, f’kull kontinent, gżira u xatt. Dħalna <l-m>fiż-Żmien</l-m> Glorjuż grazzi <l-m>għall-amazzuni</l-m> tal-lum. Ħafna drabi maħbuba tuża ġesti biex b’ġisimha ssir tixbah dak <l-m>l-annimal</l-m> jew dawk <l-m>l-annimali</l-m> li <l-m>l-aktar</l-m> li għandha affinità magħhom u b’hekk tagħti pjaċir <l-m>lill-maħbuba</l-m> tagħha. Dan isir aktar faċli meta tkun taħt ipnożi. Trid tinsa <l-m>l-mossi</l-m> ta’ kuljum u ssib dawk <l-m>tal-annimali</l-m> tagħha. Din mhix imitazzjoni <l-m>tal-annimalesk:</l-m> din hija mima. Hija ħaġa diffiċli biex taqbad u tagħmilha spirtu pront, anki jekk <l-m>il-maħbuba</l-m> ssaqsiha biex tagħmilhielha <l-m>bl-ikbar</l-m> ġentilezza. “Meta ssaqsini biex nagħmilha ta’ ġemel, niddejjaq, għax rari jirnexxili.<span class="pullsemi">”</span> (Charlotte Plume, Iċ-Ċirku Tiegħi, Gallija, Żmien <l-m>il-Konkos</l-m>.)</p>
+			
+		</div>
+		
+	</a>
+</li>
+
+	
+		
+
+<li >
+	<a class="promo  frar promo-djarju story-42 is-episode" href="/warren-bartolo-djarju-2024-01-08-marlboro-gold-il-favoriti-tiegħi-jgħidli/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Frar', 'għal: Djarju #2 Warren Bartolo', 2]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">
+			Djarju
+			
+				<span class="subject-date">08.01.2024</span>
+			
+		</li>
+	
+	
+	</ul>
+	
+	
+	
+<h2>
+	
+	
+		
+		
+			
+				
+					<span class="author">Warren Bartolo</span>
+</h2>
+
+	
+		<h3>
+			
+			Marlboro Gold, <l-m>il-favoriti</l-m> tiegħi, jgħidli
+		</h3>
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Waqt li jien għadni <l-m>fis-sodda</l-m>, S qiegħed <l-m>fil-kamra</l-m> tal-banju jisma’ diska li kont inħobb nisma’ xi sentejn ilu, però ma nistax niftakar eżatt <l-m>x’inhi</l-m>. Inqum u nistaqsih. Jgħidli li hi “Andromeda” ta’ Weyes Blood. Inqum u nnaddaf <l-m>il-kċina</l-m>, niħħuverja, u naħsel <l-m>l-art</l-m>. Nieħu shower. Nirċievi telefonata m’għand <l-m>tad-delivery</l-m> biex jgħidli li għandi pakkett jistennieni isfel. Ninżel għalih. Huwa ktieb — il-memoir ta’ Lucia Berlin. <l-m>Għall-ħabta</l-m> tas-19h, hekk kif se nitlaq <l-m>mill-appartament</l-m> biex immur niltaqa’ ma’ C, R, I u M <l-m>għall-ikel</l-m>, u waqt li S qiegħed <l-m>fil-banju</l-m> jipprepara biex joħroġ, B jiġu lura <l-m>d-dar</l-m> ma’ E u <l-m>l-kelb</l-m> tiegħu, Bruno. Kienu <l-m>l-gym</l-m> aktar kmieni llum u nassumi li wara baqgħu barra. Nimxiha <l-m>sar-restorant</l-m> fejn qalu li se nieklu. <l-m>It-temperatura</l-m> -1°C, imma lbist ħafna layers u leggings <l-m>tat-thermal</l-m> u għandi wkoll balaklava madwar għonqi. Ma nistax nilbisha kif suppost għax fuq rasi għandi <l-m>l-headphones</l-m>. Meta nasal, nordnaw immedjatament, <l-m>l-ikel</l-m> jiġi <l-m>mill-ewwel</l-m> u nitilqu madwar għaxar minuti wara li kulħadd ikun lest. Waqt <l-m>l-ikel</l-m>, b’xi mod, nitkellmu dwar <l-m>il-Green</l-m> Goblin minn Spider Man, u villains oħra <l-m>bħall-Penguin</l-m>, minn Batman.</p>
+			
+		</div>
+		
+	</a>
+</li>
+
+	
+		
+
+<li >
+	<a class="promo  frar promo-poddata story-45" href="/kurt-borg-poddata-2024-02-22-noti-editorjali-4-kurt-borg/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Frar', 'għal: Noti Editorjali #4: Kurt Borg #4', 3]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">
+			Poddata
+			
+				<span class="subject-date">22.02.2024</span>
+			
+		</li>
+	
+	
+	</ul>
+	
+		<h1>
+			Noti Editorjali<span class="episodeNumber"> #4</span>
+		</h1>
+	
+	
+<h2 class="contains-with">
+	
+	
+		
+			<span class="with">ma’</span>
+		
+			
+				
+					<span class="author">Kurt Borg</span>
+</h2>
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>« Dan <l-m>il-proġett</l-m> tal-esejs għalija huwa proġett ta’ memorja li <l-m>l-pandemija</l-m> tefgħetni fih. Jiġifieri <l-m>l-pandemija</l-m>, forsi kif esperjenzaha wkoll ħaddieħor, jien esperjenzajtha b’ċertu żlugar. Żlugar <l-m>mill-ordinarju</l-m>. Għaliex? Għax kollox ġie żlugat. <l-m>Il-ħajja</l-m> tagħna, għal ħafna nies <l-m>il-post</l-m> fejn jgħixu, <l-m>il-mod</l-m> kif jgħixu, <l-m>ix-xogħol</l-m>, kollox ġie maqtugħ <l-m>mill-ordinarju</l-m>. Dak <l-m>il-qtugħ</l-m> ħafna nies esperjenzawh bħala trawma, ma nixtieqx inxejjen minn dan, kien hemm ħafna mewt <l-m>fl-arja</l-m>, u ħafna nies esperjenzawh b’uġigħ. Oħrajn esperjenzawh b’forma ta’ libertà stramba u libertà ġdida li f’daqqa waħda “għandi ħafna iktar ħin” jew “għandi ħafna iktar ħin <l-m>id-dar</l-m>”<span class="pull">.</span> Wieħed <l-m>mill-ħsibijiet</l-m> li kien ikolli <l-m>fil-pandemija </l-m>— naf inqum, saru <l-m>l-għaxra</l-m>, fejn <l-m>is-soltu</l-m> nkun <l-m>l-uffiċċju</l-m> jew xi mkien u qiegħed <l-m>id-dar </l-m>— u ngħid <l-m>id-dawl</l-m> tax-xemx fuq din <l-m>il-mejda</l-m> qatt ma rajtu b’dan <l-m>il-mod</l-m>, dak <l-m>it-tip</l-m> ta’ ħsibijiet, għax qatt ma nkun <l-m>id-dar</l-m> dak <l-m>il-ħin</l-m>. Jew qed inħoss <l-m>il-kamra</l-m> differenti, jew inkella anka qed immur mixja. Kont maqtugħ <l-m>mir-rutina</l-m>. Ġieli kien ikun stramb dan, u ġieli kien idejjaqni, ovvjament, għax kien hemm ħafna stress, ħafna ansjetà u inċertezza. Imma daqstant ieħor kelli bżonn dik <l-m>il-qatgħa</l-m> biex lili titfagħni f’ċerta żona fejn ċerti memorji reġgħu bdew ifuru. Jew ċerti emozzjonijiet minn ġo fija erġajt bdejt inħosshom b’ċerta intensità, b’ċerta luċidità. U ħassejt dak kien mument esejistiku għalija. Kien f’dan <l-m>l-ispirtu</l-m> li dort lejn <l-m>l-esej</l-m> għax xtaqt naqbad xi ħaġa minni nnifsi u <l-m>mid-dinja</l-m> li bdejt inħoss li ħa titlaq għal dejjem. »</p>
+			
+		</div>
+		
+	</a>
+</li>
+
+	
+		
+
+<li >
+	<a class="promo  frar promo-esej story-49" href="/anton-jäger-karl-baldacchino-kollox-iperpolitiku-ġenealoġija-tal-preżent/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Frar', 'għal: Kollox Iperpolitiku: Ġenealoġija tal-preżent', 4]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Frar</li>
+	
+	
+		<li class="header-label collection-slug collection-2">
+			Indħil Barrani
+		</li>
+	
+	</ul>
+	
+		<h1>
+			Kollox Iperpolitiku
+			
+		</h1>
+	
+	
+<h2>
+	
+	
+		<span class="author">Anton Jäger</span> <span class="translator">(tr Karl Baldacchino)</span>
+	
+</h2>
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Ir-ritratti huma ta’ lwien jgħajtu, kważi fluworexxenti. <l-m>It-tema</l-m> li tgħaqqadhom hi “<l-m>l-imħabba</l-m>”<span class="pull">.</span> F’ritratt jismu Love (hands in hair), mara b’xagħar aħmar u għajnejha magħluqin hija miżmuma minn par idejn maskili li jilħquha minn barra <l-m>l-bordura</l-m>. F’ritratt ieħor raġel b’ġakketta <l-m>tal-jeans</l-m> qed jiżfen waħdu, kważi qed ilaħħaq għal id <l-m>fil-qrib</l-m>. F’Love (hands praying), mara b’għajnejha magħluqin torbot idejha f’nofs folla clubbers. Bħallikieku f’ritwal sekulari, timmedita <l-m>fl-anonimità</l-m> tad-diskoteka. <l-m>In-nies</l-m> fir-ritratt jiżfnu ma’ mużika maħluqa fuq <l-m>il-bażi</l-m> ta’ ħsejjes li jarmi <l-m>l-makkinarju</l-m> industrijali ta’ Detroit u Manchester, <l-m>il-bliet</l-m> tewmin li welldu <l-m>t-tekno</l-m>.
+Fl-1989, però — is-sena li fiha ttieħdu dawn <l-m>ir-ritratti </l-m>— il-magni m’għadhomx jaħdmu. Ħafna minnhom ċkienu jew ġew irrilokati lejn iċ-Ċina, filwaqt li <l-m>l-bliet</l-m> tewmin <l-m>tat-tekno</l-m> ġew deindustrijalizzati. Waqt li kienet qed tivvjaġġa ġo megabelt Ċiniża xi snin qabel, <l-m>il-fotografa</l-m> Ġermaniża Hilla Becher innotat <l-m>l-assemblaġġ</l-m> mill-ġdid ta’ kopja ta’ mitħna <l-m>tal-azzar</l-m> li darba ġibdet <l-m>fl-Ewropa</l-m>. Issa, <l-m>iż-żgħażagħ</l-m> fir-ritratti <l-m>tal-ħajja</l-m> ta’ billejl ta’ Wolfgang Tillmans jiżfnu biex jippruvaw ixejnu <l-m>l-industrija</l-m>, <l-m>il-politika</l-m> u <l-m>l-istorja</l-m> nfisha. Ta’ min jinnota <l-m>ż-żmien</l-m> u <l-m>l-post</l-m> tar-ritratti ta’ Tillmans. Jiddokumentaw Londra taħt Thatcher u Berlin waqt li <l-m>l-Ħajt</l-m> nieżel. Lejn <l-m>il-Lvant</l-m>, <l-m>is-soċjaliżmu</l-m> statali qed joqrob <l-m>il-kollass</l-m>. <l-m>Il-kapitaliżmu</l-m> globali huwa trijonfanti. <l-m>Id-deindustrijalizzazzjoni</l-m> tal-Punent qed taċċellera. <l-m>Fl-istess</l-m> sena li <l-m>x-xjenzat</l-m> politiku Amerikan Francis Fukuyama ppubblika <l-m>l-esej</l-m> leġġendarja tiegħu dwar “<l-m>it-tmiem</l-m> tal-istorja” <l-m>fin-National</l-m> Interest, <l-m>il-kamera</l-m> ta’ Tillmans issa ssir xhieda ta’ eżerċizzju ta’ amnesija kollettiva: tentattiv biex jitkeċċew <l-m>l-ispettri</l-m> ideoloġiċi <l-m>tas-seklu</l-m> li għadda u <l-m>bil-kwiet</l-m> nimxu lejn utopja privata. Żmien <l-m>il-“postpolitika</l-m>” infetaħ.</p>
+			
+		</div>
+		
+	</a>
+</li>
+
+	
+</ul>
+
+			<div class="generic-body-text more">
+				
+					<p>Abbona <l-m>fin-</l-m><a href="/newsletter/">newsletter</a> biex tkun infurmat kull meta nippubblikaw xi ħaġa ġdida.</p>
+				
+			</div>
+		</section>
+		<section id="grid-max-panel-left-top">
+			<!-- X -->
+		</section>
+	</div>
+</article>
+<script>
+	reportingTitle = "Frar";
+</script>
+
+			</main>
+		</div>
+		<div id="bottom-wrapper">
+			<img id="deco" role="none" src="/img/deco-100.svg" alt="Dekorazzjoni art-nouveau" />
+			
+				<div id="newsletter-container-bottom" class="newsletter-container">
+					<section id="form" data-track-content data-content-name="Homepage" data-content-piece="formola">
+						<iframe src="https://newsletter.aphroconfuso.mt/subscription/form" scrolling="no" title="Abbona fin-newsletter"></iframe>
+					</section>
+				</div>
+			
+			<footer data-track-content data-content-name="Footer" data-content-piece="frar">
+	<nav class="footer-content">
+		<menu id="housekeeping">
+			<li class="header">Dwarna</li>
+			<li><a href="/kolofon/">Kolofon</a></li>
+			<li><a href="/proċess-editorjali/">Proċess</a></li>
+			<li><a href="/gwida-tal-istil/">Gwida tal-istil</a></li>
+			<li><a href="/cookies/">Cookies</a></li>
+			<li><a href="/privatezza/">Privatezza</a></li>
+			<li><a href="/aċċessibbiltà/">Aċċessibbiltà</a></li>
+			<li><a href="/podcast/">Podcast</a></li>
+			<li><a href="/newsletter/">Newsletter</a></li>
+			<li class="hide-tablet"><a href="/drittijiet/">Drittijiet</a></li>
+		</menu>
+		<menu id="media">
+			<li class="header">Midja</li>
+			<li><a href="/ar/" class="arabic">العربية</a></li>
+			<li><a href="/ca/">Català</a></li>
+			<li><a href="/de/">Deutsch</a></li>
+			<li><a href="/en/">English</a></li>
+			<li><a href="/es/">Español</a></li>
+			<li><a href="/fr/">Français</a></li>
+			<li><a href="/it/">Italiano</a></li>
+			<li><a href="/nl/">Nederlands</a></li>
+			<li class="hide-tablet"><a href="/ro/">Română</a></li>
+		</menu>
+		<menu id="socials">
+			<li class="header">Segwina</li>
+			<li><a href="https://facebook.com/aphroconfuso">Facebook</a></li>
+			<li><a href="https://instagram.com/aphroconfuso">Instagram</a></li>
+			<li><a href="https://twitter.com/aphroconfuso">Twitter</a></li>
+			<li><a href="https://mastodon.world/@aphroconfuso" rel="me">Mastodon</a></li>
+			<li><a href="https://youtube.com/@aphroconfuso">Youtube</a></li>
+			<li><a href="https://open.spotify.com/user/31rly4s75gfxs6li6bcxc5bqlgza">Spotify</a></li>
+		</menu>
+		<menu id="podcast">
+			<li class="header">Podcast</li>
+			<li><a href="https://podcasts.apple.com/us/podcast/aphroconfuso/id1686567243">Apple</a></li>
+			<li><a href="https://www.audible.co.uk/pd/Aphroconfuso-Podcast/B0C3WHLZRB">Audible</a></li>
+			<li><a href="https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5hY2FzdC5jb20vcHVibGljL3Nob3dzL2FwaHJvY29uZnVzbw">Google</a></li>
+			<li><a href="https://pca.st/podcast/af8c44c0-c823-013b-f432-0acc26574db2">Pocket Casts</a></li>
+			<li><a href="https://feeds.acast.com/public/shows/aphroconfuso">RSS feed</a></li>
+			<li><a href="https://open.spotify.com/show/75Lt3UMvC1jE15SGrNFMww">Spotify</a></li>
+		</menu>
+		<div id="logotype-container">
+			<a href="/"><img src="/img/logotype.svg" class="logotype" alt="logo: Aphroconfuso" /></a>
+		</div>
+		<div id="email"><a href="mailto:l-edituri@aphroconfuso.mt" class="email">l-edituri@aphroconfuso.mt</a></div>
+		<div id="copyright"><a href="/drittijiet/" class="copyright">&copy; 2023-2024 Aphroconfuso et al</a></div>
+		<div id="qrcode"><img src="/img/qr/frar.png" width="180" height="180" alt="QR code" /></div>
+		<div id="url">https://aphroconfuso.mt/frar/</div>
+	</nav>
+</footer>
+
+		</div>
+		<aside id="scroll-tools" class="monthly-outlined">
+			<p><span id="progress"><!-- --></span></p>
+		</aside>
+	</body>
+</html>

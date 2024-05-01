@@ -27,7 +27,7 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/appuntamenti/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-41eda743.css">
+		<link rel="stylesheet" href="/css/style-fc542ca0.css">
 		<script>
 			var
 				audioLoaded,
@@ -51,7 +51,7 @@
 				lastReportedScrollPosition,
 				lastScrollPosition,
 				message,
-				monthYear,
+				issueMonth,
 				newScrollPosition,
 				pageHeight,
 				percentageProgress,
@@ -137,18 +137,34 @@
 		</script>
 		<script defer src="/script/script-228.js"></script>
 	</head>
-	<body class="show-nav">
+	<body class="show-nav this-month-april">
 		<script>initialiseAfterBody();</script>
 		<div id="top-wrapper">
 			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
 			<nav id="top-nav">
-				<a id="logo-container" href="/"><img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" /></a>
+				<div id="logo-container-wrapper">
+					<div id="logo-container">
+						<a href="/">
+							<img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" />
+						</a>
+					</div>
+					<menu class="hide-mobile" id="menu-carousels">
+						<li class="abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
+					</menu>
+					<menu class="hide-mobile" id="menu-collections">
+						<li class="main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+						<li class="main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					</menu>
+				</div>
 				<input id="menu-toggle" type="checkbox" />
 				<label class='menu-button-container' for="menu-toggle">
 					<span style="display: none">Mobile biss: iftaħ il-menu</span>
 					<div class='menu-button'></div>
 				</label>
-				<menu>
+				<menu id="menu-main">
+					<li class="hide-laptop main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+					<li class="hide-laptop main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					<li class="hide-laptop abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
 					<li><a href="/appuntamenti/">Appuntamenti</a></li>
 					<li><a href="/kontributuri/">Kontributuri</a></li>
 					<li><a href="/werrej/">Werrej</a></li>
@@ -190,7 +206,7 @@
 				<ul class="promo-list">
 					
 						<li>
-							<a class="promo april-2024" href="/april-2024/">
+							<a class="promo april" href="/april-2024/">
 								<header>
 									<h1>April 2024</h1>
 								</header>
@@ -201,7 +217,7 @@
 						</li>
 					
 						<li>
-							<a class="promo marzu-2024" href="/marzu-2024/">
+							<a class="promo marzu" href="/marzu-2024/">
 								<header>
 									<h1>Marzu 2024</h1>
 								</header>
@@ -212,7 +228,7 @@
 						</li>
 					
 						<li>
-							<a class="promo frar-2024" href="/frar-2024/">
+							<a class="promo frar" href="/frar-2024/">
 								<header>
 									<h1>Frar 2024</h1>
 								</header>
@@ -223,7 +239,7 @@
 						</li>
 					
 						<li>
-							<a class="promo jannar-2024" href="/jannar-2024/">
+							<a class="promo jannar" href="/jannar-2024/">
 								<header>
 									<h1>Jannar 2024</h1>
 								</header>
@@ -234,7 +250,7 @@
 						</li>
 					
 						<li>
-							<a class="promo dicembru-2023" href="/diċembru-2023/">
+							<a class="promo dicembru" href="/diċembru-2023/">
 								<header>
 									<h1>Diċembru 2023</h1>
 								</header>
@@ -245,7 +261,7 @@
 						</li>
 					
 						<li>
-							<a class="promo novembru-2023" href="/novembru-2023/">
+							<a class="promo novembru" href="/novembru-2023/">
 								<header>
 									<h1>Novembru 2023</h1>
 								</header>
@@ -256,7 +272,7 @@
 						</li>
 					
 						<li>
-							<a class="promo ottubru-2023" href="/ottubru-2023/">
+							<a class="promo ottubru" href="/ottubru-2023/">
 								<header>
 									<h1>Ottubru 2023</h1>
 								</header>
@@ -267,7 +283,7 @@
 						</li>
 					
 						<li>
-							<a class="promo settembru-2023" href="/settembru-2023/">
+							<a class="promo settembru" href="/settembru-2023/">
 								<header>
 									<h1>Settembru 2023</h1>
 								</header>
@@ -278,7 +294,7 @@
 						</li>
 					
 						<li>
-							<a class="promo awwissu-2023" href="/awwissu-2023/">
+							<a class="promo awwissu" href="/awwissu-2023/">
 								<header>
 									<h1>Awwissu 2023</h1>
 								</header>
@@ -289,7 +305,7 @@
 						</li>
 					
 						<li>
-							<a class="promo lulju-2023" href="/lulju-2023/">
+							<a class="promo lulju" href="/lulju-2023/">
 								<header>
 									<h1>Lulju 2023</h1>
 								</header>
@@ -300,7 +316,7 @@
 						</li>
 					
 						<li>
-							<a class="promo gunju-2023" href="/ġunju-2023/">
+							<a class="promo gunju" href="/ġunju-2023/">
 								<header>
 									<h1>Ġunju 2023</h1>
 								</header>
@@ -311,7 +327,7 @@
 						</li>
 					
 						<li>
-							<a class="promo mejju-2023" href="/mejju-2023/">
+							<a class="promo mejju" href="/mejju-2023/">
 								<header>
 									<h1>Mejju 2023</h1>
 								</header>
