@@ -5,7 +5,7 @@
 	<language>mt</language>
 	<link href="https://aphroconfuso.mt/atom.xml" rel="self"/>
 	<link href="https://aphroconfuso.mt/"/>
-	<updated>2024-05-11T08:55:59Z</updated>
+	<updated>2024-05-12T08:45:40Z</updated>
 	<id>https://aphroconfuso.mt</id>
 	<author>
 		<name>Aphroconfuso</name>
@@ -229,6 +229,18 @@
 		</entry>
 		
 		<entry>
+			<title>It-Tipjip</title>
+			<author>
+				<name> (tr Joe Gatt)</name>
+			</author>
+			<link href="https://aphroconfuso.mt/italo-svevo-joe-gatt-it-tipjip/"/>
+			<published>2023-05-01T05:00:00.000Z</published>
+			<updated>2024-01-22T13:35:23.327Z</updated>
+			<id>https://aphroconfuso.mt/italo-svevo-joe-gatt-it-tipjip/</id>
+			<content type="html">L-ewwel sigaretti li pejjipt m’għadekx issibhom għall-bejgħ. Għall-ħabta tal-1870 l-Awstrija kellhom minn dawk li kienu jinbiegħu f’kaxxa tal-kartun żgħira bit-tikketta tal-ajkla b’żewġt irjus. Ara: madwar waħda minn dawn il-kaxxi mill-ewwel jinġabru diversi persuni, kollha b’xi karatteristika minn tagħhom li hi biżżejjed biex tfakkarni x’jisimhom, imma mhux tant li nemozzjona ruħi b’dan l-inkontru bla ħsieb. Nipprova nislet iżjed u mmur sal-pultruna: il-persuni jgħosfru u posthom jeħduh koċċ buffi jiddieħqu bija. Immur lura mifxul lejn il-mejda.</content>
+		</entry>
+		
+		<entry>
 			<title>Gilgamex, Dak li Ra l-Qiegħ</title>
 			<author>
 				<name></name>
@@ -241,15 +253,40 @@
 		</entry>
 		
 		<entry>
-			<title>It-Tipjip</title>
+			<title>Il-Kuxjenza fit-Truf</title>
 			<author>
-				<name> (tr Joe Gatt)</name>
+				<name></name>
 			</author>
-			<link href="https://aphroconfuso.mt/italo-svevo-joe-gatt-it-tipjip/"/>
+			<link href="https://aphroconfuso.mt/joe-gatt-il-kuxjenza-fit-truf/"/>
 			<published>2023-05-01T05:00:00.000Z</published>
-			<updated>2024-01-22T13:35:23.327Z</updated>
-			<id>https://aphroconfuso.mt/italo-svevo-joe-gatt-it-tipjip/</id>
-			<content type="html">L-ewwel sigaretti li pejjipt m’għadekx issibhom għall-bejgħ. Għall-ħabta tal-1870 l-Awstrija kellhom minn dawk li kienu jinbiegħu f’kaxxa tal-kartun żgħira bit-tikketta tal-ajkla b’żewġt irjus. Ara: madwar waħda minn dawn il-kaxxi mill-ewwel jinġabru diversi persuni, kollha b’xi karatteristika minn tagħhom li hi biżżejjed biex tfakkarni x’jisimhom, imma mhux tant li nemozzjona ruħi b’dan l-inkontru bla ħsieb. Nipprova nislet iżjed u mmur sal-pultruna: il-persuni jgħosfru u posthom jeħduh koċċ buffi jiddieħqu bija. Immur lura mifxul lejn il-mejda.</content>
+			<updated>2024-02-09T15:17:51.514Z</updated>
+			<id>https://aphroconfuso.mt/joe-gatt-il-kuxjenza-fit-truf/</id>
+			<content type="html">Bħalma żgur skoprew ħafna qabli, meta tkun qed tittraduċi mit-Taljan, il-Malti li qed taħdem bih ma tħossux uniformi. Fih ħafna li hu lixx u duttili, imma fih ukoll l-għoqiedi u l-ingroppi. Fil-Malti hemm ħafna Taljan li jgħaddi mingħajr ma tagħti kasu; imbagħad hemm it-Taljan tal-avukati. Filli tiskrupla għax tħossok m’int qed tagħmel xejn ħlief tbiddel ftit l-ortografija—“io avanzo tale ipotesi per spiegare la mia debolezza giovanile, ma senza una decisa convinzione”—filli ttik rasek għax tinduna li qed tinstema’ iktar Taljan mit-test oriġinali.</content>
+		</entry>
+		
+		<entry>
+			<title>Qarn</title>
+			<author>
+				<name></name>
+			</author>
+			<link href="https://aphroconfuso.mt/romeo-roxman-gatt-qarn/"/>
+			<published>2023-05-01T05:00:00.000Z</published>
+			<updated>2023-09-13T16:53:16.136Z</updated>
+			<id>https://aphroconfuso.mt/romeo-roxman-gatt-qarn/</id>
+			<content type="html">Idi fil-but, insaffar u nixxuttja l-ġebel—dawn kienu xi azzjonijiet oħra li kont ninnota li ma tantx kienu jinżlu sew meta “tifla” iġġib ruħha b’dal-mod. Jien, għall-kuntrarju, kbirt nagħmilhom. Kont insaffar qabel bdejt nitkellem; it-tort mhux tiegħi, żgur li le, iżda ta’ missieri. Allura ma fhimtx kif darba qisu gerger għax kont qed insaffar. La tifla u lanqas tifel mid-dehra ma kont ikkundizzjonat, għasfur l-ewwel u qabel kollox.</content>
+		</entry>
+		
+		<entry>
+			<title>Ħsieb il-Ħamiema</title>
+			<author>
+				<name></name>
+			</author>
+			<link href="https://aphroconfuso.mt/noah-fabri-ħsieb-il-ħamiema/"/>
+			<published>2023-05-01T05:00:00.000Z</published>
+			<updated>2024-04-14T11:29:53.282Z</updated>
+			<id>https://aphroconfuso.mt/noah-fabri-ħsieb-il-ħamiema/</id>
+			<content type="html">Faqqgħet bħall-qniepen tal-knisja t-twerżiqa ta’ sajjetta tas-sirena tal-pulizija. Maimouna kienet ilha tliet snin taħdem fil-ħanut ħdejn il-pont li jaqsam il-Ħamrun u l-Marsa. Kienet taf kull rokna u xkaffa, kull loġika organizzatorja, u kull bidla li kienet saret fuq il-post. L-irwejjaħ tal-ħitan ma baqgħetx ixxommhom, ix-xufiera li kienu jġibu l-konsenji saret tafhom sew, il-klijenti, sintendi, saru qishom tal-familja, qalb it-tibdil u ċ-ċaqliq tan-nies, u l-kollegi waslu u telqu bħall-għasafar tal-passa. Xorta rnexxielha żżomm ċertu distanza mentali mill-imgħallem u l-ħajja tal-ħanut; minkejja li kienet tħobb taħdem, dan l-aħħar l-idea tax-xogħol innifisha kienet qed taraha velenu tal-moħħ.
+</content>
 		</entry>
 		
 		<entry>
@@ -293,43 +330,6 @@ griżmejh. X’għabra?</content>
 			<id>https://aphroconfuso.mt/ryan-falzon-reċti-tal-kbar-parties-tat-tfal/</id>
 			<content type="html">Nistgħu niftħu b’xena nsuqu minn fuq flyovers nofshom kompluti waqt li nqallbu l-Facebook weqfin fit-traffiku, ritratt wara l-ieħor ta’ Malta lura fil-passat, l-għelieqi, il-mogħoż jirgħu u jmeċilqu, it-tfal jilagħbu ħafjin, toroq vojta, il-bini żewġ sulari. Malta tikkuntenta lil min iħobb imur sal-Lidl għal offerti fażulli ta’ ħaxix imnawwar u gallettini skaduti, bil-karozza impurtata mill-Japan, jidgħi fit-traffic imma jikkonsla għax l-AC silġa u t-tank tad-diesel mimli full u waqt li jsuq pass ta’ nemla juża l-Bluetooth biex iċempel parlata m’ommu, hands free, bla riskju li jaqla’ ċitazzjoni mingħand warden għassa moħbi wara siġra, għax l-aħħar tax-xahar magħna. Lussu kbir.
 </content>
-		</entry>
-		
-		<entry>
-			<title>Ħsieb il-Ħamiema</title>
-			<author>
-				<name></name>
-			</author>
-			<link href="https://aphroconfuso.mt/noah-fabri-ħsieb-il-ħamiema/"/>
-			<published>2023-05-01T05:00:00.000Z</published>
-			<updated>2024-04-14T11:29:53.282Z</updated>
-			<id>https://aphroconfuso.mt/noah-fabri-ħsieb-il-ħamiema/</id>
-			<content type="html">Faqqgħet bħall-qniepen tal-knisja t-twerżiqa ta’ sajjetta tas-sirena tal-pulizija. Maimouna kienet ilha tliet snin taħdem fil-ħanut ħdejn il-pont li jaqsam il-Ħamrun u l-Marsa. Kienet taf kull rokna u xkaffa, kull loġika organizzatorja, u kull bidla li kienet saret fuq il-post. L-irwejjaħ tal-ħitan ma baqgħetx ixxommhom, ix-xufiera li kienu jġibu l-konsenji saret tafhom sew, il-klijenti, sintendi, saru qishom tal-familja, qalb it-tibdil u ċ-ċaqliq tan-nies, u l-kollegi waslu u telqu bħall-għasafar tal-passa. Xorta rnexxielha żżomm ċertu distanza mentali mill-imgħallem u l-ħajja tal-ħanut; minkejja li kienet tħobb taħdem, dan l-aħħar l-idea tax-xogħol innifisha kienet qed taraha velenu tal-moħħ.
-</content>
-		</entry>
-		
-		<entry>
-			<title>Il-Kuxjenza fit-Truf</title>
-			<author>
-				<name></name>
-			</author>
-			<link href="https://aphroconfuso.mt/joe-gatt-il-kuxjenza-fit-truf/"/>
-			<published>2023-05-01T05:00:00.000Z</published>
-			<updated>2024-02-09T15:17:51.514Z</updated>
-			<id>https://aphroconfuso.mt/joe-gatt-il-kuxjenza-fit-truf/</id>
-			<content type="html">Bħalma żgur skoprew ħafna qabli, meta tkun qed tittraduċi mit-Taljan, il-Malti li qed taħdem bih ma tħossux uniformi. Fih ħafna li hu lixx u duttili, imma fih ukoll l-għoqiedi u l-ingroppi. Fil-Malti hemm ħafna Taljan li jgħaddi mingħajr ma tagħti kasu; imbagħad hemm it-Taljan tal-avukati. Filli tiskrupla għax tħossok m’int qed tagħmel xejn ħlief tbiddel ftit l-ortografija—“io avanzo tale ipotesi per spiegare la mia debolezza giovanile, ma senza una decisa convinzione”—filli ttik rasek għax tinduna li qed tinstema’ iktar Taljan mit-test oriġinali.</content>
-		</entry>
-		
-		<entry>
-			<title>Qarn</title>
-			<author>
-				<name></name>
-			</author>
-			<link href="https://aphroconfuso.mt/romeo-roxman-gatt-qarn/"/>
-			<published>2023-05-01T05:00:00.000Z</published>
-			<updated>2023-09-13T16:53:16.136Z</updated>
-			<id>https://aphroconfuso.mt/romeo-roxman-gatt-qarn/</id>
-			<content type="html">Idi fil-but, insaffar u nixxuttja l-ġebel—dawn kienu xi azzjonijiet oħra li kont ninnota li ma tantx kienu jinżlu sew meta “tifla” iġġib ruħha b’dal-mod. Jien, għall-kuntrarju, kbirt nagħmilhom. Kont insaffar qabel bdejt nitkellem; it-tort mhux tiegħi, żgur li le, iżda ta’ missieri. Allura ma fhimtx kif darba qisu gerger għax kont qed insaffar. La tifla u lanqas tifel mid-dehra ma kont ikkundizzjonat, għasfur l-ewwel u qabel kollox.</content>
 		</entry>
 		
 		<entry>
@@ -518,31 +518,6 @@ l-ispots tal-konsulenzi romantiċi tat-tfal bravi Nsara aged 13 and up</content>
 		</entry>
 		
 		<entry>
-			<title>Marċ Maqbuż</title>
-			<author>
-				<name></name>
-			</author>
-			<link href="https://aphroconfuso.mt/leslie-vassallo-marċ-maqbuż/"/>
-			<published>2023-11-23T06:00:00.000Z</published>
-			<updated>2023-11-22T21:27:25.308Z</updated>
-			<id>https://aphroconfuso.mt/leslie-vassallo-marċ-maqbuż/</id>
-			<content type="html">Ix-xitwa tmut hekk—
-Gżira—jew bastiment—jgħibu fiċ-ċpar;
-Riefnu jiġbed nifs sagħtar—
-Berwieq għarwien fuq irdum,
-wiċċ nemex tal-bużbież;
-iħirsa—jew aħna—max-xifer.
-
-Reżħa titlajja fi rkejjen, fuq għetiebi;
-F’triq dejqa, antika, fi kmajra
-xi ħadd jonqox ħajja—jew mit—f’zokk lewża;
-Tifkira tiġi, minn imkien—jew minn xmara—għoddha taħsdek,
-tmexxik fiha b’ħarsa kaħla, b’xofftejn ħajra,
-sa tħallik—jew tħalliha—f’belt labirint.
-</content>
-		</entry>
-		
-		<entry>
 			<title>Wirja</title>
 			<author>
 				<name></name>
@@ -566,6 +541,31 @@ barumbara tiġġarraf tbarqam tifkira,
 għajn moħbija f’wied ħemda, palma f’dagħbien,
 razzett jidwi daħka mit-twieqi, qasab iħaxwex riħ.
 Żewġ nagħġiet joħorġu, iwieġbu għal leħinna.
+</content>
+		</entry>
+		
+		<entry>
+			<title>Marċ Maqbuż</title>
+			<author>
+				<name></name>
+			</author>
+			<link href="https://aphroconfuso.mt/leslie-vassallo-marċ-maqbuż/"/>
+			<published>2023-11-23T06:00:00.000Z</published>
+			<updated>2023-11-22T21:27:25.308Z</updated>
+			<id>https://aphroconfuso.mt/leslie-vassallo-marċ-maqbuż/</id>
+			<content type="html">Ix-xitwa tmut hekk—
+Gżira—jew bastiment—jgħibu fiċ-ċpar;
+Riefnu jiġbed nifs sagħtar—
+Berwieq għarwien fuq irdum,
+wiċċ nemex tal-bużbież;
+iħirsa—jew aħna—max-xifer.
+
+Reżħa titlajja fi rkejjen, fuq għetiebi;
+F’triq dejqa, antika, fi kmajra
+xi ħadd jonqox ħajja—jew mit—f’zokk lewża;
+Tifkira tiġi, minn imkien—jew minn xmara—għoddha taħsdek,
+tmexxik fiha b’ħarsa kaħla, b’xofftejn ħajra,
+sa tħallik—jew tħalliha—f’belt labirint.
 </content>
 		</entry>
 		
@@ -790,5 +790,31 @@ Fl-1989, però—is-sena li fiha ttieħdu dawn ir-ritratti— il-magni m’għad
 			<updated>2024-05-07T21:43:33.189Z</updated>
 			<id>https://aphroconfuso.mt/fatima-a.m.-ġenealoġija-ta-bankina/</id>
 			<content type="html">faċċata tpoġġi parrukkiera min-Niġerja li tfaqqa’ ċ-chewing gum f’widnejk ma’ kull malju li twaħħallek ma’ rasek. imma hi u sħabha jippranzaw f’nofs il-ħanut meta jkun sar il-ħin tal-ikla ta’ waranofsinhar, allura ma jimpurtax għax dejjem joffrulek ftit u meta tispjegalhom li ma tikolx laħam taqsmilhom qalbhom. ħasbuk cool u interessanti għax bejn sewda u bejn bajda, b’aċċent stramb li kważi tat-turist l-abjad, imma ismek Musulman u forsi qisek xi tip ta’ Afrikana imma anka int sirt vittma tal-Ewropa. ixgħel l-istazzjon li jdoqq l-Afrobeats. meta tqum biex tfarfar ġismek u testendi x-xewka ta’ dahrek, forsi tagħti l-ħajja bejn rukkell u ieħor, ikollok aptit tiżfen. imma ma tazzardax. anka int vittma tal-Ewropa. minn hawn tisma’ l-fdalijiet tal-karaoke tal-bar Ingliż, l-ikbar wieħed f’dik it-triq, imġenġel u ħerqan, imdeffes bejn bar Irlandiż, ħanut tal-ikel Maċedonjan u ieħor Niġerjan mal-kantuniera, li faċċata tiegħu ssib kafetterija Taljana. hawnhekk il-bankina ma tiqafx bil-mod li tistennieha tieqaf, lanqas. jekk tgħaddi minn hemm qabel l-għaxra ta’ filgħodu, taf issib ir-rimi tal-istonku ta’ xi bravu li ħaseb li jiflaħ il-lejl ta’ qabel, jew biċċa pizza mirwija, envelopp t’ikla li ma seħħitx. fil-vini ta’ din il-belt ma ssibx għasafar iduru man-niċeċ u s-saqajn ta’ dawk mixjin fit-triq, mhux bħall-Belt jew Tas-Sliema, allura jibqgħu jinġemgħu l-fdalijiet tal-ikel minsi. jistenna lil taż-żibel. mhux għax post maħmuġ u mitluq, imma għax għandu l-ħajja, ħajja urbana li ma tantx hemm kliem għaliha, sakemm ma ssirx tafha b’mod intimu.</content>
+		</entry>
+		
+		<entry>
+			<title>lil poeta li qalli li qed jikteb bħal wieħed vera xiħ dan l-aħħar </title>
+			<author>
+				<name></name>
+			</author>
+			<link href="https://aphroconfuso.mt/jasmine-bajada-lil-poeta-li-qalli-li-qed-jikteb-bħal-wieħed-vera-xiħ-dan-l-aħħar/"/>
+			<published>2024-05-12T22:00:00.000Z</published>
+			<updated>2024-05-12T08:43:51.055Z</updated>
+			<id>https://aphroconfuso.mt/jasmine-bajada-lil-poeta-li-qalli-li-qed-jikteb-bħal-wieħed-vera-xiħ-dan-l-aħħar/</id>
+			<content type="html">il-kliem li ktibtli dalgħodu m’hediex.
+għadni nhewden x’messni għedt
+biex niskonġr’hom minn għadmek—
+minn leħnek. bexxaqtli tieqa bihom;
+ilmaħtek bilqiegħda fil-kamra, waħdek,
+diqitek tidwi fil-vojt għammieq.
+Mill-bogħod, imbagħad, ġew il-vrus…
+qaluli li inti, poeta, m’għadekx tħożż hekk,
+għall-gost. issa li qbadt ir-ritmu taċ-ċinju
+tixtieqek għadek bilbla tgħanni binhar.
+tibżax: l-istrument għadu f’idejk bla trab.
+u inti bħal wieħed vera xiħ li jinsa kollox,
+ank’isem ommu, qabel jinsa kif jaqbad
+dak l-argunett ta’ dari. titnih kif titnih,
+ħa jdoqqlok ħelu, sabiħ.</content>
 		</entry>
 </feed>
