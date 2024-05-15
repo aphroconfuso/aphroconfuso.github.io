@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<!-- ClipArt by Arvin61r58 (http://openclipart.org/user-detail/Arvin61r58) -->
+<svg id="svg2" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 765 990" height="11in" width="8.5in" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+ <title id="title4317">Border 36</title>
+ <metadata id="metadata7">
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>Border 36</dc:title>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Arvin61r58</dc:title>
+     </cc:Agent>
+    </dc:creator>
+    <dc:publisher>
+     <cc:Agent>
+      <dc:title>Openclipart.org</dc:title>
+     </cc:Agent>
+    </dc:publisher>
+    <dc:identifier>https://openclipart.org/</dc:identifier>
+    <dc:source>https://openclipart.org/user-detail/Arvin61r58</dc:source>
+    <dc:subject>
+     <rdf:Bag>
+      <rdf:li>frame</rdf:li>
+      <rdf:li>border</rdf:li>
+      <rdf:li>black and white</rdf:li>
+      <rdf:li>monochrome</rdf:li>
+     </rdf:Bag>
+    </dc:subject>
+    <dc:description>frame/border</dc:description>
+    <cc:license rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/"/>
+   </cc:Work>
+   <cc:License rdf:about="http://creativecommons.org/publicdomain/zero/1.0/">
+    <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+    <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+    <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+   </cc:License>
+  </rdf:RDF>
+ </metadata>
+ <g id="layer1" transform="translate(0 -62.362)">
+  <g id="g4298">
+   <title id="title4315">Border 36  --   by Arvin61r58</title>
+   <path id="path4245" d="m91.429 87.648h594c0 33.115 26.885 60 60 60v819c-33.115 0-60 33.115-60 60h-594c0-33.115-33.115-60-60-60v-819c33.115 0 60-33.115 60-60z" stroke="#000" stroke-width="6" fill="none"/>
+   <g id="g4276">
+    <g id="g4266">
+     <path id="path4252" d="m78.429 87.648a47 47 0 0 1 -47 47.002l-0.000002-47z" stroke="#000" stroke-width="6" fill="none"/>
+     <path id="path4264" fill-rule="evenodd" d="m66.429 95.648a27 27 0 0 1 -27 27.002l-0.000001-27z"/>
+    </g>
+    <g id="g4270" transform="matrix(-1 0 0 1 776.86 0)">
+     <path id="path4272" fill="none" stroke="#000" stroke-width="6" d="m78.429 87.648a47 47 0 0 1 -47 47.002l-0.000002-47z"/>
+     <path id="path4274" d="m66.429 95.648a27 27 0 0 1 -27 27.002l-0.000001-27z" fill-rule="evenodd"/>
+    </g>
+   </g>
+   <g id="g4284" transform="matrix(1 0 0 -1 0 1114.3)">
+    <g id="g4286">
+     <path id="path4288" fill="none" stroke="#000" stroke-width="6" d="m78.429 87.648a47 47 0 0 1 -47 47.002l-0.000002-47z"/>
+     <path id="path4290" d="m66.429 95.648a27 27 0 0 1 -27 27.002l-0.000001-27z" fill-rule="evenodd"/>
+    </g>
+    <g id="g4292" transform="matrix(-1 0 0 1 776.86 0)">
+     <path id="path4294" d="m78.429 87.648a47 47 0 0 1 -47 47.002l-0.000002-47z" stroke="#000" stroke-width="6" fill="none"/>
+     <path id="path4296" fill-rule="evenodd" d="m66.429 95.648a27 27 0 0 1 -27 27.002l-0.000001-27z"/>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>
