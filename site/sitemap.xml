@@ -422,6 +422,13 @@
 	</url>
 	
 	<url>
+		<loc>https://aphroconfuso.mt/karl-baldacchino-politika-bla-nifs/</loc>
+		<lastmod>2024-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+	</url>
+	
+	<url>
 		<loc>https://aphroconfuso.mt/jasmine-bajada-lil-poeta-li-qalli-li-qed-jikteb-bħal-wieħed-vera-xiħ-dan-l-aħħar/</loc>
 		<lastmod>2024-05-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -646,28 +653,7 @@
 	</url>
 	
 	<url>
-		<loc>https://aphroconfuso.mt/italo-svevo-joe-gatt-it-tipjip/</loc>
-		<lastmod>2024-05-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1</priority>
-	</url>
-	
-	<url>
-		<loc>https://aphroconfuso.mt/maria-theuma-nofs-triq-dejjem-nieqaf/</loc>
-		<lastmod>2024-05-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1</priority>
-	</url>
-	
-	<url>
-		<loc>https://aphroconfuso.mt/ryan-falzon-reċti-tal-kbar-parties-tat-tfal/</loc>
-		<lastmod>2024-05-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1</priority>
-	</url>
-	
-	<url>
-		<loc>https://aphroconfuso.mt/omar-nshea-gilgamex-dak-li-ra-l-qiegħ/</loc>
+		<loc>https://aphroconfuso.mt/joe-gatt-il-kuxjenza-fit-truf/</loc>
 		<lastmod>2024-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
@@ -681,7 +667,28 @@
 	</url>
 	
 	<url>
-		<loc>https://aphroconfuso.mt/joe-gatt-il-kuxjenza-fit-truf/</loc>
+		<loc>https://aphroconfuso.mt/ryan-falzon-reċti-tal-kbar-parties-tat-tfal/</loc>
+		<lastmod>2024-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/maria-theuma-nofs-triq-dejjem-nieqaf/</loc>
+		<lastmod>2024-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/italo-svevo-joe-gatt-it-tipjip/</loc>
+		<lastmod>2024-05-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/omar-nshea-gilgamex-dak-li-ra-l-qiegħ/</loc>
 		<lastmod>2024-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
