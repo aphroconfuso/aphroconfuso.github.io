@@ -41,7 +41,7 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/davinia-hamilton-poddata-2023-12-18-noti-editorjali-3-davinia-hamilton/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-41eda743.css">
+		<link rel="stylesheet" href="/css/style-25325009.css">
 		<script>
 			var
 				audioLoaded,
@@ -65,7 +65,8 @@
 				lastReportedScrollPosition,
 				lastScrollPosition,
 				message,
-				monthYear,
+				issueMonth,
+				issueMonthYear,
 				newScrollPosition,
 				pageHeight,
 				percentageProgress,
@@ -131,6 +132,10 @@
 				}
 			}
 			var _paq = window._paq = window._paq || [];
+			const analytics = (arrayInfo) => {
+				if (location.host !== 'aphroconfuso.mt') console.log(arrayInfo);
+				_paq.push(arrayInfo);
+			}
 			_paq.push(['disableCookies']);
 			_paq.push(['enableJSErrorTracking']);
 			_paq.push(['enableHeartBeatTimer']);
@@ -145,20 +150,36 @@
 				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
 			})();
 		</script>
-		<script defer src="/script/script-227.js"></script>
+		<script defer src="/script/script-233.js"></script>
 	</head>
-	<body class="show-nav">
+	<body class="show-nav this-month-mejju">
 		<script>initialiseAfterBody();</script>
 		<div id="top-wrapper">
 			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
 			<nav id="top-nav">
-				<a id="logo-container" href="/"><img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" /></a>
+				<div id="logo-container-wrapper">
+					<div id="logo-container">
+						<a href="/">
+							<img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" />
+						</a>
+					</div>
+					<menu class="hide-mobile" id="menu-carousels">
+						<li class="abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
+					</menu>
+					<menu class="hide-mobile" id="menu-collections">
+						<li class="main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+						<li class="main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					</menu>
+				</div>
 				<input id="menu-toggle" type="checkbox" />
 				<label class='menu-button-container' for="menu-toggle">
 					<span style="display: none">Mobile biss: iftaħ il-menu</span>
 					<div class='menu-button'></div>
 				</label>
-				<menu>
+				<menu id="menu-main">
+					<li class="hide-laptop main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+					<li class="hide-laptop main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					<li class="hide-laptop abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
 					<li><a href="/appuntamenti/">Appuntamenti</a></li>
 					<li><a href="/kontributuri/">Kontributuri</a></li>
 					<li><a href="/werrej/">Werrej</a></li>
@@ -182,7 +203,7 @@
 			<div id="message"><!-- --></div>
 			<main id="skipto">
 				
-	<article class="content frar-2024 poddata story story-46">
+	<article class="content frar poddata story story-46">
 		<header>
 			<ul>
 				<li class="header-label">
@@ -196,13 +217,13 @@
 				
 			</ul>
 			
-				<h1>
+				<h1 data-pagefind-meta="title">
 					Noti Editorjali #3
 				</h1>
 			
 			
 			
-<h2 class="contains-with">
+<h2 class="contains-with" data-pagefind-meta="author">
 	
 	
 		
@@ -228,7 +249,7 @@
 				
 					<aside id="audio">
 					
-					<figure class="audio frar-2024 poddata">
+					<figure class="audio frar poddata">
 	<div class="player" id="player-0">
 		<audio id="audio-0">
 			<source src="https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1702922943014-867b06c7fd3a89a4f5d46ffd3c4981ff.mp3" type="audio/mpeg">
@@ -243,10 +264,10 @@
 				
 					
 					
-					<figure class="audio frar-2024 poddata">
+					<figure class="audio frar poddata">
 	<div class="player" id="player-1">
 		<audio id="audio-1">
-			<source src="https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1702922943014-867b06c7fd3a89a4f5d46ffd3c4981ff.mp3" type="audio/mpeg">
+			<source src="https://assets.pippa.io/shows/undefined/1697184075680-93f62322a6f77a8792c708bcdc3aa553.mp3" type="audio/mpeg">
 		</audio>
 	</div>
 	<figcaption>
@@ -266,11 +287,12 @@
 				
 				<div class="promo bookmark-shortcut"><!-- --></div>
 			</section>
-			<section id="grid-body">
+			<section id="grid-body" data-pagefind-body data-pagefind-weight="7">
 				
 					<section class="generic-body-text">
-						<p><span class="initial">Taħdita</span> ma’ Davinia Hamilton dwar <l-m>it-teatru</l-m>, <l-m>il-kitba</l-m>, u <l-m>r-relazzjoni</l-m> bejniethom. Fost ħafna affarijiet oħra, nitkellmu wkoll dwar <l-m>ix-xogħol</l-m> teatrali Blanket Ban, li ħolqot flimkien ma’ Marta Vella, u <l-m>l-kitba</l-m> tal-esej tagħha <a href="https://aphroconfuso.mt/davinia-hamilton-%C5%BCerrieg%C4%A7a/">Żerriegħa</a> fuq <l-m>Aphroconfuso <span class="end-dot">.</span></l-m></p>
+						<p>Taħdita ma’ Davinia Hamilton dwar <l-m>it-teatru</l-m>, <l-m>il-kitba</l-m>, u <l-m>r-relazzjoni</l-m> bejniethom. Fost ħafna affarijiet oħra, nitkellmu wkoll dwar <l-m>ix-xogħol</l-m> teatrali Blanket Ban, li ħolqot flimkien ma’ Marta Vella, u <l-m>l-kitba</l-m> tal-esej tagħha <a href="https://aphroconfuso.mt/davinia-hamilton-%C5%BCerrieg%C4%A7a/">Żerriegħa</a> fuq <l-m>Aphroconfuso <span class="end-dot">.</span></l-m></p>
 					</section>
+				
 				
 				
 					<section id="endnote" class="body-text">
@@ -297,7 +319,7 @@
 		</div>
 		
 	</article>
-	<aside class="promos-container" data-track-content data-content-name="Promos tal-qiegħ" data-content-piece="Noti Editorjali #3: Davinia Hamilton #3">
+	<aside class="promos-container end-promos" data-track-content data-content-name="Promos tal-qiegħ" data-content-piece="Noti Editorjali #3: Davinia Hamilton #3">
 		
 		
 		
@@ -307,7 +329,7 @@
 		
 
 <li >
-	<a class="promo ottubru-2023 promo-esej story-22" href="/davinia-hamilton-żerriegħa/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Noti Editorjali #3: Davinia Hamilton #3', 'għal: Żerriegħa', 1]);">
+	<a class="promo  ottubru promo-esej story-22" href="/davinia-hamilton-żerriegħa/" onclick="analytics(['trackEvent', 'Promo', 'minn: Noti Editorjali #3: Davinia Hamilton #3', 'għal: Żerriegħa', 1]);">
 		<header>
 	<ul>
 	
@@ -348,7 +370,7 @@
 		
 
 <li >
-	<a class="promo mejju-2023 promo-esej story-7" href="/omar-nshea-gilgamex-dak-li-ra-l-qiegħ/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Noti Editorjali #3: Davinia Hamilton #3', 'għal: Gilgamex, Dak li Ra l-Qiegħ', 2]);">
+	<a class="promo  mejju promo-esej story-7" href="/omar-nshea-gilgamex-dak-li-ra-l-qiegħ/" onclick="analytics(['trackEvent', 'Promo', 'minn: Noti Editorjali #3: Davinia Hamilton #3', 'għal: Gilgamex, Dak li Ra l-Qiegħ', 2]);">
 		<header>
 	<ul>
 	
@@ -389,7 +411,7 @@
 		
 
 <li >
-	<a class="promo jannar-2024 promo-djarju story-36 is-episode" href="/loranne-vella-djarju-2023-12-27-dal-mixi-inutli-għalhekk-nimxih/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Noti Editorjali #3: Davinia Hamilton #3', 'għal: Djarju #3 Loranne Vella', 3]);">
+	<a class="promo  jannar promo-djarju story-36 is-episode" href="/loranne-vella-djarju-2023-12-27-dal-mixi-inutli-għalhekk-nimxih/" onclick="analytics(['trackEvent', 'Promo', 'minn: Noti Editorjali #3: Davinia Hamilton #3', 'għal: Djarju #3 Loranne Vella', 3]);">
 		<header>
 	<ul>
 	
@@ -437,10 +459,11 @@
 
 	</aside>
 	<script>
-		audioUrls = { "songs": [{"author":"Davinia Hamilton","storyId":"46","monthYear":"Frar 2024","pageSlug":"davinia-hamilton-poddata-2023-12-18-noti-editorjali-3-davinia-hamilton","podcastLengthMinutes":54,"podcastNote":"","reportingTitle":"Noti Editorjali #3: Davinia Hamilton #3","sequenceEpisodeNumber":3,"sequenceEpisodeTitle":null,"title":"Noti Editorjali #3: Davinia Hamilton","type":"Poddata","url":"https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1702922943014-867b06c7fd3a89a4f5d46ffd3c4981ff.mp3"},{"authorName":"Davinia Hamilton","monthYear":"Frar 2024","pageSlug":"davinia-hamilton-poddata-2023-12-18-noti-editorjali-3-davinia-hamilton","reportingTitle":"Noti Editorjali #3: Davinia Hamilton #3","sequenceEpisodeNumber":3,"sequenceEpisodeTitle":null,"storyId":"18","title":"Noti Editorjali #3: Davinia Hamilton","type":"Poddata","url":"https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1702922943014-867b06c7fd3a89a4f5d46ffd3c4981ff.mp3"}] };
+		audioUrls = { "songs": [{"author":"Davinia Hamilton","storyId":"46","issueMonth":"Frar","pageSlug":"davinia-hamilton-poddata-2023-12-18-noti-editorjali-3-davinia-hamilton","podcastLengthMinutes":54,"podcastNote":"","reportingTitle":"Noti Editorjali #3: Davinia Hamilton #3","sequenceEpisodeNumber":3,"sequenceEpisodeTitle":null,"title":"Noti Editorjali #3: Davinia Hamilton","type":"Poddata","url":"https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1702922943014-867b06c7fd3a89a4f5d46ffd3c4981ff.mp3"},{"authorName":"Davinia Hamilton","issueMonth":"Frar","pageSlug":"davinia-hamilton-poddata-2023-12-18-noti-editorjali-3-davinia-hamilton","reportingTitle":"Noti Editorjali #3: Davinia Hamilton #3","sequenceEpisodeNumber":3,"sequenceEpisodeTitle":null,"storyId":"18","title":"Noti Editorjali #3: Davinia Hamilton","type":"Poddata","url":"https://assets.pippa.io/shows/undefined/1697184075680-93f62322a6f77a8792c708bcdc3aa553.mp3"}] };
 		author = "Davinia Hamilton" || null;
 		collections = "" || null;
-		monthYear = "frar-2024" || null;
+		issueMonth = "frar" || null;
+		issueMonthYear = "frar-2024" || null;
 		podcastUrl = "https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1702922943014-867b06c7fd3a89a4f5d46ffd3c4981ff.mp3";
 		reportingTitle = "Noti Editorjali #3: Davinia Hamilton #3" || null;
 		sequenceEpisodeNumber = "3";

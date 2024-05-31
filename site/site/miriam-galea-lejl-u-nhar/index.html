@@ -44,7 +44,7 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/miriam-galea-lejl-u-nhar/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-41eda743.css">
+		<link rel="stylesheet" href="/css/style-25325009.css">
 		<script>
 			var
 				audioLoaded,
@@ -68,7 +68,8 @@
 				lastReportedScrollPosition,
 				lastScrollPosition,
 				message,
-				monthYear,
+				issueMonth,
+				issueMonthYear,
 				newScrollPosition,
 				pageHeight,
 				percentageProgress,
@@ -134,6 +135,10 @@
 				}
 			}
 			var _paq = window._paq = window._paq || [];
+			const analytics = (arrayInfo) => {
+				if (location.host !== 'aphroconfuso.mt') console.log(arrayInfo);
+				_paq.push(arrayInfo);
+			}
 			_paq.push(['disableCookies']);
 			_paq.push(['enableJSErrorTracking']);
 			_paq.push(['enableHeartBeatTimer']);
@@ -148,20 +153,36 @@
 				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
 			})();
 		</script>
-		<script defer src="/script/script-227.js"></script>
+		<script defer src="/script/script-233.js"></script>
 	</head>
-	<body class="show-nav">
+	<body class="show-nav this-month-mejju">
 		<script>initialiseAfterBody();</script>
 		<div id="top-wrapper">
 			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
 			<nav id="top-nav">
-				<a id="logo-container" href="/"><img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" /></a>
+				<div id="logo-container-wrapper">
+					<div id="logo-container">
+						<a href="/">
+							<img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" />
+						</a>
+					</div>
+					<menu class="hide-mobile" id="menu-carousels">
+						<li class="abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
+					</menu>
+					<menu class="hide-mobile" id="menu-collections">
+						<li class="main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+						<li class="main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					</menu>
+				</div>
 				<input id="menu-toggle" type="checkbox" />
 				<label class='menu-button-container' for="menu-toggle">
 					<span style="display: none">Mobile biss: iftaħ il-menu</span>
 					<div class='menu-button'></div>
 				</label>
-				<menu>
+				<menu id="menu-main">
+					<li class="hide-laptop main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+					<li class="hide-laptop main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					<li class="hide-laptop abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
 					<li><a href="/appuntamenti/">Appuntamenti</a></li>
 					<li><a href="/kontributuri/">Kontributuri</a></li>
 					<li><a href="/werrej/">Werrej</a></li>
@@ -185,7 +206,7 @@
 			<div id="message"><!-- --></div>
 			<main id="skipto">
 				
-	<article class="content awwissu-2023 storja story story-17">
+	<article class="content awwissu storja story story-17">
 		<header>
 			<ul>
 				<li class="header-label">
@@ -196,7 +217,7 @@
 				
 			</ul>
 			
-				<h1>
+				<h1 data-pagefind-meta="title">
 					Lejl u Nhar
 					
 					
@@ -204,7 +225,7 @@
 			
 			
 			
-<h2>
+<h2 data-pagefind-meta="author">
 	
 	
 		
@@ -229,7 +250,7 @@
 				
 					<aside id="audio">
 					
-					<figure class="audio awwissu-2023 storja">
+					<figure class="audio awwissu storja">
 	<div class="player" id="player-0">
 		<audio id="audio-0">
 			<source src="https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1694022301428-f268084cf509848751ac7a4da10a9396.mp3" type="audio/mpeg">
@@ -253,7 +274,7 @@
 				
 				<div class="promo bookmark-shortcut"><!-- --></div>
 			</section>
-			<section id="grid-body">
+			<section id="grid-body" data-pagefind-body data-pagefind-weight="7">
 				
 					
 						<section class="body-text separated">
@@ -361,6 +382,7 @@
 					
 				
 				
+				
 			</section>
 			<section id="grid-max-panel-left-bottom">
 				
@@ -377,7 +399,7 @@
 		</div>
 		
 	</article>
-	<aside class="promos-container" data-track-content data-content-name="Promos tal-qiegħ" data-content-piece="Lejl u Nhar">
+	<aside class="promos-container end-promos" data-track-content data-content-name="Promos tal-qiegħ" data-content-piece="Lejl u Nhar">
 		
 		
 		
@@ -387,7 +409,7 @@
 		
 
 <li >
-	<a class="promo gunju-2023 promo-storja story-13" href="/charlene-galea-ġismi-battikata/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Lejl u Nhar', 'għal: Ġismi Battikata', 1]);">
+	<a class="promo  gunju promo-storja story-13" href="/charlene-galea-ġismi-battikata/" onclick="analytics(['trackEvent', 'Promo', 'minn: Lejl u Nhar', 'għal: Ġismi Battikata', 1]);">
 		<header>
 	<ul>
 	
@@ -428,7 +450,7 @@
 		
 
 <li >
-	<a class="promo novembru-2023 promo-storja story-26" href="/simon-bartolo-qamar-aħmar/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Lejl u Nhar', 'għal: Qamar Aħmar', 2]);">
+	<a class="promo  novembru promo-storja story-26" href="/simon-bartolo-qamar-aħmar/" onclick="analytics(['trackEvent', 'Promo', 'minn: Lejl u Nhar', 'għal: Qamar Aħmar', 2]);">
 		<header>
 	<ul>
 	
@@ -469,7 +491,7 @@
 		
 
 <li >
-	<a class="promo awwissu-2023 promo-poezija story-18" href="/matthew-schembri-mona-lisa-karnival-ieħor/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Lejl u Nhar', 'għal: mona lisa | karnival ieħor', 3]);">
+	<a class="promo  awwissu promo-poezija story-18" href="/matthew-schembri-mona-lisa-karnival-ieħor/" onclick="analytics(['trackEvent', 'Promo', 'minn: Lejl u Nhar', 'għal: mona lisa | karnival ieħor', 3]);">
 		<header>
 	<ul>
 	
@@ -511,10 +533,11 @@
 
 	</aside>
 	<script>
-		audioUrls = { "songs": [{"author":"Miriam Galea","storyId":"17","monthYear":"Awwissu 2023","pageSlug":"miriam-galea-lejl-u-nhar","podcastLengthMinutes":24,"podcastNote":null,"reportingTitle":"Lejl u Nhar","sequenceEpisodeNumber":null,"sequenceEpisodeTitle":null,"title":"Lejl u Nhar","type":"Storja","url":"https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1694022301428-f268084cf509848751ac7a4da10a9396.mp3"}] };
+		audioUrls = { "songs": [{"author":"Miriam Galea","storyId":"17","issueMonth":"Awwissu","pageSlug":"miriam-galea-lejl-u-nhar","podcastLengthMinutes":24,"podcastNote":null,"reportingTitle":"Lejl u Nhar","sequenceEpisodeNumber":null,"sequenceEpisodeTitle":null,"title":"Lejl u Nhar","type":"Storja","url":"https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1694022301428-f268084cf509848751ac7a4da10a9396.mp3"}] };
 		author = "Miriam Galea" || null;
 		collections = "" || null;
-		monthYear = "awwissu-2023" || null;
+		issueMonth = "awwissu" || null;
+		issueMonthYear = "awwissu-2023" || null;
 		podcastUrl = "https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1694022301428-f268084cf509848751ac7a4da10a9396.mp3";
 		reportingTitle = "Lejl u Nhar" || null;
 		sequenceEpisodeNumber = null;
@@ -529,7 +552,7 @@
 		
 		<aside id="lightbox" class="single-image">
 			<div id="lightbox-container">
-				<button id="lightbox-close" type="button" onclick="_paq.push(['trackEvent', 'Stampi', 'lightbox [×]', 'Lejl u Nhar']);">×</button>
+				<button id="lightbox-close" type="button" onclick="analytics(['trackEvent', 'Stampi', 'lightbox [×]', 'Lejl u Nhar']);">×</button>
 					<section class="splide single-image" aria-label="Stampi għal Lejl u Nhar">
 	<div class="arrows splide__arrows">
 		

@@ -44,7 +44,7 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/omar-nshea-bur-mgħeż-3-qegħedtha-ġo-qabar-fuq-l-għolja-tal-ħorr/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-41eda743.css">
+		<link rel="stylesheet" href="/css/style-25325009.css">
 		<script>
 			var
 				audioLoaded,
@@ -68,7 +68,8 @@
 				lastReportedScrollPosition,
 				lastScrollPosition,
 				message,
-				monthYear,
+				issueMonth,
+				issueMonthYear,
 				newScrollPosition,
 				pageHeight,
 				percentageProgress,
@@ -134,6 +135,10 @@
 				}
 			}
 			var _paq = window._paq = window._paq || [];
+			const analytics = (arrayInfo) => {
+				if (location.host !== 'aphroconfuso.mt') console.log(arrayInfo);
+				_paq.push(arrayInfo);
+			}
 			_paq.push(['disableCookies']);
 			_paq.push(['enableJSErrorTracking']);
 			_paq.push(['enableHeartBeatTimer']);
@@ -148,20 +153,36 @@
 				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
 			})();
 		</script>
-		<script defer src="/script/script-227.js"></script>
+		<script defer src="/script/script-233.js"></script>
 	</head>
-	<body class="show-nav">
+	<body class="show-nav this-month-mejju">
 		<script>initialiseAfterBody();</script>
 		<div id="top-wrapper">
 			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
 			<nav id="top-nav">
-				<a id="logo-container" href="/"><img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" /></a>
+				<div id="logo-container-wrapper">
+					<div id="logo-container">
+						<a href="/">
+							<img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" />
+						</a>
+					</div>
+					<menu class="hide-mobile" id="menu-carousels">
+						<li class="abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
+					</menu>
+					<menu class="hide-mobile" id="menu-collections">
+						<li class="main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+						<li class="main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					</menu>
+				</div>
 				<input id="menu-toggle" type="checkbox" />
 				<label class='menu-button-container' for="menu-toggle">
 					<span style="display: none">Mobile biss: iftaħ il-menu</span>
 					<div class='menu-button'></div>
 				</label>
-				<menu>
+				<menu id="menu-main">
+					<li class="hide-laptop main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+					<li class="hide-laptop main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					<li class="hide-laptop abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
 					<li><a href="/appuntamenti/">Appuntamenti</a></li>
 					<li><a href="/kontributuri/">Kontributuri</a></li>
 					<li><a href="/werrej/">Werrej</a></li>
@@ -185,7 +206,7 @@
 			<div id="message"><!-- --></div>
 			<main id="skipto">
 				
-	<article class="content novembru-2023 esej story story-30">
+	<article class="content novembru esej story story-30">
 		<header>
 			<ul>
 				<li class="header-label">
@@ -196,7 +217,7 @@
 				
 			</ul>
 			
-				<h1>
+				<h1 data-pagefind-meta="title">
 					Bur Mgħeż
 					
 						<span class="episode-number">#3</span>
@@ -208,7 +229,7 @@
 				<h3>Qegħedtha ġo qabar fuq <l-m>l-Għolja</l-m> tal-Ħorr</h3>
 			
 			
-<h2>
+<h2 data-pagefind-meta="author">
 	
 	
 		
@@ -232,49 +253,50 @@
 				
 				
 				
-					<table class="sequence-menu">
-						<tr>
-							<td class="order">1.</td>
-							<td class="title">
-							
-								<a href="/omar-nshea-bur-mgħeż-1-ftit-qabel-dfint-l-ommi-mort-infittex-qabar/">Ftit qabel dfint ’l ommi, mort infittex qabar</a>
-							
-							</td>
-						</tr>
+					<ul class="generic-menu sequence-menu">
+						<li>
+							<a href="/omar-nshea-bur-mgħeż-1-ftit-qabel-dfint-l-ommi-mort-infittex-qabar/">
+								1.&nbsp;
+								Ftit qabel dfint ’l ommi, mort infittex qabar</a>
+							</a>
+						</li>
 					
 				
 					
-						<tr>
-							<td class="order">2.</td>
-							<td class="title">
-							
-								<a href="/omar-nshea-bur-mgħeż-2-dfintha-fil-libsa-li-mietet-fiha/">Dfintha <l-m>fil-libsa</l-m> li mietet fiha</a>
-							
-							</td>
-						</tr>
+						<li>
+							<a href="/omar-nshea-bur-mgħeż-2-dfintha-fil-libsa-li-mietet-fiha/">
+								2.&nbsp;
+								Dfintha <l-m>fil-libsa</l-m> li mietet fiha</a>
+							</a>
+						</li>
 					
 				
 					
-						<tr class="actual">
-							<td class="order">3.</td>
-							<td class="title">
+						<li class="active">
 							
-								Qegħedtha ġo qabar fuq <l-m>l-Għolja</l-m> tal-Ħorr
+								3.&nbsp;
+								Qegħedtha ġo qabar fuq <l-m>l-Għolja</l-m> tal-Ħorr</a>
 							
-							</td>
-						</tr>
+						</li>
 					
 				
 					
-						<tr>
-							<td class="order">4.</td>
-							<td class="title">
-							
-								<a href="/omar-nshea-bur-mgħeż-4-ħallejt-it-tebut-għal-ġisimha-biss/">Ħallejt <l-m>it-tebut</l-m> għal ġisimha biss</a>
-							
-							</td>
-						</tr>
-					</table>
+						<li>
+							<a href="/omar-nshea-bur-mgħeż-4-ħallejt-it-tebut-għal-ġisimha-biss/">
+								4.&nbsp;
+								Ħallejt <l-m>it-tebut</l-m> għal ġisimha biss</a>
+							</a>
+						</li>
+					
+				
+					
+						<li>
+							<a href="/omar-nshea-bur-mgħeż-5-id-difna-tal-memorji/">
+								5.&nbsp;
+								Id-difna <l-m>tal-memorji</l-m></a>
+							</a>
+						</li>
+					</ul>
 				
 				
 					<aside class="body-text promo-adjacent promo-previous">
@@ -296,7 +318,7 @@
 				
 					<aside id="audio">
 					
-					<figure class="audio novembru-2023 esej">
+					<figure class="audio novembru esej">
 	<div class="player" id="player-0">
 		<audio id="audio-0">
 			<source src="https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1709809707479-2f133df4b52983bb1b916541b3b9c3b8.mp3" type="audio/mpeg">
@@ -320,7 +342,7 @@
 				
 				<div class="promo bookmark-shortcut"><!-- --></div>
 			</section>
-			<section id="grid-body">
+			<section id="grid-body" data-pagefind-body data-pagefind-weight="7">
 				
 					
 						<section class="body-text">
@@ -638,6 +660,7 @@
 					
 				
 				
+				
 					<section id="endnote" class="body-text">
 						<p>Ħajr <l-m>lill-Arkivji</l-m> Nazzjonali ta’ Malta u <l-m>lill-Mużew</l-m> Nazzjonali <l-m>tal-Arkeoloġija</l-m> fil-Belt Valletta. <l-m>L-epigrafu</l-m> ta’ Tarċisju Zarb huwa meħud minn “<a href="https://www.um.edu.mt/library/oar/bitstream/123456789/54588/1/Ir-ragel%20tal-glielez.pdf"><l-m>Ir-Raġel</l-m> tal-Glielez</a>”<span class="pull">.</span> Ikkonsultajt <l-m>il-kitba</l-m> ta’ C. J. Farrugia, “<l-m>L-Imqabba</l-m> fis-Sekli Dsatax u Għoxrin u <l-m>t-Twaqqif</l-m> tal-Partiti” <l-m>fil-ktieb </l-m><em><a href="https://search.worldcat.org/formats-editions/1032644264">Sicut Lilium: devozzjoni u ritwal tul <l-m>is-sekli</l-m></a></em>, editjat minnu stess u ppubblikat <l-m>fl-Imqabba</l-m> mis-Soċjeta Mużikali Madonna <l-m>tal-Ġilju</l-m> fl-2012.</p>
 					</section>
@@ -674,7 +697,7 @@
 		</div>
 		
 	</article>
-	<aside class="promos-container" data-track-content data-content-name="Promos tal-qiegħ" data-content-piece="Bur Mgħeż #3">
+	<aside class="promos-container end-promos" data-track-content data-content-name="Promos tal-qiegħ" data-content-piece="Bur Mgħeż #3">
 		
 		
 		
@@ -684,7 +707,7 @@
 		
 
 <li >
-	<a class="promo novembru-2023 promo-poezija story-28" href="/leslie-vassallo-marċ-maqbuż/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Bur Mgħeż #3', 'għal: Marċ Maqbuż', 1]);">
+	<a class="promo  novembru promo-poezija story-28" href="/leslie-vassallo-marċ-maqbuż/" onclick="analytics(['trackEvent', 'Promo', 'minn: Bur Mgħeż #3', 'għal: Marċ Maqbuż', 1]);">
 		<header>
 	<ul>
 	
@@ -725,11 +748,11 @@
 		
 
 <li >
-	<a class="promo settembru-2023 promo-esej story-20 is-episode" href="/omar-nshea-bur-mgħeż-1-ftit-qabel-dfint-l-ommi-mort-infittex-qabar/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Bur Mgħeż #3', 'għal: Bur Mgħeż #1', 2]);">
+	<a class="promo  awwissu promo-esej story-20 is-episode" href="/omar-nshea-bur-mgħeż-1-ftit-qabel-dfint-l-ommi-mort-infittex-qabar/" onclick="analytics(['trackEvent', 'Promo', 'minn: Bur Mgħeż #3', 'għal: Bur Mgħeż #1', 2]);">
 		<header>
 	<ul>
 	
-		<li class="header-label">Settembru 2023</li>
+		<li class="header-label">Awwissu 2023</li>
 	
 	
 	</ul>
@@ -773,7 +796,7 @@
 		
 
 <li >
-	<a class="promo novembru-2023 promo-storja story-26" href="/simon-bartolo-qamar-aħmar/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Bur Mgħeż #3', 'għal: Qamar Aħmar', 3]);">
+	<a class="promo  novembru promo-storja story-26" href="/simon-bartolo-qamar-aħmar/" onclick="analytics(['trackEvent', 'Promo', 'minn: Bur Mgħeż #3', 'għal: Qamar Aħmar', 3]);">
 		<header>
 	<ul>
 	
@@ -815,10 +838,11 @@
 
 	</aside>
 	<script>
-		audioUrls = { "songs": [{"author":"Omar N’Shea","storyId":"30","monthYear":"Novembru 2023","pageSlug":"omar-nshea-bur-mgħeż-3-qegħedtha-ġo-qabar-fuq-l-għolja-tal-ħorr","podcastLengthMinutes":58,"podcastNote":"","reportingTitle":"Bur Mgħeż #3","sequenceEpisodeNumber":3,"sequenceEpisodeTitle":"Qegħedtha ġo qabar fuq l-Għolja tal-Ħorr","title":"Bur Mgħeż","type":"Esej","url":"https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1709809707479-2f133df4b52983bb1b916541b3b9c3b8.mp3"}] };
+		audioUrls = { "songs": [{"author":"Omar N’Shea","storyId":"30","issueMonth":"Novembru","pageSlug":"omar-nshea-bur-mgħeż-3-qegħedtha-ġo-qabar-fuq-l-għolja-tal-ħorr","podcastLengthMinutes":58,"podcastNote":"","reportingTitle":"Bur Mgħeż #3","sequenceEpisodeNumber":3,"sequenceEpisodeTitle":"Qegħedtha ġo qabar fuq l-Għolja tal-Ħorr","title":"Bur Mgħeż","type":"Esej","url":"https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1709809707479-2f133df4b52983bb1b916541b3b9c3b8.mp3"}] };
 		author = "Omar N’Shea" || null;
 		collections = "" || null;
-		monthYear = "novembru-2023" || null;
+		issueMonth = "novembru" || null;
+		issueMonthYear = "novembru-2023" || null;
 		podcastUrl = "https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1709809707479-2f133df4b52983bb1b916541b3b9c3b8.mp3";
 		reportingTitle = "Bur Mgħeż #3" || null;
 		sequenceEpisodeNumber = "3";
@@ -833,7 +857,7 @@
 		
 		<aside id="lightbox">
 			<div id="lightbox-container">
-				<button id="lightbox-close" type="button" onclick="_paq.push(['trackEvent', 'Stampi', 'lightbox [×]', 'Bur Mgħeż #3']);">×</button>
+				<button id="lightbox-close" type="button" onclick="analytics(['trackEvent', 'Stampi', 'lightbox [×]', 'Bur Mgħeż #3']);">×</button>
 					<section class="splide" aria-label="Stampi għal Bur Mgħeż">
 	<div class="arrows splide__arrows">
 		

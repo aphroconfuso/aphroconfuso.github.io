@@ -41,7 +41,7 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/davinia-hamilton-żerriegħa/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-41eda743.css">
+		<link rel="stylesheet" href="/css/style-25325009.css">
 		<script>
 			var
 				audioLoaded,
@@ -65,7 +65,8 @@
 				lastReportedScrollPosition,
 				lastScrollPosition,
 				message,
-				monthYear,
+				issueMonth,
+				issueMonthYear,
 				newScrollPosition,
 				pageHeight,
 				percentageProgress,
@@ -131,6 +132,10 @@
 				}
 			}
 			var _paq = window._paq = window._paq || [];
+			const analytics = (arrayInfo) => {
+				if (location.host !== 'aphroconfuso.mt') console.log(arrayInfo);
+				_paq.push(arrayInfo);
+			}
 			_paq.push(['disableCookies']);
 			_paq.push(['enableJSErrorTracking']);
 			_paq.push(['enableHeartBeatTimer']);
@@ -145,20 +150,36 @@
 				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
 			})();
 		</script>
-		<script defer src="/script/script-227.js"></script>
+		<script defer src="/script/script-233.js"></script>
 	</head>
-	<body class="show-nav">
+	<body class="show-nav this-month-mejju">
 		<script>initialiseAfterBody();</script>
 		<div id="top-wrapper">
 			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
 			<nav id="top-nav">
-				<a id="logo-container" href="/"><img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" /></a>
+				<div id="logo-container-wrapper">
+					<div id="logo-container">
+						<a href="/">
+							<img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" />
+						</a>
+					</div>
+					<menu class="hide-mobile" id="menu-carousels">
+						<li class="abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
+					</menu>
+					<menu class="hide-mobile" id="menu-collections">
+						<li class="main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+						<li class="main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					</menu>
+				</div>
 				<input id="menu-toggle" type="checkbox" />
 				<label class='menu-button-container' for="menu-toggle">
 					<span style="display: none">Mobile biss: iftaħ il-menu</span>
 					<div class='menu-button'></div>
 				</label>
-				<menu>
+				<menu id="menu-main">
+					<li class="hide-laptop main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+					<li class="hide-laptop main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					<li class="hide-laptop abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
 					<li><a href="/appuntamenti/">Appuntamenti</a></li>
 					<li><a href="/kontributuri/">Kontributuri</a></li>
 					<li><a href="/werrej/">Werrej</a></li>
@@ -182,7 +203,7 @@
 			<div id="message"><!-- --></div>
 			<main id="skipto">
 				
-	<article class="content ottubru-2023 esej story story-22">
+	<article class="content ottubru esej story story-22">
 		<header>
 			<ul>
 				<li class="header-label">
@@ -193,7 +214,7 @@
 				
 			</ul>
 			
-				<h1>
+				<h1 data-pagefind-meta="title">
 					Żerriegħa
 					
 					
@@ -201,7 +222,7 @@
 			
 			
 			
-<h2>
+<h2 data-pagefind-meta="author">
 	
 	
 		
@@ -226,7 +247,7 @@
 				
 					<aside id="audio">
 					
-					<figure class="audio ottubru-2023 esej">
+					<figure class="audio ottubru esej">
 	<div class="player" id="player-0">
 		<audio id="audio-0">
 			<source src="https://assets.pippa.io/shows/undefined/1697184075680-93f62322a6f77a8792c708bcdc3aa553.mp3" type="audio/mpeg">
@@ -246,10 +267,10 @@
 				
 					
 					
-					<figure class="audio ottubru-2023 esej">
+					<figure class="audio ottubru esej">
 	<div class="player" id="player-1">
 		<audio id="audio-1">
-			<source src="https://assets.pippa.io/shows/undefined/1697184075680-93f62322a6f77a8792c708bcdc3aa553.mp3" type="audio/mpeg">
+			<source src="https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1702922943014-867b06c7fd3a89a4f5d46ffd3c4981ff.mp3" type="audio/mpeg">
 		</audio>
 	</div>
 	<figcaption>
@@ -265,7 +286,7 @@
 				
 				<div class="promo bookmark-shortcut"><!-- --></div>
 			</section>
-			<section id="grid-body">
+			<section id="grid-body" data-pagefind-body data-pagefind-weight="7">
 				
 					
 						<section class="body-text">
@@ -284,7 +305,7 @@
 <p>Rivelazzjoni bħal din hi eżempju ta’ fenomenu li Jacques Lacan isejjaħlu <em>après-coup</em>. Huwa effett stramb fejn xi memorja, jew xi ħsieb, li tkun ħsibt li huma bla sens, f’daqqa waħda jagħmlu sens retroattivament. <l-m>L-idea </l-m>— jew <l-m>is-sinjifikatur</l-m>, kif jgħid Lacan — tieħu <l-m>l-ħajja</l-m> u retroattivament tbiddel <l-m>il-passat</l-m>. Nirrealizza, jien u nikteb dan <l-m>l-esej</l-m>, li dan <l-m>ir-ritorn</l-m> tar-repress kien diġà beda jseħħ xhur qabel ma żrajt dik <l-m>l-ewwel</l-m> żerriegħa. Kien beda <l-m>fir-rebbiegħa</l-m>, wara li tħabbar <l-m>l-ewwel</l-m> lockdown. Issakkru <l-m>l-bibien</l-m> u <l-m>r-rutina</l-m> kif konna nafuha ntemmet, imma <l-m>x-xemx</l-m> glorjuża ta’ April għelbet <l-m>id-dalma</l-m>, ġabet magħha <l-m>s-sħana</l-m> u <l-m>l-ħajja</l-m>. Ħdejn <l-m>l-appartament</l-m> tiegħi, <l-m>is-siġar</l-m> kienu ffullati <l-m>bil-ħajja </l-m>— ekosistema rikka ta’ fungi, ħażiż, insetti u għasafar jikkongregaw fuq <l-m>il-friegħi</l-m>. <l-m>Il-park</l-m> kotor <l-m>bil-ħajja</l-m> salvaġġa, ferneżija ta’ fjorentini, tiġieġ <l-m>tal-baħar</l-m>, gallozzi u pitirrossi jitimgħu ’<l-m>ż-żgħar</l-m> tagħhom, filwaqt li <l-m>ċ-ċinji</l-m> u <l-m>l-wiżż</l-m> jiżżerżqu fuq <l-m>l-ilma</l-m> ħadrani u trankwill <l-m>tal-għadajjar</l-m>. <l-m>Bil-kuluri</l-m> tal-fjuri, <l-m>l-għelieqi</l-m> saru qishom kalejdoskopju. Kien hemm ruxxmata żnażan ħoxnin donnhom <l-m>fis-sakra</l-m>, jitgerbu minn fjura <l-m>għall-oħra</l-m>, u kull fejn tmur tisma’ <l-m>l-istridulazzjoni</l-m> tal-grillu qalb <l-m>il-ħaxix</l-m>.</p>
 <p><l-m>Il-lockdown</l-m> kien jikkmanda li ngħixu <l-m>bil-mod </l-m>— li nabbandunaw <l-m>ir-ritmu</l-m> eċitat u nevrotiku li konna tant drajna, u li ndawru <l-m>l-attenzjoni</l-m> tagħna b’mod meqjus, kemm ’il ġewwa, kif ukoll ’il barra. <l-m>L-ispettaklu</l-m> tal-belt, kollha dwal u ​​veloċità u ħsejjes — li nammetti li kienu huma <l-m>l-affarijiet</l-m> li attirawni lejha <l-m>fil-bidu </l-m>— kien inbidel fi spettaklu ieħor: ta’ affarijiet ħajjin. Affarijiet li, nafu jew ma nafux, ħajjitna tiddependi fuqhom, li <l-m>bil-kwiet</l-m> isostnu <l-m>t-tessut</l-m> tal-eżistenza tagħna lkoll. Dan <l-m>l-ispettaklu</l-m> kien iktar kalm, ġentili, b’ritmu ieħor — u kien bla ħlas.</p>
 <p>Meħlusa <l-m>mit-tirannija</l-m> tal-produttività, u <l-m>mill-biża</l-m>’ li naħli <l-m>l-ħin</l-m>, mort nimxi. Imxejt, sigħat twal kuljum. Clapham Common u Wandsworth Common, qrib fejn ngħix, saru santwarji ta’ esplorazzjoni. Kont nieħu miegħi boroż mimlijin żrieragħ u karawett biex nitma’ ’<l-m>l-għasafar</l-m> residenti — u ġieli anki xi skojjattlu. <l-m>Fil-basket</l-m> kont nipprepara piknik <l-m>bil-ħobż</l-m> u <l-m>l-ġobon</l-m> u <l-m>l-mandolin</l-m>, u xi ktieb biex noqgħod naqra. <l-m>X’kien</l-m> hemm iktar <l-m>x’tagħmel</l-m>?</p>
-<p class="break"><span class="initial"><span class="dropcap drop-M">M</span>ort</span> nimxi. Ħafna kittieba u filosfi kitbu dwar <l-m>il-merti</l-m> tal-mixi — minn Walter Benjamin, li osserva lil dawk li jimxu <l-m>fl-ibliet</l-m> u postijiet urbani, għal Kant, Nietzsche, Wordsworth, Thoreau u oħrajn li sabu <l-m>s-sabar</l-m> tagħhom qalb <l-m>in-natura</l-m>. F’<em>Wanderlust</em>, Rebecca Solnit tikteb hekk: </p>
+<p class="break"><span class="initial"><span class="dropcap drop-M">M</span>ort</span> nimxi. Ħafna kittieba u filosfi kitbu dwar <l-m>il-merti</l-m> tal-mixi — minn Walter Benjamin, li osserva lil dawk li jimxu <l-m>fil-bliet</l-m> u postijiet urbani, għal Kant, Nietzsche, Wordsworth, Thoreau u oħrajn li sabu <l-m>s-sabar</l-m> tagħhom qalb <l-m>in-natura</l-m>. F’<em>Wanderlust</em>, Rebecca Solnit tikteb hekk: </p>
 <blockquote><l-m>Ir-ritmu</l-m> tal-mixi jiġġenera tip ta’ ritmu <l-m>tal-ħsieb</l-m>, u <l-m>l-passaġġ</l-m> fil-pajsaġġ jirrifletti jew iqanqal <l-m>il-passaġġ</l-m> qalb sensiela ta’ ħsibijiet. Dan joħloq konsonanza stramba bejn <l-m>il-passaġġ</l-m> intern u dak estern, konsonanza li tagħtina ħjiel li <l-m>l-moħħ</l-m> huwa wkoll forma ta’ pajsaġġ li mod kif nistgħu ngħaddu minnu huwa billi nimxu. Ħsieb ġdid ġieli jinħass qisu xi ħaġa f’dan <l-m>il-pajsaġġ</l-m> li minn dejjem kienet hemm, daqslikieku <l-m>l-ħsieb</l-m> huwa vjaġġ u mhux għemil.</blockquote>
 <p>Jien u nimxi <l-m>fil-parks</l-m> viċin ta’ fejn ngħix, inħoss sens ta’ responsabbiltà. Inqatta’ ħafna ħin nosserva <l-m>s-siġar</l-m>. Qabel ma tgħallimt <l-m>x’jisimhom</l-m>, tajthom ismijiet jien stess. Hemm siġra quddiem <l-m>l-istazzjon</l-m>, tant hi kbira nistħajjilha żewġ siġriet jinnamraw; dik insejħilha Tiresias. <l-m>It-tliet</l-m> siġriet ħdejn <l-m>il-bieb</l-m> ta’ barra qishom trio ta’ sħaħar; lil dawk insejħilhom The Wyrd Sisters. Imbagħad hemm siġra ġganteska, qisha mmanifestat ruħha minn xi ħrafa; dik tissejjaħ Grimm. Dawn <l-m>is-siġar</l-m> donnhom għandhom personalità — kemm <l-m>ix-xtieli</l-m> tant ċkejknin li għadhom marbutin ma’ xi bastun biex jibqgħu dritti, u kemm dawk kolossali li jkunu għaddew mijiet ta’ snin minn fuqhom, li iktar nistħajjilhom katidrali milli siġar, mibrumin u mbixklin, bi friegħi miġbudin ’il fuq lejn <l-m>is-sema</l-m>. Iktar ma nitgħallem dwar <l-m>is-siġar</l-m>, iktar insir inħobbhom, dawn <l-m>ix-xhieda</l-m> kwieti <l-m>tal-istorja</l-m>. Nitgħallem li jmantnu lil xulxin — għandhom <l-m>l-għeruq</l-m> kollha magħqudin f’sistema taħt <l-m>l-art</l-m>, u jekk waħda minnhom timrad, <l-m>l-oħrajn</l-m> jaqsmu magħha <l-m>n-nutrijenti</l-m> tagħhom sabiex ifejquha. Togħġobni wisq din <l-m>is-solidarjetà</l-m> sigrieta <l-m>tas-siġar</l-m>.</p>
 <p>Nimxi, u nitgħallem nagħrafhom <l-m>mid-dehra</l-m>. <l-m>X’forma</l-m> għandhom <l-m>il-weraq</l-m>? <l-m>Għat-tul</l-m>, qishom xwabel żgħar? Tondi? Qlub? Dritti jew isserrati? <l-m>X’kulur</l-m> huma? Għandhom fjuri? U <l-m>l-qoxra</l-m> taz-zokk <l-m>bl-istrixxi</l-m>? Lixxa? Titqaxxar? <l-m>L-ismijiet</l-m> tas-siġar li nara ta’ kuljum nitgħallimhom <l-m>bl-Ingliż</l-m>, peress li fuq <l-m>l-app</l-m> li nuża biex nitgħallem nagħrafhom jagħtihomlok <l-m>bl-Ingliż</l-m>. London Plane, Poplar, Hornbeam, Oak, Large-leaved Lime, Hazel, Ash, Silver Birch, Blackthorn, Weeping Birch, Crab Apple, Willow, Sweet Chestnut, Horse Chestnut. Qabel dan <l-m>l-eżerċizzju</l-m> fit-tassonomija, ma kelli <l-m>l-ebda</l-m> lingwa biex nagħrafhom lil dawn <l-m>il-kreaturi</l-m>, u għalhekk għalija kienu kollha “siġar” — jew, agħar minn hekk, kienu kollha <l-m>fl-isfond</l-m>. Nimxi, u nitgħallem nagħraf <l-m>l-għasafar</l-m> ukoll, anki minn kif isaffru. Great Tit, Blue Tit, Long-tailed Tit, Chaffinch, Blackbird, Crow, Greater Spotted Woodpecker, Eurasian Jay, Starling, Robin, Goldcrest, Sparrow, Siskin, Nuthatch, Redwing, Rose-ringed Parakeet. Cormorant, Greylag, Mallard, Common Chiffchaff, Canada goose, Egyptian goose, Heron, Black-headed gull. Kull kelma turini iktar, tħallini nara iktar, nosserva iktar.</p>
@@ -315,9 +336,9 @@
 <p>Hi <l-m>fil-klassijiet</l-m> tal-iskola u <l-m>fil-memorja</l-m> kollettiva li <l-m>l-istorja</l-m> qed tiġi ngassata. Għal dan <l-m>l-esej</l-m>, bdejt nipprova niftakar <l-m>x’kienu</l-m> għallmuna <l-m>l-iskola</l-m> dwar <l-m>l-istorja</l-m> kolonjali ta’ Malta. Sibt baħħ. Niftakarhom <l-m>il-lezzjonijiet</l-m> fuq <l-m>il-preistorja</l-m>, fuq <l-m>il-Feniċi</l-m>, <l-m>il-Kartaġiniżi</l-m> u <l-m>r-Rumani</l-m>. Niftakarna nitgħallmu dwar <l-m>il-Biżantini</l-m>, u ħafna dwar <l-m>l-Għarab</l-m> f’Malta. <l-m>Il-Kavallieri</l-m> u <l-m>l-Assedju</l-m> l-Kbir għamlu parti kbira <l-m>mis-sillabu</l-m>, u kien hemm ukoll ftit noti dwar <l-m>il-Franċiżi</l-m>. (Illum naf ukoll, grazzi <l-m>għax-xogħol</l-m> ta’ Charles Xuereb, li ma tantx għallmuhielna b’xi preċiżjoni kbira din <l-m>tal-Franċiżi</l-m>.) Imma mbagħad… ma niftakarx. Xejn, ħlief li ssemmiet <l-m>is-Sette</l-m> Giugno — avolja mingħajr kuntest għajr xi allużjonijiet għal “patrijotti” u “rewwixta”<span class="pull">.</span> Niftakarhom jgħallmuna dwar <l-m>it-Tieni</l-m> Gwerra Dinjija, <l-m>il-Konvoj</l-m> ta’ Santa Marija, <l-m>il-George</l-m> Cross — u xejn iktar. Għidt forsi jista’ jkun ma niftakar xejn għax għandi memorja kemm kemm batuta, jew forsi ma tantx kont qiegħda attenta <l-m>fil-klassi</l-m>. Iddeċidejt li nsaqsi lil xi ftit minn sħabi — nies li, bħali, kienu edukati f’Malta <l-m>fid-disgħinijiet</l-m>. </p>
 <p>“Niftakarni nħoss li kienu jgħallmuna biss dwar żmien żemżem. Xejn ma nħass relevanti għalija,<span class="pullsemi">”</span> tgħidli waħda minn sħabi. Sieħbi jammetti miegħi li għadu <l-m>sal-lum</l-m> ma jafx għala ġrat <l-m>is-Sette</l-m> Giugno — imma <l-m>l-istorja</l-m> tal-Konti Ruġġieru jgħidhieli b’dettall kbir. Ħabib ieħor jiftakar <l-m>il-lezzjonijiet</l-m> dwar <l-m>l-Ingliżi</l-m> hekk: “Tgħallimna li konna aħna li stedinniehom jiġu biex jeħilsuna <l-m>mill-Franċiżi</l-m>, u li dejjem irrispettawna u tawna ħafna strutturi importanti, <l-m>bħall-edukazzjoni</l-m> u <l-m>d-demokrazija </l-m>— u <l-m>l-kaxex</l-m> ħomor <l-m>tat-telefowns</l-m>.<span class="pullsemi">”</span> Xi ħadd ieħor jgħid li <l-m>l-iskola</l-m> tagħha kellhom żewġ lezzjonijiet separati <l-m>għall-istorja</l-m> Maltija u dik Ingliża, imma <l-m>l-kolonjaliżmu</l-m> qatt ma ssemma. Oħra tgħid li kienu għallmuhom li <l-m>l-Ingliżi</l-m> għażlu <l-m>lill-Maltin</l-m> biex jemigraw <l-m>l-Awstralja</l-m> taħt <l-m>il-“White</l-m> Australia Policy” — bħallikieku <l-m>l-Imperu</l-m> tbissmilna u tana <l-m>d-don</l-m> li naħdmu <l-m>bl-irħis</l-m> f’kolonja oħra. Bħallikieku dawk li emigraw, fosthom qrabati, ma kinux imġiegħla jitilqu minn pajjiżhom minħabba <l-m>l-faqar</l-m>. Din <l-m>in-narrattiva</l-m> tonqos tgħid li, <l-m>fil-bidu</l-m>, <l-m>il-Maltin</l-m> li emigraw lejn <l-m>l-Awstralja</l-m> ma ġewx milqugħin — kienu meqjusa “coloured job-hoppers” u sors ta’ ħaddiema rħas kważi bojod. <l-m>Fil-gazzetta</l-m> unjonista <em>The Worker</em>, kien ġie ppubblikat artiklu <l-m>fl-1916</l-m> li rrefera <l-m>għall-immigranti</l-m> Maltin bħala “a black menace” u wissew li <l-m>l-irġiel</l-m> Maltin kienu se “jikkontaminaw” <l-m>lin-nisa</l-m> Awstraljani bojod. Nagħmlu sew niftakruha din meta naħsbu dwar kif xi wħud minna jittrattawhom <l-m>lill-barranin</l-m> f’pajjiżna.</p>
 <p class="break"><span class="initial"><span class="dropcap drop-M">M</span>eta</span> nsib ruħi f’konverżazzjonijiet dwar <l-m>il-kolonjaliżmu</l-m> ma’ sħabi f’Londra, inħoss li aħjar ma ngħid xejn dwar Malta — uħud minnhom ġejjin minn pajjiżi li sofrew vjolenza ħafna iktar inekwivoka f’isem <l-m>l-Imperu</l-m>. Wara kollox, filwaqt li Malta batiet taħt <l-m>l-Ingliżi</l-m>, m’għaddejniex <l-m>mill-vjolenza</l-m> mdemmija u ġenoċidju li raw postijiet oħrajn: <l-m>il-kampijiet</l-m> ta’ konċentrament <l-m>fl-Afrika</l-m> t’Isfel, fejn ikkalzraw <l-m>il-Boer;</l-m> il-Massakru <l-m>tal-Amristar</l-m> fil-Punjab; <l-m>it-tortura</l-m> sistemika u <l-m>l-istupru</l-m> tan-nies Kikuyu <l-m>fil-Kenya</l-m>. Li esperjenzajna aħna <l-m>l-Maltin</l-m>, Rob Nixon isejħilha “vjolenza <l-m>bil-mod</l-m>”<span class="pull">.</span> Meta naħsbu <l-m>fil-vjolenza</l-m>, nimmaġinaw affarijiet spettakolari u splussivi. “Vjolenza <l-m>bil-mod</l-m>”<span class="pull">,</span> għal Nixon, hi “vjolenza li tiġri <l-m>bil-lajma</l-m> u mhux <l-m>fid-dieher</l-m>, vjolenza ta’ qerda mġebbda li hi mxerrda tul <l-m>iż-żmien</l-m> u <l-m>l-ispazju</l-m>, vjolenza ta’ attrizzjoni li tipikament lanqas titqies bħala vjolenza.<span class="pullsemi">”</span> Din hi tip ta’ vjolenza li titnikker għal snin twal, kultant anki ġenerazzjonijiet. Iċċaħħad ’<l-m>in-nies</l-m> mid-drittijiet ċivili, toħdilhom <l-m>is-sjieda</l-m> ta’ arthom, ma titmagħhomx sew, tittraskura saħħithom, u twassal <l-m>għall-mewt</l-m> bikrija tagħhom.</p>
-<p>Ma jservina xejn li nagħmlu tabirruħna li <l-m>l-konsegwenzi</l-m> tal-kolonjaliżmu f’pajjiżna ma kinux kiefra. Wara li ksibna <l-m>l-indipendenza</l-m>, bqajna ma tajniex bidu għal sforz ta’ dekolonizzazzjoni f’pajjiżna. Jinħass sew <l-m>dan-nuqqas</l-m>. Minflok, għandna amnesija kulturali, fejn jew għandna ħsieb vag li <l-m>l-Ingliżi</l-m> kienu karitattivi — “iħobbuna <l-m>l-Ingliżi</l-m>” — jew eċċezzjonaliżmu żbaljat li jassumi li aħna konna <l-m>l-favuriti</l-m> fost <l-m>in-nies</l-m> kolonizzati. <l-m>Il-fehim</l-m> tiegħi dwar kif kienet Malta taħt <l-m>l-Ingliżi</l-m> ġonġejtu minn riċerka personali, ta’ spiss ostakolata <l-m>mid-diffikultà</l-m> li naċċedi testi Maltin dwar <l-m>is-suġġett</l-m> minn barra <l-m>l-pajjiż</l-m>, jew <l-m>mill-aneddoti</l-m> li qasmu miegħi nies <l-m>tal-ġenerazzjoni</l-m> tal-ġenituri tiegħi.</p>
+<p>Ma jservina xejn li nagħmlu tabirruħna li <l-m>l-konsegwenzi</l-m> tal-kolonjaliżmu f’pajjiżna ma kinux kiefra. Wara li ksibna <l-m>l-indipendenza</l-m>, bqajna ma tajniex bidu għal sforz ta’ dikolonizzazzjoni f’pajjiżna. Jinħass sew <l-m>dan-nuqqas</l-m>. Minflok, għandna amnesija kulturali, fejn jew għandna ħsieb vag li <l-m>l-Ingliżi</l-m> kienu karitattivi — “iħobbuna <l-m>l-Ingliżi</l-m>” — jew eċċezzjonaliżmu żbaljat li jassumi li aħna konna <l-m>l-favuriti</l-m> fost <l-m>in-nies</l-m> kolonizzati. <l-m>Il-fehim</l-m> tiegħi dwar kif kienet Malta taħt <l-m>l-Ingliżi</l-m> ġonġejtu minn riċerka personali, ta’ spiss ostakolata <l-m>mid-diffikultà</l-m> li naċċedi testi Maltin dwar <l-m>is-suġġett</l-m> minn barra <l-m>l-pajjiż</l-m>, jew <l-m>mill-aneddoti</l-m> li qasmu miegħi nies <l-m>tal-ġenerazzjoni</l-m> tal-ġenituri tiegħi.</p>
 <p>Għalfejn niftakruna ħażin? Għalfejn inkomplu nħaddnu mentalità kolonjali li tiċħad <l-m>it-trattament</l-m> ħażin tagħna u tipperpetwa <l-m>l-kunċett</l-m> li <l-m>l-kultura</l-m> Ingliża u Ewropea kontinentali hija superjuri?</p>
-<p>Biex <l-m>l-identità</l-m> tagħna niddekolonizzawha hemm bżonn li nikkonfrontaw <l-m>l-aspetti</l-m> tal-wirt tagħna li forsi ma tantx irridu nafu bihom. <l-m>L-imperjaliżmu</l-m> Ingliż ta <l-m>l-opportunità</l-m> lil Malta biex tallinja ruħha <l-m>mal-pajjiżi</l-m> bojod u sinjuri <l-m>tal-Ewropa</l-m> ta’ fuq, u b’hekk inbiegħdu ruħna <l-m>mill-wirt</l-m> Mediterran u <l-m>Nord-Afrikan</l-m> tagħna. <l-m>Fiż-żmien</l-m> irvelluż ta’ Mintoff, wara <l-m>l-indipendenza</l-m>, kien hemm sforz inizjali u goff ħafna biex tkun iffurmata identità postkolonjali Mediterranja. Ma nafx kinitx eżatt attentat ta’ dekolonizzazzjoni; forsi iktar kienet strateġija ekonomika. <l-m>Fl-1978</l-m> Mintoff kien qal li Malta tagħmel parti “<l-m>mid-dinja</l-m> Għarbija”<span class="pull">,</span> u beda jsaħħaħ <l-m>il-kummerċ</l-m> mal-Libja. <l-m>Fit-tmeninijiet</l-m>, <l-m>il-lezzjonijiet</l-m> tal-Għarbi saru obbligatorji <l-m>fl-iskejjel</l-m>. Kien hemm oppożizzjoni kbira, speċjalment <l-m>mill-borgeżija</l-m>, li riedu jħaddnu b’kemm kellhom saħħa <l-m>r-rabtiet</l-m> li kellhom <l-m>mal-Ingliżi</l-m> u <l-m>t-Taljani</l-m>. Meta jien u sħabi wasalna <l-m>għall-iskola</l-m> fid-disgħinijiet, <l-m>il-gvern</l-m> Nazzjonalista kellu <l-m>t-tir</l-m> li Malta tikseb aċċess <l-m>għall-Unjoni</l-m> Ewropea, u kien importanti li <l-m>l-identità</l-m> tagħna tkun waħda Ewropea. <l-m>Ir-razziżmu</l-m> sovradeterminat tagħna kontra <l-m>l-Għarab</l-m>, minkejja <l-m>s-similaritajiet</l-m> kulturali u fiżiċi ovvji bejnietna, huwa mezz sabiex inħaddnu immaġini tagħna nfusna bħala nies “bojod” u Ewropej. <l-m>Ir-rabta</l-m> mal-Knisja Kattolika ta’ Ruma <l-m>bil-“missjoni</l-m> ċivilizzatorja” tagħha għandha <l-m>l-istess</l-m> funzjoni.</p>
+<p>Biex <l-m>l-identità</l-m> tagħna niddikolonizzawha hemm bżonn li nikkonfrontaw <l-m>l-aspetti</l-m> tal-wirt tagħna li forsi ma tantx irridu nafu bihom. <l-m>L-imperjaliżmu</l-m> Ingliż ta <l-m>l-opportunità</l-m> lil Malta biex tallinja ruħha <l-m>mal-pajjiżi</l-m> bojod u sinjuri <l-m>tal-Ewropa</l-m> ta’ fuq, u b’hekk inbiegħdu ruħna <l-m>mill-wirt</l-m> Mediterran u <l-m>Nord-Afrikan</l-m> tagħna. <l-m>Fiż-żmien</l-m> irvelluż ta’ Mintoff, wara <l-m>l-indipendenza</l-m>, kien hemm sforz inizjali u goff ħafna biex tkun iffurmata identità postkolonjali Mediterranja. Ma nafx kinitx eżatt attentat ta’ dikolonizzazzjoni; forsi iktar kienet strateġija ekonomika. <l-m>Fl-1978</l-m> Mintoff kien qal li Malta tagħmel parti “<l-m>mid-dinja</l-m> Għarbija”<span class="pull">,</span> u beda jsaħħaħ <l-m>il-kummerċ</l-m> mal-Libja. <l-m>Fit-tmeninijiet</l-m>, <l-m>il-lezzjonijiet</l-m> tal-Għarbi saru obbligatorji <l-m>fl-iskejjel</l-m>. Kien hemm oppożizzjoni kbira, speċjalment <l-m>mill-borgeżija</l-m>, li riedu jħaddnu b’kemm kellhom saħħa <l-m>r-rabtiet</l-m> li kellhom <l-m>mal-Ingliżi</l-m> u <l-m>t-Taljani</l-m>. Meta jien u sħabi wasalna <l-m>għall-iskola</l-m> fid-disgħinijiet, <l-m>il-gvern</l-m> Nazzjonalista kellu <l-m>t-tir</l-m> li Malta tikseb aċċess <l-m>għall-Unjoni</l-m> Ewropea, u kien importanti li <l-m>l-identità</l-m> tagħna tkun waħda Ewropea. <l-m>Ir-razziżmu</l-m> sovradeterminat tagħna kontra <l-m>l-Għarab</l-m>, minkejja <l-m>s-similaritajiet</l-m> kulturali u fiżiċi ovvji bejnietna, huwa mezz sabiex inħaddnu immaġini tagħna nfusna bħala nies “bojod” u Ewropej. <l-m>Ir-rabta</l-m> mal-Knisja Kattolika ta’ Ruma <l-m>bil-“missjoni</l-m> ċivilizzatorja” tagħha għandha <l-m>l-istess</l-m> funzjoni.</p>
 <p><l-m>L-istorja</l-m> vera <l-m>tar-relazzjonijiet</l-m> kolonjali bejn Malta u <l-m>l-Ingilterra</l-m> għadha mhix diskussa. Minflok, jeżisti mudell ta’ ripressjoni li jorganizza ruħu madwar <l-m>il-ħrafa</l-m> li Malta kienet eċċezzjonali u mhux <l-m>bħall-kolonji</l-m> l-oħra. Wara kollox, kienu jħobbuna <l-m>l-Ingliżi</l-m>, le? <l-m>Ir-Reġina</l-m> tgħidx kemm kienet tħobbha lil Malta. Kienet għamlet żmien tgħix Gwardamanġa, kontx taf? U mela m’aħniex speċjali!</p>
 <p><l-m>Il-bilingwiżmu</l-m> asimetriku tagħna, fejn fi lsien pajjiżna hemm nuqqas ta’ kliem li jista’ jispjega <l-m>l-mod</l-m> kif konna maħkumin, hu sintomu ta’ din <l-m>ir-ripressjoni</l-m>. Hawn irridu bilfors nużaw <l-m>il-kliem</l-m> medjatur <l-m>tal-lingwi</l-m> Ewropej biex nesprimu ruħna — bħallikieku hemm partijiet <l-m>mir-realtà</l-m> li huma lil hinn <l-m>mill-għarfien</l-m> Malti. Din hi internalizzazzjoni <l-m>tal-immaġini</l-m> kolonjali <l-m>tan-nies</l-m> Maltin bħala parrokkjali u injoranti — jew, kif osservat <l-m>l-Ingliża</l-m> Lady Hester Stanhope <l-m>fl-1846:</l-m> “feroċi, injoranti, għażżenin, sħan, vendikattivi…” Eh, mela ma kinux iħobbuna <l-m>l-Ingliżi</l-m>?</p>
 <p>Jien u nikteb dan <l-m>l-esej</l-m>, <l-m>il-ħin</l-m> kollu niċċekkja <l-m>l-aħbarijiet</l-m> minn Malta, qisni qed nara diżastru jseħħ minn minuta <l-m>għall-oħra</l-m>. <l-m>Il-kriżi</l-m> tal-klima qiegħda tagħmel ħerba u, f’Malta, <l-m>l-impatt</l-m> ta’ din <l-m>il-kriżi</l-m> impossibbli nibqgħu ninjorawh. Din <l-m>il-gżira</l-m>, li <l-m>mil-lat</l-m> ta’ klima <l-m>għall-inqas</l-m>, xi darba kienet trankwilla, issa qed titħabat ma’ temperaturi li jiksru <l-m>r-rekord</l-m> kemm fuq <l-m>l-art</l-m> u kemm <l-m>fil-baħar</l-m>. <l-m>It-temperatura</l-m> barra tinħass iktar minn 50°C. <l-m>Is-sħana</l-m> litteralment dewbet <l-m>il-cables</l-m> tal-elettriku u kkawżat qtugħ <l-m>tad-dawl</l-m>. <l-m>In-nies</l-m> allura m’għandhomx aċċess <l-m>għall-arja</l-m> kkondizzjonata jew <l-m>għar-refriġerazzoni</l-m>. Mietu <l-m>n-nies</l-m>. <l-m>It-temperatura</l-m> tal-baħar laħqet ’il fuq minn 30°C. <l-m>Is-sistema</l-m> tas-saħħa li diġà hi għarkupptejha issa qed tissara ma’ żieda ta’ mard relatat <l-m>mas-sħana</l-m>. Imur <l-m>id-dawl</l-m> l-isptar ukoll. Jinqata’ <l-m>l-ilma</l-m> f’xi postijiet, minħabba <l-m>n-nuqqas</l-m> tal-elettriku. <l-m>Il-Kapitaloċen</l-m>, li darba għamilna kolonja <l-m>tal-kuruna</l-m>, issa qed iħallina esposti <l-m>għall-konsegwenza</l-m> industrijali, li hi <l-m>l-kriżi</l-m> fil-klima. U hekk kif <l-m>il-livell</l-m> tal-baħar ikompli tiela’<span class="pullsemi">,</span> biċċiet <l-m>mill-gżejjer</l-m> Maltin huma f’periklu li jinbelgħu <l-m>mill-Mediterran</l-m>. Bilkemm għandna <l-m>l-kliem</l-m> biex niddiskrivu <l-m>s-severità</l-m> ta’ <l-m>x’inhu</l-m> ġej.</p>
@@ -325,6 +346,7 @@
 <p>Mingħajr ma ntbaħna, żrajna <l-m>ż-żerriegħa</l-m> tal-qerda tagħna. Għandna nistennew futur iebes u bla ħniena jekk ma nibdlux <l-m>id-direzzjoni</l-m> u nieħdu pass lura. Wasal <l-m>il-ħin</l-m> għal <em>après-coup</em> nazzjonali — għal anamnesi — sabiex nifhmu tassew <l-m>il-wirt</l-m> storiku tagħna, u biex nistabbilixxu bidu ġdid. Meta niżirgħu <l-m>ż-żerriegħa</l-m> tal-bidla, dejjem ikun hemm xi ftit inċertezza — ma nistgħux inbassru <l-m>x’ser</l-m> jiffjorixxi u kif. Imma nafu li jekk nazzardaw li ngħaddu minn dan <l-m>il-proċess</l-m>, ħa nsibu futur iktar sostenibbli, u sens ferm aktar dinjituż <l-m>tal-passat</l-m> <l-m>tagħna <span class="end-dot">.</span></l-m></p>
 						</section>
 					
+				
 				
 				
 					<section id="endnote" class="body-text">
@@ -351,7 +373,7 @@
 		</div>
 		
 	</article>
-	<aside class="promos-container" data-track-content data-content-name="Promos tal-qiegħ" data-content-piece="Żerriegħa">
+	<aside class="promos-container end-promos" data-track-content data-content-name="Promos tal-qiegħ" data-content-piece="Żerriegħa">
 		
 		
 		
@@ -361,7 +383,7 @@
 		
 
 <li >
-	<a class="promo mejju-2023 promo-esej story-7" href="/omar-nshea-gilgamex-dak-li-ra-l-qiegħ/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Żerriegħa', 'għal: Gilgamex, Dak li Ra l-Qiegħ', 1]);">
+	<a class="promo  mejju promo-esej story-7" href="/omar-nshea-gilgamex-dak-li-ra-l-qiegħ/" onclick="analytics(['trackEvent', 'Promo', 'minn: Żerriegħa', 'għal: Gilgamex, Dak li Ra l-Qiegħ', 1]);">
 		<header>
 	<ul>
 	
@@ -402,7 +424,7 @@
 		
 
 <li >
-	<a class="promo lulju-2023 promo-esej story-16" href="/loranne-vella-il-lanza-il-labra-il-qoffa-l-azzarin/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Żerriegħa', 'għal: Il-Lanza, il-Labra, il-Qoffa, l-Azzarin', 2]);">
+	<a class="promo  lulju promo-esej story-16" href="/loranne-vella-il-lanza-il-labra-il-qoffa-l-azzarin/" onclick="analytics(['trackEvent', 'Promo', 'minn: Żerriegħa', 'għal: Il-Lanza, il-Labra, il-Qoffa, l-Azzarin', 2]);">
 		<header>
 	<ul>
 	
@@ -443,7 +465,7 @@
 		
 
 <li >
-	<a class="promo mejju-2023 promo-storja story-5" href="/ryan-falzon-reċti-tal-kbar-parties-tat-tfal/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Żerriegħa', 'għal: Reċti tal-Kbar, Parties tat-Tfal', 3]);">
+	<a class="promo  mejju promo-storja story-5" href="/ryan-falzon-reċti-tal-kbar-parties-tat-tfal/" onclick="analytics(['trackEvent', 'Promo', 'minn: Żerriegħa', 'għal: Reċti tal-Kbar, Parties tat-Tfal', 3]);">
 		<header>
 	<ul>
 	
@@ -486,10 +508,11 @@
 
 	</aside>
 	<script>
-		audioUrls = { "songs": [{"author":"Davinia Hamilton","storyId":"22","monthYear":"Ottubru 2023","pageSlug":"davinia-hamilton-żerriegħa","podcastLengthMinutes":67,"podcastNote":"","reportingTitle":"Żerriegħa","sequenceEpisodeNumber":null,"sequenceEpisodeTitle":null,"title":"Żerriegħa","type":"Esej","url":"https://assets.pippa.io/shows/undefined/1697184075680-93f62322a6f77a8792c708bcdc3aa553.mp3"},{"authorName":"Davinia Hamilton","monthYear":"Ottubru 2023","pageSlug":"davinia-hamilton-żerriegħa","reportingTitle":"Żerriegħa","sequenceEpisodeNumber":null,"sequenceEpisodeTitle":null,"storyId":"17","title":"Żerriegħa","type":"Esej","url":"https://assets.pippa.io/shows/undefined/1697184075680-93f62322a6f77a8792c708bcdc3aa553.mp3"}] };
+		audioUrls = { "songs": [{"author":"Davinia Hamilton","storyId":"22","issueMonth":"Ottubru","pageSlug":"davinia-hamilton-żerriegħa","podcastLengthMinutes":67,"podcastNote":"","reportingTitle":"Żerriegħa","sequenceEpisodeNumber":null,"sequenceEpisodeTitle":null,"title":"Żerriegħa","type":"Esej","url":"https://assets.pippa.io/shows/undefined/1697184075680-93f62322a6f77a8792c708bcdc3aa553.mp3"},{"authorName":"Davinia Hamilton","issueMonth":"Ottubru","pageSlug":"davinia-hamilton-żerriegħa","reportingTitle":"Żerriegħa","sequenceEpisodeNumber":null,"sequenceEpisodeTitle":null,"storyId":"17","title":"Żerriegħa","type":"Esej","url":"https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1702922943014-867b06c7fd3a89a4f5d46ffd3c4981ff.mp3"}] };
 		author = "Davinia Hamilton" || null;
 		collections = "" || null;
-		monthYear = "ottubru-2023" || null;
+		issueMonth = "ottubru" || null;
+		issueMonthYear = "ottubru-2023" || null;
 		podcastUrl = "https://assets.pippa.io/shows/undefined/1697184075680-93f62322a6f77a8792c708bcdc3aa553.mp3";
 		reportingTitle = "Żerriegħa" || null;
 		sequenceEpisodeNumber = null;
