@@ -79,13 +79,6 @@
 	</url>
 	
 	<url>
-		<loc>https://aphroconfuso.mt/djarju/</loc>
-		<lastmod>2024-05-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-	</url>
-	
-	<url>
 		<loc>https://aphroconfuso.mt/ar/</loc>
 		<lastmod>2024-05-31</lastmod>
     <changefreq>monthly</changefreq>
@@ -255,6 +248,34 @@
 	
 	<url>
 		<loc>https://aphroconfuso.mt/awdjo/</loc>
+		<lastmod>2024-05-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/bur-mgħeż/</loc>
+		<lastmod>2024-05-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/entrati-mid-djarju-tal-kitba/</loc>
+		<lastmod>2024-05-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/id-djarju-ta-warren-bartolo/</loc>
+		<lastmod>2024-05-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/splużjonijiet/</loc>
 		<lastmod>2024-05-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -464,28 +485,7 @@
 	</url>
 	
 	<url>
-		<loc>https://aphroconfuso.mt/bur-mgħeż/</loc>
-		<lastmod>2024-05-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-	</url>
-	
-	<url>
-		<loc>https://aphroconfuso.mt/entrati-mid-djarju-tal-kitba/</loc>
-		<lastmod>2024-05-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-	</url>
-	
-	<url>
-		<loc>https://aphroconfuso.mt/id-djarju-ta-warren-bartolo/</loc>
-		<lastmod>2024-05-31</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-	</url>
-	
-	<url>
-		<loc>https://aphroconfuso.mt/splużjonijiet/</loc>
+		<loc>https://aphroconfuso.mt/djarju/</loc>
 		<lastmod>2024-05-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -730,6 +730,20 @@
 	</url>
 	
 	<url>
+		<loc>https://aphroconfuso.mt/italo-svevo-joe-gatt-it-tipjip/</loc>
+		<lastmod>2024-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/romeo-roxman-gatt-qarn/</loc>
+		<lastmod>2024-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+	</url>
+	
+	<url>
 		<loc>https://aphroconfuso.mt/maria-theuma-nofs-triq-dejjem-nieqaf/</loc>
 		<lastmod>2024-05-31</lastmod>
     <changefreq>weekly</changefreq>
@@ -744,14 +758,7 @@
 	</url>
 	
 	<url>
-		<loc>https://aphroconfuso.mt/joe-gatt-il-kuxjenza-fit-truf/</loc>
-		<lastmod>2024-05-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1</priority>
-	</url>
-	
-	<url>
-		<loc>https://aphroconfuso.mt/italo-svevo-joe-gatt-it-tipjip/</loc>
+		<loc>https://aphroconfuso.mt/omar-nshea-gilgamex-dak-li-ra-l-qiegħ/</loc>
 		<lastmod>2024-05-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
@@ -765,14 +772,7 @@
 	</url>
 	
 	<url>
-		<loc>https://aphroconfuso.mt/romeo-roxman-gatt-qarn/</loc>
-		<lastmod>2024-05-31</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1</priority>
-	</url>
-	
-	<url>
-		<loc>https://aphroconfuso.mt/omar-nshea-gilgamex-dak-li-ra-l-qiegħ/</loc>
+		<loc>https://aphroconfuso.mt/joe-gatt-il-kuxjenza-fit-truf/</loc>
 		<lastmod>2024-05-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
