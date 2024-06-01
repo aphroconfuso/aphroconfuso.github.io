@@ -114,13 +114,6 @@
 	</url>
 	
 	<url>
-		<loc>https://aphroconfuso.mt/</loc>
-		<lastmod>2024-06-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-	</url>
-	
-	<url>
 		<loc>https://aphroconfuso.mt/ġunju-2024/</loc>
 		<lastmod>2024-06-01</lastmod>
     <changefreq>monthly</changefreq>
@@ -290,6 +283,13 @@
 	
 	<url>
 		<loc>https://aphroconfuso.mt/werrej/</loc>
+		<lastmod>2024-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/djarju/</loc>
 		<lastmod>2024-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -492,7 +492,7 @@
 	</url>
 	
 	<url>
-		<loc>https://aphroconfuso.mt/djarju/</loc>
+		<loc>https://aphroconfuso.mt/</loc>
 		<lastmod>2024-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
