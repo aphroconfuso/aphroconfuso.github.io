@@ -27,7 +27,7 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/jannar-2024/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-41eda743.css">
+		<link rel="stylesheet" href="/css/style-25325009.css">
 		<script>
 			var
 				audioLoaded,
@@ -51,7 +51,8 @@
 				lastReportedScrollPosition,
 				lastScrollPosition,
 				message,
-				monthYear,
+				issueMonth,
+				issueMonthYear,
 				newScrollPosition,
 				pageHeight,
 				percentageProgress,
@@ -117,6 +118,10 @@
 				}
 			}
 			var _paq = window._paq = window._paq || [];
+			const analytics = (arrayInfo) => {
+				if (location.host !== 'aphroconfuso.mt') console.log(arrayInfo);
+				_paq.push(arrayInfo);
+			}
 			_paq.push(['disableCookies']);
 			_paq.push(['enableJSErrorTracking']);
 			_paq.push(['enableHeartBeatTimer']);
@@ -131,20 +136,36 @@
 				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
 			})();
 		</script>
-		<script defer src="/script/script-227.js"></script>
+		<script defer src="/script/script-233.js"></script>
 	</head>
-	<body class="show-nav">
+	<body class="show-nav this-month-mejju">
 		<script>initialiseAfterBody();</script>
 		<div id="top-wrapper">
 			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
 			<nav id="top-nav">
-				<a id="logo-container" href="/"><img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" /></a>
+				<div id="logo-container-wrapper">
+					<div id="logo-container">
+						<a href="/">
+							<img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" />
+						</a>
+					</div>
+					<menu class="hide-mobile" id="menu-carousels">
+						<li class="abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
+					</menu>
+					<menu class="hide-mobile" id="menu-collections">
+						<li class="main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+						<li class="main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					</menu>
+				</div>
 				<input id="menu-toggle" type="checkbox" />
 				<label class='menu-button-container' for="menu-toggle">
 					<span style="display: none">Mobile biss: iftaħ il-menu</span>
 					<div class='menu-button'></div>
 				</label>
-				<menu>
+				<menu id="menu-main">
+					<li class="hide-laptop main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+					<li class="hide-laptop main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					<li class="hide-laptop abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
 					<li><a href="/appuntamenti/">Appuntamenti</a></li>
 					<li><a href="/kontributuri/">Kontributuri</a></li>
 					<li><a href="/werrej/">Werrej</a></li>
@@ -168,17 +189,17 @@
 			<div id="message"><!-- --></div>
 			<main id="skipto">
 				
-<article class="generic jannar-2024">
+<article class="generic jannar">
 	<header>
 		<ul><li class="header-label"><a href="/appuntamenti/">Appuntamenti</a></li></ul>
 		<h1>Jannar 2024</h1>
 		<h2></h2>
 	</header>
 	<div class="container-generic">
-		<section id="grid-body">
+		<section id="grid-body" data-pagefind-body data-pagefind-weight="5">
 			<div class="generic-body-text editorial">
 				<div class="text-container">
-					<p>Jgħidu li <l-m>l-ħin</l-m> jeżisti biex ma jseħħx kollox f’daqqa. <l-m>Bil-Malti</l-m> għandna <l-m>l-idea</l-m> ta’ ħin u <l-m>l-idea</l-m> ta’ żmien bħala fenomeni distinti. <l-m>Il-ħin</l-m> qisu dak li jgħaddik minn mument <l-m>għall-ieħor</l-m>. <l-m>Il-ħin</l-m> tħossu għaddej. <l-m>Iż-żmien</l-m>, però, tinduna bih wara; tħares lura u tintebaħ li għaddew <l-m>is-snin</l-m>, li ġa ilek f’din <l-m>id-dinja</l-m> għoxrin, tletin, tmenin sena. Tħaffer <l-m>fl-art</l-m> u tintebaħ li ġa għaddew minn fuq <l-m>id-dinja</l-m> eluf ta’ snin, miljuni. F’“Manifest Kontra <l-m>ż-Żmien</l-m>”<span class="pull">,</span> Kris Polidano, f’dik <l-m>in-nofs</l-m> siegħa interminabbli ta’ vjaġġ b’<l-m>tal-linja</l-m>, tkejjel kull mument; kull minuta tagħfas fuqha <l-m>bil-ħsejjes</l-m>, <l-m>l-irwejjaħ</l-m> u <l-m>l-memorji</l-m> tagħha. <l-m>L-eċċezzjoni</l-m> trivjali ta’ ħsara <l-m>fil-karozza</l-m> ġġegħelha taqsam <l-m>il-ħin</l-m> tagħha <l-m>fil-gelgul</l-m> taż-żmien <l-m>mal-folla</l-m> għajjiena wara <l-m>x-xogħol</l-m>. <l-m>L-opportunità</l-m> li tiċċassa ’l barra <l-m>mit-tieqa</l-m> tagħtiha <l-m>ċ-ċans</l-m> li <l-m>l-ħin</l-m> tarah jissarraf fi żmien. “Lil ġismek għalxejn tipprova tgħidlu biex ma jikbirx; dak li jrid jagħmel. <l-m>Il-ġenetika</l-m> diġà qiegħda hemm f’postha, lesta biex tgħidlek li sormok ser jikbirlek u ser jieqaf jidħollok <l-m>ġol-qalziet</l-m> li għext fih għal sajf sħiħ; li <l-m>r-riħa</l-m> ta’ ġismek ser titlef dik <l-m>l-aħħar</l-m> qatra riħa newtrali — ħjiel <l-m>tat-terra</l-m> li jobżqu minn kull pora <l-m>bis-saħħa</l-m> t-tfal, u li nibqgħu nkarkru biha sa ma <l-m>l-ewwel</l-m> xagħra tiżbroffa minn taħt abtna.<span class="pullsemi">”</span> Warren Bartolo, <l-m>fl-entrata</l-m> tad-djarju tiegħu “<l-m>Il-mixja</l-m> lura <l-m>d-dar</l-m> kienet twila sigarett wieħed”<span class="pull">,</span> jaqsam <l-m>il-ħin</l-m> tiegħu bejn sigħat waħdu <l-m>mal-kotba</l-m> u sigħat ma’ sħabu, ma’ rġiel li jiltaqa’ magħhom, u <l-m>mal-bqija</l-m> tal-belt. “Immur nipprotesta <l-m>għall-Palestina</l-m> ma’ S. Tibda Republique u tispiċċa Nation. Hemm min qiegħed bilwieqfa fuq <l-m>it-tinda</l-m> tal-bus stop itajjar duħħan <l-m>bil-kuluri</l-m> tal-bandiera <l-m>tal-Palestina…</l-m> Filgħaxija mmorru <l-m>d-dar</l-m> ta’ E u nieklu dumplings <l-m>bil-ħaxix</l-m> u <l-m>bil-kimchi</l-m> (li ma jogħġobnix), pommes noisettes u npejpu ftit. Imbagħad noqgħod nara lil B, E u S jilagħbu Fortnite (ippruvajt nilgħab ftit ukoll).<span class="pullsemi">”</span> Susan Sontag kienet żiedet tgħid li <l-m>l-ispazju</l-m> jeżisti biex mhux kollox jiġri lilek. <l-m>Il-ħin</l-m> tħossu int, iżda qed jiġri lil kulħadd, anki lil dawk li bilkemm nafu xejn dwarhom. “Mhux li tant nixtieq nies f’kitbieti,<span class="pullsemi">”</span> tikteb Loranne Vella <l-m>fit-tielet</l-m> entrata <l-m>tad-djarju</l-m> tagħha. “Jew aħjar, nixtieqhom — jekk ikunu hemm — jibqgħu anonimi, nixtieqhom imċajprin, <l-m>bil-fattizzi</l-m> mżellġin, <l-m>it-tip</l-m> li jħalluk <l-m>fl-għama</l-m> dwar <l-m>x’hemm</l-m> fil-fond ta’ qalbhom, jidher biċ-ċar li qed jaħsbu ħafna aktar milli qed juruk.<span class="pullsemi">”</span> Hemm ukoll dawk <l-m>is-saffi</l-m> li huma eqdem minn kull ħjiel li ħalla warajh <l-m>il-bniedem</l-m>, kif jurina Omar <l-m>N’Shea</l-m> fir-raba’ parti ta’ Bur Mgħeż. <l-m>Is-saffi</l-m> ta’ sena fuq sena li jsiru <l-m>d-dinja</l-m> ta’ madwarna u, taħt saqajna, <l-m>l-art</l-m> li nimxu <l-m>fuqha <span class="end-dot">.</span></l-m></p>
+					<p><i class="fx1">Jgħidu li <l-m>l-ħin</l-m> jeżisti</i> biex ma jseħħx kollox f’daqqa. <l-m>Bil-Malti</l-m> għandna <l-m>l-idea</l-m> ta’ ħin u <l-m>l-idea</l-m> ta’ żmien bħala fenomeni distinti. <l-m>Il-ħin</l-m> qisu dak li jgħaddik minn mument <l-m>għall-ieħor</l-m>. <l-m>Il-ħin</l-m> tħossu għaddej. <l-m>Iż-żmien</l-m>, però, tinduna bih wara; tħares lura u tintebaħ li għaddew <l-m>is-snin</l-m>, li ġa ilek f’din <l-m>id-dinja</l-m> għoxrin, tletin, tmenin sena. Tħaffer <l-m>fl-art</l-m> u tintebaħ li ġa għaddew minn fuq <l-m>id-dinja</l-m> eluf ta’ snin, miljuni. F’“Manifest Kontra <l-m>ż-Żmien</l-m>”<span class="pull">,</span> Kris Polidano, f’dik <l-m>in-nofs</l-m> siegħa interminabbli ta’ vjaġġ b’<l-m>tal-linja</l-m>, tkejjel kull mument; kull minuta tagħfas fuqha <l-m>bil-ħsejjes</l-m>, <l-m>l-irwejjaħ</l-m> u <l-m>l-memorji</l-m> tagħha. <l-m>L-eċċezzjoni</l-m> trivjali ta’ ħsara <l-m>fil-karozza</l-m> ġġegħelha taqsam <l-m>il-ħin</l-m> tagħha <l-m>fil-gelgul</l-m> taż-żmien <l-m>mal-folla</l-m> għajjiena wara <l-m>x-xogħol</l-m>. <l-m>L-opportunità</l-m> li tiċċassa ’l barra <l-m>mit-tieqa</l-m> tagħtiha <l-m>ċ-ċans</l-m> li <l-m>l-ħin</l-m> tarah jissarraf fi żmien. “Lil ġismek għalxejn tipprova tgħidlu biex ma jikbirx; dak li jrid jagħmel. <l-m>Il-ġenetika</l-m> diġà qiegħda hemm f’postha, lesta biex tgħidlek li sormok ser jikbirlek u ser jieqaf jidħollok <l-m>ġol-qalziet</l-m> li għext fih għal sajf sħiħ; li <l-m>r-riħa</l-m> ta’ ġismek ser titlef dik <l-m>l-aħħar</l-m> qatra riħa newtrali — ħjiel <l-m>tat-terra</l-m> li jobżqu minn kull pora <l-m>bis-saħħa</l-m> t-tfal, u li nibqgħu nkarkru biha sa ma <l-m>l-ewwel</l-m> xagħra tiżbroffa minn taħt abtna.<span class="pullsemi">”</span> Warren Bartolo, <l-m>fl-entrata</l-m> tad-djarju tiegħu “<l-m>Il-mixja</l-m> lura <l-m>d-dar</l-m> kienet twila sigarett wieħed”<span class="pull">,</span> jaqsam <l-m>il-ħin</l-m> tiegħu bejn sigħat waħdu <l-m>mal-kotba</l-m> u sigħat ma’ sħabu, ma’ rġiel li jiltaqa’ magħhom, u <l-m>mal-bqija</l-m> tal-belt. “Immur nipprotesta <l-m>għall-Palestina</l-m> ma’ S. Tibda Republique u tispiċċa Nation. Hemm min qiegħed bilwieqfa fuq <l-m>it-tinda</l-m> tal-bus stop itajjar duħħan <l-m>bil-kuluri</l-m> tal-bandiera <l-m>tal-Palestina…</l-m> Filgħaxija mmorru <l-m>d-dar</l-m> ta’ E u nieklu dumplings <l-m>bil-ħaxix</l-m> u <l-m>bil-kimchi</l-m> (li ma jogħġobnix), pommes noisettes u npejpu ftit. Imbagħad noqgħod nara lil B, E u S jilagħbu Fortnite (ippruvajt nilgħab ftit ukoll).<span class="pullsemi">”</span> Susan Sontag kienet żiedet tgħid li <l-m>l-ispazju</l-m> jeżisti biex mhux kollox jiġri lilek. <l-m>Il-ħin</l-m> tħossu int, iżda qed jiġri lil kulħadd, anki lil dawk li bilkemm nafu xejn dwarhom. “Mhux li tant nixtieq nies f’kitbieti,<span class="pullsemi">”</span> tikteb Loranne Vella <l-m>fit-tielet</l-m> entrata <l-m>tad-djarju</l-m> tagħha. “Jew aħjar, nixtieqhom — jekk ikunu hemm — jibqgħu anonimi, nixtieqhom imċajprin, <l-m>bil-fattizzi</l-m> mżellġin, <l-m>it-tip</l-m> li jħalluk <l-m>fl-għama</l-m> dwar <l-m>x’hemm</l-m> fil-fond ta’ qalbhom, jidher biċ-ċar li qed jaħsbu ħafna aktar milli qed juruk.<span class="pullsemi">”</span> Hemm ukoll dawk <l-m>is-saffi</l-m> li huma eqdem minn kull ħjiel li ħalla warajh <l-m>il-bniedem</l-m>, kif jurina Omar <l-m>N’Shea</l-m> fir-raba’ parti ta’ Bur Mgħeż. <l-m>Is-saffi</l-m> ta’ sena fuq sena li jsiru <l-m>d-dinja</l-m> ta’ madwarna u, taħt saqajna, <l-m>l-art</l-m> li nimxu <l-m>fuqha <span class="end-dot">.</span></l-m></p>
 				</div>
 			</div>
 			<p class="continuity">Din hija l-kitba ppubblikata dax-xahar:</p>
@@ -191,7 +212,7 @@
 		
 
 <li >
-	<a class="promo jannar-2024 promo-esej story-34" href="/kris-polidano-manifest-kontra-ż-żmien/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Jannar 2024', 'għal: Manifest Kontra ż-Żmien', 1]);">
+	<a class="promo  jannar promo-esej story-34" href="/kris-polidano-manifest-kontra-ż-żmien/" onclick="analytics(['trackEvent', 'Promo', 'minn: Jannar 2024', 'għal: Manifest Kontra ż-Żmien', 1]);">
 		<header>
 	<ul>
 	
@@ -232,7 +253,7 @@
 		
 
 <li >
-	<a class="promo jannar-2024 promo-djarju story-35 is-episode" href="/warren-bartolo-djarju-2023-11-01-il-mixja-lura-d-dar-kienet-twila-sigarett-wieħed/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Jannar 2024', 'għal: Djarju #1 Warren Bartolo', 2]);">
+	<a class="promo  jannar promo-djarju story-35 is-episode" href="/warren-bartolo-djarju-2023-11-01-il-mixja-lura-d-dar-kienet-twila-sigarett-wieħed/" onclick="analytics(['trackEvent', 'Promo', 'minn: Jannar 2024', 'għal: Djarju #1 Warren Bartolo', 2]);">
 		<header>
 	<ul>
 	
@@ -279,7 +300,7 @@
 		
 
 <li >
-	<a class="promo jannar-2024 promo-djarju story-36 is-episode" href="/loranne-vella-djarju-2023-12-27-dal-mixi-inutli-għalhekk-nimxih/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Jannar 2024', 'għal: Djarju #3 Loranne Vella', 3]);">
+	<a class="promo  jannar promo-djarju story-36 is-episode" href="/loranne-vella-djarju-2023-12-27-dal-mixi-inutli-għalhekk-nimxih/" onclick="analytics(['trackEvent', 'Promo', 'minn: Jannar 2024', 'għal: Djarju #3 Loranne Vella', 3]);">
 		<header>
 	<ul>
 	
@@ -326,7 +347,7 @@
 		
 
 <li >
-	<a class="promo jannar-2024 promo-poezija story-38" href="/antoine-cassar-is-solitudni-tal-fotografu/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Jannar 2024', 'għal: Is-Solitudni tal-Fotografu', 4]);">
+	<a class="promo  jannar promo-poezija story-38" href="/antoine-cassar-is-solitudni-tal-fotografu/" onclick="analytics(['trackEvent', 'Promo', 'minn: Jannar 2024', 'għal: Is-Solitudni tal-Fotografu', 4]);">
 		<header>
 	<ul>
 	
@@ -367,7 +388,7 @@
 		
 
 <li >
-	<a class="promo jannar-2024 promo-esej story-41 is-episode" href="/omar-nshea-bur-mgħeż-4-ħallejt-it-tebut-għal-ġisimha-biss/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Jannar 2024', 'għal: Bur Mgħeż #4', 5]);">
+	<a class="promo  jannar promo-esej story-41 is-episode" href="/omar-nshea-bur-mgħeż-4-ħallejt-it-tebut-għal-ġisimha-biss/" onclick="analytics(['trackEvent', 'Promo', 'minn: Jannar 2024', 'għal: Bur Mgħeż #4', 5]);">
 		<header>
 	<ul>
 	

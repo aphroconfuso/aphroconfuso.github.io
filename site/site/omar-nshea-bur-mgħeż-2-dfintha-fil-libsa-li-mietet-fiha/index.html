@@ -44,7 +44,7 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/omar-nshea-bur-mgħeż-2-dfintha-fil-libsa-li-mietet-fiha/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-41eda743.css">
+		<link rel="stylesheet" href="/css/style-25325009.css">
 		<script>
 			var
 				audioLoaded,
@@ -68,7 +68,8 @@
 				lastReportedScrollPosition,
 				lastScrollPosition,
 				message,
-				monthYear,
+				issueMonth,
+				issueMonthYear,
 				newScrollPosition,
 				pageHeight,
 				percentageProgress,
@@ -134,6 +135,10 @@
 				}
 			}
 			var _paq = window._paq = window._paq || [];
+			const analytics = (arrayInfo) => {
+				if (location.host !== 'aphroconfuso.mt') console.log(arrayInfo);
+				_paq.push(arrayInfo);
+			}
 			_paq.push(['disableCookies']);
 			_paq.push(['enableJSErrorTracking']);
 			_paq.push(['enableHeartBeatTimer']);
@@ -148,20 +153,36 @@
 				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
 			})();
 		</script>
-		<script defer src="/script/script-227.js"></script>
+		<script defer src="/script/script-233.js"></script>
 	</head>
-	<body class="show-nav">
+	<body class="show-nav this-month-mejju">
 		<script>initialiseAfterBody();</script>
 		<div id="top-wrapper">
 			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
 			<nav id="top-nav">
-				<a id="logo-container" href="/"><img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" /></a>
+				<div id="logo-container-wrapper">
+					<div id="logo-container">
+						<a href="/">
+							<img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" />
+						</a>
+					</div>
+					<menu class="hide-mobile" id="menu-carousels">
+						<li class="abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
+					</menu>
+					<menu class="hide-mobile" id="menu-collections">
+						<li class="main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+						<li class="main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					</menu>
+				</div>
 				<input id="menu-toggle" type="checkbox" />
 				<label class='menu-button-container' for="menu-toggle">
 					<span style="display: none">Mobile biss: iftaħ il-menu</span>
 					<div class='menu-button'></div>
 				</label>
-				<menu>
+				<menu id="menu-main">
+					<li class="hide-laptop main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+					<li class="hide-laptop main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					<li class="hide-laptop abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
 					<li><a href="/appuntamenti/">Appuntamenti</a></li>
 					<li><a href="/kontributuri/">Kontributuri</a></li>
 					<li><a href="/werrej/">Werrej</a></li>
@@ -185,7 +206,7 @@
 			<div id="message"><!-- --></div>
 			<main id="skipto">
 				
-	<article class="content ottubru-2023 esej story story-24">
+	<article class="content ottubru esej story story-24">
 		<header>
 			<ul>
 				<li class="header-label">
@@ -196,7 +217,7 @@
 				
 			</ul>
 			
-				<h1>
+				<h1 data-pagefind-meta="title">
 					Bur Mgħeż
 					
 						<span class="episode-number">#2</span>
@@ -208,7 +229,7 @@
 				<h3>Dfintha <l-m>fil-libsa</l-m> li mietet fiha</h3>
 			
 			
-<h2>
+<h2 data-pagefind-meta="author">
 	
 	
 		
@@ -235,49 +256,50 @@
 				
 				
 				
-					<table class="sequence-menu">
-						<tr>
-							<td class="order">1.</td>
-							<td class="title">
-							
-								<a href="/omar-nshea-bur-mgħeż-1-ftit-qabel-dfint-l-ommi-mort-infittex-qabar/">Ftit qabel dfint ’l ommi, mort infittex qabar</a>
-							
-							</td>
-						</tr>
+					<ul class="generic-menu sequence-menu">
+						<li>
+							<a href="/omar-nshea-bur-mgħeż-1-ftit-qabel-dfint-l-ommi-mort-infittex-qabar/">
+								1.&nbsp;
+								Ftit qabel dfint ’l ommi, mort infittex qabar</a>
+							</a>
+						</li>
 					
 				
 					
-						<tr class="actual">
-							<td class="order">2.</td>
-							<td class="title">
+						<li class="active">
 							
-								Dfintha <l-m>fil-libsa</l-m> li mietet fiha
+								2.&nbsp;
+								Dfintha <l-m>fil-libsa</l-m> li mietet fiha</a>
 							
-							</td>
-						</tr>
+						</li>
 					
 				
 					
-						<tr>
-							<td class="order">3.</td>
-							<td class="title">
-							
-								<a href="/omar-nshea-bur-mgħeż-3-qegħedtha-ġo-qabar-fuq-l-għolja-tal-ħorr/">Qegħedtha ġo qabar fuq <l-m>l-Għolja</l-m> tal-Ħorr</a>
-							
-							</td>
-						</tr>
+						<li>
+							<a href="/omar-nshea-bur-mgħeż-3-qegħedtha-ġo-qabar-fuq-l-għolja-tal-ħorr/">
+								3.&nbsp;
+								Qegħedtha ġo qabar fuq <l-m>l-Għolja</l-m> tal-Ħorr</a>
+							</a>
+						</li>
 					
 				
 					
-						<tr>
-							<td class="order">4.</td>
-							<td class="title">
-							
-								<a href="/omar-nshea-bur-mgħeż-4-ħallejt-it-tebut-għal-ġisimha-biss/">Ħallejt <l-m>it-tebut</l-m> għal ġisimha biss</a>
-							
-							</td>
-						</tr>
-					</table>
+						<li>
+							<a href="/omar-nshea-bur-mgħeż-4-ħallejt-it-tebut-għal-ġisimha-biss/">
+								4.&nbsp;
+								Ħallejt <l-m>it-tebut</l-m> għal ġisimha biss</a>
+							</a>
+						</li>
+					
+				
+					
+						<li>
+							<a href="/omar-nshea-bur-mgħeż-5-id-difna-tal-memorji/">
+								5.&nbsp;
+								Id-difna <l-m>tal-memorji</l-m></a>
+							</a>
+						</li>
+					</ul>
 				
 				
 					<aside class="body-text promo-adjacent promo-previous">
@@ -299,7 +321,7 @@
 				
 					<aside id="audio">
 					
-					<figure class="audio ottubru-2023 esej">
+					<figure class="audio ottubru esej">
 	<div class="player" id="player-0">
 		<audio id="audio-0">
 			<source src="https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1700685637374-dfa58262fb434a99834d83d6297feb65.mp3" type="audio/mpeg">
@@ -319,10 +341,10 @@
 				
 					
 					
-					<figure class="audio ottubru-2023 esej">
+					<figure class="audio ottubru esej">
 	<div class="player" id="player-1">
 		<audio id="audio-1">
-			<source src="https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1700685637374-dfa58262fb434a99834d83d6297feb65.mp3" type="audio/mpeg">
+			<source src="https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1700690728517-989dcc8e0a46e248753297a44ba9a258.mp3" type="audio/mpeg">
 		</audio>
 	</div>
 	<figcaption>
@@ -338,7 +360,7 @@
 				
 				<div class="promo bookmark-shortcut"><!-- --></div>
 			</section>
-			<section id="grid-body">
+			<section id="grid-body" data-pagefind-body data-pagefind-weight="7">
 				
 					
 						<section class="body-text">
@@ -659,6 +681,7 @@
 					
 				
 				
+				
 					<section id="endnote" class="body-text">
 						<p>Ħajr <l-m>lill-Arkivji</l-m> Nazzjonali ta’ Malta, <l-m>ir-Rabat</l-m>, <l-m>għall-permess</l-m> biex nikkonsulta u nippubblika <l-m>d-dokumenti</l-m> fid-dossiers MUS 1196-20, CUR 3118-11 u CUR 2052-12. Ukoll lil Charles Farrugia u Noel Buttigieg  li ddiriġewni kemm għal xogħol li kien sar fuq Bur Mgħeż kif ukoll <l-m>għall-kitbiet</l-m> dwar <l-m>in-Naxxari</l-m>, u lil Melvin Theuma <l-m>tal-għajnuna</l-m> waqt <l-m>ir-riċerka</l-m>. Ukoll Lil Sharon Sultana <l-m>għar-referenza</l-m> għall-minuti <l-m>tal-Antiquities</l-m> Committee. <l-m>L-epigrafu</l-m> huwa meħud <l-m>mill-poeżija</l-m> ta’ Marjanu Vella “Ħitan <l-m>tas-Sejjieħ</l-m>”<span class="pull">.</span> Hemm qari tagħha <a href="https://maltikurja.com/year-9/il-letteratura/hitan-tas-sejjieh/">hawn</a>. Ta’ Noel Buttigieg ikkonsultajt “<l-m>L-Imqabba</l-m> fil-Bidu <l-m>tas-Seklu</l-m> XX: Xi aspetti <l-m>tal-ħajja</l-m> soċjali fi żmien <l-m>it-twaqqif</l-m> tal-każini” f’Sicut Lilium: Devozzjoni u Ritwal tul <l-m>is-Sekli</l-m>, Charles Farrugia, editur, ippubblikat <l-m>fl-2012</l-m> tas-Soċjetà Mużikali Madonna <l-m>tal-Ġilju</l-m>, Mqabba. “Bur Mgħeż u <l-m>Tan-Naxxari</l-m>” ta’ Charles Farrugia kien ippubblikat <l-m>fil-programm</l-m> tal-Festa <l-m>tal-Madonna</l-m> tal-Ġilju <l-m>tal-2016</l-m>. “<a href="https://www.um.edu.mt/library/oar/bitstream/123456789/15168/1/11%20Hercules%20unfinished%20labour.pdf">Hercules’ Unfinished Labour: the management of Borg <l-m>in-Nadur</l-m> and its landscape</a>” ta’ Reuben Grima deher f’Site, artefacts and landscape — Prehistoric Borġ <l-m>in-Nadur</l-m>, Malta, editjat minn Davide Tanasi u Nicholas C. Vella ippubblikat <l-m>fl-2011</l-m> minn Polimetrica International Scientific Publisher f’Monza. <l-m>Id-diskors</l-m> ta’ John Kerry <l-m>tal-2014</l-m>, waqt <l-m>l-inawgurazzjoni</l-m> tal-esibizzjoni <em>From Assyria to Iberia</em> <l-m>fil-Metropolitan</l-m> Museum ta’ New York huwa <a href="https://2009-2017.state.gov/secretary/remarks/2014/09/231992.htm">disponibbli <l-m>mill-arkivju</l-m> online</a> <l-m>tas-Segretarju</l-m> tal-Istat Amerikan. Għal dan <l-m>l-esej</l-m> qrajt ukoll “<a href="https://doi.org/10.1007/978-3-030-32926-6_2">The Dignity of the Dead: Ethical Reflections on the Archaeology of Human Remains</a>” ta’ Brais X. Currás u Lydia de Tienda Palop li deher f’Ethical Approaches to Human Remains, editjat minn K. Squires, D. Errickson, N. Márquez-Grant, ippubblikat minn Springer, Cham, <l-m>fl-2019</l-m>.</p>
 					</section>
@@ -695,7 +718,7 @@
 		</div>
 		
 	</article>
-	<aside class="promos-container" data-track-content data-content-name="Promos tal-qiegħ" data-content-piece="Bur Mgħeż #2">
+	<aside class="promos-container end-promos" data-track-content data-content-name="Promos tal-qiegħ" data-content-piece="Bur Mgħeż #2">
 		
 		
 		
@@ -705,11 +728,11 @@
 		
 
 <li >
-	<a class="promo settembru-2023 promo-esej story-20 is-episode" href="/omar-nshea-bur-mgħeż-1-ftit-qabel-dfint-l-ommi-mort-infittex-qabar/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Bur Mgħeż #2', 'għal: Bur Mgħeż #1', 1]);">
+	<a class="promo  awwissu promo-esej story-20 is-episode" href="/omar-nshea-bur-mgħeż-1-ftit-qabel-dfint-l-ommi-mort-infittex-qabar/" onclick="analytics(['trackEvent', 'Promo', 'minn: Bur Mgħeż #2', 'għal: Bur Mgħeż #1', 1]);">
 		<header>
 	<ul>
 	
-		<li class="header-label">Settembru 2023</li>
+		<li class="header-label">Awwissu 2023</li>
 	
 	
 	</ul>
@@ -753,7 +776,7 @@
 		
 
 <li >
-	<a class="promo mejju-2023 promo-esej story-11" href="/joe-gatt-il-kuxjenza-fit-truf/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Bur Mgħeż #2', 'għal: Il-Kuxjenza fit-Truf', 2]);">
+	<a class="promo  mejju promo-esej story-11" href="/joe-gatt-il-kuxjenza-fit-truf/" onclick="analytics(['trackEvent', 'Promo', 'minn: Bur Mgħeż #2', 'għal: Il-Kuxjenza fit-Truf', 2]);">
 		<header>
 	<ul>
 	
@@ -794,7 +817,7 @@
 		
 
 <li >
-	<a class="promo gunju-2023 promo-esej story-14" href="/kurt-borg-ġilda/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Bur Mgħeż #2', 'għal: Ġilda', 3]);">
+	<a class="promo  gunju promo-esej story-14" href="/kurt-borg-ġilda/" onclick="analytics(['trackEvent', 'Promo', 'minn: Bur Mgħeż #2', 'għal: Ġilda', 3]);">
 		<header>
 	<ul>
 	
@@ -836,10 +859,11 @@
 
 	</aside>
 	<script>
-		audioUrls = { "songs": [{"author":"Omar N’Shea","storyId":"24","monthYear":"Ottubru 2023","pageSlug":"omar-nshea-bur-mgħeż-2-dfintha-fil-libsa-li-mietet-fiha","podcastLengthMinutes":61,"podcastNote":"","reportingTitle":"Bur Mgħeż #2","sequenceEpisodeNumber":2,"sequenceEpisodeTitle":"Dfintha fil-libsa li mietet fiha","title":"Bur Mgħeż","type":"Esej","url":"https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1700685637374-dfa58262fb434a99834d83d6297feb65.mp3"},{"authorName":"Omar N’Shea","monthYear":"Ottubru 2023","pageSlug":"omar-nshea-bur-mgħeż-2-dfintha-fil-libsa-li-mietet-fiha","reportingTitle":"Bur Mgħeż #2","sequenceEpisodeNumber":2,"sequenceEpisodeTitle":"Dfintha fil-libsa li mietet fiha","storyId":"16","title":"Bur Mgħeż","type":"Esej","url":"https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1700685637374-dfa58262fb434a99834d83d6297feb65.mp3"}] };
+		audioUrls = { "songs": [{"author":"Omar N’Shea","storyId":"24","issueMonth":"Ottubru","pageSlug":"omar-nshea-bur-mgħeż-2-dfintha-fil-libsa-li-mietet-fiha","podcastLengthMinutes":61,"podcastNote":"","reportingTitle":"Bur Mgħeż #2","sequenceEpisodeNumber":2,"sequenceEpisodeTitle":"Dfintha fil-libsa li mietet fiha","title":"Bur Mgħeż","type":"Esej","url":"https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1700685637374-dfa58262fb434a99834d83d6297feb65.mp3"},{"authorName":"Omar N’Shea","issueMonth":"Ottubru","pageSlug":"omar-nshea-bur-mgħeż-2-dfintha-fil-libsa-li-mietet-fiha","reportingTitle":"Bur Mgħeż #2","sequenceEpisodeNumber":2,"sequenceEpisodeTitle":"Dfintha fil-libsa li mietet fiha","storyId":"16","title":"Bur Mgħeż","type":"Esej","url":"https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1700690728517-989dcc8e0a46e248753297a44ba9a258.mp3"}] };
 		author = "Omar N’Shea" || null;
 		collections = "" || null;
-		monthYear = "ottubru-2023" || null;
+		issueMonth = "ottubru" || null;
+		issueMonthYear = "ottubru-2023" || null;
 		podcastUrl = "https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1700685637374-dfa58262fb434a99834d83d6297feb65.mp3";
 		reportingTitle = "Bur Mgħeż #2" || null;
 		sequenceEpisodeNumber = "2";
@@ -854,7 +878,7 @@
 		
 		<aside id="lightbox">
 			<div id="lightbox-container">
-				<button id="lightbox-close" type="button" onclick="_paq.push(['trackEvent', 'Stampi', 'lightbox [×]', 'Bur Mgħeż #2']);">×</button>
+				<button id="lightbox-close" type="button" onclick="analytics(['trackEvent', 'Stampi', 'lightbox [×]', 'Bur Mgħeż #2']);">×</button>
 					<section class="splide" aria-label="Stampi għal Bur Mgħeż">
 	<div class="arrows splide__arrows">
 		

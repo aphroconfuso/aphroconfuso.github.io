@@ -25,7 +25,7 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/werrej/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-41eda743.css">
+		<link rel="stylesheet" href="/css/style-25325009.css">
 		<script>
 			var
 				audioLoaded,
@@ -49,7 +49,8 @@
 				lastReportedScrollPosition,
 				lastScrollPosition,
 				message,
-				monthYear,
+				issueMonth,
+				issueMonthYear,
 				newScrollPosition,
 				pageHeight,
 				percentageProgress,
@@ -115,6 +116,10 @@
 				}
 			}
 			var _paq = window._paq = window._paq || [];
+			const analytics = (arrayInfo) => {
+				if (location.host !== 'aphroconfuso.mt') console.log(arrayInfo);
+				_paq.push(arrayInfo);
+			}
 			_paq.push(['disableCookies']);
 			_paq.push(['enableJSErrorTracking']);
 			_paq.push(['enableHeartBeatTimer']);
@@ -129,20 +134,36 @@
 				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
 			})();
 		</script>
-		<script defer src="/script/script-227.js"></script>
+		<script defer src="/script/script-233.js"></script>
 	</head>
-	<body class="show-nav">
+	<body class="show-nav this-month-mejju">
 		<script>initialiseAfterBody();</script>
 		<div id="top-wrapper">
 			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
 			<nav id="top-nav">
-				<a id="logo-container" href="/"><img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" /></a>
+				<div id="logo-container-wrapper">
+					<div id="logo-container">
+						<a href="/">
+							<img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" />
+						</a>
+					</div>
+					<menu class="hide-mobile" id="menu-carousels">
+						<li class="abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
+					</menu>
+					<menu class="hide-mobile" id="menu-collections">
+						<li class="main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+						<li class="main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					</menu>
+				</div>
 				<input id="menu-toggle" type="checkbox" />
 				<label class='menu-button-container' for="menu-toggle">
 					<span style="display: none">Mobile biss: iftaħ il-menu</span>
 					<div class='menu-button'></div>
 				</label>
-				<menu>
+				<menu id="menu-main">
+					<li class="hide-laptop main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+					<li class="hide-laptop main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					<li class="hide-laptop abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
 					<li><a href="/appuntamenti/">Appuntamenti</a></li>
 					<li><a href="/kontributuri/">Kontributuri</a></li>
 					<li><a href="/werrej/">Werrej</a></li>
@@ -191,13 +212,13 @@
 		
 
 <li >
-	<a class="promo marzu-2024 promo-terminu story-51" href="/il-kliem-fit-teorija-alterità/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: alterità', 1]);">
+	<a class="promo  mejju promo-terminu story-51" href="/il-kliem-fit-teorija-alterità/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: alterità', 1]);">
 		<header>
 	<ul>
 	
 		<li class="header-label">
 			
-				<span class="subject-date">07.03.2024</span>
+				<span class="subject-date">27.05.2024</span>
 			
 		</li>
 	
@@ -242,7 +263,7 @@
 			
 		</div>
 		
-			<aside><p>794 kelma</p></aside>
+			<aside><p>1 212-il kelma</p></aside>
 		
 	</a>
 </li>
@@ -251,7 +272,7 @@
 		
 
 <li >
-	<a class="promo awwissu-2023 promo-esej story-19" href="/omar-nshea-bil-moħbi-fil-beraħ/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Bil-Moħbi fil-Beraħ', 2]);">
+	<a class="promo  awwissu promo-esej story-19" href="/omar-nshea-bil-moħbi-fil-beraħ/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Bil-Moħbi fil-Beraħ', 2]);">
 		<header>
 	<ul>
 	
@@ -294,11 +315,11 @@
 		
 
 <li  class="multiple-episodes">
-	<a class="promo settembru-2023 promo-esej story-20 is-episode" href="/omar-nshea-bur-mgħeż-1-ftit-qabel-dfint-l-ommi-mort-infittex-qabar/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Bur Mgħeż #1', 3]);">
+	<a class="promo  awwissu promo-esej story-20 is-episode" href="/omar-nshea-bur-mgħeż-1-ftit-qabel-dfint-l-ommi-mort-infittex-qabar/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Bur Mgħeż #1', 3]);">
 		<header>
 	<ul>
 	
-		<li class="header-label">Settembru 2023</li>
+		<li class="header-label">Awwissu 2023</li>
 	
 	
 	</ul>
@@ -337,7 +358,7 @@
 			
 		</div>
 		
-			<aside><p>7 072 kelma</p></aside>
+			<aside><p>7 076 kelma</p></aside>
 		
 	</a>
 </li>
@@ -346,7 +367,7 @@
 		
 
 <li  class="multiple-episodes">
-	<a class="promo ottubru-2023 promo-esej story-24 is-episode" href="/omar-nshea-bur-mgħeż-2-dfintha-fil-libsa-li-mietet-fiha/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Bur Mgħeż #2', 4]);">
+	<a class="promo  ottubru promo-esej story-24 is-episode" href="/omar-nshea-bur-mgħeż-2-dfintha-fil-libsa-li-mietet-fiha/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Bur Mgħeż #2', 4]);">
 		<header>
 	<ul>
 	
@@ -398,7 +419,7 @@
 		
 
 <li  class="multiple-episodes">
-	<a class="promo novembru-2023 promo-esej story-30 is-episode" href="/omar-nshea-bur-mgħeż-3-qegħedtha-ġo-qabar-fuq-l-għolja-tal-ħorr/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Bur Mgħeż #3', 5]);">
+	<a class="promo  novembru promo-esej story-30 is-episode" href="/omar-nshea-bur-mgħeż-3-qegħedtha-ġo-qabar-fuq-l-għolja-tal-ħorr/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Bur Mgħeż #3', 5]);">
 		<header>
 	<ul>
 	
@@ -450,7 +471,7 @@
 		
 
 <li  class="multiple-episodes">
-	<a class="promo jannar-2024 promo-esej story-41 is-episode" href="/omar-nshea-bur-mgħeż-4-ħallejt-it-tebut-għal-ġisimha-biss/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Bur Mgħeż #4', 6]);">
+	<a class="promo  jannar promo-esej story-41 is-episode" href="/omar-nshea-bur-mgħeż-4-ħallejt-it-tebut-għal-ġisimha-biss/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Bur Mgħeż #4', 6]);">
 		<header>
 	<ul>
 	
@@ -501,8 +522,60 @@
 	
 		
 
+<li  class="multiple-episodes">
+	<a class="promo  mejju promo-esej story-59 is-episode" href="/omar-nshea-bur-mgħeż-5-id-difna-tal-memorji/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Bur Mgħeż #5', 7]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Mejju 2024</li>
+	
+	
+	</ul>
+	
+		<h1>
+			Bur Mgħeż
+			
+				<span class="episode-number">#5</span>
+			
+		</h1>
+	
+	
+<h2>
+	
+	
+		
+		
+			
+				
+					<span class="author">Omar <l-m>N’Shea</l-m></span>
+</h2>
+
+	
+		<h3>
+			
+				<span class="episode-number">5. </span>
+			
+			Id-difna <l-m>tal-memorji</l-m>
+		</h3>
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Is-sit ta’ Bur Mgħeż jisfida <l-m>l-bijografija</l-m> arkeoloġika stretta <l-m>tal-post;</l-m> huwa proprju <l-m>l-istatus</l-m> ontoloġiku tiegħu bħala rovina li żamm <l-m>lill-arkeoloġija</l-m> milli tapproprjah u għalhekk tillimita <l-m>l-impenn</l-m> tiegħu <l-m>mal-inħawi</l-m> ta’ madwaru u <l-m>mal-memorja</l-m> tal-komunità li tiftakru. <l-m>L-ambigwità</l-m> materjali u bijografika <l-m>tal-post</l-m>, għalhekk, issalvah <l-m>mill-politika</l-m> tal-patrimonju mmexxija <l-m>mill-kapital</l-m> li jbiddel <l-m>is-siti</l-m> f’parks <l-m>għat-turiżmu</l-m>. Kif inhuma llum, <l-m>il-fdalijiet</l-m> huma parteċipi kif ukoll aġenti attivi <l-m>fit-trasformazzjoni</l-m> u <l-m>l-użu</l-m> mill-ġdid <l-m>tal-ispazju</l-m> tal-barriera. Dan iqajjem riflessjoni fuq <l-m>il-memorja</l-m> u <l-m>t-telf</l-m> fi ħdan <l-m>il-komunità</l-m> tal-Imqabba. <l-m>Bl-istratifikazzjoni</l-m> kumplessa tiegħu, <l-m>min-Neolitiku</l-m> sa żminijiet moderni, Bur Mgħeż joffri metafora li forsi tista’ tgħinna nagħmlu sens <l-m>mill-fdalijiet</l-m> bħala palimpsesti li fihom insibu narrattivi u tifsiriet multipli, kull saff jiżvela aspetti differenti <l-m>tal-interazzjoni</l-m> tal-bniedem <l-m>mal-ambjent</l-m> filwaqt li <l-m>l-perċezzjonijiet</l-m> differenti <l-m>tal-materjalità</l-m> tal-ġebla <l-m>tal-franka  </l-m>—  kemm bħala riżors, kif ukoll bħala simbolu <l-m>tal-wirt</l-m> kulturali, jew kodiċi semjotiku ta’ rovina  —  jenfasizzaw <l-m>in-natura</l-m> suġġettiva u effimera ta’ kif nifhmu u nivvalutaw <l-m>id-dinja</l-m> materjali. <l-m>Fl-istess</l-m> ħin, Bur Mgħeż jisfida wkoll <l-m>lill-arkeoloġija</l-m> biex issib metodi li bihom tkun tista’ “taqra” u tifhem siti li għebu għalkollox jew kważi.</p>
+			
+		</div>
+		
+			<aside><p>8 225 kelma</p></aside>
+		
+	</a>
+</li>
+
+	
+		
+
 <li >
-	<a class="promo dicembru-2023 promo-poezija story-32" href="/matteo-pullicino-flaming-fag/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Flaming Fag', 7]);">
+	<a class="promo  dicembru promo-poezija story-32" href="/matteo-pullicino-flaming-fag/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Flaming Fag', 8]);">
 		<header>
 	<ul>
 	
@@ -545,7 +618,50 @@
 		
 
 <li >
-	<a class="promo gunju-2023 promo-esej story-14" href="/kurt-borg-ġilda/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Ġilda', 8]);">
+	<a class="promo  mejju promo-storja story-60" href="/fatima-a.m.-ġenealoġija-ta-bankina/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: ġenealoġija ta’ bankina', 9]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Mejju 2024</li>
+	
+	
+	</ul>
+	
+		<h1>
+			ġenealoġija ta’ bankina
+			
+		</h1>
+	
+	
+<h2>
+	
+	
+		
+		
+			
+				
+					<span class="author">fatima a.m.</span>
+</h2>
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>faċċata tpoġġi parrukkiera <l-m>min-Niġerja</l-m> li tfaqqa’ <l-m>ċ-chewing</l-m> gum f’widnejk ma’ kull malju li twaħħallek ma’ rasek. imma hi u sħabha jippranzaw f’nofs <l-m>il-ħanut</l-m> meta jkun sar <l-m>il-ħin</l-m> tal-ikla ta’ waranofsinhar, allura ma jimpurtax għax dejjem joffrulek ftit u meta tispjegalhom li ma tikolx laħam taqsmilhom qalbhom. ħasbuk cool u interessanti għax bejn sewda u bejn bajda, b’aċċent stramb li kważi <l-m>tat-turist</l-m> l-abjad, imma ismek Musulman u forsi qisek xi tip ta’ Afrikana imma anka int sirt vittma <l-m>tal-Ewropa</l-m>. ixgħel <l-m>l-istazzjon</l-m> li jdoqq <l-m>l-Afrobeats</l-m>. meta tqum biex tfarfar ġismek u testendi <l-m>x-xewka</l-m> ta’ dahrek, forsi tagħti <l-m>l-ħajja</l-m> bejn rukkell u ieħor, ikollok aptit tiżfen. imma ma tazzardax. anka int vittma <l-m>tal-Ewropa</l-m>. minn hawn tisma’ <l-m>l-fdalijiet</l-m> tal-karaoke <l-m>tal-bar</l-m> Ingliż, <l-m>l-ikbar</l-m> wieħed f’dik <l-m>it-triq</l-m>, imġenġel u ħerqan, imdeffes bejn bar Irlandiż, ħanut <l-m>tal-ikel</l-m> Maċedonjan u ieħor Niġerjan <l-m>mal-kantuniera</l-m>, li faċċata tiegħu ssib kafetterija Taljana. hawnhekk <l-m>il-bankina</l-m> ma tiqafx <l-m>bil-mod</l-m> li tistennieha tieqaf, lanqas. jekk tgħaddi minn hemm qabel <l-m>l-għaxra</l-m> ta’ filgħodu, taf issib <l-m>ir-rimi</l-m> tal-istonku ta’ xi bravu li ħaseb li jiflaħ <l-m>il-lejl</l-m> ta’ qabel, jew biċċa pizza mirwija, envelopp <l-m>t’ikla</l-m> li ma seħħitx. <l-m>fil-vini</l-m> ta’ din <l-m>il-belt</l-m> ma ssibx għasafar iduru <l-m>man-niċeċ</l-m> u <l-m>s-saqajn</l-m> ta’ dawk mixjin <l-m>fit-triq</l-m>, mhux <l-m>bħall-Belt</l-m> jew <l-m>Tas-Sliema</l-m>, allura jibqgħu jinġemgħu <l-m>l-fdalijiet</l-m> tal-ikel minsi. jistenna lil <l-m>taż-żibel</l-m>. mhux għax post maħmuġ u mitluq, imma għax għandu <l-m>l-ħajja</l-m>, ħajja urbana li ma tantx hemm kliem għaliha, sakemm ma ssirx tafha b’mod intimu.</p>
+			
+		</div>
+		
+			<aside><p>708 kelmiet</p></aside>
+		
+	</a>
+</li>
+
+	
+		
+
+<li >
+	<a class="promo  gunju promo-esej story-14" href="/kurt-borg-ġilda/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Ġilda', 10]);">
 		<header>
 	<ul>
 	
@@ -588,7 +704,7 @@
 		
 
 <li >
-	<a class="promo gunju-2023 promo-storja story-13" href="/charlene-galea-ġismi-battikata/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Ġismi Battikata', 9]);">
+	<a class="promo  gunju promo-storja story-13" href="/charlene-galea-ġismi-battikata/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Ġismi Battikata', 11]);">
 		<header>
 	<ul>
 	
@@ -631,7 +747,50 @@
 		
 
 <li >
-	<a class="promo mejju-2023 promo-esej story-7" href="/omar-nshea-gilgamex-dak-li-ra-l-qiegħ/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Gilgamex, Dak li Ra l-Qiegħ', 10]);">
+	<a class="promo  april promo-storja story-58" href="/joe-gatt-general-strike/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: General Strike', 12]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">April 2024</li>
+	
+	
+	</ul>
+	
+		<h1>
+			General Strike
+			
+		</h1>
+	
+	
+<h2>
+	
+	
+		
+		
+			
+				
+					<span class="author">Joe Gatt</span>
+</h2>
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Morna lejn <l-m>il-Marsa</l-m> u hemmhekk beda <l-m>l-inkwiet</l-m>. Kellna <l-m>l-pitrolju</l-m> u <l-m>ċ-ċraret</l-m> qodma. Xi ħadd ġab miegħu serrieq <l-m>tal-mastrudaxxa</l-m>. Inżilna <l-m>ċ-Ċimiterju</l-m> tat-Torok, mhux ’il bogħod minn fejn kienu jgħixu xi tnejn jew tlieta minna. Konna nafu fejn kien hemm żewġ arbli <l-m>tar-Rediffusion</l-m>, kbar, <l-m>tal-injam</l-m>. Ridna naqtgħulhom <l-m>il-wajers</l-m> għax ma kinux riedu jxandru <l-m>l-bulettini</l-m> tal-union. Propaganda <l-m>tal-Ingliżi</l-m> biss riedu, <l-m>il-ġurnata</l-m> kollha. Għamilna toqba <l-m>fl-arblu</l-m>, xarrabna <l-m>ċ-ċraret</l-m> fil-pitrolju, u deffisniehom <l-m>fit-toqba</l-m> li konna taqqabna. Qabbadna <l-m>ċ-ċraret</l-m> b’sulfarina u rsaqna lura biex naraw <l-m>l-arbli</l-m> jinħarqu. Meta konna ċerti li kienu se jinħarqu <l-m>sal-art</l-m>, morna lura <l-m>d-dar</l-m> għax <l-m>in-nisa</l-m> kienu inkwetati u kienu qalulna biex ma nibqgħux barra tard, imma <l-m>għall-inqas</l-m> konna nafu li għamilna <l-m>l-biċċa</l-m> tagħna. Imbagħad waranofsinhar erġajna ħriġna. Konna xi mitt persuna, jew mitejn, tfajna <l-m>l-ġebel</l-m> fuq <l-m>il-pulizija</l-m>, u kissirna <l-m>t-twieqi</l-m> tal-karozzi li kienu fihom. Smajna li kienu sejrin lejn Blata <l-m>l-Bajda</l-m>, allura <l-m>morn’hemm</l-m>, ħdejn <l-m>il-flats</l-m> tal-Arċisqof, u xħin wasalna rajna li <l-m>n-nies</l-m> kienu qed jitfgħulhom <l-m>il-ġebel</l-m> lill-pulizija. Surġent ħareġ <l-m>mill-karozza</l-m> biex ineħħi <l-m>l-ġebel</l-m> li kien qed jimblokka <l-m>t-triq</l-m> u xi ħadd <l-m>mir-Rerum</l-m> Novarum Flats tefagħlu żewġt iqsari. <l-m>Il-pulizija</l-m> l-oħra kienu telgħin <l-m>l-għolja</l-m> biex jiċċirkundawna, allura qtajna qalbna u ħallejniehom jarrestawna. Tfajna landa petrol fuq <l-m>il-gverta</l-m> ta’ vapur imma ma ġara xejn.</p>
+			
+		</div>
+		
+			<aside><p>5 329 kelma</p></aside>
+		
+	</a>
+</li>
+
+	
+		
+
+<li >
+	<a class="promo  mejju promo-esej story-7" href="/omar-nshea-gilgamex-dak-li-ra-l-qiegħ/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Gilgamex, Dak li Ra l-Qiegħ', 13]);">
 		<header>
 	<ul>
 	
@@ -665,7 +824,7 @@
 			
 		</div>
 		
-			<aside><p>6 316-il kelma</p></aside>
+			<aside><p>6 318-il kelma</p></aside>
 		
 	</a>
 </li>
@@ -674,7 +833,7 @@
 		
 
 <li >
-	<a class="promo mejju-2023 promo-storja story-6" href="/noah-fabri-ħsieb-il-ħamiema/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Ħsieb il-Ħamiema', 11]);">
+	<a class="promo  mejju promo-storja story-6" href="/noah-fabri-ħsieb-il-ħamiema/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Ħsieb il-Ħamiema', 14]);">
 		<header>
 	<ul>
 	
@@ -718,11 +877,11 @@
 		
 
 <li >
-	<a class="promo dicembru-2023 promo-esej story-31" href="/noah-fabri-insalata/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Insalata', 12]);">
+	<a class="promo  novembru promo-esej story-31" href="/noah-fabri-insalata/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Insalata', 15]);">
 		<header>
 	<ul>
 	
-		<li class="header-label">Diċembru 2023</li>
+		<li class="header-label">Novembru 2023</li>
 	
 	
 	</ul>
@@ -761,7 +920,7 @@
 		
 
 <li >
-	<a class="promo dicembru-2023 promo-esej story-33" href="/omar-nshea-joey-tilbes-it-tabù-tinża/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Joey Tilbes, it-Tabù Tinża&#92;&#39;', 13]);">
+	<a class="promo  dicembru promo-esej story-33" href="/omar-nshea-joey-tilbes-it-tabù-tinża/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Joey Tilbes, it-Tabù Tinża&#92;&#39;', 16]);">
 		<header>
 	<ul>
 	
@@ -804,7 +963,7 @@
 		
 
 <li >
-	<a class="promo frar-2024 promo-esej story-49" href="/anton-jäger-karl-baldacchino-kollox-iperpolitiku-ġenealoġija-tal-preżent/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Kollox Iperpolitiku: Ġenealoġija tal-preżent', 14]);">
+	<a class="promo  frar promo-esej story-49" href="/anton-jäger-karl-baldacchino-kollox-iperpolitiku-ġenealoġija-tal-preżent/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Kollox Iperpolitiku', 17]);">
 		<header>
 	<ul>
 	
@@ -840,7 +999,7 @@ Fl-1989, però — is-sena li fiha ttieħdu dawn <l-m>ir-ritratti </l-m>�
 			
 		</div>
 		
-			<aside><p>5 620-il kelma</p></aside>
+			<aside><p>5 620 kelma</p></aside>
 		
 	</a>
 </li>
@@ -849,7 +1008,7 @@ Fl-1989, però — is-sena li fiha ttieħdu dawn <l-m>ir-ritratti </l-m>�
 		
 
 <li >
-	<a class="promo ottubru-2023 promo-esej story-25" href="/joe-gatt-kontra-tagħna-għaliex-magħna/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Kontra Tagħna Għaliex Magħna', 15]);">
+	<a class="promo  ottubru promo-esej story-25" href="/joe-gatt-kontra-tagħna-għaliex-magħna/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Kontra Tagħna Għaliex Magħna', 18]);">
 		<header>
 	<ul>
 	
@@ -883,7 +1042,7 @@ Fl-1989, però — is-sena li fiha ttieħdu dawn <l-m>ir-ritratti </l-m>�
 			
 		</div>
 		
-			<aside><p>9 120-il kelma</p></aside>
+			<aside><p>9 122 kelma</p></aside>
 		
 	</a>
 </li>
@@ -892,7 +1051,7 @@ Fl-1989, però — is-sena li fiha ttieħdu dawn <l-m>ir-ritratti </l-m>�
 		
 
 <li >
-	<a class="promo mejju-2023 promo-esej story-11" href="/joe-gatt-il-kuxjenza-fit-truf/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Il-Kuxjenza fit-Truf', 16]);">
+	<a class="promo  mejju promo-esej story-11" href="/joe-gatt-il-kuxjenza-fit-truf/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Il-Kuxjenza fit-Truf', 19]);">
 		<header>
 	<ul>
 	
@@ -935,7 +1094,7 @@ Fl-1989, però — is-sena li fiha ttieħdu dawn <l-m>ir-ritratti </l-m>�
 		
 
 <li >
-	<a class="promo lulju-2023 promo-esej story-16" href="/loranne-vella-il-lanza-il-labra-il-qoffa-l-azzarin/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Il-Lanza, il-Labra, il-Qoffa, l-Azzarin', 17]);">
+	<a class="promo  lulju promo-esej story-16" href="/loranne-vella-il-lanza-il-labra-il-qoffa-l-azzarin/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Il-Lanza, il-Labra, il-Qoffa, l-Azzarin', 20]);">
 		<header>
 	<ul>
 	
@@ -969,7 +1128,7 @@ Fl-1989, però — is-sena li fiha ttieħdu dawn <l-m>ir-ritratti </l-m>�
 			
 		</div>
 		
-			<aside><p>8 071 kelma</p></aside>
+			<aside><p>8 073 kelma</p></aside>
 		
 	</a>
 </li>
@@ -978,7 +1137,7 @@ Fl-1989, però — is-sena li fiha ttieħdu dawn <l-m>ir-ritratti </l-m>�
 		
 
 <li >
-	<a class="promo awwissu-2023 promo-storja story-17" href="/miriam-galea-lejl-u-nhar/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Lejl u Nhar', 18]);">
+	<a class="promo  awwissu promo-storja story-17" href="/miriam-galea-lejl-u-nhar/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Lejl u Nhar', 21]);">
 		<header>
 	<ul>
 	
@@ -1021,7 +1180,7 @@ Fl-1989, però — is-sena li fiha ttieħdu dawn <l-m>ir-ritratti </l-m>�
 		
 
 <li >
-	<a class="promo marzu-2024 promo-storja story-43" href="/davinia-hamilton-likantropi/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Likantropi', 19]);">
+	<a class="promo  marzu promo-storja story-43" href="/davinia-hamilton-likantropi/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Likantropi', 22]);">
 		<header>
 	<ul>
 	
@@ -1064,7 +1223,50 @@ Fl-1989, però — is-sena li fiha ttieħdu dawn <l-m>ir-ritratti </l-m>�
 		
 
 <li >
-	<a class="promo jannar-2024 promo-esej story-34" href="/kris-polidano-manifest-kontra-ż-żmien/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Manifest Kontra ż-Żmien', 20]);">
+	<a class="promo  mejju promo-poezija story-61" href="/jasmine-bajada-lil-poeta-li-qalli-li-qed-jikteb-bħal-wieħed-vera-xiħ-dan-l-aħħar/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: lil poeta li qalli li qed jikteb bħal wieħed vera xiħ dan l-aħħar ', 23]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Mejju 2024</li>
+	
+	
+	</ul>
+	
+		<h1>
+			lil poeta li qalli li qed jikteb bħal wieħed vera xiħ dan <l-m>l-aħħar </l-m>
+			
+		</h1>
+	
+	
+<h2>
+	
+	
+		
+		
+			
+				
+					<span class="author">Jasmine Bajada</span>
+</h2>
+
+	
+</header>
+
+		<div class="body-text poetry">
+			
+				<p>il-kliem li ktibtli dalgħodu m’hediex.<br/>għadni nhewden x’messni għedt<br/>biex niskonġr’hom minn għadmek — <br/>minn leħnek. bexxaqtli tieqa bihom;<br/>ilmaħtek bilqiegħda fil-kamra, waħdek,<br/>diqitek tidwi fil-vojt għammieq.<br/>Mill-bogħod, imbagħad, ġew il-vrus…<br/>qaluli li inti, poeta, m’għadekx tħożż hekk,<br/>għall-gost. issa li qbadt ir-ritmu taċ-ċinju<br/>tixtieqek għadek bilbla tgħanni binhar.<br/>tibżax: l-istrument għadu f’idejk bla trab.<br/>u inti bħal wieħed vera xiħ li jinsa kollox,<br/>ank’isem ommu, qabel jinsa kif jaqbad<br/>dak l-argunett ta’ dari. titnih kif titnih,<br/>ħa jdoqqlok ħelu, sabiħ.</p>
+			
+		</div>
+		
+			<aside><p>80 kelma</p></aside>
+		
+	</a>
+</li>
+
+	
+		
+
+<li >
+	<a class="promo  jannar promo-esej story-34" href="/kris-polidano-manifest-kontra-ż-żmien/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Manifest Kontra ż-Żmien', 24]);">
 		<header>
 	<ul>
 	
@@ -1107,7 +1309,7 @@ Fl-1989, però — is-sena li fiha ttieħdu dawn <l-m>ir-ritratti </l-m>�
 		
 
 <li >
-	<a class="promo frar-2024 promo-esej story-40" href="/jien_a-il-mara-tas-suldat/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Il-Mara tas-Suldat', 21]);">
+	<a class="promo  frar promo-esej story-40" href="/jien_a-il-mara-tas-suldat/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Il-Mara tas-Suldat', 25]);">
 		<header>
 	<ul>
 	
@@ -1158,7 +1360,7 @@ Fl-1989, però — is-sena li fiha ttieħdu dawn <l-m>ir-ritratti </l-m>�
 		
 
 <li >
-	<a class="promo novembru-2023 promo-poezija story-28" href="/leslie-vassallo-marċ-maqbuż/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Marċ Maqbuż', 22]);">
+	<a class="promo  novembru promo-poezija story-28" href="/leslie-vassallo-marċ-maqbuż/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Marċ Maqbuż', 26]);">
 		<header>
 	<ul>
 	
@@ -1201,7 +1403,7 @@ Fl-1989, però — is-sena li fiha ttieħdu dawn <l-m>ir-ritratti </l-m>�
 		
 
 <li >
-	<a class="promo lulju-2023 promo-storja story-15" href="/rowena-grech-medusa/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Medusa', 23]);">
+	<a class="promo  lulju promo-storja story-15" href="/rowena-grech-medusa/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Medusa', 27]);">
 		<header>
 	<ul>
 	
@@ -1246,7 +1448,7 @@ Mela darba, ħmistax-il sena ilu, meta kont għadni tifla, kont ngħix <l-m>mal-
 		
 
 <li >
-	<a class="promo awwissu-2023 promo-poezija story-18" href="/matthew-schembri-mona-lisa-karnival-ieħor/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: mona lisa | karnival ieħor', 24]);">
+	<a class="promo  awwissu promo-poezija story-18" href="/matthew-schembri-mona-lisa-karnival-ieħor/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: mona lisa | karnival ieħor', 28]);">
 		<header>
 	<ul>
 	
@@ -1289,7 +1491,7 @@ Mela darba, ħmistax-il sena ilu, meta kont għadni tifla, kont ngħix <l-m>mal-
 		
 
 <li >
-	<a class="promo novembru-2023 promo-poezija story-27" href="/kris-polidano-na-i-hom/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: -Na -I -Hom', 25]);">
+	<a class="promo  novembru promo-poezija story-27" href="/kris-polidano-na-i-hom/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: -Na -I -Hom', 29]);">
 		<header>
 	<ul>
 	
@@ -1331,8 +1533,106 @@ Mela darba, ħmistax-il sena ilu, meta kont għadni tifla, kont ngħix <l-m>mal-
 	
 		
 
+<li  class="multiple-episodes">
+	<a class="promo  mejju promo-esej story-66 is-episode" href="/franco-bifo-berardi-karl-baldacchino-nifs-kaos-u-poeżija-introduzzjoni/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Nifs', 30]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Mejju 2024</li>
+	
+	
+	</ul>
+	
+		<h1>
+			Nifs
+			
+				<span class="episode-number">#0</span>
+			
+		</h1>
+	
+	
+<h2>
+	
+	
+		<span class="author">Franco “Bifo” Berardi</span> <span class="translator">(tr Karl Baldacchino)</span>
+	
+</h2>
+
+	
+		<h3>
+			
+				<span class="episode-number">0. </span>
+			
+			Introduzzjoni 
+		</h3>
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>F’<l-m>dal-ktieb</l-m> il-ġdid, li hu ddedikat <l-m>lill-kundizzjoni</l-m> ta’ qtugħ ta’ nifs kontemporanja tagħna, nirritorna <l-m>għall-metafora</l-m> tal-poeżija bħala <l-m>l-unika</l-m> triq <l-m>għall-ħarba</l-m> mis-soffokazzjoni. Illum <l-m>il-poter</l-m> hu bbażat fuq relazzjonijiet astratti bejn entitajiet numeriċi. Filwaqt li <l-m>l-isfera</l-m> finanzjarja hija ggvernata <l-m>mill-algoritmi</l-m> li jgħaqqdu <l-m>l-frattalji</l-m> ta’ xogħol prekarju, <l-m>l-isfera</l-m> tal-ħajja hija invaduta minn flussi ta’ kaos li jipparalizzaw <l-m>il-ġisem</l-m> soċjali u joħonqu <l-m>n-nifs</l-m> u jifgawh. M’hemm <l-m>l-ebda</l-m> ħarba politika minn din <l-m>in-nassa:</l-m> il-poeżija biss, bħala <l-m>l-eċċess</l-m> ta’ skambju semjotiku, tista’ terġa’ tattiva <l-m>n-nifs</l-m>. <l-m>Il-poeżija</l-m> biss tgħinna <l-m>fl-apokalissi</l-m> li diġà qed tifferoċja taħt <l-m>l-effett</l-m> ta’ deċennji ta’ assolutiżmu finanzjarju. <l-m>Il-poeżija</l-m> biss se ttaffi <l-m>t-tbatija</l-m> ta’ moħħ <l-m>l-inġinier</l-m> u ta’ moħħ <l-m>il-poeta</l-m>, u se tkun qed taġixxi biex treġġa’ lura <l-m>l-ħakma</l-m> tal-isfera finanzjarja fuq <l-m>il-lingwa</l-m>.</p>
+			
+		</div>
+		
+			<aside><p>708 kelmiet</p></aside>
+		
+	</a>
+</li>
+
+	
+		
+
+<li  class="multiple-episodes">
+	<a class="promo  mejju promo-esej story-67 is-episode" href="/franco-bifo-berardi-karl-baldacchino-nifs-kaos-u-poeżija-1-ma-nistax-nieħu-nifs/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Nifs: Kaos u Poeżija #1', 31]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Mejju 2024</li>
+	
+	
+	</ul>
+	
+		<h1>
+			Nifs
+			
+				<span class="episode-number">#1</span>
+			
+		</h1>
+	
+	
+<h2>
+	
+	
+		<span class="author">Franco “Bifo” Berardi</span> <span class="translator">(tr Karl Baldacchino)</span>
+	
+</h2>
+
+	
+		<h3>
+			
+				<span class="episode-number">1. </span>
+			
+			Ma nistax nieħu nifs
+		</h3>
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Il-kaos u <l-m>r-ritmu</l-m> huma <l-m>l-linja</l-m> ta’ ħsieb ewlenija ta’ dan <l-m>il-ktieb</l-m>, li jterraq <l-m>fl-apokalissi</l-m> ta’ żmienna: <l-m>fit-tieni</l-m> deċennju <l-m>tas-seklu</l-m> wieħed u għoxrin, <l-m>il-pajsaġġ</l-m> mentali u <l-m>x-xena</l-m> soċjali huma mgħarrqa minn flussi ta’ skuntentizza u vjolenza. <l-m>Fil-poeżija</l-m> tiegħu, Hölderlin jipprevedi <l-m>l-kaos</l-m> tal-modernità u <l-m>n-nuqqas</l-m> ta’ nifs li ġej. Hija problema ta’ kejl, jgħid hu. M’hemm <l-m>l-ebda</l-m> kejl f’din <l-m>l-art</l-m>, għalhekk <l-m>is-sens</l-m> ta’ kejl tagħna (ir-ritmu) huwa biss projezzjoni <l-m>tan-nifs</l-m> tagħna: <l-m>il-poeżija</l-m>. Huwa għalhekk li <l-m>l-bniedem</l-m> jgħix poetikament, għalkemm “jistħoqqlu” mod ieħor. Hölderlin: “Jista’ bniedem iħares ’il fuq / <l-m>Mit-tbatija</l-m> totali ta’ ħajtu / U jgħid: Ħa nkun ukoll / Bħal dawn [allat]? Iva. Sakemm iddum <l-m>it-tjubija</l-m>, / Safja, ġewwa qalbu, jista’ jkejjel lilu nnifsu <l-m>bil-ferħ</l-m> / Kontra <l-m>d-divin</l-m>.<span class="pullsemi">”</span></p>
+			
+		</div>
+		
+			<aside><p>1 271 kelma</p></aside>
+		
+	</a>
+</li>
+
+	
+		
+
 <li >
-	<a class="promo mejju-2023 promo-poezija story-9" href="/maria-theuma-nofs-triq-dejjem-nieqaf/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Nofs triq, dejjem nieqaf', 26]);">
+	<a class="promo  mejju promo-poezija story-9" href="/maria-theuma-nofs-triq-dejjem-nieqaf/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Nofs triq, dejjem nieqaf', 32]);">
 		<header>
 	<ul>
 	
@@ -1375,7 +1675,7 @@ Mela darba, ħmistax-il sena ilu, meta kont għadni tifla, kont ngħix <l-m>mal-
 		
 
 <li >
-	<a class="promo april-2024 promo-esej story-56" href="/aaron-aquilina-persjani/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Persjani', 27]);">
+	<a class="promo  april promo-esej story-56" href="/aaron-aquilina-persjani/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Persjani', 33]);">
 		<header>
 	<ul>
 	
@@ -1418,7 +1718,50 @@ Mela darba, ħmistax-il sena ilu, meta kont għadni tifla, kont ngħix <l-m>mal-
 		
 
 <li >
-	<a class="promo novembru-2023 promo-storja story-26" href="/simon-bartolo-qamar-aħmar/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Qamar Aħmar', 28]);">
+	<a class="promo  mejju promo-esej story-63" href="/karl-baldacchino-politika-bla-nifs/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Politika bla Nifs', 34]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Mejju 2024</li>
+	
+	
+	</ul>
+	
+		<h1>
+			Politika bla Nifs
+			
+		</h1>
+	
+	
+<h2>
+	
+	
+		
+		
+			
+				
+					<span class="author">Karl Baldacchino</span>
+</h2>
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Ħadd ma jista’ jiċħad li ninsabu f’punt <l-m>fl-istorja</l-m> tad-dinja fejn għandna iktar minn kollox. Iktar krudeltajiet, iżda wkoll iktar ġesti ta’ rieda tajba. Iktar problemi finanzjarji, <l-m>fl-istess</l-m> ħin li iktar nies qed jistagħnew. Iktar kriżijiet ta’ kull xorta u għamla, ibda <l-m>mill-ambjent</l-m> u spiċċa <l-m>bil-mard</l-m>. <l-m>L-istess</l-m>, <l-m>it-tagħrif</l-m> dwar <l-m>it-tnejn</l-m>. Iktar ksenofobija u razziżmu, kif ukoll iktar diskorsi ta’ inklużjoni soċjali u ugwaljanza. Primarjament, għandna iktar minn kollox għaliex esposti għal ħafna iktar meta kkumparat ma’ dak li kien qabel jesponina għalih <l-m>il-ġurnal</l-m> ta’ kuljum, kemm-il darba kien jinxtara u jinqara. <l-m>L-esponiment</l-m> tagħna għal dan kollu issa jinsab biss skrolljatura ’l bogħod, anki jekk mhuwa xejn ħlief dak li Jean Baudrillard isejjaħ simulakru. Meta <l-m>fl-1991</l-m> kiteb li “<l-m>l-gwerra</l-m> tal-Golf ma seħħitx”<span class="pull">,</span> ried ifisser li <l-m>l-Punent</l-m> esperjenza biss rappreżentazzjoni medjatika <l-m>tal-gwerra</l-m>. Essenzjalment, dan japplika għal kollox <l-m>fil-kuntest</l-m> preżenti ta’ avvanzi teknoloġiċi kontinwi u <l-m>l-governanza</l-m> moħbija <l-m>tal-algoritmi</l-m>. Iżda, dan huwa biss każ ta’ kif <l-m>il-mezzi</l-m> soċjali kapaċi jiġbdulna <l-m>l-attenzjoni</l-m> u jamplifikaw <l-m>is-sensi</l-m> tagħna? Jew huwa minnu li kollox żdied b’mod goff u li konsegwentament tlifna kull tip ta’ kontroll? Forsi sforz <l-m>l-indifferenza</l-m> mifruxa? Forsi sforz <l-m>l-aljenazzjoni</l-m>? <l-m>Il-konsum</l-m> bla rażan? <l-m>Il-politika</l-m>? Ċertament dawn ukoll kollha għandna iktar minnhom. <l-m>Il-politika</l-m>, però, b’mod partikolarment ġdid. Kif jikteb Alberto Toscano, “dawk li jsibu ruħhom jgħixu fi żminijiet ta’ kriżi u diżorjentazzjoni spiss ifittxu kenn u gwida <l-m>fl-analoġiji</l-m>.<span class="pullsemi">”</span> Għaldaqstant, <l-m>il-politika</l-m> preżenti bħal donnha bla nifs — kemm għax kollox huwa politiku iktar minn qatt qabel, kif ukoll għax <l-m>fl-istess</l-m> ħin hija politika dgħajfa.</p>
+			
+		</div>
+		
+			<aside><p>2 198 kelma</p></aside>
+		
+	</a>
+</li>
+
+	
+		
+
+<li >
+	<a class="promo  novembru promo-storja story-26" href="/simon-bartolo-qamar-aħmar/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Qamar Aħmar', 35]);">
 		<header>
 	<ul>
 	
@@ -1461,7 +1804,7 @@ Mela darba, ħmistax-il sena ilu, meta kont għadni tifla, kont ngħix <l-m>mal-
 		
 
 <li >
-	<a class="promo mejju-2023 promo-memoir story-8" href="/romeo-roxman-gatt-qarn/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Qarn', 29]);">
+	<a class="promo  mejju promo-memoir story-8" href="/romeo-roxman-gatt-qarn/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Qarn', 36]);">
 		<header>
 	<ul>
 	
@@ -1504,7 +1847,7 @@ Mela darba, ħmistax-il sena ilu, meta kont għadni tifla, kont ngħix <l-m>mal-
 		
 
 <li >
-	<a class="promo marzu-2024 promo-terminu story-52" href="/il-kliem-fit-teorija-queer-kwir/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: queer/kwir', 30]);">
+	<a class="promo  marzu promo-terminu story-52" href="/il-kliem-fit-teorija-queer-kwir/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: queer/kwir', 37]);">
 		<header>
 	<ul>
 	
@@ -1564,7 +1907,7 @@ Mela darba, ħmistax-il sena ilu, meta kont għadni tifla, kont ngħix <l-m>mal-
 		
 
 <li >
-	<a class="promo mejju-2023 promo-storja story-5" href="/ryan-falzon-reċti-tal-kbar-parties-tat-tfal/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Reċti tal-Kbar, Parties tat-Tfal', 31]);">
+	<a class="promo  mejju promo-storja story-5" href="/ryan-falzon-reċti-tal-kbar-parties-tat-tfal/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Reċti tal-Kbar, Parties tat-Tfal', 38]);">
 		<header>
 	<ul>
 	
@@ -1608,7 +1951,7 @@ Mela darba, ħmistax-il sena ilu, meta kont għadni tifla, kont ngħix <l-m>mal-
 		
 
 <li >
-	<a class="promo jannar-2024 promo-poezija story-38" href="/antoine-cassar-is-solitudni-tal-fotografu/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Is-Solitudni tal-Fotografu', 32]);">
+	<a class="promo  jannar promo-poezija story-38" href="/antoine-cassar-is-solitudni-tal-fotografu/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Is-Solitudni tal-Fotografu', 39]);">
 		<header>
 	<ul>
 	
@@ -1651,7 +1994,7 @@ Mela darba, ħmistax-il sena ilu, meta kont għadni tifla, kont ngħix <l-m>mal-
 		
 
 <li >
-	<a class="promo april-2024 promo-esej story-48 is-episode" href="/jimmy-grima-splużjonijiet-1-il-kwiet-u-l-lejl/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Splużjonijiet #1', 33]);">
+	<a class="promo  april promo-esej story-48 is-episode" href="/jimmy-grima-splużjonijiet-1-il-kwiet-u-l-lejl/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Splużjonijiet #1', 40]);">
 		<header>
 	<ul>
 	
@@ -1701,7 +2044,7 @@ Mela darba, ħmistax-il sena ilu, meta kont għadni tifla, kont ngħix <l-m>mal-
 		
 
 <li >
-	<a class="promo mejju-2023 promo-xihaga-ohra story-10" href="/italo-svevo-joe-gatt-it-tipjip/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: It-Tipjip', 34]);">
+	<a class="promo  mejju promo-xihaga-ohra story-10" href="/italo-svevo-joe-gatt-it-tipjip/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: It-Tipjip', 41]);">
 		<header>
 	<ul>
 	
@@ -1741,7 +2084,7 @@ Mela darba, ħmistax-il sena ilu, meta kont għadni tifla, kont ngħix <l-m>mal-
 		
 
 <li >
-	<a class="promo novembru-2023 promo-poezija story-29" href="/leslie-vassallo-wirja/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Wirja', 35]);">
+	<a class="promo  novembru promo-poezija story-29" href="/leslie-vassallo-wirja/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Wirja', 42]);">
 		<header>
 	<ul>
 	
@@ -1784,7 +2127,7 @@ Mela darba, ħmistax-il sena ilu, meta kont għadni tifla, kont ngħix <l-m>mal-
 		
 
 <li >
-	<a class="promo marzu-2024 promo-terminu story-53" href="/il-kliem-fit-teorija-xewqa-xenqa/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: xewqa/xenqa', 36]);">
+	<a class="promo  marzu promo-terminu story-53" href="/il-kliem-fit-teorija-xewqa-xenqa/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: xewqa/xenqa', 43]);">
 		<header>
 	<ul>
 	
@@ -1841,7 +2184,7 @@ Mela darba, ħmistax-il sena ilu, meta kont għadni tifla, kont ngħix <l-m>mal-
 		
 
 <li >
-	<a class="promo ottubru-2023 promo-esej story-22" href="/davinia-hamilton-żerriegħa/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Żerriegħa', 37]);">
+	<a class="promo  ottubru promo-esej story-22" href="/davinia-hamilton-żerriegħa/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Żerriegħa', 44]);">
 		<header>
 	<ul>
 	

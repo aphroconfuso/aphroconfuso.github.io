@@ -48,7 +48,7 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/es/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-41eda743.css">
+		<link rel="stylesheet" href="/css/style-25325009.css">
 		<script>
 			var
 				audioLoaded,
@@ -72,7 +72,8 @@
 				lastReportedScrollPosition,
 				lastScrollPosition,
 				message,
-				monthYear,
+				issueMonth,
+				issueMonthYear,
 				newScrollPosition,
 				pageHeight,
 				percentageProgress,
@@ -138,6 +139,10 @@
 				}
 			}
 			var _paq = window._paq = window._paq || [];
+			const analytics = (arrayInfo) => {
+				if (location.host !== 'aphroconfuso.mt') console.log(arrayInfo);
+				_paq.push(arrayInfo);
+			}
 			_paq.push(['disableCookies']);
 			_paq.push(['enableJSErrorTracking']);
 			_paq.push(['enableHeartBeatTimer']);
@@ -152,20 +157,36 @@
 				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
 			})();
 		</script>
-		<script defer src="/script/script-227.js"></script>
+		<script defer src="/script/script-233.js"></script>
 	</head>
-	<body class="show-nav">
+	<body class="show-nav this-month-mejju">
 		<script>initialiseAfterBody();</script>
 		<div id="top-wrapper">
 			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
 			<nav id="top-nav">
-				<a id="logo-container" href="/"><img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" /></a>
+				<div id="logo-container-wrapper">
+					<div id="logo-container">
+						<a href="/">
+							<img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" />
+						</a>
+					</div>
+					<menu class="hide-mobile" id="menu-carousels">
+						<li class="abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
+					</menu>
+					<menu class="hide-mobile" id="menu-collections">
+						<li class="main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+						<li class="main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					</menu>
+				</div>
 				<input id="menu-toggle" type="checkbox" />
 				<label class='menu-button-container' for="menu-toggle">
 					<span style="display: none">Mobile biss: iftaħ il-menu</span>
 					<div class='menu-button'></div>
 				</label>
-				<menu>
+				<menu id="menu-main">
+					<li class="hide-laptop main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+					<li class="hide-laptop main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					<li class="hide-laptop abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
 					<li><a href="/appuntamenti/">Appuntamenti</a></li>
 					<li><a href="/kontributuri/">Kontributuri</a></li>
 					<li><a href="/werrej/">Werrej</a></li>

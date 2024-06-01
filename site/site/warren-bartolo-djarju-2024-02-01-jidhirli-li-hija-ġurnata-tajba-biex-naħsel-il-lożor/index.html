@@ -39,7 +39,7 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/warren-bartolo-djarju-2024-02-01-jidhirli-li-hija-ġurnata-tajba-biex-naħsel-il-lożor/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-41eda743.css">
+		<link rel="stylesheet" href="/css/style-25325009.css">
 		<script>
 			var
 				audioLoaded,
@@ -63,7 +63,8 @@
 				lastReportedScrollPosition,
 				lastScrollPosition,
 				message,
-				monthYear,
+				issueMonth,
+				issueMonthYear,
 				newScrollPosition,
 				pageHeight,
 				percentageProgress,
@@ -129,6 +130,10 @@
 				}
 			}
 			var _paq = window._paq = window._paq || [];
+			const analytics = (arrayInfo) => {
+				if (location.host !== 'aphroconfuso.mt') console.log(arrayInfo);
+				_paq.push(arrayInfo);
+			}
 			_paq.push(['disableCookies']);
 			_paq.push(['enableJSErrorTracking']);
 			_paq.push(['enableHeartBeatTimer']);
@@ -143,20 +148,36 @@
 				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
 			})();
 		</script>
-		<script defer src="/script/script-227.js"></script>
+		<script defer src="/script/script-233.js"></script>
 	</head>
-	<body class="show-nav">
+	<body class="show-nav this-month-mejju">
 		<script>initialiseAfterBody();</script>
 		<div id="top-wrapper">
 			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
 			<nav id="top-nav">
-				<a id="logo-container" href="/"><img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" /></a>
+				<div id="logo-container-wrapper">
+					<div id="logo-container">
+						<a href="/">
+							<img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" />
+						</a>
+					</div>
+					<menu class="hide-mobile" id="menu-carousels">
+						<li class="abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
+					</menu>
+					<menu class="hide-mobile" id="menu-collections">
+						<li class="main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+						<li class="main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					</menu>
+				</div>
 				<input id="menu-toggle" type="checkbox" />
 				<label class='menu-button-container' for="menu-toggle">
 					<span style="display: none">Mobile biss: iftaħ il-menu</span>
 					<div class='menu-button'></div>
 				</label>
-				<menu>
+				<menu id="menu-main">
+					<li class="hide-laptop main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+					<li class="hide-laptop main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					<li class="hide-laptop abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
 					<li><a href="/appuntamenti/">Appuntamenti</a></li>
 					<li><a href="/kontributuri/">Kontributuri</a></li>
 					<li><a href="/werrej/">Werrej</a></li>
@@ -180,7 +201,7 @@
 			<div id="message"><!-- --></div>
 			<main id="skipto">
 				
-	<article class="content marzu-2024 djarju story story-50">
+	<article class="content marzu djarju story story-50">
 		<header>
 			<ul>
 				<li class="header-label">
@@ -195,7 +216,7 @@
 				
 			</ul>
 			
-				<h1>
+				<h1 data-pagefind-meta="title">
 					Id-Djarju ta’ Warren Bartolo
 					
 						<span class="episode-number">#3</span>
@@ -207,7 +228,7 @@
 				<h3>Jidhirli li hija ġurnata tajba biex naħsel <l-m>il-lożor</l-m></h3>
 			
 			
-<h2>
+<h2 data-pagefind-meta="author">
 	
 	
 		
@@ -224,49 +245,50 @@
 				
 				
 				
-					<table class="sequence-menu">
-						<tr>
-							<td class="order">02.03.24</td>
-							<td class="title">
-							
-								<a href="/warren-bartolo-djarju-2024-03-02-nistħajjilni-qomt-fuq-artal-tas-sagrifiċċju/">Nistħajjilni qomt fuq artal <l-m>tas-sagrifiċċju</l-m></a>
-							
-							</td>
-						</tr>
+					<ul class="generic-menu sequence-menu">
+						<li>
+							<a href="/warren-bartolo-djarju-2024-04-01-noħlom-li-jaqgħuli-s-snien-ta-quddiem/">
+								01.04.24&nbsp;
+								Noħlom li jaqgħuli <l-m>s-snien</l-m> ta’ quddiem</a>
+							</a>
+						</li>
 					
 				
 					
-						<tr class="actual">
-							<td class="order">01.02.24</td>
-							<td class="title">
-							
-								Jidhirli li hija ġurnata tajba biex naħsel <l-m>il-lożor</l-m>
-							
-							</td>
-						</tr>
+						<li>
+							<a href="/warren-bartolo-djarju-2024-03-02-nistħajjilni-qomt-fuq-artal-tas-sagrifiċċju/">
+								02.03.24&nbsp;
+								Nistħajjilni qomt fuq artal <l-m>tas-sagrifiċċju</l-m></a>
+							</a>
+						</li>
 					
 				
 					
-						<tr>
-							<td class="order">08.01.24</td>
-							<td class="title">
+						<li class="active">
 							
-								<a href="/warren-bartolo-djarju-2024-01-08-marlboro-gold-il-favoriti-tiegħi-jgħidli/">Marlboro Gold, <l-m>il-favoriti</l-m> tiegħi, jgħidli</a>
+								01.02.24&nbsp;
+								Jidhirli li hija ġurnata tajba biex naħsel <l-m>il-lożor</l-m></a>
 							
-							</td>
-						</tr>
+						</li>
 					
 				
 					
-						<tr>
-							<td class="order">01.11.23</td>
-							<td class="title">
-							
-								<a href="/warren-bartolo-djarju-2023-11-01-il-mixja-lura-d-dar-kienet-twila-sigarett-wieħed/">Il-mixja lura <l-m>d-dar</l-m> kienet twila sigarett wieħed</a>
-							
-							</td>
-						</tr>
-					</table>
+						<li>
+							<a href="/warren-bartolo-djarju-2024-01-08-marlboro-gold-il-favoriti-tiegħi-jgħidli/">
+								08.01.24&nbsp;
+								Marlboro Gold, <l-m>il-favoriti</l-m> tiegħi, jgħidli</a>
+							</a>
+						</li>
+					
+				
+					
+						<li>
+							<a href="/warren-bartolo-djarju-2023-11-01-il-mixja-lura-d-dar-kienet-twila-sigarett-wieħed/">
+								01.11.23&nbsp;
+								Il-mixja lura <l-m>d-dar</l-m> kienet twila sigarett wieħed</a>
+							</a>
+						</li>
+					</ul>
 				
 				
 					<aside class="body-text promo-adjacent promo-previous">
@@ -290,10 +312,10 @@
 				
 				<div class="promo bookmark-shortcut"><!-- --></div>
 			</section>
-			<section id="grid-body">
+			<section id="grid-body" data-pagefind-body data-pagefind-weight="7">
 				
 					<section class="body-text">
-						<p><span class="initial"><l-m>Fil-ħolma</l-m></span> tiegħi, qiegħed quddiem televixin nara film <l-m>tal-fantaxjenza</l-m>. Ma nistax niftakar eżattament kif kienet <l-m>l-istorja</l-m> imma niftakar f’xena minnhom kien hemm ħafna rġiel libsin sdieri <l-m>tal-ġilda</l-m> sewda (mhux daqshekk differenti <l-m>mill-istil</l-m> ta’ Tom of Finland, li tant jirritani). Kien hemm ukoll żurżieqa triangulari kbira li tintefaħ bħal dawk ta’ meta konna tfal. Ladarba kont fuq nett, stajt jew taqbeż f’qasma li kien hemm <l-m>fin-nofs</l-m> bejn <l-m>iż-żewġ</l-m> żurżiqiet, jew inkella tiżżerżaq ’l isfel <l-m>in-naħa</l-m> l-oħra. <l-m>Fil-qasma</l-m>, <l-m>l-ispazju</l-m> huwa vast. Hemm irġiel ipejpu, jiċċettjaw, jitlajjaw. Tixbah <l-m>il-qasma</l-m> fil-kaktus enormi li minnha tidħol <l-m>in-narratriċi</l-m> f’<em>Death Valley</em> ta’ Melissa Broder, fejn tara verżjonijiet iżgħar <l-m>fl-età</l-m> ta’ żewġha u missierha. Konna qed naraw <l-m>il-film</l-m> fid-Dipartiment <l-m>tal-Klassiċi</l-m> fl-Università ta’ Malta fejn għamilt <l-m>il-Baċellerat</l-m> tiegħi. <l-m>Il-bini</l-m> kien razzett barra <l-m>mill-kampus</l-m> ħdejn parkeġġ. Ma kienx kompletament <l-m>l-istess</l-m>, <l-m>fil-ħolma</l-m> tiegħi, imma stajt ngħid li kienet verżjoni <l-m>tar-razzett</l-m>. Għal xi raġuni, kont ġibt <l-m>il-bagalji</l-m> tiegħi miegħi. F’ħolma li sseħħ qabel <l-m>il-wiri</l-m> tal-film, niftakar li kien hemm ħija, u konna mexjin xi mkien u kellu żewġ mobiles iżda wieħed minnhom kellu <l-m>l-batterija</l-m> baxxa. Inqum u nikteb lil S: <em>Hi birthday boy. Ça va?</em> Nibgħatlu ritratt li ħadtlu meta konna Ateni f’Lulju li għadda. Konna ħdejn <l-m>il-Pirews</l-m> infittxu bajja deċenti biżżejjed biex immorru ngħumu. Konna qed immorru Limanakia u bajjiet oħra tul <l-m>il-kosta</l-m> iżda kienu pjuttost wisq ’il bogħod u tedjanti biex naslu hemm u għalhekk dakinhar iddeċidejna li nippruvaw insibu bajja kemm jista’ jkun <l-m>fil-qrib</l-m>. <l-m>Fir-ritratt</l-m>, qegħdin bilqiegħda fuq <l-m>it-terrazzin</l-m> f’ħanut <l-m>tal-ġelat</l-m>. Huwa liebes <l-m>in-nuċċali</l-m> tax-xemx kannella <l-m>tal-Miu</l-m> Miu tiegħu u <l-m>t-shirt</l-m> polo kannella <l-m>tal-Lacoste</l-m>. Qed jiġbor ftit ġelat b’dawk <l-m>il-kuċċarini</l-m> klassiċi <l-m>tal-ġelat</l-m>. Tiegħu hija roża neon. <l-m>Il-ġelat</l-m> huwa <l-m>tal-vanilla</l-m> u taċ-ċikkulata u huwa servut f’waffle miksija <l-m>bil-hundreds</l-m> and thousands ġewwa tazza <l-m>tal-kartun</l-m>. B qed jagħmlu <l-m>l-pudina</l-m> taċ-chia. <l-m>Fil-gym</l-m> ninnota li xi magni huma neqsin, u oħrajn ġew imċaqalqa. Wara xi għoxrin minuta, nirrealizza li kienu mexxew ħafna <l-m>mill-magni</l-m> għal <l-m>ġol-kamra</l-m> fejn normalment ikun hemm <l-m>il-klassijiet</l-m> tal-yoga. Nidħol. Irwejjaħ <l-m>taż-żebgħa</l-m>. <l-m>Il-ħitan</l-m> huma aħmar jgħajjat. Ifakkruni f’kamra ta’ lukanda li sajf minnhom kont qgħadt fiha meta kont Venezja għal ftit iljieli. Imdawwar b’<l-m>dil-ħmura</l-m>, inħossni qed immut (anke Venezja hekk ħassejtni), qisni Agnes fi <em>Cries and Whispers</em> (1972) ta’ Ingmar Bergman: <em><l-m>It-Tnejn</l-m> filgħodu, u ninsab muġugħa</em>, tikteb <l-m>fid-djarju</l-m> tagħha. Nisma’ “Icy” ta’ Kim Petras u <l-m>l-EP</l-m> il-ġdid ta’ Shygirl <em>tell me</em>. <l-m>Għall-ħabta</l-m> tas-18h nieħu <l-m>l-linja</l-m> 4 u nieqaf Strasbourg-Saint-Denis. Nimxi lejn Republique fejn niltaqa’ ma’ V quddiem <l-m>l-istatwa</l-m> fuq <l-m>in-naħa</l-m> li “tħares lejn Arts et Métiers” kif kien spjegali <l-m>fil-messaġġ</l-m> tiegħu. <l-m>Il-ġimgħa</l-m> li għaddiet kellu jmur <l-m>ir-Rumanija</l-m> għax <l-m>l-appartament</l-m> spiċċa mgħarraq u kellhom bżonn ikissru <l-m>l-bieb</l-m>. Nhar <l-m>il-Ġimgħa</l-m> ta’ dik <l-m>il-ġimgħa</l-m>, kien bagħatli messaġġ biex jgħidli li <l-m>l-ġar</l-m> kien qed jgħinu jiġbor <l-m>l-ilma</l-m> u li issa kien għadu qed jistenna li <l-m>l-ħitan</l-m> jinxfu. <l-m>Il-pjan</l-m> hu li nieklu għandu, imma nispiċċaw nimxu lejn Nation u mmorru <l-m>fil-post</l-m> tal-burgers li morna għandu <l-m>l-aħħar</l-m> darba. Qed immut <l-m>bil-ġuħ</l-m> u niekol <l-m>il-burger</l-m> biċ-ċips supermalajr. Normalment qatt ma nieħu laħam però qatt ma nsejjaħ lili nnifsi veġeterjan. Meta xi nies jistaqsuni, ngħidilhom li qatt ma nixtrih u nsajru <l-m>d-dar</l-m>. Nieklu biss minn barra, u verament kważi qatt. Ngħid lil V li dan <l-m>il-weekend</l-m> aktarx se nkun waħdi għax S se jkun <l-m>fin-Nofsinhar</l-m> ta’ Franza u B probabbilment sejrin Firenze <l-m>għax-xogħol</l-m>. Aktar tard immorru mixja f’Bois de Vincennes. Kont ilni ma mmur sena, minn meta tlaqt <l-m>mill-appartament</l-m> tiegħi <l-m>fid-12e</l-m> arrondissement. Kont niġi hawn kważi kuljum, kultant anki f’nofsillejl fi dlam ċappa. Kont inross <l-m>mal-lag</l-m> għax hemm kienet <l-m>il-parti</l-m> l-iktar imdawla — bir-rifless <l-m>tad-dawl</l-m> tal-qamar. Kont iħossni qed nagħmel xi ħaġa ħażina, u kont nieħu pjaċir. Kienet <l-m>il-mixja</l-m> kwintessenzjalment tiegħi li kont nieħu wara li nieqaf naħdem fuq Saffo <l-m>għal-lejl</l-m>. Kelb b’kullar <l-m>tal-LED</l-m> li jibdel <l-m>il-kulur</l-m> isegwina u V jgħidli li dawn <l-m>il-kullari</l-m> qed isiru aktar trendy issa. Ngħidlu li rajt fuq <l-m>l-Instagram</l-m> ta’ xi ħadd li meta kienet qed tagħmel <l-m>il-borra</l-m> xi ġimgħat ilu, <l-m>il-Bois</l-m> deher tassew sabiħ miksi u donnu <l-m>l-lag</l-m> kien iffriżat. Jgħidli li rari ġie hawn minn mindu rritorna Pariġi, minkejja li jgħix <l-m>fil-qrib</l-m>. Nieqfu wara ftit għax konna mxejna ħafna u ġismi jibda juġagħni. Inpoġġu fuq <l-m>id-dahar</l-m> ta’ bank għax <l-m>is-sedil</l-m> imxarrab. Waqt li qiegħed ma’ V, S jibgħatli ritratt ta’ xi pasti li xtratlu ommu għal għeluq sninu. Nagħraf éclair taċ-ċikkulata, meringue <l-m>tal-lumi</l-m>, millefeuille, imma ma nafx <l-m>l-isem</l-m> tal-erbgħa <l-m>l-oħra</l-m>. Aktar tard jibgħatli messaġġ biex jgħidli li ftakar li meta kien żgħir kien xtara summiena mingħajr ma qal lil ommu. Ħbieha <l-m>fil-gwardarobba</l-m> għal ftit jiem sakemm <l-m>fl-aħħar</l-m> qalilha <l-m>l-verità</l-m>. Niġi lura <l-m>d-dar</l-m> imma B mhux hawn. Nixgħel <l-m>il-heater</l-m> fil-kamra <l-m>tal-banju</l-m> u nieħu doċċa. Nidħol <l-m>fis-sodda</l-m> u nara <em>The Virgin Suicides</em> (1999) għal, naħseb, <l-m>l-għaxar</l-m> darba.</p>
+						<p><l-m>Fil-ħolma</l-m> tiegħi, qiegħed quddiem televixin nara film <l-m>tal-fantaxjenza</l-m>. Ma nistax niftakar eżattament kif kienet <l-m>l-istorja</l-m> imma niftakar f’xena minnhom kien hemm ħafna rġiel libsin sdieri <l-m>tal-ġilda</l-m> sewda (mhux daqshekk differenti <l-m>mill-istil</l-m> ta’ Tom of Finland, li tant jirritani). Kien hemm ukoll żurżieqa triangulari kbira li tintefaħ bħal dawk ta’ meta konna tfal. Ladarba kont fuq nett, stajt jew taqbeż f’qasma li kien hemm <l-m>fin-nofs</l-m> bejn <l-m>iż-żewġ</l-m> żurżiqiet, jew inkella tiżżerżaq ’l isfel <l-m>in-naħa</l-m> l-oħra. <l-m>Fil-qasma</l-m>, <l-m>l-ispazju</l-m> huwa vast. Hemm irġiel ipejpu, jiċċettjaw, jitlajjaw. Tixbah <l-m>il-qasma</l-m> fil-kaktus enormi li minnha tidħol <l-m>in-narratriċi</l-m> f’<em>Death Valley</em> ta’ Melissa Broder, fejn tara verżjonijiet iżgħar <l-m>fl-età</l-m> ta’ żewġha u missierha. Konna qed naraw <l-m>il-film</l-m> fid-Dipartiment <l-m>tal-Klassiċi</l-m> fl-Università ta’ Malta fejn għamilt <l-m>il-Baċellerat</l-m> tiegħi. <l-m>Il-bini</l-m> kien razzett barra <l-m>mill-kampus</l-m> ħdejn parkeġġ. Ma kienx kompletament <l-m>l-istess</l-m>, <l-m>fil-ħolma</l-m> tiegħi, imma stajt ngħid li kienet verżjoni <l-m>tar-razzett</l-m>. Għal xi raġuni, kont ġibt <l-m>il-bagalji</l-m> tiegħi miegħi. F’ħolma li sseħħ qabel <l-m>il-wiri</l-m> tal-film, niftakar li kien hemm ħija, u konna mexjin xi mkien u kellu żewġ mobiles iżda wieħed minnhom kellu <l-m>l-batterija</l-m> baxxa. Inqum u nikteb lil S: <em>Hi birthday boy. Ça va?</em> Nibgħatlu ritratt li ħadtlu meta konna Ateni f’Lulju li għadda. Konna ħdejn <l-m>il-Pirews</l-m> infittxu bajja deċenti biżżejjed biex immorru ngħumu. Konna qed immorru Limanakia u bajjiet oħra tul <l-m>il-kosta</l-m> iżda kienu pjuttost wisq ’il bogħod u tedjanti biex naslu hemm u għalhekk dakinhar iddeċidejna li nippruvaw insibu bajja kemm jista’ jkun <l-m>fil-qrib</l-m>. <l-m>Fir-ritratt</l-m>, qegħdin bilqiegħda fuq <l-m>it-terrazzin</l-m> f’ħanut <l-m>tal-ġelat</l-m>. Huwa liebes <l-m>in-nuċċali</l-m> tax-xemx kannella <l-m>tal-Miu</l-m> Miu tiegħu u <l-m>t-shirt</l-m> polo kannella <l-m>tal-Lacoste</l-m>. Qed jiġbor ftit ġelat b’dawk <l-m>il-kuċċarini</l-m> klassiċi <l-m>tal-ġelat</l-m>. Tiegħu hija roża neon. <l-m>Il-ġelat</l-m> huwa <l-m>tal-vanilla</l-m> u taċ-ċikkulata u huwa servut f’waffle miksija <l-m>bil-hundreds</l-m> and thousands ġewwa tazza <l-m>tal-kartun</l-m>. B qed jagħmlu <l-m>l-pudina</l-m> taċ-chia. <l-m>Fil-gym</l-m> ninnota li xi magni huma neqsin, u oħrajn ġew imċaqalqa. Wara xi għoxrin minuta, nirrealizza li kienu mexxew ħafna <l-m>mill-magni</l-m> għal <l-m>ġol-kamra</l-m> fejn normalment ikun hemm <l-m>il-klassijiet</l-m> tal-yoga. Nidħol. Irwejjaħ <l-m>taż-żebgħa</l-m>. <l-m>Il-ħitan</l-m> huma aħmar jgħajjat. Ifakkruni f’kamra ta’ lukanda li sajf minnhom kont qgħadt fiha meta kont Venezja għal ftit iljieli. Imdawwar b’<l-m>dil-ħmura</l-m>, inħossni qed immut (anke Venezja hekk ħassejtni), qisni Agnes fi <em>Cries and Whispers</em> (1972) ta’ Ingmar Bergman: <em><l-m>It-Tnejn</l-m> filgħodu, u ninsab muġugħa</em>, tikteb <l-m>fid-djarju</l-m> tagħha. Nisma’ “Icy” ta’ Kim Petras u <l-m>l-EP</l-m> il-ġdid ta’ Shygirl <em>tell me</em>. <l-m>Għall-ħabta</l-m> tas-18h nieħu <l-m>l-linja</l-m> 4 u nieqaf Strasbourg-Saint-Denis. Nimxi lejn Republique fejn niltaqa’ ma’ V quddiem <l-m>l-istatwa</l-m> fuq <l-m>in-naħa</l-m> li “tħares lejn Arts et Métiers” kif kien spjegali <l-m>fil-messaġġ</l-m> tiegħu. <l-m>Il-ġimgħa</l-m> li għaddiet kellu jmur <l-m>ir-Rumanija</l-m> għax <l-m>l-appartament</l-m> spiċċa mgħarraq u kellhom bżonn ikissru <l-m>l-bieb</l-m>. Nhar <l-m>il-Ġimgħa</l-m> ta’ dik <l-m>il-ġimgħa</l-m>, kien bagħatli messaġġ biex jgħidli li <l-m>l-ġar</l-m> kien qed jgħinu jiġbor <l-m>l-ilma</l-m> u li issa kien għadu qed jistenna li <l-m>l-ħitan</l-m> jinxfu. <l-m>Il-pjan</l-m> hu li nieklu għandu, imma nispiċċaw nimxu lejn Nation u mmorru <l-m>fil-post</l-m> tal-burgers li morna għandu <l-m>l-aħħar</l-m> darba. Qed immut <l-m>bil-ġuħ</l-m> u niekol <l-m>il-burger</l-m> biċ-ċips supermalajr. Normalment qatt ma nieħu laħam però qatt ma nsejjaħ lili nnifsi veġeterjan. Meta xi nies jistaqsuni, ngħidilhom li qatt ma nixtrih u nsajru <l-m>d-dar</l-m>. Nieklu biss minn barra, u verament kważi qatt. Ngħid lil V li dan <l-m>il-weekend</l-m> aktarx se nkun waħdi għax S se jkun <l-m>fin-Nofsinhar</l-m> ta’ Franza u B probabbilment sejrin Firenze <l-m>għax-xogħol</l-m>. Aktar tard immorru mixja f’Bois de Vincennes. Kont ilni ma mmur sena, minn meta tlaqt <l-m>mill-appartament</l-m> tiegħi <l-m>fid-12e</l-m> arrondissement. Kont niġi hawn kważi kuljum, kultant anki f’nofsillejl fi dlam ċappa. Kont inross <l-m>mal-lag</l-m> għax hemm kienet <l-m>il-parti</l-m> l-iktar imdawla — bir-rifless <l-m>tad-dawl</l-m> tal-qamar. Kont iħossni qed nagħmel xi ħaġa ħażina, u kont nieħu pjaċir. Kienet <l-m>il-mixja</l-m> kwintessenzjalment tiegħi li kont nieħu wara li nieqaf naħdem fuq Saffo <l-m>għal-lejl</l-m>. Kelb b’kullar <l-m>tal-LED</l-m> li jibdel <l-m>il-kulur</l-m> isegwina u V jgħidli li dawn <l-m>il-kullari</l-m> qed isiru aktar trendy issa. Ngħidlu li rajt fuq <l-m>l-Instagram</l-m> ta’ xi ħadd li meta kienet qed tagħmel <l-m>il-borra</l-m> xi ġimgħat ilu, <l-m>il-Bois</l-m> deher tassew sabiħ miksi u donnu <l-m>l-lag</l-m> kien iffriżat. Jgħidli li rari ġie hawn minn mindu rritorna Pariġi, minkejja li jgħix <l-m>fil-qrib</l-m>. Nieqfu wara ftit għax konna mxejna ħafna u ġismi jibda juġagħni. Inpoġġu fuq <l-m>id-dahar</l-m> ta’ bank għax <l-m>is-sedil</l-m> imxarrab. Waqt li qiegħed ma’ V, S jibgħatli ritratt ta’ xi pasti li xtratlu ommu għal għeluq sninu. Nagħraf éclair taċ-ċikkulata, meringue <l-m>tal-lumi</l-m>, millefeuille, imma ma nafx <l-m>l-isem</l-m> tal-erbgħa <l-m>l-oħra</l-m>. Aktar tard jibgħatli messaġġ biex jgħidli li ftakar li meta kien żgħir kien xtara summiena mingħajr ma qal lil ommu. Ħbieha <l-m>fil-gwardarobba</l-m> għal ftit jiem sakemm <l-m>fl-aħħar</l-m> qalilha <l-m>l-verità</l-m>. Niġi lura <l-m>d-dar</l-m> imma B mhux hawn. Nixgħel <l-m>il-heater</l-m> fil-kamra <l-m>tal-banju</l-m> u nieħu doċċa. Nidħol <l-m>fis-sodda</l-m> u nara <em>The Virgin Suicides</em> (1999) għal, naħseb, <l-m>l-għaxar</l-m> darba.</p>
 <hr><h6 id="2-ta-frar-2024">2 ta’ Frar 2024</h6>
 <p>Inqum <l-m>bil-ħoss</l-m> tal-airfryer iżarżar u <l-m>r-riħa</l-m> ta’ patata ħelwa trejjaħ minn taħt <l-m>il-bieb</l-m> tal-kamra <l-m>tas-sodda</l-m> tiegħi. Inqatta’ <l-m>n-nofstanhar</l-m> kollu nipprova nikteb. Insaħħan roqgħa patata maxx, li ppreparajt dalgħodu, kull siegħa għax kull darba ma nkunx nista’ niddeċiedi kemm għandi ġuħ. <l-m>Il-kikkra</l-m> kafè, minkejja li nżommha quddiemi, ninsieha, u nqum u mmur insaħħanha <l-m>fil-microwave</l-m> imma nibqa’ ninsieha u kull nofs siegħa nirrepeti <l-m>l-proċess</l-m>. Nistenna li B jiġu lura <l-m>d-dar</l-m> mix-xogħol biex inkunu nistgħu mmorru La Louve flimkien biex nagħmlu xirja. Nagħmel lista: bajd, tofu, zucchini, bżar, banana, ħalib <l-m>tal-ħafur</l-m>, maple syrup, żerriegħa taċ-chia, baby ħafur (irrid nerġa’ nibda nagħmel overnight oats), Greek yoghurt, għaġin, gallettini, ċiċri, għads, fażola ħamra, tadam <l-m>tal-landa</l-m>, ġobon (forsi), taljarini <l-m>tal-edamame</l-m>, taljarini regolari, patata, ċereali, paprika. <l-m>Il-kittieba</l-m> Mariam Rahmani qalet dwar <l-m>it-traduzzjoni</l-m> dak li kont qed nipprova nispjega lili nnifsi u lil ħaddieħor. Ma nafx għala kont mort għal Jacques Derrida u Walter Benjamin. Issa nirrealizza li għalkemm ħabbejt dak li kitbu dwar <l-m>it-traduzzjoni</l-m>, huma injuraw ħafna affarijiet li jien inqis importanti. Rahmani tagħmel dan permezz ta’ Lydia Davis. “<l-m>Bħall-politika</l-m> tat-traduzzjoni, <l-m>l-ekonomija</l-m> tat-traduzzjoni hija <l-m>fil-biċċa</l-m> l-kbira mħassra. F’‘Some Notes on Translation and on Madame Bovary’<span class="pullsemi">,</span> Lydia Davis tneħħilna <l-m>dil-fantasija</l-m> b’mod rifreskanti: ‘Jekk traduttur titħallas ħażin,’ tikteb Davis taħt sezzjoni msemmija b’mod sardoniku ‘Independent wealth’<span class="pullsemi">,</span> ‘hija trid taħdem <l-m>bl-għaġla</l-m> sabiex tasal biex taqla’ għajxien. Jekk titħallas tajjeb, tista’ taħdem aktar <l-m>bil-mod</l-m>. Dawk li huma indipendentament għonja jistgħu jaħdmu <l-m>bil-mod</l-m> kemm iridu fuq traduzzjoni.’ Davis imbagħad tikteb dwar <l-m>il-kalkolu</l-m> tar-rata tagħha <l-m>għat-traduzzjoni</l-m> ta’ rumanz ta’ Maurice Blanchot wara <l-m>l-fatt</l-m>, biex spiċċat skopriet li kienet għamlet dollaru <l-m>fis-siegħa</l-m>.<span class="pullsemi">”</span> Dan kont irrealizzajtu sew. <l-m>Il-fatt</l-m> li ma stajtx niffoka <l-m>l-ħin</l-m> tiegħi kollu fuq Saffo, u li kelli nagħmel xogħol kontra qalbi, kien jikolni tant. Gradwalment, sar ċar għalija li <l-m>t-traduzzjoni</l-m> tagħmel xi ħaġa <l-m>lil-lingwa</l-m>, <l-m>lill-veloċità</l-m> tagħha. Tnaqqasha, iċċaħħadha milli taċċellera. Twaqqafha, u terġa’ tibda. Bħallikieku <l-m>l-lingwa</l-m> hija xi ħaġa li sseħħ b’veloċità għolja ħafna, u meta <l-m>t-traduzzjoni</l-m> tidħol, din tillajmaha. <l-m>Il-kliem</l-m> huwa bla qiegħ u jixgħel minn sens għal bla sens, konsistenza għal inkonsistenza, kollox <l-m>għax-xejn</l-m>.</p>
 <hr><h6 id="5-ta-frar-2024">5 ta’ Frar 2024</h6>
@@ -303,6 +325,7 @@
 <hr><h6 id="16-ta-frar-2024">16 ta’ Frar 2024</h6>
 <p>Spiss, matul <em>Nicolas Pages</em> (1999), Dustan jilmenta dwar uġigħ <l-m>fid-dahar</l-m>. Dan jagħtini pjaċir. <l-m>Fl-aħħar</l-m> għandna xi ħaġa inkomuni. <l-m>L-appartament</l-m> huwa nadif sew u kważi bla tebgħa. B ma raqdux hawn ilbieraħ filgħaxija. Jien u S rajna <l-m>l-aħħar</l-m> episodju ta’ <em>RHOBH</em> u <em>Suspiria</em> (mhux <l-m>l-antik)</l-m> imbagħad morna norqdu <l-m>fis-sagħtejn</l-m> ta’ filgħodu. Inqum kmieni, <l-m>fid-9h</l-m>. Noħroġ <l-m>mill-kamra</l-m> tiegħi <l-m>fl-istess</l-m> ħin ma’ S. Qed jipprepara biex imur <l-m>fl-appartament</l-m> ta’ <l-m>All-In</l-m> biex jaħdem fuq <l-m>ir-ready-to-wear</l-m>. Għandu telefonata ma’ Roberta, <l-m>il-mara</l-m> mill-fabbrika <l-m>fl-Italja</l-m>. Hija konverżazzjoni taħraq. <em>Se nipprova nagħmel possibbli <l-m>l-impossibbli</l-m></em>, qaltlu, u qatgħet. B jiġu lura <l-m>d-dar</l-m> u S jitlaq. Nistaqsi lil B jekk hux sħana barra. Jgħidu li mhux sħana daqs ilbieraħ imma <em>ilbes ġakketta</em>. Noħroġ nixtri ftit ġewż mingħand Naturalia (nieħu wkoll pakkett tofu). Inpoġġihom <l-m>fil-bwiet</l-m> tal-ġakketta għax ma ġibtx basket. Hemm <l-m>is-suq</l-m> quddiem <l-m>il-ħanut</l-m> imma jien qatt ma nixtri minn hemm. Dejjem inħossni anzjuż li se naħbat <l-m>mal-propriétaire</l-m> tiegħi u jkolli nsib xi skuża għaliex qiegħed <l-m>fid-18e</l-m> arrondissement (in-naħa opposta ta’ fejn jinsab <l-m>l-appartament</l-m> li nikri mingħandha). Meta għedt dan lil S, <l-m>id-darba</l-m> l-oħra, qalli <em>għidilha li għandek għarus jgħix hawn</em>. Nimxi lejn Jules Joffrin biex nixtri ħabaq frisk m’għand <l-m>tal-ħaxix</l-m>. Meta niġi biex inħallas, <l-m>ir-raġel</l-m> jittawwal <l-m>fil-borża</l-m> kannella fejn kelli <l-m>l-ħabaq</l-m>. <em>Il y a qu’une botte?</em> (qatta waħda biss hemm?) jistaqsi. <em>Ouiii, eh, non, il y’en a deux</em> (ivaaa, eh, le, hemm tnejn). Inpejjep sigarett fi triqti lejn <l-m>id-dar</l-m> minkejja li dalgħodu għadni ma kilt xejn u niddejjaq inpejjep fuq stonku vojt. Imma hija opportunità tajba biex inpejjep, għax qiegħed barra. Niġi lura <l-m>d-dar</l-m> u nagħmel pesto <l-m>tal-avokado</l-m>. Tfajt wisq lumi imma naħseb xorta se jiġi tajjeb. S jinsab <l-m>fis-salott</l-m>. Qed jaħdem bla waqfien. Jagħmel xi ħaġa <l-m>mal-art</l-m>. Iħalli <l-m>l-bieb</l-m> imbexxaq. Nagħmel protein shake u nibgħatlu messaġġ biex ngħidlu li hemm xi ftit għalih <l-m>fil-friġġ</l-m>. <l-m>L-ebda</l-m> risposta. Nipprepara biex immur <l-m>il-gym</l-m> u nitlaq. Nibgħatlu messaġġ: <em>I’m offff</em>. <l-m>L-ebda</l-m> risposta. Nibqa’ <l-m>l-gym</l-m> għal tletin minuta għax niddejjaq u din hija wkoll <l-m>ir-raba</l-m>’ darba li niġi <l-m>l-gym</l-m> dil-ġimgħa u għalhekk inħalli lili nnifsi nitlaq kmieni. Niġi <l-m>d-dar</l-m> u nieħu doċċa malajr. S jara <l-m>l-messaġġi</l-m> iżda ma jirrispondix. Nisma’ <l-m>ż-żaqżiq</l-m> tat-tejp imbagħad <l-m>it-tqasqis</l-m> tal-imqass. Nagħmel ftit tofu <l-m>fl-airfryer</l-m> u nipprepara biex niltaqa’ ma’ V <l-m>fl-16h</l-m>. Mara bilqiegħda ħdejja fuq <l-m>il-metro</l-m> toħroġ mazz karti <l-m>mill-basket</l-m> tagħha bi stampi ta’ scans ta’ <l-m>tarbija <span class="end-dot">.</span></l-m></p>
 					</section>
+				
 				
 				
 			</section>
@@ -337,7 +360,7 @@
 		</div>
 		
 	</article>
-	<aside class="promos-container" data-track-content data-content-name="Promos tal-qiegħ" data-content-piece="Djarju #3 Warren Bartolo">
+	<aside class="promos-container end-promos" data-track-content data-content-name="Promos tal-qiegħ" data-content-piece="Djarju #3 Warren Bartolo">
 		
 		
 		
@@ -347,7 +370,7 @@
 		
 
 <li >
-	<a class="promo frar-2024 promo-esej story-40" href="/jien_a-il-mara-tas-suldat/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Djarju #3 Warren Bartolo', 'għal: Il-Mara tas-Suldat', 1]);">
+	<a class="promo  frar promo-esej story-40" href="/jien_a-il-mara-tas-suldat/" onclick="analytics(['trackEvent', 'Promo', 'minn: Djarju #3 Warren Bartolo', 'għal: Il-Mara tas-Suldat', 1]);">
 		<header>
 	<ul>
 	
@@ -396,7 +419,7 @@
 		
 
 <li >
-	<a class="promo novembru-2023 promo-poezija story-27" href="/kris-polidano-na-i-hom/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Djarju #3 Warren Bartolo', 'għal: -Na -I -Hom', 2]);">
+	<a class="promo  novembru promo-poezija story-27" href="/kris-polidano-na-i-hom/" onclick="analytics(['trackEvent', 'Promo', 'minn: Djarju #3 Warren Bartolo', 'għal: -Na -I -Hom', 2]);">
 		<header>
 	<ul>
 	
@@ -437,7 +460,7 @@
 		
 
 <li >
-	<a class="promo frar-2024 promo-poddata story-37" href="/warren-bartolo-poddata-2023-08-31-noti-editorjali-1-warren-bartolo/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Djarju #3 Warren Bartolo', 'għal: Noti Editorjali #1: Warren Bartolo #1', 3]);">
+	<a class="promo  frar promo-poddata story-37" href="/warren-bartolo-poddata-2023-08-31-noti-editorjali-1-warren-bartolo/" onclick="analytics(['trackEvent', 'Promo', 'minn: Djarju #3 Warren Bartolo', 'għal: Noti Editorjali #1: Warren Bartolo #1', 3]);">
 		<header>
 	<ul>
 	
@@ -487,7 +510,8 @@
 		audioUrls = { "songs": [] };
 		author = "Warren Bartolo" || null;
 		collections = "" || null;
-		monthYear = "marzu-2024" || null;
+		issueMonth = "marzu" || null;
+		issueMonthYear = "marzu-2024" || null;
 		podcastUrl = null;
 		reportingTitle = "Djarju #3 Warren Bartolo" || null;
 		sequenceEpisodeNumber = "3";

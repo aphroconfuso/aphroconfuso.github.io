@@ -12,6 +12,8 @@
 	
 	
 	
+		<script src="/green-audio-player/script.js"></script>
+	
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@aphroconfuso">
 	<meta name="twitter:creator" content="@aphroconfuso">
@@ -39,7 +41,7 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/davinia-hamilton-likantropi/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-41eda743.css">
+		<link rel="stylesheet" href="/css/style-25325009.css">
 		<script>
 			var
 				audioLoaded,
@@ -63,7 +65,8 @@
 				lastReportedScrollPosition,
 				lastScrollPosition,
 				message,
-				monthYear,
+				issueMonth,
+				issueMonthYear,
 				newScrollPosition,
 				pageHeight,
 				percentageProgress,
@@ -129,6 +132,10 @@
 				}
 			}
 			var _paq = window._paq = window._paq || [];
+			const analytics = (arrayInfo) => {
+				if (location.host !== 'aphroconfuso.mt') console.log(arrayInfo);
+				_paq.push(arrayInfo);
+			}
 			_paq.push(['disableCookies']);
 			_paq.push(['enableJSErrorTracking']);
 			_paq.push(['enableHeartBeatTimer']);
@@ -143,20 +150,36 @@
 				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
 			})();
 		</script>
-		<script defer src="/script/script-227.js"></script>
+		<script defer src="/script/script-233.js"></script>
 	</head>
-	<body class="show-nav">
+	<body class="show-nav this-month-mejju">
 		<script>initialiseAfterBody();</script>
 		<div id="top-wrapper">
 			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
 			<nav id="top-nav">
-				<a id="logo-container" href="/"><img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" /></a>
+				<div id="logo-container-wrapper">
+					<div id="logo-container">
+						<a href="/">
+							<img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" />
+						</a>
+					</div>
+					<menu class="hide-mobile" id="menu-carousels">
+						<li class="abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
+					</menu>
+					<menu class="hide-mobile" id="menu-collections">
+						<li class="main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+						<li class="main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					</menu>
+				</div>
 				<input id="menu-toggle" type="checkbox" />
 				<label class='menu-button-container' for="menu-toggle">
 					<span style="display: none">Mobile biss: iftaħ il-menu</span>
 					<div class='menu-button'></div>
 				</label>
-				<menu>
+				<menu id="menu-main">
+					<li class="hide-laptop main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+					<li class="hide-laptop main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					<li class="hide-laptop abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
 					<li><a href="/appuntamenti/">Appuntamenti</a></li>
 					<li><a href="/kontributuri/">Kontributuri</a></li>
 					<li><a href="/werrej/">Werrej</a></li>
@@ -180,7 +203,7 @@
 			<div id="message"><!-- --></div>
 			<main id="skipto">
 				
-	<article class="content marzu-2024 storja story story-43">
+	<article class="content marzu storja story story-43">
 		<header>
 			<ul>
 				<li class="header-label">
@@ -191,7 +214,7 @@
 				
 			</ul>
 			
-				<h1>
+				<h1 data-pagefind-meta="title">
 					Likantropi
 					
 					
@@ -199,7 +222,7 @@
 			
 			
 			
-<h2>
+<h2 data-pagefind-meta="author">
 	
 	
 		
@@ -222,6 +245,28 @@
 			<section id="grid-max-panel-right-top">
 				
 				
+					<aside id="audio">
+					
+					<figure class="audio marzu storja">
+	<div class="player" id="player-0">
+		<audio id="audio-0">
+			<source src="https://s3.amazonaws.com/assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1715929533879-44328d7807cb76bfbbd203973feaf9e8.mp3" type="audio/mpeg">
+		</audio>
+	</div>
+	<figcaption>
+		
+			<p>
+				Davinia taqra “Likantropi”.
+				
+					<span class="hide-mobile">Abbona <l-m>fil-<a href="/podcast/">podcast</a></l-m> biex tisma’ kulma nippubblikaw.</span>
+				
+			</p>
+		
+</figcaption>
+</figure>
+
+					</aside>
+				
 				
 					<section id="trigger-warning">
 						<button id="trigger-warning-close" class="close">×</button>
@@ -231,7 +276,7 @@
 				
 				<div class="promo bookmark-shortcut"><!-- --></div>
 			</section>
-			<section id="grid-body">
+			<section id="grid-body" data-pagefind-body data-pagefind-weight="7">
 				
 					
 						<section class="body-text">
@@ -267,7 +312,7 @@
 <p>“Din min qalhielek?”</p>
 <p>“Tina. U dik suppost taf għax tpoġġi maġenb Lydia.<span class="pullsemi">”</span></p>
 <p>“Boqq. Jien Katya qaltli li għax m’għaddietx <l-m>mill-maths</l-m> sawwatha.<span class="pullsemi">”</span></p>
-<p class="break"><span class="initial"><span class="dropcap drop-K">K</span>if</span> idoqqu nofsinhar, inqumu bilwieqfa u ngħidu <l-m>l-Angelus</l-m> flimkien. <em><l-m>L-Anġlu</l-m> t’Alla ħabbar lil Marija / U hi saret omm <l-m>mill-Ispirtu</l-m> s-Santu.</em> Tibda <l-m>l-kantaliena</l-m>, <em>Sliem għalik Marija, <l-m>bil-grazzja</l-m> mimlija.</em> Alice taqbadli ħarsti u tintefa’ tkerrah wiċċha, <l-m>bis-snien</l-m> ta’ quddiem jagħfsu fuq <l-m>ix-xoffa</l-m> t’isfel u mnifsejha miftuħin beraħ. Taħrabli tinħira u taparsi tatni xerqa. Sister Hilda tħarisli <l-m>bl-ikrah</l-m>.</p>
+<p class="break"><span class="initial"><span class="dropcap drop-K">K</span>if</span> idoqqu nofsinhar, inqumu bilwieqfa u ngħidu <l-m>l-Angelus</l-m> flimkien. <em><l-m>L-Anġlu</l-m> t’Alla ħabbar lil Marija / U hija saret omm <l-m>mill-Ispirtu</l-m> s-Santu.</em> Tibda <l-m>l-kantaliena</l-m>, <em>Sliem għalik Marija, <l-m>bil-grazzja</l-m> mimlija.</em> Alice taqbadli ħarsti u tintefa’ tkerrah wiċċha, <l-m>bis-snien</l-m> ta’ quddiem jagħfsu fuq <l-m>ix-xoffa</l-m> t’isfel u mnifsejha miftuħin beraħ. Taħrabli tinħira u taparsi tatni xerqa. Sister Hilda tħarisli <l-m>bl-ikrah</l-m>.</p>
 <p><em>Hawn hi <l-m>l-qaddejja</l-m> tal-Mulej.</em></p>
 <p><em>Ikun minni skont kelmtek. </em></p>
 <p class="break"><span class="initial"><span class="dropcap drop-I">I</span><l-m>l-Ħadd</l-m></span> li għadda, jien u Alice morna <l-m>l-park</l-m>. Mhux xi park kbir, imma hemm ftit bankijiet, ftit siġar, u funtana mdaqqsa. Xi kultant anki kwiet ikun hemm. Kilna <l-m>l-ġuġù</l-m> minn ġo basket <l-m>tal-karti</l-m> u qgħadna nagħtu b’saqajna maċ-ċint. Kien sabiħ li qegħdin waħedna flimkien. Kien <l-m>il-bard</l-m>. Tgeddisna flimkien. Serraħt rasi fuq spallitha. Faċċata kien hemm grupp subien jilagħbu <l-m>bil-ballun</l-m>. Kienu forsi sena, sentejn akbar minna. </p>
@@ -304,6 +349,7 @@
 					
 				
 				
+				
 			</section>
 			<section id="grid-max-panel-left-bottom">
 				
@@ -321,7 +367,7 @@
 		</div>
 		
 	</article>
-	<aside class="promos-container" data-track-content data-content-name="Promos tal-qiegħ" data-content-piece="Likantropi">
+	<aside class="promos-container end-promos" data-track-content data-content-name="Promos tal-qiegħ" data-content-piece="Likantropi">
 		
 		
 		
@@ -331,7 +377,7 @@
 		
 
 <li >
-	<a class="promo novembru-2023 promo-storja story-26" href="/simon-bartolo-qamar-aħmar/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Likantropi', 'għal: Qamar Aħmar', 1]);">
+	<a class="promo  novembru promo-storja story-26" href="/simon-bartolo-qamar-aħmar/" onclick="analytics(['trackEvent', 'Promo', 'minn: Likantropi', 'għal: Qamar Aħmar', 1]);">
 		<header>
 	<ul>
 	
@@ -372,7 +418,7 @@
 		
 
 <li >
-	<a class="promo lulju-2023 promo-storja story-15" href="/rowena-grech-medusa/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Likantropi', 'għal: Medusa', 2]);">
+	<a class="promo  lulju promo-storja story-15" href="/rowena-grech-medusa/" onclick="analytics(['trackEvent', 'Promo', 'minn: Likantropi', 'għal: Medusa', 2]);">
 		<header>
 	<ul>
 	
@@ -415,7 +461,7 @@ Mela darba, ħmistax-il sena ilu, meta kont għadni tifla, kont ngħix <l-m>mal-
 		
 
 <li >
-	<a class="promo gunju-2023 promo-storja story-13" href="/charlene-galea-ġismi-battikata/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Likantropi', 'għal: Ġismi Battikata', 3]);">
+	<a class="promo  gunju promo-storja story-13" href="/charlene-galea-ġismi-battikata/" onclick="analytics(['trackEvent', 'Promo', 'minn: Likantropi', 'għal: Ġismi Battikata', 3]);">
 		<header>
 	<ul>
 	
@@ -457,11 +503,12 @@ Mela darba, ħmistax-il sena ilu, meta kont għadni tifla, kont ngħix <l-m>mal-
 
 	</aside>
 	<script>
-		audioUrls = { "songs": [] };
+		audioUrls = { "songs": [{"author":"Davinia Hamilton","storyId":"43","issueMonth":"Marzu","pageSlug":"davinia-hamilton-likantropi","podcastLengthMinutes":21,"podcastNote":null,"reportingTitle":"Likantropi","sequenceEpisodeNumber":null,"sequenceEpisodeTitle":null,"title":"Likantropi","type":"Storja","url":"https://s3.amazonaws.com/assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1715929533879-44328d7807cb76bfbbd203973feaf9e8.mp3"}] };
 		author = "Davinia Hamilton" || null;
 		collections = "" || null;
-		monthYear = "marzu-2024" || null;
-		podcastUrl = null;
+		issueMonth = "marzu" || null;
+		issueMonthYear = "marzu-2024" || null;
+		podcastUrl = "https://s3.amazonaws.com/assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1715929533879-44328d7807cb76bfbbd203973feaf9e8.mp3";
 		reportingTitle = "Likantropi" || null;
 		sequenceEpisodeNumber = null;
 		sequenceEpisodeTitle = null;

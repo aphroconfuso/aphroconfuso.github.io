@@ -41,7 +41,7 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/kurt-borg-davinia-hamilton-omar-nshea-poddata-2023-11-01-kif-tgħidha-fqalbek/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-41eda743.css">
+		<link rel="stylesheet" href="/css/style-25325009.css">
 		<script>
 			var
 				audioLoaded,
@@ -65,7 +65,8 @@
 				lastReportedScrollPosition,
 				lastScrollPosition,
 				message,
-				monthYear,
+				issueMonth,
+				issueMonthYear,
 				newScrollPosition,
 				pageHeight,
 				percentageProgress,
@@ -131,6 +132,10 @@
 				}
 			}
 			var _paq = window._paq = window._paq || [];
+			const analytics = (arrayInfo) => {
+				if (location.host !== 'aphroconfuso.mt') console.log(arrayInfo);
+				_paq.push(arrayInfo);
+			}
 			_paq.push(['disableCookies']);
 			_paq.push(['enableJSErrorTracking']);
 			_paq.push(['enableHeartBeatTimer']);
@@ -145,20 +150,36 @@
 				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
 			})();
 		</script>
-		<script defer src="/script/script-227.js"></script>
+		<script defer src="/script/script-233.js"></script>
 	</head>
-	<body class="show-nav">
+	<body class="show-nav this-month-mejju">
 		<script>initialiseAfterBody();</script>
 		<div id="top-wrapper">
 			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
 			<nav id="top-nav">
-				<a id="logo-container" href="/"><img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" /></a>
+				<div id="logo-container-wrapper">
+					<div id="logo-container">
+						<a href="/">
+							<img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" />
+						</a>
+					</div>
+					<menu class="hide-mobile" id="menu-carousels">
+						<li class="abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
+					</menu>
+					<menu class="hide-mobile" id="menu-collections">
+						<li class="main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+						<li class="main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					</menu>
+				</div>
 				<input id="menu-toggle" type="checkbox" />
 				<label class='menu-button-container' for="menu-toggle">
 					<span style="display: none">Mobile biss: iftaħ il-menu</span>
 					<div class='menu-button'></div>
 				</label>
-				<menu>
+				<menu id="menu-main">
+					<li class="hide-laptop main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+					<li class="hide-laptop main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					<li class="hide-laptop abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
 					<li><a href="/appuntamenti/">Appuntamenti</a></li>
 					<li><a href="/kontributuri/">Kontributuri</a></li>
 					<li><a href="/werrej/">Werrej</a></li>
@@ -182,7 +203,7 @@
 			<div id="message"><!-- --></div>
 			<main id="skipto">
 				
-	<article class="content jannar-2024 poddata story story-39">
+	<article class="content jannar poddata story story-39">
 		<header>
 			<ul>
 				<li class="header-label">
@@ -196,13 +217,13 @@
 				
 			</ul>
 			
-				<h1>
+				<h1 data-pagefind-meta="title">
 					Kif Tgħidha f’Qalbek
 				</h1>
 			
 			
 			
-<h2 class="contains-with">
+<h2 class="contains-with" data-pagefind-meta="author">
 	
 	
 		
@@ -234,7 +255,7 @@
 				
 					<aside id="audio">
 					
-					<figure class="audio jannar-2024 poddata">
+					<figure class="audio jannar poddata">
 	<div class="player" id="player-0">
 		<audio id="audio-0">
 			<source src="https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1698788645967-8d84b50062e5dfe226dcc2fe5e3bcd6a.mp3" type="audio/mpeg">
@@ -249,10 +270,10 @@
 				
 					
 					
-					<figure class="audio jannar-2024 poddata">
+					<figure class="audio jannar poddata">
 	<div class="player" id="player-1">
 		<audio id="audio-1">
-			<source src="https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1698788645967-8d84b50062e5dfe226dcc2fe5e3bcd6a.mp3" type="audio/mpeg">
+			<source src="https://open.acast.com/public/streams/63ef6b4c3642ca00119bcf72/episodes/64a67b7b547a490011c17145.mp3" type="audio/mpeg">
 		</audio>
 	</div>
 	<figcaption>
@@ -266,10 +287,10 @@
 				
 					
 					
-					<figure class="audio jannar-2024 poddata">
+					<figure class="audio jannar poddata">
 	<div class="player" id="player-2">
 		<audio id="audio-2">
-			<source src="https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1698788645967-8d84b50062e5dfe226dcc2fe5e3bcd6a.mp3" type="audio/mpeg">
+			<source src="https://assets.pippa.io/shows/undefined/1697184075680-93f62322a6f77a8792c708bcdc3aa553.mp3" type="audio/mpeg">
 		</audio>
 	</div>
 	<figcaption>
@@ -283,10 +304,10 @@
 				
 					
 					
-					<figure class="audio jannar-2024 poddata">
+					<figure class="audio jannar poddata">
 	<div class="player" id="player-3">
 		<audio id="audio-3">
-			<source src="https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1698788645967-8d84b50062e5dfe226dcc2fe5e3bcd6a.mp3" type="audio/mpeg">
+			<source src="https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1700685637374-dfa58262fb434a99834d83d6297feb65.mp3" type="audio/mpeg">
 		</audio>
 	</div>
 	<figcaption>
@@ -306,12 +327,13 @@
 				
 				<div class="promo bookmark-shortcut"><!-- --></div>
 			</section>
-			<section id="grid-body">
+			<section id="grid-body" data-pagefind-body data-pagefind-weight="7">
 				
 					<section class="generic-body-text">
-						<p><span class="initial">“Kif</span> Tgħidha f’Qalbek” kienet taħdita waqt <l-m>il-Festival</l-m> tal-Ktieb <l-m>fil-21</l-m> ta’ Ottubru 2023. Fuq stedina ta’ Mallia &amp; <l-m>D’Amato</l-m> Booksellers, <l-m>l-edituri</l-m> ta’ Aphroconfuso jitħaddtu ma’ <a href="https://aphroconfuso.mt/kurt-borg/">Kurt Borg</a>, <a href="https://aphroconfuso.mt/davinia-hamilton/">Davinia Hamilton</a> u <a href="https://aphroconfuso.mt/omar-nshea/">Omar N’Shea</a>.</p>
+						<p>“Kif Tgħidha f’Qalbek” kienet taħdita waqt <l-m>il-Festival</l-m> tal-Ktieb <l-m>fil-21</l-m> ta’ Ottubru 2023. Fuq stedina ta’ Mallia &amp; <l-m>D’Amato</l-m> Booksellers, <l-m>l-edituri</l-m> ta’ Aphroconfuso jitħaddtu ma’ <a href="https://aphroconfuso.mt/kurt-borg/">Kurt Borg</a>, <a href="https://aphroconfuso.mt/davinia-hamilton/">Davinia Hamilton</a> u <a href="https://aphroconfuso.mt/omar-nshea/">Omar N’Shea</a>.</p>
 <p>“Jekk huwa minnu, bħalma jgħidu ħafna, li kull kitba hija forma ta’ traduzzjoni, <l-m>il-kitba</l-m> bil-Malti terġa’ hija traduzzjoni b’mod iktar ovvju minn dak li hu mifhum minn min jgħid hekk. F’dawn <l-m>l-ewwel</l-m> xogħlijiet li għandna <l-m>fil-ġurnal</l-m> tagħna din <l-m>it-taqbida</l-m> kienet ta’ spiss parti importanti <l-m>mill-kitba</l-m> u <l-m>mill-proċess</l-m> editorjali. Meta <l-m>l-ewwel</l-m> niddeċiedu li niktbu dwar suġġetti li aħna intiżi fihom imbagħad wara nagħżlu li niktbu dwarhom <l-m>bil-Malti</l-m>, insibu ruħna nipproċessaw ideat illi dejjem qrajniehom b’lingwa oħra, probabbilment <l-m>bl-Ingliż</l-m>, u li għalhekk bqajna naħsbuhom b’din <l-m>il-lingwa</l-m>. Meta niġu biex nartikolawhom <l-m>bil-Malti</l-m> nsibu ruħna nitqabdu bejn <l-m>l-idea</l-m> nnifisha u espressjoni preċiża u eleganti.<span class="pullsemi">”</span>&nbsp;<span class="end-dot">.</span></p>
 					</section>
+				
 				
 				
 					<section id="endnote" class="body-text">
@@ -338,7 +360,7 @@
 		</div>
 		
 	</article>
-	<aside class="promos-container" data-track-content data-content-name="Promos tal-qiegħ" data-content-piece="Kif Tgħidha f’Qalbek">
+	<aside class="promos-container end-promos" data-track-content data-content-name="Promos tal-qiegħ" data-content-piece="Kif Tgħidha f’Qalbek">
 		
 		
 		
@@ -348,7 +370,7 @@
 		
 
 <li >
-	<a class="promo gunju-2023 promo-esej story-14" href="/kurt-borg-ġilda/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Kif Tgħidha f’Qalbek', 'għal: Ġilda', 1]);">
+	<a class="promo  gunju promo-esej story-14" href="/kurt-borg-ġilda/" onclick="analytics(['trackEvent', 'Promo', 'minn: Kif Tgħidha f’Qalbek', 'għal: Ġilda', 1]);">
 		<header>
 	<ul>
 	
@@ -389,7 +411,7 @@
 		
 
 <li >
-	<a class="promo frar-2024 promo-poddata story-37" href="/warren-bartolo-poddata-2023-08-31-noti-editorjali-1-warren-bartolo/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Kif Tgħidha f’Qalbek', 'għal: Noti Editorjali #1: Warren Bartolo #1', 2]);">
+	<a class="promo  frar promo-poddata story-37" href="/warren-bartolo-poddata-2023-08-31-noti-editorjali-1-warren-bartolo/" onclick="analytics(['trackEvent', 'Promo', 'minn: Kif Tgħidha f’Qalbek', 'għal: Noti Editorjali #1: Warren Bartolo #1', 2]);">
 		<header>
 	<ul>
 	
@@ -435,7 +457,7 @@
 		
 
 <li >
-	<a class="promo jannar-2024 promo-djarju story-35 is-episode" href="/warren-bartolo-djarju-2023-11-01-il-mixja-lura-d-dar-kienet-twila-sigarett-wieħed/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Kif Tgħidha f’Qalbek', 'għal: Djarju #1 Warren Bartolo', 3]);">
+	<a class="promo  jannar promo-djarju story-35 is-episode" href="/warren-bartolo-djarju-2023-11-01-il-mixja-lura-d-dar-kienet-twila-sigarett-wieħed/" onclick="analytics(['trackEvent', 'Promo', 'minn: Kif Tgħidha f’Qalbek', 'għal: Djarju #1 Warren Bartolo', 3]);">
 		<header>
 	<ul>
 	
@@ -483,10 +505,11 @@
 
 	</aside>
 	<script>
-		audioUrls = { "songs": [{"author":"Kurt Borg, Davinia Hamilton, Omar N’Shea","storyId":"39","monthYear":"Jannar 2024","pageSlug":"kurt-borg-davinia-hamilton-omar-nshea-poddata-2023-11-01-kif-tgħidha-fqalbek","podcastLengthMinutes":59,"podcastNote":"<p>“Kif Tgħidha f’Qalbek” kienet taħdita waqt il-Festival tal-Ktieb fil-21 ta' Ottubru 2023. Fuq stedina ta' Mallia &amp; D’Amato Booksellers, l-edituri ta' Aphroconfuso jitħaddtu ma’ <a href=\"https://aphroconfuso.mt/kurt-borg/\">Kurt Borg</a>, <a href=\"https://aphroconfuso.mt/davinia-hamilton/\">Davinia Hamilton</a> u <a href=\"https://aphroconfuso.mt/omar-nshea/\">Omar N'Shea</a>.</p>","reportingTitle":"Kif Tgħidha f’Qalbek","sequenceEpisodeNumber":null,"sequenceEpisodeTitle":null,"title":"Kif Tgħidha f’Qalbek","type":"Poddata","url":"https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1698788645967-8d84b50062e5dfe226dcc2fe5e3bcd6a.mp3"},{"authorName":"Kurt Borg, Davinia Hamilton, Omar N’Shea","monthYear":"Jannar 2024","pageSlug":"kurt-borg-davinia-hamilton-omar-nshea-poddata-2023-11-01-kif-tgħidha-fqalbek","reportingTitle":"Kif Tgħidha f’Qalbek","sequenceEpisodeNumber":null,"sequenceEpisodeTitle":null,"storyId":"5","title":"Kif Tgħidha f’Qalbek","type":"Poddata","url":"https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1698788645967-8d84b50062e5dfe226dcc2fe5e3bcd6a.mp3"},{"authorName":"Kurt Borg, Davinia Hamilton, Omar N’Shea","monthYear":"Jannar 2024","pageSlug":"kurt-borg-davinia-hamilton-omar-nshea-poddata-2023-11-01-kif-tgħidha-fqalbek","reportingTitle":"Kif Tgħidha f’Qalbek","sequenceEpisodeNumber":null,"sequenceEpisodeTitle":null,"storyId":"7","title":"Kif Tgħidha f’Qalbek","type":"Poddata","url":"https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1698788645967-8d84b50062e5dfe226dcc2fe5e3bcd6a.mp3"},{"authorName":"Kurt Borg, Davinia Hamilton, Omar N’Shea","monthYear":"Jannar 2024","pageSlug":"kurt-borg-davinia-hamilton-omar-nshea-poddata-2023-11-01-kif-tgħidha-fqalbek","reportingTitle":"Kif Tgħidha f’Qalbek","sequenceEpisodeNumber":null,"sequenceEpisodeTitle":null,"storyId":"6","title":"Kif Tgħidha f’Qalbek","type":"Poddata","url":"https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1698788645967-8d84b50062e5dfe226dcc2fe5e3bcd6a.mp3"}] };
+		audioUrls = { "songs": [{"author":"Kurt Borg, Davinia Hamilton, Omar N’Shea","storyId":"39","issueMonth":"Jannar","pageSlug":"kurt-borg-davinia-hamilton-omar-nshea-poddata-2023-11-01-kif-tgħidha-fqalbek","podcastLengthMinutes":59,"podcastNote":"<p>“Kif Tgħidha f’Qalbek” kienet taħdita waqt il-Festival tal-Ktieb fil-21 ta' Ottubru 2023. Fuq stedina ta' Mallia &amp; D’Amato Booksellers, l-edituri ta' Aphroconfuso jitħaddtu ma’ <a href=\"https://aphroconfuso.mt/kurt-borg/\">Kurt Borg</a>, <a href=\"https://aphroconfuso.mt/davinia-hamilton/\">Davinia Hamilton</a> u <a href=\"https://aphroconfuso.mt/omar-nshea/\">Omar N'Shea</a>.</p>","reportingTitle":"Kif Tgħidha f’Qalbek","sequenceEpisodeNumber":null,"sequenceEpisodeTitle":null,"title":"Kif Tgħidha f’Qalbek","type":"Poddata","url":"https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1698788645967-8d84b50062e5dfe226dcc2fe5e3bcd6a.mp3"},{"authorName":"Kurt Borg, Davinia Hamilton, Omar N’Shea","issueMonth":"Jannar","pageSlug":"kurt-borg-davinia-hamilton-omar-nshea-poddata-2023-11-01-kif-tgħidha-fqalbek","reportingTitle":"Kif Tgħidha f’Qalbek","sequenceEpisodeNumber":null,"sequenceEpisodeTitle":null,"storyId":"5","title":"Kif Tgħidha f’Qalbek","type":"Poddata","url":"https://open.acast.com/public/streams/63ef6b4c3642ca00119bcf72/episodes/64a67b7b547a490011c17145.mp3"},{"authorName":"Kurt Borg, Davinia Hamilton, Omar N’Shea","issueMonth":"Jannar","pageSlug":"kurt-borg-davinia-hamilton-omar-nshea-poddata-2023-11-01-kif-tgħidha-fqalbek","reportingTitle":"Kif Tgħidha f’Qalbek","sequenceEpisodeNumber":null,"sequenceEpisodeTitle":null,"storyId":"7","title":"Kif Tgħidha f’Qalbek","type":"Poddata","url":"https://assets.pippa.io/shows/undefined/1697184075680-93f62322a6f77a8792c708bcdc3aa553.mp3"},{"authorName":"Kurt Borg, Davinia Hamilton, Omar N’Shea","issueMonth":"Jannar","pageSlug":"kurt-borg-davinia-hamilton-omar-nshea-poddata-2023-11-01-kif-tgħidha-fqalbek","reportingTitle":"Kif Tgħidha f’Qalbek","sequenceEpisodeNumber":null,"sequenceEpisodeTitle":null,"storyId":"6","title":"Kif Tgħidha f’Qalbek","type":"Poddata","url":"https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1700685637374-dfa58262fb434a99834d83d6297feb65.mp3"}] };
 		author = "Kurt Borg, Davinia Hamilton, Omar N’Shea" || null;
 		collections = "" || null;
-		monthYear = "jannar-2024" || null;
+		issueMonth = "jannar" || null;
+		issueMonthYear = "jannar-2024" || null;
 		podcastUrl = "https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1698788645967-8d84b50062e5dfe226dcc2fe5e3bcd6a.mp3";
 		reportingTitle = "Kif Tgħidha f’Qalbek" || null;
 		sequenceEpisodeNumber = null;

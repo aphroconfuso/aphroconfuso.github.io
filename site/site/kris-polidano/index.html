@@ -27,7 +27,7 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/kris-polidano/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-41eda743.css">
+		<link rel="stylesheet" href="/css/style-25325009.css">
 		<script>
 			var
 				audioLoaded,
@@ -51,7 +51,8 @@
 				lastReportedScrollPosition,
 				lastScrollPosition,
 				message,
-				monthYear,
+				issueMonth,
+				issueMonthYear,
 				newScrollPosition,
 				pageHeight,
 				percentageProgress,
@@ -117,6 +118,10 @@
 				}
 			}
 			var _paq = window._paq = window._paq || [];
+			const analytics = (arrayInfo) => {
+				if (location.host !== 'aphroconfuso.mt') console.log(arrayInfo);
+				_paq.push(arrayInfo);
+			}
 			_paq.push(['disableCookies']);
 			_paq.push(['enableJSErrorTracking']);
 			_paq.push(['enableHeartBeatTimer']);
@@ -131,20 +136,36 @@
 				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
 			})();
 		</script>
-		<script defer src="/script/script-227.js"></script>
+		<script defer src="/script/script-233.js"></script>
 	</head>
-	<body class="show-nav">
+	<body class="show-nav this-month-mejju">
 		<script>initialiseAfterBody();</script>
 		<div id="top-wrapper">
 			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
 			<nav id="top-nav">
-				<a id="logo-container" href="/"><img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" /></a>
+				<div id="logo-container-wrapper">
+					<div id="logo-container">
+						<a href="/">
+							<img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" />
+						</a>
+					</div>
+					<menu class="hide-mobile" id="menu-carousels">
+						<li class="abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
+					</menu>
+					<menu class="hide-mobile" id="menu-collections">
+						<li class="main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+						<li class="main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					</menu>
+				</div>
 				<input id="menu-toggle" type="checkbox" />
 				<label class='menu-button-container' for="menu-toggle">
 					<span style="display: none">Mobile biss: iftaħ il-menu</span>
 					<div class='menu-button'></div>
 				</label>
-				<menu>
+				<menu id="menu-main">
+					<li class="hide-laptop main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+					<li class="hide-laptop main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					<li class="hide-laptop abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
 					<li><a href="/appuntamenti/">Appuntamenti</a></li>
 					<li><a href="/kontributuri/">Kontributuri</a></li>
 					<li><a href="/werrej/">Werrej</a></li>
@@ -168,7 +189,7 @@
 			<div id="message"><!-- --></div>
 			<main id="skipto">
 				
-<article class="generic">
+<article class="generic contributor-22">
 	<header>
 		<ul><li class="header-label"><a href="/kontributuri/">Kontributuri</a></li></ul>
 		<h1>Kris Polidano</h1>
@@ -177,9 +198,12 @@
 	<div class="container-generic contributor">
 		<section id="grid-body">
 			<div class="generic-body-text">
-				<p>Kris Polidano għandha tendenza tħuf u tikteb fuq <l-m>l-istess</l-m> ponn ta’ memorji li sawruha u fuq xi oħrajn li sawru <l-m>lill-kollettiv</l-m> kulturali Malti ta’ bħalissa. Kris hi attiva ħafna <l-m>fix-xena</l-m> kulturali Maltija f’diversi oqsma. Taħdem <l-m>mal-Fondazzjoni</l-m> Magna Żmien biex jinżammu u jintużaw <l-m>il-memorji</l-m> awdjo-viżivi <l-m>tal-Maltin</l-m> fil-gżira stess u ta’ barra. <l-m>Fil-passat</l-m>, Kris ukoll wettqet intervisti ma’ artisti u riċensjonijiet <l-m>tat-teatru</l-m> fuq Tpespis, sit li ħolqot flimkien ma’ xi ħbieb <l-m>fl-2016</l-m>. <l-m>Il-kitba</l-m> tagħha tidher f’<em>Leħen <l-m>il-Malti</l-m></em>, kif ukoll f’<em>Artpaper</em>.</p>
+				<div data-pagefind-body data-pagefind-weight="1">
+					<p>Kris Polidano għandha tendenza tħuf u tikteb fuq <l-m>l-istess</l-m> ponn ta’ memorji li sawruha u fuq xi oħrajn li sawru <l-m>lill-kollettiv</l-m> kulturali Malti ta’ bħalissa. Kris hi attiva ħafna <l-m>fix-xena</l-m> kulturali Maltija f’diversi oqsma. Taħdem <l-m>mal-Fondazzjoni</l-m> Magna Żmien biex jinżammu u jintużaw <l-m>il-memorji</l-m> awdjo-viżivi <l-m>tal-Maltin</l-m> fil-gżira stess u ta’ barra. <l-m>Fil-passat</l-m>, Kris ukoll wettqet intervisti ma’ artisti u riċensjonijiet <l-m>tat-teatru</l-m> fuq Tpespis, sit li ħolqot flimkien ma’ xi ħbieb <l-m>fl-2016</l-m>. <l-m>Il-kitba</l-m> tagħha tidher f’<em>Leħen <l-m>il-Malti</l-m></em>, kif ukoll f’<em>Artpaper</em>.</p>
+				</div>
 				
 					<p class="continuity">Kitba ta’ <span class="contributor">Kris</span> fil-ġurnal:</p>
+					
 					
 					
 					<ul class="promo-list">
@@ -188,7 +212,7 @@
 		
 
 <li >
-	<a class="promo jannar-2024 promo-esej story-34" href="/kris-polidano-manifest-kontra-ż-żmien/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Kris Polidano', 'għal: Manifest Kontra ż-Żmien', 1]);">
+	<a class="promo  jannar promo-esej story-34" href="/kris-polidano-manifest-kontra-ż-żmien/" onclick="analytics(['trackEvent', 'Promo', 'minn: Kris Polidano', 'għal: Manifest Kontra ż-Żmien', 1]);">
 		<header>
 	<ul>
 	
@@ -229,7 +253,7 @@
 		
 
 <li >
-	<a class="promo novembru-2023 promo-poezija story-27" href="/kris-polidano-na-i-hom/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Kris Polidano', 'għal: -Na -I -Hom', 2]);">
+	<a class="promo  novembru promo-poezija story-27" href="/kris-polidano-na-i-hom/" onclick="analytics(['trackEvent', 'Promo', 'minn: Kris Polidano', 'għal: -Na -I -Hom', 2]);">
 		<header>
 	<ul>
 	
@@ -282,7 +306,7 @@
 		</section>
 		<section id="grid-max-panel-left-top">
 			<section id="grid-max-panel-left-top">
-	<section class="contributors-menu">
+	<section class="generic-menu contributors-menu">
 		
 			<ul>
 				
@@ -293,6 +317,12 @@
 			
 				
 					<li><a href="/aaron-aquilina/">Aaron Aquilina</a></li>
+				
+			
+		
+			
+				
+					<li><a href="/jasmine-bajada/">Jasmine Bajada</a></li>
 				
 			
 		
@@ -347,6 +377,12 @@
 			
 				
 					<li><a href="/ryan-falzon/">Ryan Falzon</a></li>
+				
+			
+		
+			
+				
+					<li><a href="/fatima-a.m./">fatima a.m.</a></li>
 				
 			
 		

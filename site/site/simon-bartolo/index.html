@@ -27,7 +27,7 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/simon-bartolo/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-41eda743.css">
+		<link rel="stylesheet" href="/css/style-25325009.css">
 		<script>
 			var
 				audioLoaded,
@@ -51,7 +51,8 @@
 				lastReportedScrollPosition,
 				lastScrollPosition,
 				message,
-				monthYear,
+				issueMonth,
+				issueMonthYear,
 				newScrollPosition,
 				pageHeight,
 				percentageProgress,
@@ -117,6 +118,10 @@
 				}
 			}
 			var _paq = window._paq = window._paq || [];
+			const analytics = (arrayInfo) => {
+				if (location.host !== 'aphroconfuso.mt') console.log(arrayInfo);
+				_paq.push(arrayInfo);
+			}
 			_paq.push(['disableCookies']);
 			_paq.push(['enableJSErrorTracking']);
 			_paq.push(['enableHeartBeatTimer']);
@@ -131,20 +136,36 @@
 				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
 			})();
 		</script>
-		<script defer src="/script/script-227.js"></script>
+		<script defer src="/script/script-233.js"></script>
 	</head>
-	<body class="show-nav">
+	<body class="show-nav this-month-mejju">
 		<script>initialiseAfterBody();</script>
 		<div id="top-wrapper">
 			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
 			<nav id="top-nav">
-				<a id="logo-container" href="/"><img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" /></a>
+				<div id="logo-container-wrapper">
+					<div id="logo-container">
+						<a href="/">
+							<img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" />
+						</a>
+					</div>
+					<menu class="hide-mobile" id="menu-carousels">
+						<li class="abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
+					</menu>
+					<menu class="hide-mobile" id="menu-collections">
+						<li class="main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+						<li class="main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					</menu>
+				</div>
 				<input id="menu-toggle" type="checkbox" />
 				<label class='menu-button-container' for="menu-toggle">
 					<span style="display: none">Mobile biss: iftaħ il-menu</span>
 					<div class='menu-button'></div>
 				</label>
-				<menu>
+				<menu id="menu-main">
+					<li class="hide-laptop main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+					<li class="hide-laptop main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					<li class="hide-laptop abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
 					<li><a href="/appuntamenti/">Appuntamenti</a></li>
 					<li><a href="/kontributuri/">Kontributuri</a></li>
 					<li><a href="/werrej/">Werrej</a></li>
@@ -168,7 +189,7 @@
 			<div id="message"><!-- --></div>
 			<main id="skipto">
 				
-<article class="generic">
+<article class="generic contributor-21">
 	<header>
 		<ul><li class="header-label"><a href="/kontributuri/">Kontributuri</a></li></ul>
 		<h1>Simon Bartolo</h1>
@@ -177,9 +198,12 @@
 	<div class="container-generic contributor">
 		<section id="grid-body">
 			<div class="generic-body-text">
-				<p>Simon Bartolo huwa kittieb ta’ drammi, kotba <l-m>tat-tfal</l-m> u <l-m>l-adolexxenti</l-m>, rumanzi u oħrajn. <l-m>Fis-snin</l-m> tiegħu bħala student <l-m>fl-Università</l-m> ta’ Malta kien <l-m>l-editur</l-m> tal-ġurnal <l-m>tal-kitba</l-m> <em>Readers &amp; Writers</em>. Flimkien ma’ Loranne Vella kiteb <em>Sqaq <l-m>l-Infern</l-m></em> u <l-m>l-kotba</l-m> l-oħra <l-m>tat-</l-m><em>Triloġija <l-m>tal-Fiddien</l-m></em>. Huwa kien wieħed <l-m>mill-fundaturi</l-m> tal-grupp teatrali Aleateia u bħala <l-m>d-direttur</l-m> artistiku u <l-m>d-drammaturgu</l-m> tal-grupp ħoloq bosta xogħlijiet li ttellgħu kemm f’Malta kif ukoll f’pajjiżi oħrajn. Ippubblika diversi kotba — bħal <em>Kliem ir­-Riħ</em>, <em>Kważi Kważi lil Tamara Nżommuha</em> u <em>Deformity</em> — li rebħu premjijiet nazzjonali. Kiteb ukoll kotba mhux fittizji, bħal <em>A Seat at the Table</em> li jittratta <l-m>l-istorja</l-m> reċenti <l-m>tad-drittijiet</l-m> tal-persuni LGBT+ f’pajjiżna. Huwa <l-m>l-awtur</l-m> ta’ <em>Jien Inħobb — Inti Tħobb</em>, <em>Ħabbilni ħa Nirbaħ</em> u għadd ta’ drammi oħrajn, fosthom <em><l-m>Il-Pożittivi</l-m></em>, li kien frott ta’ riċerka estensiva u intervisti ma’ nies li jgħixu <l-m>bl-HIV</l-m> f’Malta. Bħalissa għaddej bi proġetti oħrajn bħal <em>Irranġajtni <l-m>għall-Festi</l-m></em> — ktieb dwar <l-m>it-tradizzjoni</l-m> tal-festa Maltija bħala wirt intanġibbli, li se jitqassam <l-m>fl-iskejjel;</l-m> <em>Do Re Mi</em> — kollaborazzjoni <l-m>mal-Malta</l-m> Philharmonic Orchestra fuq sensiela ta’ kunċerti <l-m>għat-tfal;</l-m> u <em><l-m>Il-Kreatura</l-m> tad-Deheb</em> — ktieb ġdid minn <em>Ruxxmata Kreaturi</em>, sensiela ta’ kotba li tkaxkar <l-m>il-mostri</l-m> tal-folkor Malti lejn <l-m>is-seklu</l-m> 21.</p>
+				<div data-pagefind-body data-pagefind-weight="1">
+					<p>Simon Bartolo huwa kittieb ta’ drammi, kotba <l-m>tat-tfal</l-m> u <l-m>l-adolexxenti</l-m>, rumanzi u oħrajn. <l-m>Fis-snin</l-m> tiegħu bħala student <l-m>fl-Università</l-m> ta’ Malta kien <l-m>l-editur</l-m> tal-ġurnal <l-m>tal-kitba</l-m> <em>Readers &amp; Writers</em>. Flimkien ma’ Loranne Vella kiteb <em>Sqaq <l-m>l-Infern</l-m></em> u <l-m>l-kotba</l-m> l-oħra <l-m>tat-</l-m><em>Triloġija <l-m>tal-Fiddien</l-m></em>. Huwa kien wieħed <l-m>mill-fundaturi</l-m> tal-grupp teatrali Aleateia u bħala <l-m>d-direttur</l-m> artistiku u <l-m>d-drammaturgu</l-m> tal-grupp ħoloq bosta xogħlijiet li ttellgħu kemm f’Malta kif ukoll f’pajjiżi oħrajn. Ippubblika diversi kotba — bħal <em>Kliem ir­-Riħ</em>, <em>Kważi Kważi lil Tamara Nżommuha</em> u <em>Deformity</em> — li rebħu premjijiet nazzjonali. Kiteb ukoll kotba mhux fittizji, bħal <em>A Seat at the Table</em> li jittratta <l-m>l-istorja</l-m> reċenti <l-m>tad-drittijiet</l-m> tal-persuni LGBT+ f’pajjiżna. Huwa <l-m>l-awtur</l-m> ta’ <em>Jien Inħobb — Inti Tħobb</em>, <em>Ħabbilni ħa Nirbaħ</em> u għadd ta’ drammi oħrajn, fosthom <em><l-m>Il-Pożittivi</l-m></em>, li kien frott ta’ riċerka estensiva u intervisti ma’ nies li jgħixu <l-m>bl-HIV</l-m> f’Malta. Bħalissa għaddej bi proġetti oħrajn bħal <em>Irranġajtni <l-m>għall-Festi</l-m></em> — ktieb dwar <l-m>it-tradizzjoni</l-m> tal-festa Maltija bħala wirt intanġibbli, li se jitqassam <l-m>fl-iskejjel;</l-m> <em>Do Re Mi</em> — kollaborazzjoni <l-m>mal-Malta</l-m> Philharmonic Orchestra fuq sensiela ta’ kunċerti <l-m>għat-tfal;</l-m> u <em><l-m>Il-Kreatura</l-m> tad-Deheb</em> — ktieb ġdid minn <em>Ruxxmata Kreaturi</em>, sensiela ta’ kotba li tkaxkar <l-m>il-mostri</l-m> tal-folkor Malti lejn <l-m>is-seklu</l-m> 21.</p>
+				</div>
 				
 					<p class="continuity">Kitba ta’ <span class="contributor">Simon</span> fil-ġurnal:</p>
+					
 					
 					
 					<ul class="promo-list">
@@ -188,7 +212,7 @@
 		
 
 <li >
-	<a class="promo novembru-2023 promo-storja story-26" href="/simon-bartolo-qamar-aħmar/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Simon Bartolo', 'għal: Qamar Aħmar', 1]);">
+	<a class="promo  novembru promo-storja story-26" href="/simon-bartolo-qamar-aħmar/" onclick="analytics(['trackEvent', 'Promo', 'minn: Simon Bartolo', 'għal: Qamar Aħmar', 1]);">
 		<header>
 	<ul>
 	
@@ -241,7 +265,7 @@
 		</section>
 		<section id="grid-max-panel-left-top">
 			<section id="grid-max-panel-left-top">
-	<section class="contributors-menu">
+	<section class="generic-menu contributors-menu">
 		
 			<ul>
 				
@@ -252,6 +276,12 @@
 			
 				
 					<li><a href="/aaron-aquilina/">Aaron Aquilina</a></li>
+				
+			
+		
+			
+				
+					<li><a href="/jasmine-bajada/">Jasmine Bajada</a></li>
 				
 			
 		
@@ -306,6 +336,12 @@
 			
 				
 					<li><a href="/ryan-falzon/">Ryan Falzon</a></li>
+				
+			
+		
+			
+				
+					<li><a href="/fatima-a.m./">fatima a.m.</a></li>
 				
 			
 		

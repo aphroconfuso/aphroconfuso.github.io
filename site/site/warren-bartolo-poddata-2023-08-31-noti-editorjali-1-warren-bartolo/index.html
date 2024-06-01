@@ -41,7 +41,7 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/warren-bartolo-poddata-2023-08-31-noti-editorjali-1-warren-bartolo/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-41eda743.css">
+		<link rel="stylesheet" href="/css/style-25325009.css">
 		<script>
 			var
 				audioLoaded,
@@ -65,7 +65,8 @@
 				lastReportedScrollPosition,
 				lastScrollPosition,
 				message,
-				monthYear,
+				issueMonth,
+				issueMonthYear,
 				newScrollPosition,
 				pageHeight,
 				percentageProgress,
@@ -131,6 +132,10 @@
 				}
 			}
 			var _paq = window._paq = window._paq || [];
+			const analytics = (arrayInfo) => {
+				if (location.host !== 'aphroconfuso.mt') console.log(arrayInfo);
+				_paq.push(arrayInfo);
+			}
 			_paq.push(['disableCookies']);
 			_paq.push(['enableJSErrorTracking']);
 			_paq.push(['enableHeartBeatTimer']);
@@ -145,20 +150,36 @@
 				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
 			})();
 		</script>
-		<script defer src="/script/script-227.js"></script>
+		<script defer src="/script/script-233.js"></script>
 	</head>
-	<body class="show-nav">
+	<body class="show-nav this-month-mejju">
 		<script>initialiseAfterBody();</script>
 		<div id="top-wrapper">
 			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
 			<nav id="top-nav">
-				<a id="logo-container" href="/"><img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" /></a>
+				<div id="logo-container-wrapper">
+					<div id="logo-container">
+						<a href="/">
+							<img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" />
+						</a>
+					</div>
+					<menu class="hide-mobile" id="menu-carousels">
+						<li class="abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
+					</menu>
+					<menu class="hide-mobile" id="menu-collections">
+						<li class="main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+						<li class="main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					</menu>
+				</div>
 				<input id="menu-toggle" type="checkbox" />
 				<label class='menu-button-container' for="menu-toggle">
 					<span style="display: none">Mobile biss: iftaħ il-menu</span>
 					<div class='menu-button'></div>
 				</label>
-				<menu>
+				<menu id="menu-main">
+					<li class="hide-laptop main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+					<li class="hide-laptop main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					<li class="hide-laptop abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
 					<li><a href="/appuntamenti/">Appuntamenti</a></li>
 					<li><a href="/kontributuri/">Kontributuri</a></li>
 					<li><a href="/werrej/">Werrej</a></li>
@@ -182,7 +203,7 @@
 			<div id="message"><!-- --></div>
 			<main id="skipto">
 				
-	<article class="content frar-2024 poddata story story-37">
+	<article class="content frar poddata story story-37">
 		<header>
 			<ul>
 				<li class="header-label">
@@ -196,13 +217,13 @@
 				
 			</ul>
 			
-				<h1>
+				<h1 data-pagefind-meta="title">
 					Noti Editorjali #1
 				</h1>
 			
 			
 			
-<h2 class="contains-with">
+<h2 class="contains-with" data-pagefind-meta="author">
 	
 	
 		
@@ -237,7 +258,7 @@
 				
 					<aside id="audio">
 					
-					<figure class="audio frar-2024 poddata">
+					<figure class="audio frar poddata">
 	<div class="player" id="player-0">
 		<audio id="audio-0">
 			<source src="https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1693409176364-85a68853a9e234692c4a1c71c71c9fd6.mp3" type="audio/mpeg">
@@ -252,10 +273,10 @@
 				
 					
 					
-					<figure class="audio frar-2024 poddata">
+					<figure class="audio frar poddata">
 	<div class="player" id="player-1">
 		<audio id="audio-1">
-			<source src="https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1693409176364-85a68853a9e234692c4a1c71c71c9fd6.mp3" type="audio/mpeg">
+			<source src="https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1692908859158-2aad55f3eafbdffa58b1bb3717067174.mp3" type="audio/mpeg">
 		</audio>
 	</div>
 	<figcaption>
@@ -275,11 +296,12 @@
 				
 				<div class="promo bookmark-shortcut"><!-- --></div>
 			</section>
-			<section id="grid-body">
+			<section id="grid-body" data-pagefind-body data-pagefind-weight="7">
 				
 					<section class="generic-body-text">
-						<p><span class="initial">Niltaqgħu</span> ma’ Warren Bartolo, <l-m>it-traduttur</l-m> tal-<em>Frammenti ta’ Saffo</em> (EDE Books, 2023) għal taħdita dwar <l-m>l-imħabba</l-m> tiegħu għal Saffo u <l-m>l-lirika</l-m> tagħha, u dwar <l-m>il-proċess</l-m> tat-traduzzjoni <l-m>mill-Grieg</l-m> Antik <l-m>għall-Malti</l-m> u <l-m>t-taqbida</l-m> mal-lingwi <l-m>l-oħrajn</l-m> li jinfilsaw <l-m>bejniethom <span class="end-dot">.</span></l-m></p>
+						<p>Niltaqgħu ma’ Warren Bartolo, <l-m>it-traduttur</l-m> tal-<em>Frammenti ta’ Saffo</em> (EDE Books, 2023) għal taħdita dwar <l-m>l-imħabba</l-m> tiegħu għal Saffo u <l-m>l-lirika</l-m> tagħha, u dwar <l-m>il-proċess</l-m> tat-traduzzjoni <l-m>mill-Grieg</l-m> Antik <l-m>għall-Malti</l-m> u <l-m>t-taqbida</l-m> mal-lingwi <l-m>l-oħrajn</l-m> li jinfilsaw <l-m>bejniethom <span class="end-dot">.</span></l-m></p>
 					</section>
+				
 				
 				
 					<section id="endnote" class="body-text">
@@ -306,7 +328,7 @@
 		</div>
 		
 	</article>
-	<aside class="promos-container" data-track-content data-content-name="Promos tal-qiegħ" data-content-piece="Noti Editorjali #1: Warren Bartolo #1">
+	<aside class="promos-container end-promos" data-track-content data-content-name="Promos tal-qiegħ" data-content-piece="Noti Editorjali #1: Warren Bartolo #1">
 		
 		
 		
@@ -316,7 +338,7 @@
 		
 
 <li >
-	<a class="promo lulju-2023 promo-esej story-16" href="/loranne-vella-il-lanza-il-labra-il-qoffa-l-azzarin/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Noti Editorjali #1: Warren Bartolo #1', 'għal: Il-Lanza, il-Labra, il-Qoffa, l-Azzarin', 1]);">
+	<a class="promo  lulju promo-esej story-16" href="/loranne-vella-il-lanza-il-labra-il-qoffa-l-azzarin/" onclick="analytics(['trackEvent', 'Promo', 'minn: Noti Editorjali #1: Warren Bartolo #1', 'għal: Il-Lanza, il-Labra, il-Qoffa, l-Azzarin', 1]);">
 		<header>
 	<ul>
 	
@@ -357,7 +379,7 @@
 		
 
 <li >
-	<a class="promo mejju-2023 promo-esej story-7" href="/omar-nshea-gilgamex-dak-li-ra-l-qiegħ/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Noti Editorjali #1: Warren Bartolo #1', 'għal: Gilgamex, Dak li Ra l-Qiegħ', 2]);">
+	<a class="promo  mejju promo-esej story-7" href="/omar-nshea-gilgamex-dak-li-ra-l-qiegħ/" onclick="analytics(['trackEvent', 'Promo', 'minn: Noti Editorjali #1: Warren Bartolo #1', 'għal: Gilgamex, Dak li Ra l-Qiegħ', 2]);">
 		<header>
 	<ul>
 	
@@ -398,7 +420,7 @@
 		
 
 <li >
-	<a class="promo jannar-2024 promo-poddata story-39" href="/kurt-borg-davinia-hamilton-omar-nshea-poddata-2023-11-01-kif-tgħidha-fqalbek/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Noti Editorjali #1: Warren Bartolo #1', 'għal: Kif Tgħidha f’Qalbek', 3]);">
+	<a class="promo  jannar promo-poddata story-39" href="/kurt-borg-davinia-hamilton-omar-nshea-poddata-2023-11-01-kif-tgħidha-fqalbek/" onclick="analytics(['trackEvent', 'Promo', 'minn: Noti Editorjali #1: Warren Bartolo #1', 'għal: Kif Tgħidha f’Qalbek', 3]);">
 		<header>
 	<ul>
 	
@@ -451,10 +473,11 @@
 
 	</aside>
 	<script>
-		audioUrls = { "songs": [{"author":"Warren Bartolo","storyId":"37","monthYear":"Frar 2024","pageSlug":"warren-bartolo-poddata-2023-08-31-noti-editorjali-1-warren-bartolo","podcastLengthMinutes":93,"podcastNote":null,"reportingTitle":"Noti Editorjali #1: Warren Bartolo #1","sequenceEpisodeNumber":1,"sequenceEpisodeTitle":null,"title":"Noti Editorjali #1: Warren Bartolo","type":"Poddata","url":"https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1693409176364-85a68853a9e234692c4a1c71c71c9fd6.mp3"},{"authorName":"Warren Bartolo","monthYear":"Frar 2024","pageSlug":"warren-bartolo-poddata-2023-08-31-noti-editorjali-1-warren-bartolo","reportingTitle":"Noti Editorjali #1: Warren Bartolo #1","sequenceEpisodeNumber":1,"sequenceEpisodeTitle":null,"storyId":"3","title":"Noti Editorjali #1: Warren Bartolo","type":"Poddata","url":"https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1693409176364-85a68853a9e234692c4a1c71c71c9fd6.mp3"}] };
+		audioUrls = { "songs": [{"author":"Warren Bartolo","storyId":"37","issueMonth":"Frar","pageSlug":"warren-bartolo-poddata-2023-08-31-noti-editorjali-1-warren-bartolo","podcastLengthMinutes":93,"podcastNote":null,"reportingTitle":"Noti Editorjali #1: Warren Bartolo #1","sequenceEpisodeNumber":1,"sequenceEpisodeTitle":null,"title":"Noti Editorjali #1: Warren Bartolo","type":"Poddata","url":"https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1693409176364-85a68853a9e234692c4a1c71c71c9fd6.mp3"},{"authorName":"Warren Bartolo","issueMonth":"Frar","pageSlug":"warren-bartolo-poddata-2023-08-31-noti-editorjali-1-warren-bartolo","reportingTitle":"Noti Editorjali #1: Warren Bartolo #1","sequenceEpisodeNumber":1,"sequenceEpisodeTitle":null,"storyId":"3","title":"Noti Editorjali #1: Warren Bartolo","type":"Poddata","url":"https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1692908859158-2aad55f3eafbdffa58b1bb3717067174.mp3"}] };
 		author = "Warren Bartolo" || null;
 		collections = "" || null;
-		monthYear = "frar-2024" || null;
+		issueMonth = "frar" || null;
+		issueMonthYear = "frar-2024" || null;
 		podcastUrl = "https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1693409176364-85a68853a9e234692c4a1c71c71c9fd6.mp3";
 		reportingTitle = "Noti Editorjali #1: Warren Bartolo #1" || null;
 		sequenceEpisodeNumber = "1";

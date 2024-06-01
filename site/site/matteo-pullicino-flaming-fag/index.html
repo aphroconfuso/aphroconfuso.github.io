@@ -49,7 +49,7 @@ hekk tgħallimt f’dawk il-mortwarji skolastiċi: / is-sabiħ jitlob li jiġi m
 		<link rel="canonical" href="https://aphroconfuso.mt/matteo-pullicino-flaming-fag/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-41eda743.css">
+		<link rel="stylesheet" href="/css/style-25325009.css">
 		<script>
 			var
 				audioLoaded,
@@ -73,7 +73,8 @@ hekk tgħallimt f’dawk il-mortwarji skolastiċi: / is-sabiħ jitlob li jiġi m
 				lastReportedScrollPosition,
 				lastScrollPosition,
 				message,
-				monthYear,
+				issueMonth,
+				issueMonthYear,
 				newScrollPosition,
 				pageHeight,
 				percentageProgress,
@@ -139,6 +140,10 @@ hekk tgħallimt f’dawk il-mortwarji skolastiċi: / is-sabiħ jitlob li jiġi m
 				}
 			}
 			var _paq = window._paq = window._paq || [];
+			const analytics = (arrayInfo) => {
+				if (location.host !== 'aphroconfuso.mt') console.log(arrayInfo);
+				_paq.push(arrayInfo);
+			}
 			_paq.push(['disableCookies']);
 			_paq.push(['enableJSErrorTracking']);
 			_paq.push(['enableHeartBeatTimer']);
@@ -153,20 +158,36 @@ hekk tgħallimt f’dawk il-mortwarji skolastiċi: / is-sabiħ jitlob li jiġi m
 				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
 			})();
 		</script>
-		<script defer src="/script/script-227.js"></script>
+		<script defer src="/script/script-233.js"></script>
 	</head>
-	<body class="show-nav">
+	<body class="show-nav this-month-mejju">
 		<script>initialiseAfterBody();</script>
 		<div id="top-wrapper">
 			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
 			<nav id="top-nav">
-				<a id="logo-container" href="/"><img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" /></a>
+				<div id="logo-container-wrapper">
+					<div id="logo-container">
+						<a href="/">
+							<img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" />
+						</a>
+					</div>
+					<menu class="hide-mobile" id="menu-carousels">
+						<li class="abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
+					</menu>
+					<menu class="hide-mobile" id="menu-collections">
+						<li class="main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+						<li class="main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					</menu>
+				</div>
 				<input id="menu-toggle" type="checkbox" />
 				<label class='menu-button-container' for="menu-toggle">
 					<span style="display: none">Mobile biss: iftaħ il-menu</span>
 					<div class='menu-button'></div>
 				</label>
-				<menu>
+				<menu id="menu-main">
+					<li class="hide-laptop main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+					<li class="hide-laptop main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					<li class="hide-laptop abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
 					<li><a href="/appuntamenti/">Appuntamenti</a></li>
 					<li><a href="/kontributuri/">Kontributuri</a></li>
 					<li><a href="/werrej/">Werrej</a></li>
@@ -190,7 +211,7 @@ hekk tgħallimt f’dawk il-mortwarji skolastiċi: / is-sabiħ jitlob li jiġi m
 			<div id="message"><!-- --></div>
 			<main id="skipto">
 				
-	<article class="content dicembru-2023 poezija story story-32">
+	<article class="content dicembru poezija story story-32">
 		<header>
 			<ul>
 				<li class="header-label">
@@ -201,7 +222,7 @@ hekk tgħallimt f’dawk il-mortwarji skolastiċi: / is-sabiħ jitlob li jiġi m
 				
 			</ul>
 			
-				<h1>
+				<h1 data-pagefind-meta="title">
 					Flaming Fag
 					
 					
@@ -209,7 +230,7 @@ hekk tgħallimt f’dawk il-mortwarji skolastiċi: / is-sabiħ jitlob li jiġi m
 			
 			
 			
-<h2>
+<h2 data-pagefind-meta="author">
 	
 	
 		
@@ -234,7 +255,7 @@ hekk tgħallimt f’dawk il-mortwarji skolastiċi: / is-sabiħ jitlob li jiġi m
 				
 					<aside id="audio">
 					
-					<figure class="audio dicembru-2023 poezija">
+					<figure class="audio dicembru poezija">
 	<div class="player" id="player-0">
 		<audio id="audio-0">
 			<source src="https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1705599050876-f4c151251490014f363c7dd0c2b4ca79.mp3" type="audio/mpeg">
@@ -258,7 +279,7 @@ hekk tgħallimt f’dawk il-mortwarji skolastiċi: / is-sabiħ jitlob li jiġi m
 				
 				<div class="promo bookmark-shortcut"><!-- --></div>
 			</section>
-			<section id="grid-body">
+			<section id="grid-body" data-pagefind-body data-pagefind-weight="7">
 				
 					<section class="body-text">
 						<p>int sabiħ</p>
@@ -268,7 +289,7 @@ hekk tgħallimt f’dawk il-mortwarji skolastiċi: / is-sabiħ jitlob li jiġi m
 <p>hekk tgħallimt f’dawk <l-m>il-mortwarji</l-m> skolastiċi: / <l-m>is-sabiħ</l-m> jitlob li jiġi mifhum / <l-m>il-fehim</l-m> jitlob <l-m>is-sagrifiċċju</l-m> tas-sabiħ</p>
 <p>// </p>
 <p>għalhekk qatlu daqshekk minna? </p>
-<p>le / imm’ismijiethom xorta nġorruhom / mhux <l-m>bħall-kawba</l-m> u <l-m>l-ballut</l-m> fuq <l-m>l-ispalla</l-m> / imma fuq daharna wkoll / daqslikieku se noħduhom lura / <l-m>għall-kenn</l-m> / <l-m>tas-sħana</l-m> li kien jaf demmhom </p>
+<p>le / imm’ismijiethom xorta nġorruhom / mhux <l-m>bħall-kewba</l-m> u <l-m>l-ballut</l-m> fuq <l-m>l-ispalla</l-m> / imma fuq daharna wkoll / daqslikieku se noħduhom lura / <l-m>għall-kenn</l-m> / <l-m>tas-sħana</l-m> li kien jaf demmhom </p>
 <p>// </p>
 <p>taħt <l-m>il-friex</l-m> / ma tidħolx fija / imma bejni / titħaxken bejn kuxxtejja / kif ħaxkint <l-m>ix-xafra</l-m> mal-polz / u niżżilt versi li dejjem bżajt inniżżel</p>
 <p>bżajt / imma xtaqt / kif jixtieq kull tifel imbeżża’ / li għad jikber u jsir raġel / mhux raġel / jekk irid ibus wieħed </p>
@@ -283,6 +304,7 @@ hekk tgħallimt f’dawk il-mortwarji skolastiċi: / is-sabiħ jitlob li jiġi m
 <p>meta nlestu ma nibqax naf fejn nispiċċa jien u tibda int </p>
 <p>naf biss li aħna sbieħ</p>
 					</section>
+				
 				
 				
 			</section>
@@ -301,7 +323,7 @@ hekk tgħallimt f’dawk il-mortwarji skolastiċi: / is-sabiħ jitlob li jiġi m
 		</div>
 		
 	</article>
-	<aside class="promos-container" data-track-content data-content-name="Promos tal-qiegħ" data-content-piece="Flaming Fag">
+	<aside class="promos-container end-promos" data-track-content data-content-name="Promos tal-qiegħ" data-content-piece="Flaming Fag">
 		
 		
 		
@@ -311,7 +333,7 @@ hekk tgħallimt f’dawk il-mortwarji skolastiċi: / is-sabiħ jitlob li jiġi m
 		
 
 <li >
-	<a class="promo novembru-2023 promo-poezija story-29" href="/leslie-vassallo-wirja/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Flaming Fag', 'għal: Wirja', 1]);">
+	<a class="promo  novembru promo-poezija story-29" href="/leslie-vassallo-wirja/" onclick="analytics(['trackEvent', 'Promo', 'minn: Flaming Fag', 'għal: Wirja', 1]);">
 		<header>
 	<ul>
 	
@@ -352,7 +374,7 @@ hekk tgħallimt f’dawk il-mortwarji skolastiċi: / is-sabiħ jitlob li jiġi m
 		
 
 <li >
-	<a class="promo dicembru-2023 promo-esej story-33" href="/omar-nshea-joey-tilbes-it-tabù-tinża/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Flaming Fag', 'għal: Joey Tilbes, it-Tabù Tinża&#92;&#39;', 2]);">
+	<a class="promo  dicembru promo-esej story-33" href="/omar-nshea-joey-tilbes-it-tabù-tinża/" onclick="analytics(['trackEvent', 'Promo', 'minn: Flaming Fag', 'għal: Joey Tilbes, it-Tabù Tinża&#92;&#39;', 2]);">
 		<header>
 	<ul>
 	
@@ -393,7 +415,7 @@ hekk tgħallimt f’dawk il-mortwarji skolastiċi: / is-sabiħ jitlob li jiġi m
 		
 
 <li >
-	<a class="promo novembru-2023 promo-poezija story-27" href="/kris-polidano-na-i-hom/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Flaming Fag', 'għal: -Na -I -Hom', 3]);">
+	<a class="promo  novembru promo-poezija story-27" href="/kris-polidano-na-i-hom/" onclick="analytics(['trackEvent', 'Promo', 'minn: Flaming Fag', 'għal: -Na -I -Hom', 3]);">
 		<header>
 	<ul>
 	
@@ -435,10 +457,11 @@ hekk tgħallimt f’dawk il-mortwarji skolastiċi: / is-sabiħ jitlob li jiġi m
 
 	</aside>
 	<script>
-		audioUrls = { "songs": [{"author":"Matteo Pullicino","storyId":"32","monthYear":"Diċembru 2023","pageSlug":"matteo-pullicino-flaming-fag","podcastLengthMinutes":5,"podcastNote":null,"reportingTitle":"Flaming Fag","sequenceEpisodeNumber":null,"sequenceEpisodeTitle":null,"title":"Flaming Fag","type":"Poezija","url":"https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1705599050876-f4c151251490014f363c7dd0c2b4ca79.mp3"}] };
+		audioUrls = { "songs": [{"author":"Matteo Pullicino","storyId":"32","issueMonth":"Diċembru","pageSlug":"matteo-pullicino-flaming-fag","podcastLengthMinutes":5,"podcastNote":null,"reportingTitle":"Flaming Fag","sequenceEpisodeNumber":null,"sequenceEpisodeTitle":null,"title":"Flaming Fag","type":"Poezija","url":"https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1705599050876-f4c151251490014f363c7dd0c2b4ca79.mp3"}] };
 		author = "Matteo Pullicino" || null;
 		collections = "" || null;
-		monthYear = "dicembru-2023" || null;
+		issueMonth = "dicembru" || null;
+		issueMonthYear = "dicembru-2023" || null;
 		podcastUrl = "https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1705599050876-f4c151251490014f363c7dd0c2b4ca79.mp3";
 		reportingTitle = "Flaming Fag" || null;
 		sequenceEpisodeNumber = null;

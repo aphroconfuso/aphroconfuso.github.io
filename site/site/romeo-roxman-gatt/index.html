@@ -27,7 +27,7 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/romeo-roxman-gatt/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-41eda743.css">
+		<link rel="stylesheet" href="/css/style-25325009.css">
 		<script>
 			var
 				audioLoaded,
@@ -51,7 +51,8 @@
 				lastReportedScrollPosition,
 				lastScrollPosition,
 				message,
-				monthYear,
+				issueMonth,
+				issueMonthYear,
 				newScrollPosition,
 				pageHeight,
 				percentageProgress,
@@ -117,6 +118,10 @@
 				}
 			}
 			var _paq = window._paq = window._paq || [];
+			const analytics = (arrayInfo) => {
+				if (location.host !== 'aphroconfuso.mt') console.log(arrayInfo);
+				_paq.push(arrayInfo);
+			}
 			_paq.push(['disableCookies']);
 			_paq.push(['enableJSErrorTracking']);
 			_paq.push(['enableHeartBeatTimer']);
@@ -131,20 +136,36 @@
 				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
 			})();
 		</script>
-		<script defer src="/script/script-227.js"></script>
+		<script defer src="/script/script-233.js"></script>
 	</head>
-	<body class="show-nav">
+	<body class="show-nav this-month-mejju">
 		<script>initialiseAfterBody();</script>
 		<div id="top-wrapper">
 			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
 			<nav id="top-nav">
-				<a id="logo-container" href="/"><img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" /></a>
+				<div id="logo-container-wrapper">
+					<div id="logo-container">
+						<a href="/">
+							<img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" />
+						</a>
+					</div>
+					<menu class="hide-mobile" id="menu-carousels">
+						<li class="abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
+					</menu>
+					<menu class="hide-mobile" id="menu-collections">
+						<li class="main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+						<li class="main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					</menu>
+				</div>
 				<input id="menu-toggle" type="checkbox" />
 				<label class='menu-button-container' for="menu-toggle">
 					<span style="display: none">Mobile biss: iftaħ il-menu</span>
 					<div class='menu-button'></div>
 				</label>
-				<menu>
+				<menu id="menu-main">
+					<li class="hide-laptop main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+					<li class="hide-laptop main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					<li class="hide-laptop abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
 					<li><a href="/appuntamenti/">Appuntamenti</a></li>
 					<li><a href="/kontributuri/">Kontributuri</a></li>
 					<li><a href="/werrej/">Werrej</a></li>
@@ -168,7 +189,7 @@
 			<div id="message"><!-- --></div>
 			<main id="skipto">
 				
-<article class="generic">
+<article class="generic contributor-8">
 	<header>
 		<ul><li class="header-label"><a href="/kontributuri/">Kontributuri</a></li></ul>
 		<h1>Romeo Roxman Gatt</h1>
@@ -177,9 +198,12 @@
 	<div class="container-generic contributor">
 		<section id="grid-body">
 			<div class="generic-body-text">
-				<p>Romeo Roxman Gatt huwa artist multidixxiplinari li <l-m>fil-prattika</l-m> tiegħu jesplora <l-m>s-sesswalità</l-m>, <l-m>l-identità</l-m>, <l-m>il-ġeneru</l-m>, <l-m>l-imħabba</l-m> u <l-m>l-konsum</l-m>. Ilu għal xi żmien jaħdem b’temi ta’ umanizzazzjoni u interazzjoni ma’ oġġetti <l-m>tal-konsumatur</l-m>, fejn <l-m>l-inanimat</l-m> isir ikoniku u ffetixizzat. Huwa interessat ukoll <l-m>fid-dokumentazzjoni</l-m> u <l-m>l-arkivjar</l-m> ta’ esperjenzi trans u queer, u riċentement nieda proġett ġdid <l-m>bl-isem</l-m> Rosa Kwir. Dan <l-m>il-proġett</l-m> jiffoka fuq kunċetti alternattivi <l-m>tal-maskulinità</l-m>, u jiġbor fih stejjer ta’ rġiel trans u persuni mhux binarji u li jxaqilbu iktar lejn <l-m>il-maskil</l-m>, f’Malta. Huwa <l-m>l-kofundatur</l-m> tal-ewwel spazju għal proġetti u wirjiet <l-m>tal-arti</l-m> kontemporanja queer f’Malta. Roxman għandu MA <l-m>fil-Komunikazzjoni</l-m> Viżiva <l-m>mir-Royal</l-m> College of Art u ntgħażel <l-m>għall-Bloomberg</l-m> New Contemporaries, ICA, Londra, u Bluecoat Liverpool (2016).</p>
+				<div data-pagefind-body data-pagefind-weight="1">
+					<p>Romeo Roxman Gatt huwa artist multidixxiplinari li <l-m>fil-prattika</l-m> tiegħu jesplora <l-m>s-sesswalità</l-m>, <l-m>l-identità</l-m>, <l-m>il-ġeneru</l-m>, <l-m>l-imħabba</l-m> u <l-m>l-konsum</l-m>. Ilu għal xi żmien jaħdem b’temi ta’ umanizzazzjoni u interazzjoni ma’ oġġetti <l-m>tal-konsumatur</l-m>, fejn <l-m>l-inanimat</l-m> isir ikoniku u ffetixizzat. Huwa interessat ukoll <l-m>fid-dokumentazzjoni</l-m> u <l-m>l-arkivjar</l-m> ta’ esperjenzi trans u queer, u riċentement nieda proġett ġdid <l-m>bl-isem</l-m> Rosa Kwir. Dan <l-m>il-proġett</l-m> jiffoka fuq kunċetti alternattivi <l-m>tal-maskulinità</l-m>, u jiġbor fih stejjer ta’ rġiel trans u persuni mhux binarji u li jxaqilbu iktar lejn <l-m>il-maskil</l-m>, f’Malta. Huwa <l-m>l-kofundatur</l-m> tal-ewwel spazju għal proġetti u wirjiet <l-m>tal-arti</l-m> kontemporanja queer f’Malta. Roxman għandu MA <l-m>fil-Komunikazzjoni</l-m> Viżiva <l-m>mir-Royal</l-m> College of Art u ntgħażel <l-m>għall-Bloomberg</l-m> New Contemporaries, ICA, Londra, u Bluecoat Liverpool (2016).</p>
+				</div>
 				
 					<p class="continuity">Kitba ta’ <span class="contributor">Romeo</span> fil-ġurnal:</p>
+					
 					
 					
 					<ul class="promo-list">
@@ -188,7 +212,7 @@
 		
 
 <li >
-	<a class="promo mejju-2023 promo-memoir story-8" href="/romeo-roxman-gatt-qarn/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Romeo Roxman Gatt', 'għal: Qarn', 1]);">
+	<a class="promo  mejju promo-memoir story-8" href="/romeo-roxman-gatt-qarn/" onclick="analytics(['trackEvent', 'Promo', 'minn: Romeo Roxman Gatt', 'għal: Qarn', 1]);">
 		<header>
 	<ul>
 	
@@ -241,7 +265,7 @@
 		</section>
 		<section id="grid-max-panel-left-top">
 			<section id="grid-max-panel-left-top">
-	<section class="contributors-menu">
+	<section class="generic-menu contributors-menu">
 		
 			<ul>
 				
@@ -252,6 +276,12 @@
 			
 				
 					<li><a href="/aaron-aquilina/">Aaron Aquilina</a></li>
+				
+			
+		
+			
+				
+					<li><a href="/jasmine-bajada/">Jasmine Bajada</a></li>
 				
 			
 		
@@ -306,6 +336,12 @@
 			
 				
 					<li><a href="/ryan-falzon/">Ryan Falzon</a></li>
+				
+			
+		
+			
+				
+					<li><a href="/fatima-a.m./">fatima a.m.</a></li>
 				
 			
 		

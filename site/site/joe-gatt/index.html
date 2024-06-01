@@ -27,7 +27,7 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/joe-gatt/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-41eda743.css">
+		<link rel="stylesheet" href="/css/style-25325009.css">
 		<script>
 			var
 				audioLoaded,
@@ -51,7 +51,8 @@
 				lastReportedScrollPosition,
 				lastScrollPosition,
 				message,
-				monthYear,
+				issueMonth,
+				issueMonthYear,
 				newScrollPosition,
 				pageHeight,
 				percentageProgress,
@@ -117,6 +118,10 @@
 				}
 			}
 			var _paq = window._paq = window._paq || [];
+			const analytics = (arrayInfo) => {
+				if (location.host !== 'aphroconfuso.mt') console.log(arrayInfo);
+				_paq.push(arrayInfo);
+			}
 			_paq.push(['disableCookies']);
 			_paq.push(['enableJSErrorTracking']);
 			_paq.push(['enableHeartBeatTimer']);
@@ -131,20 +136,36 @@
 				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
 			})();
 		</script>
-		<script defer src="/script/script-227.js"></script>
+		<script defer src="/script/script-233.js"></script>
 	</head>
-	<body class="show-nav">
+	<body class="show-nav this-month-mejju">
 		<script>initialiseAfterBody();</script>
 		<div id="top-wrapper">
 			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
 			<nav id="top-nav">
-				<a id="logo-container" href="/"><img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" /></a>
+				<div id="logo-container-wrapper">
+					<div id="logo-container">
+						<a href="/">
+							<img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" />
+						</a>
+					</div>
+					<menu class="hide-mobile" id="menu-carousels">
+						<li class="abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
+					</menu>
+					<menu class="hide-mobile" id="menu-collections">
+						<li class="main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+						<li class="main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					</menu>
+				</div>
 				<input id="menu-toggle" type="checkbox" />
 				<label class='menu-button-container' for="menu-toggle">
 					<span style="display: none">Mobile biss: iftaħ il-menu</span>
 					<div class='menu-button'></div>
 				</label>
-				<menu>
+				<menu id="menu-main">
+					<li class="hide-laptop main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+					<li class="hide-laptop main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					<li class="hide-laptop abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
 					<li><a href="/appuntamenti/">Appuntamenti</a></li>
 					<li><a href="/kontributuri/">Kontributuri</a></li>
 					<li><a href="/werrej/">Werrej</a></li>
@@ -168,7 +189,7 @@
 			<div id="message"><!-- --></div>
 			<main id="skipto">
 				
-<article class="generic">
+<article class="generic contributor-1">
 	<header>
 		<ul><li class="header-label"><a href="/kontributuri/">Kontributuri</a></li></ul>
 		<h1>Joe Gatt</h1>
@@ -177,10 +198,13 @@
 	<div class="container-generic contributor">
 		<section id="grid-body">
 			<div class="generic-body-text">
-				<p>Joe Gatt twieled Malta u emigra lejn Londra bħala żagħżugħ. Għex għal għaxar snin Berlin u issa jgħix Brussell. <l-m>L-istejjer</l-m> tiegħu ġew ippubblikati f’<em>Scintillas: New Maltese Writing 1</em> (Praspar Press 2021) u <em>The London Magazine</em>. Londra huwa ħadem fi rwoli editorjali ma’ <em>Vogue</em>, <em>The Modern Review</em>, u għal ħames snin kien <l-m>l-editur</l-m> ta’ <em>GSpot Magazine</em>. Kiteb għal diversi pubblikazzjonijiet, fosthom <em>The Face</em>, <em>Dazed &amp; Confused</em> u <em>The Guardian</em>. Huwa <l-m>l-kittieb</l-m> ta’ newsletter <a href="https://joegattnet.substack.com">joegattnet.substack.com</a> u jmantni <l-m>l-website</l-m> tiegħu <a href="https://joegatt.net">joegatt.net</a>. Joe kien ukoll parti <l-m>mill-kollettiva</l-m> <a href="/jien_a/">Jien_a</a>.</p>
+				<div data-pagefind-body data-pagefind-weight="1">
+					<p>Joe Gatt twieled Malta u emigra lejn Londra bħala żagħżugħ. Għex għal għaxar snin Berlin u issa jgħix Brussell. <l-m>L-istejjer</l-m> tiegħu ġew ippubblikati f’<em>Scintillas: New Maltese Writing 1</em> (Praspar Press 2021) u <em>The London Magazine</em>. Londra huwa ħadem fi rwoli editorjali ma’ <em>Vogue</em>, <em>The Modern Review</em>, u għal ħames snin kien <l-m>l-editur</l-m> ta’ <em>GSpot Magazine</em>. Kiteb għal diversi pubblikazzjonijiet, fosthom <em>The Face</em>, <em>Dazed &amp; Confused</em> u <em>The Guardian</em>. Huwa <l-m>l-kittieb</l-m> ta’ newsletter <a href="https://joegattnet.substack.com">joegattnet.substack.com</a> u jmantni <l-m>l-website</l-m> tiegħu <a href="https://joegatt.net">joegatt.net</a>. Joe kien ukoll parti <l-m>mill-kollettiva</l-m> <a href="/jien_a/">Jien_a</a>.</p>
 <p>Joe Gatt huwa koeditur ta’ Aphroconfuso.</p>
+				</div>
 				
 					<p class="continuity">Kitba ta’ <span class="contributor">Joe</span> fil-ġurnal:</p>
+					
 					
 					
 					<ul class="promo-list">
@@ -189,7 +213,48 @@
 		
 
 <li >
-	<a class="promo frar-2024 promo-esej story-40" href="/jien_a-il-mara-tas-suldat/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Joe Gatt', 'għal: Il-Mara tas-Suldat', 1]);">
+	<a class="promo  april promo-storja story-58" href="/joe-gatt-general-strike/" onclick="analytics(['trackEvent', 'Promo', 'minn: Joe Gatt', 'għal: General Strike', 1]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">April 2024</li>
+	
+	
+	</ul>
+	
+		<h1>
+			General Strike
+			
+		</h1>
+	
+	
+<h2>
+	
+	
+		
+		
+			
+				
+					<span class="author">Joe Gatt</span>
+</h2>
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Morna lejn <l-m>il-Marsa</l-m> u hemmhekk beda <l-m>l-inkwiet</l-m>. Kellna <l-m>l-pitrolju</l-m> u <l-m>ċ-ċraret</l-m> qodma. Xi ħadd ġab miegħu serrieq <l-m>tal-mastrudaxxa</l-m>. Inżilna <l-m>ċ-Ċimiterju</l-m> tat-Torok, mhux ’il bogħod minn fejn kienu jgħixu xi tnejn jew tlieta minna. Konna nafu fejn kien hemm żewġ arbli <l-m>tar-Rediffusion</l-m>, kbar, <l-m>tal-injam</l-m>. Ridna naqtgħulhom <l-m>il-wajers</l-m> għax ma kinux riedu jxandru <l-m>l-bulettini</l-m> tal-union. Propaganda <l-m>tal-Ingliżi</l-m> biss riedu, <l-m>il-ġurnata</l-m> kollha. Għamilna toqba <l-m>fl-arblu</l-m>, xarrabna <l-m>ċ-ċraret</l-m> fil-pitrolju, u deffisniehom <l-m>fit-toqba</l-m> li konna taqqabna. Qabbadna <l-m>ċ-ċraret</l-m> b’sulfarina u rsaqna lura biex naraw <l-m>l-arbli</l-m> jinħarqu. Meta konna ċerti li kienu se jinħarqu <l-m>sal-art</l-m>, morna lura <l-m>d-dar</l-m> għax <l-m>in-nisa</l-m> kienu inkwetati u kienu qalulna biex ma nibqgħux barra tard, imma <l-m>għall-inqas</l-m> konna nafu li għamilna <l-m>l-biċċa</l-m> tagħna. Imbagħad waranofsinhar erġajna ħriġna. Konna xi mitt persuna, jew mitejn, tfajna <l-m>l-ġebel</l-m> fuq <l-m>il-pulizija</l-m>, u kissirna <l-m>t-twieqi</l-m> tal-karozzi li kienu fihom. Smajna li kienu sejrin lejn Blata <l-m>l-Bajda</l-m>, allura <l-m>morn’hemm</l-m>, ħdejn <l-m>il-flats</l-m> tal-Arċisqof, u xħin wasalna rajna li <l-m>n-nies</l-m> kienu qed jitfgħulhom <l-m>il-ġebel</l-m> lill-pulizija. Surġent ħareġ <l-m>mill-karozza</l-m> biex ineħħi <l-m>l-ġebel</l-m> li kien qed jimblokka <l-m>t-triq</l-m> u xi ħadd <l-m>mir-Rerum</l-m> Novarum Flats tefagħlu żewġt iqsari. <l-m>Il-pulizija</l-m> l-oħra kienu telgħin <l-m>l-għolja</l-m> biex jiċċirkundawna, allura qtajna qalbna u ħallejniehom jarrestawna. Tfajna landa petrol fuq <l-m>il-gverta</l-m> ta’ vapur imma ma ġara xejn.</p>
+			
+		</div>
+		
+	</a>
+</li>
+
+	
+		
+
+<li >
+	<a class="promo  frar promo-esej story-40" href="/jien_a-il-mara-tas-suldat/" onclick="analytics(['trackEvent', 'Promo', 'minn: Joe Gatt', 'għal: Il-Mara tas-Suldat', 2]);">
 		<header>
 	<ul>
 	
@@ -238,7 +303,7 @@
 		
 
 <li >
-	<a class="promo ottubru-2023 promo-esej story-25" href="/joe-gatt-kontra-tagħna-għaliex-magħna/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Joe Gatt', 'għal: Kontra Tagħna Għaliex Magħna', 2]);">
+	<a class="promo  ottubru promo-esej story-25" href="/joe-gatt-kontra-tagħna-għaliex-magħna/" onclick="analytics(['trackEvent', 'Promo', 'minn: Joe Gatt', 'għal: Kontra Tagħna Għaliex Magħna', 3]);">
 		<header>
 	<ul>
 	
@@ -279,7 +344,7 @@
 		
 
 <li >
-	<a class="promo mejju-2023 promo-esej story-11" href="/joe-gatt-il-kuxjenza-fit-truf/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Joe Gatt', 'għal: Il-Kuxjenza fit-Truf', 3]);">
+	<a class="promo  mejju promo-esej story-11" href="/joe-gatt-il-kuxjenza-fit-truf/" onclick="analytics(['trackEvent', 'Promo', 'minn: Joe Gatt', 'għal: Il-Kuxjenza fit-Truf', 4]);">
 		<header>
 	<ul>
 	
@@ -335,7 +400,7 @@
 		
 
 <li >
-	<a class="promo mejju-2023 promo-xihaga-ohra story-10" href="/italo-svevo-joe-gatt-it-tipjip/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Joe Gatt', 'għal: It-Tipjip', 1]);">
+	<a class="promo  mejju promo-xihaga-ohra story-10" href="/italo-svevo-joe-gatt-it-tipjip/" onclick="analytics(['trackEvent', 'Promo', 'minn: Joe Gatt', 'għal: It-Tipjip', 1]);">
 		<header>
 	<ul>
 	
@@ -378,7 +443,7 @@
 		</section>
 		<section id="grid-max-panel-left-top">
 			<section id="grid-max-panel-left-top">
-	<section class="contributors-menu">
+	<section class="generic-menu contributors-menu">
 		
 			<ul>
 				
@@ -389,6 +454,12 @@
 			
 				
 					<li><a href="/aaron-aquilina/">Aaron Aquilina</a></li>
+				
+			
+		
+			
+				
+					<li><a href="/jasmine-bajada/">Jasmine Bajada</a></li>
 				
 			
 		
@@ -443,6 +514,12 @@
 			
 				
 					<li><a href="/ryan-falzon/">Ryan Falzon</a></li>
+				
+			
+		
+			
+				
+					<li><a href="/fatima-a.m./">fatima a.m.</a></li>
 				
 			
 		

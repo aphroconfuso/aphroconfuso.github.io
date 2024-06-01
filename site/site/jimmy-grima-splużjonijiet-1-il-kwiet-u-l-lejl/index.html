@@ -41,7 +41,7 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/jimmy-grima-splużjonijiet-1-il-kwiet-u-l-lejl/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-41eda743.css">
+		<link rel="stylesheet" href="/css/style-25325009.css">
 		<script>
 			var
 				audioLoaded,
@@ -65,7 +65,8 @@
 				lastReportedScrollPosition,
 				lastScrollPosition,
 				message,
-				monthYear,
+				issueMonth,
+				issueMonthYear,
 				newScrollPosition,
 				pageHeight,
 				percentageProgress,
@@ -131,6 +132,10 @@
 				}
 			}
 			var _paq = window._paq = window._paq || [];
+			const analytics = (arrayInfo) => {
+				if (location.host !== 'aphroconfuso.mt') console.log(arrayInfo);
+				_paq.push(arrayInfo);
+			}
 			_paq.push(['disableCookies']);
 			_paq.push(['enableJSErrorTracking']);
 			_paq.push(['enableHeartBeatTimer']);
@@ -145,20 +150,36 @@
 				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
 			})();
 		</script>
-		<script defer src="/script/script-227.js"></script>
+		<script defer src="/script/script-233.js"></script>
 	</head>
-	<body class="show-nav">
+	<body class="show-nav this-month-mejju">
 		<script>initialiseAfterBody();</script>
 		<div id="top-wrapper">
 			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
 			<nav id="top-nav">
-				<a id="logo-container" href="/"><img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" /></a>
+				<div id="logo-container-wrapper">
+					<div id="logo-container">
+						<a href="/">
+							<img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" />
+						</a>
+					</div>
+					<menu class="hide-mobile" id="menu-carousels">
+						<li class="abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
+					</menu>
+					<menu class="hide-mobile" id="menu-collections">
+						<li class="main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+						<li class="main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					</menu>
+				</div>
 				<input id="menu-toggle" type="checkbox" />
 				<label class='menu-button-container' for="menu-toggle">
 					<span style="display: none">Mobile biss: iftaħ il-menu</span>
 					<div class='menu-button'></div>
 				</label>
-				<menu>
+				<menu id="menu-main">
+					<li class="hide-laptop main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+					<li class="hide-laptop main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					<li class="hide-laptop abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
 					<li><a href="/appuntamenti/">Appuntamenti</a></li>
 					<li><a href="/kontributuri/">Kontributuri</a></li>
 					<li><a href="/werrej/">Werrej</a></li>
@@ -182,7 +203,7 @@
 			<div id="message"><!-- --></div>
 			<main id="skipto">
 				
-	<article class="content april-2024 esej story story-48">
+	<article class="content april esej story story-48">
 		<header>
 			<ul>
 				<li class="header-label">
@@ -193,7 +214,7 @@
 				
 			</ul>
 			
-				<h1>
+				<h1 data-pagefind-meta="title">
 					Splużjonijiet
 					
 						<span class="episode-number">#1</span>
@@ -205,7 +226,7 @@
 				<h3>Il-kwiet u <l-m>l-lejl</l-m></h3>
 			
 			
-<h2>
+<h2 data-pagefind-meta="author">
 	
 	
 		
@@ -230,7 +251,7 @@
 				
 					<aside id="audio">
 					
-					<figure class="audio april-2024 esej" data-put-after="jisimgħu u jaraw biss">
+					<figure class="audio april esej" data-put-after="jisimgħu u jaraw biss">
 	<div class="player" id="player-0">
 		<audio id="audio-0">
 			<source src="https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1711370164616-dac88062e9145467190d8d3bddf24218.mp3" type="audio/mpeg">
@@ -247,7 +268,7 @@
 				
 					
 					
-					<figure class="audio april-2024 esej" data-put-after="issibu minnhom bil-mijiet">
+					<figure class="audio april esej" data-put-after="issibu minnhom bil-mijiet">
 	<div class="player" id="player-1">
 		<audio id="audio-1">
 			<source src="https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1711370413170-9588a7d75a279d219be39698d24e9afe.mp3" type="audio/mpeg">
@@ -266,24 +287,42 @@
 				
 				<div class="promo bookmark-shortcut"><!-- --></div>
 			</section>
-			<section id="grid-body">
+			<section id="grid-body" data-pagefind-body data-pagefind-weight="7">
 				
 					
 						<section class="body-text">
 							<hr><h5 id="u-nisimgħuha-ttektek-mal-bieb-sejra-tik-tik-tik">U nisimgħuha ttektek mal-bieb, sejra tik, tik, tik</h5>
 <p><span class="initial"><span class="dropcap drop-16">16</span></span> ta’ Ottubru. <l-m>X’saħħa</l-m> fiha splużjoni? <l-m>X’inhuma</l-m> l-istejjer madwarha? Kaxxa infernali. <l-m>Is-sajjieda</l-m> kienu jistadu <l-m>għall-bombi</l-m> li għadhom ma splodewx. Filfla, <l-m>l-aktar</l-m> gżira mwarrba ta’ Malta <l-m>fl-inħawi</l-m> tal-Qrendi, kienet tintuża <l-m>għall-prattika</l-m> tal-isparar <l-m>tar-rokits</l-m>, missili u torpidows fi żmien <l-m>l-Ingliżi</l-m>. B’dawn <l-m>il-ħsibijiet</l-m> bdejt infassal <em>Kaxxa Infernali: Explosions</em>, biċċa xogħol <l-m>tat-teatru</l-m> totalment <l-m>non-fiction</l-m>. Din damet biex tintwera quddiem <l-m>in-nies</l-m> sentejn, sa Ġunju <l-m>tal-2021</l-m>, għax kien <l-m>iż-żmien</l-m> fejn seħħ dak li ma jitwemminx. Qatt ma ħsibt li kont se nkun maqful ġewwa għal żmien daqshekk twil. <l-m>Ix-xogħol</l-m> kien wieħed minn <l-m>tal-ewwel</l-m> li ttella’ meta bdew jiftħu <l-m>l-postijiet</l-m> pubbliċi Malta u għalija kien mument stramb ħafna fejn dak <l-m>id-diskors</l-m> kollu rigward <l-m>it-teatru</l-m>, rigward <l-m>il-ħaj</l-m> u <l-m>l-mument</l-m>, beda jdub <l-m>fix-xejn</l-m>. Kien hemm min azzarda jiġi <l-m>fit-teatru</l-m> jarah <l-m>ix-xogħol</l-m> u, minħabba <l-m>ċ-ċirkostanzi</l-m>, kien hemm min biddel <l-m>l-esperjenza</l-m> tal-live ma’ dik <l-m>tal-iskrin</l-m>. Għax dan kien żmien fejn f’daqqa waħda kull esperjenza xxandret minn wara skrin. Żmien <l-m>il-pandemija</l-m>.</p>
 <p>Peress li <l-m>l-performance</l-m> twila ħamsin minuta <l-m>bl-eżatt</l-m>, ma stajtx niftaħ kemm ridt dwar <l-m>l-istejjer</l-m> li sibt li kienu (u għadhom) mirdumin, imwarrbin jew minsija. <l-m>Fit-teatru</l-m> nħoss <l-m>in-nies</l-m> madwari u nkun naf jekk hux qegħdin miegħi jew le <l-m>fl-enerġija</l-m>. Imma hawn, jien u nikteb, ma nafx. Dak li qed intektek fuq <l-m>il-keyboard</l-m> ma nafx jekk iżommkomx jew le. Allura naqrah. <l-m>Fit-teatru</l-m> hemm <l-m>l-element</l-m> tal-ħaj u <l-m>tal-azzjonijiet</l-m> u <l-m>l-involviment</l-m> tad-disinn, <l-m>tal-ħoss</l-m>, <l-m>tad-dawl</l-m>. Hemm <l-m>l-oġġetti</l-m>, <l-m>il-props</l-m>, li kellhom parti ċentrali speċjalment <l-m>il-prop</l-m> ta’ murtal li waqt <l-m>il-performance</l-m> nżarmah sabiex flimkien <l-m>mal-udjenza </l-m>— permezz <l-m>tal-video</l-m> live — stajna nħarsu lejn <l-m>l-anatomija</l-m> tiegħu.</p>
-<blockquote>F’Ħaġar Qim jew <l-m>mill-Imnajdra</l-m><br>Tikkontemplawni nistaqsikom<br>minn <l-m>ġol-Wied</l-m> jew minn Għar Lapsi<br>Għidul’iniex ċajta għalikom<br>Jienx ġnien jew ċimiterju.<br><l-m>X’inhu</l-m> dak li jbeżżagħkom?<br>Għala m’għadkomx tiġu ħdejja<br>Meta <l-m>l-ġranet</l-m> qattajt magħkom?</blockquote>
+<blockquote class="enjambed">F’Ħaġar Qim jew <l-m>mill-Imnajdra</l-m></blockquote>
+<blockquote class="enjambed">Tikkontemplawni nistaqsikom</blockquote>
+<blockquote class="enjambed">minn <l-m>ġol-Wied</l-m> jew minn Għar Lapsi</blockquote>
+<blockquote class="enjambed">Għidul’iniex ċajta għalikom</blockquote>
+<blockquote class="enjambed">Jienx ġnien jew ċimiterju.</blockquote>
+<blockquote class="enjambed"><l-m>X’inhu</l-m> dak li jbeżżagħkom?</blockquote>
+<blockquote class="enjambed">Għala m’għadkomx tiġu ħdejja</blockquote>
+<blockquote>Meta <l-m>l-ġranet</l-m> qattajt magħkom?</blockquote>
 <p>Hekk beda <l-m>x-xogħol:</l-m> fid-dlam b’dawn <l-m>il-vrus</l-m> bojod fuq <l-m>l-iswed</l-m>. Dawn <l-m>il-vrus</l-m> huma framment <l-m>mil-Lament</l-m> ta’ Filfla li ġie miktub apposta <l-m>għax-xogħol</l-m> ta’ <em>Kaxxa Infernali: Explosions</em>. <l-m>Il-kitba</l-m> hija tiegħi u ta’ Joachim Robbrecht. Waqt <l-m>il-proċess</l-m> tad-drammaturġija, Maria Rößler, <l-m>id-drammaturga</l-m> tax-xogħol, ħarġet <l-m>bl-idea</l-m> li nippersonifikaw lil Filfla. Peress li Joachim ma jafx <l-m>bil-Malti</l-m>, bejnietna kien hemm Julia Camilleri li għamlet <l-m>it-traduzzjoni</l-m> kollha, barra li ppreparat <l-m>it-traskrizzjoni</l-m> tal-intervisti. <l-m>Fl-aħħar</l-m>, Mariele Zammit irranġat <l-m>il-vrus</l-m> għall-kant, u Steve Delia (id-Delli), irrekordja lilha u <l-m>d-daqq</l-m> tal-kitarri, li daqq hu stess, fuq cassette. Waqt <l-m>il-performance</l-m> kont indoqq <l-m>il-cassette</l-m>. Ħa taraw diversi strofi matul <l-m>il-qari</l-m>. Ftakru li dan frott ta’ grupp ta’ nies u mhux <l-m>il-vuċi</l-m> waħdanija tiegħi.</p>
 <p><l-m>Ir-riċerka</l-m> għall-performance hija fażi ġdida li spuntat f’dawn <l-m>l-aħħar</l-m> għaxar snin meta tajtha għal xogħol li joħroġ <l-m>mill-fatti</l-m>. Forsi għax dejjem laqtitni <l-m>l-forma</l-m> tal-għana <l-m>tal-fatt</l-m>. Infittex stejjer li għadhom ma ħarġux hemm barra jew dawk li jmorru kontra <l-m>l-mewġa</l-m> tal-mainstream jew <l-m>l-għarfien</l-m> dominanti. Nipprova naħdem fuq stejjer moħbija li forsi aħjar li ma nkunux nafu; u nibqgħu ngħixu <l-m>fil-fantasija</l-m> ta’ <em>Ġrajjiet Malta</em>, <l-m>il-ktieb</l-m> tal-istorja ta’ Malta li kellna <l-m>fis-sekondarja</l-m>. Iżda hemm stejjer ta’ komunitajiet żgħar ħafna li dak li jagħmlu mhuwiex parti <l-m>mill-mainstream</l-m>, allura ma jrendix u <l-m>biż-żmien </l-m>— speċjalment <l-m>fiż-żmien</l-m> tal-lum — qed jintesew, flimkien <l-m>mal-għarfien</l-m> tagħhom. Jaf niġu bżonnu llum jew għada.</p>
 <p>Dawn <l-m>l-istejjer</l-m> għal xi raġuni jew oħra baqgħu fuq <l-m>l-ixkaffa</l-m> ta’ xi arkivju nazzjonali jew ta’ gazzetta, fi gwardarobba ta’ xi dilettanti, jew <l-m>fl-arkivju</l-m> organiku, dak <l-m>tal-memorja</l-m>. Dan <l-m>tal-aħħar</l-m> sikwit ikun utli biex tgħaqqad xi biċċa <l-m>mill-jigsaw</l-m> puzzle. Dawn <l-m>il-memorji</l-m> kollha jiddeterjoraw <l-m>maż-żmien</l-m>. <l-m>Il-moħħ</l-m> jibda jinsa, <l-m>il-karti</l-m> fil-gwardarobba jitmermru jew jintremew, <l-m>ir-ritratt</l-m> jibjad, <l-m>il-VHS</l-m> u <l-m>t-tape</l-m> jitherrew u <l-m>l-istampa</l-m> tinbidel <l-m>fir-ross</l-m> abjad u iswed. Hekk <l-m>il-memorja</l-m> u <l-m>ż-żmien</l-m>. Jien nipprova naqbad <l-m>iż-żmien</l-m> u <l-m>fil-każ</l-m> ta’ Malta din avventura sħiħa, għax hemm ħafna ħofor u spazji mudlama <l-m>fl-istorjografija</l-m> Maltija. Qisna kkuntentajna b’li nafu. Qisna ma tantx sibna <l-m>ċ-ċans</l-m> inħarsu lura lejn kif inkitbet <l-m>l-istorja</l-m> tagħna u weħilna <l-m>man-narrattiva</l-m> orjentalista li kitbu fuqna <l-m>l-barranin</l-m> li kienu jaħkmuna. Jew tlifna <l-m>n-namra</l-m> għal dak li verament inħobbu nagħmlu. Jista’ jkun li <l-m>maż-żminijiet</l-m>, dak li nkiteb, bħal fi <em>Ġrajjiet Malta</em>, sar vanġelu u sar <l-m>it-twemmin</l-m>, <l-m>it-tradizzjoni</l-m> u <l-m>l-identità</l-m> Maltija. Finzjoni li ssir <l-m>ir-realtà</l-m>, fejn dak li nkiteb <l-m>fil-kotba</l-m> ta’ gwida <l-m>għat-turisti</l-m> fis-sittinijiet inbidel <l-m>fit-twemmin</l-m> nazzjonali <l-m>tal-identità</l-m> Maltija.</p>
 <p>Niftakar kont ma’ Ira u Kristen Għawdex, <l-m>bis-sħana</l-m> u <l-m>l-kwiet</l-m> kollu tiegħu, u bdew deħlin ħafna messaġġi. Li qatlu ’l DCG b’karozza-bomba. Kien <l-m>it-Tnejn</l-m> 16 ta’ Ottubru 2017, u <l-m>fit-15:00</l-m>, Daphne Caruana Galizia rikbet ġo karozza-bomba. Bħal donnha <l-m>d-dinja</l-m> fittizja <l-m>tal-films</l-m> issa kienet ta’ veru. Din <l-m>l-istorja</l-m> naħseb kienet waħda <l-m>mir-raġunijiet</l-m> li qanqluni nibda nfittex biex nagħmel xi ħaġa. Sabiex nifhem kif aħna — il-Maltin — spiċċajna naslu nagħmlu dan. Ridt nara jekk din faqqgħetx <l-m>mis-sema</l-m>, għax kulħadd kellu qatgħa kbira fuqu. Għax aħna <l-m>l-gżira</l-m> fejn “la qatt ma rridu gwerer, la qatt ma riedu ġlied, madwarna biss <l-m>il-paċi</l-m> u mhux għira u inkwiet”<span class="pull">.</span></p>
 <p>Aħna <l-m>t-tfal</l-m> tat-tmeninijiet żgħar wisq biex niftakru <l-m>l-“Belfast</l-m> ta’ Malta”<span class="pull">,</span> kif qaltli <l-m>z-zija</l-m> Carmen, waqt intervista li għamiltilha fuq <l-m>ir-relazzjonijiet</l-m> mal-bombi u <l-m>l-isplussiv</l-m>. Ziti Carmen hija <l-m>l-protagonista</l-m> ta’ <em>Kaxxa Infernali: Explosions</em>. <l-m>Fil-performance</l-m> hija <l-m>l-unika</l-m> mara f’din <l-m>id-dinja</l-m> ta’ rġiel biss. Dinja li sikwit nimraħ fiha. Forsi qed nipprova nifhem, jien ukoll, xi jfisser li tagħmilha ta’ raġel. <l-m>Fit-tmeninijiet</l-m> kont żgħir wisq u ma tantx niftakar vjolenza u bombi, avolja naf li kienu għadhom iseħħu dak <l-m>iż-żmien</l-m>. Imma ziti le. Malli staqsejtha jekk tiftakarx xi bombi meta kienet żgħira hi, <l-m>fil-pront</l-m> irrispondiet: <em>Iva mela, dawk niftakarhom ċari. Dak <l-m>iż-żmien</l-m> jien kont indoqq <l-m>mal-banda</l-m> tal-Labour.</em> <l-m>Il-banda</l-m> tal-Labour <l-m>x’għandha</l-m> x’taqsam <l-m>mal-bombi</l-m>? Kienet iddoqq ma’ <l-m>Tal-Ajkla</l-m>.<em> U konna mmorru ma’ <l-m>tal-Labour</l-m> ukoll.</em> Imma <l-m>l-bomba</l-m> kif tidħol? <l-m>Ġol-garigori</l-m> ta’ moħħ Carmen hemm ħoss itektek. Tirrakkuntali kif meta kienet xebba kienet sejra lura <l-m>d-dar</l-m> wara kunċertin (hekk kienu jgħidulhom qabel <l-m>il-provi</l-m>, u <l-m>fil-kultura</l-m> tal-baned baqgħet <l-m>sal-lum)</l-m> tal-banda u malli waslu <l-m>fil-bandli</l-m> raw basket <l-m>tal-karti</l-m> li minnu kien ħiereġ ħoss ta’ tik, tik, tik, tik, tik. Kienet bomba.</p>
-<blockquote>Ibbumbardjata,<br>Immartellata,<br>Imġarrfa,<br>Imxaqqa.<br>Illum fost <l-m>il-frak</l-m> jien farka.<br>Kont artal u llum imfarrka.<br><l-m>Il-baħar</l-m> qallieb iħallat kollox.<br>Qarrieq <l-m>ir-riħ</l-m> jieħu u jġib.<br>Ikaxkarli żrari isfar.<br>Ikaxkarli żrari griż.<br>Ifakkarni f’dak <l-m>iż-żmien</l-m><br>Meta għaddejt minn ħafna taqlib.</blockquote>
+<blockquote class="enjambed">Ibbumbardjata,</blockquote>
+<blockquote class="enjambed">Immartellata,</blockquote>
+<blockquote class="enjambed">Imġarrfa,</blockquote>
+<blockquote class="enjambed">Imxaqqa.</blockquote>
+<blockquote class="enjambed">Illum fost <l-m>il-frak</l-m> jien farka.</blockquote>
+<blockquote class="enjambed">Kont artal u llum imfarrka.</blockquote>
+<blockquote class="enjambed"><l-m>Il-baħar</l-m> qallieb iħallat kollox.</blockquote>
+<blockquote class="enjambed">Qarrieq <l-m>ir-riħ</l-m> jieħu u jġib.</blockquote>
+<blockquote class="enjambed">Ikaxkarli żrari isfar.</blockquote>
+<blockquote class="enjambed">Ikaxkarli żrari griż.</blockquote>
+<blockquote class="enjambed">Ifakkarni f’dak <l-m>iż-żmien</l-m></blockquote>
+<blockquote>Meta għaddejt minn ħafna taqlib.</blockquote>
 <p><l-m>Fil-15</l-m> ta’ Ottubru 1979, jgħid Victor Aquilina f’intervista, huwa u jiftakar <l-m>il-ħruq</l-m> tal-bini <l-m>tat-</l-m><em>Times</em>, “<l-m>is-sema</l-m> fuq <l-m>il-Belt</l-m> kien mifqugħ b’dija <l-m>mill-fjammi</l-m> ta’ dak li żgur kien <l-m>l-akbar</l-m> nar li rat <l-m>il-Belt</l-m> minn żmien <l-m>il-gwerra</l-m>.<span class="pullsemi">”</span> Qed infittex dawn <l-m>il-bombi</l-m> ġo repożitorju ieħor, apparti dak ta’ ziti, <l-m>bħall-gazzetti</l-m> jew <l-m>l-arkivji</l-m>. Tista’ tgħid li <l-m>l-Mediterran</l-m> kollu kien imqalleb u mħawwad dak <l-m>iż-żmien</l-m>. <l-m>L-ewwel</l-m> nett kien żmien <l-m>il-Gwerra</l-m> l-Bierda. Imma jekk tħares lejn <l-m>il-kantunieri</l-m> tal-Mediterran, <l-m>fl-1974</l-m> kellek <l-m>il-kunflitt</l-m> ta’ Ċipru, kolp ta’ stat <l-m>mill-Gwardja</l-m> Nazzjonali Ċiprijotta Griega u <l-m>l-EOKA-B</l-m>, <l-m>bl-għan</l-m> li jintlaħaq Enosis, unifikazzjoni <l-m>mal-Greċja</l-m>. <l-m>It-Turkija</l-m> daħlet <l-m>fil-gżira</l-m> bil-pretest <l-m>tat-Trattat</l-m> tal-Garanziji <l-m>tal-1960</l-m>, u Ċipru għadha maqsuma <l-m>sal-lum</l-m>. Avolja jkolli nistqarr li jien dejjem ħsibt li <l-m>t-Turkija</l-m> invadiet. Ma kontx naf <l-m>bil-biċċa</l-m> tal-Greċja. Dan, <l-m>fl-istess</l-m> ħin, wassal <l-m>għat-tmiem</l-m> tal-Ġunta Militari Griega. <l-m>Il-Gwerra</l-m> Ċivili Lebaniża bdiet <l-m>is-sena</l-m> ta’ wara, <l-m>bl-involviment</l-m> ta’ diversi fazzjonijiet Lebaniżi, gruppi Palestinjani, u potenzi esterni, inklużi <l-m>s-Sirja</l-m> u <l-m>l-Iżrael</l-m> u interventi barranin, u damet <l-m>sal-1990</l-m>. <l-m>Is-Snin</l-m> taċ-Ċomb <l-m>fl-Italja</l-m> [“Anni di Piombo”] bdew <l-m>fis-snin</l-m> sittin u damu <l-m>sat-tmeninijiet</l-m>. <l-m>Il-vjolenza</l-m> politika <l-m>fit-Turkija</l-m> damet <l-m>mis-snin</l-m> sebgħin <l-m>sal-1980</l-m>, bejn gruppi <l-m>tax-xellug</l-m> estrem, nazzjonalisti <l-m>tal-lemin</l-m> estrem, u <l-m>l-istat</l-m>. Din wasslet għal kolp militari <l-m>fl-1980</l-m> “sabiex iġib <l-m>l-ordni</l-m>” imma <l-m>l-qagħda</l-m> spiċċat agħar. <l-m>Il-Gwerra</l-m> tal-Yom Kippur <l-m>fl-1973</l-m> involviet <l-m>l-Eġittu</l-m>, <l-m>is-Sirja</l-m> u <l-m>l-Iżrael</l-m>. Malta mhux ġo bużżieqa għaliha, avolja <l-m>l-baħar</l-m> miftuħ li jdawwarha jqarraq bik għax iġiegħlek taħseb li tinsab waħdek, iżolat.</p>
 <p><em><l-m>Ir-raħal</l-m> kienu saru tnejn żgur li ħadu. Kienet saret waħda fejn <l-m>il-bandli</l-m> u waħda ma’ dar hawnhekk <l-m>il-pjazza</l-m>. Naħseb tlieta li ħadu, għax kien hawn ta’ Dun Raymond ħadet ukoll. Imma mbagħad niftakar waħda finta… ma’ dar… konna ġejjin <l-m>mill-banda</l-m> xi <l-m>l-11</l-m> ta’ billejl. <l-m>Il-private</l-m> kienet twaqqafna fejn <l-m>il-knisja</l-m> u jien kelli mixja għal għand <l-m>in-nannu</l-m>. U ġejjin, konna tlieta niftakar, u nisimgħuha ttektek <l-m>mal-bieb</l-m>, sejra tik, tik, tik… U taf kemm ġrejna, Ġann! Ħe ħe!</em></p>
 <p>Rat <l-m>il-bomba</l-m> ġo borża <l-m>tal-karti</l-m> ma’ bieb u semgħetha ttektek. Din <l-m>il-bomba</l-m> ma ħaditx. <em>Kienu jsiru, min jgħid li politika… <l-m>l-Imqabba</l-m> saru iżjed, eh…</em> Mela mhux <l-m>il-Qrendi</l-m> biss saru? staqsejtha. <em>Le, infatti kienu jgħidulna Belfast lilna.</em> “Lilna” nimmaġina li riedet tgħid għal dawk ta’ wara <l-m>l-mina:</l-m> iż-Żurrieq, <l-m>il-Qrendi</l-m>, <l-m>l-Imqabba</l-m>. Abbli Ħal Luqa wkoll, avolja dak qabel <l-m>il-mina</l-m>. Jew forsi <l-m>għall-Maltin</l-m> kollha, ma nafx, qatt ma rġajt staqsejtha. Infatti <l-m>z-zija</l-m> tiftakar li <em><l-m>min-naħa</l-m> ta’ Ħal Luqa… <l-m>l-Ingliżi</l-m> kienu jinżlu jixtru. Kellhom <l-m>il-ħwienet</l-m> u <l-m>l-bars</l-m> tagħhom. Kien hemm supermarket minnhom, dak <l-m>iż-żmien</l-m>, <l-m>l-ewwel</l-m> idea ta’ supermarket li qatt rajt f’ħajti. Fhimt? Kien hemm supermarket żgħir, kienu jidħlu huma biss</em>. U <l-m>l-Maltin</l-m> joqogħdu <l-m>għall-kwiet</l-m> għax jaqalgħuha.</p>
-<p>Dak li kien qed jiġri <l-m>l-Irlanda</l-m>, b’mod mikroskopiku kien qed jiġri hawn. <em><l-m>Fis-’71</l-m>. Meta tela’ <l-m>l-Labour</l-m> fis-’71. Kien hawn naqra taqlib mhux ħażin dak <l-m>iż-żmien</l-m>.</em> Meta rġajt staqsejt <l-m>liz-zija</l-m> m’ilux, wara li analizzajt <l-m>l-intervista</l-m>, irranġat <l-m>il-memorja</l-m> f’moħħha u qaltli li taħseb iktar lejn <l-m>l-1976</l-m> kien milli <l-m>l-1971</l-m>. Imbagħad staqsejtha fuq <l-m>il-gwerra</l-m> u <l-m>għall-ewwel</l-m> qaltli li ma tiftakar xejn. Imma jien kont qed insaqsiha fuq <l-m>l-opinjoni</l-m> tagħha dwar <l-m>il-gwerra</l-m> inġenerali, bħala kunċett. <em>Ifhem, jiena ma naqbel magħha xejn, totalment. Mhix xi ħaġa sabiħa jew pjaċevoli. Avolja għaddejjin minn gwerra b’mod ieħor bħalissa, hu’<span class="pullsemi">.</span> Le le, ma naqbilx magħha hu’<span class="pullsemi">.</span></em> “Gwerra mod ieħor” għax din <l-m>l-intervista</l-m> saret <l-m>fl-eqqel</l-m> tal-lockdown <l-m>tal-Covid</l-m> fejn konnha kollha msakkrin.</p>
+<p>Dak li kien qed jiġri <l-m>l-Irlanda</l-m>, b’mod mikroskopiku kien qed jiġri hawn. <em><l-m>Fis-’71</l-m>. Meta tela’ <l-m>l-Labour</l-m> fis-’71. Kien hawn naqra taqlib mhux ħażin dak <l-m>iż-żmien</l-m>.</em> Meta rġajt staqsejt <l-m>liz-zija</l-m> m’ilux, wara li analizzajt <l-m>l-intervista</l-m>, irranġat <l-m>il-memorja</l-m> f’moħħha u qaltli li taħseb iktar lejn <l-m>l-1976</l-m> kien milli <l-m>l-1971</l-m>. Imbagħad staqsejtha fuq <l-m>il-gwerra</l-m> u <l-m>għall-ewwel</l-m> qaltli li ma tiftakar xejn. Imma jien kont qed insaqsiha fuq <l-m>l-opinjoni</l-m> tagħha dwar <l-m>il-gwerra</l-m> inġenerali, bħala kunċett. <em>Ifhem, jiena ma naqbel magħha xejn, totalment. Mhix xi ħaġa sabiħa jew pjaċevoli. Avolja għaddejjin minn gwerra b’mod ieħor bħalissa, hu’<span class="pullsemi">.</span> Le le, ma naqbilx magħha hu’<span class="pullsemi">.</span></em> “Gwerra mod ieħor” għax din <l-m>l-intervista</l-m> saret <l-m>fl-eqqel</l-m> tal-lockdown <l-m>tal-Covid</l-m> fejn konna kollha msakkrin.</p>
 <p>Din <l-m>l-istorja</l-m> tal-isplussivi ma faqqsitx ilbieraħ <l-m>bil-bomba</l-m> li qatlet lil Daphne. Fuq dan, Herman Grech, <l-m>l-editur</l-m> tat-<em>Times</em> kiteb play verbatim li ttellgħet ftit qabel <em>Kaxxa Infernali: Explosions</em>. Ma tantx kien hemm bżonn ħafna logħob <l-m>bil-fantasija</l-m>. <l-m>Il-fatti</l-m> kienu drammatiċi u kważi fantastiċi waħedhom. Jien, minflok, għażilt li npoġġi sekwenzi u frammenti ta’ vuċijiet differenti.</p>
 <p><l-m>Fis-17</l-m> ta’ Novembru 1869 <l-m>l-Ingilterra</l-m> fetħet <l-m>il-Kanal</l-m> ta’ Swejż. Hemm min jgħid li kien dakinhar li Malta saret <l-m>il-Fortizza</l-m> fil-Mediterran, fortizza biex tipproteġi <l-m>l-interessi</l-m> kummerċjali <l-m>tal-Imperu</l-m>. Forsi kellna nħarsu ftit iktar lura <l-m>fl-istorjografija</l-m> proprja minħabba li, sa minn meta waslu <l-m>l-Ingliżi</l-m>, bħalma juri <l-m>l-indiċi</l-m> fl-Arkivji ta’ Kew, <l-m>l-Ingilterra</l-m>, <l-m>l-idea</l-m> kienet li <l-m>dil-gżira</l-m> ssir fortizza. Hemm dossier <l-m>tal-1830</l-m> fejn hemm sensiela ta’ pjanti ta’ kif <l-m>il-port</l-m> u <l-m>l-madwar</l-m> isir maħżen ta’ dan <l-m>it-TNT</l-m> u <l-m>tal-kordajt:</l-m></p>
 <table>
@@ -336,14 +375,28 @@
 <p><em><l-m>Il-Qrendi</l-m> huwa post <l-m>għall-kwiet</l-m> immens. Kieku ma jagħmlux dawn <l-m>il-ġiex</l-m> festi, toqtol u tidfen — kif jgħid <l-m>il-Malti</l-m>.</em> Hekk dejjem jgħid <l-m>iz-ziju</l-m> Saver, <l-m>ir-raġel</l-m> ta’ ziti Carmen u <l-m>l-ispalla</l-m> tagħha. <l-m>L-iktar</l-m> li hemm kwiet Filfla. Xi ħames kilometri ’l bogħod <l-m>mill-kosta</l-m>, “ġawhra <l-m>fil-Mediterran</l-m>” isejħilha. <em>Filfla ġawhra <l-m>fix-Xlokk</l-m> ta’ Malta. Li ma nafx hux veru hu, nismagħhom jgħidu li kienet tingħaqad <l-m>mal-Afrika</l-m> dik, u tibqa’ sejra sa Ħaġar Qim. Ma nafx hux vera, imma dak li kont smajt.</em> Staqsejtu min qallu dan għax jien studjajt hekk <l-m>l-iskola</l-m> imma <l-m>z-ziju</l-m> ma marx skola. <em><l-m>Ix-xjuħ</l-m> tagħna, <l-m>l-antenati</l-m>. <l-m>In-nannu</l-m> l-ewwel wieħed.</em> Dan miet ta’ 91 sena u <l-m>z-ziju</l-m> kien <l-m>iż-żgħir</l-m>. <l-m>Mid-dehra</l-m> kien jgħidlu ħafna stejjer. Avolja <l-m>l-iskola</l-m> tarrfuli dan xi darba, imma dak <l-m>iż-żmien</l-m> ma kontx fhimt li infatti Filfla hija <l-m>l-biċċa</l-m> art <l-m>l-iktar</l-m> fin-Nofsinhar ta’ Malta u jekk tikkunsidra kollox u <l-m>fil-kuntest</l-m> tal-lum nistgħu kważi ngħidu li hija waħda — għax hemm <l-m>il-gżejjer</l-m> ta’ Linosa u Lampedusa — mill-artijiet <l-m>l-iktar</l-m> fin-Nofsinhar <l-m>tal-Ewropa</l-m>, u għalhekk <l-m>l-eqreb</l-m> tal-Afrika. Din <l-m>il-blata</l-m> toħroġ dritt ’il fuq <l-m>mill-ilma</l-m> baħar u għandha <l-m>l-wiċċ</l-m> ċatt. U <l-m>z-zija</l-m>, martu, tgħid li <em>kif tinżel minn Għaxqet <l-m>l-Għajn</l-m>, fuq Ħaġar Qim, tara ’l Filfla, tgħid “ara <l-m>l-baħar</l-m> kalm”<span class="pull">.</span></em></p>
 <p>Kif issejħet f’diversi kitbiet, Filfla qisha artal. Speċjalment meta tqis li faċċata tagħha hemm dawk <l-m>iż-żewġ</l-m> strutturi li nsejħulhom tempji. Hekk sejħilhom Temi Zammit u hekk sejħulhom <l-m>l-arkeologi</l-m> fiż-żmien kolonjali. Ma tantx iddoqqli din <l-m>tat-tempju</l-m> u <l-m>tal-artal</l-m>, għax spiċċajna nħarsu lejhom minn narrattiva waħda biss: dik li tiffoka fuq <l-m>ir-riti</l-m> u <l-m>ċ-ċerimonji</l-m>. B’hekk, possibbilment eskludejna funzjonijiet jew raġunijiet oħra għalfejn kien jeżisti dan <l-m>il-ħaġar</l-m> impoġġi b’mod arkitettoniku ta’ barra minn hawn. <l-m>Il-kelma</l-m> tempji tirrifletti perspettiva Ewroċentrika li dehret f’perjodu meta <l-m>l-akkademiċi</l-m> Ewropej kienu qed jikklassifikaw u jiddeterminaw <l-m>id-dinja</l-m> skont <l-m>in-normi</l-m> u <l-m>l-preġudizzji</l-m> kulturali tagħhom. <l-m>L-użu</l-m> tal-kelma “tempji” inevitabbilment tesponi <l-m>l-aspett</l-m> reliġjuż jew dak <l-m>tar-ritwal</l-m> tas-siti. Din hija spjegazzjoni monofunzjonali li tista’ tkun qed tnaqqas <l-m>mill-vera</l-m> funzjoni tagħhom. Meta dawn <l-m>is-siti</l-m> jiġu mmarkati bħala “tempji” <l-m>mill-komunità</l-m> interpretattiva — li storikament kienet magħmula minn akkademiċi <l-m>tal-Punent </l-m>— tieħu <l-m>l-awtorità</l-m> li tiddetermina <l-m>x’inhi</l-m> u, <l-m>fl-istess</l-m> ħin, <l-m>x’mhijiex</l-m>. <l-m>Il-kelma</l-m> “tempji” f’kuntest kolonjali tikxef <l-m>l-effetti</l-m> tal-orjentaliżmu li jirrifletti mhux biss <l-m>ir-relazzjonijiet</l-m> tal-poter bejn <l-m>il-kolonizzatur</l-m> u <l-m>l-kolonizzat</l-m>, iżda wkoll <l-m>il-mod</l-m> kif dawn <l-m>ir-relazzjonijiet</l-m> jinfluwenzaw <l-m>il-produzzjoni</l-m> tal-għarfien.</p>
 <p>Meta mort <l-m>sal-arkivji</l-m> ta’ Għawdex, <l-m>il-Vajrinġa</l-m>, għax kelli bżonn insib xi informazzjoni dwar <l-m>il-Ġgantija</l-m>, tkellimt <l-m>mal-arkivisti</l-m> u fhimt ftit iktar għaliex jintuża <l-m>t-terminu</l-m> “tempju”<span class="pull">.</span> Peress li <l-m>fl-arkeoloġija</l-m> hemm <l-m>il-kunċetti</l-m> ta’ “dwellings” u “burial sites” dawn ġew klassifikati jew interpretati bħala tempji minħabba li kien hemm <l-m>is-siti</l-m> l-oħra li nstabu u allura kellhom funzjoni differenti. Dawn <l-m>il-binjiet</l-m> nafu li jimmarkaw <l-m>l-istilel</l-m> u <l-m>l-istaġuni</l-m>. Forsi dawn kienu postijiet fejn <l-m>in-nies</l-m> ikkongregaw mhux biex joffru xi xebba bħala sagrifiċċju <l-m>lill-allat</l-m>, bħalma tenna <l-m>l-poeta</l-m> Għawdxi Ġorġ Pisani, bħal f’xi film ta’ Indiana Jones. Sħabi <l-m>l-Għawdxin</l-m> ma tantx jieħdu gost meta mmaqdru. Niftakarna naqraw <l-m>il-poeżija</l-m> l-iskola, <l-m>fid-</l-m><em>Denfil</em>. Pisani, wara kollox, kien <l-m>tal-klikka</l-m> tal-Malti li kellhom ħafna saħħa f’dak li tgħallimna. Jien nara <l-m>dil-perspettiva</l-m> ta’ dawn <l-m>is-siti</l-m> bħala waħda dejqa u batuta <l-m>għall-aħħar</l-m>. Imma mhux ħa nisplodi fuq <l-m>il-kelma</l-m> “tempju”<span class="pull">.</span> Richard England, f’intervista li saritlu <l-m>għad-dokumentarju</l-m> dwar Filfla għal TVM News, jgħid li jħoss li Filfla kienet meqjusa bħala artal, saħansitra bħala alla fiha nnifisha, u ddeterminat <l-m>id-direzzjoni</l-m> li fiha nbnew Ħaġar Qim u <l-m>l-Imnajdra</l-m>. Jirrakkonta dwar lejl li qatta’ fuq <l-m>dil-gżira</l-m> kwieta, fejn m’hemmx storbju, għax ried jisma’ <l-m>l-vuċijiet</l-m> u <l-m>l-eku</l-m> ta’ dak kollu li għadda minn fuqha. Billejl kien hemm silenzju kbir ħlief <l-m>għall-ħoss</l-m> poetiku <l-m>tal-baħar</l-m>, u jgħid li <l-m>l-gżira</l-m> kellmitu, jgħid li ħass li kien hemm relazzjoni bejniethom. Telaq <l-m>bid-dmugħ</l-m> f’għajnejh, bħal meta tħalli warajk lil xi ħadd li tħobb.</p>
-<blockquote>Maqtugħ’hawn ninsab <l-m>mid-dinja</l-m>.<br>Rasu iebsa <l-m>l-baħar</l-m> ħabbatni,<br>mewġu nassorbi jheżżiżni,<br>ikissirni, isabbatni.<br>Ġebli <l-m>tal-qawwi</l-m> jistrieħ <l-m>fit-tafal</l-m>.<br>Imdellka, imrattba u ramlija.<br><l-m>Ir-riħ</l-m> ġmielu jnaqqarni,<br>jikolli <l-m>l-ġilda</l-m> ħamranija.</blockquote>
+<blockquote class="enjambed">Maqtugħ’hawn ninsab <l-m>mid-dinja</l-m>.</blockquote>
+<blockquote class="enjambed">Rasu iebsa <l-m>l-baħar</l-m> ħabbatni,</blockquote>
+<blockquote class="enjambed">mewġu nassorbi jheżżiżni,</blockquote>
+<blockquote class="enjambed">ikissirni, isabbatni.</blockquote>
+<blockquote class="enjambed">Ġebli <l-m>tal-qawwi</l-m> jistrieħ <l-m>fit-tafal</l-m>.</blockquote>
+<blockquote class="enjambed">Imdellka, imrattba u ramlija.</blockquote>
+<blockquote class="enjambed"><l-m>Ir-riħ</l-m> ġmielu jnaqqarni,</blockquote>
+<blockquote>jikolli <l-m>l-ġilda</l-m> ħamranija.</blockquote>
 <p>Jien narahom monumenti <l-m>tal-kwiet</l-m>. Dan <l-m>il-ħaġar</l-m> impoġġi <l-m>mill-bniedem</l-m> tal-qedem u din Filfla, gżira jew blata ħierġa minn wiċċ <l-m>l-ilma</l-m>, siekta — dawn ma jmeru ’l ħadd; jisimgħu u jaraw biss, <l-m>għall-kwiet</l-m>.</p>
 <p>Din <l-m>il-gżira</l-m> ċkejkna santwarju <l-m>tal-għasafar</l-m> tal-baħar, u la jien u la int u la ħadd ma jista’ jirfes fuqha, <l-m>għall-ebda</l-m> raġuni. Trid jew tkun suldat <l-m>mal-Forzi</l-m> Armati ta’ Malta jew ornitologu biex tkun tista’ tikseb permess speċjali u titla’ fuq din <l-m>il-blata</l-m> mġarrfa. <l-m>L-ornitologu</l-m> Benjamin Metzger għoġbu jirrekordjali <l-m>l-ħsejjes</l-m> tal-ambjent u jibgħatli xi ritratti minn meta kien fuq <l-m>il-gżira</l-m>. Lil Benjamin qatt ma ltqajt miegħu ħlief fuq <l-m>l-internet</l-m>. Kien <l-m>iż-żmien</l-m> tal-pandemija. <l-m>Il-pont</l-m> bejnietna kien Mark Anthony Falzon, wara li tkellimna fuq Zoom fuq <l-m>l-idea</l-m> tal-bombi, Filfla u <l-m>l-festa</l-m>. <em><l-m>What’s</l-m> in a Bang?</em> ta’ Falzon kienet kitba li lili tatni perspettivi u saffi ġodda ta’ kif inħares lejn <l-m>l-affarijiet</l-m>.</p>
 <p>Joe Sultana, li kien ornitologu, kittieb u attivista <l-m>tal-ambjent</l-m>, kellu arkivju sħiħ fuq <l-m>l-intersezzjoni</l-m> bejn <l-m>l-għasafar</l-m> u <l-m>l-bumbardamenti</l-m> ta’ Filfla. <l-m>Fid-dokumentarju</l-m> ta’ TVM News, Sultana jgħid li <l-m>l-ornitologi</l-m> Maltin bdew imorru fuq Filfla <l-m>fiż-żmien</l-m> li kienet għadha tiġi bbumbardjata. Marru jaraw <l-m>x’qed</l-m> jiġri <l-m>mill-għasafar</l-m> u ndunaw li <l-m>l-kanġu</l-m> ta’ Filfla ma kienx jibża’ <l-m>mill-bombi</l-m>, infatti <l-m>l-gzuz</l-m> kbar ta’ terrapien <l-m>mill-ibbumbardjar</l-m> kienu ħolqulu ambjent tajjeb fejn ibejjet. Waħda <l-m>mill-avventuri</l-m> ta’ dawn <l-m>in-nies</l-m> li jħobbu jistudjaw <l-m>l-għasafar</l-m> mill-viċin kienet li jqattgħu ljieli sħaħ fuq Filfla. U kienu jkunu hemm, fi kliem <l-m>il-militar</l-m>, “at [their] own risk”<span class="pull">.</span> Sultana jgħid li kważi minn meta twaqqfet <l-m>il-Malta</l-m> Ornithological Society <l-m>fl-1962</l-m>, kienu jibagħtu <l-m>l-ittri</l-m> lill-Ammirall Ingliż sabiex ma jsirx sparar fuq <l-m>il-gżira</l-m> fiż-żmien li <l-m>l-kanġu</l-m> ta’ Filfla jkun qed ibejjet.</p>
 <p>Dan <l-m>il-ħoss</l-m> tal-elementi u <l-m>l-kwiet</l-m> mhux minn dejjem kien hekk. Filfla żgur hija sit <l-m>fis-sens</l-m> ta’ Pierre Nora: tista’ tgħid li kull farka <l-m>tal-blat</l-m> li għad fadal minnha għandha memorja. Memorja ta’ splużjoni wara <l-m>l-oħra</l-m>, England jaraha “stuprata” <l-m>mill-użu</l-m> militari. Wieħed <l-m>mix-xogħlijiet</l-m> ta’ riċerka li ħarist lejh kien <em>Filfla: a case study of the effect of target practice on coastal landforms</em>. <l-m>It-terminu</l-m> “military geography” laqatni għax jien nara din <l-m>il-mikrostorja</l-m> ta’ Filfla bħala diżastru teknoloġiku militari. Tant ġiet imġarrfa li <l-m>t-topografija</l-m> tagħha nbidlet. Infatti, oħtha <l-m>ż-żgħira</l-m>, Filfoletta, kważi ġġarrfet kompletament tant li llum bilkemm għadek tista’ taraha. Kważi kollha mgħarrqa taħt <l-m>l-ilma</l-m>.</p>
 <p>Hemm ġrajja li tirrakkonta kif <l-m>il-Kavallieri</l-m> kienu bbumbardjaw <l-m>l-unika</l-m> nixxiegħa ta’ ilma ġieri biex jaqtgħu qalb <l-m>il-pirati</l-m> milli jistkennu fuq Filfla. Imma <l-m>l-iktar</l-m> li għamlu użu <l-m>mill-gżira</l-m> bħala taħriġ militari kien fi żmien <l-m>l-Ingliżi</l-m>. Sa <l-m>mill-1930</l-m> diġà kienu bdew xi prattika fuq <l-m>is-sikek</l-m> tal-madwar. Madankollu, Sultana jikkwota rapport li deher <l-m>fil-</l-m><em>Malta Times and United Service Gazette</em> <l-m>tal-14</l-m> ta’ Awwissu 1876, li jixhed li <l-m>l-ibbumbardjar</l-m> fuq Filfla kien diġà beda dak <l-m>iż-żmien</l-m>. U Carmel Gauci jgħid li balal li nstabu fuq <l-m>il-post</l-m> fil-ħamsinijiet juru li <l-m>dal-isparar</l-m> kien qed iseħħ sa <l-m>mill-bidu</l-m> tal-preżenza <l-m>tal-Ingliżi</l-m> f’Malta. Wara <l-m>l-gwerra</l-m>, dawn <l-m>l-eżerċizzji </l-m>— il-maġġoranza tagħhom minn vapuri navali — kienu saru xi ħaġa ta’ kuljum, speċjalment <l-m>fis-sittinijiet</l-m>, u baqgħu għaddejjin <l-m>sal-1971</l-m>. <l-m>Iz-ziju</l-m> jiftakar jismagħhom <l-m>mill-Qrendi</l-m>, missieri minn Ħ’Attard u Godfrey minn <l-m>Ħaż-Żebbuġ</l-m>. <l-m>Fil-performance</l-m>, dawn <l-m>l-irġiel</l-m> huma <l-m>l-vuċijiet</l-m> sekondarji. <l-m>Il-vuċi</l-m> primarja tibqa’ Carmen, <l-m>iz-zija</l-m>.</p>
 <p>Għalija <l-m>l-Imnajdra</l-m>, Ħaġar Qim u Filfla qishom flimkien jagħmlu triangolu ta’ santwarju <l-m>tal-kwiet</l-m>. Illum Filfla hija <l-m>l-iktar</l-m> post <l-m>għall-kwiet</l-m> f’Malta kollha. Forsi hemm iktar kwiet <l-m>fil-fond</l-m> ta’ Għar Dalam jew Għar Ħasan imma dawk ma tistax tarahom <l-m>mill-bogħod</l-m> f’nofs ta’ baħar. Speċjalment billejl.</p>
-<blockquote>Ittawlu sew <l-m>fil-blat</l-m> imġarraf.<br>Ħarsu <l-m>fis-sema</l-m>, araw <l-m>il-qtajja</l-m>’<span class="pullsemi">,</span><br><l-m>il-merill</l-m>, <l-m>il-kanġu</l-m> u <l-m>l-gawwi</l-m>,<br>iċ-ċief li jbejjet fi xquq dirgħajja.<br>Jew għodsu f’qiegħ <l-m>il-baħar</l-m><br>u <l-m>mal-għekiesi taraw</l-m> ċar<br>ma’ subgħajja ta’ saqajja<br>vopi u ċawl jiżfnu madwar.</blockquote>
+<blockquote class="enjambed">Ittawlu sew <l-m>fil-blat</l-m> imġarraf.</blockquote>
+<blockquote class="enjambed">Ħarsu <l-m>fis-sema</l-m>, araw <l-m>il-qtajja</l-m>’<span class="pullsemi">,</span></blockquote>
+<blockquote class="enjambed"><l-m>il-merill</l-m>, <l-m>il-kanġu</l-m> u <l-m>l-gawwi</l-m>,</blockquote>
+<blockquote class="enjambed">iċ-ċief li jbejjet fi xquq dirgħajja.</blockquote>
+<blockquote class="enjambed">Jew għodsu f’qiegħ <l-m>il-baħar</l-m></blockquote>
+<blockquote class="enjambed">u <l-m>mal-għekiesi taraw</l-m> ċar</blockquote>
+<blockquote class="enjambed">ma’ subgħajja ta’ saqajja</blockquote>
+<blockquote>vopi u ċawl jiżfnu madwar.</blockquote>
 <hr><h5 id="trid-tqalli-ċ-ċief-bbasla-u-ftit-xaħam-u-tagħmel-zalza-tat-tadam">Trid tqalli <l-m>ċ-ċief</l-m> b’basla u ftit xaħam, u tagħmel zalza <l-m>tat-tadam </l-m></h5><p class="break"><span class="initial"><span class="dropcap drop-Għ">GĦ</span>ax</span><em> wara <l-m>l-gwerra</l-m> baqgħu jisparaw, avolja kienet għaddiet… Mela. Għax sakemm telqu minn Malta <l-m>fin-1979</l-m>, kienu baqgħu għaddejjin. Għax <l-m>l-Ingliżi</l-m> kellhom ħafna saħħa, kullimkien tagħhom.</em> Hekk qalli <l-m>z-ziju</l-m>, “kullimkien tagħhom.<span class="pullsemi">”</span> <l-m>Fl-arkivji</l-m> hemm dokumentazzjoni sħiħa ta’ pika bejn <l-m>il-Gvernatur</l-m> Ingliż u <l-m>l-Maltin</l-m> fil-gvern jew <l-m>fil-parlament</l-m>, skont <l-m>iż-żmien</l-m>. <l-m>Id-difiża</l-m> kienet “reserved matter” anki f’dawk <l-m>is-snin</l-m> li Malta kellha <l-m>l-gvern</l-m> tagħha. Malta ma setgħet tieħu ebda deċiżjoni rigward <l-m>il-politika</l-m> barranija jew <l-m>id-difiża</l-m> tagħha stess, u ma setgħet ittellef <l-m>bl-ebda</l-m> mod <l-m>lill-Ingliżi</l-m> milli jużaw <l-m>lill-gżejjer</l-m> bħala bażi militari. Pereżempju <l-m>fl-14</l-m> ta’ Lulju 1961, tliet snin biss qabel <l-m>l-Indipendenza</l-m>, <l-m>il-Gvernatur</l-m> għamel <l-m>l-</l-m><em>Ordinanza dwar <l-m>il-postijiet</l-m> għal tiri ta’ kanuni, azzarini u torpedini [CAP. 50]. Regolamenti <l-m>tal-1961</l-m> dwar <l-m>il-Kanal</l-m> ta’ Filfla (Postijiet Temporanji għal Tiri ta’ Armi)</em>. Dawn kienu jgħidu li “<l-m>l-persuni</l-m> u <l-m>l-inġenji</l-m> kollha għandhom jitbiegħdu <l-m>mill-postijiet</l-m> temporanji għal tiri ta’ armi kull meta tkun tidher dik <l-m>il-bandiera</l-m> jew dawl.<span class="pullsemi">”</span> <l-m>Il-bandiera</l-m> ħamra hija bħal dik li għadek tara Pembroke kultant meta jkun hemm <l-m>is-suldati</l-m> jipprattikaw.</p>
 <p>Kull darba li <l-m>l-Ingliżi</l-m> kienu se jitfgħu <l-m>l-bombi</l-m> fuq Filfla kien joħroġ avviż <l-m>fil-gazzetta</l-m> dwar <l-m>il-manuvri</l-m> tal-vapuri u <l-m>t-tluq</l-m> tal-bombi <l-m>mill-ajru</l-m>. <l-m>Fil-file</l-m> fejn sibt <l-m>l-Ordinanza</l-m> hemm biċċa <l-m>mill-gazzetta</l-m> Iż-Żmien <l-m>tat-Tlieta</l-m>, 14 ta Mejju 1968 fejn <l-m>l-Onor</l-m>. K. Agius jistaqsi <l-m>lill-Ministru</l-m> tal-Kummerċ, <l-m>l-Industrija</l-m> u <l-m>l-Agrikoltura</l-m>, “<l-m>għan-nom</l-m> tas-sajjieda <l-m>taż-Żurrieq</l-m> u <l-m>x-Xlukkajri</l-m>, kif se jkopru <l-m>l-flus</l-m> li qed jitilfu”<span class="pull">.</span> Dan minħabba li <l-m>s-sajjieda</l-m> ma kinux jistgħu joħorġu jistadu lejn Filfla, u “qegħdin finanzjarjament ibatu minħabba <l-m>l-avviżi</l-m> tal-manuvri <l-m>fl-inħawi</l-m> fejn imorru jistadu”<span class="pull">.</span></p>
 <p><l-m>Il-Gvern</l-m> Malti, tul amministrazzjonijiet differenti, tkarrab u talab ħafna drabi biex jitnaddfu <l-m>l-ilmijiet</l-m> miż-żibel militari, iżda <l-m>l-Ingliżi</l-m> donnhom qatgħu qalbhom milli jnaddfu. Interessanti kif Filfla, <l-m>dil-miżbla</l-m> ta’ scrap metalliku <l-m>tal-militar</l-m>, baqgħet sakemm saret riżerva <l-m>tal-iktar</l-m> grad għoli. Sa <l-m>mill-1975</l-m> kien diġà pprojbit li tintefa’ ankra f’inqas minn 1.9 kilometri madwarha. Illum, Filfla ma tistax tmur fuqha, lanqas biss tista’ tersaq inqas minn 5 kilometri lejha għax <l-m>fl-1988</l-m> ġiet iddikjarata Riżerva Naturali Protetta. <l-m>Fl-Arkivji</l-m> sibt file <l-m>tal-1964</l-m>, <l-m>bit-titlu</l-m> <em>Reservation of Filfla as a bird sanctuary</em>. <l-m>Mid-dehra</l-m> l-għasafar kienu wieħed <l-m>mill-modi</l-m> kif <l-m>il-Malti</l-m> beda jipprova jrażżan <l-m>il-prattika</l-m> militari fuq <l-m>dil-gżira</l-m>. <l-m>Il-kanġu</l-m> ta’ Filfla li trabba <l-m>fil-ġebel</l-m> imġarraf <l-m>fil-madwar</l-m>, flimkien maċ-ċief u <l-m>l-gawwi</l-m>, kellhom rwol tassew importanti tant li <l-m>fl-1993</l-m> Filfla saret santwarju <l-m>tal-għasafar</l-m> u <l-m>fl-2002</l-m> il-MEPA għamlet Filfla u Filfoletta — dak li għad fadal minnha — Sit ta’ Importanza Xjentifika <l-m>fil-livell</l-m> numru wieħed u Sit ta’ Importanza Ekoloġika <l-m>fil-livell</l-m> numru tnejn. Fi kliem ieħor, ħadd ma jersaq ’l hemm.</p>
@@ -386,7 +439,14 @@
 <p class="enjambed fx1"><i class="fx1">S</i>Iva, naturalment, dawk kienu jtellgħu. Kienu jqabbdu bugħaddas… <l-m>Għall-bidu</l-m> kienu <l-m>fil-wiċċ</l-m>, għax xibka kien ikun hemm.</p>
 <p class="enjambed fx1"><i class="fx1">J</i>Mela kont issibhom faċli <l-m>fil-bidu</l-m>.</p>
 <p class="fx1"><i class="fx1">S</i>Mela, kont issibhom faċli żgur. Għax tispara llum, tispara għada… u dawk li jkunu difettużi ma jiħdux. U jaqgħu <l-m>l-baħar</l-m>. U tant kienu ilhom jisparaw li <l-m>l-bombi</l-m> ma kinux joqogħdu jaraw fejn ġew u ma ġewx, peress li mdawra <l-m>bil-baħar</l-m> Filfla.</p>
-<blockquote><l-m>L-isplussiv</l-m> magħmul <l-m>mill-bniedem</l-m><br>imrembel f’kapsi msaddin.<br>Kapsi ta’ bombi, u ġelatina<br>fuq sidri ġew mixħutin.<br>Bombi, torpidows ta’ żmien <l-m>l-Ingliżi</l-m><br><l-m>fil-baxx</l-m>, jilagħbu <l-m>mal-granċijiet</l-m>,<br>jixxenglu <l-m>mal-kurrenti</l-m><br>issibu minnhom <l-m>bil-mijiet</l-m>.</blockquote>
+<blockquote class="enjambed"><l-m>L-isplussiv</l-m> magħmul <l-m>mill-bniedem</l-m></blockquote>
+<blockquote class="enjambed">imrembel f’kapsi msaddin.</blockquote>
+<blockquote class="enjambed">Kapsi ta’ bombi, u ġelatina</blockquote>
+<blockquote class="enjambed">fuq sidri ġew mixħutin.</blockquote>
+<blockquote class="enjambed">Bombi, torpidows ta’ żmien <l-m>l-Ingliżi</l-m></blockquote>
+<blockquote class="enjambed"><l-m>fil-baxx</l-m>, jilagħbu <l-m>mal-granċijiet</l-m>,</blockquote>
+<blockquote class="enjambed">jixxenglu <l-m>mal-kurrenti</l-m></blockquote>
+<blockquote>issibu minnhom <l-m>bil-mijiet</l-m>.</blockquote>
 <table>
 <tbody>
 <tr>
@@ -1257,6 +1317,7 @@
 					
 				
 				
+				
 					<section id="endnote" class="body-text">
 						<p>Ħajr speċjali lil Carmen Ellul, u <l-m>r-raġel</l-m> tagħha Saver, <l-m>iz-zijiet</l-m> tiegħi.</p>
 <p>“<l-m>Il-Lament</l-m> ta’ Filfa”<span class="pull">,</span> li jidher imqassam f’diversi partijiet matul <l-m>l-esej</l-m>, huwa kitba tiegħi. <l-m>Iż-żewġ</l-m> partijiet li tgħanni Mariele Zammit <l-m>fis-silta</l-m> awdjo hawn fuq, huma kitba tiegħi flimkien ma’ Joachim Robbrecht, fuq idea ta’ Maria Rößler. Julia Camilleri għamlet <l-m>it-traduzzjoni</l-m> tat-test, kif ukoll <l-m>it-traskrizzjoni</l-m> tal-intervisiti. Mariele rranġat <l-m>il-vrus</l-m> ta’ partijiet minnu <l-m>għall-għana</l-m>, u Steve Delia, <l-m>id-Delli</l-m>, irrekordja lilha u <l-m>d-daqq</l-m> tal-kitarri fuq cassette. <l-m>Il-ħsejjes</l-m> ta’ Filfla ġew irrekordjati minn Benjamin Metzger li bħala ornitologu ġab <l-m>il-permess</l-m> li jżur <l-m>il-gżira</l-m>. <l-m>L-awdjo</l-m> ġie pproċessat <l-m>mis-sound</l-m> designer Mario Sammut.</p>
@@ -1275,6 +1336,10 @@
 				
 				
 				
+					<aside id="form" data-track-content data-content-name="Newsletter" data-content-piece="formola">
+						<iframe src="https://newsletter.aphroconfuso.mt/subscription/form#sidebar-part" scrolling="no" title="Abbona fin-newsletter"></iframe>
+					</aside>
+				
 				
 					<aside id="letters-solicit">
 						<p>Iktbilna dwar dan ix-xogħol fuq <l-m>l-indirizz</l-m> <a href="mailto:ittri@aphroconfuso.mt?subject=Splużjonijiet #1 Il-kwiet u l-lejl ta’ Jimmy Grima" class="outline">ittri@aphroconfuso.mt</a>. Jekk jogħġbok inkludi ismek u fejn toqgħod. Kontribuzzjonijiet anonimi ma jiġux ikkunsidrati.</p>
@@ -1284,7 +1349,7 @@
 		</div>
 		
 	</article>
-	<aside class="promos-container" data-track-content data-content-name="Promos tal-qiegħ" data-content-piece="Splużjonijiet #1">
+	<aside class="promos-container end-promos" data-track-content data-content-name="Promos tal-qiegħ" data-content-piece="Splużjonijiet #1">
 		
 		
 		
@@ -1294,11 +1359,11 @@
 		
 
 <li >
-	<a class="promo settembru-2023 promo-esej story-20 is-episode" href="/omar-nshea-bur-mgħeż-1-ftit-qabel-dfint-l-ommi-mort-infittex-qabar/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Splużjonijiet #1', 'għal: Bur Mgħeż #1', 1]);">
+	<a class="promo  awwissu promo-esej story-20 is-episode" href="/omar-nshea-bur-mgħeż-1-ftit-qabel-dfint-l-ommi-mort-infittex-qabar/" onclick="analytics(['trackEvent', 'Promo', 'minn: Splużjonijiet #1', 'għal: Bur Mgħeż #1', 1]);">
 		<header>
 	<ul>
 	
-		<li class="header-label">Settembru 2023</li>
+		<li class="header-label">Awwissu 2023</li>
 	
 	
 	</ul>
@@ -1342,7 +1407,7 @@
 		
 
 <li >
-	<a class="promo gunju-2023 promo-storja story-13" href="/charlene-galea-ġismi-battikata/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Splużjonijiet #1', 'għal: Ġismi Battikata', 2]);">
+	<a class="promo  gunju promo-storja story-13" href="/charlene-galea-ġismi-battikata/" onclick="analytics(['trackEvent', 'Promo', 'minn: Splużjonijiet #1', 'għal: Ġismi Battikata', 2]);">
 		<header>
 	<ul>
 	
@@ -1383,7 +1448,7 @@
 		
 
 <li >
-	<a class="promo jannar-2024 promo-djarju story-35 is-episode" href="/warren-bartolo-djarju-2023-11-01-il-mixja-lura-d-dar-kienet-twila-sigarett-wieħed/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Splużjonijiet #1', 'għal: Djarju #1 Warren Bartolo', 3]);">
+	<a class="promo  jannar promo-djarju story-35 is-episode" href="/warren-bartolo-djarju-2023-11-01-il-mixja-lura-d-dar-kienet-twila-sigarett-wieħed/" onclick="analytics(['trackEvent', 'Promo', 'minn: Splużjonijiet #1', 'għal: Djarju #1 Warren Bartolo', 3]);">
 		<header>
 	<ul>
 	
@@ -1431,10 +1496,11 @@
 
 	</aside>
 	<script>
-		audioUrls = { "songs": [{"authorName":"Jimmy Grima","monthYear":"April 2024","pageSlug":"jimmy-grima-splużjonijiet-1-il-kwiet-u-l-lejl","reportingTitle":"Splużjonijiet #1","sequenceEpisodeNumber":1,"sequenceEpisodeTitle":"Il-kwiet u l-lejl","storyId":"25","title":"Splużjonijiet","type":"Esej","url":"https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1711370164616-dac88062e9145467190d8d3bddf24218.mp3"},{"authorName":"Jimmy Grima","monthYear":"April 2024","pageSlug":"jimmy-grima-splużjonijiet-1-il-kwiet-u-l-lejl","reportingTitle":"Splużjonijiet #1","sequenceEpisodeNumber":1,"sequenceEpisodeTitle":"Il-kwiet u l-lejl","storyId":"26","title":"Splużjonijiet","type":"Esej","url":"https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1711370413170-9588a7d75a279d219be39698d24e9afe.mp3"}] };
+		audioUrls = { "songs": [{"authorName":"Jimmy Grima","issueMonth":"April","pageSlug":"jimmy-grima-splużjonijiet-1-il-kwiet-u-l-lejl","reportingTitle":"Splużjonijiet #1","sequenceEpisodeNumber":1,"sequenceEpisodeTitle":"Il-kwiet u l-lejl","storyId":"25","title":"Splużjonijiet","type":"Esej","url":"https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1711370164616-dac88062e9145467190d8d3bddf24218.mp3"},{"authorName":"Jimmy Grima","issueMonth":"April","pageSlug":"jimmy-grima-splużjonijiet-1-il-kwiet-u-l-lejl","reportingTitle":"Splużjonijiet #1","sequenceEpisodeNumber":1,"sequenceEpisodeTitle":"Il-kwiet u l-lejl","storyId":"26","title":"Splużjonijiet","type":"Esej","url":"https://assets.pippa.io/shows/63ef6b4c3642ca00119bcf72/1711370413170-9588a7d75a279d219be39698d24e9afe.mp3"}] };
 		author = "Jimmy Grima" || null;
 		collections = "" || null;
-		monthYear = "april-2024" || null;
+		issueMonth = "april" || null;
+		issueMonthYear = "april-2024" || null;
 		podcastUrl = null;
 		reportingTitle = "Splużjonijiet #1" || null;
 		sequenceEpisodeNumber = "1";
@@ -1451,12 +1517,6 @@
 		</div>
 		<div id="bottom-wrapper">
 			<img id="deco" role="none" src="/img/deco-100.svg" alt="Dekorazzjoni art-nouveau" />
-			
-				<div id="newsletter-container-bottom" class="newsletter-container">
-					<section id="form" data-track-content data-content-name="Homepage" data-content-piece="formola">
-						<iframe src="https://newsletter.aphroconfuso.mt/subscription/form" scrolling="no" title="Abbona fin-newsletter"></iframe>
-					</section>
-				</div>
 			
 			<footer data-track-content data-content-name="Footer" data-content-piece="jimmy-grima-splużjonijiet-1-il-kwiet-u-l-lejl">
 	<nav class="footer-content">

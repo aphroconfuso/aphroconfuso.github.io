@@ -27,7 +27,7 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/davinia-hamilton/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-41eda743.css">
+		<link rel="stylesheet" href="/css/style-25325009.css">
 		<script>
 			var
 				audioLoaded,
@@ -51,7 +51,8 @@
 				lastReportedScrollPosition,
 				lastScrollPosition,
 				message,
-				monthYear,
+				issueMonth,
+				issueMonthYear,
 				newScrollPosition,
 				pageHeight,
 				percentageProgress,
@@ -117,6 +118,10 @@
 				}
 			}
 			var _paq = window._paq = window._paq || [];
+			const analytics = (arrayInfo) => {
+				if (location.host !== 'aphroconfuso.mt') console.log(arrayInfo);
+				_paq.push(arrayInfo);
+			}
 			_paq.push(['disableCookies']);
 			_paq.push(['enableJSErrorTracking']);
 			_paq.push(['enableHeartBeatTimer']);
@@ -131,20 +136,36 @@
 				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
 			})();
 		</script>
-		<script defer src="/script/script-227.js"></script>
+		<script defer src="/script/script-233.js"></script>
 	</head>
-	<body class="show-nav">
+	<body class="show-nav this-month-mejju">
 		<script>initialiseAfterBody();</script>
 		<div id="top-wrapper">
 			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
 			<nav id="top-nav">
-				<a id="logo-container" href="/"><img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" /></a>
+				<div id="logo-container-wrapper">
+					<div id="logo-container">
+						<a href="/">
+							<img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" />
+						</a>
+					</div>
+					<menu class="hide-mobile" id="menu-carousels">
+						<li class="abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
+					</menu>
+					<menu class="hide-mobile" id="menu-collections">
+						<li class="main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+						<li class="main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					</menu>
+				</div>
 				<input id="menu-toggle" type="checkbox" />
 				<label class='menu-button-container' for="menu-toggle">
 					<span style="display: none">Mobile biss: iftaħ il-menu</span>
 					<div class='menu-button'></div>
 				</label>
-				<menu>
+				<menu id="menu-main">
+					<li class="hide-laptop main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+					<li class="hide-laptop main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					<li class="hide-laptop abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
 					<li><a href="/appuntamenti/">Appuntamenti</a></li>
 					<li><a href="/kontributuri/">Kontributuri</a></li>
 					<li><a href="/werrej/">Werrej</a></li>
@@ -168,7 +189,7 @@
 			<div id="message"><!-- --></div>
 			<main id="skipto">
 				
-<article class="generic">
+<article class="generic contributor-18">
 	<header>
 		<ul><li class="header-label"><a href="/kontributuri/">Kontributuri</a></li></ul>
 		<h1>Davinia Hamilton</h1>
@@ -177,9 +198,12 @@
 	<div class="container-generic contributor">
 		<section id="grid-body">
 			<div class="generic-body-text">
-				<p>Davinia Hamilton hi gradwata <l-m>fl-Ingliż</l-m> mill-Università ta’ Malta, u studjat <l-m>il-midja</l-m> diġitali ġewwa Dublin, u <l-m>t-teatru</l-m> fl-iskola ArtsEd ġewwa Londra. Hi <l-m>l-koawtriċi</l-m> ta’ <em>Blanket Ban</em>, produzzjoni teatrali dwar <l-m>l-abort</l-m> f’Malta, ippubblikata minn Bloomsbury Methuen Drama, li rebħet <l-m>l-Edinburgh</l-m> Untapped Award, u ġiet innominata għal Off West End Award, kif ukoll Popcorn Writing Award u Sit Up Award. Davinia ħadmet f’bosta produzzjonijiet teatrali u immersivi kemm f’Londra kif ukoll f’Malta, u hi mħarrġa ma’ Punchdrunk, Complicité, u Clean Break <l-m>fit-teatru</l-m> fiżiku u dak politiku. <l-m>Fl-2022</l-m>, <l-m>il-poeżija</l-m> twila tagħha, <em>i cannot speak it but it comes</em>, kienet ippubblikata minn Ede Books. <l-m>Il-kitba</l-m> tagħha dehret ukoll f’diversi pubblikazzjonijiet, kemm stampati kif ukoll diġitali, fosthom <l-m>il-ġurnal</l-m> rivoluzzjonarju <em>Salvage</em>, <em>Scintillas: New Maltese Writing 3</em>, <em>Tilde Literary Journal</em>, <em>Cathexis Northwest</em>, <em>The Esthetic Apostle</em>, u <em>Wet Grain</em>. Davinia hi membru <l-m>tal-kumitat</l-m> eżekuttiv <l-m>tal-Abortion</l-m> Rights UK, u tistudja <l-m>il-psikoanaliżi</l-m> Lacanjana ma’ CFAR f’Londra.</p>
+				<div data-pagefind-body data-pagefind-weight="1">
+					<p>Davinia Hamilton hi gradwata <l-m>fl-Ingliż</l-m> mill-Università ta’ Malta, u studjat <l-m>il-midja</l-m> diġitali ġewwa Dublin, u <l-m>t-teatru</l-m> fl-iskola ArtsEd ġewwa Londra. Hi <l-m>l-koawtriċi</l-m> ta’ <em>Blanket Ban</em>, produzzjoni teatrali dwar <l-m>l-abort</l-m> f’Malta, ippubblikata minn Bloomsbury Methuen Drama, li rebħet <l-m>l-Edinburgh</l-m> Untapped Award, u ġiet innominata għal Off West End Award, kif ukoll Popcorn Writing Award u Sit Up Award. Davinia ħadmet f’bosta produzzjonijiet teatrali u immersivi kemm f’Londra kif ukoll f’Malta, u hi mħarrġa ma’ Punchdrunk, Complicité, u Clean Break <l-m>fit-teatru</l-m> fiżiku u dak politiku. <l-m>Fl-2022</l-m>, <l-m>il-poeżija</l-m> twila tagħha, <em>i cannot speak it but it comes</em>, kienet ippubblikata minn Ede Books. <l-m>Il-kitba</l-m> tagħha dehret ukoll f’diversi pubblikazzjonijiet, kemm stampati kif ukoll diġitali, fosthom <l-m>il-ġurnal</l-m> rivoluzzjonarju <em>Salvage</em>, <em>Scintillas: New Maltese Writing 3</em>, <em>Tilde Literary Journal</em>, <em>Cathexis Northwest</em>, <em>The Esthetic Apostle</em>, u <em>Wet Grain</em>. Davinia hi membru <l-m>tal-kumitat</l-m> eżekuttiv <l-m>tal-Abortion</l-m> Rights UK, u tistudja <l-m>il-psikoanaliżi</l-m> Lacanjana ma’ CFAR f’Londra.</p>
+				</div>
 				
 					<p class="continuity">Kitba ta’ <span class="contributor">Davinia</span> fil-ġurnal:</p>
+					
 					
 					
 					<ul class="promo-list">
@@ -188,13 +212,13 @@
 		
 
 <li >
-	<a class="promo marzu-2024 promo-terminu story-51" href="/il-kliem-fit-teorija-alterità/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Davinia Hamilton', 'għal: alterità', 1]);">
+	<a class="promo  mejju promo-terminu story-51" href="/il-kliem-fit-teorija-alterità/" onclick="analytics(['trackEvent', 'Promo', 'minn: Davinia Hamilton', 'għal: alterità', 1]);">
 		<header>
 	<ul>
 	
 		<li class="header-label">
 			
-				<span class="subject-date">07.03.2024</span>
+				<span class="subject-date">27.05.2024</span>
 			
 		</li>
 	
@@ -246,7 +270,7 @@
 		
 
 <li >
-	<a class="promo marzu-2024 promo-terminu story-53" href="/il-kliem-fit-teorija-xewqa-xenqa/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Davinia Hamilton', 'għal: xewqa/xenqa', 2]);">
+	<a class="promo  marzu promo-terminu story-53" href="/il-kliem-fit-teorija-xewqa-xenqa/" onclick="analytics(['trackEvent', 'Promo', 'minn: Davinia Hamilton', 'għal: xewqa/xenqa', 2]);">
 		<header>
 	<ul>
 	
@@ -301,7 +325,7 @@
 		
 
 <li >
-	<a class="promo marzu-2024 promo-storja story-43" href="/davinia-hamilton-likantropi/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Davinia Hamilton', 'għal: Likantropi', 3]);">
+	<a class="promo  marzu promo-storja story-43" href="/davinia-hamilton-likantropi/" onclick="analytics(['trackEvent', 'Promo', 'minn: Davinia Hamilton', 'għal: Likantropi', 3]);">
 		<header>
 	<ul>
 	
@@ -342,7 +366,7 @@
 		
 
 <li >
-	<a class="promo ottubru-2023 promo-esej story-22" href="/davinia-hamilton-żerriegħa/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Davinia Hamilton', 'għal: Żerriegħa', 4]);">
+	<a class="promo  ottubru promo-esej story-22" href="/davinia-hamilton-żerriegħa/" onclick="analytics(['trackEvent', 'Promo', 'minn: Davinia Hamilton', 'għal: Żerriegħa', 4]);">
 		<header>
 	<ul>
 	
@@ -399,7 +423,7 @@
 		
 
 <li >
-	<a class="promo frar-2024 promo-poddata story-46" href="/davinia-hamilton-poddata-2023-12-18-noti-editorjali-3-davinia-hamilton/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Davinia Hamilton', 'għal: Noti Editorjali #3: Davinia Hamilton #3', 1]);">
+	<a class="promo  frar promo-poddata story-46" href="/davinia-hamilton-poddata-2023-12-18-noti-editorjali-3-davinia-hamilton/" onclick="analytics(['trackEvent', 'Promo', 'minn: Davinia Hamilton', 'għal: Noti Editorjali #3: Davinia Hamilton #3', 1]);">
 		<header>
 	<ul>
 	
@@ -445,7 +469,7 @@
 		
 
 <li >
-	<a class="promo jannar-2024 promo-poddata story-39" href="/kurt-borg-davinia-hamilton-omar-nshea-poddata-2023-11-01-kif-tgħidha-fqalbek/" onclick="_paq.push(['trackEvent', 'Promo', 'minn: Davinia Hamilton', 'għal: Kif Tgħidha f’Qalbek', 2]);">
+	<a class="promo  jannar promo-poddata story-39" href="/kurt-borg-davinia-hamilton-omar-nshea-poddata-2023-11-01-kif-tgħidha-fqalbek/" onclick="analytics(['trackEvent', 'Promo', 'minn: Davinia Hamilton', 'għal: Kif Tgħidha f’Qalbek', 2]);">
 		<header>
 	<ul>
 	
@@ -501,7 +525,7 @@
 		</section>
 		<section id="grid-max-panel-left-top">
 			<section id="grid-max-panel-left-top">
-	<section class="contributors-menu">
+	<section class="generic-menu contributors-menu">
 		
 			<ul>
 				
@@ -512,6 +536,12 @@
 			
 				
 					<li><a href="/aaron-aquilina/">Aaron Aquilina</a></li>
+				
+			
+		
+			
+				
+					<li><a href="/jasmine-bajada/">Jasmine Bajada</a></li>
 				
 			
 		
@@ -566,6 +596,12 @@
 			
 				
 					<li><a href="/ryan-falzon/">Ryan Falzon</a></li>
+				
+			
+		
+			
+				
+					<li><a href="/fatima-a.m./">fatima a.m.</a></li>
 				
 			
 		
