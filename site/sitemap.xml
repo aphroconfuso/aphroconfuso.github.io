@@ -898,13 +898,6 @@
 	</url>
 	
 	<url>
-		<loc>https://aphroconfuso.mt/omar-nshea-bur-mgħeż/</loc>
-		<lastmod>2024-06-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-	</url>
-	
-	<url>
 		<loc>https://aphroconfuso.mt/jimmy-grima-splużjonijiet/</loc>
 		<lastmod>2024-06-04</lastmod>
     <changefreq>monthly</changefreq>
@@ -927,6 +920,13 @@
 	
 	<url>
 		<loc>https://aphroconfuso.mt/loranne-vella-djarju/</loc>
+		<lastmod>2024-06-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/omar-nshea-bur-mgħeż/</loc>
 		<lastmod>2024-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
