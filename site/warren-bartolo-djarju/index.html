@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="mt" translate="no">
+
+	<head>
+		<meta charset="utf-8">
+		
+	<title>Djarju · Aphroconfuso</title>
+	<meta content="&lt;p&gt;xxx&lt;/p&gt;" name="description">
+	<meta property="og:image" content="https://aphroconfuso.mt/stampi/social_warren_djarju_1_c2e80a50ce.jpg">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@aphroconfuso">
+	<meta name="twitter:creator" content="@aphroconfuso">
+	<meta name="twitter:title" content="Aphroconfuso">
+	<meta name="twitter:description" content="&lt;p&gt;xxx&lt;/p&gt;">
+	<meta name="twitter:image" content="https://aphroconfuso.mt/stampi/social_warren_djarju_1_c2e80a50ce.jpg">
+	<meta name="twitter:image:alt" content="Persuna taqra fis-sodda, mill-POV tagħha. Jidhru biss riġlejha u qattusa fuq saqajha. Jidher ftit mill-ktieb miftuħ quddiema.">
+
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+		<meta content="width=device-width, initial-scale=1" name="viewport">
+		<meta content="width=device-width" initial-scale="1.0" maximum-scale="1.0" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="yes" name="mobile-web-app-capable">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#f9f9f3">
+		<link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon-16x16.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32x32.png">
+		<link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
+		<link rel="mask-icon" href="/img/icons/safari-pinned-tab.svg" color="#5bbad5">
+		<meta property="og:image:type" content="image/jpeg">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
+		<link rel="canonical" href="https://aphroconfuso.mt/warren-bartolo-djarju/">
+		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
+		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
+		<link rel="stylesheet" href="/css/style-8ba6d478.css">
+		<script>
+			var
+				audioLoaded,
+				audioUrls,
+				author,
+				body,
+				bodyEnd,
+				bodyHeight,
+				bodyStart,
+				bodyText,
+				bookmarksArray,
+				bookmarksList,
+				bookmarksMenuElement,
+				charactersPerPixel,
+				charactersPerScreen,
+				currentTime,
+				duration,
+				elapsedTime,
+				hideScrollTools,
+				lastReportedReadingTime,
+				lastReportedScrollPosition,
+				lastScrollPosition,
+				message,
+				issueMonth,
+				issueMonthYear,
+				newScrollPosition,
+				pageHeight,
+				percentageProgress,
+				placeText,
+				podcastUrl,
+				previousTime,
+				progressElement,
+				readingSpeed,
+				reportingTitle,
+				screenHeight,
+				skippedTime,
+				storyCompleted,
+				storyId,
+				storyType,
+				sequenceEpisodeNumber,
+				sequenceEpisodeTitle,
+				timeStarted,
+				pageTitle,
+				wordcount,
+				wordsPerPixel,
+				wordsPerSecond,
+				wordsPerSecondAudio,
+				wordsPerScreen;
+
+			audioLoaded = false;
+			bookmarksArray = [];
+			percentageProgress = 0;
+			previousTime = [];
+			storyCompleted = false;
+
+			const	urlSlug = location.pathname.replace(/\//g, '');
+			const setCookie = (cname, cvalue, exdays = 36500) => {
+				const d = new Date();
+				d.setTime(d.getTime() + (exdays*24*60*60*1000));
+				let expires = "expires="+ d.toUTCString();
+				document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+			}
+			const getCookie = (cname) => {
+				let name = cname + "=";
+				let decodedCookie = decodeURIComponent(document.cookie);
+				let ca = decodedCookie.split(';');
+				for(let i = 0; i < ca.length; i++) {
+					let c = ca[i];
+					while (c.charAt(0) == ' ') {
+						c = c.substring(1);
+					}
+					if (c.indexOf(name) == 0) {
+						return c.substring(name.length, c.length);
+					}
+				}
+				return "";
+			}
+			const addRemoveFontSizeClass = (size) => {
+				document.body.classList.remove('font-size-1','font-size-2','font-size-3','font-size-4');
+				document.body.classList.add(`font-size-${ size }`);
+				setCookie('font', size);
+			}
+			const initialiseAfterBody = () => {
+				const fontSize = getCookie('font') || 1;
+				addRemoveFontSizeClass(fontSize);
+				if (getCookie(`tw-${urlSlug}`)) {
+					document.body.classList.add('trigger-warning-closed');
+				}
+			}
+			var _paq = window._paq = window._paq || [];
+			const analytics = (arrayInfo) => {
+				if (location.host !== 'aphroconfuso.mt') console.log(arrayInfo);
+				_paq.push(arrayInfo);
+			}
+			_paq.push(['disableCookies']);
+			_paq.push(['enableJSErrorTracking']);
+			_paq.push(['enableHeartBeatTimer']);
+			_paq.push(['enableLinkTracking']);
+			_paq.push(['trackPageView']);
+			_paq.push(['trackVisibleContentImpressions']);
+			(function () {
+				var u = "//analitika.aphroconfuso.mt/";
+				_paq.push(['setTrackerUrl', u + 'matomo.php']);
+				_paq.push(['setSiteId', location.host === 'aphroconfuso.mt' ? '1' : '2']);
+				var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
+			})();
+		</script>
+		<script defer src="/script/script-233.js"></script>
+	</head>
+	<body class="show-nav this-month-gunju">
+		<script>initialiseAfterBody();</script>
+		<div id="top-wrapper">
+			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
+			<nav id="top-nav">
+				<div id="logo-container-wrapper">
+					<div id="logo-container">
+						<a href="/">
+							<img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" />
+						</a>
+					</div>
+					<menu class="hide-mobile" id="menu-carousels">
+						<li class="abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
+					</menu>
+					<menu class="hide-mobile" id="menu-collections">
+						<li class="main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+						<li class="main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					</menu>
+				</div>
+				<input id="menu-toggle" type="checkbox" />
+				<label class='menu-button-container' for="menu-toggle">
+					<span style="display: none">Mobile biss: iftaħ il-menu</span>
+					<div class='menu-button'></div>
+				</label>
+				<menu id="menu-main">
+					<li class="hide-laptop main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+					<li class="hide-laptop main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					<li class="hide-laptop abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
+					<li><a href="/appuntamenti/">Appuntamenti</a></li>
+					<li><a href="/kontributuri/">Kontributuri</a></li>
+					<li><a href="/werrej/">Werrej</a></li>
+					<li><a href="/djarju/">Djarju</a></li>
+					<li><a href="/podcast/">Podcast</a>&hairsp;/&hairsp;<a href="/awdjo/">Awdjo</a></li>
+					<li class="hide-laptop">&nbsp;</li>
+					<li><a href="/dwarna/">Dwarna</a></li>
+					<li class="hide-laptop"><a href="/kolofon/">Kolofon</a></li>
+					<li><a href="/newsletter/">Newsletter</a></li>
+					<li class="hide-laptop"><a href="/privatezza/">Privatezza</a></li>
+					<li><a href="/bookmarks/">Bookmarks<span id="bookmarks-number"></span></a></li>
+					<li class="hide-laptop" id="text-size-adjust">
+						<a id="font-size-1" href="#">a</a>
+						<a id="font-size-2" href="#">a</a>
+						<a id="font-size-3" href="#">a</a>
+						<a id="font-size-4" href="#">a</a>
+					</li>
+				</menu>
+				<div id="brownline"></div>
+			</nav>
+			<div id="message"><!-- --></div>
+			<main id="skipto">
+				
+	<article class="generic">
+		<header>
+			<ul><li class="header-label">&nbsp;</li></ul>
+			<h1>Djarju</h1>
+			
+	
+	<h2 data-pagefind-meta="author">
+		
+		
+			
+			
+				
+					
+						<a href="/warren-bartolo/">Warren Bartolo</a>
+	</h2>
+
+
+		</header>
+		<div class="container-sequence">
+			<div class="generic-body-text" id="grid-max-panel-right-top">
+				<p class="continuity"></p>
+				
+				
+				
+				
+				
+				<ul class="promo-list">
+	
+	
+		
+
+<li  class="multiple-episodes">
+	<a class="promo  jannar promo-djarju story-35 is-episode" href="/warren-bartolo-djarju-2023-11-01-il-mixja-lura-d-dar-kienet-twila-sigarett-wieħed/" onclick="analytics(['trackEvent', 'Promo', 'minn: Djarju', 'għal: Djarju #1 Warren Bartolo', 1]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">
+			<span class="header-djarju">Djarju</span>
+			
+				<span class="subject-date">01.11.2023</span>
+			
+		</li>
+	
+	
+	</ul>
+	
+	
+
+	
+		<h3>
+			
+			
+				<span class="episode-number">1. </span>
+			
+			Il-mixja lura <l-m>d-dar</l-m> kienet twila sigarett wieħed
+		</h3>
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>L-ewwel ta’ Novembru. Illum għeluq snin ommi. Nibagħtilha messaġġ fuq WhatsApp, happy birthday ma nħobbok u nimmissjak ħafna. Nistaqsiha tibgħatli ritratt tagħha u hi tistaqsini <l-m>l-istess</l-m>. Ordnajtilha bukkett fjuri biex filgħodu jitwassal <l-m>fl-uffiċċju</l-m> tagħha bħala sorpriża. Wasal nofsinhar u għadni <l-m>fis-sodda</l-m> naqra <l-m>l-aħħar</l-m> ftit paġni ta’ Skyland (2020) ta’ Andrew Durbin. Iktar tard immur <l-m>id-dar</l-m> ta’ C biex nara <l-m>l-aħħar</l-m> episodju ta’ Real Housewives of Beverly Hills, għalkemm meta nasal għandhom nindunaw li <l-m>l-episodju</l-m> għadu ma ħariġx. Lura <l-m>d-dar</l-m> tard waranofsinhar nispiċċa Skyland. Filgħaxija nkaxkar lil S miegħi <l-m>għal-leaving</l-m> drinks ta’ T ġewwa <l-m>l-bar</l-m> Le Sarrasin, Belleville. <l-m>L-għada</l-m> għandu titjira lejn <l-m>l-Awstralja</l-m> fejn se jgħix ma’ ħabib <l-m>tal-familja</l-m> Melbourne mingħajr ma jħallas kera. Jiċċajta dwar <l-m>ir-ritorn</l-m> lejn Pariġi ftit snin wara fejn ikun kompletament trasformat <l-m>mill-kirurġija</l-m> plastika. B għamlu kejk delizzjuż taċ-ċikkulata u nintefgħu <l-m>fis-salott</l-m> naraw Terrifier 2 (2022), li kienu ssuġġerewlna biex naraw xi ħbieb tagħhom <l-m>il-ġimgħa</l-m> l-oħra meta konna <l-m>l-club</l-m>. Iżda nieqfu wara ħmistax-il minuta għax insibuh wisq gory. S jitfa’ film ieħor imma jien immur norqod.</p>
+			
+		</div>
+		
+	</a>
+</li>
+
+	
+		
+
+<li  class="multiple-episodes">
+	<a class="promo  frar promo-djarju story-42 is-episode" href="/warren-bartolo-djarju-2024-01-08-marlboro-gold-il-favoriti-tiegħi-jgħidli/" onclick="analytics(['trackEvent', 'Promo', 'minn: Djarju', 'għal: Djarju #2 Warren Bartolo', 2]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">
+			<span class="header-djarju">Djarju</span>
+			
+				<span class="subject-date">08.01.2024</span>
+			
+		</li>
+	
+	
+	</ul>
+	
+	
+
+	
+		<h3>
+			
+			
+				<span class="episode-number">2. </span>
+			
+			Marlboro Gold, <l-m>il-favoriti</l-m> tiegħi, jgħidli
+		</h3>
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Waqt li jien għadni <l-m>fis-sodda</l-m>, S qiegħed <l-m>fil-kamra</l-m> tal-banju jisma’ diska li kont inħobb nisma’ xi sentejn ilu, però ma nistax niftakar eżatt <l-m>x’inhi</l-m>. Inqum u nistaqsih. Jgħidli li hi “Andromeda” ta’ Weyes Blood. Inqum u nnaddaf <l-m>il-kċina</l-m>, niħħuverja, u naħsel <l-m>l-art</l-m>. Nieħu shower. Nirċievi telefonata m’għand <l-m>tad-delivery</l-m> biex jgħidli li għandi pakkett jistennieni isfel. Ninżel għalih. Huwa ktieb — il-memoir ta’ Lucia Berlin. <l-m>Għall-ħabta</l-m> tas-19h, hekk kif se nitlaq <l-m>mill-appartament</l-m> biex immur niltaqa’ ma’ C, R, I u M <l-m>għall-ikel</l-m>, u waqt li S qiegħed <l-m>fil-banju</l-m> jipprepara biex joħroġ, B jiġu lura <l-m>d-dar</l-m> ma’ E u <l-m>l-kelb</l-m> tiegħu, Bruno. Kienu <l-m>l-gym</l-m> aktar kmieni llum u nassumi li wara baqgħu barra. Nimxiha <l-m>sar-restorant</l-m> fejn qalu li se nieklu. <l-m>It-temperatura</l-m> -1°C, imma lbist ħafna layers u leggings <l-m>tat-thermal</l-m> u għandi wkoll balaklava madwar għonqi. Ma nistax nilbisha kif suppost għax fuq rasi għandi <l-m>l-headphones</l-m>. Meta nasal, nordnaw immedjatament, <l-m>l-ikel</l-m> jiġi <l-m>mill-ewwel</l-m> u nitilqu madwar għaxar minuti wara li kulħadd ikun lest. Waqt <l-m>l-ikel</l-m>, b’xi mod, nitkellmu dwar <l-m>il-Green</l-m> Goblin minn Spider Man, u villains oħra <l-m>bħall-Penguin</l-m>, minn Batman.</p>
+			
+		</div>
+		
+	</a>
+</li>
+
+	
+		
+
+<li  class="multiple-episodes">
+	<a class="promo  marzu promo-djarju story-50 is-episode" href="/warren-bartolo-djarju-2024-02-01-jidhirli-li-hija-ġurnata-tajba-biex-naħsel-il-lożor/" onclick="analytics(['trackEvent', 'Promo', 'minn: Djarju', 'għal: Djarju #3 Warren Bartolo', 3]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">
+			<span class="header-djarju">Djarju</span>
+			
+				<span class="subject-date">01.02.2024</span>
+			
+		</li>
+	
+	
+	</ul>
+	
+	
+
+	
+		<h3>
+			
+			
+				<span class="episode-number">3. </span>
+			
+			Jidhirli li hija ġurnata tajba biex naħsel <l-m>il-lożor</l-m>
+		</h3>
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Fil-ħolma tiegħi, qiegħed quddiem televixin nara film <l-m>tal-fantaxjenza</l-m>. Ma nistax niftakar eżattament kif kienet <l-m>l-istorja</l-m> imma niftakar f’xena minnhom kien hemm ħafna rġiel libsin sdieri <l-m>tal-ġilda</l-m> sewda (mhux daqshekk differenti <l-m>mill-istil</l-m> ta’ Tom of Finland, li tant jirritani). Kien hemm ukoll żurżieqa triangulari kbira li tintefaħ bħal dawk ta’ meta konna tfal. Ladarba kont fuq nett, stajt jew taqbeż f’qasma li kien hemm <l-m>fin-nofs</l-m> bejn <l-m>iż-żewġ</l-m> żurżiqiet, jew inkella tiżżerżaq ’l isfel <l-m>in-naħa</l-m> l-oħra. <l-m>Fil-qasma</l-m>, <l-m>l-ispazju</l-m> huwa vast. Hemm irġiel ipejpu, jiċċettjaw, jitlajjaw. Tixbah <l-m>il-qasma</l-m> fil-kaktus enormi li minnha tidħol <l-m>in-narratriċi</l-m> f’Death Valley ta’ Melissa Broder, fejn tara verżjonijiet iżgħar <l-m>fl-età</l-m> ta’ żewġha u missierha. Konna qed naraw <l-m>il-film</l-m> fid-Dipartiment <l-m>tal-Klassiċi</l-m> fl-Università ta’ Malta fejn għamilt <l-m>il-Baċellerat</l-m> tiegħi. <l-m>Il-bini</l-m> kien razzett barra <l-m>mill-kampus</l-m> ħdejn parkeġġ. Ma kienx kompletament <l-m>l-istess</l-m>, <l-m>fil-ħolma</l-m> tiegħi, imma stajt ngħid li kienet verżjoni <l-m>tar-razzett</l-m>. Għal xi raġuni, kont ġibt <l-m>il-bagalji</l-m> tiegħi miegħi. F’ħolma li sseħħ qabel <l-m>il-wiri</l-m> tal-film, niftakar li kien hemm ħija, u konna mexjin xi mkien u kellu żewġ mobiles iżda wieħed minnhom kellu <l-m>l-batterija</l-m> baxxa. Inqum u nikteb lil S: Hi birthday boy. Ça va?</p>
+			
+		</div>
+		
+	</a>
+</li>
+
+	
+		
+
+<li  class="multiple-episodes">
+	<a class="promo  april promo-djarju story-57 is-episode" href="/warren-bartolo-djarju-2024-03-02-nistħajjilni-qomt-fuq-artal-tas-sagrifiċċju/" onclick="analytics(['trackEvent', 'Promo', 'minn: Djarju', 'għal: Djarju #4 Warren Bartolo', 4]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">
+			<span class="header-djarju">Djarju</span>
+			
+				<span class="subject-date">02.03.2024</span>
+			
+		</li>
+	
+	
+	</ul>
+	
+	
+
+	
+		<h3>
+			
+			
+				<span class="episode-number">4. </span>
+			
+			Nistħajjilni qomt fuq artal <l-m>tas-sagrifiċċju</l-m>
+		</h3>
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Xewqat <l-m>tal-lum:</l-m> li jibgħatli messaġġ dak li ltqajt miegħu lbieraħ. Jgħidli li jridni, u li jrid li nerġgħu niltaqgħu malajr kemm jista’ jkun, li nkun f’burdata tajba u li S itini <l-m>l-attenzjoni</l-m>, li ma jkollix biża’ u ansjetà dwar <l-m>il-flus</l-m>, li nixtri <l-m>x’niekol</l-m> mingħajr ma jħossni ħażin li naqsu <l-m>l-flus</l-m> mill-kont bankarju, li jirnexxili nikteb xi ħaġa. Ġurnata mxarrba. Sema griż qotni, imdendel. <l-m>Is-sħab</l-m> ma jridx iħalli <l-m>s-sebħ</l-m> jaqsam <l-m>is-sema</l-m>, li jibqa’ kulur wieħed ġurnata sħiħa, fond. S ma jridx kliem. Ma nafx f’liema staġun qegħdin, jekk <l-m>ir-rebbiegħa</l-m> bdietx diġà jew għadha le. Jekk hux wisq sħana biex tkun <l-m>ix-xitwa</l-m>, jekk hux wisq bard biex tkun <l-m>ir-rebbiegħa</l-m>. Ma stajtx nikteb għal ġimgħa sħiħa, mgħaddas taħt <l-m>il-friex</l-m> tas-sodda, imkebbeb f’żaqq <l-m>is-saqqu</l-m> li ma tantx hu iebes. Enerġija meħuda kollha <l-m>mill-burdata</l-m>. Imbagħad ħedla għax naħli ħafna ħin niffaċċja <l-m>dal-fatt</l-m>. F’Marzu tlift <l-m>l-aptit</l-m>, <l-m>il-burdata</l-m> biex nikteb. <l-m>Ix-xewqa</l-m> biex niftakar, <l-m>ix-xewqa</l-m> biex ma niftakarx mumenti biex nikteb dwarhom. <l-m>L-imbuttatura</l-m> biex naqbad <l-m>il-mobile</l-m> bl-iskrin imkisser u nikteb. Imbagħad meta jkunu għaddew wisq ġranet, biex nikteb dwar xi ħaġa li ma ġratx <l-m>fil-mument</l-m> immedjat. F’waħda <l-m>mill-entrati</l-m> tad-djarju ta’ Diċembru kont ħadt nota ta’ <l-m>x’kitbet</l-m> Marina Benjamin. Tikteb dwar <l-m>il-memorja</l-m> u <l-m>t-tislit</l-m> tal-kittieb biex jiftakar, speċjalment xi ħaġa li ġrat tant żmien ilu: “Li tikkonċernani hija <l-m>l-idea</l-m> pjuttost pulita wisq li <l-m>l-memorja</l-m> hija xi ħaġa li tibqa’ <l-m>fil-wiċċ</l-m> b’mod intatt <l-m>mill-passat</l-m> imċajpar, bħal xi sejba arkeoloġika li tkun skoprejt u li minnha trid sempliċement tfarfar <l-m>it-trab</l-m>. Dak <l-m>il-kunċett</l-m>, naħseb, jista’ jiġi skontat, peress li kull darba li tiftakar xi ħaġa tkun qed tiktibha <l-m>mill-ġdid</l-m>, tqanqal <l-m>il-passat</l-m> fil-proċess. Din <l-m>l-indeterminazzjoni</l-m> organika kollha tagħmel <l-m>il-memorja</l-m> inkwetanti. Tesponiha bħala xi ħaġa mibnija b’mod attiv minn persuna li tħoss, li tħares lura minn punt <l-m>fil-futur</l-m>, li trid tagħti rendikont ta’ kif saru <l-m>l-affarijiet</l-m> sabiex jgħixu <l-m>l-porzjon</l-m> li jmiss <l-m>tal-futur</l-m> tagħhom <l-m>bil-kumdità</l-m>.<span class="pullsemi">”</span> Hekk kif kitbet <l-m>in-nanna</l-m> ta’ Guillaume Dustan <l-m>fid-djarju</l-m> tagħha, li hu għamel traskrizzjoni tiegħu f’Nicolas Pages: “Peress li m’għandi ħadd madwari ma’ min nista’ niskambja <l-m>l-ideat</l-m>, nikteb dak kollu li niftakar, <l-m>fl-ebda</l-m> ordni partikolari, nimla <l-m>l-paġni</l-m>.<span class="pullsemi">”</span></p>
+			
+		</div>
+		
+	</a>
+</li>
+
+	
+		
+
+<li  class="multiple-episodes">
+	<a class="promo  mejju promo-djarju story-65 is-episode" href="/warren-bartolo-djarju-2024-04-01-noħlom-li-jaqgħuli-s-snien-ta-quddiem/" onclick="analytics(['trackEvent', 'Promo', 'minn: Djarju', 'għal: Djarju #5 Warren Bartolo', 5]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">
+			<span class="header-djarju">Djarju</span>
+			
+				<span class="subject-date">01.04.2024</span>
+			
+		</li>
+	
+	
+	</ul>
+	
+	
+
+	
+		<h3>
+			
+			
+				<span class="episode-number">5. </span>
+			
+			Noħlom li jaqgħuli <l-m>s-snien</l-m> ta’ quddiem
+		</h3>
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Qed insuq <l-m>il-mutur</l-m> ta’ missieri f’ħolma li kienet tinħass verament <l-m>tal-biża</l-m>’<span class="pullsemi">,</span> imbagħad noħroġ <l-m>lill-fekruna</l-m> tiegħu għal mixja u nitlifha xi mkien fejn <l-m>il-baħar</l-m>. Jgħidli li hu ħabib sew ma’ Mathieu Lindon, li jibagħtu <l-m>l-messaġġi</l-m> kull ġimgħa, u li Lindon kien ħabib ta’ Dustan. Jippunta lejn <l-m>il-bar</l-m> ta’ quddiemna u jgħidli li normalment kienu jmorru jixorbu hemm. Hu u Lindon. Jgħix eżatt hemm. Jgħid li hu ħabib sew ma’ Didier Eribon u Geoffroy de Lagasnerie. Ma tantx jiggusta lil Edouard Louis, u ltaqgħu ftit drabi. Huwa dejjem PR mode, jgħid, li jfisser li Edouard Louis dejjem ikun <l-m>fil-karattru</l-m> ta’ kittieb, u hu jsib <l-m>dal-fatt</l-m> naq’a irritanti. Huwa xorta bagħatlu kopja <l-m>tal-ktieb</l-m> tiegħu, u Louis kitiblu biex jirringrazzjah. Nidħlu Eataly. Irid jieħu focaccia biċ-ċikkulata (u xi ingredjent ieħor li ma nistax niftakar). Sadanittant, jien nitla’ <l-m>l-ewwel</l-m> sular biex inbul peress li ma nistax inżomm aktar. Jispiċċa jieħu focaccia sempliċi. Nimxu lejn Etienne Marcel. Jagħtini gidma <l-m>mill-focaccia</l-m> tiegħu. Ma rridx nikolha kollha, jgħid. Ngħidu ċaw.</p>
+			
+		</div>
+		
+	</a>
+</li>
+
+	
+</ul>
+
+				
+					<aside id="form" data-track-content data-content-name="Newsletter" data-content-piece="formola">
+						<iframe src="https://newsletter.aphroconfuso.mt/subscription/form#sidebar-part" scrolling="no" title="Abbona fin-newsletter"></iframe>
+					</aside>
+				
+			</div>
+		</div>
+	</article>
+	<script>
+		reportingTitle = "Djarju";
+	</script>
+
+			</main>
+		</div>
+		<div id="bottom-wrapper">
+			<img id="deco" role="none" src="/img/deco-100.svg" alt="Dekorazzjoni art-nouveau" />
+			
+				<div id="newsletter-container-bottom" class="newsletter-container">
+					<section id="form" data-track-content data-content-name="Homepage" data-content-piece="formola">
+						<iframe src="https://newsletter.aphroconfuso.mt/subscription/form" scrolling="no" title="Abbona fin-newsletter"></iframe>
+					</section>
+				</div>
+			
+			<footer data-track-content data-content-name="Footer" data-content-piece="warren-bartolo-djarju">
+	<nav class="footer-content">
+		<menu id="housekeeping">
+			<li class="header">Dwarna</li>
+			<li><a href="/kolofon/">Kolofon</a></li>
+			<li><a href="/proċess-editorjali/">Proċess</a></li>
+			<li><a href="/gwida-tal-istil/">Gwida tal-istil</a></li>
+			<li><a href="/cookies/">Cookies</a></li>
+			<li><a href="/privatezza/">Privatezza</a></li>
+			<li><a href="/aċċessibbiltà/">Aċċessibbiltà</a></li>
+			<li><a href="/podcast/">Podcast</a></li>
+			<li><a href="/newsletter/">Newsletter</a></li>
+			<li class="hide-tablet"><a href="/drittijiet/">Drittijiet</a></li>
+		</menu>
+		<menu id="media">
+			<li class="header">Midja</li>
+			<li><a href="/ar/" class="arabic">العربية</a></li>
+			<li><a href="/ca/">Català</a></li>
+			<li><a href="/de/">Deutsch</a></li>
+			<li><a href="/en/">English</a></li>
+			<li><a href="/es/">Español</a></li>
+			<li><a href="/fr/">Français</a></li>
+			<li><a href="/it/">Italiano</a></li>
+			<li><a href="/nl/">Nederlands</a></li>
+			<li class="hide-tablet"><a href="/ro/">Română</a></li>
+		</menu>
+		<menu id="socials">
+			<li class="header">Segwina</li>
+			<li><a href="https://facebook.com/aphroconfuso">Facebook</a></li>
+			<li><a href="https://instagram.com/aphroconfuso">Instagram</a></li>
+			<li><a href="https://twitter.com/aphroconfuso">Twitter</a></li>
+			<li><a href="https://mastodon.world/@aphroconfuso" rel="me">Mastodon</a></li>
+			<li><a href="https://youtube.com/@aphroconfuso">Youtube</a></li>
+			<li><a href="https://open.spotify.com/user/31rly4s75gfxs6li6bcxc5bqlgza">Spotify</a></li>
+		</menu>
+		<menu id="podcast">
+			<li class="header">Podcast</li>
+			<li><a href="https://podcasts.apple.com/us/podcast/aphroconfuso/id1686567243">Apple</a></li>
+			<li><a href="https://www.audible.co.uk/pd/Aphroconfuso-Podcast/B0C3WHLZRB">Audible</a></li>
+			<li><a href="https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5hY2FzdC5jb20vcHVibGljL3Nob3dzL2FwaHJvY29uZnVzbw">Google</a></li>
+			<li><a href="https://pca.st/podcast/af8c44c0-c823-013b-f432-0acc26574db2">Pocket Casts</a></li>
+			<li><a href="https://feeds.acast.com/public/shows/aphroconfuso">RSS feed</a></li>
+			<li><a href="https://open.spotify.com/show/75Lt3UMvC1jE15SGrNFMww">Spotify</a></li>
+		</menu>
+		<div id="logotype-container">
+			<a href="/"><img src="/img/logotype.svg" class="logotype" alt="logo: Aphroconfuso" /></a>
+		</div>
+		<div id="email"><a href="mailto:l-edituri@aphroconfuso.mt" class="email">l-edituri@aphroconfuso.mt</a></div>
+		<div id="copyright"><a href="/drittijiet/" class="copyright">&copy; 2023-2024 Aphroconfuso et al</a></div>
+		<div id="qrcode"><img src="/img/qr/warren-bartolo-djarju.png" width="180" height="180" alt="QR code" /></div>
+		<div id="url">https://aphroconfuso.mt/warren-bartolo-djarju/</div>
+	</nav>
+</footer>
+
+		</div>
+		<aside id="scroll-tools" class="monthly-outlined">
+			<p><span id="progress"><!-- --></span></p>
+		</aside>
+	</body>
+</html>
