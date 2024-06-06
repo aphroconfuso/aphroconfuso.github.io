@@ -72,13 +72,6 @@
 	</url>
 	
 	<url>
-		<loc>https://aphroconfuso.mt/werrej/</loc>
-		<lastmod>2024-06-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-	</url>
-	
-	<url>
 		<loc>https://aphroconfuso.mt/kontributuri/</loc>
 		<lastmod>2024-06-06</lastmod>
     <changefreq>monthly</changefreq>
@@ -430,13 +423,6 @@
 	
 	<url>
 		<loc>https://aphroconfuso.mt/loranne-vella/</loc>
-		<lastmod>2024-06-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-	</url>
-	
-	<url>
-		<loc>https://aphroconfuso.mt/djarju/</loc>
 		<lastmod>2024-06-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -927,6 +913,20 @@
 	
 	<url>
 		<loc>https://aphroconfuso.mt/podcast/</loc>
+		<lastmod>2024-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/werrej/</loc>
+		<lastmod>2024-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/djarju/</loc>
 		<lastmod>2024-06-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
