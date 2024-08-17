@@ -9,7 +9,7 @@ const fixReportingTitle = (storyType, sequenceEpisodeNumber, author, pageTitle) 
 	if (storyType === 'Djarju') return `Djarju #${ sequenceEpisodeNumber } ${ author }`;
 	if (!!sequenceEpisodeNumber) return `${ pageTitle } #${ sequenceEpisodeNumber }`;
 	return pageTitle;
-}
+};
 
 const getScrollPosition = () => window.pageYOffset || document.documentElement.scrollTop;
 
@@ -26,7 +26,7 @@ const scrolling = () => {
 		if (!!wordcount) {
 			clearTimeout(hideScrollTools);
 			hideScrollTools = setTimeout(() => {
-				document.body.classList.remove('scrolling')
+				document.body.classList.remove('scrolling');
 			}, 5000);
 			percentageProgress = (((newScrollPosition - bodyStart) * 100) / bodyHeight).toFixed(2);
 			if (percentageProgress >= 0) {
@@ -39,7 +39,7 @@ const scrolling = () => {
 		lastScrollPosition = newScrollPosition;
   }
   return;
-}
+};
 
 const addBookmarkNow = () => {
 	if (!percentageProgress || (wordcount * (percentageProgress / 100)) < bookmarkThresholdWords || percentageProgress > 98) {
@@ -63,7 +63,7 @@ const addBookmarkNow = () => {
 		wordcount,
 		wordsPerSecond: wordsPerSecond && wordsPerSecond.toFixed(2),
 	});
-}
+};
 
 const heartbeat = (wordsPerPixel, reportingTitle) => {
 	const timeNow = new Date() / 1000;
@@ -92,7 +92,7 @@ const heartbeat = (wordsPerPixel, reportingTitle) => {
 		// Shall we reset?
 		return;
 	}
-}
+};
 
 // BOOKMARKS *************************************************************************************
 
@@ -153,10 +153,9 @@ const initialiseBookmarksList = () => {
 		if (updateFormat || discardBookmark) {
 			console.log('Deleting', oldKey);
 			delete bookmarksList[oldKey];
-		};
-	});
+		}	});
 	saveBookmarksList();
-}
+};
 
 const addBookmark = (type = 'text', thisStoryId = storyId, bookmark) => {
 	const { author, percentage, sequenceEpisodeNumber, storyType, title } = bookmark;
@@ -170,7 +169,7 @@ const addBookmark = (type = 'text', thisStoryId = storyId, bookmark) => {
 	if (type === 'audio') return;
 	updateBookmarksMenu(bookmarksArray);
 	analytics(['trackEvent', 'Bookmarks', 'żid', reportingTitle, percentage]);
-}
+};
 
 const deleteBookmark = (type = 'text', id = storyId) => {
 	delete bookmarksList[`${ type }-${ id }`];
@@ -185,23 +184,22 @@ const deleteBookmark = (type = 'text', id = storyId) => {
 	removeBookmark.style.opacity = '0';
 	setTimeout(() => removeBookmark.remove(), 1000);
 	analytics(['trackEvent', 'Bookmarks', 'armi', reportingTitle, percentage]);
-}
+};
 
 // FIXME: recalibrate
 const getCurrentBlurb = (percent) => {
 	const currentPlace = Math.round(percent * bodyText.length / 100);
 	const blurb = bodyText.substring(currentPlace, currentPlace + (charactersPerScreen));
 	return blurb;
-}
+};
 
 const updateBookmarksMenu = (bookmarksArray) => {
 	if (!(bookmarksArray && bookmarksMenuElement)) return;
 	if (bookmarksArray.length === 0) {
 		bookmarksMenuElement.textContent = '';
 		return;
-	};
-	bookmarksMenuElement.textContent = ` ${ bookmarksArray.length }`;
-}
+	}	bookmarksMenuElement.textContent = ` ${ bookmarksArray.length }`;
+};
 
 const calculateScrollPosition = (percentage) => Math.round(bodyStart + bodyHeight * (percentage/100));
 
@@ -215,7 +213,7 @@ const showBookmarksInPromos = (bookmarksArray) => {
 			bookmarkLink.innerHTML = `<span class="bookmark-percentage">${roundedPercentage}%</span>`;
 			bookmarkLink.classList.add("bookmark");
 			bookmarkLink.href = `/${ urlSlug }/#b-${ percentage }`;
-			bookmarkLink.addEventListener("click", () => {analytics(['trackEvent', 'Promo', `minn: ${ reportingTitle }`, `għal: ${ destinationTitle } (bookmark)`, roundedPercentage])});
+			bookmarkLink.addEventListener("click", () => {analytics(['trackEvent', 'Promo', `minn: ${ reportingTitle }`, `għal: ${ destinationTitle } (bookmark)`, roundedPercentage]);});
 			element.appendChild(bookmarkLink);
 		});
 		document.querySelectorAll(`article.story-${ storyId } > header`).forEach((element) => {
@@ -226,11 +224,11 @@ const showBookmarksInPromos = (bookmarksArray) => {
 			bookmarkLink.addEventListener('click', () => {
 				analytics(['trackEvent', 'Bookmark fil-paġna', reportingTitle, reportingTitle, roundedPercentage]);
 				window.scrollTo({top: calculateScrollPosition(percentage), left: 0, behavior: 'smooth'});
-			})
+			});
 			element.appendChild(bookmarkLink);
 		});
 	});
-}
+};
 
 // bundle from shared component
 const numberify = (number, words = ['kelma', 'kelmiet']) => {
@@ -246,8 +244,7 @@ const numberify = (number, words = ['kelma', 'kelmiet']) => {
 function prettifyNumbers(text, punctuation = String.fromCharCode(8201)) {
 	if(!text) return null;
 	return text.toString().replace(/\d{1,3}(?=(\d{3})+(?!\d))/g, `$&${ punctuation }`);
-};
-
+}
 const showFullBookmarkList = () => {
 	const list = document.getElementById("bookmark-list");
 	const bookmarksContainer = document.getElementById("bookmarks-container");
@@ -263,7 +260,7 @@ const showFullBookmarkList = () => {
 		bookmarksContainer && bookmarksContainer.classList.add("bookmarks-one");
 	} else if (bookmarksArray.length) {
 		bookmarksContainer && bookmarksContainer.classList.add("bookmarks-multiple");
-		const bookmarksCount = bookmarksArray.length
+		const bookmarksCount = bookmarksArray.length;
 		let numberPhrase = bookmarksCount + ' bookmarks';
 		// use numberify
 		if (bookmarksCount >= 11) numberPhrase = bookmarksCount + '-il bookmark';
@@ -315,19 +312,11 @@ const showFullBookmarkList = () => {
 			document.getElementById(`link-${ storyId }`).addEventListener("click", () => analytics(['trackEvent', 'Promo', 'minn: Bookmarks', `għal: ${ reportingTitle }`, index]));
 		});
 	}
-}
-
-const clearAllBookmarks = () => localStorage.clear();
+};
 
 const getPreviousAudioTime = (id) => {
 	return bookmarksList[`audio-${ id }`] && bookmarksList[`audio-${ id }`].playPosition || 0;
-}
-
-// INITIALISE ***********************************************************************
-
-const initialiseAfterNewsletter = () => {
-	return;
-}
+};
 
 const initialiseFontSizeListeners = () => {
 	document.getElementById("font-size-1").addEventListener('click', () => addRemoveFontSizeClass(1));
@@ -340,18 +329,18 @@ const initialiseReadingHeartbeat = () => {
 	lastReportedReadingTime = new Date() / 1000;
 	timeStarted = lastReportedReadingTime;
 	setInterval(heartbeat, 3000, wordsPerPixel, reportingTitle);
-}
+};
 
 const initialiseAfterNav = () => {
 	initialiseFontSizeListeners();
-}
+};
 
 const initialiseScrollPosition = () => {
 	if (location.hash && location.hash.startsWith('#b-')) {
 		window.scrollTo({top: calculateScrollPosition(location.hash.substring(3)), left: 0, behavior: 'smooth'});
 		location.hash = '';
 	}
-}
+};
 
 const initialiseMessage = () => {
 	var salted;
@@ -385,13 +374,13 @@ const initialiseMessage = () => {
 		setTimeout(() => document.getElementById('message').classList.remove('active'), 10000);
 		location.hash = '';
 	}
-}
+};
 
 const initialiseAnchorEvents = () => {
 	document.querySelectorAll("#grid-body a[href^='\#']").forEach((anchor, index) => {
 		anchor.addEventListener("click", () => analytics(['trackEvent', 'A#', `${ reportingTitle }`, `# ${ anchor.textContent }`, index + 1]));
 	});
-}
+};
 
 const initialiseAfterWindow = () => {
 	progressElement = document.getElementById('progress');
@@ -434,7 +423,7 @@ const initialiseAfterWindow = () => {
 				rewind: true,
 				speed: 2000,
 				padding: '2rem 0',
-			}
+			};
 			for (var i = 0; i < slideshows.length; i++) {
 				const newSplide = new Splide(slideshows[i]).mount();
 				newSplide.on('visible', function (slide) {
@@ -446,11 +435,11 @@ const initialiseAfterWindow = () => {
 		const openLightbox = () => {
 			lightbox.classList.add('open');
 			analytics(['trackEvent', 'Stampi', 'lightbox - iftaħ', reportingTitle]);
-		}
+		};
 		const closeLightbox = () => {
 			lightbox.classList.remove('open');
 			analytics(['trackEvent', 'Stampi', 'lightbox - għalaq', reportingTitle]);
-		}
+		};
 		const lightboxOpen = document.getElementById('lightbox-open');
 		const lightboxClose = document.getElementById('lightbox-close');
 		lightboxOpen && lightboxOpen.addEventListener('click', () => openLightbox());
@@ -468,7 +457,7 @@ const initialiseAfterWindow = () => {
 			document.body.classList.add('trigger-warning-closed');
 			setCookie(`tw-${ urlSlug }`, 'magħluq', 3);
 			analytics(['trackEvent', 'Stampi', 'lightbox - għalaq', reportingTitle]);
-		}
+		};
 
 		document.getElementById('trigger-warning-close')?.addEventListener('click', () => closeTriggerWarning());
 
@@ -495,7 +484,7 @@ const initialiseAfterWindow = () => {
 						analytics(['trackEvent', 'Smiegħ', `${ audioReportingTitle } (kapitli)`, foundLink.textContent]);
 						audio.currentTime = gotoTime;
 						event.preventDefault();
-					})
+					});
 				});
 
 				audio.addEventListener('canplaythrough', () => {
@@ -538,7 +527,7 @@ const initialiseAfterWindow = () => {
 						translator: song.translator,
 						urlSlug: song.pageSlug,
 					});
-				}
+				};
 
 				const songEvents = (index, song, audio) => {
 					wordsPerSecondAudio = 2.5;
@@ -588,7 +577,7 @@ const initialiseAfterWindow = () => {
 						previousTime[index] = currentTime;
 					});
 
-				}
+				};
 
 
 			});
@@ -602,8 +591,7 @@ const initialiseAfterWindow = () => {
 
 			document.querySelectorAll('.audio').forEach(element => element.classList.add('initialised'));
 		}
-	};
-	initialiseMessage();
-}
+	}	initialiseMessage();
+};
 
 window.onload = initialiseAfterWindow;
