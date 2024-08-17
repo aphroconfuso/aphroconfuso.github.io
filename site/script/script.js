@@ -489,6 +489,14 @@ const initialiseAfterWindow = () => {
 				// var audio, audioReportingTitle;
 				const audio = document.querySelector(`#audio-${ index }`);
 
+				[...document.querySelectorAll(`a[href*="#audio|${ index }"]`)].forEach((foundLink) => {
+					const gotoTime = foundLink.href.split('|')[2];
+					foundLink.addEventListener('click', (event) => {
+						audio.currentTime = gotoTime;
+						event.preventDefault();
+					})
+				});
+
 				audio.addEventListener('canplaythrough', () => {
 					if (song.loaded) return;
 					// duration = parseInt(audio.duration);
