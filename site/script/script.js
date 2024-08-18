@@ -492,6 +492,7 @@ const initialiseAfterWindow = () => {
 				[...document.querySelectorAll(`a[href*="#audio|${ index }"]`)].forEach((foundLink) => {
 					const gotoTime = foundLink.href.split('|')[2];
 					foundLink.addEventListener('click', (event) => {
+						analytics(['trackEvent', 'Smiegħ', `Kapitli (${ audioReportingTitle })`, foundLink.textContent]);
 						audio.currentTime = gotoTime;
 						event.preventDefault();
 					})
