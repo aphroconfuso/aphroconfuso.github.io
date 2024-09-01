@@ -127,6 +127,7 @@
 				setCookie('font', size);
 			}
 			const initialiseAfterBody = () => {
+				document.body.classList.add(location.hostname.replace(/\.?aphroconfuso\.mt/, ''));
 				const fontSize = getCookie('font') || 1;
 				addRemoveFontSizeClass(fontSize);
 				if (getCookie(`tw-${urlSlug}`)) {
