@@ -5,7 +5,7 @@
 	<language>mt</language>
 	<link href="https://aphroconfuso.mt/atom.xml" rel="self"/>
 	<link href="https://aphroconfuso.mt/"/>
-	<updated>2024-09-01T18:04:29Z</updated>
+	<updated>2024-09-05T19:19:11Z</updated>
 	<id>https://aphroconfuso.mt</id>
 	<author>
 		<name>Aphroconfuso</name>
@@ -377,6 +377,18 @@ Vera awkward, imma kellhom raġun. Sibna farmhouse l-Għarb għal prezz raġonev
 		</entry>
 		
 		<entry>
+			<title>Gilgamex, Dak li Ra l-Qiegħ</title>
+			<author>
+				<name></name>
+			</author>
+			<link href="https://aphroconfuso.mt/omar-nshea-gilgamex-dak-li-ra-l-qiegħ/"/>
+			<published>2023-05-01T05:00:00.000Z</published>
+			<updated>2024-09-04T18:04:17.154Z</updated>
+			<id>https://aphroconfuso.mt/omar-nshea-gilgamex-dak-li-ra-l-qiegħ/</id>
+			<content type="html">L-idea li Gilgamex isib ruħu f’daru fil-kultura u l-lingwa Maltija ma bdietx b’Montebello. Bejn l-1899 u l-1915 Alfons Maria Galea ppubblika sensiela bl-isem Kotba tal-Mogħdija taż-Żmien. Fl-1913 kien ħareġ in-numru 130 ta’ din is-sensiela bl-isem Kif l-Għerf tal-Kangħanin Tnissel fil-Griegi, miktub minn F. Calleja “tal-Alġier”. Kemm kienet tajba t-tixrida ta’ dan il-ktieb ma tantx huwa ċar; li nafu hu li ma kienx hawn ħafna kopji għall-bejgħ għax Calleja kien ħallas għall-pubblikazzjoni minn butu.</content>
+		</entry>
+		
+		<entry>
 			<title>Nofs triq, dejjem nieqaf</title>
 			<author>
 				<name></name>
@@ -407,15 +419,16 @@ griżmejh. X’għabra?</content>
 		</entry>
 		
 		<entry>
-			<title>It-Tipjip</title>
+			<title>Ħsieb il-Ħamiema</title>
 			<author>
-				<name> (tr Joe Gatt)</name>
+				<name></name>
 			</author>
-			<link href="https://aphroconfuso.mt/italo-svevo-joe-gatt-it-tipjip/"/>
+			<link href="https://aphroconfuso.mt/noah-fabri-ħsieb-il-ħamiema/"/>
 			<published>2023-05-01T05:00:00.000Z</published>
-			<updated>2024-06-10T21:22:30.917Z</updated>
-			<id>https://aphroconfuso.mt/italo-svevo-joe-gatt-it-tipjip/</id>
-			<content type="html">L-ewwel sigaretti li pejjipt m’għadekx issibhom għall-bejgħ. Għall-ħabta tal-1870 l-Awstrija kellhom minn dawk li kienu jinbiegħu f’kaxxa tal-kartun żgħira bit-tikketta tal-ajkla b’żewġt irjus. Ara: madwar waħda minn dawn il-kaxxi mill-ewwel jinġabru diversi persuni, kollha b’xi karatteristika minn tagħhom li hi biżżejjed biex tfakkarni x’jisimhom, imma mhux tant li nemozzjona ruħi b’dan l-inkontru bla ħsieb. Nipprova nislet iżjed u mmur sal-pultruna: il-persuni jgħosfru u posthom jeħduh koċċ buffi jiddieħqu bija. Immur lura mifxul lejn il-mejda.</content>
+			<updated>2024-09-03T18:04:18.192Z</updated>
+			<id>https://aphroconfuso.mt/noah-fabri-ħsieb-il-ħamiema/</id>
+			<content type="html">Faqqgħet bħall-qniepen tal-knisja t-twerżiqa ta’ sajjetta tas-sirena tal-pulizija. Maimouna kienet ilha tliet snin taħdem fil-ħanut ħdejn il-pont li jaqsam il-Ħamrun u l-Marsa. Kienet taf kull rokna u xkaffa, kull loġika organizzatorja, u kull bidla li kienet saret fuq il-post. L-irwejjaħ tal-ħitan ma baqgħetx ixxommhom, ix-xufiera li kienu jġibu l-konsenji saret tafhom sew, il-klijenti, sintendi, saru qishom tal-familja, qalb it-tibdil u ċ-ċaqliq tan-nies, u l-kollegi waslu u telqu bħall-għasafar tal-passa. Xorta rnexxielha żżomm ċerta distanza mentali mill-imgħallem u l-ħajja tal-ħanut; minkejja li kienet tħobb taħdem, dan l-aħħar l-idea tax-xogħol innifisha kienet qed taraha velenu tal-moħħ.
+</content>
 		</entry>
 		
 		<entry>
@@ -431,16 +444,15 @@ griżmejh. X’għabra?</content>
 		</entry>
 		
 		<entry>
-			<title>Ħsieb il-Ħamiema</title>
+			<title>It-Tipjip</title>
 			<author>
-				<name></name>
+				<name> (tr Joe Gatt)</name>
 			</author>
-			<link href="https://aphroconfuso.mt/noah-fabri-ħsieb-il-ħamiema/"/>
+			<link href="https://aphroconfuso.mt/italo-svevo-joe-gatt-it-tipjip/"/>
 			<published>2023-05-01T05:00:00.000Z</published>
-			<updated>2024-06-10T17:36:50.487Z</updated>
-			<id>https://aphroconfuso.mt/noah-fabri-ħsieb-il-ħamiema/</id>
-			<content type="html">Faqqgħet bħall-qniepen tal-knisja t-twerżiqa ta’ sajjetta tas-sirena tal-pulizija. Maimouna kienet ilha tliet snin taħdem fil-ħanut ħdejn il-pont li jaqsam il-Ħamrun u l-Marsa. Kienet taf kull rokna u xkaffa, kull loġika organizzatorja, u kull bidla li kienet saret fuq il-post. L-irwejjaħ tal-ħitan ma baqgħetx ixxommhom, ix-xufiera li kienu jġibu l-konsenji saret tafhom sew, il-klijenti, sintendi, saru qishom tal-familja, qalb it-tibdil u ċ-ċaqliq tan-nies, u l-kollegi waslu u telqu bħall-għasafar tal-passa. Xorta rnexxielha żżomm ċertu distanza mentali mill-imgħallem u l-ħajja tal-ħanut; minkejja li kienet tħobb taħdem, dan l-aħħar l-idea tax-xogħol innifisha kienet qed taraha velenu tal-moħħ.
-</content>
+			<updated>2024-06-10T21:22:30.917Z</updated>
+			<id>https://aphroconfuso.mt/italo-svevo-joe-gatt-it-tipjip/</id>
+			<content type="html">L-ewwel sigaretti li pejjipt m’għadekx issibhom għall-bejgħ. Għall-ħabta tal-1870 l-Awstrija kellhom minn dawk li kienu jinbiegħu f’kaxxa tal-kartun żgħira bit-tikketta tal-ajkla b’żewġt irjus. Ara: madwar waħda minn dawn il-kaxxi mill-ewwel jinġabru diversi persuni, kollha b’xi karatteristika minn tagħhom li hi biżżejjed biex tfakkarni x’jisimhom, imma mhux tant li nemozzjona ruħi b’dan l-inkontru bla ħsieb. Nipprova nislet iżjed u mmur sal-pultruna: il-persuni jgħosfru u posthom jeħduh koċċ buffi jiddieħqu bija. Immur lura mifxul lejn il-mejda.</content>
 		</entry>
 		
 		<entry>
@@ -453,18 +465,6 @@ griżmejh. X’għabra?</content>
 			<updated>2024-06-10T17:33:29.139Z</updated>
 			<id>https://aphroconfuso.mt/romeo-roxman-gatt-qarn/</id>
 			<content type="html">Idi fil-but, insaffar u nixxuttja l-ġebel—dawn kienu xi azzjonijiet oħra li kont ninnota li ma tantx kienu jinżlu sew meta “tifla” iġġib ruħha b’dal-mod. Jien, għall-kuntrarju, kbirt nagħmilhom. Kont insaffar qabel bdejt nitkellem; it-tort mhux tiegħi, żgur li le, iżda ta’ missieri. Allura ma fhimtx kif darba qisu gerger għax kont qed insaffar. La tifla u lanqas tifel mid-dehra ma kont ikkundizzjonat, għasfur l-ewwel u qabel kollox.</content>
-		</entry>
-		
-		<entry>
-			<title>Gilgamex, Dak li Ra l-Qiegħ</title>
-			<author>
-				<name></name>
-			</author>
-			<link href="https://aphroconfuso.mt/omar-nshea-gilgamex-dak-li-ra-l-qiegħ/"/>
-			<published>2023-05-01T05:00:00.000Z</published>
-			<updated>2024-08-05T17:10:59.315Z</updated>
-			<id>https://aphroconfuso.mt/omar-nshea-gilgamex-dak-li-ra-l-qiegħ/</id>
-			<content type="html">L-idea li Gilgamex isib ruħu f’daru fil-kultura u l-lingwa Maltija ma bdietx b’Montebello. Bejn l-1899 u l-1915 Alfons Maria Galea ppubblika sensiela bl-isem Kotba tal-Mogħdija taż-Żmien. Fl-1913 kien ħareġ in-numru 130 ta’ din is-sensiela bl-isem Kif l-Għerf tal-Kangħanin Tnissel fil-Griegi, miktub minn F. Calleja “tal-Alġier”. Kemm kienet tajba t-tixrida ta’ dan il-ktieb ma tantx huwa ċar; li nafu hu li ma kienx hawn ħafna kopji għall-bejgħ għax Calleja kien ħallas għall-pubblikazzjoni minn butu.</content>
 		</entry>
 		
 		<entry>
@@ -590,7 +590,7 @@ Jimmudella ftit synthetic wax fuq il-ponta ta’ mnieħru.</content>
 			</author>
 			<link href="https://aphroconfuso.mt/davinia-hamilton-żerriegħa/"/>
 			<published>2023-10-02T05:00:00.000Z</published>
-			<updated>2024-06-13T11:00:42.899Z</updated>
+			<updated>2024-09-02T15:31:40.998Z</updated>
 			<id>https://aphroconfuso.mt/davinia-hamilton-żerriegħa/</id>
 			<content type="html">Fil-ħarifa tal-2020, fil-bidu tat-tieni lockdown, żrajt żerriegħa għall-ewwel darba f’ħajti, u r-raħs ta’ idea rabba l-għeruq. Dak iż-żmien konna f’nofs il-pandemija: in-numri—l-infezzjonijiet, il-pazjenti l-ICU, u l-imwiet—kienu telgħin, u konna qegħdin niffaċċjaw xitwa twila u kiefra. Malta kienet tinħass ’il bogħod ’il bogħod—’il bogħod wisq minn dan l-appartament żgħir f’Londra. Iż-żmien kien għaddej b’pass illajmat imma goff, ma jċedi xejn. Ħassejt in-nuqqas ta’ familti, kont ili xhur twal ma narahom, u l-ivvjaġġar kien għadu perikoluż. Kien għad ma kellniex vaċċin biex itaffi l-periklu ta’ dan il-virus li kien qiegħed jeqred tant nies. Bl-ansjetà ttextex f’żaqqi, kont qisni għasfur b’qalbi tgħaġġel, kollni ttikazzjoni u enerġija bla skop.</content>
 		</entry>
