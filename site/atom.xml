@@ -5,7 +5,7 @@
 	<language>mt</language>
 	<link href="https://aphroconfuso.mt/atom.xml" rel="self"/>
 	<link href="https://aphroconfuso.mt/"/>
-	<updated>2024-09-14T18:14:13Z</updated>
+	<updated>2024-09-14T18:19:29Z</updated>
 	<id>https://aphroconfuso.mt</id>
 	<author>
 		<name>Aphroconfuso</name>
@@ -666,31 +666,6 @@ l-ispots tal-konsulenzi romantiċi tat-tfal bravi Nsara aged 13 and up</content>
 		</entry>
 		
 		<entry>
-			<title>Marċ Maqbuż</title>
-			<author>
-				<name></name>
-			</author>
-			<link href="https://aphroconfuso.mt/leslie-vassallo-marċ-maqbuż/"/>
-			<published>2023-11-23T06:00:00.000Z</published>
-			<updated>2024-06-10T21:50:41.093Z</updated>
-			<id>https://aphroconfuso.mt/leslie-vassallo-marċ-maqbuż/</id>
-			<content type="html">Ix-xitwa tmut hekk—
-Gżira—jew bastiment—jgħibu fiċ-ċpar;
-Riefnu jiġbed nifs sagħtar—
-Berwieq għarwien fuq irdum,
-wiċċ nemex tal-bużbież;
-iħirsa—jew aħna—max-xifer.
-
-Reżħa titlajja fi rkejjen, fuq għetiebi;
-F’triq dejqa, antika, fi kmajra
-xi ħadd jonqox ħajja—jew mit—f’zokk lewża;
-Tifkira tiġi, minn imkien—jew minn xmara—għoddha taħsdek,
-tmexxik fiha b’ħarsa kaħla, b’xofftejn ħajra,
-sa tħallik—jew tħalliha—f’belt labirint.
-</content>
-		</entry>
-		
-		<entry>
 			<title>Wirja</title>
 			<author>
 				<name></name>
@@ -714,6 +689,31 @@ barumbara tiġġarraf tbarqam tifkira,
 għajn moħbija f’wied ħemda, palma f’dagħbien,
 razzett jidwi daħka mit-twieqi, qasab iħaxwex riħ.
 Żewġ nagħġiet joħorġu, iwieġbu għal leħinna.
+</content>
+		</entry>
+		
+		<entry>
+			<title>Marċ Maqbuż</title>
+			<author>
+				<name></name>
+			</author>
+			<link href="https://aphroconfuso.mt/leslie-vassallo-marċ-maqbuż/"/>
+			<published>2023-11-23T06:00:00.000Z</published>
+			<updated>2024-06-10T21:50:41.093Z</updated>
+			<id>https://aphroconfuso.mt/leslie-vassallo-marċ-maqbuż/</id>
+			<content type="html">Ix-xitwa tmut hekk—
+Gżira—jew bastiment—jgħibu fiċ-ċpar;
+Riefnu jiġbed nifs sagħtar—
+Berwieq għarwien fuq irdum,
+wiċċ nemex tal-bużbież;
+iħirsa—jew aħna—max-xifer.
+
+Reżħa titlajja fi rkejjen, fuq għetiebi;
+F’triq dejqa, antika, fi kmajra
+xi ħadd jonqox ħajja—jew mit—f’zokk lewża;
+Tifkira tiġi, minn imkien—jew minn xmara—għoddha taħsdek,
+tmexxik fiha b’ħarsa kaħla, b’xofftejn ħajra,
+sa tħallik—jew tħalliha—f’belt labirint.
 </content>
 		</entry>
 		
@@ -1082,7 +1082,7 @@ imħabbitna tnaqqxet mal-ħitan, daħket fil-ħemda.
 			</author>
 			<link href="https://aphroconfuso.mt/franco-bifo-berardi-karl-baldacchino-nifs-kaos-u-poeżija-3-il-kaos-u-l-barokk/"/>
 			<published>2024-09-16T05:00:00.000Z</published>
-			<updated>2024-09-14T17:49:35.292Z</updated>
+			<updated>2024-09-14T18:17:11.214Z</updated>
 			<id>https://aphroconfuso.mt/franco-bifo-berardi-karl-baldacchino-nifs-kaos-u-poeżija-3-il-kaos-u-l-barokk/</id>
 			<content type="html">Fis-seklu sittax, il-kultura Spanjola kienet speċi ta’ teatru ta’ proliferazzjoni vertiġinuża ta’ perspettivi li José Antonio Maravall sejjaħ “kosmoviżjoni barokka”. Folol taʼ nies ġejjin mill-kampanja ħakmu l-ispazji urbani, u r-riefnu ta’ esperjenza urbana li segwiet ipprovokat inflazzjoni ta’ tifsir u speċi ta’ splużjoni tal-identità. Fl-istess sena li Kristofru Kolombu niżel fuq l-art Amerikana, il-ħakkiema Spanjoli ordnaw it-tkeċċija tal-infidili. Il-pajjiż kien għadu ħiereġ minn tliet sekli ta’ gwerra reliġjuża: l-identità reliġjuża, l-identità etnika u l-identità soċjali issa daħlu fit-taqlib tal-modernità. L-interrogazzjoni bażika kellha x’taqsam mal-fidi reliġjuża u l-appartenenza etnika: f’kelma waħda, mal-identità, kunċett bla sens u nassa psikoloġika. Fil-kuntest Spanjol tal-aħħar tas-seklu ħmistax, “Int min int?” kienet mistoqsija doppja. Kienet tfisser, x’inhi l-oriġini tiegħek? Inti Nisrani pur jew l-antenati tiegħek tħalltu mal-infidili? Fl-istess ħin kienet tfisser ukoll, x’pożizzjoni soċjali għandek?</content>
 		</entry>
