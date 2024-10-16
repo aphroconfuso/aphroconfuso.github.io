@@ -13,6 +13,26 @@ const fixReportingTitle = (storyType, sequenceEpisodeNumber, author, pageTitle) 
 
 const getScrollPosition = () => window.pageYOffset || document.documentElement.scrollTop;
 
+const getSelectionText = () => {
+  // let text = "";
+	// if (location.hostname === 'aphroconfuso.mt') return;
+	// if (window.getSelection) {
+	// 		text = window.getSelection().toString();
+	// } else if (document.selection && document.selection.type != "Control") {
+	// 		text = document.selection.createRange().text;
+	// }
+	// if (text === "") return;
+	// // alert(text);
+	var selection= window.getSelection().getRangeAt(0);
+	var selectedText = selection.extractContents();
+	if (selectedText === "") return;
+	var span= document.createElement("mark");
+	console.log(selectedText);
+	// span.style.backgroundColor = "yellow";
+	span.appendChild(selectedText);
+	selection.insertNode(span);
+}
+
 const scrolling = () => {
   newScrollPosition = getScrollPosition();
   if (newScrollPosition < 120 || newScrollPosition < lastScrollPosition) {
@@ -205,7 +225,7 @@ const updateBookmarksMenu = (bookmarksArray) => {
 
 const calculateScrollPosition = (percentage) => Math.round(bodyStart + bodyHeight * (percentage/100));
 
-const showBookmarksInPromos = (bookmarksArray) => {
+const showBookmarksInPromosVerbose = (bookmarksArray) => {
 	bookmarksArray.forEach((bookmark) => {
 		const { author, percentage, sequenceEpisodeNumber, storyId, storyType, title, urlSlug } = bookmark;
 		const roundedPercentage = Math.round(percentage);
@@ -232,7 +252,46 @@ const showBookmarksInPromos = (bookmarksArray) => {
 	});
 }
 
-// bundle from shared component
+const showBookmarksInPromos = (bookmarksArray) => {
+	bookmarksArray.forEach((bookmark) => {
+		const { author, percentage, sequenceEpisodeNumber, storyId, storyType, title, urlSlug, wordcount } = bookmark;
+		const roundedPercentage = Math.round(percentage);
+		const destinationTitle = fixReportingTitle(storyType, sequenceEpisodeNumber, author, title);
+		document.querySelectorAll(`aside.story-aside-${ storyId } .bookmark-compact`).forEach((element) => {
+			const bookmarkLink = document.createElement("a");
+			// HAWNHEKK!!!
+			// ******************************************
+			// ******************************************
+			// ******************************************
+
+			// ******************************************
+			// ******************************************
+			// ******************************************
+			const remaining = Math.round(wordcount * (100 - roundedPercentage) / 100);
+			var readersWordsPerSecond = 2.9;
+			// const minutes = numberify(parseInt(remaining / (readersWordsPerSecond * 60)), ['minuta', 'minuti']);
+			const minutes = numberify(parseInt(remaining / readersWordsPerSecond / 60), ['minuta', 'minuti']);
+			bookmarkLink.innerHTML = `<span class="bookmark-glyph"><!-- --></span> Qrajt ${ roundedPercentage }%, fadallek xi ${ minutes } qari</span>`;
+			// bookmarkLink.classList.add("bookmark-compact");
+			bookmarkLink.href = `/${ urlSlug }/#b-${ percentage }`;
+			bookmarkLink.addEventListener("click", () => {analytics(['trackEvent', 'Promo', `minn: ${ reportingTitle }`, `għal: ${ destinationTitle } (bookmark)`, roundedPercentage])});
+			element.appendChild(bookmarkLink);
+		});
+		document.querySelectorAll(`article.story-${ storyId } > header`).forEach((element) => {
+			const bookmarkLink = document.createElement("a");
+			bookmarkLink.innerHTML = `<span class="bookmark-percentage">${ roundedPercentage }%</span>`;
+			bookmarkLink.classList.add("bookmark");
+			bookmarkLink.href = `/${ urlSlug }/#b-${ percentage }`;
+			bookmarkLink.addEventListener('click', () => {
+				analytics(['trackEvent', 'Bookmark fil-paġna', reportingTitle, reportingTitle, roundedPercentage]);
+				window.scrollTo({top: calculateScrollPosition(percentage), left: 0, behavior: 'smooth'});
+			})
+			element.appendChild(bookmarkLink);
+		});
+	});
+}
+
+// REFACTOR: bundle from shared component
 const numberify = (number, words = ['kelma', 'kelmiet']) => {
 	// kelma, kelmiet
 	if (!number) return "null";
@@ -242,7 +301,7 @@ const numberify = (number, words = ['kelma', 'kelmiet']) => {
 	return `${ number } ${ words[0] }`;
 };
 
-// bundle from shared, testable component
+// REFACTOR: bundle from shared, testable component
 function prettifyNumbers(text, punctuation = String.fromCharCode(8201)) {
 	if(!text) return null;
 	return text.toString().replace(/\d{1,3}(?=(\d{3})+(?!\d))/g, `$&${ punctuation }`);
@@ -276,6 +335,7 @@ const showFullBookmarkList = () => {
 	if (list && browserTemplating && template) {
 		bookmarksArray.sort((a, b) => new Date(b.dateTime) - new Date(a.dateTime)).forEach((bookmark, index) => {
 			var { author, issueMonth, issueMonthYear, percentage, placeText, storyId, storyType, reportingTitle, sequenceEpisodeNumber, sequenceEpisodeTitle, title, urlSlug, wordcount, translator } = bookmark;
+			const roundedPercentage = Math.round(percentage);
 			const clone = template.content.cloneNode(true);
 			// THIS SHOULD BECOME OBSOLETE (IMPLEMENTED 17.01.2024)
 			if (!reportingTitle) {
@@ -297,7 +357,7 @@ const showFullBookmarkList = () => {
 			clone.querySelector("a").href = `/${ urlSlug }/#b-${ percentage }`;
 			clone.querySelector("a").classList.add(`promo-${ issueMonth }`, issueMonth, `story-${ storyId }`, storyType);
 			clone.querySelector("a").id = `link-${ storyId }`;
-			clone.querySelector(".bookmark span.bookmark-percentage").textContent = `${Math.round(percentage)}%`;
+			// clone.querySelector(".bookmark span.bookmark-percentage").textContent = `${Math.round(percentage)}%`;
 			clone.querySelector("h1").innerHTML = title;
 			if (translator) {
 				clone.querySelector("h2 ").innerHTML = `<span class=\"author\">${ author }</span> (tr <span class=\"translator\">${ translator }</span>)`;
@@ -309,7 +369,7 @@ const showFullBookmarkList = () => {
 			clone.querySelector("li.header-label").textContent = issueMonthYear && issueMonthYear.replace(/-/, ' ').replace(/gunju/, 'ġunju').replace(/dicembru/, 'diċembru');
 			clone.querySelector("button").id = `delete-${ storyId }`;
 			clone.querySelector(".body-text p").textContent = placeText.replace(/.*?\w\b\s+/, "… ");
-			clone.querySelector("aside p").textContent = `Fadallek ${ remaining }, madwar ${ minutes } qari`;
+			clone.querySelector("aside li.bookmark-compact").innerHTML = `<span class="bookmark-glyph"><!-- --></span> Qrajt ${ roundedPercentage }%, fadallek xi ${ minutes } qari</span>`;
 			list.appendChild(clone);
 			document.getElementById(`delete-${ storyId }`).addEventListener("click", (event) => { deleteBookmark('text', storyId); event.stopPropagation(); });
 			document.getElementById(`link-${ storyId }`).addEventListener("click", () => analytics(['trackEvent', 'Promo', 'minn: Bookmarks', `għal: ${ reportingTitle }`, index]));
@@ -366,8 +426,8 @@ const initialiseMessage = () => {
 			console.log(err.message);
 			return;
 		}
-    [salt, message] = salted.split('|');
-		if (salt === 'aaaASUDHASUWYQQU55%$ASGDGAS*Jhh23423') {
+    const [salt, message] = salted.split('|');
+		if (salt && salt === 'aaaASUDHASUWYQQU55%$ASGDGAS*Jhh23423') {
       if (message.indexOf('biex tikkonferma l-abbonament')) {
 				analytics(['trackEvent', 'Newsletter', 'Abbonament', 'Pendenti']);
         setCookie('newsletter', 'pendenti');
@@ -604,6 +664,10 @@ const initialiseAfterWindow = () => {
 		}
 	};
 	initialiseMessage();
+
+	document.onmouseup = function() {
+		getSelectionText();
+	};
 }
 
 window.onload = initialiseAfterWindow;
