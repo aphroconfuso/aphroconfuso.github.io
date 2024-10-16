@@ -257,6 +257,8 @@ const showBookmarksInPromos = (bookmarksArray) => {
 		const { author, percentage, sequenceEpisodeNumber, storyId, storyType, title, urlSlug, wordcount } = bookmark;
 		const roundedPercentage = Math.round(percentage);
 		const destinationTitle = fixReportingTitle(storyType, sequenceEpisodeNumber, author, title);
+		const remaining = Math.round(wordcount * (100 - roundedPercentage) / 100);
+		const readersWordsPerSecond = 2.9;
 		document.querySelectorAll(`aside.story-aside-${ storyId } .bookmark-compact`).forEach((element) => {
 			const bookmarkLink = document.createElement("a");
 			// HAWNHEKK!!!
@@ -267,8 +269,6 @@ const showBookmarksInPromos = (bookmarksArray) => {
 			// ******************************************
 			// ******************************************
 			// ******************************************
-			const remaining = Math.round(wordcount * (100 - roundedPercentage) / 100);
-			var readersWordsPerSecond = 2.9;
 			// const minutes = numberify(parseInt(remaining / (readersWordsPerSecond * 60)), ['minuta', 'minuti']);
 			const minutes = numberify(parseInt(remaining / readersWordsPerSecond / 60), ['minuta', 'minuti']);
 			bookmarkLink.innerHTML = `<span class="bookmark-glyph"><!-- --></span> Qrajt ${ roundedPercentage }%, fadallek xi ${ minutes } qari</span>`;
@@ -278,15 +278,18 @@ const showBookmarksInPromos = (bookmarksArray) => {
 			element.appendChild(bookmarkLink);
 		});
 		document.querySelectorAll(`article.story-${ storyId } > header`).forEach((element) => {
+			const minutes = numberify(parseInt(remaining / readersWordsPerSecond / 60), ['minuta', 'minuti']);
+			const bookmarkContainer = document.createElement("aside");
+			bookmarkContainer.classList.add("bookmark-compact");
 			const bookmarkLink = document.createElement("a");
-			bookmarkLink.innerHTML = `<span class="bookmark-percentage">${ roundedPercentage }%</span>`;
-			bookmarkLink.classList.add("bookmark");
-			bookmarkLink.href = `/${ urlSlug }/#b-${ percentage }`;
+			bookmarkLink.innerHTML = `<span class="bookmark-glyph"><!-- --></span> Qrajt ${ roundedPercentage }%, fadallek xi ${ minutes } qari</span>`
+			bookmarkLink.href = `#b-${ percentage }`;
 			bookmarkLink.addEventListener('click', () => {
 				analytics(['trackEvent', 'Bookmark fil-paġna', reportingTitle, reportingTitle, roundedPercentage]);
 				window.scrollTo({top: calculateScrollPosition(percentage), left: 0, behavior: 'smooth'});
 			})
-			element.appendChild(bookmarkLink);
+			bookmarkContainer.appendChild(bookmarkLink);
+			element.appendChild(bookmarkContainer);
 		});
 	});
 }
