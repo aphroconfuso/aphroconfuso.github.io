@@ -121,62 +121,6 @@
 	</url>
 	
 	<url>
-		<loc>https://aphroconfuso.mt/davinia-hamilton-djarju/</loc>
-		<lastmod>2024-10-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-	</url>
-	
-	<url>
-		<loc>https://aphroconfuso.mt/fatima-a.m.-djarju/</loc>
-		<lastmod>2024-10-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-	</url>
-	
-	<url>
-		<loc>https://aphroconfuso.mt/omar-nshea-es-sidr/</loc>
-		<lastmod>2024-10-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-	</url>
-	
-	<url>
-		<loc>https://aphroconfuso.mt/franco-bifo-berardi-karl-baldacchino-nifs-kaos-u-poeżija/</loc>
-		<lastmod>2024-10-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-	</url>
-	
-	<url>
-		<loc>https://aphroconfuso.mt/jimmy-grima-splużjonijiet/</loc>
-		<lastmod>2024-10-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-	</url>
-	
-	<url>
-		<loc>https://aphroconfuso.mt/omar-nshea-bur-mgħeż/</loc>
-		<lastmod>2024-10-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-	</url>
-	
-	<url>
-		<loc>https://aphroconfuso.mt/loranne-vella-djarju/</loc>
-		<lastmod>2024-10-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-	</url>
-	
-	<url>
-		<loc>https://aphroconfuso.mt/warren-bartolo-djarju/</loc>
-		<lastmod>2024-10-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-	</url>
-	
-	<url>
 		<loc>https://aphroconfuso.mt/indħil-barrani/</loc>
 		<lastmod>2024-10-16</lastmod>
     <changefreq>monthly</changefreq>
@@ -318,6 +262,34 @@
 	
 	<url>
 		<loc>https://aphroconfuso.mt/mejju-2023/</loc>
+		<lastmod>2024-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/admin/stampi/</loc>
+		<lastmod>2024-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/cookies/</loc>
+		<lastmod>2024-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/ar/</loc>
+		<lastmod>2024-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/kotba/</loc>
 		<lastmod>2024-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -521,6 +493,69 @@
 	
 	<url>
 		<loc>https://aphroconfuso.mt/loranne-vella/</loc>
+		<lastmod>2024-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/</loc>
+		<lastmod>2024-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/davinia-hamilton-djarju/</loc>
+		<lastmod>2024-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/fatima-a.m.-djarju/</loc>
+		<lastmod>2024-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/omar-nshea-es-sidr/</loc>
+		<lastmod>2024-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/franco-bifo-berardi-karl-baldacchino-nifs-kaos-u-poeżija/</loc>
+		<lastmod>2024-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/jimmy-grima-splużjonijiet/</loc>
+		<lastmod>2024-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/omar-nshea-bur-mgħeż/</loc>
+		<lastmod>2024-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/loranne-vella-djarju/</loc>
+		<lastmod>2024-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/warren-bartolo-djarju/</loc>
 		<lastmod>2024-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -1091,33 +1126,5 @@
 		<lastmod>2024-10-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
-	</url>
-	
-	<url>
-		<loc>https://aphroconfuso.mt/admin/stampi/</loc>
-		<lastmod>2024-10-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-	</url>
-	
-	<url>
-		<loc>https://aphroconfuso.mt/cookies/</loc>
-		<lastmod>2024-10-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-	</url>
-	
-	<url>
-		<loc>https://aphroconfuso.mt/ar/</loc>
-		<lastmod>2024-10-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-	</url>
-	
-	<url>
-		<loc>https://aphroconfuso.mt/</loc>
-		<lastmod>2024-10-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
 	</url>
 </urlset>
