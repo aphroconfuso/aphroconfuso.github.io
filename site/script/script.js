@@ -14,8 +14,8 @@ const fixReportingTitle = (storyType, sequenceEpisodeNumber, author, pageTitle) 
 const getScrollPosition = () => window.pageYOffset || document.documentElement.scrollTop;
 
 const getSelectionText = () => {
-  // let text = "";
-	// if (location.hostname === 'aphroconfuso.mt') return;
+  let text = "";
+	if (location.hostname === 'aphroconfuso.mt') return;
 	// if (window.getSelection) {
 	// 		text = window.getSelection().toString();
 	// } else if (document.selection && document.selection.type != "Control") {
@@ -27,7 +27,6 @@ const getSelectionText = () => {
 	var selectedText = selection.extractContents();
 	if (selectedText === "") return;
 	var span= document.createElement("mark");
-	console.log(selectedText);
 	// span.style.backgroundColor = "yellow";
 	span.appendChild(selectedText);
 	selection.insertNode(span);
@@ -224,33 +223,6 @@ const updateBookmarksMenu = (bookmarksArray) => {
 }
 
 const calculateScrollPosition = (percentage) => Math.round(bodyStart + bodyHeight * (percentage/100));
-
-const showBookmarksInPromosVerbose = (bookmarksArray) => {
-	bookmarksArray.forEach((bookmark) => {
-		const { author, percentage, sequenceEpisodeNumber, storyId, storyType, title, urlSlug } = bookmark;
-		const roundedPercentage = Math.round(percentage);
-		const destinationTitle = fixReportingTitle(storyType, sequenceEpisodeNumber, author, title);
-		document.querySelectorAll(`a.story-${ storyId }`).forEach((element) => {
-			const bookmarkLink = document.createElement("a");
-			bookmarkLink.innerHTML = `<span class="bookmark-percentage">${roundedPercentage}%</span>`;
-			bookmarkLink.classList.add("bookmark");
-			bookmarkLink.href = `/${ urlSlug }/#b-${ percentage }`;
-			bookmarkLink.addEventListener("click", () => {analytics(['trackEvent', 'Promo', `minn: ${ reportingTitle }`, `għal: ${ destinationTitle } (bookmark)`, roundedPercentage])});
-			element.appendChild(bookmarkLink);
-		});
-		document.querySelectorAll(`article.story-${ storyId } > header`).forEach((element) => {
-			const bookmarkLink = document.createElement("a");
-			bookmarkLink.innerHTML = `<span class="bookmark-percentage">${roundedPercentage}%</span>`;
-			bookmarkLink.classList.add("bookmark");
-			bookmarkLink.href = `/${ urlSlug }/#b-${ percentage }`;
-			bookmarkLink.addEventListener('click', () => {
-				analytics(['trackEvent', 'Bookmark fil-paġna', reportingTitle, reportingTitle, roundedPercentage]);
-				window.scrollTo({top: calculateScrollPosition(percentage), left: 0, behavior: 'smooth'});
-			})
-			element.appendChild(bookmarkLink);
-		});
-	});
-}
 
 const showBookmarksInPromos = (bookmarksArray) => {
 	bookmarksArray.forEach((bookmark) => {
@@ -519,7 +491,7 @@ const initialiseAfterWindow = () => {
 		lightboxOpen && lightboxOpen.addEventListener('click', () => openLightbox());
 		lightboxClose && lightboxClose.addEventListener('click', () => closeLightbox());
 		if (lightboxClose) {
-			document.onkeydown = function(evt) {
+			document.onkeydown = function (evt) {
 				evt = evt || window.event;
 				if (evt.keyCode === 27) {
 					closeLightbox();
@@ -668,9 +640,10 @@ const initialiseAfterWindow = () => {
 	};
 	initialiseMessage();
 
-	document.onmouseup = function() {
-		getSelectionText();
-	};
+
+	document.addEventListener('selectionchange', function (event) {
+		setTimeout(getSelectionText, 10);
+	});
 }
 
 window.onload = initialiseAfterWindow;
