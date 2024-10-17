@@ -642,7 +642,7 @@ const initialiseAfterWindow = () => {
 
 
 	document.addEventListener('selectionchange', function (event) {
-		setTimeout(getSelectionText, 5000);
+		setTimeout(getSelectionText, 10000);
 	});
 }
 
