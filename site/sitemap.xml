@@ -79,27 +79,6 @@
 	</url>
 	
 	<url>
-		<loc>https://aphroconfuso.mt/privatezza/</loc>
-		<lastmod>2024-10-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-	</url>
-	
-	<url>
-		<loc>https://aphroconfuso.mt/proċess-editorjali/</loc>
-		<lastmod>2024-10-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-	</url>
-	
-	<url>
-		<loc>https://aphroconfuso.mt/gwida-tal-istil/</loc>
-		<lastmod>2024-10-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-	</url>
-	
-	<url>
 		<loc>https://aphroconfuso.mt/podcast/</loc>
 		<lastmod>2024-10-19</lastmod>
     <changefreq>monthly</changefreq>
@@ -269,13 +248,6 @@
 	
 	<url>
 		<loc>https://aphroconfuso.mt/admin/stampi/</loc>
-		<lastmod>2024-10-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-	</url>
-	
-	<url>
-		<loc>https://aphroconfuso.mt/cookies/</loc>
 		<lastmod>2024-10-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -1137,6 +1109,34 @@
 	
 	<url>
 		<loc>https://aphroconfuso.mt/loranne-vella/</loc>
+		<lastmod>2024-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/cookies/</loc>
+		<lastmod>2024-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/privatezza/</loc>
+		<lastmod>2024-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/proċess-editorjali/</loc>
+		<lastmod>2024-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/gwida-tal-istil/</loc>
 		<lastmod>2024-10-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
