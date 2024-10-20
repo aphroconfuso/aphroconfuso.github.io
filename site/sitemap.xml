@@ -65,13 +65,6 @@
 	</url>
 	
 	<url>
-		<loc>https://aphroconfuso.mt/ittri/</loc>
-		<lastmod>2024-10-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-	</url>
-	
-	<url>
 		<loc>https://aphroconfuso.mt/newsletter/</loc>
 		<lastmod>2024-10-20</lastmod>
     <changefreq>monthly</changefreq>
@@ -1130,6 +1123,13 @@
 	
 	<url>
 		<loc>https://aphroconfuso.mt/proċess-editorjali/</loc>
+		<lastmod>2024-10-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/kontinwità/</loc>
 		<lastmod>2024-10-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
