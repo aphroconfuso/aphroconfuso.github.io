@@ -233,24 +233,15 @@ const showBookmarksInPromos = (bookmarksArray) => {
 		const readersWordsPerSecond = 2.9;
 		document.querySelectorAll(`aside.story-aside-${ storyId } .bookmark-compact`).forEach((element) => {
 			const bookmarkLink = document.createElement("a");
-			// HAWNHEKK!!!
-			// ******************************************
-			// ******************************************
-			// ******************************************
-
-			// ******************************************
-			// ******************************************
-			// ******************************************
-			// const minutes = numberify(parseInt(remaining / (readersWordsPerSecond * 60)), ['minuta', 'minuti']);
 			const minutes = numberify(parseInt(remaining / readersWordsPerSecond / 60), ['minuta', 'minuti']);
 			bookmarkLink.innerHTML = `<span class="bookmark-glyph"><!-- --></span> Qrajt ${ roundedPercentage }%, fadallek xi ${ minutes } qari</span>`;
-			// bookmarkLink.classList.add("bookmark-compact");
 			bookmarkLink.href = `/${ urlSlug }/#b-${ percentage }`;
 			bookmarkLink.addEventListener("click", () => {analytics(['trackEvent', 'Promo', `minn: ${ reportingTitle }`, `għal: ${ destinationTitle } (bookmark)`, roundedPercentage])});
 			element.appendChild(bookmarkLink);
 		});
 		document.querySelectorAll(`article.story-${ storyId } > header`).forEach((element) => {
 			const minutes = numberify(parseInt(remaining / readersWordsPerSecond / 60), ['minuta', 'minuti']);
+			console.log(minutes, remaining, readersWordsPerSecond);
 			const bookmarkContainer = document.createElement("aside");
 			bookmarkContainer.classList.add("bookmark-compact");
 			const bookmarkLink = document.createElement("a");
@@ -268,8 +259,8 @@ const showBookmarksInPromos = (bookmarksArray) => {
 
 // REFACTOR: bundle from shared component
 const numberify = (number, words = ['kelma', 'kelmiet']) => {
-	// kelma, kelmiet
-	if (!number) return "null";
+	console.log('num', number, !number);
+	if (number <= 1) return words[0];
 	const digits = parseInt(number.toString().slice(-2));
 	if (digits >= 2 && digits <= 10) return `${ number } ${ words[1] }`;
 	if (digits >= 11 && digits <= 19) return `${ number }-il ${ words[0]}`;
