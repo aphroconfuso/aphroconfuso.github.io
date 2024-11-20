@@ -27,7 +27,7 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/glorianne-micallef/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-f7524122.css">
+		<link rel="stylesheet" href="/css/style-f83abef6.css">
 		<script>
 			var
 				audioLoaded,
@@ -109,13 +109,13 @@
 			const addRemoveFontSizeClass = (size) => {
 				document.body.classList.remove('font-size-1','font-size-2','font-size-3','font-size-4');
 				document.body.classList.add(`font-size-${ size }`);
-				setCookie('font', size);
+				localStorage.setItem('font', size);
 			}
 			const initialiseAfterBody = () => {
 				document.body.classList.add(location.hostname.replace(/\.?aphroconfuso\.mt/, ''));
-				const fontSize = getCookie('font') || 1;
+				const fontSize = localStorage.getItem('font') || 1;
 				addRemoveFontSizeClass(fontSize);
-				if (getCookie(`tw-${urlSlug}`)) {
+				if (localStorage.getItem(`tw-${urlSlug}`)) {
 					document.body.classList.add('trigger-warning-closed');
 				}
 			}
@@ -138,7 +138,7 @@
 				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
 			})();
 		</script>
-		<script src="../script/script-915399.js" type="module"></script>
+		<script src="../script/script-6d718a.js" type="module"></script>
 	</head>
 	<body class="show-nav this-month-novembru">
 		<script>initialiseAfterBody();</script>

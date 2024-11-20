@@ -492,7 +492,7 @@ const initialiseAfterWindow = () => {
 
 		const closeTriggerWarning = () => {
 			document.body.classList.add('trigger-warning-closed');
-			setCookie(`tw-${ urlSlug }`, 'magħluq', 3);
+			localStorage.setItem(`tw-${ urlSlug }`, 'magħluq');
 			analytics(['trackEvent', 'Stampi', 'lightbox - għalaq', reportingTitle]);
 		}
 
