@@ -149,12 +149,12 @@ razzett jidwi daħka mit-twieqi, qasab iħaxwex riħ.
 				return "";
 			}
 			const addRemoveFontSizeClass = (size) => {
-				document.body.classList.remove('font-size-1','font-size-2','font-size-3','font-size-4');
+				document.body.classList.remove('font-size-1','font-size-2','font-size-3','font-size-4')
 				document.body.classList.add(`font-size-${ size }`);
 				localStorage.setItem('font', size);
 			}
 			const initialiseAfterBody = () => {
-				document.body.classList.add(location.hostname.replace(/\.?aphroconfuso\.mt/, ''));
+				document.body.classList.add(location.hostname.replace(/\.?aphroconfuso\.mt/, '') || 'production');
 				const fontSize = localStorage.getItem('font') || 1;
 				addRemoveFontSizeClass(fontSize);
 				if (localStorage.getItem(`tw-${urlSlug}`)) {
