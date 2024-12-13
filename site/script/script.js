@@ -4,6 +4,7 @@ const bookmarkThresholdWords = 250;
 const maxPlausibleWordsPerSecond = 5;
 const minPlausibleWordsPerSecond = 1;
 const thresholdWords = 100;
+var alreadyMarked = false;
 
 const fixReportingTitle = (storyType, sequenceEpisodeNumber, author, pageTitle) => {
 	if (storyType === 'Djarju') return `Djarju #${ sequenceEpisodeNumber } ${ author }`;
@@ -15,20 +16,16 @@ const getScrollPosition = () => window.pageYOffset || document.documentElement.s
 
 const getSelectionText = () => {
   let text = "";
-	if (location.hostname === 'aphroconfuso.mt') return;
-	// if (window.getSelection) {
-	// 		text = window.getSelection().toString();
-	// } else if (document.selection && document.selection.type != "Control") {
-	// 		text = document.selection.createRange().text;
-	// }
-	// if (text === "") return;
-	// // alert(text);
-	var selection= window.getSelection().getRangeAt(0);
+	if (!!alreadyMarked || location.hostname === 'aphroconfuso.mt') return;
+	alreadyMarked = true;
+	var selection = window.getSelection().getRangeAt(0);
 	var selectedText = selection.extractContents();
 	if (selectedText === "") return;
-	var span= document.createElement("mark");
-	// span.style.backgroundColor = "yellow";
+	var span = document.createElement("mark");
+	var credit = document.createElement("span");
+	credit.innerText = `${ pageTitle } - ${ author }`
 	span.appendChild(selectedText);
+	span.appendChild(credit);
 	selection.insertNode(span);
 }
 
