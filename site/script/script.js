@@ -4,6 +4,7 @@ const bookmarkThresholdWords = 250;
 const maxPlausibleWordsPerSecond = 5;
 const minPlausibleWordsPerSecond = 1;
 const thresholdWords = 100;
+var alreadyMarked = false;
 
 const fixReportingTitle = (storyType, sequenceEpisodeNumber, author, pageTitle) => {
 	if (storyType === 'Djarju') return `Djarju #${ sequenceEpisodeNumber } ${ author }`;
@@ -15,20 +16,19 @@ const getScrollPosition = () => window.pageYOffset || document.documentElement.s
 
 const getSelectionText = () => {
   let text = "";
-	if (location.hostname === 'aphroconfuso.mt') return;
-	// if (window.getSelection) {
-	// 		text = window.getSelection().toString();
-	// } else if (document.selection && document.selection.type != "Control") {
-	// 		text = document.selection.createRange().text;
-	// }
-	// if (text === "") return;
-	// // alert(text);
-	var selection= window.getSelection().getRangeAt(0);
+	if (!!alreadyMarked) return;
+	alreadyMarked = true;
+	var selection = window.getSelection().getRangeAt(0);
 	var selectedText = selection.extractContents();
 	if (selectedText === "") return;
-	var span= document.createElement("mark");
-	// span.style.backgroundColor = "yellow";
+	var span = document.createElement("mark");
 	span.appendChild(selectedText);
+	if (location.hostname !== 'abbozzi.aphroconfuso.mt') {
+		span.classList.add('provi');
+		var credit = document.createElement("div");
+		credit.innerHTML = `<span><strong>${ pageTitle }</strong><br>${ author }${ !!translator ? "<br>(tr " + translator + ")" : "" }</span>`
+		span.appendChild(credit);
+	}
 	selection.insertNode(span);
 }
 
@@ -631,10 +631,11 @@ const initialiseAfterWindow = () => {
 	};
 	initialiseMessage();
 
-
-	document.addEventListener('selectionchange', function (event) {
-		setTimeout(getSelectionText, 10000);
-	});
+	if (location.hostname !== 'aphroconfuso.mt') {
+		document.addEventListener('selectionchange', function (event) {
+			setTimeout(getSelectionText, 10000);
+		});
+	}
 }
 
 window.onload = initialiseAfterWindow;
