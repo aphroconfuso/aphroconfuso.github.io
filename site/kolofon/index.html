@@ -28,7 +28,7 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/kolofon/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-f608088e.css">
+		<link rel="stylesheet" href="/css/style-ad8f4cda.css">
 		<script>
 			var
 				audioLoaded,
@@ -113,7 +113,7 @@
 				localStorage.setItem('font', size);
 			}
 			const addRemoveTheme = (theme) => {
-				document.body.classList.remove('theme-regular','theme-dark','theme-contrast')
+				document.body.classList.remove('theme-regular','theme-dark','theme-contrast','theme-system')
 				document.body.classList.add(`theme-${ theme }`);
 				localStorage.setItem('theme', theme);
 			}
@@ -144,7 +144,7 @@
 				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
 			})();
 		</script>
-		<script src="../script/script-888792.js" type="module"></script>
+		<script src="../script/script-b7f1e7.js" type="module"></script>
 	</head>
 	<body class="show-nav this-month-jannar">
 		<script>initialiseAfterBody();</script>
@@ -181,10 +181,15 @@
 					<li class="hide-mobile"><a href="/podcast/">Podcast</a>&hairsp;/&hairsp;<a href="/awdjo/">Awdjo</a></li>
 					<li class="hide-laptop podcastaudio"><a href="/podcast/">Podcast</a><span class="solidus">/</span><a href="/awdjo/">Awdjo</a></li>
 					<li class="hide-mobile"><a href="/kotba-antoloġija-1/" class="menu-antologija-1">Antoloġija 1</a></li>
-					<li class="hide-laptop">&nbsp;</li>
-
-					
-
+					<li class="hide-laptop" id="choose-theme">
+						<a id="theme-regular" href="#">s</a>
+						<a id="theme-dark" href="#">m</a>
+						<a id="theme-contrast" href="#">c</a>
+						<a id="theme-system" href="#">
+							<span class="hide-laptop">p</span>
+							<span class="hide-mobile">l</span>
+						</a>
+					</li>
 					<li><a href="/dwarna/">Dwarna</a></li>
 					<li class="hide-laptop"><a href="/kolofon/">Kolofon</a></li>
 					<li><a href="/newsletter/">Newsletter</a></li>
