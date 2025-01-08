@@ -39,7 +39,7 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/warren-bartolo-djarju-2024-07-11-inħossni-qisni-qed-nikteb-għall-ewwel-darba/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-d326c1b3.css">
+		<link rel="stylesheet" href="/css/style-7b794faa.css">
 		<script>
 			var
 				audioLoaded,
@@ -127,6 +127,19 @@
 				document.body.classList.remove('theme-regular','theme-dark','theme-contrast','theme-system')
 				document.body.classList.add(`theme-${ theme }`);
 				localStorage.setItem('theme', theme);
+				if (theme === 'contrast') {
+					document.querySelector('iframe#newsletter').setAttribute('src', 'https://newsletter.aphroconfuso.mt/subscription/form#000000|#ffffff|0|442093344ewr');
+				} else if (theme === 'dark') {
+					document.querySelector('iframe#newsletter').setAttribute('src', 'https://newsletter.aphroconfuso.mt/subscription/form#0000ff|#ff00ff|0|442093344ewr');
+				} else if (theme === 'system') {
+					if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+						document.querySelector('iframe#newsletter').setAttribute('src', 'https://newsletter.aphroconfuso.mt/subscription/form#0000ff|#ff00ff|0|442093344ewr');
+					} else {
+						document.querySelector('iframe#newsletter').setAttribute('src', 'https://newsletter.aphroconfuso.mt/subscription/form');
+					}
+				} else {
+					document.querySelector('iframe#newsletter').setAttribute('src', 'https://newsletter.aphroconfuso.mt/subscription/form');
+				}
 			}
 			const initialiseAfterBody = () => {
 				document.body.classList.add(location.hostname.replace(/\.?aphroconfuso\.mt/, '') || 'production');
@@ -218,7 +231,7 @@
 			<div id="message"><!-- --></div>
 			<main id="skipto">
 				
-	<article class="content awwissu djarju story story-82">
+	<article class="content awwissu djarju story story-82 sequence-3">
 		<header>
 			<ul>
 				<li class="header-label">
@@ -271,7 +284,7 @@
 					<ul class="generic-menu sequence-menu">
 						<li>
 							<a href="/warren-bartolo-djarju-2024-10-01-l-għasafar-jinstemgħu-foloz/">
-								01.10.24&nbsp;
+								<span class="episode-number">01.10.24&nbsp;</span>
 								L-għasafar jinstemgħu foloz</a>
 							</a>
 						</li>
@@ -280,7 +293,7 @@
 					
 						<li>
 							<a href="/warren-bartolo-djarju-2024-09-05-nirrealizza-li-ma-nafx-nixtieqx-inkompli-ngħix-ħajti-waħdi/">
-								05.09.24&nbsp;
+								<span class="episode-number">05.09.24&nbsp;</span>
 								Nirrealizza li ma nafx nixtieqx inkompli ngħix ħajti waħdi</a>
 							</a>
 						</li>
@@ -289,7 +302,7 @@
 					
 						<li>
 							<a href="/warren-bartolo-djarju-2024-08-09-żewġ-xjaten-bil-qrun-u-bil-ġwienaħ-blu/">
-								09.08.24&nbsp;
+								<span class="episode-number">09.08.24&nbsp;</span>
 								Żewġ xjaten <l-m>bil-qrun</l-m> u <l-m>bil-ġwienaħ</l-m> blu</a>
 							</a>
 						</li>
@@ -298,7 +311,7 @@
 					
 						<li class="active">
 							
-								11.07.24&nbsp;
+								<span class="episode-number">11.07.24&nbsp;</span>
 								Inħossni qisni qed nikteb għall-ewwel darba</a>
 							
 						</li>
@@ -307,7 +320,7 @@
 					
 						<li>
 							<a href="/warren-bartolo-djarju-2024-06-02-moħħi-huwa-ffukat-li-nitlaq-daqt/">
-								02.06.24&nbsp;
+								<span class="episode-number">02.06.24&nbsp;</span>
 								Moħħi huwa ffukat li nitlaq daqt</a>
 							</a>
 						</li>
@@ -316,7 +329,7 @@
 					
 						<li>
 							<a href="/warren-bartolo-djarju-2024-05-01-ngħidlu-li-miniex-julia-fox/">
-								01.05.24&nbsp;
+								<span class="episode-number">01.05.24&nbsp;</span>
 								Ngħidlu li m’iniex Julia Fox</a>
 							</a>
 						</li>
@@ -325,7 +338,7 @@
 					
 						<li>
 							<a href="/warren-bartolo-djarju-2024-04-01-noħlom-li-jaqgħuli-s-snien-ta-quddiem/">
-								01.04.24&nbsp;
+								<span class="episode-number">01.04.24&nbsp;</span>
 								Noħlom li jaqgħuli <l-m>s-snien</l-m> ta’ quddiem</a>
 							</a>
 						</li>
@@ -334,7 +347,7 @@
 					
 						<li>
 							<a href="/warren-bartolo-djarju-2024-03-02-nistħajjilni-qomt-fuq-artal-tas-sagrifiċċju/">
-								02.03.24&nbsp;
+								<span class="episode-number">02.03.24&nbsp;</span>
 								Nistħajjilni qomt fuq artal <l-m>tas-sagrifiċċju</l-m></a>
 							</a>
 						</li>
@@ -343,7 +356,7 @@
 					
 						<li>
 							<a href="/warren-bartolo-djarju-2024-02-01-jidhirli-li-hija-ġurnata-tajba-biex-naħsel-il-lożor/">
-								01.02.24&nbsp;
+								<span class="episode-number">01.02.24&nbsp;</span>
 								Jidhirli li hija ġurnata tajba biex naħsel <l-m>il-lożor</l-m></a>
 							</a>
 						</li>
@@ -352,7 +365,7 @@
 					
 						<li>
 							<a href="/warren-bartolo-djarju-2024-01-08-marlboro-gold-il-favoriti-tiegħi-jgħidli/">
-								08.01.24&nbsp;
+								<span class="episode-number">08.01.24&nbsp;</span>
 								Marlboro Gold, <l-m>il-favoriti</l-m> tiegħi, jgħidli</a>
 							</a>
 						</li>
@@ -361,7 +374,7 @@
 					
 						<li>
 							<a href="/warren-bartolo-djarju-2023-11-01-il-mixja-lura-d-dar-kienet-twila-sigarett-wieħed/">
-								01.11.23&nbsp;
+								<span class="episode-number">01.11.23&nbsp;</span>
 								Il-mixja lura <l-m>d-dar</l-m> kienet twila sigarett wieħed</a>
 							</a>
 						</li>

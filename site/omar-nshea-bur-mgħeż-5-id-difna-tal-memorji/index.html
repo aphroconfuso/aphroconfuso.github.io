@@ -42,7 +42,7 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/omar-nshea-bur-mgħeż-5-id-difna-tal-memorji/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-d326c1b3.css">
+		<link rel="stylesheet" href="/css/style-7b794faa.css">
 		<script>
 			var
 				audioLoaded,
@@ -130,6 +130,19 @@
 				document.body.classList.remove('theme-regular','theme-dark','theme-contrast','theme-system')
 				document.body.classList.add(`theme-${ theme }`);
 				localStorage.setItem('theme', theme);
+				if (theme === 'contrast') {
+					document.querySelector('iframe#newsletter').setAttribute('src', 'https://newsletter.aphroconfuso.mt/subscription/form#000000|#ffffff|0|442093344ewr');
+				} else if (theme === 'dark') {
+					document.querySelector('iframe#newsletter').setAttribute('src', 'https://newsletter.aphroconfuso.mt/subscription/form#0000ff|#ff00ff|0|442093344ewr');
+				} else if (theme === 'system') {
+					if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+						document.querySelector('iframe#newsletter').setAttribute('src', 'https://newsletter.aphroconfuso.mt/subscription/form#0000ff|#ff00ff|0|442093344ewr');
+					} else {
+						document.querySelector('iframe#newsletter').setAttribute('src', 'https://newsletter.aphroconfuso.mt/subscription/form');
+					}
+				} else {
+					document.querySelector('iframe#newsletter').setAttribute('src', 'https://newsletter.aphroconfuso.mt/subscription/form');
+				}
 			}
 			const initialiseAfterBody = () => {
 				document.body.classList.add(location.hostname.replace(/\.?aphroconfuso\.mt/, '') || 'production');
@@ -221,7 +234,7 @@
 			<div id="message"><!-- --></div>
 			<main id="skipto">
 				
-	<article class="content mejju esej story story-59 end-of-series">
+	<article class="content mejju esej story story-59 sequence-1 end-of-series">
 		<header>
 			<ul>
 				<li class="header-label">
@@ -283,7 +296,7 @@
 					<ul class="generic-menu sequence-menu">
 						<li>
 							<a href="/omar-nshea-bur-mgħeż-1-ftit-qabel-dfint-l-ommi-mort-infittex-qabar/">
-								1.&nbsp;
+								<span class="episode-number">1.&nbsp;</span>
 								Ftit qabel dfint ’l ommi, mort infittex qabar</a>
 							</a>
 						</li>
@@ -292,7 +305,7 @@
 					
 						<li>
 							<a href="/omar-nshea-bur-mgħeż-2-dfintha-fil-libsa-li-mietet-fiha/">
-								2.&nbsp;
+								<span class="episode-number">2.&nbsp;</span>
 								Dfintha <l-m>fil-libsa</l-m> li mietet fiha</a>
 							</a>
 						</li>
@@ -301,7 +314,7 @@
 					
 						<li>
 							<a href="/omar-nshea-bur-mgħeż-3-qegħedtha-ġo-qabar-fuq-l-għolja-tal-ħorr/">
-								3.&nbsp;
+								<span class="episode-number">3.&nbsp;</span>
 								Qegħedtha ġo qabar fuq <l-m>l-Għolja</l-m> tal-Ħorr</a>
 							</a>
 						</li>
@@ -310,7 +323,7 @@
 					
 						<li>
 							<a href="/omar-nshea-bur-mgħeż-4-ħallejt-it-tebut-għal-ġisimha-biss/">
-								4.&nbsp;
+								<span class="episode-number">4.&nbsp;</span>
 								Ħallejt <l-m>it-tebut</l-m> għal ġisimha biss</a>
 							</a>
 						</li>
@@ -319,7 +332,7 @@
 					
 						<li class="active">
 							
-								5.&nbsp;
+								<span class="episode-number">5.&nbsp;</span>
 								Id-difna <l-m>tal-memorji</l-m></a>
 							
 						</li>
@@ -1620,7 +1633,7 @@ Fl-1989, però — is-sena li fiha ttieħdu dawn <l-m>ir-ritratti </l-m>�
 			
 				<div id="newsletter-container-bottom" class="newsletter-container">
 					<section id="form" data-track-content data-content-name="Homepage" data-content-piece="formola">
-						<iframe src="https://newsletter.aphroconfuso.mt/subscription/form" scrolling="no" title="Abbona fin-newsletter"></iframe>
+						<iframe id="newsletter" src="https://newsletter.aphroconfuso.mt/subscription/form" scrolling="no" title="Abbona fin-newsletter"></iframe>
 					</section>
 				</div>
 			

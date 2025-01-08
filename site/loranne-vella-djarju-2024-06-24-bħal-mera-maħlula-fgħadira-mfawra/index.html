@@ -39,7 +39,7 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/loranne-vella-djarju-2024-06-24-bħal-mera-maħlula-fgħadira-mfawra/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-d326c1b3.css">
+		<link rel="stylesheet" href="/css/style-7b794faa.css">
 		<script>
 			var
 				audioLoaded,
@@ -127,6 +127,19 @@
 				document.body.classList.remove('theme-regular','theme-dark','theme-contrast','theme-system')
 				document.body.classList.add(`theme-${ theme }`);
 				localStorage.setItem('theme', theme);
+				if (theme === 'contrast') {
+					document.querySelector('iframe#newsletter').setAttribute('src', 'https://newsletter.aphroconfuso.mt/subscription/form#000000|#ffffff|0|442093344ewr');
+				} else if (theme === 'dark') {
+					document.querySelector('iframe#newsletter').setAttribute('src', 'https://newsletter.aphroconfuso.mt/subscription/form#0000ff|#ff00ff|0|442093344ewr');
+				} else if (theme === 'system') {
+					if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+						document.querySelector('iframe#newsletter').setAttribute('src', 'https://newsletter.aphroconfuso.mt/subscription/form#0000ff|#ff00ff|0|442093344ewr');
+					} else {
+						document.querySelector('iframe#newsletter').setAttribute('src', 'https://newsletter.aphroconfuso.mt/subscription/form');
+					}
+				} else {
+					document.querySelector('iframe#newsletter').setAttribute('src', 'https://newsletter.aphroconfuso.mt/subscription/form');
+				}
 			}
 			const initialiseAfterBody = () => {
 				document.body.classList.add(location.hostname.replace(/\.?aphroconfuso\.mt/, '') || 'production');
@@ -218,7 +231,7 @@
 			<div id="message"><!-- --></div>
 			<main id="skipto">
 				
-	<article class="content settembru djarju story story-84">
+	<article class="content settembru djarju story story-84 sequence-2">
 		<header>
 			<ul>
 				<li class="header-label">
@@ -271,7 +284,7 @@
 					<ul class="generic-menu sequence-menu">
 						<li>
 							<a href="/loranne-vella-djarju-2023-08-23-li-jmiss-se-jkun-għalkollox-differenti/">
-								23.08.23&nbsp;
+								<span class="episode-number">23.08.23&nbsp;</span>
 								Li jmiss se jkun għalkollox differenti</a>
 							</a>
 						</li>
@@ -280,7 +293,7 @@
 					
 						<li>
 							<a href="/loranne-vella-djarju-2023-09-19-biex-bħallikieku-jitimgħu-r-ruħ-u-jtaffulha-l-ġuħ/">
-								19.09.23&nbsp;
+								<span class="episode-number">19.09.23&nbsp;</span>
 								Biex bħallikieku jitimgħu <l-m>r-ruħ</l-m> u jtaffulha <l-m>l-ġuħ</l-m></a>
 							</a>
 						</li>
@@ -289,7 +302,7 @@
 					
 						<li class="active">
 							
-								24.06.24&nbsp;
+								<span class="episode-number">24.06.24&nbsp;</span>
 								Bħal mera maħlula f’għadira mfawra</a>
 							
 						</li>
@@ -298,7 +311,7 @@
 					
 						<li>
 							<a href="/loranne-vella-djarju-2024-03-01-nintebaħ-li-terraqt-mhux-ħażin/">
-								01.03.24&nbsp;
+								<span class="episode-number">01.03.24&nbsp;</span>
 								Nintebaħ li terraqt mhux ħażin</a>
 							</a>
 						</li>
@@ -307,7 +320,7 @@
 					
 						<li>
 							<a href="/loranne-vella-djarju-2024-04-09-se-nħallihom-hawn-jgħidu-tagħhom/">
-								09.04.24&nbsp;
+								<span class="episode-number">09.04.24&nbsp;</span>
 								Se nħallihom hawn, jgħidu tagħhom</a>
 							</a>
 						</li>
@@ -316,7 +329,7 @@
 					
 						<li>
 							<a href="/loranne-vella-djarju-2024-02-08-it-tluq-dejjem-iħallili-għafsa-xi-mkien/">
-								08.02.24&nbsp;
+								<span class="episode-number">08.02.24&nbsp;</span>
 								It-tluq dejjem iħallili għafsa xi mkien</a>
 							</a>
 						</li>
@@ -325,7 +338,7 @@
 					
 						<li>
 							<a href="/loranne-vella-djarju-2023-12-27-dal-mixi-inutli-għalhekk-nimxih/">
-								27.12.23&nbsp;
+								<span class="episode-number">27.12.23&nbsp;</span>
 								Dal-mixi inutli għalhekk nimxih</a>
 							</a>
 						</li>

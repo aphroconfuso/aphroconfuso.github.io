@@ -34,7 +34,7 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-d326c1b3.css">
+		<link rel="stylesheet" href="/css/style-7b794faa.css">
 		<script>
 			var
 				audioLoaded,
@@ -122,6 +122,19 @@
 				document.body.classList.remove('theme-regular','theme-dark','theme-contrast','theme-system')
 				document.body.classList.add(`theme-${ theme }`);
 				localStorage.setItem('theme', theme);
+				if (theme === 'contrast') {
+					document.querySelector('iframe#newsletter').setAttribute('src', 'https://newsletter.aphroconfuso.mt/subscription/form#000000|#ffffff|0|442093344ewr');
+				} else if (theme === 'dark') {
+					document.querySelector('iframe#newsletter').setAttribute('src', 'https://newsletter.aphroconfuso.mt/subscription/form#0000ff|#ff00ff|0|442093344ewr');
+				} else if (theme === 'system') {
+					if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+						document.querySelector('iframe#newsletter').setAttribute('src', 'https://newsletter.aphroconfuso.mt/subscription/form#0000ff|#ff00ff|0|442093344ewr');
+					} else {
+						document.querySelector('iframe#newsletter').setAttribute('src', 'https://newsletter.aphroconfuso.mt/subscription/form');
+					}
+				} else {
+					document.querySelector('iframe#newsletter').setAttribute('src', 'https://newsletter.aphroconfuso.mt/subscription/form');
+				}
 			}
 			const initialiseAfterBody = () => {
 				document.body.classList.add(location.hostname.replace(/\.?aphroconfuso\.mt/, '') || 'production');
@@ -881,7 +894,7 @@
 			
 				
 				<div class="ga-image-1">
-					<a class="jannar promo promo-picture-1 story-105 is-episode" href="/kris-polidano-kullana-ta-għanjiet-dwar-il-ħolm-1-introduzzjoni/" onclick="analytics(['trackEvent', 'Promo', 'minn: Homepage', 'għal: Kullana ta’ Għanjiet Dwar il-Ħolm #1', 1]);">
+					<a class="jannar promo promo-picture-1 story-105 is-episode" href="/kris-polidano-kullana-ta-għanjiet-dwar-il-ħolm-1-prefazju-numru-wieħed/" onclick="analytics(['trackEvent', 'Promo', 'minn: Homepage', 'għal: Kullana ta’ għanjiet dwar il-ħolm #1', 1]);">
 						
 						
 						<header>
@@ -895,7 +908,7 @@
 	
 		
 			<h1>
-				Kullana ta’ Għanjiet Dwar <l-m>il-Ħolm</l-m>
+				Kullana ta’ għanjiet dwar <l-m>il-ħolm</l-m>
 				
 					<span class="episode-number">#1</span>
 				
@@ -919,7 +932,7 @@
 		<h3>
 			
 			
-			Introduzzjoni
+			Prefazju numru wieħed
 		</h3>
 	
 </header>
@@ -1161,7 +1174,7 @@
 			
 			
 				<div class="ga-poem-1">
-					<a class="jannar promo promo-poetry story-105" href="/kris-polidano-kullana-ta-għanjiet-dwar-il-ħolm-1-introduzzjoni/" onclick="analytics(['trackEvent', 'Promo', 'minn: Homepage', 'għal: Kullana ta’ Għanjiet Dwar il-Ħolm #1', 1]);">
+					<a class="jannar promo promo-poetry story-105" href="/kris-polidano-kullana-ta-għanjiet-dwar-il-ħolm-1-prefazju-numru-wieħed/" onclick="analytics(['trackEvent', 'Promo', 'minn: Homepage', 'għal: Kullana ta’ għanjiet dwar il-ħolm #1', 1]);">
 						<header>
 	<ul>
 	
@@ -1173,7 +1186,7 @@
 	
 		
 			<h1>
-				Kullana ta’ Għanjiet Dwar <l-m>il-Ħolm</l-m>
+				Kullana ta’ għanjiet dwar <l-m>il-ħolm</l-m>
 				
 					<span class="episode-number">#1</span>
 				
@@ -1198,7 +1211,7 @@
 
 						
 							<div class="body-text poetry">
-								<p></p>
+								<p>Il-Malti jitkellem dwar il-forom tal-verbi. Bl-istess mod, hemm il-forom ta’ kif nippożizzjonaw ruħna meta nkunu reqdin. Fil-forma nsibu l-kontenut — dal-prinċipju narawh fil-qasam tal-bini u f’dak ta’ kif infasslu l-għodod tal-komunikazzjoni tagħna. Il-forom tal-verbi jiddeterminaw it-tifsira. Bl-istess mod, il-forom ta’ kif norqdu u nindifnu kollha għandhom il-konnotazzjonijiet tagħhom.</p>
 							</div>
 						
 					</a>

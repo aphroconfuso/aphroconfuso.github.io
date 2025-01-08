@@ -39,7 +39,7 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/franco-bifo-berardi-karl-baldacchino-nifs-kaos-u-poeżija-1-ma-nistax-nieħu-nifs/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-d326c1b3.css">
+		<link rel="stylesheet" href="/css/style-7b794faa.css">
 		<script>
 			var
 				audioLoaded,
@@ -127,6 +127,19 @@
 				document.body.classList.remove('theme-regular','theme-dark','theme-contrast','theme-system')
 				document.body.classList.add(`theme-${ theme }`);
 				localStorage.setItem('theme', theme);
+				if (theme === 'contrast') {
+					document.querySelector('iframe#newsletter').setAttribute('src', 'https://newsletter.aphroconfuso.mt/subscription/form#000000|#ffffff|0|442093344ewr');
+				} else if (theme === 'dark') {
+					document.querySelector('iframe#newsletter').setAttribute('src', 'https://newsletter.aphroconfuso.mt/subscription/form#0000ff|#ff00ff|0|442093344ewr');
+				} else if (theme === 'system') {
+					if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+						document.querySelector('iframe#newsletter').setAttribute('src', 'https://newsletter.aphroconfuso.mt/subscription/form#0000ff|#ff00ff|0|442093344ewr');
+					} else {
+						document.querySelector('iframe#newsletter').setAttribute('src', 'https://newsletter.aphroconfuso.mt/subscription/form');
+					}
+				} else {
+					document.querySelector('iframe#newsletter').setAttribute('src', 'https://newsletter.aphroconfuso.mt/subscription/form');
+				}
 			}
 			const initialiseAfterBody = () => {
 				document.body.classList.add(location.hostname.replace(/\.?aphroconfuso\.mt/, '') || 'production');
@@ -218,7 +231,7 @@
 			<div id="message"><!-- --></div>
 			<main id="skipto">
 				
-	<article class="content gunju esej story story-67">
+	<article class="content gunju esej story story-67 sequence-5">
 		<header>
 			<ul>
 				<li class="header-label">
@@ -261,7 +274,7 @@
 					<ul class="generic-menu sequence-menu">
 						<li>
 							<a href="/franco-bifo-berardi-karl-baldacchino-nifs-kaos-u-poeżija-introduzzjoni/">
-								&nbsp;
+								<span class="episode-number">&nbsp;</span>
 								Introduzzjoni </a>
 							</a>
 						</li>
@@ -270,7 +283,7 @@
 					
 						<li class="active">
 							
-								1.&nbsp;
+								<span class="episode-number">1.&nbsp;</span>
 								Ma nistax nieħu nifs</a>
 							
 						</li>
@@ -279,7 +292,7 @@
 					
 						<li>
 							<a href="/franco-bifo-berardi-karl-baldacchino-nifs-kaos-u-poeżija-2-vuċi-ħoss-storbju/">
-								2.&nbsp;
+								<span class="episode-number">2.&nbsp;</span>
 								Vuċi ħoss storbju</a>
 							</a>
 						</li>
@@ -288,7 +301,7 @@
 					
 						<li>
 							<a href="/franco-bifo-berardi-karl-baldacchino-nifs-kaos-u-poeżija-3-il-kaos-u-l-barokk/">
-								3.&nbsp;
+								<span class="episode-number">3.&nbsp;</span>
 								Il-kaos u <l-m>l-barokk</l-m></a>
 							</a>
 						</li>
@@ -297,7 +310,7 @@
 					
 						<li>
 							<a href="/franco-bifo-berardi-karl-baldacchino-nifs-kaos-u-poeżija-4-il-kaos-u-l-moħħ/">
-								4.&nbsp;
+								<span class="episode-number">4.&nbsp;</span>
 								Il-kaos u <l-m>l-moħħ</l-m></a>
 							</a>
 						</li>
