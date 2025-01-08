@@ -27,7 +27,7 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/settembru-2023/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-7b794faa.css">
+		<link rel="stylesheet" href="/css/style-b260a47e.css">
 		<script>
 			var
 				audioLoaded,
@@ -116,17 +116,17 @@
 				document.body.classList.add(`theme-${ theme }`);
 				localStorage.setItem('theme', theme);
 				if (theme === 'contrast') {
-					document.querySelector('iframe#newsletter').setAttribute('src', 'https://newsletter.aphroconfuso.mt/subscription/form#000000|#ffffff|0|442093344ewr');
+					document.querySelector('iframe#newsletter').setAttribute('src', 'https://aphroconfuso.mt/newsletter-redirect/subscription/form#000000|#ffffff|0|442093344ewr');
 				} else if (theme === 'dark') {
-					document.querySelector('iframe#newsletter').setAttribute('src', 'https://newsletter.aphroconfuso.mt/subscription/form#0000ff|#ff00ff|0|442093344ewr');
+					document.querySelector('iframe#newsletter').setAttribute('src', 'https://aphroconfuso.mt/newsletter-redirect/subscription/form##212121|#908984|0|442093344ewr');
 				} else if (theme === 'system') {
 					if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-						document.querySelector('iframe#newsletter').setAttribute('src', 'https://newsletter.aphroconfuso.mt/subscription/form#0000ff|#ff00ff|0|442093344ewr');
+						document.querySelector('iframe#newsletter').setAttribute('src', 'https://aphroconfuso.mt/newsletter-redirect/subscription/form##212121|#908984|0|442093344ewr');
 					} else {
-						document.querySelector('iframe#newsletter').setAttribute('src', 'https://newsletter.aphroconfuso.mt/subscription/form');
+						document.querySelector('iframe#newsletter').setAttribute('src', 'https://aphroconfuso.mt/newsletter-redirect/subscription/form');
 					}
 				} else {
-					document.querySelector('iframe#newsletter').setAttribute('src', 'https://newsletter.aphroconfuso.mt/subscription/form');
+					document.querySelector('iframe#newsletter').setAttribute('src', 'https://aphroconfuso.mt/newsletter-redirect/subscription/form');
 				}
 			}
 			const initialiseAfterBody = () => {
@@ -384,7 +384,7 @@
 			
 				<div id="newsletter-container-bottom" class="newsletter-container">
 					<section id="form" data-track-content data-content-name="Homepage" data-content-piece="formola">
-						<iframe id="newsletter" src="https://newsletter.aphroconfuso.mt/subscription/form" scrolling="no" title="Abbona fin-newsletter"></iframe>
+						<iframe id="newsletter" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form" scrolling="no" title="Abbona fin-newsletter"></iframe>
 					</section>
 				</div>
 			
