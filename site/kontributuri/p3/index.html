@@ -27,7 +27,7 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/kontributuri/p3/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-b452f30d.css">
+		<link rel="stylesheet" href="/css/style-b9b8ac04.css">
 		<script>
 			var
 				audioLoaded,
@@ -115,19 +115,6 @@
 				document.body.classList.remove('theme-regular','theme-dark','theme-contrast','theme-system')
 				document.body.classList.add(`theme-${ theme }`);
 				localStorage.setItem('theme', theme);
-				if (theme === 'contrast') {
-					document.querySelector('iframe#newsletter').setAttribute('src', 'https://aphroconfuso.mt/newsletter-redirect/subscription/form#000000|#ffffff|0|442093344ewr');
-				} else if (theme === 'dark') {
-					document.querySelector('iframe#newsletter').setAttribute('src', 'https://aphroconfuso.mt/newsletter-redirect/subscription/form#212121|#908984|0|442093344ewr');
-				} else if (theme === 'system') {
-					if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-						document.querySelector('iframe#newsletter').setAttribute('src', 'https://aphroconfuso.mt/newsletter-redirect/subscription/form#212121|#908984|0|442093344ewr');
-					} else {
-						document.querySelector('iframe#newsletter').setAttribute('src', 'https://aphroconfuso.mt/newsletter-redirect/subscription/form');
-					}
-				} else {
-					document.querySelector('iframe#newsletter').setAttribute('src', 'https://aphroconfuso.mt/newsletter-redirect/subscription/form');
-				}
 			}
 			const initialiseAfterBody = () => {
 				document.body.classList.add(location.hostname.replace(/\.?aphroconfuso\.mt/, '') || 'production');

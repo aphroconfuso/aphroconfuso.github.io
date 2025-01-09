@@ -513,13 +513,6 @@
 	</url>
 	
 	<url>
-		<loc>https://aphroconfuso.mt/newsletter/</loc>
-		<lastmod>2025-01-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-	</url>
-	
-	<url>
 		<loc>https://aphroconfuso.mt/fatima-a.m.-djarju/</loc>
 		<lastmod>2025-01-09</lastmod>
     <changefreq>monthly</changefreq>
@@ -1249,6 +1242,13 @@
 	
 	<url>
 		<loc>https://aphroconfuso.mt/il-kliem-fit-teorija/</loc>
+		<lastmod>2025-01-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/newsletter/</loc>
 		<lastmod>2025-01-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
