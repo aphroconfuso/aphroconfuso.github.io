@@ -27,7 +27,7 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/karl-baldacchino/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-f608088e.css">
+		<link rel="stylesheet" href="/css/style-bf33eb9d.css">
 		<script>
 			var
 				audioLoaded,
@@ -112,7 +112,7 @@
 				localStorage.setItem('font', size);
 			}
 			const addRemoveTheme = (theme) => {
-				document.body.classList.remove('theme-regular','theme-dark','theme-contrast')
+				document.body.classList.remove('theme-regular','theme-dark','theme-contrast','theme-system')
 				document.body.classList.add(`theme-${ theme }`);
 				localStorage.setItem('theme', theme);
 			}
@@ -143,7 +143,7 @@
 				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
 			})();
 		</script>
-		<script src="../script/script-888792.js" type="module"></script>
+		<script src="../script/script-a60607.js" type="module"></script>
 	</head>
 	<body class="show-nav this-month-jannar">
 		<script>initialiseAfterBody();</script>
@@ -180,20 +180,22 @@
 					<li class="hide-mobile"><a href="/podcast/">Podcast</a>&hairsp;/&hairsp;<a href="/awdjo/">Awdjo</a></li>
 					<li class="hide-laptop podcastaudio"><a href="/podcast/">Podcast</a><span class="solidus">/</span><a href="/awdjo/">Awdjo</a></li>
 					<li class="hide-mobile"><a href="/kotba-antoloġija-1/" class="menu-antologija-1">Antoloġija 1</a></li>
-					<li class="hide-laptop">&nbsp;</li>
-
-					
-
+					<li class="hide-laptop choose-theme">
+						<a id="theme-regular" role="button" tabindex="0">s</a>
+						<a id="theme-dark" role="button" tabindex="1">m</a>
+						<a id="theme-contrast" role="button" tabindex="2">c</a>
+						<a id="theme-system" role="button" tabindex="3">p</a>
+					</li>
 					<li><a href="/dwarna/">Dwarna</a></li>
 					<li class="hide-laptop"><a href="/kolofon/">Kolofon</a></li>
 					<li><a href="/newsletter/">Newsletter</a></li>
 					<li class="hide-laptop"><a href="/privatezza/">Privatezza</a></li>
 					<li><a href="/bookmarks/">Bookmarks<span id="bookmarks-number"></span></a></li>
-					<li class="hide-laptop" id="text-size-adjust">
-						<a id="font-size-1" href="#">a</a>
-						<a id="font-size-2" href="#">a</a>
-						<a id="font-size-3" href="#">a</a>
-						<a id="font-size-4" href="#">a</a>
+					<li class="hide-laptop choose-theme" id="text-size-adjust">
+						<a id="font-size-1" role="button" tabindex="8">a</a>
+						<a id="font-size-2" role="button" tabindex="9">a</a>
+						<a id="font-size-3" role="button" tabindex="10">a</a>
+						<a id="font-size-4" role="button" tabindex="11">a</a>
 					</li>
 				</menu>
 				<div id="brownline"></div>
@@ -228,7 +230,7 @@
 		
 
 <li >
-	<a class="promo  ottubru promo-recensjoni story-88" href="/kotba-antoloġija-1/" onclick="analytics(['trackEvent', 'Promo', 'minn: Karl Baldacchino', 'għal: Antoloġija 1', 1]);">
+	<a class="promo  ottubru promo-recensjoni sequence- story-88" href="/kotba-antoloġija-1/" onclick="analytics(['trackEvent', 'Promo', 'minn: Karl Baldacchino', 'għal: Antoloġija 1', 1]);">
 		<header>
 	<ul>
 	
@@ -289,7 +291,7 @@
 		
 
 <li >
-	<a class="promo  mejju promo-esej story-63" href="/karl-baldacchino-politika-bla-nifs/" onclick="analytics(['trackEvent', 'Promo', 'minn: Karl Baldacchino', 'għal: Politika bla Nifs', 1]);">
+	<a class="promo  mejju promo-esej sequence- story-63" href="/karl-baldacchino-politika-bla-nifs/" onclick="analytics(['trackEvent', 'Promo', 'minn: Karl Baldacchino', 'għal: Politika bla Nifs', 1]);">
 		<header>
 	<ul>
 	
@@ -345,7 +347,7 @@
 		
 
 <li  class="multiple-episodes episode-4">
-	<a class="promo  dicembru promo-esej story-100 is-episode" href="/franco-bifo-berardi-karl-baldacchino-nifs-kaos-u-poeżija-4-il-kaos-u-l-moħħ/" onclick="analytics(['trackEvent', 'Promo', 'minn: Karl Baldacchino', 'għal: Nifs:: Kaos u Poeżija #4', 1]);">
+	<a class="promo  dicembru promo-esej sequence-5 story-100 is-episode" href="/franco-bifo-berardi-karl-baldacchino-nifs-kaos-u-poeżija-4-il-kaos-u-l-moħħ/" onclick="analytics(['trackEvent', 'Promo', 'minn: Karl Baldacchino', 'għal: Nifs:: Kaos u Poeżija #4', 1]);">
 		<header>
 	<ul>
 	
@@ -397,7 +399,7 @@
 		
 
 <li  class="multiple-episodes episode-3">
-	<a class="promo  settembru promo-esej story-85 is-episode" href="/franco-bifo-berardi-karl-baldacchino-nifs-kaos-u-poeżija-3-il-kaos-u-l-barokk/" onclick="analytics(['trackEvent', 'Promo', 'minn: Karl Baldacchino', 'għal: Nifs:: Kaos u Poeżija #3', 2]);">
+	<a class="promo  settembru promo-esej sequence-5 story-85 is-episode" href="/franco-bifo-berardi-karl-baldacchino-nifs-kaos-u-poeżija-3-il-kaos-u-l-barokk/" onclick="analytics(['trackEvent', 'Promo', 'minn: Karl Baldacchino', 'għal: Nifs:: Kaos u Poeżija #3', 2]);">
 		<header>
 	<ul>
 	
@@ -449,7 +451,7 @@
 		
 
 <li  class="multiple-episodes episode-2">
-	<a class="promo  awwissu promo-esej story-80 is-episode" href="/franco-bifo-berardi-karl-baldacchino-nifs-kaos-u-poeżija-2-vuċi-ħoss-storbju/" onclick="analytics(['trackEvent', 'Promo', 'minn: Karl Baldacchino', 'għal: Nifs:: Kaos u Poeżija #2', 3]);">
+	<a class="promo  awwissu promo-esej sequence-5 story-80 is-episode" href="/franco-bifo-berardi-karl-baldacchino-nifs-kaos-u-poeżija-2-vuċi-ħoss-storbju/" onclick="analytics(['trackEvent', 'Promo', 'minn: Karl Baldacchino', 'għal: Nifs:: Kaos u Poeżija #2', 3]);">
 		<header>
 	<ul>
 	
@@ -501,7 +503,7 @@
 		
 
 <li  class="multiple-episodes episode-0">
-	<a class="promo  gunju promo-esej story-66 is-episode" href="/franco-bifo-berardi-karl-baldacchino-nifs-kaos-u-poeżija-introduzzjoni/" onclick="analytics(['trackEvent', 'Promo', 'minn: Karl Baldacchino', 'għal: Nifs:: Kaos u Poeżija', 4]);">
+	<a class="promo  gunju promo-esej sequence-5 story-66 is-episode" href="/franco-bifo-berardi-karl-baldacchino-nifs-kaos-u-poeżija-introduzzjoni/" onclick="analytics(['trackEvent', 'Promo', 'minn: Karl Baldacchino', 'għal: Nifs:: Kaos u Poeżija', 4]);">
 		<header>
 	<ul>
 	
@@ -551,7 +553,7 @@
 		
 
 <li  class="multiple-episodes episode-1">
-	<a class="promo  gunju promo-esej story-67 is-episode" href="/franco-bifo-berardi-karl-baldacchino-nifs-kaos-u-poeżija-1-ma-nistax-nieħu-nifs/" onclick="analytics(['trackEvent', 'Promo', 'minn: Karl Baldacchino', 'għal: Nifs:: Kaos u Poeżija #1', 5]);">
+	<a class="promo  gunju promo-esej sequence-5 story-67 is-episode" href="/franco-bifo-berardi-karl-baldacchino-nifs-kaos-u-poeżija-1-ma-nistax-nieħu-nifs/" onclick="analytics(['trackEvent', 'Promo', 'minn: Karl Baldacchino', 'għal: Nifs:: Kaos u Poeżija #1', 5]);">
 		<header>
 	<ul>
 	
@@ -603,7 +605,7 @@
 		
 
 <li >
-	<a class="promo  frar promo-esej story-49" href="/anton-jäger-karl-baldacchino-kollox-iperpolitiku-ġenealoġija-tal-preżent/" onclick="analytics(['trackEvent', 'Promo', 'minn: Karl Baldacchino', 'għal: Kollox Iperpolitiku: Ġenealoġija tal-preżent', 6]);">
+	<a class="promo  frar promo-esej sequence- story-49" href="/anton-jäger-karl-baldacchino-kollox-iperpolitiku-ġenealoġija-tal-preżent/" onclick="analytics(['trackEvent', 'Promo', 'minn: Karl Baldacchino', 'għal: Kollox Iperpolitiku: Ġenealoġija tal-preżent', 6]);">
 		<header>
 	<ul>
 	
@@ -663,7 +665,7 @@ Fl-1989, però — is-sena li fiha ttieħdu dawn <l-m>ir-ritratti </l-m>�
 		
 
 <li >
-	<a class="promo  gunju promo-terminu story-71" href="/il-kliem-fit-teorija-abjad/" onclick="analytics(['trackEvent', 'Promo', 'minn: Karl Baldacchino', 'għal: abjad', 1]);">
+	<a class="promo  gunju promo-terminu sequence- story-71" href="/il-kliem-fit-teorija-abjad/" onclick="analytics(['trackEvent', 'Promo', 'minn: Karl Baldacchino', 'għal: abjad', 1]);">
 		<header>
 	<ul>
 	
@@ -918,7 +920,10 @@ Fl-1989, però — is-sena li fiha ttieħdu dawn <l-m>ir-ritratti </l-m>�
 			
 				<div id="newsletter-container-bottom" class="newsletter-container">
 					<section id="form" data-track-content data-content-name="Homepage" data-content-piece="formola">
-						<iframe src="https://newsletter.aphroconfuso.mt/subscription/form" scrolling="no" title="Abbona fin-newsletter"></iframe>
+						<iframe id="newsletter" class="newsletter-iframe-regular" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form" scrolling="no" title="Abbona fin-newsletter"></iframe>
+<iframe id="newsletter" class="newsletter-iframe-dark" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#201e1d|#908984|0|442093344ewr" scrolling="no" title="Abbona fin-newsletter"></iframe>
+<iframe id="newsletter" class="newsletter-iframe-contrast" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#000000|#ffffff|0|442093344ewr" scrolling="no" title="Abbona fin-newsletter"></iframe>
+
 					</section>
 				</div>
 			
@@ -970,7 +975,15 @@ Fl-1989, però — is-sena li fiha ttieħdu dawn <l-m>ir-ritratti </l-m>�
 		<div id="logotype-container">
 			<a href="/"><img src="/img/logotype.svg" class="logotype" alt="logo: Aphroconfuso" /></a>
 		</div>
-		<div id="email"><a href="mailto:l-edituri@aphroconfuso.mt" class="email">l-edituri@aphroconfuso.mt</a></div>
+		<div id="email">
+			<a href="mailto:l-edituri@aphroconfuso.mt" class="email">l-edituri@aphroconfuso.mt</a>
+		</div>
+		<div class="hide-mobile choose-theme choose-theme-footer">
+			<a id="theme-regular-footer" role="button" tabindex="4">s</a>
+			<a id="theme-dark-footer" role="button" tabindex="5">m</a>
+			<a id="theme-contrast-footer" role="button" tabindex="6">c</a>
+			<a id="theme-system-footer" role="button" tabindex="7">p</a>
+		</div>
 		<div id="copyright"><a href="/drittijiet/" class="copyright">&copy; 2023-2025 Aphroconfuso et al</a></div>
 		<div id="qrcode"><img src="/img/qr/karl-baldacchino.png" width="180" height="180" alt="QR code" /></div>
 		<div id="url">https://aphroconfuso.mt/karl-baldacchino/</div>

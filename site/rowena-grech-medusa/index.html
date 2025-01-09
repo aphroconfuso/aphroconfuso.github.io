@@ -48,7 +48,7 @@ Mela darba, ħmistax-il sena ilu, meta kont għadni tifla, kont ngħix mal-ġeni
 		<link rel="canonical" href="https://aphroconfuso.mt/rowena-grech-medusa/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-f608088e.css">
+		<link rel="stylesheet" href="/css/style-bf33eb9d.css">
 		<script>
 			var
 				audioLoaded,
@@ -133,7 +133,7 @@ Mela darba, ħmistax-il sena ilu, meta kont għadni tifla, kont ngħix mal-ġeni
 				localStorage.setItem('font', size);
 			}
 			const addRemoveTheme = (theme) => {
-				document.body.classList.remove('theme-regular','theme-dark','theme-contrast')
+				document.body.classList.remove('theme-regular','theme-dark','theme-contrast','theme-system')
 				document.body.classList.add(`theme-${ theme }`);
 				localStorage.setItem('theme', theme);
 			}
@@ -164,7 +164,7 @@ Mela darba, ħmistax-il sena ilu, meta kont għadni tifla, kont ngħix mal-ġeni
 				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
 			})();
 		</script>
-		<script src="../script/script-888792.js" type="module"></script>
+		<script src="../script/script-a60607.js" type="module"></script>
 	</head>
 	<body class="show-nav this-month-jannar">
 		<script>initialiseAfterBody();</script>
@@ -201,20 +201,22 @@ Mela darba, ħmistax-il sena ilu, meta kont għadni tifla, kont ngħix mal-ġeni
 					<li class="hide-mobile"><a href="/podcast/">Podcast</a>&hairsp;/&hairsp;<a href="/awdjo/">Awdjo</a></li>
 					<li class="hide-laptop podcastaudio"><a href="/podcast/">Podcast</a><span class="solidus">/</span><a href="/awdjo/">Awdjo</a></li>
 					<li class="hide-mobile"><a href="/kotba-antoloġija-1/" class="menu-antologija-1">Antoloġija 1</a></li>
-					<li class="hide-laptop">&nbsp;</li>
-
-					
-
+					<li class="hide-laptop choose-theme">
+						<a id="theme-regular" role="button" tabindex="0">s</a>
+						<a id="theme-dark" role="button" tabindex="1">m</a>
+						<a id="theme-contrast" role="button" tabindex="2">c</a>
+						<a id="theme-system" role="button" tabindex="3">p</a>
+					</li>
 					<li><a href="/dwarna/">Dwarna</a></li>
 					<li class="hide-laptop"><a href="/kolofon/">Kolofon</a></li>
 					<li><a href="/newsletter/">Newsletter</a></li>
 					<li class="hide-laptop"><a href="/privatezza/">Privatezza</a></li>
 					<li><a href="/bookmarks/">Bookmarks<span id="bookmarks-number"></span></a></li>
-					<li class="hide-laptop" id="text-size-adjust">
-						<a id="font-size-1" href="#">a</a>
-						<a id="font-size-2" href="#">a</a>
-						<a id="font-size-3" href="#">a</a>
-						<a id="font-size-4" href="#">a</a>
+					<li class="hide-laptop choose-theme" id="text-size-adjust">
+						<a id="font-size-1" role="button" tabindex="8">a</a>
+						<a id="font-size-2" role="button" tabindex="9">a</a>
+						<a id="font-size-3" role="button" tabindex="10">a</a>
+						<a id="font-size-4" role="button" tabindex="11">a</a>
 					</li>
 				</menu>
 				<div id="brownline"></div>
@@ -222,7 +224,7 @@ Mela darba, ħmistax-il sena ilu, meta kont għadni tifla, kont ngħix mal-ġeni
 			<div id="message"><!-- --></div>
 			<main id="skipto">
 				
-	<article class="content lulju storja story story-15">
+	<article class="content lulju storja story story-15 sequence-">
 		<header>
 			<ul>
 				<li class="header-label">
@@ -258,13 +260,6 @@ Mela darba, ħmistax-il sena ilu, meta kont għadni tifla, kont ngħix mal-ġeni
 			
 		</header>
 		<div class="container">
-			<section id="grid-max-panel-left-top">
-				
-				
-				
-				
-				
-			</section>
 			<section id="grid-max-panel-right-top">
 				
 				
@@ -473,6 +468,13 @@ Mela darba, ħmistax-il sena ilu, meta kont għadni tifla, kont ngħix mal-ġeni
 				
 				
 			</section>
+			<section id="grid-max-panel-left-top">
+				
+				
+				
+				
+				
+			</section>
 			<section id="grid-max-panel-left-bottom">
 				
 					<aside id="coda">
@@ -513,7 +515,7 @@ Mela darba, ħmistax-il sena ilu, meta kont għadni tifla, kont ngħix mal-ġeni
 		
 
 <li >
-	<a class="promo  novembru promo-poezija story-29" href="/leslie-vassallo-wirja/" onclick="analytics(['trackEvent', 'Promo', 'minn: Medusa', 'għal: Wirja', 1]);">
+	<a class="promo  novembru promo-poezija sequence- story-29" href="/leslie-vassallo-wirja/" onclick="analytics(['trackEvent', 'Promo', 'minn: Medusa', 'għal: Wirja', 1]);">
 		<header>
 	<ul>
 	
@@ -567,7 +569,7 @@ Mela darba, ħmistax-il sena ilu, meta kont għadni tifla, kont ngħix mal-ġeni
 		
 
 <li >
-	<a class="promo  gunju promo-esej story-14" href="/kurt-borg-ġilda/" onclick="analytics(['trackEvent', 'Promo', 'minn: Medusa', 'għal: Ġilda', 2]);">
+	<a class="promo  gunju promo-esej sequence- story-14" href="/kurt-borg-ġilda/" onclick="analytics(['trackEvent', 'Promo', 'minn: Medusa', 'għal: Ġilda', 2]);">
 		<header>
 	<ul>
 	
@@ -621,7 +623,7 @@ Mela darba, ħmistax-il sena ilu, meta kont għadni tifla, kont ngħix mal-ġeni
 		
 
 <li >
-	<a class="promo  dicembru promo-esej story-31" href="/noah-fabri-insalata/" onclick="analytics(['trackEvent', 'Promo', 'minn: Medusa', 'għal: Insalata', 3]);">
+	<a class="promo  dicembru promo-esej sequence- story-31" href="/noah-fabri-insalata/" onclick="analytics(['trackEvent', 'Promo', 'minn: Medusa', 'għal: Insalata', 3]);">
 		<header>
 	<ul>
 	
@@ -831,7 +833,10 @@ Mela darba, ħmistax-il sena ilu, meta kont għadni tifla, kont ngħix mal-ġeni
 			
 				<div id="newsletter-container-bottom" class="newsletter-container">
 					<section id="form" data-track-content data-content-name="Homepage" data-content-piece="formola">
-						<iframe src="https://newsletter.aphroconfuso.mt/subscription/form" scrolling="no" title="Abbona fin-newsletter"></iframe>
+						<iframe id="newsletter" class="newsletter-iframe-regular" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form" scrolling="no" title="Abbona fin-newsletter"></iframe>
+<iframe id="newsletter" class="newsletter-iframe-dark" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#201e1d|#908984|0|442093344ewr" scrolling="no" title="Abbona fin-newsletter"></iframe>
+<iframe id="newsletter" class="newsletter-iframe-contrast" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#000000|#ffffff|0|442093344ewr" scrolling="no" title="Abbona fin-newsletter"></iframe>
+
 					</section>
 				</div>
 			
@@ -883,7 +888,15 @@ Mela darba, ħmistax-il sena ilu, meta kont għadni tifla, kont ngħix mal-ġeni
 		<div id="logotype-container">
 			<a href="/"><img src="/img/logotype.svg" class="logotype" alt="logo: Aphroconfuso" /></a>
 		</div>
-		<div id="email"><a href="mailto:l-edituri@aphroconfuso.mt" class="email">l-edituri@aphroconfuso.mt</a></div>
+		<div id="email">
+			<a href="mailto:l-edituri@aphroconfuso.mt" class="email">l-edituri@aphroconfuso.mt</a>
+		</div>
+		<div class="hide-mobile choose-theme choose-theme-footer">
+			<a id="theme-regular-footer" role="button" tabindex="4">s</a>
+			<a id="theme-dark-footer" role="button" tabindex="5">m</a>
+			<a id="theme-contrast-footer" role="button" tabindex="6">c</a>
+			<a id="theme-system-footer" role="button" tabindex="7">p</a>
+		</div>
 		<div id="copyright"><a href="/drittijiet/" class="copyright">&copy; 2023-2025 Aphroconfuso et al</a></div>
 		<div id="qrcode"><img src="/img/qr/rowena-grech-medusa.png" width="180" height="180" alt="QR code" /></div>
 		<div id="url">https://aphroconfuso.mt/rowena-grech-medusa/</div>
