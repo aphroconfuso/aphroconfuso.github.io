@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 		
-	<title>Djarju 09.04.2024 Se nħallihom hawn, jgħidu tagħhom ta’ Loranne Vella · Aphroconfuso</title>
+	<title>09.04.2024 Se nħallihom hawn, jgħidu tagħhom ta’ Loranne Vella · Aphroconfuso</title>
 	<meta content="Dawn il-ħassieba-kittieba kollha kemm huma donnhom tal-istess fehma: “Itlaq il-kotba minn idejk u oħroġ ’il barra. Mur imxi u ħallik mill-kitba ta’ ħaddieħor.” Għandi ħabta nogħxa naqraha kitba bħal din. Imma kultant, meta ninduna li għaddiet ġurnata sħiħa u bqajt ma ħriġtx mid-dar biex nilħaq illesti kollox u nsib ħin naqra u nikteb, inħossni niddispra. Jekk nobdi l-ordni li tgħidli mmur nimxi, fil-pront nikser it-tieni waħda li tgħidli biex ma nintrabatx wisq mal-kotba li naqra. Weħilt f’din id-dilemma. Moħħni biex naqra kitba dwar il-mixi miktuba minn ħassieba li kienu jimxu bejn sitta u tmien sigħat kuljum imbagħad b’xi mod kienu jsibu wkoll ħin biżżejjed biex jiktbu dwar dan u dwar dak kollu li qanqalhom u ħassibhom huma u jimxu fil-kampanja u jitilgħu l-għoljiet. Imma jien biex naqra kitbiethom ma nsibx ħin noħroġ mixja, imqar nofs siegħa kuljum." name="description">
 	<meta property="og:image" content="https://aphroconfuso.mt/stampi/social_Whats_App_Image_2024_05_15_at_18_16_50_a821800e65.jpg">
 	
@@ -15,7 +15,7 @@
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@aphroconfuso">
 	<meta name="twitter:creator" content="@aphroconfuso">
-	<meta name="twitter:title" content="Djarju 09.04.2024 Se nħallihom hawn, jgħidu tagħhom ta’ Loranne Vella">
+	<meta name="twitter:title" content="09.04.2024 Se nħallihom hawn, jgħidu tagħhom ta’ Loranne Vella">
 	<meta name="twitter:description" content="Dawn il-ħassieba-kittieba kollha kemm huma donnhom tal-istess fehma: “Itlaq il-kotba minn idejk u oħroġ ’il barra. Mur imxi u ħallik mill-kitba ta’ ħaddieħor.” Għandi ħabta nogħxa naqraha kitba bħal din. Imma kultant, meta ninduna li għaddiet ġurnata sħiħa u bqajt ma ħriġtx mid-dar biex nilħaq illesti kollox u nsib ħin naqra u nikteb, inħossni niddispra. Jekk nobdi l-ordni li tgħidli mmur nimxi, fil-pront nikser it-tieni waħda li tgħidli biex ma nintrabatx wisq mal-kotba li naqra. Weħilt f’din id-dilemma. Moħħni biex naqra kitba dwar il-mixi miktuba minn ħassieba li kienu jimxu bejn sitta u tmien sigħat kuljum imbagħad b’xi mod kienu jsibu wkoll ħin biżżejjed biex jiktbu dwar dan u dwar dak kollu li qanqalhom u ħassibhom huma u jimxu fil-kampanja u jitilgħu l-għoljiet. Imma jien biex naqra kitbiethom ma nsibx ħin noħroġ mixja, imqar nofs siegħa kuljum.">
 	<meta name="twitter:image" content="https://aphroconfuso.mt/stampi/social_Whats_App_Image_2024_05_15_at_18_16_50_a821800e65.jpg">
 	<meta name="twitter:image:alt" content="Kotba bil-Franċiż u djarji mifruxin fuq xulxin.">
@@ -118,24 +118,6 @@
 				}
 				return "";
 			}
-			const addRemoveFontSizeClass = (size) => {
-				document.body.classList.remove('font-size-1','font-size-2','font-size-3','font-size-4')
-				document.body.classList.add(`font-size-${ size }`);
-				localStorage.setItem('font', size);
-			}
-			const addRemoveTheme = (theme) => {
-				document.body.classList.remove('theme-regular','theme-dark','theme-contrast','theme-system')
-				document.body.classList.add(`theme-${ theme }`);
-				localStorage.setItem('theme', theme);
-			}
-			const initialiseAfterBody = () => {
-				document.body.classList.add(location.hostname.replace(/\.?aphroconfuso\.mt/, '') || 'production');
-				addRemoveFontSizeClass(localStorage.getItem('font') || 1);
-				addRemoveTheme(localStorage.getItem('theme') || 'regular');
-				if (localStorage.getItem(`tw-${urlSlug}`)) {
-					document.body.classList.add('trigger-warning-closed');
-				}
-			}
 			var _paq = window._paq = window._paq || [];
 			const analytics = (arrayInfo) => {
 				if (location.host !== 'aphroconfuso.mt') console.log(arrayInfo);
@@ -154,8 +136,28 @@
 				var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
 				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
 			})();
+			const addRemoveFontSizeClass = (size) => {
+				document.body.classList.remove('font-size-1','font-size-2','font-size-3','font-size-4')
+				document.body.classList.add(`font-size-${ size }`);
+				localStorage.setItem('font', size);
+			}
+			const addRemoveTheme = (theme, stored) => {
+				document.body.classList.remove('theme-regular','theme-dark','theme-contrast','theme-system')
+				document.body.classList.add(`theme-${ theme }`);
+				localStorage.setItem('theme', theme);
+				if (stored && theme === 'regular') return;
+				analytics(['trackEvent', 'Theme', `${ stored ? 'stored' : 'clicked' }`, theme]);
+			}
+			const initialiseAfterBody = () => {
+				document.body.classList.add(location.hostname.replace(/\.?aphroconfuso\.mt/, '') || 'production');
+				addRemoveFontSizeClass(localStorage.getItem('font') || 1);
+				addRemoveTheme(localStorage.getItem('theme') || 'regular', true);
+				if (localStorage.getItem(`tw-${urlSlug}`)) {
+					document.body.classList.add('trigger-warning-closed');
+				}
+			}
 		</script>
-		<script src="../script/script-a60607.js" type="module"></script>
+		<script src="../script/script-d3d2c7.js" type="module"></script>
 	</head>
 	<body class="show-nav this-month-jannar">
 		<script>initialiseAfterBody();</script>
@@ -383,7 +385,7 @@
 				
 				
 					<aside id="letters-solicit">
-						<p>Iktbilna dwar dan ix-xogħol fuq <l-m>l-indirizz</l-m> <a href="mailto:ittri@aphroconfuso.mt?subject=Djarju 09.04.2024 Se nħallihom hawn, jgħidu tagħhom ta’ Loranne Vella" class="outline">ittri@aphroconfuso.mt</a>. Jekk jogħġbok inkludi ismek u fejn toqgħod. Kontribuzzjonijiet anonimi ma jiġux ikkunsidrati.</p>
+						<p>Iktbilna dwar dan ix-xogħol fuq <l-m>l-indirizz</l-m> <a href="mailto:ittri@aphroconfuso.mt?subject=09.04.2024 Se nħallihom hawn, jgħidu tagħhom ta’ Loranne Vella" class="outline">ittri@aphroconfuso.mt</a>. Jekk jogħġbok inkludi ismek u fejn toqgħod. Kontribuzzjonijiet anonimi ma jiġux ikkunsidrati.</p>
 					</aside>
 				
 			</section>

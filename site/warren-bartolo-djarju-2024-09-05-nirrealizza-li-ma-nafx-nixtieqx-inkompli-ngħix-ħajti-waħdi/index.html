@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 		
-	<title>Djarju 05.09.2024 Nirrealizza li ma nafx nixtieqx inkompli ngħix ħajti waħdi ta’ Warren Bartolo · Aphroconfuso</title>
+	<title>05.09.2024 Nirrealizza li ma nafx nixtieqx inkompli ngħix ħajti waħdi ta’ Warren Bartolo · Aphroconfuso</title>
 	<meta content="Fis-sena 1976, Andy Warhol beda jżomm id-djarju tiegħu billi jiddettah lill-kittieba Pat
 Hackett (is-segretarja tal-Factory) fuq it-telefown u baqa’ sejjer hekk ħdax-il sena. Bl-istess mod, David Wojnarowicz ipprefera jiddetta d-djarju tiegħu milli jiktbu. Huwa rreġistra leħnu waqt li qed jitkellem fuq l-audio tape mill-1981 sal-1989. Iktar tard, dawn ġew ippubblikati bħala Weight of The Earth. B’kollox irrekordja ħdax-il djarju audio tape, mill-1981 sal-1982, imbagħad reġa’ beda fl-1988 sal-1989. “Qed inpejjep sigarett u nistenna li xagħri jinxef, nipprova nifhem x’se nagħmel.” Xewqa li d-djarju tiegħi niddettah ukoll; nimxi u nikteb, nimxi u niddetta d-djarju." name="description">
 	<meta property="og:image" content="https://aphroconfuso.mt/stampi/social_warren_11_ec4e66efca.jpg">
@@ -16,7 +16,7 @@ Hackett (is-segretarja tal-Factory) fuq it-telefown u baqa’ sejjer hekk ħdax-
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@aphroconfuso">
 	<meta name="twitter:creator" content="@aphroconfuso">
-	<meta name="twitter:title" content="Djarju 05.09.2024 Nirrealizza li ma nafx nixtieqx inkompli ngħix ħajti waħdi ta’ Warren Bartolo">
+	<meta name="twitter:title" content="05.09.2024 Nirrealizza li ma nafx nixtieqx inkompli ngħix ħajti waħdi ta’ Warren Bartolo">
 	<meta name="twitter:description" content="Fis-sena 1976, Andy Warhol beda jżomm id-djarju tiegħu billi jiddettah lill-kittieba Pat
 Hackett (is-segretarja tal-Factory) fuq it-telefown u baqa’ sejjer hekk ħdax-il sena. Bl-istess mod, David Wojnarowicz ipprefera jiddetta d-djarju tiegħu milli jiktbu. Huwa rreġistra leħnu waqt li qed jitkellem fuq l-audio tape mill-1981 sal-1989. Iktar tard, dawn ġew ippubblikati bħala Weight of The Earth. B’kollox irrekordja ħdax-il djarju audio tape, mill-1981 sal-1982, imbagħad reġa’ beda fl-1988 sal-1989. “Qed inpejjep sigarett u nistenna li xagħri jinxef, nipprova nifhem x’se nagħmel.” Xewqa li d-djarju tiegħi niddettah ukoll; nimxi u nikteb, nimxi u niddetta d-djarju.">
 	<meta name="twitter:image" content="https://aphroconfuso.mt/stampi/social_warren_11_ec4e66efca.jpg">
@@ -120,24 +120,6 @@ Hackett (is-segretarja tal-Factory) fuq it-telefown u baqa’ sejjer hekk ħdax-
 				}
 				return "";
 			}
-			const addRemoveFontSizeClass = (size) => {
-				document.body.classList.remove('font-size-1','font-size-2','font-size-3','font-size-4')
-				document.body.classList.add(`font-size-${ size }`);
-				localStorage.setItem('font', size);
-			}
-			const addRemoveTheme = (theme) => {
-				document.body.classList.remove('theme-regular','theme-dark','theme-contrast','theme-system')
-				document.body.classList.add(`theme-${ theme }`);
-				localStorage.setItem('theme', theme);
-			}
-			const initialiseAfterBody = () => {
-				document.body.classList.add(location.hostname.replace(/\.?aphroconfuso\.mt/, '') || 'production');
-				addRemoveFontSizeClass(localStorage.getItem('font') || 1);
-				addRemoveTheme(localStorage.getItem('theme') || 'regular');
-				if (localStorage.getItem(`tw-${urlSlug}`)) {
-					document.body.classList.add('trigger-warning-closed');
-				}
-			}
 			var _paq = window._paq = window._paq || [];
 			const analytics = (arrayInfo) => {
 				if (location.host !== 'aphroconfuso.mt') console.log(arrayInfo);
@@ -156,8 +138,28 @@ Hackett (is-segretarja tal-Factory) fuq it-telefown u baqa’ sejjer hekk ħdax-
 				var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
 				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
 			})();
+			const addRemoveFontSizeClass = (size) => {
+				document.body.classList.remove('font-size-1','font-size-2','font-size-3','font-size-4')
+				document.body.classList.add(`font-size-${ size }`);
+				localStorage.setItem('font', size);
+			}
+			const addRemoveTheme = (theme, stored) => {
+				document.body.classList.remove('theme-regular','theme-dark','theme-contrast','theme-system')
+				document.body.classList.add(`theme-${ theme }`);
+				localStorage.setItem('theme', theme);
+				if (stored && theme === 'regular') return;
+				analytics(['trackEvent', 'Theme', `${ stored ? 'stored' : 'clicked' }`, theme]);
+			}
+			const initialiseAfterBody = () => {
+				document.body.classList.add(location.hostname.replace(/\.?aphroconfuso\.mt/, '') || 'production');
+				addRemoveFontSizeClass(localStorage.getItem('font') || 1);
+				addRemoveTheme(localStorage.getItem('theme') || 'regular', true);
+				if (localStorage.getItem(`tw-${urlSlug}`)) {
+					document.body.classList.add('trigger-warning-closed');
+				}
+			}
 		</script>
-		<script src="../script/script-a60607.js" type="module"></script>
+		<script src="../script/script-d3d2c7.js" type="module"></script>
 	</head>
 	<body class="show-nav this-month-jannar">
 		<script>initialiseAfterBody();</script>
@@ -421,7 +423,7 @@ Hackett (is-segretarja tal-Factory) fuq it-telefown u baqa’ sejjer hekk ħdax-
 				
 				
 					<aside id="letters-solicit">
-						<p>Iktbilna dwar dan ix-xogħol fuq <l-m>l-indirizz</l-m> <a href="mailto:ittri@aphroconfuso.mt?subject=Djarju 05.09.2024 Nirrealizza li ma nafx nixtieqx inkompli ngħix ħajti waħdi ta’ Warren Bartolo" class="outline">ittri@aphroconfuso.mt</a>. Jekk jogħġbok inkludi ismek u fejn toqgħod. Kontribuzzjonijiet anonimi ma jiġux ikkunsidrati.</p>
+						<p>Iktbilna dwar dan ix-xogħol fuq <l-m>l-indirizz</l-m> <a href="mailto:ittri@aphroconfuso.mt?subject=05.09.2024 Nirrealizza li ma nafx nixtieqx inkompli ngħix ħajti waħdi ta’ Warren Bartolo" class="outline">ittri@aphroconfuso.mt</a>. Jekk jogħġbok inkludi ismek u fejn toqgħod. Kontribuzzjonijiet anonimi ma jiġux ikkunsidrati.</p>
 					</aside>
 				
 			</section>

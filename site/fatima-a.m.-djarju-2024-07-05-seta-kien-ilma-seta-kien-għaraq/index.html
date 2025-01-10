@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 		
-	<title>Djarju 05.07.2024 seta’ kien ilma, seta’ kien għaraq ta’ fatima a.m. · Aphroconfuso</title>
+	<title>05.07.2024 seta’ kien ilma, seta’ kien għaraq ta’ fatima a.m. · Aphroconfuso</title>
 	<meta content="fittixt harness għall-avveniment, forsi nibda nifhem kif il-lingwa tal-estetika tista’ tiżvolġi b’mod li tiġġissem mal-performance, il-fiżiku u l-moviment. tfajt ġismi f’kobba bokkli u polyester u bizzilla fjakka, ix-xaħam madwar żaqqi ċirku, jinqasam fi tnejn għall-ewwel, imbagħad fi tlieta. meta npoġġi, it-torso jintewa f’mitt biċċa, il-laħam issikkat taħt iċ-ċinturini madwar riġlejja jiżżerżaq minn postu, joħroġ isellimli minn kull banda. kieku kelli l-ikel fl-istonku, kont nirremetti. ngħid lil sieħbi li ġarrejt miegħi għal din l-okkażjoni li qisni l-istess majjal li kienu jonxru niesu fi żmienhom is-Serbja, ġisem lest biex jiġi mitfugħ fuq gozz ħatab jaqbad u jittiekel bejn familja t’għoxrin. nidħqu t-tnejn li aħna, għax jekk ma tatni xejn, l-iskumdità li nħoss li nokkupa dan il-ġisem, għall-inqas tatni l-għerf li niċċajta u nobżqilha f’wiċċha, u nżejjinha b’mod li kulħadd iħossu parti miċ-ċajta. imma ċ-ċajta hija ċajta f’wiċċi, f’ġismi, li xi drabi barka, imma drabi oħra bħal dawn, bejn iċ-ċineg u d-drapp li l-ġilda tifga fih, huwa ħabs. niftakar f’“Ġismi Battikata”. il-ostja jekk hux battikata." name="description">
 	<meta property="og:image" content="https://aphroconfuso.mt/stampi/social_fatima_djarju_2_social_dac2bfaacf.jpg">
 	
@@ -15,7 +15,7 @@
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@aphroconfuso">
 	<meta name="twitter:creator" content="@aphroconfuso">
-	<meta name="twitter:title" content="Djarju 05.07.2024 seta’ kien ilma, seta’ kien għaraq ta’ fatima a.m.">
+	<meta name="twitter:title" content="05.07.2024 seta’ kien ilma, seta’ kien għaraq ta’ fatima a.m.">
 	<meta name="twitter:description" content="fittixt harness għall-avveniment, forsi nibda nifhem kif il-lingwa tal-estetika tista’ tiżvolġi b’mod li tiġġissem mal-performance, il-fiżiku u l-moviment. tfajt ġismi f’kobba bokkli u polyester u bizzilla fjakka, ix-xaħam madwar żaqqi ċirku, jinqasam fi tnejn għall-ewwel, imbagħad fi tlieta. meta npoġġi, it-torso jintewa f’mitt biċċa, il-laħam issikkat taħt iċ-ċinturini madwar riġlejja jiżżerżaq minn postu, joħroġ isellimli minn kull banda. kieku kelli l-ikel fl-istonku, kont nirremetti. ngħid lil sieħbi li ġarrejt miegħi għal din l-okkażjoni li qisni l-istess majjal li kienu jonxru niesu fi żmienhom is-Serbja, ġisem lest biex jiġi mitfugħ fuq gozz ħatab jaqbad u jittiekel bejn familja t’għoxrin. nidħqu t-tnejn li aħna, għax jekk ma tatni xejn, l-iskumdità li nħoss li nokkupa dan il-ġisem, għall-inqas tatni l-għerf li niċċajta u nobżqilha f’wiċċha, u nżejjinha b’mod li kulħadd iħossu parti miċ-ċajta. imma ċ-ċajta hija ċajta f’wiċċi, f’ġismi, li xi drabi barka, imma drabi oħra bħal dawn, bejn iċ-ċineg u d-drapp li l-ġilda tifga fih, huwa ħabs. niftakar f’“Ġismi Battikata”. il-ostja jekk hux battikata.">
 	<meta name="twitter:image" content="https://aphroconfuso.mt/stampi/social_fatima_djarju_2_social_dac2bfaacf.jpg">
 	<meta name="twitter:image:alt" content="Inkwadratura astratta ta’ ġilda fuq sfond abjad.">
@@ -118,24 +118,6 @@
 				}
 				return "";
 			}
-			const addRemoveFontSizeClass = (size) => {
-				document.body.classList.remove('font-size-1','font-size-2','font-size-3','font-size-4')
-				document.body.classList.add(`font-size-${ size }`);
-				localStorage.setItem('font', size);
-			}
-			const addRemoveTheme = (theme) => {
-				document.body.classList.remove('theme-regular','theme-dark','theme-contrast','theme-system')
-				document.body.classList.add(`theme-${ theme }`);
-				localStorage.setItem('theme', theme);
-			}
-			const initialiseAfterBody = () => {
-				document.body.classList.add(location.hostname.replace(/\.?aphroconfuso\.mt/, '') || 'production');
-				addRemoveFontSizeClass(localStorage.getItem('font') || 1);
-				addRemoveTheme(localStorage.getItem('theme') || 'regular');
-				if (localStorage.getItem(`tw-${urlSlug}`)) {
-					document.body.classList.add('trigger-warning-closed');
-				}
-			}
 			var _paq = window._paq = window._paq || [];
 			const analytics = (arrayInfo) => {
 				if (location.host !== 'aphroconfuso.mt') console.log(arrayInfo);
@@ -154,8 +136,28 @@
 				var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
 				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
 			})();
+			const addRemoveFontSizeClass = (size) => {
+				document.body.classList.remove('font-size-1','font-size-2','font-size-3','font-size-4')
+				document.body.classList.add(`font-size-${ size }`);
+				localStorage.setItem('font', size);
+			}
+			const addRemoveTheme = (theme, stored) => {
+				document.body.classList.remove('theme-regular','theme-dark','theme-contrast','theme-system')
+				document.body.classList.add(`theme-${ theme }`);
+				localStorage.setItem('theme', theme);
+				if (stored && theme === 'regular') return;
+				analytics(['trackEvent', 'Theme', `${ stored ? 'stored' : 'clicked' }`, theme]);
+			}
+			const initialiseAfterBody = () => {
+				document.body.classList.add(location.hostname.replace(/\.?aphroconfuso\.mt/, '') || 'production');
+				addRemoveFontSizeClass(localStorage.getItem('font') || 1);
+				addRemoveTheme(localStorage.getItem('theme') || 'regular', true);
+				if (localStorage.getItem(`tw-${urlSlug}`)) {
+					document.body.classList.add('trigger-warning-closed');
+				}
+			}
 		</script>
-		<script src="../script/script-a60607.js" type="module"></script>
+		<script src="../script/script-d3d2c7.js" type="module"></script>
 	</head>
 	<body class="show-nav this-month-jannar">
 		<script>initialiseAfterBody();</script>
@@ -347,7 +349,7 @@
 				
 				
 					<aside id="letters-solicit">
-						<p>Iktbilna dwar dan ix-xogħol fuq <l-m>l-indirizz</l-m> <a href="mailto:ittri@aphroconfuso.mt?subject=Djarju 05.07.2024 seta’ kien ilma, seta’ kien għaraq ta’ fatima a.m." class="outline">ittri@aphroconfuso.mt</a>. Jekk jogħġbok inkludi ismek u fejn toqgħod. Kontribuzzjonijiet anonimi ma jiġux ikkunsidrati.</p>
+						<p>Iktbilna dwar dan ix-xogħol fuq <l-m>l-indirizz</l-m> <a href="mailto:ittri@aphroconfuso.mt?subject=05.07.2024 seta’ kien ilma, seta’ kien għaraq ta’ fatima a.m." class="outline">ittri@aphroconfuso.mt</a>. Jekk jogħġbok inkludi ismek u fejn toqgħod. Kontribuzzjonijiet anonimi ma jiġux ikkunsidrati.</p>
 					</aside>
 				
 			</section>

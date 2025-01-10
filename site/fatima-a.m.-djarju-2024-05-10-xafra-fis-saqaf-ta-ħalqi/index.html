@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 		
-	<title>Djarju 10.05.2024 xafra fis-saqaf ta’ ħalqi ta’ fatima a.m. · Aphroconfuso</title>
+	<title>10.05.2024 xafra fis-saqaf ta’ ħalqi ta’ fatima a.m. · Aphroconfuso</title>
 	<meta content="it-traduzzjoni hija ħabel. bħalma tħoss il-ħabel jiekol il-ġogi f’sessjoni shibari, inħoss il-lingwa bħala xafra fis-saqaf ta’ ħalqi. hemm intersezzjoni li għad m’għandix kliem għaliha, imma qed nirreferi għal dik l-intersezzjoni bejn l-esperjenza, l-intellettwaliżmu, il-ħajja, il-ġisem, alla, il-ħaxi jew l-erotiċiżmu li mhuwiex lineari (jiġifieri t-tip ta’ espressjoni sesswali fejn m’hemmx punt A li jwassal għal punt B) jew in-nuqqas ta’ sess penetrattiv f’isem l-erotiċiżmu. iktar ma naqra fuq il-kink u d-dominazzjoni, inqas jinteressani li niskopri l-iġsma b’dan il-mod. kważi nixtieq nerġa’ nsir tifla, jew tifel, nibni ġismi mill-ġdid. forsi nibni l-lingwa mill-ġdid. spiss naħseb fuq il-possibbiltà li nsir omm tiegħi nnifsi, imma ommi mill-ewwel ġurnata li twelidt." name="description">
 	<meta property="og:image" content="https://aphroconfuso.mt/stampi/social_fatima_am_djarju_1_social_11bf3c1570.jpg">
 	
@@ -15,7 +15,7 @@
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@aphroconfuso">
 	<meta name="twitter:creator" content="@aphroconfuso">
-	<meta name="twitter:title" content="Djarju 10.05.2024 xafra fis-saqaf ta’ ħalqi ta’ fatima a.m.">
+	<meta name="twitter:title" content="10.05.2024 xafra fis-saqaf ta’ ħalqi ta’ fatima a.m.">
 	<meta name="twitter:description" content="it-traduzzjoni hija ħabel. bħalma tħoss il-ħabel jiekol il-ġogi f’sessjoni shibari, inħoss il-lingwa bħala xafra fis-saqaf ta’ ħalqi. hemm intersezzjoni li għad m’għandix kliem għaliha, imma qed nirreferi għal dik l-intersezzjoni bejn l-esperjenza, l-intellettwaliżmu, il-ħajja, il-ġisem, alla, il-ħaxi jew l-erotiċiżmu li mhuwiex lineari (jiġifieri t-tip ta’ espressjoni sesswali fejn m’hemmx punt A li jwassal għal punt B) jew in-nuqqas ta’ sess penetrattiv f’isem l-erotiċiżmu. iktar ma naqra fuq il-kink u d-dominazzjoni, inqas jinteressani li niskopri l-iġsma b’dan il-mod. kważi nixtieq nerġa’ nsir tifla, jew tifel, nibni ġismi mill-ġdid. forsi nibni l-lingwa mill-ġdid. spiss naħseb fuq il-possibbiltà li nsir omm tiegħi nnifsi, imma ommi mill-ewwel ġurnata li twelidt.">
 	<meta name="twitter:image" content="https://aphroconfuso.mt/stampi/social_fatima_am_djarju_1_social_11bf3c1570.jpg">
 	<meta name="twitter:image:alt" content="Id mara liebsa ċ-ċurkett tat-tieġ, tistrieħ fuq sieq ta&#39; siġġu tal-kromju, b&#39;sigarett imqabbad bil-ġamra titwal bejn subajha..">
@@ -118,24 +118,6 @@
 				}
 				return "";
 			}
-			const addRemoveFontSizeClass = (size) => {
-				document.body.classList.remove('font-size-1','font-size-2','font-size-3','font-size-4')
-				document.body.classList.add(`font-size-${ size }`);
-				localStorage.setItem('font', size);
-			}
-			const addRemoveTheme = (theme) => {
-				document.body.classList.remove('theme-regular','theme-dark','theme-contrast','theme-system')
-				document.body.classList.add(`theme-${ theme }`);
-				localStorage.setItem('theme', theme);
-			}
-			const initialiseAfterBody = () => {
-				document.body.classList.add(location.hostname.replace(/\.?aphroconfuso\.mt/, '') || 'production');
-				addRemoveFontSizeClass(localStorage.getItem('font') || 1);
-				addRemoveTheme(localStorage.getItem('theme') || 'regular');
-				if (localStorage.getItem(`tw-${urlSlug}`)) {
-					document.body.classList.add('trigger-warning-closed');
-				}
-			}
 			var _paq = window._paq = window._paq || [];
 			const analytics = (arrayInfo) => {
 				if (location.host !== 'aphroconfuso.mt') console.log(arrayInfo);
@@ -154,8 +136,28 @@
 				var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
 				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
 			})();
+			const addRemoveFontSizeClass = (size) => {
+				document.body.classList.remove('font-size-1','font-size-2','font-size-3','font-size-4')
+				document.body.classList.add(`font-size-${ size }`);
+				localStorage.setItem('font', size);
+			}
+			const addRemoveTheme = (theme, stored) => {
+				document.body.classList.remove('theme-regular','theme-dark','theme-contrast','theme-system')
+				document.body.classList.add(`theme-${ theme }`);
+				localStorage.setItem('theme', theme);
+				if (stored && theme === 'regular') return;
+				analytics(['trackEvent', 'Theme', `${ stored ? 'stored' : 'clicked' }`, theme]);
+			}
+			const initialiseAfterBody = () => {
+				document.body.classList.add(location.hostname.replace(/\.?aphroconfuso\.mt/, '') || 'production');
+				addRemoveFontSizeClass(localStorage.getItem('font') || 1);
+				addRemoveTheme(localStorage.getItem('theme') || 'regular', true);
+				if (localStorage.getItem(`tw-${urlSlug}`)) {
+					document.body.classList.add('trigger-warning-closed');
+				}
+			}
 		</script>
-		<script src="../script/script-a60607.js" type="module"></script>
+		<script src="../script/script-d3d2c7.js" type="module"></script>
 	</head>
 	<body class="show-nav this-month-jannar">
 		<script>initialiseAfterBody();</script>
@@ -335,7 +337,7 @@
 				
 				
 					<aside id="letters-solicit">
-						<p>Iktbilna dwar dan ix-xogħol fuq <l-m>l-indirizz</l-m> <a href="mailto:ittri@aphroconfuso.mt?subject=Djarju 10.05.2024 xafra fis-saqaf ta’ ħalqi ta’ fatima a.m." class="outline">ittri@aphroconfuso.mt</a>. Jekk jogħġbok inkludi ismek u fejn toqgħod. Kontribuzzjonijiet anonimi ma jiġux ikkunsidrati.</p>
+						<p>Iktbilna dwar dan ix-xogħol fuq <l-m>l-indirizz</l-m> <a href="mailto:ittri@aphroconfuso.mt?subject=10.05.2024 xafra fis-saqaf ta’ ħalqi ta’ fatima a.m." class="outline">ittri@aphroconfuso.mt</a>. Jekk jogħġbok inkludi ismek u fejn toqgħod. Kontribuzzjonijiet anonimi ma jiġux ikkunsidrati.</p>
 					</aside>
 				
 			</section>
