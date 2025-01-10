@@ -655,29 +655,6 @@ l-ispots tal-konsulenzi romantiċi tat-tfal bravi Nsara aged 13 and up",
 		}
 		,
 		{
-			"id": "https://aphroconfuso.mt/leslie-vassallo-marċ-maqbuż/",
-			"url": "https://aphroconfuso.mt/leslie-vassallo-marċ-maqbuż/",
-			"title": "Marċ Maqbuż",
-			"author": "",
-			"content_html": "Ix-xitwa tmut hekk—
-Gżira—jew bastiment—jgħibu fiċ-ċpar;
-Riefnu jiġbed nifs sagħtar—
-Berwieq għarwien fuq irdum,
-wiċċ nemex tal-bużbież;
-iħirsa—jew aħna—max-xifer.
-
-Reżħa titlajja fi rkejjen, fuq għetiebi;
-F’triq dejqa, antika, fi kmajra
-xi ħadd jonqox ħajja—jew mit—f’zokk lewża;
-Tifkira tiġi, minn imkien—jew minn xmara—għoddha taħsdek,
-tmexxik fiha b’ħarsa kaħla, b’xofftejn ħajra,
-sa tħallik—jew tħalliha—f’belt labirint.
-",
-			"date_published": "2023-11-23T06:00:00.000Z",
-			"date_updated": "2024-12-14T20:29:37.318Z"
-		}
-		,
-		{
 			"id": "https://aphroconfuso.mt/leslie-vassallo-wirja/",
 			"url": "https://aphroconfuso.mt/leslie-vassallo-wirja/",
 			"title": "Wirja",
@@ -700,6 +677,29 @@ razzett jidwi daħka mit-twieqi, qasab iħaxwex riħ.
 ",
 			"date_published": "2023-11-23T06:00:00.000Z",
 			"date_updated": "2024-06-10T21:51:32.697Z"
+		}
+		,
+		{
+			"id": "https://aphroconfuso.mt/leslie-vassallo-marċ-maqbuż/",
+			"url": "https://aphroconfuso.mt/leslie-vassallo-marċ-maqbuż/",
+			"title": "Marċ Maqbuż",
+			"author": "",
+			"content_html": "Ix-xitwa tmut hekk—
+Gżira—jew bastiment—jgħibu fiċ-ċpar;
+Riefnu jiġbed nifs sagħtar—
+Berwieq għarwien fuq irdum,
+wiċċ nemex tal-bużbież;
+iħirsa—jew aħna—max-xifer.
+
+Reżħa titlajja fi rkejjen, fuq għetiebi;
+F’triq dejqa, antika, fi kmajra
+xi ħadd jonqox ħajja—jew mit—f’zokk lewża;
+Tifkira tiġi, minn imkien—jew minn xmara—għoddha taħsdek,
+tmexxik fiha b’ħarsa kaħla, b’xofftejn ħajra,
+sa tħallik—jew tħalliha—f’belt labirint.
+",
+			"date_published": "2023-11-23T06:00:00.000Z",
+			"date_updated": "2024-12-14T20:29:37.318Z"
 		}
 		,
 		{
@@ -1177,7 +1177,7 @@ jiddependi xi tfisser b’ġentrifikazzjoni u ħallejtu b’hekk",
 			"author": "",
 			"content_html": "Il-Malti jitkellem dwar il-forom tal-verbi. Bl-istess mod, hemm il-forom ta’ kif nippożizzjonaw ruħna meta nkunu reqdin. Fil-forma nsibu l-kontenut—dal-prinċipju narawh fil-qasam tal-bini u f’dak ta’ kif infasslu l-għodod tal-komunikazzjoni tagħna. Il-forom tal-verbi jiddeterminaw it-tifsira. Bl-istess mod, il-forom ta’ kif norqdu u nindifnu kollha għandhom il-konnotazzjonijiet tagħhom.",
 			"date_published": "2025-01-10T21:00:00.000Z",
-			"date_updated": "2025-01-10T17:11:56.535Z"
+			"date_updated": "2025-01-10T20:40:06.981Z"
 		}
 		,
 		{
@@ -1206,7 +1206,7 @@ jiddependi xi tfisser b’ġentrifikazzjoni u ħallejtu b’hekk",
 	mal-mota&lt;br&gt;
 	ta’ San Kerrew&lt;/em&gt;&lt;/p&gt;",
 			"date_published": "2025-01-10T21:01:00.000Z",
-			"date_updated": "2025-01-10T17:11:44.937Z"
+			"date_updated": "2025-01-10T20:40:34.479Z"
 		}
 		
 	]
