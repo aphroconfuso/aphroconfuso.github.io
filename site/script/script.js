@@ -132,7 +132,6 @@ const initialiseBookmarksList = () => {
 		item.issueMonthYear = itemIssueMonthYear;
 
 		const [, oldKeyType, oldKeyId] = oldKey.split(/(text|audio)-/);
-		// // console.log('oldKeyType', oldKeyType);
 		let updateFormat = false;
 		let discardBookmark = false;
 
@@ -167,10 +166,7 @@ const initialiseBookmarksList = () => {
 			bookmarksArray.push(item);
 		}
 
-		// console.log(bookmarksArray);
-
 		if (updateFormat || discardBookmark) {
-			console.log('Deleting', oldKey);
 			delete bookmarksList[oldKey];
 		};
 	});
@@ -241,7 +237,6 @@ const showBookmarksInPromos = (bookmarksArray) => {
 		});
 		document.querySelectorAll(`article.story-${ storyId } > header`).forEach((element) => {
 			const minutes = numberify(parseInt(remaining / readersWordsPerSecond / 60), ['minuta', 'minuti']);
-			console.log(minutes, remaining, readersWordsPerSecond);
 			const bookmarkContainer = document.createElement("aside");
 			bookmarkContainer.classList.add("bookmark-compact");
 			const bookmarkLink = document.createElement("a");
@@ -259,7 +254,6 @@ const showBookmarksInPromos = (bookmarksArray) => {
 
 // REFACTOR: bundle from shared component
 const numberify = (number, words = ['kelma', 'kelmiet']) => {
-	console.log('num', number, !number);
 	if (number <= 1) return words[0];
 	const digits = parseInt(number.toString().slice(-2));
 	if (digits >= 2 && digits <= 10) return `${ number } ${ words[1] }`;
@@ -610,7 +604,6 @@ const initialiseAfterWindow = () => {
 					});
 					audio.addEventListener('waiting', () => {
 						analytics(['trackEvent', 'Smiegħ', 'buffering', audioReportingTitle, 1]);
-						// console.log(`Player ${ index }`, 'waiting', audioReportingTitle);
 					});
 					audio.addEventListener('timeupdate', () => {
 						const currentTime = parseInt(audio.currentTime);

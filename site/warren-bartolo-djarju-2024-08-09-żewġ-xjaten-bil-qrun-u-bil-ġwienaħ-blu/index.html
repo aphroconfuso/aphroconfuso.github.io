@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 		
-	<title>Djarju 09.08.2024 Żewġ xjaten bil-qrun u bil-ġwienaħ blu ta’ Warren Bartolo · Aphroconfuso</title>
+	<title>09.08.2024 Żewġ xjaten bil-qrun u bil-ġwienaħ blu ta’ Warren Bartolo · Aphroconfuso</title>
 	<meta content="Ngħum f’parti iktar ċara, iktar qrib l-irdum. Missier juri lil bintu bebbuxu li kien għadu kif qabad minn qiegħ il-baħar. It-tifla tistagħġeb u tgħid kemm hu sabiħ u tistaqsih jekk jistax joħroġ il-bebbux biex iżżomm il-qoxra imma hu jgħidilha le. Ngħum daqsxejn aktar ’il bogħod. Tliet subien qed jaqbżu mill-blat u kulħadd iħares lejhom. Ngħir għalihom għax jien qatt ma kont naf naqbeż hekk, la dritt wisq u lanqas nagħmel kutrumbajsi jew xi qbiż elaborat ieħor. Qatt ma kont hekk. Meta ndur, il-ġenituri li rajt qabel qed jitkellmu ma’ anzjana fil-baħar, snienha sofor-oranġjo u bla ħuġbejn. Jgħidu xi ħaġa dwar ġmiel momentanju b’sentenza li tispiċċa bil-kelma “għalissa”. Xi nies iħobbu l-qerda u l-vjolenza, tgħid l-omm, binti talbitna iktar kmieni biex noqtlu bebbuxu għaliha. Imma għaliex għandna nagħmlu hekk? tistaqsi l-omm b’mod retoriku. Jekk huwa ħaj, nistgħu nerġgħu npoġġuh fil-baħar, jgħid il-missier, u napprezzaw il-ġmiel tiegħu biss. Kollox jiġri fil-baħar." name="description">
 	<meta property="og:image" content="https://aphroconfuso.mt/stampi/social_warren_9_1_fef87c3945.jpg">
 	
@@ -15,7 +15,7 @@
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@aphroconfuso">
 	<meta name="twitter:creator" content="@aphroconfuso">
-	<meta name="twitter:title" content="Djarju 09.08.2024 Żewġ xjaten bil-qrun u bil-ġwienaħ blu ta’ Warren Bartolo">
+	<meta name="twitter:title" content="09.08.2024 Żewġ xjaten bil-qrun u bil-ġwienaħ blu ta’ Warren Bartolo">
 	<meta name="twitter:description" content="Ngħum f’parti iktar ċara, iktar qrib l-irdum. Missier juri lil bintu bebbuxu li kien għadu kif qabad minn qiegħ il-baħar. It-tifla tistagħġeb u tgħid kemm hu sabiħ u tistaqsih jekk jistax joħroġ il-bebbux biex iżżomm il-qoxra imma hu jgħidilha le. Ngħum daqsxejn aktar ’il bogħod. Tliet subien qed jaqbżu mill-blat u kulħadd iħares lejhom. Ngħir għalihom għax jien qatt ma kont naf naqbeż hekk, la dritt wisq u lanqas nagħmel kutrumbajsi jew xi qbiż elaborat ieħor. Qatt ma kont hekk. Meta ndur, il-ġenituri li rajt qabel qed jitkellmu ma’ anzjana fil-baħar, snienha sofor-oranġjo u bla ħuġbejn. Jgħidu xi ħaġa dwar ġmiel momentanju b’sentenza li tispiċċa bil-kelma “għalissa”. Xi nies iħobbu l-qerda u l-vjolenza, tgħid l-omm, binti talbitna iktar kmieni biex noqtlu bebbuxu għaliha. Imma għaliex għandna nagħmlu hekk? tistaqsi l-omm b’mod retoriku. Jekk huwa ħaj, nistgħu nerġgħu npoġġuh fil-baħar, jgħid il-missier, u napprezzaw il-ġmiel tiegħu biss. Kollox jiġri fil-baħar.">
 	<meta name="twitter:image" content="https://aphroconfuso.mt/stampi/social_warren_9_1_fef87c3945.jpg">
 	<meta name="twitter:image:alt" content="Folla nies fuq il-blat iħarsu lejn il-baħar.">
@@ -118,24 +118,6 @@
 				}
 				return "";
 			}
-			const addRemoveFontSizeClass = (size) => {
-				document.body.classList.remove('font-size-1','font-size-2','font-size-3','font-size-4')
-				document.body.classList.add(`font-size-${ size }`);
-				localStorage.setItem('font', size);
-			}
-			const addRemoveTheme = (theme) => {
-				document.body.classList.remove('theme-regular','theme-dark','theme-contrast','theme-system')
-				document.body.classList.add(`theme-${ theme }`);
-				localStorage.setItem('theme', theme);
-			}
-			const initialiseAfterBody = () => {
-				document.body.classList.add(location.hostname.replace(/\.?aphroconfuso\.mt/, '') || 'production');
-				addRemoveFontSizeClass(localStorage.getItem('font') || 1);
-				addRemoveTheme(localStorage.getItem('theme') || 'regular');
-				if (localStorage.getItem(`tw-${urlSlug}`)) {
-					document.body.classList.add('trigger-warning-closed');
-				}
-			}
 			var _paq = window._paq = window._paq || [];
 			const analytics = (arrayInfo) => {
 				if (location.host !== 'aphroconfuso.mt') console.log(arrayInfo);
@@ -154,8 +136,28 @@
 				var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
 				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
 			})();
+			const addRemoveFontSizeClass = (size) => {
+				document.body.classList.remove('font-size-1','font-size-2','font-size-3','font-size-4')
+				document.body.classList.add(`font-size-${ size }`);
+				localStorage.setItem('font', size);
+			}
+			const addRemoveTheme = (theme, stored) => {
+				document.body.classList.remove('theme-regular','theme-dark','theme-contrast','theme-system')
+				document.body.classList.add(`theme-${ theme }`);
+				localStorage.setItem('theme', theme);
+				if (stored && theme === 'regular') return;
+				analytics(['trackEvent', 'Theme', `${ stored ? 'stored' : 'clicked' }`, theme]);
+			}
+			const initialiseAfterBody = () => {
+				document.body.classList.add(location.hostname.replace(/\.?aphroconfuso\.mt/, '') || 'production');
+				addRemoveFontSizeClass(localStorage.getItem('font') || 1);
+				addRemoveTheme(localStorage.getItem('theme') || 'regular', true);
+				if (localStorage.getItem(`tw-${urlSlug}`)) {
+					document.body.classList.add('trigger-warning-closed');
+				}
+			}
 		</script>
-		<script src="../script/script-a60607.js" type="module"></script>
+		<script src="../script/script-d3d2c7.js" type="module"></script>
 	</head>
 	<body class="show-nav this-month-jannar">
 		<script>initialiseAfterBody();</script>
@@ -420,7 +422,7 @@ Hackett (is-segretarja <l-m>tal-Factory)</l-m> fuq <l-m>it-telefown</l-m> u baqa
 				
 				
 					<aside id="letters-solicit">
-						<p>Iktbilna dwar dan ix-xogħol fuq <l-m>l-indirizz</l-m> <a href="mailto:ittri@aphroconfuso.mt?subject=Djarju 09.08.2024 Żewġ xjaten bil-qrun u bil-ġwienaħ blu ta’ Warren Bartolo" class="outline">ittri@aphroconfuso.mt</a>. Jekk jogħġbok inkludi ismek u fejn toqgħod. Kontribuzzjonijiet anonimi ma jiġux ikkunsidrati.</p>
+						<p>Iktbilna dwar dan ix-xogħol fuq <l-m>l-indirizz</l-m> <a href="mailto:ittri@aphroconfuso.mt?subject=09.08.2024 Żewġ xjaten bil-qrun u bil-ġwienaħ blu ta’ Warren Bartolo" class="outline">ittri@aphroconfuso.mt</a>. Jekk jogħġbok inkludi ismek u fejn toqgħod. Kontribuzzjonijiet anonimi ma jiġux ikkunsidrati.</p>
 					</aside>
 				
 			</section>

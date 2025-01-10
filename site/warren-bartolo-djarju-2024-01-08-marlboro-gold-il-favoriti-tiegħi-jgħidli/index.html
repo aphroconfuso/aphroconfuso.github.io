@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 		
-	<title>Djarju 08.01.2024 Marlboro Gold, il-favoriti tiegħi, jgħidli ta’ Warren Bartolo · Aphroconfuso</title>
+	<title>08.01.2024 Marlboro Gold, il-favoriti tiegħi, jgħidli ta’ Warren Bartolo · Aphroconfuso</title>
 	<meta content="Waqt li jien għadni fis-sodda, S qiegħed fil-kamra tal-banju jisma’ diska li kont inħobb nisma’ xi sentejn ilu, però ma nistax niftakar eżatt x’inhi. Inqum u nistaqsih. Jgħidli li hi “Andromeda” ta’ Weyes Blood. Inqum u nnaddaf il-kċina, niħħuverja, u naħsel l-art. Nieħu shower. Nirċievi telefonata m’għand tad-delivery biex jgħidli li għandi pakkett jistennieni isfel. Ninżel għalih. Huwa ktieb—il-memoir ta’ Lucia Berlin. Għall-ħabta tas-19h, hekk kif se nitlaq mill-appartament biex immur niltaqa’ ma’ C, R, I u M għall-ikel, u waqt li S qiegħed fil-banju jipprepara biex joħroġ, B jiġu lura d-dar ma’ E u l-kelb tiegħu, Bruno. Kienu l-gym aktar kmieni llum u nassumi li wara baqgħu barra. Nimxiha sar-restorant fejn qalu li se nieklu. It-temperatura -1°C, imma lbist ħafna layers u leggings tat-thermal u għandi wkoll balaklava madwar għonqi. Ma nistax nilbisha kif suppost għax fuq rasi għandi l-headphones. Meta nasal, nordnaw immedjatament, l-ikel jiġi mill-ewwel u nitilqu madwar għaxar minuti wara li kulħadd ikun lest. Waqt l-ikel, b’xi mod, nitkellmu dwar il-Green Goblin minn Spider Man, u villains oħra bħall-Penguin, minn Batman." name="description">
 	<meta property="og:image" content="https://aphroconfuso.mt/stampi/social_sofia_archive_2af51dc456.jpg">
 	
@@ -15,7 +15,7 @@
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@aphroconfuso">
 	<meta name="twitter:creator" content="@aphroconfuso">
-	<meta name="twitter:title" content="Djarju 08.01.2024 Marlboro Gold, il-favoriti tiegħi, jgħidli ta’ Warren Bartolo">
+	<meta name="twitter:title" content="08.01.2024 Marlboro Gold, il-favoriti tiegħi, jgħidli ta’ Warren Bartolo">
 	<meta name="twitter:description" content="Waqt li jien għadni fis-sodda, S qiegħed fil-kamra tal-banju jisma’ diska li kont inħobb nisma’ xi sentejn ilu, però ma nistax niftakar eżatt x’inhi. Inqum u nistaqsih. Jgħidli li hi “Andromeda” ta’ Weyes Blood. Inqum u nnaddaf il-kċina, niħħuverja, u naħsel l-art. Nieħu shower. Nirċievi telefonata m’għand tad-delivery biex jgħidli li għandi pakkett jistennieni isfel. Ninżel għalih. Huwa ktieb—il-memoir ta’ Lucia Berlin. Għall-ħabta tas-19h, hekk kif se nitlaq mill-appartament biex immur niltaqa’ ma’ C, R, I u M għall-ikel, u waqt li S qiegħed fil-banju jipprepara biex joħroġ, B jiġu lura d-dar ma’ E u l-kelb tiegħu, Bruno. Kienu l-gym aktar kmieni llum u nassumi li wara baqgħu barra. Nimxiha sar-restorant fejn qalu li se nieklu. It-temperatura -1°C, imma lbist ħafna layers u leggings tat-thermal u għandi wkoll balaklava madwar għonqi. Ma nistax nilbisha kif suppost għax fuq rasi għandi l-headphones. Meta nasal, nordnaw immedjatament, l-ikel jiġi mill-ewwel u nitilqu madwar għaxar minuti wara li kulħadd ikun lest. Waqt l-ikel, b’xi mod, nitkellmu dwar il-Green Goblin minn Spider Man, u villains oħra bħall-Penguin, minn Batman.">
 	<meta name="twitter:image" content="https://aphroconfuso.mt/stampi/social_sofia_archive_2af51dc456.jpg">
 	<meta name="twitter:image:alt" content="Id iżomm ktieb miftuħ, fuq kull naħa ritratt ta&#39; mara b&#39;xagħar iswed twil.">
@@ -118,24 +118,6 @@
 				}
 				return "";
 			}
-			const addRemoveFontSizeClass = (size) => {
-				document.body.classList.remove('font-size-1','font-size-2','font-size-3','font-size-4')
-				document.body.classList.add(`font-size-${ size }`);
-				localStorage.setItem('font', size);
-			}
-			const addRemoveTheme = (theme) => {
-				document.body.classList.remove('theme-regular','theme-dark','theme-contrast','theme-system')
-				document.body.classList.add(`theme-${ theme }`);
-				localStorage.setItem('theme', theme);
-			}
-			const initialiseAfterBody = () => {
-				document.body.classList.add(location.hostname.replace(/\.?aphroconfuso\.mt/, '') || 'production');
-				addRemoveFontSizeClass(localStorage.getItem('font') || 1);
-				addRemoveTheme(localStorage.getItem('theme') || 'regular');
-				if (localStorage.getItem(`tw-${urlSlug}`)) {
-					document.body.classList.add('trigger-warning-closed');
-				}
-			}
 			var _paq = window._paq = window._paq || [];
 			const analytics = (arrayInfo) => {
 				if (location.host !== 'aphroconfuso.mt') console.log(arrayInfo);
@@ -154,8 +136,28 @@
 				var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
 				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
 			})();
+			const addRemoveFontSizeClass = (size) => {
+				document.body.classList.remove('font-size-1','font-size-2','font-size-3','font-size-4')
+				document.body.classList.add(`font-size-${ size }`);
+				localStorage.setItem('font', size);
+			}
+			const addRemoveTheme = (theme, stored) => {
+				document.body.classList.remove('theme-regular','theme-dark','theme-contrast','theme-system')
+				document.body.classList.add(`theme-${ theme }`);
+				localStorage.setItem('theme', theme);
+				if (stored && theme === 'regular') return;
+				analytics(['trackEvent', 'Theme', `${ stored ? 'stored' : 'clicked' }`, theme]);
+			}
+			const initialiseAfterBody = () => {
+				document.body.classList.add(location.hostname.replace(/\.?aphroconfuso\.mt/, '') || 'production');
+				addRemoveFontSizeClass(localStorage.getItem('font') || 1);
+				addRemoveTheme(localStorage.getItem('theme') || 'regular', true);
+				if (localStorage.getItem(`tw-${urlSlug}`)) {
+					document.body.classList.add('trigger-warning-closed');
+				}
+			}
 		</script>
-		<script src="../script/script-a60607.js" type="module"></script>
+		<script src="../script/script-d3d2c7.js" type="module"></script>
 	</head>
 	<body class="show-nav this-month-jannar">
 		<script>initialiseAfterBody();</script>
@@ -419,7 +421,7 @@
 				
 				
 					<aside id="letters-solicit">
-						<p>Iktbilna dwar dan ix-xogħol fuq <l-m>l-indirizz</l-m> <a href="mailto:ittri@aphroconfuso.mt?subject=Djarju 08.01.2024 Marlboro Gold, il-favoriti tiegħi, jgħidli ta’ Warren Bartolo" class="outline">ittri@aphroconfuso.mt</a>. Jekk jogħġbok inkludi ismek u fejn toqgħod. Kontribuzzjonijiet anonimi ma jiġux ikkunsidrati.</p>
+						<p>Iktbilna dwar dan ix-xogħol fuq <l-m>l-indirizz</l-m> <a href="mailto:ittri@aphroconfuso.mt?subject=08.01.2024 Marlboro Gold, il-favoriti tiegħi, jgħidli ta’ Warren Bartolo" class="outline">ittri@aphroconfuso.mt</a>. Jekk jogħġbok inkludi ismek u fejn toqgħod. Kontribuzzjonijiet anonimi ma jiġux ikkunsidrati.</p>
 					</aside>
 				
 			</section>
