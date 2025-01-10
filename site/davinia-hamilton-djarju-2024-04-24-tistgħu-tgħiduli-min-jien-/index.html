@@ -157,7 +157,7 @@ Vera awkward, imma kellhom raġun. Sibna farmhouse l-Għarb għal prezz raġonev
 				document.body.classList.add(`theme-${ theme }`);
 				localStorage.setItem('theme', theme);
 				if (stored && theme === 'regular') return;
-				analytics(['trackEvent', 'Tema', `${ stored ? 'tema storjata' : 'tema nbidlet' }`, translateTheme[theme]]);
+				analytics(['trackEvent', 'Tema', `${ stored ? 'Tema storjata' : 'Tema nbidlet' }`, translateTheme[theme]]);
 			}
 			const initialiseAfterBody = () => {
 				document.body.classList.add(location.hostname.replace(/\.?aphroconfuso\.mt/, '') || 'production');
