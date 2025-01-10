@@ -145,12 +145,19 @@ Vera awkward, imma kellhom raġun. Sibna farmhouse l-Għarb għal prezz raġonev
 				document.body.classList.add(`font-size-${ size }`);
 				localStorage.setItem('font', size);
 			}
+			// FIXME
+			const translateTheme = {
+				'regular': 'regolari',
+				'dark': 'skura',
+				'contrast': 'kuntrast',
+				'system': 'sistema'
+			}
 			const addRemoveTheme = (theme, stored) => {
 				document.body.classList.remove('theme-regular','theme-dark','theme-contrast','theme-system')
 				document.body.classList.add(`theme-${ theme }`);
 				localStorage.setItem('theme', theme);
 				if (stored && theme === 'regular') return;
-				analytics(['trackEvent', 'Theme', `${ stored ? 'stored' : 'clicked' }`, theme]);
+				analytics(['trackEvent', 'Tema', `${ stored ? 'storjata' : 'inbidlet' }`, translateTheme[theme]]);
 			}
 			const initialiseAfterBody = () => {
 				document.body.classList.add(location.hostname.replace(/\.?aphroconfuso\.mt/, '') || 'production');
