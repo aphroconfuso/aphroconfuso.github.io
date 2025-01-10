@@ -189,7 +189,7 @@ griżmejh. X’għabra?">
 				document.body.classList.add(`theme-${ theme }`);
 				localStorage.setItem('theme', theme);
 				if (stored && theme === 'regular') return;
-				analytics(['trackEvent', 'Tema', `${ stored ? 'storjata' : 'inbidlet' }`, translateTheme[theme]]);
+				analytics(['trackEvent', 'Tema', `${ stored ? 'tema storjata' : 'tema nbidlet' }`, translateTheme[theme]]);
 			}
 			const initialiseAfterBody = () => {
 				document.body.classList.add(location.hostname.replace(/\.?aphroconfuso\.mt/, '') || 'production');
