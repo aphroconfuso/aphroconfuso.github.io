@@ -6,14 +6,14 @@
 		
 	<title>Kullana ta’ għanjiet dwar il-ħolm · Aphroconfuso</title>
 	<meta content="Il-Malti jitkellem dwar il-forom tal-verbi. Bl-istess mod, hemm il-forom ta’ kif nippożizzjonaw ruħna meta nkunu reqdin. Fil-forma nsibu l-kontenut—dal-prinċipju narawh fil-qasam tal-bini u f’dak ta’ kif infasslu l-għodod tal-komunikazzjoni tagħna. Il-forom tal-verbi jiddeterminaw it-tifsira. Bl-istess mod, il-forom ta’ kif norqdu u nindifnu kollha għandhom il-konnotazzjonijiet tagħhom." name="description">
-	<meta property="og:image" content="https://aphroconfuso.mt/stampi/social_fatima_djarju_3_18e34e5556.jpg">
+	<meta property="og:image" content="https://aphroconfuso.mt/stampi/social_BRIANGRECH_Paul_Scerri_9073_9b44d02847.jpg">
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@aphroconfuso">
 	<meta name="twitter:creator" content="@aphroconfuso">
 	<meta name="twitter:title" content="Aphroconfuso">
 	<meta name="twitter:description" content="Il-Malti jitkellem dwar il-forom tal-verbi. Bl-istess mod, hemm il-forom ta’ kif nippożizzjonaw ruħna meta nkunu reqdin. Fil-forma nsibu l-kontenut—dal-prinċipju narawh fil-qasam tal-bini u f’dak ta’ kif infasslu l-għodod tal-komunikazzjoni tagħna. Il-forom tal-verbi jiddeterminaw it-tifsira. Bl-istess mod, il-forom ta’ kif norqdu u nindifnu kollha għandhom il-konnotazzjonijiet tagħhom.">
-	<meta name="twitter:image" content="https://aphroconfuso.mt/stampi/social_fatima_djarju_3_18e34e5556.jpg">
-	<meta name="twitter:image:alt" content="Pakett tal-ibuprofen, ċewġ naħat.">
+	<meta name="twitter:image" content="https://aphroconfuso.mt/stampi/social_BRIANGRECH_Paul_Scerri_9073_9b44d02847.jpg">
+	<meta name="twitter:image:alt" content="Skultura ta’ bagalja miftuħa. Fiha hemm diversi oġġetti li jidhru qishom organi u dirgħajn.">
 
 		<meta content="black" name="apple-mobile-web-app-status-bar-style">
 		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
@@ -136,12 +136,19 @@
 				document.body.classList.add(`font-size-${ size }`);
 				localStorage.setItem('font', size);
 			}
+			// REVIEW
+			const translateTheme = {
+				'regular': 'regolari',
+				'dark': 'skura',
+				'contrast': 'kuntrast',
+				'system': 'sistema'
+			}
 			const addRemoveTheme = (theme, stored) => {
 				document.body.classList.remove('theme-regular','theme-dark','theme-contrast','theme-system')
 				document.body.classList.add(`theme-${ theme }`);
 				localStorage.setItem('theme', theme);
 				if (stored && theme === 'regular') return;
-				analytics(['trackEvent', 'Theme', `${ stored ? 'stored' : 'clicked' }`, theme]);
+				analytics(['trackEvent', 'Tema', `${ stored ? 'storjata' : 'inbidlet' }`, translateTheme[theme]]);
 			}
 			const initialiseAfterBody = () => {
 				document.body.classList.add(location.hostname.replace(/\.?aphroconfuso\.mt/, '') || 'production');
