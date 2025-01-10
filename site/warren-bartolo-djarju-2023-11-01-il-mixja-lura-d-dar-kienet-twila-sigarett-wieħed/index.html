@@ -39,7 +39,7 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/warren-bartolo-djarju-2023-11-01-il-mixja-lura-d-dar-kienet-twila-sigarett-wieħed/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-dd7e1dd9.css">
+		<link rel="stylesheet" href="/css/style-2c0c832e.css">
 		<script>
 			var
 				audioLoaded,
@@ -153,7 +153,7 @@
 				document.body.classList.add(`theme-${ theme }`);
 				localStorage.setItem('theme', theme);
 				if (stored && theme === 'regular') return;
-				analytics(['trackEvent', 'Tema', `${ stored ? 'storjata' : 'inbidlet' }`, translateTheme[theme]]);
+				analytics(['trackEvent', 'Tema', `${ stored ? 'Tema storjata' : 'Tema nbidlet' }`, translateTheme[theme]]);
 			}
 			const initialiseAfterBody = () => {
 				document.body.classList.add(location.hostname.replace(/\.?aphroconfuso\.mt/, '') || 'production');
