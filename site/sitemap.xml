@@ -569,6 +569,13 @@
 	</url>
 	
 	<url>
+		<loc>https://aphroconfuso.mt/almanakk-jannar/</loc>
+		<lastmod>2025-02-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
 		<loc>https://aphroconfuso.mt/kris-polidano-kullana-ta-għanjiet-dwar-il-ħolm/</loc>
 		<lastmod>2025-02-12</lastmod>
     <changefreq>monthly</changefreq>
@@ -1385,12 +1392,5 @@
 		<lastmod>2025-02-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
-	</url>
-	
-	<url>
-		<loc>https://aphroconfuso.mt/almanakk-Jannar/</loc>
-		<lastmod>2025-02-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
 	</url>
 </urlset>
