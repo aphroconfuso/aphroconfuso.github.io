@@ -10,12 +10,11 @@ const fixReportingTitle = (storyType, sequenceEpisodeNumber, author, pageTitle) 
 	if (storyType === 'Djarju') return `Djarju #${ sequenceEpisodeNumber } ${ author }`;
 	if (!!sequenceEpisodeNumber) return `${ pageTitle } #${ sequenceEpisodeNumber }`;
 	return pageTitle;
-}
+};
 
 const getScrollPosition = () => window.pageYOffset || document.documentElement.scrollTop;
 
 const getSelectionText = () => {
-  let text = "";
 	if (!!alreadyMarked) return;
 	alreadyMarked = true;
 	var selection = window.getSelection().getRangeAt(0);
@@ -26,11 +25,11 @@ const getSelectionText = () => {
 	// if (location.hostname !== 'abbozzi.aphroconfuso.mt') {
 		span.classList.add(window.location.host.split('.')[0]);
 		var credit = document.createElement("div");
-		credit.innerHTML = `<span><strong>${ pageTitle }</strong><br><span class="author">${ author }${ !!translator ? "<br>(tr " + translator + ")" : "" }</span></span>`
+		credit.innerHTML = `<span><strong>${ pageTitle }</strong><br><span class="author">${ author }${ !!translator ? "<br>(tr " + translator + ")" : "" }</span></span>`;
 		span.appendChild(credit);
 	// }
 	selection.insertNode(span);
-}
+};
 
 const scrolling = () => {
   newScrollPosition = getScrollPosition();
@@ -45,7 +44,7 @@ const scrolling = () => {
 		if (!!wordcount) {
 			clearTimeout(hideScrollTools);
 			hideScrollTools = setTimeout(() => {
-				document.body.classList.remove('scrolling')
+				document.body.classList.remove('scrolling');
 			}, 5000);
 			percentageProgress = (((newScrollPosition - bodyStart) * 100) / bodyHeight).toFixed(2);
 			if (percentageProgress >= 0) {
@@ -58,7 +57,7 @@ const scrolling = () => {
 		lastScrollPosition = newScrollPosition;
   }
   return;
-}
+};
 
 const addBookmarkNow = () => {
 	if (!percentageProgress || (wordcount * (percentageProgress / 100)) < bookmarkThresholdWords || percentageProgress > 98) {
@@ -82,7 +81,7 @@ const addBookmarkNow = () => {
 		wordcount,
 		wordsPerSecond: wordsPerSecond && wordsPerSecond.toFixed(2),
 	});
-}
+};
 
 const heartbeat = (wordsPerPixel, reportingTitle) => {
 	const timeNow = new Date() / 1000;
@@ -111,7 +110,7 @@ const heartbeat = (wordsPerPixel, reportingTitle) => {
 		// Shall we reset?
 		return;
 	}
-}
+};
 
 // BOOKMARKS *************************************************************************************
 
@@ -168,10 +167,9 @@ const initialiseBookmarksList = () => {
 
 		if (updateFormat || discardBookmark) {
 			delete bookmarksList[oldKey];
-		};
-	});
+		}	});
 	saveBookmarksList();
-}
+};
 
 const addBookmark = (type = 'text', thisStoryId = storyId, bookmark) => {
 	const { author, percentage, sequenceEpisodeNumber, storyType, title } = bookmark;
@@ -185,7 +183,7 @@ const addBookmark = (type = 'text', thisStoryId = storyId, bookmark) => {
 	if (type === 'audio') return;
 	updateBookmarksMenu(bookmarksArray);
 	analytics(['trackEvent', 'Bookmarks', 'żid', reportingTitle, percentage]);
-}
+};
 
 const deleteBookmark = (type = 'text', id = storyId) => {
 	delete bookmarksList[`${ type }-${ id }`];
@@ -200,23 +198,22 @@ const deleteBookmark = (type = 'text', id = storyId) => {
 	removeBookmark.style.opacity = '0';
 	setTimeout(() => removeBookmark.remove(), 1000);
 	analytics(['trackEvent', 'Bookmarks', 'armi', reportingTitle, percentage]);
-}
+};
 
 // FIXME: recalibrate
 const getCurrentBlurb = (percent) => {
 	const currentPlace = Math.round(percent * bodyText.length / 100);
 	const blurb = bodyText.substring(currentPlace, currentPlace + (charactersPerScreen));
 	return blurb;
-}
+};
 
 const updateBookmarksMenu = (bookmarksArray) => {
 	if (!(bookmarksArray && bookmarksMenuElement)) return;
 	if (bookmarksArray.length === 0) {
 		bookmarksMenuElement.textContent = '';
 		return;
-	};
-	bookmarksMenuElement.textContent = ` ${ bookmarksArray.length }`;
-}
+	}	bookmarksMenuElement.textContent = ` ${ bookmarksArray.length }`;
+};
 
 const calculateScrollPosition = (percentage) => Math.round(bodyStart + bodyHeight * (percentage/100));
 
@@ -232,7 +229,7 @@ const showBookmarksInPromos = (bookmarksArray) => {
 			const minutes = numberify(parseInt(remaining / readersWordsPerSecond / 60), ['minuta', 'minuti']);
 			bookmarkLink.innerHTML = `<span class="bookmark-glyph"><!-- --></span> Qrajt ${ roundedPercentage }%, fadallek xi ${ minutes } qari</span>`;
 			bookmarkLink.href = `/${ urlSlug }/#b-${ percentage }`;
-			bookmarkLink.addEventListener("click", () => {analytics(['trackEvent', 'Promo', `minn: ${ reportingTitle }`, `għal: ${ destinationTitle } (bookmark)`, roundedPercentage])});
+			bookmarkLink.addEventListener("click", () => {analytics(['trackEvent', 'Promo', `minn: ${ reportingTitle }`, `għal: ${ destinationTitle } (bookmark)`, roundedPercentage]);});
 			element.appendChild(bookmarkLink);
 		});
 		document.querySelectorAll(`article.story-${ storyId } > header`).forEach((element) => {
@@ -240,17 +237,17 @@ const showBookmarksInPromos = (bookmarksArray) => {
 			const bookmarkContainer = document.createElement("aside");
 			bookmarkContainer.classList.add("bookmark-compact");
 			const bookmarkLink = document.createElement("a");
-			bookmarkLink.innerHTML = `<span class="bookmark-glyph"><!-- --></span> Qrajt ${ roundedPercentage }%, fadallek xi ${ minutes } qari</span>`
+			bookmarkLink.innerHTML = `<span class="bookmark-glyph"><!-- --></span> Qrajt ${ roundedPercentage }%, fadallek xi ${ minutes } qari</span>`;
 			bookmarkLink.href = `#b-${ percentage }`;
 			bookmarkLink.addEventListener('click', () => {
 				analytics(['trackEvent', 'Bookmark fil-paġna', reportingTitle, reportingTitle, roundedPercentage]);
 				window.scrollTo({top: calculateScrollPosition(percentage), left: 0, behavior: 'smooth'});
-			})
+			});
 			bookmarkContainer.appendChild(bookmarkLink);
 			element.appendChild(bookmarkContainer);
 		});
 	});
-}
+};
 
 // REFACTOR: bundle from shared component
 const numberify = (number, words = ['kelma', 'kelmiet']) => {
@@ -265,8 +262,7 @@ const numberify = (number, words = ['kelma', 'kelmiet']) => {
 function prettifyNumbers(text, punctuation = String.fromCharCode(8201)) {
 	if(!text) return null;
 	return text.toString().replace(/\d{1,3}(?=(\d{3})+(?!\d))/g, `$&${ punctuation }`);
-};
-
+}
 const showFullBookmarkList = () => {
 	const list = document.getElementById("bookmark-list");
 	const bookmarksContainer = document.getElementById("bookmarks-container");
@@ -282,7 +278,7 @@ const showFullBookmarkList = () => {
 		bookmarksContainer && bookmarksContainer.classList.add("bookmarks-one");
 	} else if (bookmarksArray.length) {
 		bookmarksContainer && bookmarksContainer.classList.add("bookmarks-multiple");
-		const bookmarksCount = bookmarksArray.length
+		const bookmarksCount = bookmarksArray.length;
 		let numberPhrase = bookmarksCount + ' bookmarks';
 		// use numberify
 		if (bookmarksCount >= 11) numberPhrase = bookmarksCount + '-il bookmark';
@@ -335,19 +331,11 @@ const showFullBookmarkList = () => {
 			document.getElementById(`link-${ storyId }`).addEventListener("click", () => analytics(['trackEvent', 'Promo', 'minn: Bookmarks', `għal: ${ reportingTitle }`, index]));
 		});
 	}
-}
-
-const clearAllBookmarks = () => localStorage.clear();
+};
 
 const getPreviousAudioTime = (id) => {
 	return bookmarksList[`audio-${ id }`] && bookmarksList[`audio-${ id }`].playPosition || 0;
-}
-
-// INITIALISE ***********************************************************************
-
-const initialiseAfterNewsletter = () => {
-	return;
-}
+};
 
 const initialiseFontSizeListeners = () => {
 	document.getElementById("font-size-1").addEventListener('click', () => addRemoveFontSizeClass(1));
@@ -371,19 +359,19 @@ const initialiseReadingHeartbeat = () => {
 	lastReportedReadingTime = new Date() / 1000;
 	timeStarted = lastReportedReadingTime;
 	setInterval(heartbeat, 3000, wordsPerPixel, reportingTitle);
-}
+};
 
 const initialiseAfterNav = () => {
 	initialiseFontSizeListeners();
 	initialiseThemeSwitch();
-}
+};
 
 const initialiseScrollPosition = () => {
 	if (location.hash && location.hash.startsWith('#b-')) {
 		window.scrollTo({top: calculateScrollPosition(location.hash.substring(3)), left: 0, behavior: 'smooth'});
 		location.hash = '';
 	}
-}
+};
 
 const initialiseMessage = () => {
 	var salted;
@@ -417,13 +405,13 @@ const initialiseMessage = () => {
 		setTimeout(() => document.getElementById('message').classList.remove('active'), 10000);
 		location.hash = '';
 	}
-}
+};
 
 const initialiseAnchorEvents = () => {
 	document.querySelectorAll("#grid-body a[href^='\#']").forEach((anchor, index) => {
 		anchor.addEventListener("click", () => analytics(['trackEvent', 'A#', `${ reportingTitle }`, `# ${ anchor.textContent }`, index + 1]));
 	});
-}
+};
 
 document.addEventListener("DOMContentLoaded", async () => {
 	progressElement = document.getElementById('progress');
@@ -466,7 +454,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 				rewind: true,
 				speed: 2000,
 				padding: '2rem 0',
-			}
+			};
 			for (var i = 0; i < slideshows.length; i++) {
 				const newSplide = new Splide(slideshows[i]).mount();
 				newSplide.on('visible', function (slide) {
@@ -478,11 +466,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 		const openLightbox = () => {
 			lightbox.classList.add('open');
 			analytics(['trackEvent', 'Stampi', 'lightbox - iftaħ', reportingTitle]);
-		}
+		};
 		const closeLightbox = () => {
 			lightbox.classList.remove('open');
 			analytics(['trackEvent', 'Stampi', 'lightbox - għalaq', reportingTitle]);
-		}
+		};
 		const lightboxOpen = document.getElementById('lightbox-open');
 		const lightboxClose = document.getElementById('lightbox-close');
 		lightboxOpen && lightboxOpen.addEventListener('click', () => openLightbox());
@@ -500,7 +488,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 			document.body.classList.add('trigger-warning-closed');
 			localStorage.setItem(`tw-${ urlSlug }`, 'magħluq');
 			analytics(['trackEvent', 'Stampi', 'lightbox - għalaq', reportingTitle]);
-		}
+		};
 
 		document.getElementById('trigger-warning-close')?.addEventListener('click', () => closeTriggerWarning());
 
@@ -527,7 +515,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 						analytics(['trackEvent', 'Smiegħ', `Kapitli (${ audioReportingTitle })`, foundLink.textContent]);
 						audio.currentTime = gotoTime;
 						event.preventDefault();
-					})
+					});
 				});
 
 				audio.addEventListener('canplaythrough', () => {
@@ -570,7 +558,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 						translator: song.translator,
 						urlSlug: song.pageSlug,
 					});
-				}
+				};
 
 				const songEvents = (index, song, audio) => {
 					wordsPerSecondAudio = 2.5;
@@ -619,7 +607,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 						previousTime[index] = currentTime;
 					});
 
-				}
+				};
 
 
 			});
@@ -633,8 +621,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 			document.querySelectorAll('.audio').forEach(element => element.classList.add('initialised'));
 		}
-	};
-	initialiseMessage();
+	}	initialiseMessage();
 
 	// location.hostname !== 'localhost' &&
 	if (location.hostname !== 'aphroconfuso.mt' && !!storyId) {
@@ -647,7 +634,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 	// Pagefind ********************************************************************************************
 	const searchInput = document.getElementById("search-input");
 	const resultsContainer = document.getElementById("search-results");
-	const pagefind = await import("/pagefind/pagefind.js");
+	const pagefind = await import('../../../../../../pagefind/pagefind.js');
 
 	searchInput.addEventListener("input", async () => {
 		const query = searchInput.value.trim();
@@ -692,7 +679,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 	const clearSearch = () => {
 		searchInput.value = "";
 		resultsContainer.innerHTML = "";
-	}
+	};
 
 	document.addEventListener('keydown', function (event) {
 		if (event.key === 'Escape') {

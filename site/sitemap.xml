@@ -359,13 +359,6 @@
 	</url>
 	
 	<url>
-		<loc>https://aphroconfuso.mt/</loc>
-		<lastmod>2025-02-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-	</url>
-	
-	<url>
 		<loc>https://aphroconfuso.mt/newsletter/</loc>
 		<lastmod>2025-02-19</lastmod>
     <changefreq>monthly</changefreq>
@@ -1424,6 +1417,13 @@
 	
 	<url>
 		<loc>https://aphroconfuso.mt/abeċedarju/</loc>
+		<lastmod>2025-02-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/</loc>
 		<lastmod>2025-02-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
