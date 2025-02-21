@@ -4,6 +4,21 @@
 	<head>
 		<meta charset="utf-8">
 		
+<script>
+	const redirectMap = {
+		"bur-mgħeż": "/omar-nshea-bur-mgħeż/",
+		"es-sidr": "/omar-nshea-es-sidr/",
+		"kaos-u-poeżija": "/franco-bifo-berardi-karl-baldacchino-nifs-kaos-u-poezija/",
+		"splużjonijiet": "/jimmy-grima-splużjonijiet/",
+	};
+
+	const currentPath = decodeURIComponent(window.location.pathname.replace(/^\/|\/$/g, ''));
+
+	console.log('>>>', currentPath, redirectMap[currentPath]);
+	if (redirectMap[currentPath]) {
+		window.location.pathname = redirectMap[currentPath];
+	}
+</script>
 <title>Aphroconfuso</title>
 <meta content="Ġurnal letterarju." name="description">
 <meta property="og:image" content="" /stampi/social_aphroconfuso_logo_social_kbir_kwadrat_d073f4e24a.jpg">
