@@ -23,12 +23,12 @@ const getSelectionText = () => {
 	if (selectedText === "") return;
 	var span = document.createElement("mark");
 	span.appendChild(selectedText);
-	if (location.hostname !== 'abbozzi.aphroconfuso.mt') {
-		span.classList.add('provi');
+	// if (location.hostname !== 'abbozzi.aphroconfuso.mt') {
+		span.classList.add(window.location.host.split('.')[0]);
 		var credit = document.createElement("div");
-		credit.innerHTML = `<span><strong>${ pageTitle }</strong><br>${ author }${ !!translator ? "<br>(tr " + translator + ")" : "" }</span>`
+		credit.innerHTML = `<span><strong>${ pageTitle }</strong><br><span class="author">${ author }${ !!translator ? "<br>(tr " + translator + ")" : "" }</span></span>`
 		span.appendChild(credit);
-	}
+	// }
 	selection.insertNode(span);
 }
 
@@ -425,7 +425,7 @@ const initialiseAnchorEvents = () => {
 	});
 }
 
-const initialiseAfterWindow = () => {
+document.addEventListener("DOMContentLoaded", async () => {
 	progressElement = document.getElementById('progress');
 	bookmarksMenuElement = document.getElementById('bookmarks-number');
 	initialiseAfterNav();
@@ -636,11 +636,68 @@ const initialiseAfterWindow = () => {
 	};
 	initialiseMessage();
 
+	// location.hostname !== 'localhost' &&
 	if (location.hostname !== 'aphroconfuso.mt' && !!storyId) {
 		document.addEventListener('selectionchange', function (event) {
 			setTimeout(getSelectionText, 10000);
 		});
 	}
-}
 
-window.onload = initialiseAfterWindow;
+
+	// Pagefind ********************************************************************************************
+	const searchInput = document.getElementById("search-input");
+	const resultsContainer = document.getElementById("search-results");
+	const pagefind = await import("/pagefind/pagefind.js");
+
+	searchInput.addEventListener("input", async () => {
+		const query = searchInput.value.trim();
+		resultsContainer.innerHTML = "";
+		if (query.length < 3) return;
+		const results = await pagefind.debouncedSearch(`"${ query }"`);
+		if (results.results.length === 0) {
+			resultsContainer.innerHTML = "<li>Ma sibna xejn!</li>";
+			return;
+		}
+		console.log(results);	// DEBUG
+		for (const result of results.results) {
+			const data = await result.data();
+			// if (data.excerpt.toLowerCase().includes(query.toLowerCase())) {
+				const resultHTML = `
+					<li>
+						<a class="promo ${ data.meta.class }" href="${ data.url }" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Biex Tara Kif Jgħixu l-Oħrajn', 1]);">
+							<header>
+							<ul>
+								<li class="header-label">${ data.meta.header || "" }</li>
+							</ul>
+							<h1>${ data.meta.title || "" }</h1>
+							${ data.meta.author ? "<h2><span class=\"author\">" + data.meta.author + "</span></h2>" : "" }
+						</header>
+							<div class="body-text">
+								<p>…&nbsp;${ data.excerpt || "" }&nbsp;…</p>
+							</div>
+						</a>
+						<aside class="promo-aside story-aside-87">
+							<ul>
+								<li class="bookmark-compact"><!-- --></li>
+								<li class="wordcount">${ numberify(data.word_count) || "" }</li>
+							</ul>
+						</aside>
+					</li>
+				`;
+				resultsContainer.innerHTML += resultHTML;
+			// }
+		}
+	});
+
+	const clearSearch = () => {
+		searchInput.value = "";
+		resultsContainer.innerHTML = "";
+	}
+
+	document.addEventListener('keydown', function (event) {
+		if (event.key === 'Escape') {
+			clearSearch();
+		}
+	});
+
+});
