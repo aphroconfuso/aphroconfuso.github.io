@@ -1,6 +1,7 @@
 const audioBookmarkingInterval = 10;
 const audioReportingInterval = 30;
 const bookmarkThresholdWords = 250;
+const bookmarkThresholdStoryWords = 1000;
 const maxPlausibleWordsPerSecond = 5;
 const minPlausibleWordsPerSecond = 1;
 const thresholdWords = 100;
@@ -23,12 +24,12 @@ const getSelectionText = () => {
 	if (selectedText === "") return;
 	var span = document.createElement("mark");
 	span.appendChild(selectedText);
-	// if (location.hostname !== 'abbozzi.aphroconfuso.mt') {
+	if (location.hostname !== 'abbozzi.aphroconfuso.mt') {
 		span.classList.add(window.location.host.split('.')[0]);
 		var credit = document.createElement("div");
-		credit.innerHTML = `<span><strong>${ pageTitle }</strong><br><span class="author">${ author }${ !!translator ? "<br>(tr " + translator + ")" : "" }</span></span>`
+		credit.innerHTML = `<span>“${ pageTitle }”<br><span class="author">${ author }${ !!translator ? "<br>(tr " + translator + ")" : "" }</span></span>`
 		span.appendChild(credit);
-	// }
+	}
 	selection.insertNode(span);
 }
 
@@ -61,7 +62,7 @@ const scrolling = () => {
 }
 
 const addBookmarkNow = () => {
-	if (!percentageProgress || (wordcount * (percentageProgress / 100)) < bookmarkThresholdWords || percentageProgress > 98) {
+	if (!percentageProgress || wordcount < bookmarkThresholdStoryWords || (wordcount * (percentageProgress / 100)) < bookmarkThresholdWords || percentageProgress > 98) {
 		return;
 	}
 	addBookmark('text', storyId, {
@@ -222,7 +223,8 @@ const calculateScrollPosition = (percentage) => Math.round(bodyStart + bodyHeigh
 
 const showBookmarksInPromos = (bookmarksArray) => {
 	bookmarksArray.forEach((bookmark) => {
-		const { author, percentage, sequenceEpisodeNumber, storyId, storyType, title, urlSlug, wordcount } = bookmark;
+		const {author, percentage, sequenceEpisodeNumber, storyId, storyType, title, urlSlug, wordcount} = bookmark;
+		if (wordcount < bookmarkThresholdStoryWords) return;
 		const roundedPercentage = Math.round(percentage);
 		const destinationTitle = fixReportingTitle(storyType, sequenceEpisodeNumber, author, title);
 		const remaining = Math.round(wordcount * (100 - roundedPercentage) / 100);
@@ -664,7 +666,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 			// if (data.excerpt.toLowerCase().includes(query.toLowerCase())) {
 				const resultHTML = `
 					<li>
-						<a class="promo ${ data.meta.class }" href="${ data.url }" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Biex Tara Kif Jgħixu l-Oħrajn', 1]);">
+						<a class="promo ${ data.meta.class }" href="${ data.url }" onclick="analytics(['trackEvent', 'Promo', 'minn: Bookmarks', 'għal: ${ data.meta.title || "" }', 1]);">
 							<header>
 							<ul>
 								<li class="header-label">${ data.meta.header || "" }</li>
@@ -673,7 +675,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 							${ data.meta.author ? "<h2><span class=\"author\">" + data.meta.author + "</span></h2>" : "" }
 						</header>
 							<div class="body-text">
-								<p>…&nbsp;${ data.excerpt || "" }&nbsp;…</p>
+								<p>… ${ data.excerpt || "" } …</p>
 							</div>
 						</a>
 						<aside class="promo-aside story-aside-87">
