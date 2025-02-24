@@ -1,0 +1,651 @@
+<!doctype html>
+<html lang="mt" translate="no">
+
+	<head>
+		<meta charset="utf-8">
+		
+	<title>Abeċedarju · Aphroconfuso</title>
+
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+		<meta content="width=device-width, initial-scale=1" name="viewport">
+		<meta content="width=device-width" initial-scale="1.0" maximum-scale="1.0" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="yes" name="mobile-web-app-capable">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#f9f9f3">
+		<link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon-16x16.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32x32.png">
+		<link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
+		<link rel="mask-icon" href="/img/icons/safari-pinned-tab.svg" color="#5bbad5">
+		<meta property="og:image:type" content="image/jpeg">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
+		<link rel="canonical" href="https://aphroconfuso.mt/abeċedarju/">
+		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
+		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
+		<link rel="stylesheet" href="/css/style-48eb357e.css">
+		<script>
+			var
+				audioLoaded,
+				audioUrls,
+				author,
+				body,
+				bodyEnd,
+				bodyHeight,
+				bodyStart,
+				bodyText,
+				bookmarksArray,
+				bookmarksList,
+				bookmarksMenuElement,
+				charactersPerPixel,
+				charactersPerScreen,
+				currentTime,
+				duration,
+				elapsedTime,
+				hideScrollTools,
+				lastReportedReadingTime,
+				lastReportedScrollPosition,
+				lastScrollPosition,
+				message,
+				issueMonth,
+				issueMonthYear,
+				newScrollPosition,
+				pageHeight,
+				pageReportingTitle,
+				percentageProgress,
+				placeText,
+				podcastUrl,
+				previousTime,
+				progressElement,
+				readingSpeed,
+				reportingTitle,
+				screenHeight,
+				skippedTime,
+				storyCompleted,
+				storyId,
+				storyType,
+				sequenceEpisodeNumber,
+				sequenceEpisodeTitle,
+				timeStarted,
+				pageTitle,
+				wordcount,
+				wordsPerPixel,
+				wordsPerSecond,
+				wordsPerSecondAudio,
+				wordsPerScreen;
+
+			audioLoaded = false;
+			bookmarksArray = [];
+			percentageProgress = 0;
+			previousTime = [];
+			storyCompleted = false;
+
+			const	urlSlug = location.pathname.replace(/\//g, '');
+			const setCookie = (cname, cvalue, exdays = 36500) => {
+				const d = new Date();
+				d.setTime(d.getTime() + (exdays*24*60*60*1000));
+				let expires = "expires="+ d.toUTCString();
+				document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+			}
+			const getCookie = (cname) => {
+				let name = cname + "=";
+				let decodedCookie = decodeURIComponent(document.cookie);
+				let ca = decodedCookie.split(';');
+				for(let i = 0; i < ca.length; i++) {
+					let c = ca[i];
+					while (c.charAt(0) == ' ') {
+						c = c.substring(1);
+					}
+					if (c.indexOf(name) == 0) {
+						return c.substring(name.length, c.length);
+					}
+				}
+				return "";
+			}
+			var _paq = window._paq = window._paq || [];
+			const analytics = (arrayInfo) => {
+				if (location.host !== 'aphroconfuso.mt') console.log(arrayInfo);
+				_paq.push(arrayInfo);
+			}
+			_paq.push(['disableCookies']);
+			_paq.push(['enableJSErrorTracking']);
+			_paq.push(['enableHeartBeatTimer']);
+			_paq.push(['enableLinkTracking']);
+			_paq.push(['trackPageView']);
+			_paq.push(['trackVisibleContentImpressions']);
+			(function () {
+				var u = "//analitika.aphroconfuso.mt/";
+				_paq.push(['setTrackerUrl', u + 'matomo.php']);
+				_paq.push(['setSiteId', location.host === 'aphroconfuso.mt' ? '1' : '2']);
+				var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
+			})();
+			const addRemoveFontSizeClass = (size) => {
+				document.body.classList.remove('font-size-1','font-size-2','font-size-3','font-size-4')
+				document.body.classList.add(`font-size-${ size }`);
+				localStorage.setItem('font', size);
+			}
+			// REVIEW
+			const translateTheme = {
+				'regular': 'regolari',
+				'dark': 'skura',
+				'contrast': 'kuntrast',
+				'system': 'sistema'
+			}
+			const addRemoveTheme = (theme, stored) => {
+				document.body.classList.remove('theme-regular','theme-dark','theme-contrast','theme-system')
+				document.body.classList.add(`theme-${ theme }`);
+				localStorage.setItem('theme', theme);
+				if (stored && theme === 'regular') return;
+				analytics(['trackEvent', 'Tema', `${ stored ? 'Tema storjata' : 'Tema nbidlet' }`, translateTheme[theme]]);
+			}
+			const initialiseAfterBody = () => {
+				document.body.classList.add(location.hostname.replace(/\.?aphroconfuso\.mt/, '') || 'production');
+				addRemoveFontSizeClass(localStorage.getItem('font') || 1);
+				addRemoveTheme(localStorage.getItem('theme') || 'regular', true);
+				if (localStorage.getItem(`tw-${urlSlug}`)) {
+					document.body.classList.add('trigger-warning-closed');
+				}
+			}
+		</script>
+		<script src="../script/script-59e423.js" type="module"></script>
+	</head>
+	<body class="show-nav this-month-frar">
+		<script>initialiseAfterBody();</script>
+		<div id="top-wrapper">
+			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
+			<nav id="top-nav">
+				<div id="logo-container-wrapper">
+					<div id="logo-container">
+						<a href="/">
+							<img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" />
+						</a>
+					</div>
+					<menu class="hide-mobile" id="menu-carousels">
+						<li class="abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
+					</menu>
+					<menu class="hide-mobile" id="menu-collections">
+						<li class="main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+						<li class="main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					</menu>
+				</div>
+				<input id="menu-toggle" type="checkbox" />
+				<label class='menu-button-container' for="menu-toggle">
+					<span style="display: none">Mobile biss: iftaħ il-menu</span>
+					<div class='menu-button'></div>
+				</label>
+				<menu id="menu-main">
+					<li class="hide-laptop main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+					<li class="hide-laptop main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					<li class="hide-laptop abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
+					<li><a href="/appuntamenti/">Appuntamenti</a></li>
+					<li><a href="/kontributuri/">Kontributuri</a></li>
+					<li><a href="/werrej/">Werrej</a></li>
+					<li><a href="/djarju/">Djarju</a></li>
+					<li><a href="/sensiliet/">Sensiliet</a></li>
+					<li><a href="/podcast/">Podcast</a></li>
+					<li class="hide-mobile"><a href="/kotba/" class="menu-kotba">Kotba</a></li>
+					<li class="hide-laptop choose-theme">
+						<a id="theme-regular" role="button" tabindex="0">s</a>
+						<a id="theme-dark" role="button" tabindex="1">m</a>
+						<a id="theme-contrast" role="button" tabindex="2">c</a>
+						<a id="theme-system" role="button" tabindex="3">p</a>
+					</li>
+					<li><a href="/dwarna/">Dwarna</a></li>
+					<li class="hide-laptop"><a href="/kotba/">Kotba</a></li>
+					<li class="hide-laptop"><a href="/kolofon/">Kolofon</a></li>
+					<li><a href="/newsletter/">Newsletter</a></li>
+					<li class="hide-laptop"><a href="/privatezza/">Privatezza</a></li>
+					<li><a href="/bookmarks/">Bookmarks<span id="bookmarks-number"></span></a></li>
+					<li class="hide-laptop choose-theme" id="text-size-adjust">
+						<a id="font-size-1" role="button" tabindex="8">a</a>
+						<a id="font-size-2" role="button" tabindex="9">a</a>
+						<a id="font-size-3" role="button" tabindex="10">a</a>
+						<a id="font-size-4" role="button" tabindex="11">a</a>
+					</li>
+				</menu>
+				<div id="brownline"></div>
+			</nav>
+			<div id="message"><!-- --></div>
+			<main id="skipto">
+				
+	<article>
+		<header>
+			<ul><li>&nbsp;</li></ul>
+			<h1>Abeċedarju</h1>
+			<h2></h2>
+		</header>
+		<div class="abecedaire">
+			<section id="grid-body">
+				<div class="body-text">
+					<ol>
+						
+							<li>
+								<a class="promo promo-abecedaire awwissu" href="/miriam-galea-lejl-u-nhar/" onclick="analytics(['trackEvent', 'Promo', 'minn: Abeċedarju', 'għal: Lejl u Nhar', 1]);">
+									<p class="blurb"><span class="initial"><span class="dropcap drop-A">A</span>ħdar</span>, aħdar, u aħdar, jien u nongħos fuq <l-m>il-ferrovija</l-m> fi triqti lura lejn <l-m>il-belt</l-m>. Quddiemi mara <l-m>fil-ħamsinijiet</l-m> taħdem <l-m>il-crosswords</l-m> minn fuq ktejjeb f’ħoġorha. Xagħarha maħlul mimli ħjut griżi, u wiċċha abjad terra. Ħdejja tfajla tistudja ’l &nbsp;King Lear u barra jnixxi <l-m>l-aħdar</l-m>. Aħdar u aktar aħdar. Għaddejjin ħafna sigar, u għelieqi, u djar weqfin waħidhom <l-m>fil-wesgħat</l-m> miftuħa. Mogħdijiet <l-m>fil-kampanja</l-m>, ħamrija mxarrba u ċpar fuq <l-m>l-għoljiet</l-m>. Bogħod wara bogħod, tul ta’ sema, griż, għal dejjem ta’ dejjem. Xagħrek ukoll ittektket melħ. <l-m>Il-ġilda</l-m> xierfa u għajnejk tqal bħaċ-ċomb. Koppja żagħżugħ</p>
+									<p class="credit">— “Lejl u Nhar” ta’ Miriam Galea</p>
+									<p class="credit credit-full">
+										— “Lejl u Nhar”<br>ta’ Miriam Galea
+										
+									</p>
+								</a>
+							</li>
+						
+							<li>
+								<a class="promo promo-abecedaire mejju" href="/joe-gatt-il-kuxjenza-fit-truf/" onclick="analytics(['trackEvent', 'Promo', 'minn: Abeċedarju', 'għal: Il-Kuxjenza fit-Truf', 2]);">
+									<p class="blurb"><span class="initial"><span class="dropcap drop-B">B</span>ħalma</span> żgur skoprew ħafna qabli, meta tkun qed tittraduċi <l-m>mit-Taljan</l-m>, <l-m>il-Malti</l-m> li qed taħdem bih ma tħossux uniformi. Fih ħafna li hu lixx u duttili, imma fih ukoll <l-m>l-għoqiedi</l-m> u <l-m>l-ingroppi</l-m>. <l-m>Fil-Malti</l-m> hemm ħafna Taljan li jgħaddi mingħajr ma tagħti kasu; imbagħad hemm <l-m>it-Taljan</l-m> tal-avukati. Filli tiskrupla għax tħossok m’int qed tagħmel xejn ħlief tbiddel ftit <l-m>l-ortografija </l-m>— “jien navvanza <l-m>t-tali</l-m> ipoteżi biex nispjega <l-m>d-debbolezza</l-m> ġovanili tiegħi, imma mingħajr konvinzjoni deċiża” — filli ttik rasek għax tinduna li qed tinstema’ iktar Taljan <l-m>mit-test</l-m> oriġinali. <l-m>It-Taljan</l-m> ta’ Svevo forsi mhux e</p>
+									<p class="credit">— “Il-Kuxjenza fit-Truf” ta’ Joe Gatt</p>
+									<p class="credit credit-full">
+										— “Il-Kuxjenza fit-Truf”<br>ta’ Joe Gatt
+										
+									</p>
+								</a>
+							</li>
+						
+							<li>
+								<a class="promo promo-abecedaire settembru" href="/joe-gatt-il-magna-tal-qari/" onclick="analytics(['trackEvent', 'Promo', 'minn: Abeċedarju', 'għal: Il-Magna tal-Qari', 3]);">
+									<p class="blurb"><span class="initial"><span class="dropcap drop-Ċ">Ċ</span>ertament</span>, dawn <l-m>il-magni</l-m> tal-qari se jaħjuha <l-m>l-letteratura</l-m>. <l-m>Fl-aħħar</l-m> ikollna ġgajta fuq ġgajta ta’ qarrejja li anki jekk jitħajru jiktbu huma stess, xorta waħda jifdlilhom <l-m>il-ħin</l-m> biex jaqraw <l-m>il-kitba</l-m> tagħna. <l-m>L-ilsna</l-m> ż-żgħar, li <l-m>s’issa</l-m> jkunu gawdew <l-m>mill-prestiġju</l-m> tal-kitba artiġġjanali, issa jindunaw li jistgħu jibbenefikaw iktar minn din <l-m>l-innovazzjoni</l-m> milli biss joqogħdu jistennew li kulħadd jiggustahom għax żgħar. F’daqqa waħda jkollna miljuni fuq miljuni ta’ qarrejja u <l-m>l-Malti</l-m> jkollu sfera kbira daqs <l-m>tal-Ingliż</l-m>, <l-m>l-Ispanjol</l-m>, <l-m>l-Għarbi</l-m>, <l-m>in-Navajo</l-m>. Ilsienna issa jkun oċean immens, kożmos sħiħ ta’</p>
+									<p class="credit">— “Il-Magna tal-Qari” ta’ Joe Gatt</p>
+									<p class="credit credit-full">
+										— “Il-Magna tal-Qari”<br>ta’ Joe Gatt
+										
+									</p>
+								</a>
+							</li>
+						
+							<li>
+								<a class="promo promo-abecedaire awwissu" href="/franco-bifo-berardi-karl-baldacchino-nifs-kaos-u-poeżija-2-vuċi-ħoss-storbju/" onclick="analytics(['trackEvent', 'Promo', 'minn: Abeċedarju', 'għal: Nifs: Kaos u Poeżija #2', 4]);">
+									<p class="blurb"><span class="initial"><span class="dropcap drop-C">C</span>haosmose</span> huwa <l-m>t-titlu</l-m> tal-ktieb finali ta’ Félix Guattari. <l-m>Il-kunċett</l-m> ta’ kaosmożi ħareġ <l-m>mix-xogħol</l-m> preċedenti ta’ Guattari, partikolarment <l-m>mill-kunċett</l-m> tar-<em>ritournelle</em> tiegħu u ta’ Gilles Deleuze. <l-m>It-terminu</l-m> “kaosmożi” jalludi għall-pożizzjoni ta’ awtorità <l-m>tal-kaos</l-m>, u <l-m>l-prospett</l-m> tal-evoluzzjoni ożmotika <l-m>tal-kaos</l-m> innifsu. <l-m>Il-ħidma</l-m> fundamentali <l-m>tal-kaosmożi</l-m> hija <l-m>l-interazzjoni</l-m> bla waqfien bejn <l-m>ir-respirazzjoni</l-m> kosmika u <l-m>r-ritornelli</l-m> tas-singularità. <l-m>L-ordni</l-m> stabbilita — soċjali, politika, ekonomika u sesswali — għandha <l-m>l-għan</l-m> li tinforza konkatenazzjoni li twebbes u toħnoq <l-m>l-oxxillazzjo</l-m></p>
+									<p class="credit">— “Nifs: Kaos u Poeżija #2” ta’ Franco &quot;Bifo&quot; Berardi</p>
+									<p class="credit credit-full">
+										— “Nifs: Kaos u Poeżija #2”<br>ta’ Franco &quot;Bifo&quot; Berardi
+										
+											<span class="translator"> (tr Karl Baldacchino</span>)
+										
+									</p>
+								</a>
+							</li>
+						
+							<li>
+								<a class="promo promo-abecedaire ottubru" href="/ryan-falzon-biex-tara-kif-jgħixu-l-oħrajn/" onclick="analytics(['trackEvent', 'Promo', 'minn: Abeċedarju', 'għal: Biex Tara Kif Jgħixu l-Oħrajn', 5]);">
+									<p class="blurb"><span class="initial"><span class="dropcap drop-D">D</span>an</span> ma kienx <l-m>l-unika</l-m> struttura militari abbandunata li nħatfet u <l-m>l-użu</l-m> tagħha nbidel skont <l-m>il-bżonnijiet</l-m> ta’ Malta ħielsa. Lanqas ma kien <l-m>l-uniku</l-m> post li żżarma, <l-m>mil-lejl</l-m> għan-nhar, minn kulma seta’ jinġarr. F’dar antika li ħabib tiegħi għadu kemm xtara kien hemm mejda li ħallew hemm <l-m>it-tfal</l-m> tal-inkwilini ta’ qabel, żewġt aħwa xjuħ li għexu <l-m>fil-wens</l-m> u <l-m>l-għanqbut</l-m> ta’ Bubaqra, u mietu <l-m>t-tnejn</l-m> wara xulxin <l-m>fil-bidu</l-m> tal-pandemija <l-m>tal-COVID-19</l-m>. Qabel telqu, <l-m>it-tfal</l-m> u <l-m>n-neputijiet</l-m> żarmawha minn kollox ħlief għal <l-m>dil-mejda</l-m>, li għadha fi stat tajjeb ħafna, b’wiċċ <l-m>tal-irħam</l-m>. Kollox qalgħulu qabel telqu, s</p>
+									<p class="credit">— “Biex Tara Kif Jgħixu l-Oħ…” ta’ Ryan Falzon</p>
+									<p class="credit credit-full">
+										— “Biex Tara Kif Jgħixu l-Oħrajn”<br>ta’ Ryan Falzon
+										
+									</p>
+								</a>
+							</li>
+						
+							<li>
+								<a class="promo promo-abecedaire mejju" href="/romeo-roxman-gatt-qarn/" onclick="analytics(['trackEvent', 'Promo', 'minn: Abeċedarju', 'għal: Qarn (silta)', 6]);">
+									<p class="blurb"><span class="initial"><span class="dropcap drop-E">E</span>rġajt</span> lura Malta. U ilni ġa sena hawn. Bla ħsieb kienet din, ġita <l-m>tas-sajf</l-m> bħal kull sena oħra iżda din <l-m>id-darba</l-m> fost affarijiet oħra, kienet aħbar kerha li żammitni hawn. Ejja ngħidu li kien u għadu jagħmel sens li jien, Romeo, ninsab hawn. Sirna nafu li missieri kellu kanċer <l-m>fl-istonku</l-m>, ikrah ferm, <l-m>tal-biża</l-m>’ waħx. Imnalla kellu <l-m>l-għasafar</l-m> biex jedha u lil ommi, li hi <l-m>l-pilastru</l-m> tal-familja u mingħajrha ma nagħmlu xejn. Imnalla kellna ftit minn dawn <l-m>l-għasafar</l-m> id-dar magħna għax lil ommi ħabbewha wisq, u hi lilhom. Ommi tqala waħda kellha, u ħarġulha tnejn f’daqqa. Ifhem, mhux eżatt hekk <l-m>l-ist</l-m></p>
+									<p class="credit">— “Qarn (silta)” ta’ Romeo Roxman Gatt</p>
+									<p class="credit credit-full">
+										— “Qarn (silta)”<br>ta’ Romeo Roxman Gatt
+										
+									</p>
+								</a>
+							</li>
+						
+							<li>
+								<a class="promo promo-abecedaire frar" href="/anton-jäger-karl-baldacchino-kollox-iperpolitiku-ġenealoġija-tal-preżent/" onclick="analytics(['trackEvent', 'Promo', 'minn: Abeċedarju', 'għal: Kollox Iperpolitiku', 7]);">
+									<p class="blurb"><span class="initial"><span class="dropcap drop-F">F</span>’Mejju</span> <l-m>tal-2020</l-m>, <l-m>l-istazzjon</l-m> tar-radju France Inter ikkummissjona serje ta’ kittieba prominenti biex jirriflettu fuq <l-m>il-konsegwenzi</l-m> tal-pandemija. <l-m>Il-ġist</l-m> tal-biċċa <l-m>l-kbira</l-m> tagħhom kien wieħed ta’ tranżizzjoni mimlija tama: <l-m>il-COVID</l-m> kien se jimmarka tragward ċivilizzazzjonali, li jħalli <l-m>d-dinja</l-m> rifigurata b’mod li ma jintesiex. Iżda wieħed <l-m>mill-ewwel</l-m> mistednin <l-m>tal-programm</l-m>, Michel Houellebecq, ma qabilx, u vjolentament. “Wara dawn <l-m>il-lockdowns</l-m> mhux se nqumu għal dinja ġdida,<span class="pullsemi">”</span> sostna, “se tkun <l-m>l-istess</l-m> waħda, biss ftit agħar.<span class="pullsemi">”</span> Għalih, <l-m>il-COVID</l-m> kien “virus banali, relatat b’mod xejn glamoruż ma’ </p>
+									<p class="credit">— “Kollox Iperpolitiku” ta’ Anton Jäger</p>
+									<p class="credit credit-full">
+										— “Kollox Iperpolitiku”<br>ta’ Anton Jäger
+										
+											<span class="translator"> (tr Karl Baldacchino</span>)
+										
+									</p>
+								</a>
+							</li>
+						
+							<li>
+								<a class="promo promo-abecedaire gunju" href="/kurt-borg-ġilda/" onclick="analytics(['trackEvent', 'Promo', 'minn: Abeċedarju', 'għal: Ġilda', 8]);">
+									<p class="blurb"><span class="initial"><span class="dropcap drop-Ġ">Ġ</span>ilda</span>. Kull bniedem adult għandu <l-m>mal-erba</l-m>’ kilogrammi ġilda. Jekk issaqsi lil xi ħadd għal lista <l-m>tal-organi</l-m> li għandu <l-m>l-bniedem</l-m>, għid li dak li jkun se jinsa jsemmilek <l-m>il-ġilda</l-m>, li hija <l-m>l-ikbar</l-m> organu <l-m>fil-bniedem</l-m>. <l-m>Il-ġilda</l-m> tgħattina, tiksina, bħal burdura li żżomm kollox <l-m>fil-konfini</l-m> tagħha, fi ħdanha. <l-m>Il-ġilda</l-m> tipproteġina, <l-m>mill-elementi</l-m> u minn daqqiet li kieku ma kienx għaliha jaqilgħuhom organi iktar sensittivi. Però <l-m>l-ġilda</l-m> hi tfakkira li aħna mġissma. Ma tantx tintuża <l-m>dil-kelma</l-m> f’dan <l-m>is-sens;</l-m> forsi messha tintuża iżjed. Qabel ma aħna dak jew <l-m>l-ieħor</l-m>, anzi, sabiex inkunu dak jew <l-m>l-ieħor</l-m></p>
+									<p class="credit">— “Ġilda” ta’ Kurt Borg</p>
+									<p class="credit credit-full">
+										— “Ġilda”<br>ta’ Kurt Borg
+										
+									</p>
+								</a>
+							</li>
+						
+							<li>
+								<a class="promo promo-abecedaire mejju" href="/omar-nshea-gilgamex-dak-li-ra-l-qiegħ/" onclick="analytics(['trackEvent', 'Promo', 'minn: Abeċedarju', 'għal: Gilgamex, Dak li Ra l-Qiegħ', 9]);">
+									<p class="blurb"><span class="initial"><span class="dropcap drop-G">G</span>ilgamex</span> huwa <l-m>x’aktarx</l-m> l-uniku persunaġġ <l-m>mil-letteratura</l-m> tal-Lvant Nofsani Qadim li huwa magħruf fuq livell popolari. <l-m>Fil-fatt</l-m>, ħafna għandhom <l-m>l-impressjoni</l-m> li <l-m>l-Gilgamex</l-m> huwa <l-m>l-uniku</l-m> xogħol letterarju li qatt inkiteb jew li nafu bih <l-m>mid-dinja</l-m> tal-Mesopotamja. Ħafna <l-m>mill-ftit</l-m> Assirjologi li hawn <l-m>fid-dinja</l-m> jersqu lejn <l-m>l-istudju</l-m> tal-Mesopotamja minħabba Gilgamex, spiss biex jaqraw <l-m>il-ġrajjiet</l-m> tiegħu <l-m>bl-Akkadi</l-m>, għax din <l-m>il-lingwa</l-m> tħaddan <l-m>id-djaletti</l-m> tal-Assirja u <l-m>l-Babilonja</l-m>. Ħafna huma dawk li jaħsbu li <l-m>l-ġrajja</l-m> nstabet kollha, li għandna llum kull framment li hemm bżonn biex ngħaqqdu <l-m>t-tifrik</l-m> fli</p>
+									<p class="credit">— “Gilgamex, Dak li Ra l-Qiegħ” ta’ Omar N’Shea</p>
+									<p class="credit credit-full">
+										— “Gilgamex, Dak li Ra l-Qiegħ”<br>ta’ Omar N’Shea
+										
+									</p>
+								</a>
+							</li>
+						
+							<li>
+								<a class="promo promo-abecedaire awwissu" href="/omar-nshea-es-sidr-1-għasafar-tal-passa/" onclick="analytics(['trackEvent', 'Promo', 'minn: Abeċedarju', 'għal: Es Sidr #1', 10]);">
+									<p class="blurb"><span class="initial"><span class="dropcap drop-Għ">GĦ</span>all-ħabta</span> ta’ Settembru, <l-m>fit-tarf</l-m> tax-xtajta fejn <l-m>l-ilma</l-m> tal-baħar baxx imelles <l-m>ir-ramel</l-m> u jqarmeċ <l-m>mal-blat</l-m> qabel jieqaf ħesrem <l-m>mal-ġenb</l-m> tat-tarmak imwitti għal mijiet ta’ kilometri tul Ras es Sidr, għandhom ħabta jinżlu erba’ monakelli żgħar, pluvieri li tiġbidhom <l-m>ix-xamma</l-m> ta’ xi gamblu jew xi bebbuxu u jinżlu jnaqqruh b’munqar ponta ta’ lapes. Ma tantx tara minnhom f’dawn <l-m>l-inħawi;</l-m> jafu li <l-m>l-iskrataċ</l-m> imferrxa ’l &nbsp;hinn u ’l &nbsp;hawn mhumiex sinjal ta’ merħba. Saqajhom irqaq u tawwalin imma għal għasafar li jħobbu jiddandnu <l-m>fl-ilma</l-m>, mhumiex twal daqskemm tistenniehom. Iħaffu fuq <l-m>ir-ramel</l-m>, bieżla, g</p>
+									<p class="credit">— “Es Sidr #1” ta’ Omar N’Shea</p>
+									<p class="credit credit-full">
+										— “Es Sidr #1”<br>ta’ Omar N’Shea
+										
+									</p>
+								</a>
+							</li>
+						
+							<li>
+								<a class="promo promo-abecedaire lulju" href="/loranne-vella-il-lanza-il-labra-il-qoffa-l-azzarin/" onclick="analytics(['trackEvent', 'Promo', 'minn: Abeċedarju', 'għal: Il-Lanza, il-Labra, il-Qoffa, l-Azzarin', 11]);">
+									<p class="blurb"><span class="initial"><span class="dropcap drop-H">H</span>uwa</span> mifhum li Saffo kitbet madwar għaxart elef vers, li <l-m>fil-Greċja</l-m> Antika kienu jinqraw billi kienu jinsabu miġburin f’disa’ volumi. Minn dan kollu fadlilna biss 650 vers. Biċċa mhux ħażin minn dawn <l-m>il-vrus</l-m> huma frammentati sew, kultant kelma waħda minn linja tiġi segwita minn kelma waħda oħra <l-m>mill-vers</l-m> ta’ wara, imbagħad isegwi vers mitluf, jiġifieri linja vojta. Taf tkun frustranti taqra framment li kulma fih huma kelma ’l &nbsp;hawn u oħra ’l &nbsp;hemm. Kif suppost naqrawhom? Għalfejn għandna nqisuhom ta’ importanza dawn <l-m>il-fdalijiet</l-m> tant li saħansitra jiġu tradotti? U xi tfisser traduzzjoni meta <l-m>fil-f</l-m></p>
+									<p class="credit">— “Il-Lanza, il-Labra, il-Qo…” ta’ Loranne Vella</p>
+									<p class="credit credit-full">
+										— “Il-Lanza, il-Labra, il-Qoffa, l-Azzarin”<br>ta’ Loranne Vella
+										
+									</p>
+								</a>
+							</li>
+						
+							<li>
+								<a class="promo promo-abecedaire mejju" href="/karl-baldacchino-politika-bla-nifs/" onclick="analytics(['trackEvent', 'Promo', 'minn: Abeċedarju', 'għal: Politika bla Nifs', 12]);">
+									<p class="blurb"><span class="initial"><span class="dropcap drop-Ħ">Ħ</span>add</span> ma jista’ jiċħad li ninsabu f’punt <l-m>fl-istorja</l-m> tad-dinja fejn għandna iktar minn kollox. Iktar krudeltajiet, iżda wkoll iktar ġesti ta’ rieda tajba. Iktar problemi finanzjarji, <l-m>fl-istess</l-m> ħin li iktar nies qed jistagħnew. Iktar kriżijiet ta’ kull xorta u għamla, ibda <l-m>mill-ambjent</l-m> u spiċċa <l-m>bil-mard</l-m>. <l-m>L-istess</l-m>, <l-m>it-tagħrif</l-m> dwar <l-m>it-tnejn</l-m>. Iktar ksenofobija u razziżmu, kif ukoll iktar diskorsi ta’ inklużjoni soċjali u ugwaljanza. Primarjament, għandna iktar minn kollox għaliex esposti għal ħafna iktar meta kkumparat ma’ dak li kien qabel jesponina għalih <l-m>il-ġurnal</l-m> ta’ kuljum, kemm-il darba kien jin</p>
+									<p class="credit">— “Politika bla Nifs” ta’ Karl Baldacchino</p>
+									<p class="credit credit-full">
+										— “Politika bla Nifs”<br>ta’ Karl Baldacchino
+										
+									</p>
+								</a>
+							</li>
+						
+							<li>
+								<a class="promo promo-abecedaire gunju" href="/kurt-borg-ġilda/" onclick="analytics(['trackEvent', 'Promo', 'minn: Abeċedarju', 'għal: Ġilda', 13]);">
+									<p class="blurb"><span class="initial"><span class="dropcap drop-I">I</span>l-vulnerabbiltà</span> <l-m>tal-Jien</l-m> hi bħall-elementi kollha. Bħan-nar, <l-m>il-Jien</l-m> jaqbad, jarmi <l-m>l-qawwa</l-m>, jinħela, jaħraq. <l-m>X’inhu</l-m> n-nar, fejnha <l-m>l-fjamma</l-m>, fejn tibda, fejn tieqaf? <l-m>In-nar</l-m> jaqbad, iqabbad, joħloq <l-m>l-irmied</l-m>. Fjamma tibża’ minnha imma faċli tbatti, tmajna, tintefa. <l-m>Il-fjamma</l-m> ma tistax teżisti weħidha, teħtieġ xi tqabbad, trid <l-m>l-arja</l-m>. Bħall-arja, <l-m>il-Jien</l-m> itajjar u jittajjar. Fejn hu <l-m>r-riħ</l-m>, kif taqbdu? Attent ma jmurx jieħdok <l-m>ir-riħ</l-m>, ngħidu. Jieħdok fejn? Lil hinn <l-m>mill-Jien</l-m>, titmexxa għal post ieħor mingħajr <l-m>l-għażla</l-m> tiegħek. Bħall-art, <l-m>il-Jien</l-m> jankra. Imma <l-m>l-art</l-m> tinkiser, titfarra</p>
+									<p class="credit">— “Ġilda” ta’ Kurt Borg</p>
+									<p class="credit credit-full">
+										— “Ġilda”<br>ta’ Kurt Borg
+										
+									</p>
+								</a>
+							</li>
+						
+							<li>
+								<a class="promo promo-abecedaire frar" href="/kristina-borg-għalhekk-qed-nivvjaġġa-bil-mod-1-7236/" onclick="analytics(['trackEvent', 'Promo', 'minn: Abeċedarju', 'għal: Għalhekk qed nivvjaġġa bil-mod #1', 14]);">
+									<p class="blurb"><span class="initial"><span class="dropcap drop-J">J</span>ien</span> mingħalija se noqgħod nistenna hawn sakemm <l-m>tal-bar</l-m> ma tibdiex tħarisli <l-m>bl-ikrah</l-m> biex inqumilha, imma erba’ sigħat f’dan <l-m>l-istorbju</l-m> mhux se nkampa. Niftakar li għandi bżonn nixtri xi ħaġa <l-m>tal-ikel</l-m> biex <l-m>tal-inqas</l-m> ikolli packed lunch għal fuq <l-m>il-vapur</l-m>, u mingħajr ma rrid nibda nħuf <l-m>mat-toroq</l-m> tal-madwar. Nidħol <l-m>s’għand</l-m> il-MAX, supermarket fejn nistenna li jkollu kollox, ħeqq, MAX, hux. <l-m>L-aktar</l-m>, <l-m>l-aqwa</l-m> u <l-m>l-aħjar;</l-m> imma xejn ma jentużjażmani għax kollox jidher għajjien, bħali. Nonfoq 54 ċenteżmu fuq banana waħda u ħawħa iebsa qisha ġidra. Terġa’ tibda traxxax u jien nerġa’ nittanta xortija — n</p>
+									<p class="credit">— “Għalhekk qed nivvjaġġa bi…” ta’ Kristina Borg</p>
+									<p class="credit credit-full">
+										— “Għalhekk qed nivvjaġġa bil-mod #1”<br>ta’ Kristina Borg
+										
+									</p>
+								</a>
+							</li>
+						
+							<li>
+								<a class="promo promo-abecedaire mejju" href="/romeo-roxman-gatt-qarn/" onclick="analytics(['trackEvent', 'Promo', 'minn: Abeċedarju', 'għal: Qarn (silta)', 15]);">
+									<p class="blurb"><span class="initial"><span class="dropcap drop-K">K</span>ien</span> hemm raġuni oħra li żammitni hawn. Kien wasal <l-m>il-mument</l-m>, li kien ilu ġej minn dik <l-m>il-ġurnata</l-m> tat-twelid, li <l-m>fl-aħħar</l-m> sibt <l-m>il-vuċi</l-m> (għax <l-m>il-kliem</l-m> kont bejn wieħed u ieħor ġa sibtu) biex ngħid lil ommi u ’l &nbsp;missieri <l-m>bl-iżball</l-m> li għamlu <l-m>t-tobba</l-m> u <l-m>l-qwiebel</l-m>. Stħajjiltni rġajt lura għal meta kelli xi <l-m>sittax-il</l-m> sena, <l-m>fil-kċina</l-m> bilqiegħda fuq ħoġor missieri, inħossni kemxejn stramb, bħas-soltu, għax ma kontx kapaċi nesprimi xi tip ta’ emozzjoni. Dak <l-m>iż-żmien</l-m> kont ippruvajt nikkoreġi <l-m>l-iżball</l-m> permezz ta’ żball ieħor, għalkemm jien ma narahx żball. <l-m>Il-kelma</l-m> “liżbjana” kienet pjuttost ħarxa, allura k</p>
+									<p class="credit">— “Qarn (silta)” ta’ Romeo Roxman Gatt</p>
+									<p class="credit credit-full">
+										— “Qarn (silta)”<br>ta’ Romeo Roxman Gatt
+										
+									</p>
+								</a>
+							</li>
+						
+							<li>
+								<a class="promo promo-abecedaire mejju" href="/romeo-roxman-gatt-qarn/" onclick="analytics(['trackEvent', 'Promo', 'minn: Abeċedarju', 'għal: Qarn (silta)', 16]);">
+									<p class="blurb"><span class="initial"><span class="dropcap drop-L">L</span>ill-missirijiet</span> u <l-m>l-ommijiet</l-m> ta’ kull min kellu jgħaddi <l-m>mill-istorja</l-m> tal-“ħabiba”<span class="pull">.</span> Ħabiba — kull tfajla li qatt kelli kemm meta kont meqjus liżbjana u kemm issa. Tipo, <l-m>il-ħbieb</l-m> li tieħdu <l-m>d-dar</l-m> kollha tkunu ħxejtuhom? Ġieli, ifhem, ġraw xi affarijiet ma’ ħbieb imma mhux kollha kemm huma; u jekk taf li hi <l-m>t-tfajla</l-m> tiegħi għax ma ssejħilhiex hekk? Għalfejn kull relazzjoni tiegħi tibqa’ tiġi meqjusa bħala ħbiberija? Mela, mara u raġel li mhux miżżewġin u ilhom jgħixu flimkien, jew tafu li huma koppja, issejħulhom miżżewġin għalkemm mhumiex, u lili għalkemm intom ċerti li jien għarus tibqgħu tirreferu</p>
+									<p class="credit">— “Qarn (silta)” ta’ Romeo Roxman Gatt</p>
+									<p class="credit credit-full">
+										— “Qarn (silta)”<br>ta’ Romeo Roxman Gatt
+										
+									</p>
+								</a>
+							</li>
+						
+							<li>
+								<a class="promo promo-abecedaire ottubru" href="/joe-gatt-kontra-tagħna-għaliex-magħna/" onclick="analytics(['trackEvent', 'Promo', 'minn: Abeċedarju', 'għal: Kontra Tagħna Għaliex Magħna', 17]);">
+									<p class="blurb"><span class="initial"><span class="dropcap drop-M">M</span>eta</span> Boffa kien irtira <l-m>l-ultimatum</l-m>, Nerik Mizzi ma qabilx miegħu għax kien jidhirlu li la beda <l-m>l-ġlieda</l-m> missu komplieha. Mizzi, wara kollox, kien jimpressjona ruħu ħafna b’Mintoff meta kien jarah qed jiġġieled <l-m>mal-Ingliżi</l-m>. Imma xorta waħda qal li ma kienx jaqbel <l-m>mal-ultimatum</l-m> innifsu, għax dan kien jagħmel <l-m>lill-Maltin</l-m> jidhru “materjalisti”<span class="pull">,</span> forsi daqsxejn rgħiba għall-flus. Kien iktar inkwetat li jaqta’ figura tajba <l-m>l-pajjiż</l-m> milli li kulħadd ikollu <l-m>x’jiekol</l-m>. Għal Mizzi, <l-m>il-politika</l-m> kienet dwar <l-m>l-unur</l-m>, dwar <l-m>il-kultura</l-m>, dwar <l-m>l-identità</l-m>. Wara kollox, missieru kien waqqaf <l-m>il-Partit</l-m> Anti-Riformista l</p>
+									<p class="credit">— “Kontra Tagħna Għaliex Mag…” ta’ Joe Gatt</p>
+									<p class="credit credit-full">
+										— “Kontra Tagħna Għaliex Magħna”<br>ta’ Joe Gatt
+										
+									</p>
+								</a>
+							</li>
+						
+							<li>
+								<a class="promo promo-abecedaire ottubru" href="/davinia-hamilton-żerriegħa/" onclick="analytics(['trackEvent', 'Promo', 'minn: Abeċedarju', 'għal: Żerriegħa', 18]);">
+									<p class="blurb"><span class="initial"><span class="dropcap drop-N">N</span>iftakruna</span> ħażin. F’waħda <l-m>mill-isbaħ</l-m> pjazez <l-m>tal-Belt</l-m> Valletta, quddiem <l-m>il-Bibljoteka</l-m>, hemm statwa <l-m>tar-Reġina</l-m> Vittorja. Din <l-m>il-pjazza</l-m>, Pjazza Repubblika, hi aħjar magħrufa bħala Pjazza Reġina. <l-m>L-istatwa</l-m> kienet maħduma <l-m>mill-artist</l-m> Sqalli Giuseppe Valenti <l-m>mill-irħam</l-m>, u turi <l-m>lir-Reġina</l-m> bilqiegħda, tħares fuq <l-m>il-pjazza</l-m>, liebsa xalla <l-m>tal-bizzilla</l-m>. Tpoġġiet hemm <l-m>fl-1891</l-m> sabiex timmarka <l-m>l-Ġublew</l-m> tad-Deheb <l-m>tar-Reġina </l-m>— waħda minn bosta monumenti li twaqqfu madwar <l-m>il-kolonji</l-m> għal din <l-m>l-okkażjoni</l-m>. Ħadet post statwa oħra, <l-m>tal-Gran</l-m> Mastru De Vilhena, u qabel dik, <l-m>il-gvernatur</l-m> Ingliż John Gaspard Le March</p>
+									<p class="credit">— “Żerriegħa” ta’ Davinia Hamilton</p>
+									<p class="credit credit-full">
+										— “Żerriegħa”<br>ta’ Davinia Hamilton
+										
+									</p>
+								</a>
+							</li>
+						
+							<li>
+								<a class="promo promo-abecedaire awwissu" href="/omar-nshea-es-sidr-1-għasafar-tal-passa/" onclick="analytics(['trackEvent', 'Promo', 'minn: Abeċedarju', 'għal: Es Sidr #1', 19]);">
+									<p class="blurb"><span class="initial"><span class="dropcap drop-O">O</span>tman</span> ħallieli biss ismi, isem li għal snin twal f’żgħożiti xtaqt li kien differenti, iktar abjad, inqas jagħti <l-m>fl-għajn</l-m>, inqas iżarżar <l-m>fil-widna</l-m>. Imbagħad kien hemm kunjomi. Kont naf li <l-m>l-ortografija</l-m> tiegħu kienet finzjoni legali, trażliterazzjoni ad hoc ta’ kunjom Għarbi li <l-m>n-nutar</l-m> kien qaleb f’verżjoni vagament anglofonika, iżda li <l-m>l-verżjoni</l-m> tiegħu <l-m>bl-Għarbi</l-m> kienet intilfet <l-m>fid-dokumenti</l-m> notarili u li ma kien hemm <l-m>l-ebda</l-m> karta li fuqha qatt sibt miktub <l-m>x’kien</l-m> eżattament. Kull santissma għodwa, jum wara jum, <l-m>l-għalliema</l-m> kienu jistaqsuni kif ngħidu, bħallikieku ġie jżurni Sibaweyhi matul <l-m>il-le</l-m></p>
+									<p class="credit">— “Es Sidr #1” ta’ Omar N’Shea</p>
+									<p class="credit credit-full">
+										— “Es Sidr #1”<br>ta’ Omar N’Shea
+										
+									</p>
+								</a>
+							</li>
+						
+							<li>
+								<a class="promo promo-abecedaire mejju" href="/romeo-roxman-gatt-qarn/" onclick="analytics(['trackEvent', 'Promo', 'minn: Abeċedarju', 'għal: Qarn (silta)', 20]);">
+									<p class="blurb"><span class="initial"><span class="dropcap drop-P">P</span>oeżija</span> <l-m>bl-Ingliż</l-m> li ktibt hija “Acne &amp; Horny” fuq ktejjeb ċkejken li tathuli ħabiba tiegħi <l-m>tal-qalb</l-m>. Djarju qisu veru seta’ kien ta’ Romeo. Warda <l-m>fl-aħmar</l-m> imnaqqxa fuq qoxra <l-m>tal-ġild</l-m> ħadra. Minflok fuq Ġuljetta qed nikteb fuqi u fuq <l-m>it-T</l-m>. <l-m>Lit-tfajla</l-m> tiegħi niktbilha poeżiji imma ġeneralment nibgħathomlha email jew niktibhom fuq karta <l-m>tal-kompjuter</l-m>. Darba għamiltilha ktieb; ħadt <l-m>il-ħin</l-m> fuqu, ma kienx kliem biss. Hi tiktibli veru sabiħ, tikteb sabiħ b’mod ġenerali. Meta tmur lura lejn Barċellona tħallili koċċ ittri ċkejknin imferrxin <l-m>mad-dar</l-m>. Taħt <l-m>l-imħadda</l-m>, jew <l-m>fil-wax</l-m> ta’ xagħri, <l-m>fil-kexxun</l-m></p>
+									<p class="credit">— “Qarn (silta)” ta’ Romeo Roxman Gatt</p>
+									<p class="credit credit-full">
+										— “Qarn (silta)”<br>ta’ Romeo Roxman Gatt
+										
+									</p>
+								</a>
+							</li>
+						
+							<li>
+								<a class="promo promo-abecedaire marzu" href="/davinia-hamilton-likantropi/" onclick="analytics(['trackEvent', 'Promo', 'minn: Abeċedarju', 'għal: Likantropi', 21]);">
+									<p class="blurb"><span class="initial"><span class="dropcap drop-Q">Q</span>att</span> ma skoprejna <l-m>x’jiġri</l-m> li kellna nittardjaw. Dejjem naslu eżatt <l-m>fil-ħin</l-m>, naqbżu ’l &nbsp;barra <l-m>mill-vann</l-m>, ngħaddu <l-m>mill-kanċell</l-m> il-kbir <l-m>tal-ħadid</l-m>, u nitilgħu <l-m>t-taraġ</l-m> sparati. Kull ġurnata hi <l-m>l-istess</l-m> ġurnata. Inħeġġeġ ’il &nbsp;ġismi jħaffef, daqslikieku kien annimal apparti minni nnifsi, imma <l-m>t-toqol</l-m> tal-basket mimli kotba jillajmani. Kważi niżloq quddiem <l-m>ir-reception</l-m>, nisprintja għal <l-m>ġos-sala</l-m> tal-assembly, nilheġ, bla nifs. Sister Anthony, <em>deo gratias</em>, għadha mhix hawn. Qalbi tant qed tgħaġġel, qed nara <l-m>l-istilel</l-m> iduru bija. Inżomm <l-m>mal-ħajt</l-m> biex nieħu <l-m>n-nifs</l-m> u niffoka għajnejja fuq <l-m>il-madum</l-m> maqsu</p>
+									<p class="credit">— “Likantropi” ta’ Davinia Hamilton</p>
+									<p class="credit credit-full">
+										— “Likantropi”<br>ta’ Davinia Hamilton
+										
+									</p>
+								</a>
+							</li>
+						
+							<li>
+								<a class="promo promo-abecedaire frar" href="/anton-jäger-karl-baldacchino-kollox-iperpolitiku-ġenealoġija-tal-preżent/" onclick="analytics(['trackEvent', 'Promo', 'minn: Abeċedarju', 'għal: Kollox Iperpolitiku', 22]);">
+									<p class="blurb"><span class="initial"><span class="dropcap drop-R">R</span>etour</span><em> à Reims</em> jiddokumenta <l-m>l-kollass</l-m> tal-politika <l-m>tal-massa</l-m>, billi jsegwi moviment orbitali <l-m>mill-partit</l-m> għall-privatizzazzjoni <l-m>fis-snin</l-m> tmenin u disgħin, flimkien <l-m>mal-eklissi</l-m> gradwali <l-m>tad-dinjiet</l-m> soċjali li kienu abitaw <l-m>il-ġenituri</l-m> ta’ Eribon. Iżda diġà <l-m>fis-snin</l-m> disgħin <l-m>it-teorija</l-m> politika kienet fasslet fiżjonomija <l-m>tal-era</l-m> l-ġdida postpolitika — waħda li identifikat fatturi ewlenin għar-rimpjazzament tagħha stess. Għax-xjenzat politiku Brittaniku Colin Crouch, <l-m>iż-żmien</l-m> tal-postpolitika kien ikkaratterizzat minn paradoss. Kif jikteb <l-m>fil-bidu</l-m> ta’ <em><l-m>Post-Democracy</l-m></em> (2004), <l-m>fil-mill</l-m></p>
+									<p class="credit">— “Kollox Iperpolitiku” ta’ Anton Jäger</p>
+									<p class="credit credit-full">
+										— “Kollox Iperpolitiku”<br>ta’ Anton Jäger
+										
+											<span class="translator"> (tr Karl Baldacchino</span>)
+										
+									</p>
+								</a>
+							</li>
+						
+							<li>
+								<a class="promo promo-abecedaire april" href="/aaron-aquilina-persjani/" onclick="analytics(['trackEvent', 'Promo', 'minn: Abeċedarju', 'għal: Persjani', 23]);">
+									<p class="blurb"><span class="initial"><span class="dropcap drop-S">S</span>emmejt</span> dik <l-m>il-ħabiba</l-m> li tibgħatli <l-m>l-poeżiji</l-m>, sekonda ilu: Jasmine Bajada, poeta żagħżugħa Għawdxija li diġà ppubblikat xogħol akkademiku u poeżiji apparti dawk f’<em>ilsien selvaġġ</em>. Ma kont naf kważi xejn dwarha: għal żmien twil kienet għalija isem bla wiċċ, għax kienet ippubblikat xogħolha f’ġurnal akkademiku li kont immexxi <l-m>fil-passat</l-m>. Imbagħad bdejna naqsmu <l-m>l-poeżiji</l-m> (xi tliet jew erba’ snin wara) u, malli qrajthom, peress li għoġbuni sew, kelli għall-inqas insir nafha ftit: sibtha bniedma tħobb <l-m>il-bankijiet</l-m> taħt <l-m>is-saġar</l-m> u li tilqa’ lil dak li jkun bi tbissima fiduċjuża. <em></em></p>
+									<p class="credit">— “Persjani” ta’ Aaron Aquilina</p>
+									<p class="credit credit-full">
+										— “Persjani”<br>ta’ Aaron Aquilina
+										
+									</p>
+								</a>
+							</li>
+						
+							<li>
+								<a class="promo promo-abecedaire lulju" href="/glorianne-micallef-sottomissjoni/" onclick="analytics(['trackEvent', 'Promo', 'minn: Abeċedarju', 'għal: Sottomissjoni', 24]);">
+									<p class="blurb"><span class="initial"><span class="dropcap drop-T">T</span>inder</span> ma jgħoddx għalija, Mindy. Mindy tabiba ġdida qiegħda rotation <l-m>fis-sala</l-m>. Qed tgħinha ddaħħal cannula ġo xwejħa rieqda raqda fonda mewt. Mindy għandha misluta fuq <l-m>ix-xaqq</l-m> ta’ sidirha, u kultant, meta tkun qiegħda milwija tagħmel xi ħaġa u <l-m>l-flokk</l-m> tal-uniformi jaqa’ ’l &nbsp;quddiem, taraha tlellex bejn par żejżiet żgħar. Missek tipprova FetLife. Mindy! Qed tarani ħxint daqsekk? Baħnana. FetLife. Fetish. Life. Hemm irġiel orrajt. Nisa wkoll, skont <l-m>x’jogħġbok</l-m>, like. Ittihomx ħafna kunfidenza. Imma aħjar minn Tinder, hemm inqas boloh. Jew boloh mod ieħor. <em>Agħżel <l-m>il-</l-m></em></p>
+									<p class="credit">— “Sottomissjoni” ta’ Glorianne Micallef</p>
+									<p class="credit credit-full">
+										— “Sottomissjoni”<br>ta’ Glorianne Micallef
+										
+									</p>
+								</a>
+							</li>
+						
+							<li>
+								<a class="promo promo-abecedaire novembru" href="/simon-bartolo-qamar-aħmar/" onclick="analytics(['trackEvent', 'Promo', 'minn: Abeċedarju', 'għal: Qamar Aħmar', 25]);">
+									<p class="blurb"><span class="initial"><span class="dropcap drop-V">V</span>era</span> ħarset lejn oħtha <l-m>fil-mera</l-m>. Lejn <l-m>it-tikmix</l-m> li kien jikxef <l-m>il-fatt</l-m> li kienet avvanzata <l-m>fiż-żmien</l-m> imma <l-m>fl-istess</l-m> ħin jaħbi <l-m>l-età</l-m> preċiża tagħha. <l-m>X’aktarx</l-m> li kellha fuq <l-m>it-tmenin</l-m> sena sew, forsi saħansitra fuq <l-m>id-disgħin</l-m>. Għajnejha kienu għadhom jaħdmu tajjeb, bħas-sensi <l-m>l-oħra</l-m> tagħha. Iffukat fuq punt partikolari <l-m>fil-ġenb</l-m> ta’ wiċċha. Għal xi raġuni, waqt li qed timraħ f’dak <l-m>id-deżert</l-m> ta’ wiċċha, <l-m>iż-żona</l-m> b’dawk <l-m>l-għoljiet</l-m> u <l-m>l-widien</l-m> mimlijin għerien mudlama u sigrieti affaxxinatha iktar minn bnadi oħra. Poġġiet żewġt iswaba’ hemm u mellset <l-m>il-ġilda</l-m> bi ħlewwa liema bħalha. Imbagħad ġebbditha ft</p>
+									<p class="credit">— “Qamar Aħmar” ta’ Simon Bartolo</p>
+									<p class="credit credit-full">
+										— “Qamar Aħmar”<br>ta’ Simon Bartolo
+										
+									</p>
+								</a>
+							</li>
+						
+							<li>
+								<a class="promo promo-abecedaire april" href="/jimmy-grima-splużjonijiet-1-il-kwiet-u-l-lejl/" onclick="analytics(['trackEvent', 'Promo', 'minn: Abeċedarju', 'għal: Splużjonijiet #1', 26]);">
+									<p class="blurb"><span class="initial"><span class="dropcap drop-W">W</span>aqt</span> żmien <l-m>il-Covid</l-m> rajt <l-m>id-dokumentarju</l-m> fuq TVM News dwar Filfla, u dan kien mument li fetaħli <l-m>l-bibien</l-m> beraħ. Minn naqra ta’ għajdut, storja, leġġenda <l-m>tan-nies</l-m> ta’ wara <l-m>l-mina</l-m> bdew jispuntaw friegħi ġodda. <l-m>Id-dokumenti</l-m> u <l-m>l-mapep</l-m> li juri Joe Sultana flimkien <l-m>mal-memorji</l-m> tiegħu qanqluni biex nipprova ngħaqqad u nilgħab b’dawn <l-m>l-elementi</l-m> fil-performance. Bdejt <l-m>bil-prattika</l-m> militari għax jien qatt ma kien għaddieli minn rasi li dak <l-m>il-blat</l-m> imġarraf madwar Filfla mhuwiex xogħol <l-m>iż-żmien</l-m> u <l-m>t-tħabbit</l-m> tal-mewġ imma xogħol <l-m>il-bniedem</l-m>. <l-m>It-tifrik</l-m> ta’ Filfla matul <l-m>iż-żminijiet</l-m> huwa diżastru teknoloġ</p>
+									<p class="credit">— “Splużjonijiet #1” ta’ Jimmy Grima</p>
+									<p class="credit credit-full">
+										— “Splużjonijiet #1”<br>ta’ Jimmy Grima
+										
+									</p>
+								</a>
+							</li>
+						
+							<li>
+								<a class="promo promo-abecedaire mejju" href="/noah-fabri-ħsieb-il-ħamiema/" onclick="analytics(['trackEvent', 'Promo', 'minn: Abeċedarju', 'għal: Ħsieb il-Ħamiema', 27]);">
+									<p class="blurb"><span class="initial"><span class="dropcap drop-X">X</span>ħin</span> Nathalie fetħet, xammet <l-m>ir-riħa</l-m> qawwija ta’ njam għadu ġdid li kienet qed tilqagħha dan <l-m>l-aħħar</l-m> kull darba li tasal lura <l-m>d-dar</l-m>. Kienu għadhom kif xtraw żewġ gwardarobbi ġodda <l-m>fil-kmamar</l-m> tas-sodda; li kellhom qabel, magħmulin <l-m>mill-injam</l-m> tal-balsa llustrat biex jixbah ’<l-m>il-kewba</l-m>, kienu bdew iżommu <l-m>l-umdità</l-m>, u ħwejjiġhom bdew jintnu eżatt wara li jkunu għadhom kif ħasluhom. Ħadet <l-m>ir-ruħ</l-m> li <l-m>fl-aħħar</l-m> kienu solvewha <l-m>l-problema</l-m>, imma <l-m>l-ispiża</l-m> tal-gwardarobbi <l-m>l-ġodda</l-m>, u <l-m>tal-ħasil</l-m> żejjed <l-m>fl-aħħar</l-m> ftit xhur, kienet għafsithom mhux ħażin <l-m>fil-flus</l-m>. F’mumenti bħal dawn kienet tinduna li anki żewġ pagi fu</p>
+									<p class="credit">— “Ħsieb il-Ħamiema” ta’ Noah Fabri</p>
+									<p class="credit credit-full">
+										— “Ħsieb il-Ħamiema”<br>ta’ Noah Fabri
+										
+									</p>
+								</a>
+							</li>
+						
+							<li>
+								<a class="promo promo-abecedaire lulju" href="/rowena-grech-medusa/" onclick="analytics(['trackEvent', 'Promo', 'minn: Abeċedarju', 'għal: Medusa', 28]);">
+									<p class="blurb"><span class="initial"><span class="dropcap drop-Ż">Ż</span>gur</span> li ismi familjari. Żgur li smajt bosta stejjer fuqi. Iżda żgur qatt ma smajt dak li ġara bejni u bejn Persew. Nitolbok, iskot ftit u isma’ <l-m>l-istorja</l-m> tiegħi qabel nissarraf f’elf framment ta’ miti oħra… Mela darba, ħmistax-il sena ilu, meta kont għadni tifla, kont ngħix <l-m>mal-ġenituri</l-m> tiegħi, Foriku u Keto, fuq gżira serena mdawra b’baħar blu jwerżaq. <l-m>Id-dar</l-m> kienet ċkejkna, bi tlett ikmamar kollox; <l-m>il-kċina</l-m>, <l-m>il-kamra</l-m> tal-bżonnijet tagħna u <l-m>l-kamra</l-m> fejn konna norqdu jien u ħuti <l-m>l-oħra</l-m>. Għalkemm bejni u bejn ħuti <l-m>l-kbar</l-m> ftit snin biss kienu jifirduna — qabża ta’ sentejn kull wieħed — l-ikbar d</p>
+									<p class="credit">— “Medusa” ta’ Rowena Grech</p>
+									<p class="credit credit-full">
+										— “Medusa”<br>ta’ Rowena Grech
+										
+									</p>
+								</a>
+							</li>
+						
+							<li>
+								<a class="promo promo-abecedaire mejju" href="/joe-gatt-il-kuxjenza-fit-truf/" onclick="analytics(['trackEvent', 'Promo', 'minn: Abeċedarju', 'għal: Il-Kuxjenza fit-Truf', 29]);">
+									<p class="blurb"><span class="initial"><span class="dropcap drop-Z">Z</span>eno</span> Cosini jagħmel kollox nofs qalb. Imur <l-m>ix-xogħol</l-m> nofs qalb, jiżżewweġ nofs qalb, jaqlibha <l-m>lill-mara</l-m> nofs qalb. <l-m>L-uniku</l-m> suġġett li verament jinteressah huwa hu stess, <l-m>il-marda</l-m> tiegħu. <l-m>It-tabib</l-m> li kellem qallu biex jikteb dak kollu li għandu xi jgħid; bħall-psikoanalisti ta’ żmienu kellu fidi kważi għamja <l-m>fil-kliem</l-m>. Din wara kollox kienet <l-m>l-innovazzjoni</l-m> l-kbira ta’ Sigmund Freud. Li jekk <l-m>il-pazjent</l-m> jitħalla jitkellem liberament, f’atmosfera ta’ rilassament, jiftaħ qalbu daqslikieku kien ipnotizzat. Imma Cosini, jekk ma jaf xejn, jaf li <l-m>l-affarijiet</l-m> mhumiex daqshekk sempliċi. Jissuspetta </p>
+									<p class="credit">— “Il-Kuxjenza fit-Truf” ta’ Joe Gatt</p>
+									<p class="credit credit-full">
+										— “Il-Kuxjenza fit-Truf”<br>ta’ Joe Gatt
+										
+									</p>
+								</a>
+							</li>
+						
+							<li>
+								<a class="promo promo-abecedaire april" href="/jimmy-grima-splużjonijiet-1-il-kwiet-u-l-lejl/" onclick="analytics(['trackEvent', 'Promo', 'minn: Abeċedarju', 'għal: Splużjonijiet #1', 30]);">
+									<p class="blurb"><span class="initial"><span class="dropcap drop-16">16</span></span> ta’ Ottubru. <l-m>X’saħħa</l-m> fiha splużjoni? <l-m>X’inhuma</l-m> l-istejjer madwarha? Kaxxa infernali. <l-m>Is-sajjieda</l-m> kienu jistadu għall-bombi li għadhom ma splodewx. Filfla, <l-m>l-aktar</l-m> gżira mwarrba ta’ Malta <l-m>fl-inħawi</l-m> tal-Qrendi, kienet tintuża għall-prattika <l-m>tal-isparar</l-m> tar-rokits, missili u torpidows fi żmien <l-m>l-Ingliżi</l-m>. B’dawn <l-m>il-ħsibijiet</l-m> bdejt infassal <em>Kaxxa Infernali: Explosions</em>, biċċa xogħol <l-m>tat-teatru</l-m> totalment <l-m>non-fiction</l-m>. Din damet biex tintwera quddiem <l-m>in-nies</l-m> sentejn, sa Ġunju <l-m>tal-2021</l-m>, għax kien <l-m>iż-żmien</l-m> fejn seħħ dak li ma jitwemminx. Qatt ma ħsibt li kont se nkun maqful ġewwa għal żmien daqshe</p>
+									<p class="credit">— “Splużjonijiet #1” ta’ Jimmy Grima</p>
+									<p class="credit credit-full">
+										— “Splużjonijiet #1”<br>ta’ Jimmy Grima
+										
+									</p>
+								</a>
+							</li>
+						
+				</ol>
+			</section>
+		</div>
+	</article>
+	<script>
+		reportingTitle = "Abeċedarju";
+	</script>
+
+			</main>
+		</div>
+		<div id="bottom-wrapper">
+			<img id="deco" role="none" src="/img/deco-100.svg" alt="Dekorazzjoni art-nouveau" />
+			
+				<div id="newsletter-container-bottom" class="newsletter-container">
+					<section id="form" data-track-content data-content-name="Homepage" data-content-piece="formola">
+						<iframe id="newsletter" class="newsletter-iframe-regular" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#" scrolling="no" title="Abbona fin-newsletter"></iframe>
+<iframe id="newsletter" class="newsletter-iframe-dark" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#|#201e1d|#908984|0|442093344ewr" scrolling="no" title="Abbona fin-newsletter"></iframe>
+<iframe id="newsletter" class="newsletter-iframe-contrast" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#|#000000|#ffffff|0|442093344ewr" scrolling="no" title="Abbona fin-newsletter"></iframe>
+
+					</section>
+				</div>
+			
+			<footer data-track-content data-content-name="Footer" data-content-piece="abeċedarju">
+	<nav class="footer-content">
+		<menu id="housekeeping">
+			<li class="header">Dwarna</li>
+			<li><a href="/kolofon/">Kolofon</a></li>
+			<li><a href="/proċess-editorjali/">Proċess</a></li>
+			<li><a href="/gwida-tal-istil/">Gwida tal-istil</a></li>
+			<li><a href="/cookies/">Cookies</a></li>
+			<li><a href="/privatezza/">Privatezza</a></li>
+			<li><a href="/aċċessibbiltà/">Aċċessibbiltà</a></li>
+			<li><a href="/podcast/">Podcast</a></li>
+			<li><a href="/newsletter/">Newsletter</a></li>
+			<li class="hide-tablet"><a href="/drittijiet/">Drittijiet</a></li>
+		</menu>
+		<menu id="media">
+			<li class="header">Midja</li>
+			<li><a href="/ar/" class="arabic">العربية</a></li>
+			<li><a href="/ca/">Català</a></li>
+			<li><a href="/de/">Deutsch</a></li>
+			<li><a href="/en/">English</a></li>
+			<li><a href="/es/">Español</a></li>
+			<li><a href="/fr/">Français</a></li>
+			<li><a href="/it/">Italiano</a></li>
+			<li><a href="/nl/">Nederlands</a></li>
+			<li class="hide-tablet"><a href="/ro/">Română</a></li>
+		</menu>
+		<menu id="socials">
+			<li class="header">Segwina</li>
+			<li><a href="https://facebook.com/aphroconfuso">Facebook</a></li>
+			<li><a href="https://instagram.com/aphroconfuso">Instagram</a></li>
+			
+			
+			<li><a href="https://whatsapp.com/channel/0029VaysAKP7z4kZHDKdZ71J" rel="me">WhatsApp</a></li>
+			<li><a href="https://aphroconfuso.bsky.social/">Bluesky</a></li>
+			<li><a href="https://youtube.com/@aphroconfuso">Youtube</a></li>
+			<li><a href="https://open.spotify.com/user/31rly4s75gfxs6li6bcxc5bqlgza">Spotify</a></li>
+		</menu>
+		<menu id="podcast">
+			<li class="header">Podcast</li>
+			<li><a href="https://podcasts.apple.com/us/podcast/aphroconfuso/id1686567243">Apple</a></li>
+			
+			<li><a href="https://feeds.acast.com/public/shows/aphroconfuso">RSS feed</a></li>
+			<li><a href="https://open.spotify.com/show/75Lt3UMvC1jE15SGrNFMww">Spotify</a></li>
+			
+		</menu>
+		<div id="logotype-container">
+			<a href="/"><img src="/img/logotype.svg" class="logotype" alt="logo: Aphroconfuso" /></a>
+		</div>
+		<div id="email">
+			<a href="mailto:l-edituri@aphroconfuso.mt" class="email">l-edituri@aphroconfuso.mt</a>
+		</div>
+		<div class="hide-mobile choose-theme choose-theme-footer">
+			<a id="theme-regular-footer" role="button" tabindex="4">s</a>
+			<a id="theme-dark-footer" role="button" tabindex="5">m</a>
+			<a id="theme-contrast-footer" role="button" tabindex="6">c</a>
+			<a id="theme-system-footer" role="button" tabindex="7">p</a>
+		</div>
+		<div id="copyright"><a href="/drittijiet/" class="copyright">&copy; 2023-2025 Aphroconfuso et al</a></div>
+		<div id="qrcode"><img src="/img/qr/abeċedarju.png" width="180" height="180" alt="QR code" /></div>
+		<div id="url">https://aphroconfuso.mt/abeċedarju/</div>
+	</nav>
+</footer>
+
+		</div>
+		<aside id="scroll-tools" class="monthly-outlined">
+			<p><span id="progress"><!-- --></span></p>
+		</aside>
+	</body>
+</html>
