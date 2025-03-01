@@ -1,0 +1,645 @@
+<!doctype html>
+<html lang="mt" translate="no">
+
+	<head>
+		<meta charset="utf-8">
+		
+	<title>Simon Bartolo · Aphroconfuso</title>
+	<meta content="Simon Bartolo huwa kittieb ta’ drammi, kotba tat-tfal u l-adolexxenti, rumanzi u oħrajn. Fis-snin tiegħu bħala student fl-Università ta’ Malta kien l-editur tal-ġurnal tal-kitba Readers &amp;amp; Writers. Flimkien ma’ Loranne Vella kiteb Sqaq l-Infern u l-kotba l-oħra tat-Triloġija tal-Fiddien. Huwa ki…" name="description">
+	<meta property="og:image" content="/stampi/social_aphroconfuso_logo_social_kbir_kwadrat_d073f4e24a.jpg">
+
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+		<meta content="width=device-width, initial-scale=1" name="viewport">
+		<meta content="width=device-width" initial-scale="1.0" maximum-scale="1.0" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="yes" name="mobile-web-app-capable">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#f9f9f3">
+		<link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon-16x16.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32x32.png">
+		<link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
+		<link rel="mask-icon" href="/img/icons/safari-pinned-tab.svg" color="#5bbad5">
+		<meta property="og:image:type" content="image/jpeg">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
+		<link rel="canonical" href="https://aphroconfuso.mt/simon-bartolo/">
+		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
+		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
+		<link rel="stylesheet" href="/css/style-057218f9.css">
+		<script>
+			var
+				audioLoaded,
+				audioUrls,
+				author,
+				body,
+				bodyEnd,
+				bodyHeight,
+				bodyStart,
+				bodyText,
+				bookmarksArray,
+				bookmarksList,
+				bookmarksMenuElement,
+				charactersPerPixel,
+				charactersPerScreen,
+				currentTime,
+				duration,
+				elapsedTime,
+				hideScrollTools,
+				lastReportedReadingTime,
+				lastReportedScrollPosition,
+				lastScrollPosition,
+				message,
+				issueMonth,
+				issueMonthYear,
+				newScrollPosition,
+				pageHeight,
+				pageReportingTitle,
+				percentageProgress,
+				placeText,
+				podcastUrl,
+				previousTime,
+				progressElement,
+				readingSpeed,
+				reportingTitle,
+				screenHeight,
+				skippedTime,
+				storyCompleted,
+				storyId,
+				storyType,
+				sequenceEpisodeNumber,
+				sequenceEpisodeTitle,
+				timeStarted,
+				pageTitle,
+				wordcount,
+				wordsPerPixel,
+				wordsPerSecond,
+				wordsPerSecondAudio,
+				wordsPerScreen;
+
+			audioLoaded = false;
+			bookmarksArray = [];
+			percentageProgress = 0;
+			previousTime = [];
+			storyCompleted = false;
+
+			const	urlSlug = location.pathname.replace(/\//g, '');
+			const setCookie = (cname, cvalue, exdays = 36500) => {
+				const d = new Date();
+				d.setTime(d.getTime() + (exdays*24*60*60*1000));
+				let expires = "expires="+ d.toUTCString();
+				document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+			}
+			const getCookie = (cname) => {
+				let name = cname + "=";
+				let decodedCookie = decodeURIComponent(document.cookie);
+				let ca = decodedCookie.split(';');
+				for(let i = 0; i < ca.length; i++) {
+					let c = ca[i];
+					while (c.charAt(0) == ' ') {
+						c = c.substring(1);
+					}
+					if (c.indexOf(name) == 0) {
+						return c.substring(name.length, c.length);
+					}
+				}
+				return "";
+			}
+			var _paq = window._paq = window._paq || [];
+			const analytics = (arrayInfo) => {
+				if (location.host !== 'aphroconfuso.mt') console.log(arrayInfo);
+				_paq.push(arrayInfo);
+			}
+			_paq.push(['disableCookies']);
+			_paq.push(['enableJSErrorTracking']);
+			_paq.push(['enableHeartBeatTimer']);
+			_paq.push(['enableLinkTracking']);
+			_paq.push(['trackPageView']);
+			_paq.push(['trackVisibleContentImpressions']);
+			(function () {
+				var u = "//analitika.aphroconfuso.mt/";
+				_paq.push(['setTrackerUrl', u + 'matomo.php']);
+				_paq.push(['setSiteId', location.host === 'aphroconfuso.mt' ? '1' : '2']);
+				var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
+			})();
+			const addRemoveFontSizeClass = (size) => {
+				document.body.classList.remove('font-size-1','font-size-2','font-size-3','font-size-4')
+				document.body.classList.add(`font-size-${ size }`);
+				localStorage.setItem('font', size);
+			}
+			// REVIEW
+			const translateTheme = {
+				'regular': 'regolari',
+				'dark': 'skura',
+				'contrast': 'kuntrast',
+				'system': 'sistema'
+			}
+			const addRemoveTheme = (theme, stored) => {
+				document.body.classList.remove('theme-regular','theme-dark','theme-contrast','theme-system')
+				document.body.classList.add(`theme-${ theme }`);
+				localStorage.setItem('theme', theme);
+				if (stored && theme === 'regular') return;
+				analytics(['trackEvent', 'Tema', `${ stored ? 'Tema storjata' : 'Tema nbidlet' }`, translateTheme[theme]]);
+			}
+			const initialiseAfterBody = () => {
+				document.body.classList.add(location.hostname.replace(/\.?aphroconfuso\.mt/, '') || 'production');
+				addRemoveFontSizeClass(localStorage.getItem('font') || 1);
+				addRemoveTheme(localStorage.getItem('theme') || 'regular', true);
+				if (localStorage.getItem(`tw-${urlSlug}`)) {
+					document.body.classList.add('trigger-warning-closed');
+				}
+			}
+		</script>
+		<script src="../script/script-7fd21a.js" type="module"></script>
+	</head>
+	<body class="show-nav this-month-marzu">
+		<script>initialiseAfterBody();</script>
+		<div id="top-wrapper">
+			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
+			<nav id="top-nav">
+				<div id="logo-container-wrapper">
+					<div id="logo-container">
+						<a href="/">
+							<img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" />
+						</a>
+					</div>
+					<menu class="hide-mobile" id="menu-carousels">
+						<li class="abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
+					</menu>
+					<menu class="hide-mobile" id="menu-collections">
+						<li class="main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+						<li class="main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					</menu>
+				</div>
+				<input id="menu-toggle" type="checkbox" />
+				<label class='menu-button-container' for="menu-toggle">
+					<span style="display: none">Mobile biss: iftaħ il-menu</span>
+					<div class='menu-button'></div>
+				</label>
+				<menu id="menu-main">
+					<li class="hide-laptop main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+					<li class="hide-laptop main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					<li class="hide-laptop abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
+					<li><a href="/appuntamenti/">Appuntamenti</a></li>
+					<li><a href="/kontributuri/">Kontributuri</a></li>
+					<li><a href="/werrej/">Werrej</a></li>
+					<li><a href="/djarju/">Djarju</a></li>
+					<li><a href="/sensiliet/">Sensiliet</a></li>
+					<li><a href="/podcast/">Podcast</a></li>
+					<li class="hide-mobile"><a href="/kotba/" class="menu-kotba">Kotba</a></li>
+					<li class="hide-laptop choose-theme">
+						<a id="theme-regular" role="button" tabindex="0">s</a>
+						<a id="theme-dark" role="button" tabindex="1">m</a>
+						<a id="theme-contrast" role="button" tabindex="2">c</a>
+						<a id="theme-system" role="button" tabindex="3">p</a>
+					</li>
+					<li><a href="/dwarna/">Dwarna</a></li>
+					<li class="hide-laptop"><a href="/kotba/">Kotba</a></li>
+					<li class="hide-laptop"><a href="/kolofon/">Kolofon</a></li>
+					<li><a href="/newsletter/">Newsletter</a></li>
+					<li class="hide-laptop"><a href="/privatezza/">Privatezza</a></li>
+					<li><a href="/bookmarks/">Bookmarks<span id="bookmarks-number"></span></a></li>
+					<li class="hide-laptop choose-theme" id="text-size-adjust">
+						<a id="font-size-1" role="button" tabindex="8">a</a>
+						<a id="font-size-2" role="button" tabindex="9">a</a>
+						<a id="font-size-3" role="button" tabindex="10">a</a>
+						<a id="font-size-4" role="button" tabindex="11">a</a>
+					</li>
+				</menu>
+				<div id="brownline"></div>
+			</nav>
+			<div id="message"><!-- --></div>
+			<main id="skipto">
+				
+<article class="generic contributor-21" data-pagefind-body>
+	<header>
+		<ul><li class="header-label"><a href="/kontributuri/">Kontributuri</a></li></ul>
+		<h1 data-pagefind-weight="9">Simon Bartolo</h1>
+	</header>
+	<div class="container-generic contributor">
+		<section id="grid-body">
+			<div class="generic-body-text" data-pagefind-weight="3">
+				<div data-pagefind-body data-pagefind-weight="1">
+					<p>Simon Bartolo huwa kittieb ta’ drammi, kotba <l-m>tat-tfal</l-m> u <l-m>l-adolexxenti</l-m>, rumanzi u oħrajn. <l-m>Fis-snin</l-m> tiegħu bħala student <l-m>fl-Università</l-m> ta’ Malta kien <l-m>l-editur</l-m> tal-ġurnal <l-m>tal-kitba</l-m> <em>Readers &amp; Writers</em>. Flimkien ma’ Loranne Vella kiteb <em>Sqaq <l-m>l-Infern</l-m></em> u <l-m>l-kotba</l-m> l-oħra <l-m>tat-</l-m><em>Triloġija <l-m>tal-Fiddien</l-m></em>. Huwa kien wieħed <l-m>mill-fundaturi</l-m> tal-grupp teatrali Aleateia u bħala <l-m>d-direttur</l-m> artistiku u <l-m>d-drammaturgu</l-m> tal-grupp ħoloq bosta xogħlijiet li ttellgħu kemm f’Malta kif ukoll f’pajjiżi oħrajn. Ippubblika diversi kotba — bħal <em>Kliem ir­-Riħ</em>, <em>Kważi Kważi lil Tamara Nżommuha</em> u <em>Deformity</em> — li rebħu premjijiet nazzjonali. Kiteb ukoll kotba mhux fittizji, bħal <em>A Seat at the Table</em> li jittratta <l-m>l-istorja</l-m> reċenti <l-m>tad-drittijiet</l-m> tal-persuni LGBT+ f’pajjiżna. Huwa <l-m>l-awtur</l-m> ta’ <em>Jien Inħobb — Inti Tħobb</em>, <em>Ħabbilni ħa Nirbaħ</em> u għadd ta’ drammi oħrajn, fosthom <em><l-m>Il-Pożittivi</l-m></em>, li kien frott ta’ riċerka estensiva u intervisti ma’ nies li jgħixu <l-m>bl-HIV</l-m> f’Malta. Bħalissa għaddej bi proġetti oħrajn bħal <em>Irranġajtni għall-Festi</em> — ktieb dwar <l-m>it-tradizzjoni</l-m> tal-festa Maltija bħala wirt intanġibbli, li se jitqassam <l-m>fl-iskejjel;</l-m> <em>Do Re Mi</em> — kollaborazzjoni <l-m>mal-Malta</l-m> Philharmonic Orchestra fuq sensiela ta’ kunċerti għat-tfal; u <em><l-m>Il-Kreatura</l-m> tad-Deheb</em> — ktieb ġdid minn <em>Ruxxmata Kreaturi</em>, sensiela ta’ kotba li tkaxkar <l-m>il-mostri</l-m> tal-folkor Malti lejn <l-m>is-seklu</l-m> 21.</p>
+				</div>
+				
+				
+					<div class="anthologies">
+						<p class="continuity">Kotba ta’ <span class="contributor">Aphroconfuso</span> bil-kitba ta’ <span class="contributor">Simon</span>:</p>
+						
+						
+						
+						
+						
+						
+						<ul class="promo-list">
+	
+	
+		
+
+<li >
+	<a class="promo  ottubru promo-recensjoni sequence- story-88" href="/kotba-antoloġija-1/" onclick="analytics(['trackEvent', 'Promo', 'minn: Simon Bartolo', 'għal: Antoloġija 1', 1]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Ottubru 2024</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Antoloġija 1
+				
+			</h1>
+		
+	
+	
+
+	<h2><!-- --></h2>
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Antoloġija 1 hija <l-m>l-ewwel</l-m> pubblikazzjoni stampata ta’ Aphroconfuso u tiġbor fiha <l-m>l-biċċa</l-m> l-kbira <l-m>tal-kitba</l-m> li dehret <l-m>fl-ewwel</l-m> sena <l-m>tal-ġurnal</l-m>. Din <l-m>il-ġabra</l-m> tinkludi esejs, stejjer, poeżiji, djarji, xogħol kollaborattiv u kitba oħra li mhux faċli tikklassifikaha. B’kollox tinkludi 34 xogħol minn 24 kittieb: Aaron Aquilina, Karl Baldacchino, Simon Bartolo, Warren Bartolo, Kurt Borg, Antoine Cassar, Daniel Cossai, Leanne Ellul, Noah Fabri, Ryan Falzon, Charlene Galea, Miriam Galea, Joe Gatt , Romeo Roxman Gatt, Rowena Grech, Jimmy Grima, Davinia Hamilton, Omar <l-m>N’Shea</l-m>, Kris Polidano, Matteo Pullicino, Matthew Schembri, Maria Theuma, Leslie Vassallo u Loranne Vella. Joe Gatt u Loranne Vella, edituri.</p>
+			
+			
+				<img src="/stampi/undefined.avif" alt="">
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-88">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+</ul>
+
+					</div>
+				
+				
+					<div class="wrote">
+						<p class="continuity">Kitba ta’ <span class="contributor">Simon</span> fil-ġurnal:</p>
+						
+						
+						
+						
+						
+						<ul class="promo-list">
+	
+	
+		
+
+<li >
+	<a class="promo  novembru promo-storja sequence- story-26" href="/simon-bartolo-qamar-aħmar/" onclick="analytics(['trackEvent', 'Promo', 'minn: Simon Bartolo', 'għal: Qamar Aħmar', 1]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Novembru 2023</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Qamar Aħmar
+				
+			</h1>
+		
+	
+	
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Virginia weġbitha li dawn huma fatti <l-m>tal-ħajja</l-m> u ma nistgħux nibdluhom. Nitwieldu u nikbru. Inwelldu u nkomplu nikbru sa ma <l-m>fl-aħħar</l-m> nispiċċaw. M’hemmx mod ieħor. Vera kienet ħarset lejn Virginia b’ċertu diqa. Forsi jmissha insistiet iktar; forsi kieku spjegat ruħha aħjar, Virginia kienet tifhem u ma titlaqx, imma qatgħet qalbha. Ma setgħet tagħmel xejn għajr li tħalli lil oħtha titlaq, tmur tfittex xortiha barra minn Malta, toffri ħajjitha u ġisimha lil raġel li qatt ma seta’ japprezzaha. Tagħtih ulied li mhux talli jerdgħulha ħalibha imma demmha wkoll. Għannqitha waħda <l-m>tal-aħħar</l-m>. Tgħanniqa iebsa u <l-m>tal-aħħar</l-m>. Saħħa! Xtaqitilha <l-m>s-saħħa</l-m> kollha <l-m>tad-dinja</l-m> u ma ppruvatx tkellimha iżjed. Daret u telqet, u ħalliet lil Virginia tħares lejha tielqa. Ħarġet <l-m>fil-ġnien</l-m> li kien kbir, mogħni bi frott taċ-ċitru u <l-m>tal-għadma</l-m> u mdawwar <l-m>bil-bajtar</l-m> tax-xewk biex la ħadd seta’ jidħol u lanqas joħroġ minnu ħlief minn dik <l-m>il-fetħa</l-m> waħda li kienet tħalliet minn xi antenat <l-m>tat-tewmin</l-m>. Imxiet <l-m>san-naħa</l-m> l-għolja <l-m>tal-ġnien</l-m> fejn kien hemm bank <l-m>tal-ġebel</l-m> u poġġiet bilqiegħda, tħares lejn iċ-ċimiterju <l-m>tar-raħal</l-m>. Ma reġgħetx ħarset lejn oħtha. Ma marritx taraha tiżżewweġ. Għamlet tabirruħha li kienet marida u ssakkret f’kamritha. Lanqas biss marret taraha tielqa ma’ żewġha u lanqas qatt ma kienet tiftaħ <l-m>l-ittri</l-m> li tirċievi mingħandha. Virginia damet ħafna tibgħat. Ma kinetx xi waħda li taqta’ qalbha malajr, iżda <l-m>bil-mod</l-m> il-mod indunat li kien kollu ta’ xejn. Vera ma kienet se taċċetta qatt li setgħu jibqgħu ħbieb, li setgħu jibqgħu jinħabbu. Kienet ġegħlitha tagħżel u hi, Virginia, kienet għażlet li tibni familja u futur f’pajjiż ieħor. Ma kinetx għażlet lilha, kienet għażlet <l-m>lir-raġel</l-m>. Iżda <l-m>fil-verità</l-m>, Vera kienet tkellem lil Virginia kuljum <l-m>fil-mera</l-m>. U <l-m>fil-mera</l-m> ffukat fuq punt f’wiċċha fejn kien hemm għazza mitlufa, timbaram u tiċċaqlaq ma’ kull tikmixa konfuża.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-26">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+</ul>
+
+					</div>
+				
+				
+				
+				
+				
+			</div>
+		</section>
+		<section id="grid-max-panel-left-top" data-pagefind-ignore>
+			<section class="generic-menu contributors-menu">
+	
+		<ul>
+			
+				<li><a href="/raylene-abdilla/">Raylene Abdilla</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/aaron-aquilina/">Aaron Aquilina</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/jasmine-bajada/">Jasmine Bajada</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/karl-baldacchino/">Karl Baldacchino</a></li>
+			
+		
+	
+		
+			
+				<li class="active">Simon Bartolo</li>
+			
+		
+	
+		
+			
+				<li><a href="/warren-bartolo/">Warren Bartolo</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/kristina-borg/">Kristina Borg</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/kurt-borg/">Kurt Borg</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/antoine-cassar/">Antoine Cassar</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/daniel-cossai/">Daniel Cossai</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/leanne-ellul/">Leanne Ellul</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/noah-fabri/">Noah Fabri</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/ryan-falzon/">Ryan Falzon</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/fatima-a.m./">fatima a.m.</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/charlene-galea/">Charlene Galea</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/miriam-galea/">Miriam Galea</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/joe-gatt/">Joe Gatt</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/romeo-roxman-gatt/">Romeo Roxman Gatt</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/rowena-grech/">Rowena Grech</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/jimmy-grima/">Jimmy Grima</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/davinia-hamilton/">Davinia Hamilton</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/jien_a/">Jien_a</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/ira-melkonyan/">Ira Melkonyan</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/glorianne-micallef/">Glorianne Micallef</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/omar-nshea/">Omar N’Shea</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/nathan-anthony-pace/">Nathan Anthony Pace</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/kris-polidano/">Kris Polidano</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/matteo-pullicino/">Matteo Pullicino</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/matthew-schembri/">Matthew Schembri</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/maria-theuma/">Maria Theuma</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/leslie-vassallo/">Leslie Vassallo</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/loranne-vella/">Loranne Vella</a></li>
+			
+		</ul>
+	
+</section>
+
+		</section>
+	</div>
+</article>
+<script>
+	reportingTitle = "Simon Bartolo";
+</script>
+
+			</main>
+		</div>
+		<div id="bottom-wrapper">
+			<img id="deco" role="none" src="/img/deco-100.svg" alt="Dekorazzjoni art-nouveau" />
+			
+				<div id="newsletter-container-bottom" class="newsletter-container">
+					<section id="form" data-track-content data-content-name="Homepage" data-content-piece="formola">
+						<iframe id="newsletter" class="newsletter-iframe-regular" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#" scrolling="no" title="Abbona fin-newsletter"></iframe>
+<iframe id="newsletter" class="newsletter-iframe-dark" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#|#201e1d|#908984|0|442093344ewr" scrolling="no" title="Abbona fin-newsletter"></iframe>
+<iframe id="newsletter" class="newsletter-iframe-contrast" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#|#000000|#ffffff|0|442093344ewr" scrolling="no" title="Abbona fin-newsletter"></iframe>
+
+					</section>
+				</div>
+			
+			<footer data-track-content data-content-name="Footer" data-content-piece="simon-bartolo">
+	<nav class="footer-content">
+		<menu id="housekeeping">
+			<li class="header">Dwarna</li>
+			<li><a href="/kolofon/">Kolofon</a></li>
+			<li><a href="/proċess-editorjali/">Proċess</a></li>
+			<li><a href="/gwida-tal-istil/">Gwida tal-istil</a></li>
+			<li><a href="/cookies/">Cookies</a></li>
+			<li><a href="/privatezza/">Privatezza</a></li>
+			<li><a href="/aċċessibbiltà/">Aċċessibbiltà</a></li>
+			<li><a href="/podcast/">Podcast</a></li>
+			<li><a href="/newsletter/">Newsletter</a></li>
+			<li class="hide-tablet"><a href="/drittijiet/">Drittijiet</a></li>
+		</menu>
+		<menu id="media">
+			<li class="header">Midja</li>
+			<li><a href="/ar/" class="arabic">العربية</a></li>
+			<li><a href="/ca/">Català</a></li>
+			<li><a href="/de/">Deutsch</a></li>
+			<li><a href="/en/">English</a></li>
+			<li><a href="/es/">Español</a></li>
+			<li><a href="/fr/">Français</a></li>
+			<li><a href="/it/">Italiano</a></li>
+			<li><a href="/nl/">Nederlands</a></li>
+			<li class="hide-tablet"><a href="/ro/">Română</a></li>
+		</menu>
+		<menu id="socials">
+			<li class="header">Segwina</li>
+			<li><a href="https://facebook.com/aphroconfuso">Facebook</a></li>
+			<li><a href="https://instagram.com/aphroconfuso">Instagram</a></li>
+			
+			
+			<li><a href="https://whatsapp.com/channel/0029VaysAKP7z4kZHDKdZ71J" rel="me">WhatsApp</a></li>
+			<li><a href="https://aphroconfuso.bsky.social/">Bluesky</a></li>
+			<li><a href="https://youtube.com/@aphroconfuso">Youtube</a></li>
+			<li><a href="https://open.spotify.com/user/31rly4s75gfxs6li6bcxc5bqlgza">Spotify</a></li>
+		</menu>
+		<menu id="podcast">
+			<li class="header">Podcast</li>
+			<li><a href="https://podcasts.apple.com/us/podcast/aphroconfuso/id1686567243">Apple</a></li>
+			
+			<li><a href="https://feeds.acast.com/public/shows/aphroconfuso">RSS feed</a></li>
+			<li><a href="https://open.spotify.com/show/75Lt3UMvC1jE15SGrNFMww">Spotify</a></li>
+			
+		</menu>
+		<div id="logotype-container">
+			<a href="/"><img src="/img/logotype.svg" class="logotype" alt="logo: Aphroconfuso" /></a>
+		</div>
+		<div id="email">
+			<a href="mailto:l-edituri@aphroconfuso.mt" class="email">l-edituri@aphroconfuso.mt</a>
+		</div>
+		<div class="hide-mobile choose-theme choose-theme-footer">
+			<a id="theme-regular-footer" role="button" tabindex="4">s</a>
+			<a id="theme-dark-footer" role="button" tabindex="5">m</a>
+			<a id="theme-contrast-footer" role="button" tabindex="6">c</a>
+			<a id="theme-system-footer" role="button" tabindex="7">p</a>
+		</div>
+		<div id="copyright"><a href="/drittijiet/" class="copyright">&copy; 2023-2025 Aphroconfuso et al</a></div>
+		<div id="qrcode"><img src="/img/qr/simon-bartolo.png" width="180" height="180" alt="QR code" /></div>
+		<div id="url">https://aphroconfuso.mt/simon-bartolo/</div>
+	</nav>
+</footer>
+
+		</div>
+		<aside id="scroll-tools" class="monthly-outlined">
+			<p><span id="progress"><!-- --></span></p>
+		</aside>
+	</body>
+</html>
