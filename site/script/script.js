@@ -13,7 +13,7 @@ const fixReportingTitle = (storyType, sequenceEpisodeNumber, author, pageTitle) 
 	return pageTitle;
 }
 
-const getScrollPosition = () => window.pageYOffset || document.documentElement.scrollTop;
+const getScrollPosition = () => window.scrollY || document.documentElement.scrollTop;
 
 const getSelectionText = () => {
   let text = "";
@@ -345,6 +345,31 @@ const getPreviousAudioTime = (id) => {
 	return bookmarksList[`audio-${ id }`] && bookmarksList[`audio-${ id }`].playPosition || 0;
 }
 
+const preventNotesOverlap = () => {
+	const divs = Array.from(document.querySelectorAll('.sequence-12 #podcast-note')).concat(Array.from(document.querySelectorAll('.sequence-12 .fx3')));
+	if (!divs.length) return;
+	const referenceWidth = document.getElementById('grid-max-panel-right-top').offsetWidth;
+	divs.forEach(div => {
+		div.style.width = `calc(${referenceWidth}px - 0.9rem)`;
+	});
+	for (let index = 1; index < divs.length; index++) {
+		let div = divs[index];
+		let rect1 = div.getBoundingClientRect();
+		let prevDiv = divs[index - 1];
+		let rect2 = prevDiv.getBoundingClientRect();
+		if (rect1.top < rect2.bottom) {
+				let overlap = rect2.bottom - rect1.top;
+				let currentMarginTop = window.scrollY + (parseFloat(window.getComputedStyle(div).marginTop) || 0);
+				let newMarginTop = currentMarginTop + overlap + 1; // Add 1px to ensure no overlap
+
+				console.log(`Div ${index} moved down by ${overlap}px to new margin-top: ${newMarginTop}px`);
+				div.style.marginTop = `calc(${newMarginTop}px + 0.9rem)`;
+		} else {
+				div.style.marginTop = '';
+		}
+	}
+}
+
 // INITIALISE ***********************************************************************
 
 const initialiseAfterNewsletter = () => {
@@ -437,6 +462,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 	window.addEventListener('scroll', (event) => {
 		scrolling();
 	});
+
+	if (window.matchMedia("(min-width: 481px)")) preventNotesOverlap();
 
 	if (!!wordcount) {
 		// TODO: Fix enjambed
@@ -700,6 +727,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 		if (event.key === 'Escape') {
 			clearSearch();
 		}
+	});
+
+	// Resize
+	window.addEventListener("resize", function () {
+		preventNotesOverlap();
 	});
 
 });
