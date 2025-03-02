@@ -349,6 +349,7 @@ const preventNotesOverlap = () => {
 	const divs = Array.from(document.querySelectorAll('.sequence-12 #podcast-note')).concat(Array.from(document.querySelectorAll('.sequence-12 .fx3')));
 	if (!divs.length) return;
 	const referenceWidth = document.getElementById('grid-max-panel-right-top').offsetWidth;
+	window.scrollTo(0, 0);
 	divs.forEach(div => {
 		div.style.width = `calc(${referenceWidth}px - 0.9rem)`;
 	});
@@ -359,7 +360,7 @@ const preventNotesOverlap = () => {
 		let rect2 = prevDiv.getBoundingClientRect();
 		if (rect1.top < rect2.bottom) {
 				let overlap = rect2.bottom - rect1.top;
-				let currentMarginTop = window.scrollY + (parseFloat(window.getComputedStyle(div).marginTop) || 0);
+				let currentMarginTop = parseFloat(window.getComputedStyle(div).marginTop) || 0;
 				let newMarginTop = currentMarginTop + overlap + 1; // Add 1px to ensure no overlap
 
 				console.log(`Div ${index} moved down by ${overlap}px to new margin-top: ${newMarginTop}px`);
