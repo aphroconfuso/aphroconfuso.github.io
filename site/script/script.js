@@ -679,7 +679,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 	const resultsContainer = document.getElementById("search-results");
 	const pagefind = await import("/pagefind/pagefind.js");
 
-	searchInput.addEventListener("input", async () => {
+	searchInput && searchInput.addEventListener("input", async () => {
 		const query = searchInput.value.trim();
 		resultsContainer.innerHTML = "";
 		if (query.length < 3) return;
