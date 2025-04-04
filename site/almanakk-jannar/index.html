@@ -6,12 +6,29 @@
 		
 	<title>Almanakk · Aphroconfuso</title>
   <style>
-		#month {
+		.week {
 			display: grid;
 			grid-template-columns: repeat(7, 1fr);
 			grid-gap: 0.5em;
 			margin: 0;
 			padding: 0;
+		}
+		.day {
+			border-left: 1px solid #ccc;
+			border-top: 1px solid #ccc;
+			height: calc(1.8rem * 5);
+			overflow: hidden;
+		}
+		.day-header {
+			background-color: #dedede;
+			display: block;
+		}
+		.month {
+			border-bottom: 1px solid #ccc;
+			border-right: 1px solid #ccc;
+		}
+		.blank {
+			background-color: #eee;
 		}
   </style>
 
@@ -34,7 +51,7 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/almanakk-jannar/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-6f49cc9b.css">
+		<link rel="stylesheet" href="/css/style-75c4f6c2.css">
 		<script>
 			var
 				audioLoaded,
@@ -185,36 +202,41 @@
 					<span style="display: none">Mobile biss: iftaħ il-menu</span>
 					<div class='menu-button'></div>
 				</label>
-				<menu id="menu-main">
-					<li class="hide-laptop main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
-					<li class="hide-laptop main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
-					<li class="hide-laptop abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
-					<li><a href="/appuntamenti/">Appuntamenti</a></li>
-					<li><a href="/kontributuri/">Kontributuri</a></li>
-					<li><a href="/werrej/">Werrej</a></li>
-					<li><a href="/djarju/">Djarju</a></li>
-					<li><a href="/sensiliet/">Sensiliet</a></li>
-					<li><a href="/podcast/">Podcast</a></li>
-					<li class="hide-mobile"><a href="/kotba/" class="menu-kotba">Kotba</a></li>
-					<li class="hide-laptop choose-theme">
-						<a id="theme-regular" role="button" tabindex="0">s</a>
-						<a id="theme-dark" role="button" tabindex="1">m</a>
-						<a id="theme-contrast" role="button" tabindex="2">c</a>
-						<a id="theme-system" role="button" tabindex="3">p</a>
-					</li>
-					<li><a href="/dwarna/">Dwarna</a></li>
-					<li class="hide-laptop"><a href="/kotba/">Kotba</a></li>
-					<li class="hide-laptop"><a href="/kolofon/">Kolofon</a></li>
-					<li><a href="/newsletter/">Newsletter</a></li>
-					<li class="hide-laptop"><a href="/privatezza/">Privatezza</a></li>
-					<li><a href="/bookmarks/">Bookmarks<span id="bookmarks-number"></span></a></li>
-					<li class="hide-laptop choose-theme" id="text-size-adjust">
-						<a id="font-size-1" role="button" tabindex="8">a</a>
-						<a id="font-size-2" role="button" tabindex="9">a</a>
-						<a id="font-size-3" role="button" tabindex="10">a</a>
-						<a id="font-size-4" role="button" tabindex="11">a</a>
-					</li>
-				</menu>
+				
+					<menu id="menu-main">
+						
+						<li class="hide-laptop main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+						<li class="hide-laptop main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+						<li class="hide-laptop abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
+						<li><a href="/appuntamenti/">Appuntamenti</a></li>
+						<li><a href="/kontributuri/">Kontributuri</a></li>
+						<li><a href="/werrej/">Werrej</a></li>
+						<li><a href="/djarju/">Djarju</a></li>
+						<li><a href="/sensiliet/">Sensiliet</a></li>
+						<li><a href="/podcast/">Podcast</a></li>
+						<li class="hide-mobile"><a href="/kotba/" class="menu-kotba">Kotba</a></li>
+						<li class="hide-laptop choose-theme">
+							<a id="theme-regular" role="button" tabindex="0">s</a>
+							<a id="theme-dark" role="button" tabindex="1">m</a>
+							<a id="theme-contrast" role="button" tabindex="2">c</a>
+							<a id="theme-system" role="button" tabindex="3">p</a>
+						</li>
+						<li><a href="/dwarna/">Dwarna</a></li>
+						<li class="hide-laptop"><a href="/kotba/">Kotba</a></li>
+						<li class="hide-laptop"><a href="/kolofon/">Kolofon</a></li>
+						<li><a href="/newsletter/">Newsletter</a></li>
+						<li class="hide-laptop"><a href="/privatezza/">Privatezza</a></li>
+						<li><a href="/bookmarks/">Bookmarks<span id="bookmarks-number"></span></a></li>
+						<li class="hide-laptop choose-theme" id="text-size-adjust">
+							<a id="font-size-1" role="button" tabindex="8">a</a>
+							<a id="font-size-2" role="button" tabindex="9">a</a>
+							<a id="font-size-3" role="button" tabindex="10">a</a>
+							<a id="font-size-4" role="button" tabindex="11">a</a>
+						</li>
+					</menu>
+					<input class="hide-mobile" type="text" id="search-input" placeholder="fittex..." autocomplete="off" auto-fill="off" type="text" autocapitalize="none" enterkeyhint="search" />
+					<ul id="search-results"><!-- --></ul>
+				
 				<div id="brownline"></div>
 			</nav>
 			<div id="message"><!-- --></div>
@@ -227,28 +249,28 @@
 			<h2></h2>
 		</header>
 		<div class="almanac">
-			<section>
-				<div id="month-header">
-					<div class="day">It-Tnejn</div>
-					<div class="day">It-Tlieta</div>
-					<div class="day">L-Erbgħa</div>
-					<div class="day">Il-Ħamis</div>
-					<div class="day">Il-Ġimgħa</div>
-					<div class="day">Is-Sibt</div>
-					<div class="day">Il-Ħadd</div>
+			<section class="month">
+				<div id="month-header" class="week">
+					<div>It-Tnejn</div>
+					<div>It-Tlieta</div>
+					<div>L-Erbgħa</div>
+					<div>Il-Ħamis</div>
+					<div>Il-Ġimgħa</div>
+					<div>Is-Sibt</div>
+					<div>Il-Ħadd</div>
 				</div>
 			
-				<div id="month">
+				<div class="week">
 					
-						<div id="day"><strong>&nbsp;</strong>
+						<div class="day blank"><strong class="day-header"></strong>
 							
 						</div>
 					
-						<div id="day"><strong>&nbsp;</strong>
+						<div class="day blank"><strong class="day-header"></strong>
 							
 						</div>
 					
-						<div id="day"><strong>1</strong>
+						<div class="day"><strong class="day-header">1</strong>
 							
 								<ul>
 									
@@ -528,7 +550,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>2</strong>
+						<div class="day"><strong class="day-header">2</strong>
 							
 								<ul>
 									
@@ -808,7 +830,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>3</strong>
+						<div class="day"><strong class="day-header">3</strong>
 							
 								<ul>
 									
@@ -944,18 +966,12 @@
 											<li>
 												<a class="promo promo-almanac frar" href="/jien_a-il-mara-tas-suldat/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Il-Mara tas-Suldat', 65]);">
 													<header>
-														<h6><span style="font-family: mono">2024:</span> Il-Mara tas-Suldat</h6>
+														<p><span style="font-family: mono">2024:</span> Il-Mara tas-Suldat</p>
 														
 													</header>
-													
+													<p class="blurb body-text"> ta’ Ottubru. Imbagħad, <l-m>fit-28</l-m> ta’ Ottubru ltqajna <l-m>l-Ġugar</l-m>, Triq <l-m>ir-Repubblika</l-m>, <l-m>il-Belt</l-m>. <l-m>Ir-raba</l-m>’ u <l-m>l-aħħar</l-m> workshop sar online <l-m>s-Sibt</l-m> 13 ta’ Jannar 2024 u kien twil sagħtejn.Demm li jkebbeb kull wild u li sawwar <l-m>l-ewwel</l-m> kalendarju. Jinħass regolarment <l-m>mill-mara</l-m> f’ġisimha. Jidher u jissemma <l-m>fil-pubbliku</l-m> mingħajr ħabi u mistħija. (Ara <a href="#</p>
 												</a>
 											</li>
-										
-									
-										
-									
-										
-									
 										
 									
 										
@@ -984,14 +1000,20 @@
 									
 										
 											<li>
-												<a class="promo promo-almanac novembru" href="/omar-nshea-bur-mgħeż-3-qegħedtha-ġo-qabar-fuq-l-għolja-tal-ħorr/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Bur Mgħeż #3', 81]);">
+												<a class="promo promo-almanac novembru" href="/omar-nshea-bur-mgħeż-3-qegħedtha-ġo-qabar-fuq-l-għolja-tal-ħorr/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Bur Mgħeż #3', 78]);">
 													<header>
-														<h6><span style="font-family: mono">1933:</span> Bur Mgħeż #3</h6>
+														<p><span style="font-family: mono">1933:</span> Bur Mgħeż #3</p>
 														
 													</header>
-													
+													<p class="blurb body-text">it ħalla <l-m>l-Milied</l-m> jgħaddi u <l-m>fis-sena</l-m> l-ġdida, <l-m>fit-3</l-m> ta’ Jannar <l-m>tal-1933</l-m>, bagħatlu ittra biex ifakkru fuq <l-m>il-każ</l-m> ta’ Bur Mgħeż u jgħidlu li kien qed jistenna risposta minnufih għall-mistoqsija sempliċi imma importanti li kien bagħatlu. Jidher biċ-ċar hawnhekk li anki għal</p>
 												</a>
 											</li>
+										
+									
+										
+									
+										
+									
 										
 									
 										
@@ -1108,7 +1130,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>4</strong>
+						<div class="day"><strong class="day-header">4</strong>
 							
 								<ul>
 									
@@ -1125,33 +1147,33 @@
 										
 									
 										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
 											<li>
-												<a class="promo promo-almanac ottubru" href="/omar-nshea-es-sidr-2-ramel-u-muntanji/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Es Sidr #2', 16]);">
+												<a class="promo promo-almanac ottubru" href="/omar-nshea-es-sidr-2-ramel-u-muntanji/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Es Sidr #2', 7]);">
 													<header>
-														<h6><span style="font-family: mono">1972:</span> Es Sidr #2</h6>
+														<p><span style="font-family: mono">1972:</span> Es Sidr #2</p>
 														
 													</header>
-													
+													<p class="blurb body-text">naqra <l-m>d-dokumenti</l-m> li hemm <l-m>fil-kaxxa</l-m> bin-numru 764 <l-m>fl-arkivji</l-m> tal-President Amerikan Richard Nixon, sibt telegramma li Mintoff kien bagħat <l-m>lill-Ambaxxatur</l-m> Amerikan għal Malta John C. Prizlaff, lura <l-m>fl-4</l-m> ta’ Jannar 1972. Fiha Mintoff kien qallu li għamel ġurnata jċempel lil Nixon u <l-m>lis-Segretarju</l-m> tal-Istat Henry Kissinger għax ried jitkellem magħhom direttament. Prizlaff innota <l-m>mill-ewwel</l-m> li Mintoff kien maħruq li m</p>
 												</a>
 											</li>
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
 										
 									
 										
@@ -1386,10 +1408,10 @@
 											<li>
 												<a class="promo promo-almanac jannar" href="/raylene-abdilla-kurt-borg-noah-fabri-omar-nshea-poddata-2025-01-24-ħbiberija-ħrejjef-komunità-(taħdita)/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Ħbiberija, Ħrejjef, Komunità (taħdita)', 131]);">
 													<header>
-														<h6><span style="font-family: mono">2025:</span> Ħbiberija, Ħrejjef, Komun…</h6>
+														<p><span style="font-family: mono">2025:</span> Ħbiberija, Ħrejjef, Komun…</p>
 														
 													</header>
-													
+													<p class="blurb body-text">Fl-24 ta’ Jannar 2025 <l-m>fis-6:00pm</l-m>, flimkien ma’ Kurt Borg u Noah Fabri, konna <l-m>l-mistednin</l-m> tal-Librerija Pubblika ta’ Pembro</p>
 												</a>
 											</li>
 										
@@ -1408,7 +1430,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>5</strong>
+						<div class="day"><strong class="day-header">5</strong>
 							
 								<ul>
 									
@@ -1690,9 +1712,9 @@
 					
 				</div>
 			
-				<div id="month">
+				<div class="week">
 					
-						<div id="day"><strong>6</strong>
+						<div class="day"><strong class="day-header">6</strong>
 							
 								<ul>
 									
@@ -1972,7 +1994,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>7</strong>
+						<div class="day"><strong class="day-header">7</strong>
 							
 								<ul>
 									
@@ -1991,27 +2013,25 @@
 										
 									
 										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
+											<li>
+												<a class="promo promo-almanac ottubru" href="/omar-nshea-es-sidr-2-ramel-u-muntanji/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Es Sidr #2', 8]);">
+													<header>
+														<p><span style="font-family: mono">1972:</span> Es Sidr #2</p>
+														
+													</header>
+													<p class="blurb body-text">in-naħa tagħhom, <l-m>l-Amerikani</l-m> kienu jafu li ma kellhomx risposta għal Mintoff u allura ħallewh iċempel; riedu jistennew sakemm jispiċċaw <l-m>il-laqgħat</l-m> li kienu se jsiru <l-m>mal-Ingliżi</l-m> jumejn wara, <l-m>fis-6</l-m> u <l-m>s-7</l-m> ta’ Jannar 1972, biex jirrisponduh. Għal-laqgħat, <l-m>l-Ingilterra</l-m> bagħtet <l-m>lid-Deputat</l-m> Sottosegretarju Sir Thomas Brimelow biex jiltaqa’ <l-m>mas-Sottosegretarju</l-m> Amerikan Alex Johnson u ma’ rappreżentanti oħra <l-m>tad-Dipartimen</l-m></p>
+												</a>
+											</li>
 										
 									
 										
 											<li>
-												<a class="promo promo-almanac ottubru" href="/omar-nshea-es-sidr-2-ramel-u-muntanji/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Es Sidr #2', 15]);">
+												<a class="promo promo-almanac ottubru" href="/omar-nshea-es-sidr-2-ramel-u-muntanji/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Es Sidr #2', 9]);">
 													<header>
-														<h6><span style="font-family: mono">1972:</span> Es Sidr #2</h6>
+														<p><span style="font-family: mono">1972:</span> Es Sidr #2</p>
 														
 													</header>
-													
+													<p class="blurb body-text">kk <l-m>l-Ingliżi</l-m> jitilqu, probabbli Mintoff kien idaħħal <l-m>lis-Sovjetiċi</l-m> flokhom.Mintoff beda jinkwieta li f’Malta kienet qed tikber sitwazzjoni perikoluża, u ddeċieda li jibgħat ittra lil Nixon <l-m>fis-7</l-m> ta’ Jannar <l-m>tal-1972</l-m>. Illum din <l-m>l-ittra</l-m> għandha <l-m>n-numru</l-m> 2255Z u tinsab <l-m>fl-istess</l-m> kaxxa. Fiha Mintoff kiteb li <l-m>fit-8</l-m> ta’ Diċembru <l-m>tas-sena</l-m> ta’ qabel, waqt laqgħa <l-m>tan-NATO</l-m> Ministerial fi Brussell, membri oħra kienu </p>
 												</a>
 											</li>
 										
@@ -2033,15 +2053,17 @@
 										
 									
 										
-											<li>
-												<a class="promo promo-almanac ottubru" href="/omar-nshea-es-sidr-2-ramel-u-muntanji/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Es Sidr #2', 24]);">
-													<header>
-														<h6><span style="font-family: mono">1972:</span> Es Sidr #2</h6>
-														
-													</header>
-													
-												</a>
-											</li>
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
 										
 									
 										
@@ -2240,14 +2262,12 @@
 											<li>
 												<a class="promo promo-almanac settembru" href="/omar-nshea-bur-mgħeż-1-ftit-qabel-dfint-l-ommi-mort-infittex-qabar/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Bur Mgħeż #1', 121]);">
 													<header>
-														<h6><span style="font-family: mono">1911:</span> Bur Mgħeż #1</h6>
+														<p><span style="font-family: mono">1911:</span> Bur Mgħeż #1</p>
 														
 													</header>
-													
+													<p class="blurb body-text"> u ċagħaq ma kien qatt intmess minn ħadd qablu, minn mindu kien waqa’ f’postu hemm eluf ta’ snin ilu.Lokalment, imma, Temi Zammit kien diġà kiteb dwar “Bur Mgħes” <l-m>fin-noti</l-m> tiegħu: <l-m>id-daħla</l-m> tas-7 ta’ Jannar 1911 tfakkar li Zammit, flimkien ma’ ċertu Sur Becker, żar <l-m>l-inħawi</l-m> tal-Imqabba li jissejħu Contade <l-m>tan-Nadur</l-m>, u li mar jeżamina <l-m>l-barriera</l-m> ta’ ċertu Michele Zammit, jgħidulu <l-m>Tan-Naxxari</l-m>, li kienet mikrij</p>
 												</a>
 											</li>
-										
-									
 										
 									
 										
@@ -2260,12 +2280,12 @@
 									
 										
 											<li>
-												<a class="promo promo-almanac mejju" href="/omar-nshea-gilgamex-dak-li-ra-l-qiegħ/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Gilgamex, Dak li Ra l-Qiegħ', 127]);">
+												<a class="promo promo-almanac mejju" href="/omar-nshea-gilgamex-dak-li-ra-l-qiegħ/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Gilgamex, Dak li Ra l-Qiegħ', 126]);">
 													<header>
-														<h6><span style="font-family: mono">1972:</span> Gilgamex, Dak li Ra l-Qiegħ</h6>
+														<p><span style="font-family: mono">1972:</span> Gilgamex, Dak li Ra l-Qiegħ</p>
 														
 													</header>
-													
+													<p class="blurb body-text"> f’Malta, <l-m>l-Ingliżi</l-m> kellhom jintrabtu li ma jużawhomx kontra <l-m>l-Għarab</l-m>.Fis-17 ta’ Jannar <l-m>tal-1972</l-m>, <l-m>il-ġurnal</l-m> Time — leħen emblematiku ta’ kif Malta kienet meqjusa <l-m>fl-immaġinarju</l-m> tal-Punent — kien irrapporta li hekk kif <l-m>l-Ingliżi</l-m> bdew jitilqu ftit ftit, wasal Malta ajruplan <l-m>tal-merkanzija</l-m> tal-</p>
 												</a>
 											</li>
 										
@@ -2288,11 +2308,13 @@
 									
 										
 									
+										
+									
 								</ul>
 							
 						</div>
 					
-						<div id="day"><strong>8</strong>
+						<div class="day"><strong class="day-header">8</strong>
 							
 								<ul>
 									
@@ -2572,7 +2594,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>9</strong>
+						<div class="day"><strong class="day-header">9</strong>
 							
 								<ul>
 									
@@ -2852,13 +2874,9 @@
 							
 						</div>
 					
-						<div id="day"><strong>10</strong>
+						<div class="day"><strong class="day-header">10</strong>
 							
 								<ul>
-									
-										
-									
-										
 									
 										
 									
@@ -2884,14 +2902,18 @@
 									
 										
 											<li>
-												<a class="promo promo-almanac ottubru" href="/omar-nshea-es-sidr-2-ramel-u-muntanji/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Es Sidr #2', 14]);">
+												<a class="promo promo-almanac ottubru" href="/omar-nshea-es-sidr-2-ramel-u-muntanji/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Es Sidr #2', 12]);">
 													<header>
-														<h6><span style="font-family: mono">1972:</span> Es Sidr #2</h6>
+														<p><span style="font-family: mono">1972:</span> Es Sidr #2</p>
 														
 													</header>
-													
+													<p class="blurb body-text">tekniku <l-m>mil-Libja</l-m>. Imma <l-m>l-Ingliżi</l-m> ma ridux jafu: kienu konvinti li jżommu <l-m>l-kontroll</l-m> tat-torri u <l-m>tal-impjanti</l-m> elettroniċi ta’ ġo fih sakemm <l-m>it-3</l-m>,500 ħaddiem tagħhom kienu lesti biex jitilqu.<l-m>Fl-10</l-m> ta’ Jannar 1972, Mintoff bagħat telegramma oħra lil Nixon, illum arkivjata <l-m>bin-numru</l-m> 2308Z: forsi għaġġilt wisq u ma xtarrejtx biżżejjed <l-m>il-patt</l-m> ta’ Heath li fih qal li se jitilqu <l-m>bil-kwie</l-m></p>
 												</a>
 											</li>
+										
+									
+										
+									
 										
 									
 										
@@ -3142,7 +3164,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>11</strong>
+						<div class="day"><strong class="day-header">11</strong>
 							
 								<ul>
 									
@@ -3422,7 +3444,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>12</strong>
+						<div class="day"><strong class="day-header">12</strong>
 							
 								<ul>
 									
@@ -3704,9 +3726,9 @@
 					
 				</div>
 			
-				<div id="month">
+				<div class="week">
 					
-						<div id="day"><strong>13</strong>
+						<div class="day"><strong class="day-header">13</strong>
 							
 								<ul>
 									
@@ -3986,7 +4008,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>14</strong>
+						<div class="day"><strong class="day-header">14</strong>
 							
 								<ul>
 									
@@ -4266,31 +4288,9 @@
 							
 						</div>
 					
-						<div id="day"><strong>15</strong>
+						<div class="day"><strong class="day-header">15</strong>
 							
 								<ul>
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
 									
 										
 									
@@ -4312,12 +4312,12 @@
 									
 										
 											<li>
-												<a class="promo promo-almanac ottubru" href="/omar-nshea-es-sidr-2-ramel-u-muntanji/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Es Sidr #2', 21]);">
+												<a class="promo promo-almanac ottubru" href="/omar-nshea-es-sidr-2-ramel-u-muntanji/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Es Sidr #2', 10]);">
 													<header>
-														<h6><span style="font-family: mono">     </span> Es Sidr #2</h6>
+														<p><span style="font-family: mono"></span> Es Sidr #2</p>
 														
 													</header>
-													
+													<p class="blurb body-text">if kien ġie Malta biex isiru taħditiet dwar kif seta’ jitmexxa <l-m>t-torri</l-m> tal-kontroll <l-m>tal-ajruport</l-m> ġaladarba jitilqu <l-m>l-ħaddiema</l-m> tar-Royal Air Force. Mintoff kien ordna ’<l-m>l-Ingliżi</l-m> biex jitilqu <l-m>sas-Sibt</l-m>, 15 ta’ Jannar imma dawn bdew jirreżistu li jitilqu hekk ħesrem. Kollox kien qed jindika li Mintoff stieden lil Taha Sharif biex <l-m>il-Libjani</l-m> jieħdu f’idhom <l-m>il-komunikazzjoni</l-m> tal-ajru. <l-m>X’aktarx</l-m> li kien ukoll għalhekk </p>
 												</a>
 											</li>
 										
@@ -4503,13 +4503,19 @@
 										
 									
 										
+									
+										
+									
+										
+									
+										
 											<li>
-												<a class="promo promo-almanac ottubru" href="/omar-nshea-bur-mgħeż-2-dfintha-fil-libsa-li-mietet-fiha/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Bur Mgħeż #2', 112]);">
+												<a class="promo promo-almanac ottubru" href="/omar-nshea-bur-mgħeż-2-dfintha-fil-libsa-li-mietet-fiha/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Bur Mgħeż #2', 104]);">
 													<header>
-														<h6><span style="font-family: mono">1921:</span> Bur Mgħeż #2</h6>
+														<p><span style="font-family: mono">1921:</span> Bur Mgħeż #2</p>
 														
 													</header>
-													
+													<p class="blurb body-text">cenzo Mangani, iben <l-m>il-mejjet</l-m> Paolo <l-m>mir-Rabat</l-m>, li deher bħala prokuratur/amministratur <l-m>tas-Seminarju</l-m> tal-Isqof f’Malta. Alfons Maria Galea kien hemm fuq digriet li kien ħareġ <l-m>l-Arċisqof</l-m> ta’ Malta <l-m>fil-15</l-m> ta’ Jannar 1921 biex jirrappreżenta <l-m>l-Mensa</l-m> Vescovile u <l-m>d-directum</l-m> dominium. Però <l-m>d-dokument</l-m> ta’ dan <l-m>id-digriet</l-m> mhuwiex mehmuż <l-m>mal-karti</l-m> l-oħra li hemm <l-m>fl-arkivji</l-m> tas-Santu Spirtu <l-m>r-Rabat</l-m>. Fihom naraw lil B</p>
 												</a>
 											</li>
 										
@@ -4562,11 +4568,27 @@
 									
 										
 									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
 								</ul>
 							
 						</div>
 					
-						<div id="day"><strong>16</strong>
+						<div class="day"><strong class="day-header">16</strong>
 							
 								<ul>
 									
@@ -4846,7 +4868,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>17</strong>
+						<div class="day"><strong class="day-header">17</strong>
 							
 								<ul>
 									
@@ -5126,41 +5148,9 @@
 							
 						</div>
 					
-						<div id="day"><strong>18</strong>
+						<div class="day"><strong class="day-header">18</strong>
 							
 								<ul>
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
 									
 										
 									
@@ -5308,14 +5298,46 @@
 									
 										
 											<li>
-												<a class="promo promo-almanac novembru" href="/omar-nshea-bur-mgħeż-3-qegħedtha-ġo-qabar-fuq-l-għolja-tal-ħorr/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Bur Mgħeż #3', 89]);">
+												<a class="promo promo-almanac novembru" href="/omar-nshea-bur-mgħeż-3-qegħedtha-ġo-qabar-fuq-l-għolja-tal-ħorr/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Bur Mgħeż #3', 73]);">
 													<header>
-														<h6><span style="font-family: mono">1924:</span> Bur Mgħeż #3</h6>
+														<p><span style="font-family: mono">1924:</span> Bur Mgħeż #3</p>
 														
 													</header>
-													
+													<p class="blurb body-text">ija imma li <l-m>l-osservazzjonijiet</l-m> ta’ Tagliaferro għandhom jitqiesu b’serjetà kbira minħabba <l-m>l-fatt</l-m> li kien sab fdalijiet ta’ iġsma mhux mirduma.Temi Zammit lesta <l-m>r-rapport</l-m> annwali <l-m>tal-Mużew</l-m> fit-18 ta’ Jannar <l-m>tal-1924</l-m>, u bagħtu għall-pubblikazzjoni <l-m>fir-Reports</l-m> on the Workings of Government Departments għas-sena 1922–1923. Dawn <l-m>ir-rapporti</l-m> ħarġu sena wara. <l-m>Fis-sezzjoni</l-m> tal-Mużew, immedjatament wara <l-m>r-rappo</l-m></p>
 												</a>
 											</li>
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
 										
 									
 										
@@ -5416,7 +5438,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>19</strong>
+						<div class="day"><strong class="day-header">19</strong>
 							
 								<ul>
 									
@@ -5698,9 +5720,9 @@
 					
 				</div>
 			
-				<div id="month">
+				<div class="week">
 					
-						<div id="day"><strong>20</strong>
+						<div class="day"><strong class="day-header">20</strong>
 							
 								<ul>
 									
@@ -5980,7 +6002,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>21</strong>
+						<div class="day"><strong class="day-header">21</strong>
 							
 								<ul>
 									
@@ -6260,9 +6282,39 @@
 							
 						</div>
 					
-						<div id="day"><strong>22</strong>
+						<div class="day"><strong class="day-header">22</strong>
 							
 								<ul>
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
 									
 										
 									
@@ -6468,12 +6520,12 @@
 									
 										
 											<li>
-												<a class="promo promo-almanac ottubru" href="/omar-nshea-bur-mgħeż-2-dfintha-fil-libsa-li-mietet-fiha/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Bur Mgħeż #2', 102]);">
+												<a class="promo promo-almanac ottubru" href="/omar-nshea-bur-mgħeż-2-dfintha-fil-libsa-li-mietet-fiha/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Bur Mgħeż #2', 117]);">
 													<header>
-														<h6><span style="font-family: mono">1921:</span> Bur Mgħeż #2</h6>
+														<p><span style="font-family: mono">1921:</span> Bur Mgħeż #2</p>
 														
 													</header>
-													
+													<p class="blurb body-text"> li <l-m>n-nutar</l-m>, però, forsi jirnexxilu jikkonvinċi lil Michele Zammit li kien ikun inutli jekk joġġezzjona għal dan. #In-Naxxari beda jitfa’ <l-m>l-bsaten</l-m> fir-roti biex jara <l-m>x’se</l-m> jakkwista. <l-m>Fit-22</l-m> ta’ Jannar <l-m>tal-1921</l-m>, <l-m>in-nutar</l-m> kiteb li Alfonso Maria Galea bagħat kopja <l-m>tad-digriet</l-m> tal-Arċisqof, miktub <l-m>fil-15</l-m> ta’ Jannar, u <l-m>tal-applikazzjoni</l-m>. <l-m>Il-problema</l-m> kienet li <l-m>n-Naxxari</l-m> baqa’ jgħid li jrid jitħallas £30 għax-xog</p>
 												</a>
 											</li>
 										
@@ -6516,41 +6568,11 @@
 									
 										
 									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
 								</ul>
 							
 						</div>
 					
-						<div id="day"><strong>23</strong>
+						<div class="day"><strong class="day-header">23</strong>
 							
 								<ul>
 									
@@ -6830,7 +6852,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>24</strong>
+						<div class="day"><strong class="day-header">24</strong>
 							
 								<ul>
 									
@@ -7110,9 +7132,45 @@
 							
 						</div>
 					
-						<div id="day"><strong>25</strong>
+						<div class="day"><strong class="day-header">25</strong>
 							
 								<ul>
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
 									
 										
 									
@@ -7174,50 +7232,14 @@
 									
 										
 											<li>
-												<a class="promo promo-almanac awwissu" href="/omar-nshea-es-sidr-1-għasafar-tal-passa/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Es Sidr #1', 30]);">
+												<a class="promo promo-almanac awwissu" href="/omar-nshea-es-sidr-1-għasafar-tal-passa/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Es Sidr #1', 48]);">
 													<header>
-														<h6><span style="font-family: mono">1972:</span> Es Sidr #1</h6>
+														<p><span style="font-family: mono">1972:</span> Es Sidr #1</p>
 														
 													</header>
-													
+													<p class="blurb body-text">rrib diplomatiku, imma wkoll għax kien hemm għajdut li <l-m>l-Libja</l-m> bdiet toħroġ <l-m>bil-mod</l-m> il-mod <l-m>il-flus</l-m> li kellha Londra.Hemm xi ittri neqsin <l-m>fid-dossier</l-m> għaliex <l-m>l-ittra</l-m> li jmiss għandha <l-m>d-data</l-m> tal-25 ta’ Jannar 1972, jiġifieri għaddew tliet xhur u fuqhom. Jaf li qed tiktiblu imma <l-m>l-ittri</l-m> tagħha mhux qed jaslu għax hemm problema <l-m>bil-posta</l-m>. Ma nafx <l-m>x’naqbad</l-m> niktiblek għax moħħi mhux qiegħed fuq <l-m>l-ittra</l-m> li qed n</p>
 												</a>
 											</li>
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
 										
 									
 										
@@ -7400,7 +7422,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>26</strong>
+						<div class="day"><strong class="day-header">26</strong>
 							
 								<ul>
 									
@@ -7682,9 +7704,9 @@
 					
 				</div>
 			
-				<div id="month">
+				<div class="week">
 					
-						<div id="day"><strong>27</strong>
+						<div class="day"><strong class="day-header">27</strong>
 							
 								<ul>
 									
@@ -7964,7 +7986,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>28</strong>
+						<div class="day"><strong class="day-header">28</strong>
 							
 								<ul>
 									
@@ -7973,21 +7995,13 @@
 										
 									
 										
-									
-										
-									
-										
-									
-										
-									
-										
 											<li>
-												<a class="promo promo-almanac ottubru" href="/omar-nshea-es-sidr-2-ramel-u-muntanji/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Es Sidr #2', 7]);">
+												<a class="promo promo-almanac ottubru" href="/omar-nshea-es-sidr-2-ramel-u-muntanji/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Es Sidr #2', 3]);">
 													<header>
-														<h6><span style="font-family: mono">1972:</span> Es Sidr #2</h6>
+														<p><span style="font-family: mono">1972:</span> Es Sidr #2</p>
 														
 													</header>
-													
+													<p class="blurb body-text">iberiji <l-m>mal-alleati</l-m> tagħha, jew qed jistennew biex iwaqqgħu <l-m>l-gvern</l-m> elett demokratikament. Ma nafx <l-m>x’nista</l-m>’ nagħmel iktar ħlief navża <l-m>lill-Kunsill</l-m> tas-Sigurtà <l-m>tal-Ġnus</l-m> Magħquda.#Fit-28 ta’ Jannar 1972, Otman kitbilha ittra oħra. Din <l-m>id-darba</l-m> l-karta li kitbilha fuqha tant hi rqiqa li kważi tista’ tara minnha, folji meħudin minn rima karti <l-m>tal-ittri</l-m> jinqatgħu minn fuq u li kien ikollhom gost f’wieħ</p>
 												</a>
 											</li>
 										
@@ -8250,11 +8264,19 @@
 									
 										
 									
+										
+									
+										
+									
+										
+									
+										
+									
 								</ul>
 							
 						</div>
 					
-						<div id="day"><strong>29</strong>
+						<div class="day"><strong class="day-header">29</strong>
 							
 								<ul>
 									
@@ -8534,7 +8556,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>30</strong>
+						<div class="day"><strong class="day-header">30</strong>
 							
 								<ul>
 									
@@ -8814,7 +8836,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>31</strong>
+						<div class="day"><strong class="day-header">31</strong>
 							
 								<ul>
 									
@@ -9094,11 +9116,11 @@
 							
 						</div>
 					
-						<div id="day"><strong>&nbsp;</strong>
+						<div class="day blank"><strong class="day-header"></strong>
 							
 						</div>
 					
-						<div id="day"><strong>&nbsp;</strong>
+						<div class="day blank"><strong class="day-header"></strong>
 							
 						</div>
 					
