@@ -6,12 +6,29 @@
 		
 	<title>Almanakk · Aphroconfuso</title>
   <style>
-		#month {
+		.week {
 			display: grid;
 			grid-template-columns: repeat(7, 1fr);
 			grid-gap: 0.5em;
 			margin: 0;
 			padding: 0;
+		}
+		.day {
+			border-left: 1px solid #ccc;
+			border-top: 1px solid #ccc;
+			height: calc(1.8rem * 5);
+			overflow: hidden;
+		}
+		.day-header {
+			background-color: #dedede;
+			display: block;
+		}
+		.month {
+			border-bottom: 1px solid #ccc;
+			border-right: 1px solid #ccc;
+		}
+		.blank {
+			background-color: #eee;
 		}
   </style>
 
@@ -34,7 +51,7 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/almanakk-ġunju/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-6f49cc9b.css">
+		<link rel="stylesheet" href="/css/style-f8c0f334.css">
 		<script>
 			var
 				audioLoaded,
@@ -161,7 +178,7 @@
 		</script>
 		<script src="../script/script-346af4.js" type="module"></script>
 	</head>
-	<body class="show-nav this-month-marzu">
+	<body class="show-nav this-month-april">
 		<script>initialiseAfterBody();</script>
 		<div id="top-wrapper">
 			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
@@ -185,36 +202,41 @@
 					<span style="display: none">Mobile biss: iftaħ il-menu</span>
 					<div class='menu-button'></div>
 				</label>
-				<menu id="menu-main">
-					<li class="hide-laptop main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
-					<li class="hide-laptop main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
-					<li class="hide-laptop abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
-					<li><a href="/appuntamenti/">Appuntamenti</a></li>
-					<li><a href="/kontributuri/">Kontributuri</a></li>
-					<li><a href="/werrej/">Werrej</a></li>
-					<li><a href="/djarju/">Djarju</a></li>
-					<li><a href="/sensiliet/">Sensiliet</a></li>
-					<li><a href="/podcast/">Podcast</a></li>
-					<li class="hide-mobile"><a href="/kotba/" class="menu-kotba">Kotba</a></li>
-					<li class="hide-laptop choose-theme">
-						<a id="theme-regular" role="button" tabindex="0">s</a>
-						<a id="theme-dark" role="button" tabindex="1">m</a>
-						<a id="theme-contrast" role="button" tabindex="2">c</a>
-						<a id="theme-system" role="button" tabindex="3">p</a>
-					</li>
-					<li><a href="/dwarna/">Dwarna</a></li>
-					<li class="hide-laptop"><a href="/kotba/">Kotba</a></li>
-					<li class="hide-laptop"><a href="/kolofon/">Kolofon</a></li>
-					<li><a href="/newsletter/">Newsletter</a></li>
-					<li class="hide-laptop"><a href="/privatezza/">Privatezza</a></li>
-					<li><a href="/bookmarks/">Bookmarks<span id="bookmarks-number"></span></a></li>
-					<li class="hide-laptop choose-theme" id="text-size-adjust">
-						<a id="font-size-1" role="button" tabindex="8">a</a>
-						<a id="font-size-2" role="button" tabindex="9">a</a>
-						<a id="font-size-3" role="button" tabindex="10">a</a>
-						<a id="font-size-4" role="button" tabindex="11">a</a>
-					</li>
-				</menu>
+				
+					<menu id="menu-main">
+						
+						<li class="hide-laptop main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+						<li class="hide-laptop main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+						<li class="hide-laptop abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
+						<li><a href="/appuntamenti/">Appuntamenti</a></li>
+						<li><a href="/kontributuri/">Kontributuri</a></li>
+						<li><a href="/werrej/">Werrej</a></li>
+						<li><a href="/djarju/">Djarju</a></li>
+						<li><a href="/sensiliet/">Sensiliet</a></li>
+						<li><a href="/podcast/">Podcast</a></li>
+						<li class="hide-mobile"><a href="/kotba/" class="menu-kotba">Kotba</a></li>
+						<li class="hide-laptop choose-theme">
+							<a id="theme-regular" role="button" tabindex="0">s</a>
+							<a id="theme-dark" role="button" tabindex="1">m</a>
+							<a id="theme-contrast" role="button" tabindex="2">c</a>
+							<a id="theme-system" role="button" tabindex="3">p</a>
+						</li>
+						<li><a href="/dwarna/">Dwarna</a></li>
+						<li class="hide-laptop"><a href="/kotba/">Kotba</a></li>
+						<li class="hide-laptop"><a href="/kolofon/">Kolofon</a></li>
+						<li><a href="/newsletter/">Newsletter</a></li>
+						<li class="hide-laptop"><a href="/privatezza/">Privatezza</a></li>
+						<li><a href="/bookmarks/">Bookmarks<span id="bookmarks-number"></span></a></li>
+						<li class="hide-laptop choose-theme" id="text-size-adjust">
+							<a id="font-size-1" role="button" tabindex="8">a</a>
+							<a id="font-size-2" role="button" tabindex="9">a</a>
+							<a id="font-size-3" role="button" tabindex="10">a</a>
+							<a id="font-size-4" role="button" tabindex="11">a</a>
+						</li>
+					</menu>
+					<input class="hide-mobile" type="text" id="search-input" placeholder="fittex..." autocomplete="off" auto-fill="off" type="text" autocapitalize="none" enterkeyhint="search" />
+					<ul id="search-results"><!-- --></ul>
+				
 				<div id="brownline"></div>
 			</nav>
 			<div id="message"><!-- --></div>
@@ -227,44 +249,44 @@
 			<h2></h2>
 		</header>
 		<div class="almanac">
-			<section>
-				<div id="month-header">
-					<div class="day">It-Tnejn</div>
-					<div class="day">It-Tlieta</div>
-					<div class="day">L-Erbgħa</div>
-					<div class="day">Il-Ħamis</div>
-					<div class="day">Il-Ġimgħa</div>
-					<div class="day">Is-Sibt</div>
-					<div class="day">Il-Ħadd</div>
+			<section class="month">
+				<div id="month-header" class="week">
+					<div>It-Tnejn</div>
+					<div>It-Tlieta</div>
+					<div>L-Erbgħa</div>
+					<div>Il-Ħamis</div>
+					<div>Il-Ġimgħa</div>
+					<div>Is-Sibt</div>
+					<div>Il-Ħadd</div>
 				</div>
 			
-				<div id="month">
+				<div class="week">
 					
-						<div id="day"><strong>&nbsp;</strong>
+						<div class="day blank"><strong class="day-header"></strong>
 							
 						</div>
 					
-						<div id="day"><strong>&nbsp;</strong>
+						<div class="day blank"><strong class="day-header"></strong>
 							
 						</div>
 					
-						<div id="day"><strong>&nbsp;</strong>
+						<div class="day blank"><strong class="day-header"></strong>
 							
 						</div>
 					
-						<div id="day"><strong>&nbsp;</strong>
+						<div class="day blank"><strong class="day-header"></strong>
 							
 						</div>
 					
-						<div id="day"><strong>&nbsp;</strong>
+						<div class="day blank"><strong class="day-header"></strong>
 							
 						</div>
 					
-						<div id="day"><strong>&nbsp;</strong>
+						<div class="day blank"><strong class="day-header"></strong>
 							
 						</div>
 					
-						<div id="day"><strong>1</strong>
+						<div class="day"><strong class="day-header">1</strong>
 							
 								<ul>
 									
@@ -546,11 +568,15 @@
 					
 				</div>
 			
-				<div id="month">
+				<div class="week">
 					
-						<div id="day"><strong>2</strong>
+						<div class="day"><strong class="day-header">2</strong>
 							
 								<ul>
+									
+										
+									
+										
 									
 										
 									
@@ -800,12 +826,12 @@
 									
 										
 											<li>
-												<a class="promo promo-almanac mejju" href="/romeo-roxman-gatt-qarn/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Qarn (silta)', 124]);">
+												<a class="promo promo-almanac mejju" href="/romeo-roxman-gatt-qarn/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Qarn (silta)', 126]);">
 													<header>
-														<h6><span style="font-family: mono">2022:</span> Qarn (silta)</h6>
+														<p><span style="font-family: mono">2022:</span> Qarn (silta)</p>
 														
 													</header>
-													
+													<p class="blurb body-text">l-laħam li hu maridJinħaraq u jħossId-dmugħ <l-m>bl-għaraqIllum</l-m> kelli telefonata li <l-m>t-top</l-m> surgery, li tissejjaħ ukoll masculinising chest surgery, kienet skedata għat-2 ta’ Ġunju 2022. Ilni xi sitt xhur li mort għall-konsultazzjoni. Irrabjat miegħi nnifsi li għadni m’għamilthiex. Ifhem, ma kontx ħa nagħmilha <l-m>fiż-żmien</l-m> li missieri kien ħa jkollu <l-m>l-operazzjoni</l-m> tiegħu. Miskina ommi k</p>
 												</a>
 											</li>
 										
@@ -830,15 +856,11 @@
 									
 										
 									
-										
-									
-										
-									
 								</ul>
 							
 						</div>
 					
-						<div id="day"><strong>3</strong>
+						<div class="day"><strong class="day-header">3</strong>
 							
 								<ul>
 									
@@ -1118,7 +1140,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>4</strong>
+						<div class="day"><strong class="day-header">4</strong>
 							
 								<ul>
 									
@@ -1398,7 +1420,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>5</strong>
+						<div class="day"><strong class="day-header">5</strong>
 							
 								<ul>
 									
@@ -1678,7 +1700,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>6</strong>
+						<div class="day"><strong class="day-header">6</strong>
 							
 								<ul>
 									
@@ -1958,7 +1980,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>7</strong>
+						<div class="day"><strong class="day-header">7</strong>
 							
 								<ul>
 									
@@ -2238,7 +2260,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>8</strong>
+						<div class="day"><strong class="day-header">8</strong>
 							
 								<ul>
 									
@@ -2520,9 +2542,9 @@
 					
 				</div>
 			
-				<div id="month">
+				<div class="week">
 					
-						<div id="day"><strong>9</strong>
+						<div class="day"><strong class="day-header">9</strong>
 							
 								<ul>
 									
@@ -2635,21 +2657,13 @@
 										
 									
 										
-									
-										
-									
-										
-									
-										
-									
-										
 											<li>
-												<a class="promo promo-almanac april" href="/jimmy-grima-splużjonijiet-1-il-kwiet-u-l-lejl/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Splużjonijiet #1', 59]);">
+												<a class="promo promo-almanac april" href="/jimmy-grima-splużjonijiet-1-il-kwiet-u-l-lejl/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Splużjonijiet #1', 55]);">
 													<header>
-														<h6><span style="font-family: mono">     </span> Splużjonijiet #1</h6>
+														<p><span style="font-family: mono"></span> Splużjonijiet #1</p>
 														
 													</header>
-													
+													<p class="blurb body-text">-2000, <l-m>it-Tnejn</l-m> 18 ta’ Ġunju, <l-m>it-Tlieta</l-m> 19 ta’ Ġunju <l-m>mit-2000</l-m> sa 2359, <l-m>l-Erbgħa</l-m> 20 ta’ Ġunju, <l-m>il-Ħamis</l-m> 21 ta’ Ġunju. Ma nafx kif <l-m>iz-zija</l-m> ma tiftakrux <l-m>dad-damdim</l-m> kollu. Forsi neħħiethom <l-m>mill-memorja</l-m> għax tant tħobb ’il &nbsp;Filfla? <l-m>Il-file</l-m> jkompli għax wara l</p>
 												</a>
 											</li>
 										
@@ -2808,11 +2822,19 @@
 									
 										
 									
+										
+									
+										
+									
+										
+									
+										
+									
 								</ul>
 							
 						</div>
 					
-						<div id="day"><strong>10</strong>
+						<div class="day"><strong class="day-header">10</strong>
 							
 								<ul>
 									
@@ -3092,7 +3114,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>11</strong>
+						<div class="day"><strong class="day-header">11</strong>
 							
 								<ul>
 									
@@ -3366,10 +3388,10 @@
 											<li>
 												<a class="promo promo-almanac awwissu" href="/warren-bartolo-djarju-2024-07-11-inħossni-qisni-qed-nikteb-għall-ewwel-darba/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Djarju #8 Warren Bartolo', 134]);">
 													<header>
-														<h6><span style="font-family: mono">1922:</span> Djarju #8 Warren Bartolo</h6>
+														<p><span style="font-family: mono">1922:</span> Djarju #8 Warren Bartolo</p>
 														
 													</header>
-													
+													<p class="blurb body-text">ba oħra? Woolf stess tammetti li ma rnexxilhiex tikteb fih kuljum. <l-m>Il-Ħamis</l-m>, 28 ta’ Marzu, 1929: “Verament ħaġa <l-m>tal-mistħija;</l-m> ebda djarju qatt ma tħalla għal daqshekk tard <l-m>fis-sena</l-m>!” U darb’oħra, <l-m>fil-11</l-m> ta’ Ġunju 1922, hi tiffrustra ruħha li ma rnexxilhiex tikteb <l-m>fid-djarju</l-m>, “<l-m>Tal-mistħija</l-m>! <l-m>Tal-mistħija</l-m>! <l-m>Tal-mistħija</l-m>! <l-m>Mis-27</l-m> ta’ April <l-m>sal-lum</l-m>, ma tniżżlet <l-m>l-ebda</l-m> kelma.<span class="pullsemi">”</span> Forsi ma nista’ naħseb f’xejn iktar imxerred,</p>
 												</a>
 											</li>
 										
@@ -3382,7 +3404,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>12</strong>
+						<div class="day"><strong class="day-header">12</strong>
 							
 								<ul>
 									
@@ -3662,7 +3684,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>13</strong>
+						<div class="day"><strong class="day-header">13</strong>
 							
 								<ul>
 									
@@ -3942,9 +3964,21 @@
 							
 						</div>
 					
-						<div id="day"><strong>14</strong>
+						<div class="day"><strong class="day-header">14</strong>
 							
 								<ul>
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
 									
 										
 									
@@ -4164,26 +4198,14 @@
 									
 										
 											<li>
-												<a class="promo promo-almanac ottubru" href="/omar-nshea-bur-mgħeż-2-dfintha-fil-libsa-li-mietet-fiha/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Bur Mgħeż #2', 109]);">
+												<a class="promo promo-almanac ottubru" href="/omar-nshea-bur-mgħeż-2-dfintha-fil-libsa-li-mietet-fiha/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Bur Mgħeż #2', 115]);">
 													<header>
-														<h6><span style="font-family: mono">1912:</span> Bur Mgħeż #2</h6>
+														<p><span style="font-family: mono">1912:</span> Bur Mgħeż #2</p>
 														
 													</header>
-													
+													<p class="blurb body-text">r biċ-ċar li jekk <l-m>ix-xogħol</l-m> arkeoloġiku ma jgħaġġilx, <l-m>l-oqbra</l-m> Neolitiċi ta’ Bur Mgħeż kienu se jintilfu waqt <l-m>it-tħaffir</l-m> għall-ġebla <l-m>tal-franka</l-m> li kien qed isir <l-m>fil-barriera</l-m> u maġenbha <l-m>min-Naxxari</l-m>. <l-m>Fl-14</l-m> ta’ Ġunju <l-m>tal-1912</l-m>, Zammit staqsa <l-m>lill-Gvernatur</l-m> u <l-m>lill-Kap</l-m> Segretarju tiegħu għall-permess biex jitkompla <l-m>x-xogħol</l-m> ġewwa Bur Mgħeż. Zammit kien għadu mhux ċert jekk isejjaħx <l-m>is-sit</l-m> l-Għar ta’ Burmgħeż jew <l-m>l-Għerien</l-m> ta</p>
 												</a>
 											</li>
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
 										
 									
 										
@@ -4232,7 +4254,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>15</strong>
+						<div class="day"><strong class="day-header">15</strong>
 							
 								<ul>
 									
@@ -4514,9 +4536,9 @@
 					
 				</div>
 			
-				<div id="month">
+				<div class="week">
 					
-						<div id="day"><strong>16</strong>
+						<div class="day"><strong class="day-header">16</strong>
 							
 								<ul>
 									
@@ -4796,7 +4818,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>17</strong>
+						<div class="day"><strong class="day-header">17</strong>
 							
 								<ul>
 									
@@ -5076,7 +5098,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>18</strong>
+						<div class="day"><strong class="day-header">18</strong>
 							
 								<ul>
 									
@@ -5356,7 +5378,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>19</strong>
+						<div class="day"><strong class="day-header">19</strong>
 							
 								<ul>
 									
@@ -5636,23 +5658,9 @@
 							
 						</div>
 					
-						<div id="day"><strong>20</strong>
+						<div class="day"><strong class="day-header">20</strong>
 							
 								<ul>
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
 									
 										
 									
@@ -5852,14 +5860,28 @@
 									
 										
 											<li>
-												<a class="promo promo-almanac ottubru" href="/omar-nshea-bur-mgħeż-2-dfintha-fil-libsa-li-mietet-fiha/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Bur Mgħeż #2', 106]);">
+												<a class="promo promo-almanac ottubru" href="/omar-nshea-bur-mgħeż-2-dfintha-fil-libsa-li-mietet-fiha/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Bur Mgħeż #2', 99]);">
 													<header>
-														<h6><span style="font-family: mono">1912:</span> Bur Mgħeż #2</h6>
+														<p><span style="font-family: mono">1912:</span> Bur Mgħeż #2</p>
 														
 													</header>
-													
+													<p class="blurb body-text">jn tista’ titqiegħed u tintwera <l-m>l-kollezzjoni</l-m> żgħira imma importanti <l-m>tal-fuħħar</l-m> li nstab ġewwa Bur Mgħeż.Zammit reħa <l-m>r-responsabbiltà</l-m> tal-wirt materjali <l-m>tas-sit</l-m> f’idejn <l-m>il-gvernatur</l-m> Ingliż; <l-m>fl-20</l-m> ta’ Ġunju 1912, iddeċieda li jitkompla <l-m>x-xogħol</l-m> fuq <l-m>is-sit</l-m> ta’ Bur Mgħeż biex dak kollu li kien sar ma jintilifx, però ma tax permess <l-m>lill-kuratur</l-m> biex jagħmel <l-m>l-ispiża</l-m> ta’ £4 għall-vetrina. Wieġbu li ma kienx ċert</p>
 												</a>
 											</li>
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
 										
 									
 										
@@ -5926,7 +5948,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>21</strong>
+						<div class="day"><strong class="day-header">21</strong>
 							
 								<ul>
 									
@@ -6054,10 +6076,10 @@
 											<li>
 												<a class="promo promo-almanac april" href="/jimmy-grima-splużjonijiet-1-il-kwiet-u-l-lejl/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Splużjonijiet #1', 61]);">
 													<header>
-														<h6><span style="font-family: mono">     </span> Splużjonijiet #1</h6>
+														<p><span style="font-family: mono"></span> Splużjonijiet #1</p>
 														
 													</header>
-													
+													<p class="blurb body-text">l-istess ħin jitgħaxxaq <l-m>bix-xemx</l-m> u <l-m>l-baħar</l-m>. <l-m>Mid-dati</l-m> li jagħti <l-m>l-Flag</l-m> Officer f’din <l-m>l-ittra</l-m> sabiex jikkjarifika li diġà hemm appuntamenti ta’ damdim, tidher biċ-ċar <l-m>l-intensità</l-m> tal-bumbardamenti. <l-m>Sal-21</l-m> ta’ Ġunju ta’ dik <l-m>is-sena</l-m>, kienu diġà saru <l-m>l-arranġamenti</l-m> għall-użu ta’ Filfla waqt dawn <l-m>il-ġranet</l-m> u <l-m>l-ħinijiet:</l-m> il-Ħamis 14 ta’ Ġunju <l-m>mis-0600</l-m> sat-0800, <l-m>il-Ġimgħa</l-m> 15 ta’ Ġunju <l-m>mis-0700</l-m> sas-1400 u <l-m>mill-1630</l-m> sat</p>
 												</a>
 											</li>
 										
@@ -6216,7 +6238,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>22</strong>
+						<div class="day"><strong class="day-header">22</strong>
 							
 								<ul>
 									
@@ -6498,9 +6520,9 @@
 					
 				</div>
 			
-				<div id="month">
+				<div class="week">
 					
-						<div id="day"><strong>23</strong>
+						<div class="day"><strong class="day-header">23</strong>
 							
 								<ul>
 									
@@ -6780,7 +6802,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>24</strong>
+						<div class="day"><strong class="day-header">24</strong>
 							
 								<ul>
 									
@@ -7060,7 +7082,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>25</strong>
+						<div class="day"><strong class="day-header">25</strong>
 							
 								<ul>
 									
@@ -7340,7 +7362,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>26</strong>
+						<div class="day"><strong class="day-header">26</strong>
 							
 								<ul>
 									
@@ -7620,7 +7642,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>27</strong>
+						<div class="day"><strong class="day-header">27</strong>
 							
 								<ul>
 									
@@ -7900,7 +7922,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>28</strong>
+						<div class="day"><strong class="day-header">28</strong>
 							
 								<ul>
 									
@@ -8180,7 +8202,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>29</strong>
+						<div class="day"><strong class="day-header">29</strong>
 							
 								<ul>
 									
@@ -8456,10 +8478,10 @@
 											<li>
 												<a class="promo promo-almanac marzu" href="/loranne-vella-djarju-2024-02-08-it-tluq-dejjem-iħallili-għafsa-xi-mkien/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Djarju #4 Loranne Vella', 135]);">
 													<header>
-														<h6><span style="font-family: mono">2015:</span> Djarju #4 Loranne Vella</h6>
+														<p><span style="font-family: mono">2015:</span> Djarju #4 Loranne Vella</p>
 														
 													</header>
-													
+													<p class="blurb body-text">Pic Nic The Streets, picnics “kwieti” ta’ protesta kull nhar ta’ Ħadd waranofsinhar quddiem <l-m>il-Bourse</l-m> kontra <l-m>l-fatt</l-m> li <l-m>l-karozzi</l-m> kienu joħonqu <l-m>l-ispazju</l-m> pubbliku u jinkwinaw <l-m>l-arja</l-m> tar-residenti, <l-m>fid-29</l-m> ta’ Ġunju <l-m>tal-2015</l-m> Boulevard Anspach ingħalaq kompletament għall-karozzi u <l-m>l-ispazju</l-m> nfetaħ biss għan-nies <l-m>bil-mixi</l-m>. Tħawlu <l-m>s-siġar</l-m> fuq <l-m>il-ġnub</l-m>, tpoġġew għadd ta’ bankijiet <l-m>tal-injam</l-m> u <l-m>tal-konkrit</l-m>, tlestiet funtana b’i</p>
 												</a>
 											</li>
 										
@@ -8472,9 +8494,9 @@
 					
 				</div>
 			
-				<div id="month">
+				<div class="week">
 					
-						<div id="day"><strong>30</strong>
+						<div class="day"><strong class="day-header">30</strong>
 							
 								<ul>
 									
@@ -8541,43 +8563,43 @@
 										
 									
 										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
 											<li>
-												<a class="promo promo-almanac awwissu" href="/omar-nshea-es-sidr-1-għasafar-tal-passa/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Es Sidr #1', 32]);">
+												<a class="promo promo-almanac awwissu" href="/omar-nshea-es-sidr-1-għasafar-tal-passa/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Es Sidr #1', 46]);">
 													<header>
-														<h6><span style="font-family: mono">1971:</span> Es Sidr #1</h6>
+														<p><span style="font-family: mono">1971:</span> Es Sidr #1</p>
 														
 													</header>
-													
+													<p class="blurb body-text">agħ kienu qabbduni naqra għax raw Libjan jimxi <l-m>fl-inħawi</l-m>. Hemmhekk bdietli <l-m>l-fantasija</l-m> tal-ħtif, li damet snin twal sa ma telqitni.#Waqt li kont qed naqra <l-m>l-ittra</l-m> li Otman bagħtilha <l-m>fit-30</l-m> ta’ Ġunju <l-m>tal-1971</l-m>, sirt naf li kien qed jisma’ <l-m>r-radju</l-m> fil-kamra tiegħu <l-m>x-xogħol</l-m>, diska ta’ Tom Jones li kienet ħarġet dik <l-m>is-sena</l-m>. Waqt li qed jikteb, beda jipprova jiftakar xi kliem li kien tgħallem jgħid waqt li ki</p>
 												</a>
 											</li>
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
 										
 									
 										
@@ -8764,27 +8786,27 @@
 							
 						</div>
 					
-						<div id="day"><strong>&nbsp;</strong>
+						<div class="day blank"><strong class="day-header"></strong>
 							
 						</div>
 					
-						<div id="day"><strong>&nbsp;</strong>
+						<div class="day blank"><strong class="day-header"></strong>
 							
 						</div>
 					
-						<div id="day"><strong>&nbsp;</strong>
+						<div class="day blank"><strong class="day-header"></strong>
 							
 						</div>
 					
-						<div id="day"><strong>&nbsp;</strong>
+						<div class="day blank"><strong class="day-header"></strong>
 							
 						</div>
 					
-						<div id="day"><strong>&nbsp;</strong>
+						<div class="day blank"><strong class="day-header"></strong>
 							
 						</div>
 					
-						<div id="day"><strong>&nbsp;</strong>
+						<div class="day blank"><strong class="day-header"></strong>
 							
 						</div>
 					

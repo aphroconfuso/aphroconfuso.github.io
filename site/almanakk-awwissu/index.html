@@ -6,12 +6,29 @@
 		
 	<title>Almanakk · Aphroconfuso</title>
   <style>
-		#month {
+		.week {
 			display: grid;
 			grid-template-columns: repeat(7, 1fr);
 			grid-gap: 0.5em;
 			margin: 0;
 			padding: 0;
+		}
+		.day {
+			border-left: 1px solid #ccc;
+			border-top: 1px solid #ccc;
+			height: calc(1.8rem * 5);
+			overflow: hidden;
+		}
+		.day-header {
+			background-color: #dedede;
+			display: block;
+		}
+		.month {
+			border-bottom: 1px solid #ccc;
+			border-right: 1px solid #ccc;
+		}
+		.blank {
+			background-color: #eee;
 		}
   </style>
 
@@ -34,7 +51,7 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/almanakk-awwissu/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-6f49cc9b.css">
+		<link rel="stylesheet" href="/css/style-f8c0f334.css">
 		<script>
 			var
 				audioLoaded,
@@ -161,7 +178,7 @@
 		</script>
 		<script src="../script/script-346af4.js" type="module"></script>
 	</head>
-	<body class="show-nav this-month-marzu">
+	<body class="show-nav this-month-april">
 		<script>initialiseAfterBody();</script>
 		<div id="top-wrapper">
 			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
@@ -185,36 +202,41 @@
 					<span style="display: none">Mobile biss: iftaħ il-menu</span>
 					<div class='menu-button'></div>
 				</label>
-				<menu id="menu-main">
-					<li class="hide-laptop main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
-					<li class="hide-laptop main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
-					<li class="hide-laptop abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
-					<li><a href="/appuntamenti/">Appuntamenti</a></li>
-					<li><a href="/kontributuri/">Kontributuri</a></li>
-					<li><a href="/werrej/">Werrej</a></li>
-					<li><a href="/djarju/">Djarju</a></li>
-					<li><a href="/sensiliet/">Sensiliet</a></li>
-					<li><a href="/podcast/">Podcast</a></li>
-					<li class="hide-mobile"><a href="/kotba/" class="menu-kotba">Kotba</a></li>
-					<li class="hide-laptop choose-theme">
-						<a id="theme-regular" role="button" tabindex="0">s</a>
-						<a id="theme-dark" role="button" tabindex="1">m</a>
-						<a id="theme-contrast" role="button" tabindex="2">c</a>
-						<a id="theme-system" role="button" tabindex="3">p</a>
-					</li>
-					<li><a href="/dwarna/">Dwarna</a></li>
-					<li class="hide-laptop"><a href="/kotba/">Kotba</a></li>
-					<li class="hide-laptop"><a href="/kolofon/">Kolofon</a></li>
-					<li><a href="/newsletter/">Newsletter</a></li>
-					<li class="hide-laptop"><a href="/privatezza/">Privatezza</a></li>
-					<li><a href="/bookmarks/">Bookmarks<span id="bookmarks-number"></span></a></li>
-					<li class="hide-laptop choose-theme" id="text-size-adjust">
-						<a id="font-size-1" role="button" tabindex="8">a</a>
-						<a id="font-size-2" role="button" tabindex="9">a</a>
-						<a id="font-size-3" role="button" tabindex="10">a</a>
-						<a id="font-size-4" role="button" tabindex="11">a</a>
-					</li>
-				</menu>
+				
+					<menu id="menu-main">
+						
+						<li class="hide-laptop main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+						<li class="hide-laptop main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+						<li class="hide-laptop abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
+						<li><a href="/appuntamenti/">Appuntamenti</a></li>
+						<li><a href="/kontributuri/">Kontributuri</a></li>
+						<li><a href="/werrej/">Werrej</a></li>
+						<li><a href="/djarju/">Djarju</a></li>
+						<li><a href="/sensiliet/">Sensiliet</a></li>
+						<li><a href="/podcast/">Podcast</a></li>
+						<li class="hide-mobile"><a href="/kotba/" class="menu-kotba">Kotba</a></li>
+						<li class="hide-laptop choose-theme">
+							<a id="theme-regular" role="button" tabindex="0">s</a>
+							<a id="theme-dark" role="button" tabindex="1">m</a>
+							<a id="theme-contrast" role="button" tabindex="2">c</a>
+							<a id="theme-system" role="button" tabindex="3">p</a>
+						</li>
+						<li><a href="/dwarna/">Dwarna</a></li>
+						<li class="hide-laptop"><a href="/kotba/">Kotba</a></li>
+						<li class="hide-laptop"><a href="/kolofon/">Kolofon</a></li>
+						<li><a href="/newsletter/">Newsletter</a></li>
+						<li class="hide-laptop"><a href="/privatezza/">Privatezza</a></li>
+						<li><a href="/bookmarks/">Bookmarks<span id="bookmarks-number"></span></a></li>
+						<li class="hide-laptop choose-theme" id="text-size-adjust">
+							<a id="font-size-1" role="button" tabindex="8">a</a>
+							<a id="font-size-2" role="button" tabindex="9">a</a>
+							<a id="font-size-3" role="button" tabindex="10">a</a>
+							<a id="font-size-4" role="button" tabindex="11">a</a>
+						</li>
+					</menu>
+					<input class="hide-mobile" type="text" id="search-input" placeholder="fittex..." autocomplete="off" auto-fill="off" type="text" autocapitalize="none" enterkeyhint="search" />
+					<ul id="search-results"><!-- --></ul>
+				
 				<div id="brownline"></div>
 			</nav>
 			<div id="message"><!-- --></div>
@@ -227,36 +249,36 @@
 			<h2></h2>
 		</header>
 		<div class="almanac">
-			<section>
-				<div id="month-header">
-					<div class="day">It-Tnejn</div>
-					<div class="day">It-Tlieta</div>
-					<div class="day">L-Erbgħa</div>
-					<div class="day">Il-Ħamis</div>
-					<div class="day">Il-Ġimgħa</div>
-					<div class="day">Is-Sibt</div>
-					<div class="day">Il-Ħadd</div>
+			<section class="month">
+				<div id="month-header" class="week">
+					<div>It-Tnejn</div>
+					<div>It-Tlieta</div>
+					<div>L-Erbgħa</div>
+					<div>Il-Ħamis</div>
+					<div>Il-Ġimgħa</div>
+					<div>Is-Sibt</div>
+					<div>Il-Ħadd</div>
 				</div>
 			
-				<div id="month">
+				<div class="week">
 					
-						<div id="day"><strong>&nbsp;</strong>
+						<div class="day blank"><strong class="day-header"></strong>
 							
 						</div>
 					
-						<div id="day"><strong>&nbsp;</strong>
+						<div class="day blank"><strong class="day-header"></strong>
 							
 						</div>
 					
-						<div id="day"><strong>&nbsp;</strong>
+						<div class="day blank"><strong class="day-header"></strong>
 							
 						</div>
 					
-						<div id="day"><strong>&nbsp;</strong>
+						<div class="day blank"><strong class="day-header"></strong>
 							
 						</div>
 					
-						<div id="day"><strong>1</strong>
+						<div class="day"><strong class="day-header">1</strong>
 							
 								<ul>
 									
@@ -536,21 +558,9 @@
 							
 						</div>
 					
-						<div id="day"><strong>2</strong>
+						<div class="day"><strong class="day-header">2</strong>
 							
 								<ul>
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
 									
 										
 									
@@ -776,14 +786,26 @@
 									
 										
 											<li>
-												<a class="promo promo-almanac ottubru" href="/omar-nshea-bur-mgħeż-2-dfintha-fil-libsa-li-mietet-fiha/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Bur Mgħeż #2', 118]);">
+												<a class="promo promo-almanac ottubru" href="/omar-nshea-bur-mgħeż-2-dfintha-fil-libsa-li-mietet-fiha/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Bur Mgħeż #2', 112]);">
 													<header>
-														<h6><span style="font-family: mono">1920:</span> Bur Mgħeż #2</h6>
+														<p><span style="font-family: mono">1920:</span> Bur Mgħeż #2</p>
 														
 													</header>
-													
+													<p class="blurb body-text">bil-ħamrija u jiżirgħu <l-m>l-larinġ;</l-m> naħseb li <l-m>l-punt</l-m> kien li <l-m>ġol-barriera</l-m> ċ-ċitru ma jilħqux <l-m>il-melħ</l-m> tal-baħar. <l-m>Il-franka</l-m> llum qoxra <l-m>fil-bini</l-m>. Ġewwa kollu briks. ’Qas issib min jaħdimha. Fit-2 ta’ Awwissu 1920, <l-m>in-nutar</l-m> wissa li għalkemm <l-m>il-klawsola</l-m> timpedixxi li <l-m>l-valur</l-m> tal-art jitqies barra <l-m>mill-valur</l-m> ta’ dak li jinsab fuqu jew ġo fih, f’dan <l-m>il-każ</l-m> il-valur presuppost <l-m>tal-materjali</l-m> Neolitiċi, xorta waħda</p>
 												</a>
 											</li>
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
 										
 									
 										
@@ -826,7 +848,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>3</strong>
+						<div class="day"><strong class="day-header">3</strong>
 							
 								<ul>
 									
@@ -1072,10 +1094,10 @@
 											<li>
 												<a class="promo promo-almanac ottubru" href="/davinia-hamilton-żerriegħa/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Żerriegħa', 120]);">
 													<header>
-														<h6><span style="font-family: mono">1492:</span> Żerriegħa</h6>
+														<p><span style="font-family: mono">1492:</span> Żerriegħa</p>
 														
 													</header>
-													
+													<p class="blurb body-text">atura. Li <l-m>n-Natura</l-m> ma kinitx biss idea, imma realtà territorjali u kulturali li taqfel u tgħasses <l-m>lin-nisa</l-m>, tikkolonizza popli u tessuti ekstra umani <l-m>tal-ħajja</l-m>.<span class="pullsemi">”</span> Jew, kif tikteb Jamaica Kincaid, “<l-m>Fit-3</l-m> ta’ Awwissu 1492 — meta Kristofru Kolombu salpa minn Spanja… <l-m>ir-realtà</l-m> tal-ġnien inbidlet…” Bdiet verament <l-m>l-epoka</l-m> Antropoċena, globalizzazzjoni vjolenti <l-m>tal-kapitaliżmu</l-m> bl-istess proċess ta’ kolonizzazzjoni, skjavitù </p>
 												</a>
 											</li>
 										
@@ -1118,9 +1140,9 @@
 					
 				</div>
 			
-				<div id="month">
+				<div class="week">
 					
-						<div id="day"><strong>4</strong>
+						<div class="day"><strong class="day-header">4</strong>
 							
 								<ul>
 									
@@ -1193,13 +1215,307 @@
 										
 									
 										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
 											<li>
-												<a class="promo promo-almanac awwissu" href="/omar-nshea-es-sidr-1-għasafar-tal-passa/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Es Sidr #1', 35]);">
+												<a class="promo promo-almanac awwissu" href="/omar-nshea-es-sidr-1-għasafar-tal-passa/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Es Sidr #1', 44]);">
 													<header>
-														<h6><span style="font-family: mono">1971:</span> Es Sidr #1</h6>
+														<p><span style="font-family: mono">1971:</span> Es Sidr #1</p>
 														
 													</header>
-													
+													<p class="blurb body-text">sta li jaħdmu miegħi hawn li Mintoff rebaħ <l-m>l-elezzjoni</l-m>.#Walter H. Annenberg kien <l-m>l-Ambaxxatur</l-m> tal-Istati Uniti għall-Ingilterra bejn <l-m>l-1969</l-m> u <l-m>l-1973</l-m>. Kien negozjant u filantropu. <l-m>Fl-4</l-m> ta’ Awwissu <l-m>tal-1971</l-m> (jumejn qabel <l-m>il-festa</l-m> tas-Salvatur f’Ħal Lija u għeluq snin Duminku Mintoff), Annenberg bagħat telegramma <l-m>lid-Dipartiment</l-m> tal-Istat biex iħabbar <l-m>il-laqgħa</l-m> li kellu <l-m>mal-Ministru</l-m> tad-Difiża Ingliż Lor</p>
+												</a>
+											</li>
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+								</ul>
+							
+						</div>
+					
+						<div class="day"><strong class="day-header">5</strong>
+							
+								<ul>
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+											<li>
+												<a class="promo promo-almanac awwissu" href="/omar-nshea-es-sidr-1-għasafar-tal-passa/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Es Sidr #1', 37]);">
+													<header>
+														<p><span style="font-family: mono">1971:</span> Es Sidr #1</p>
+														
+													</header>
+													<p class="blurb body-text">ezzjoni ta’ Ġunju <l-m>tal-1971</l-m> u <l-m>l-aħħar</l-m> tas-sena, Mintoff żar lil Gaddafi <l-m>fil-Libja</l-m> erba’ darbiet. Skont <l-m>it-telegramma</l-m> numru 142339 mibgħuta <l-m>mid-Department</l-m> of State <l-m>lill-Ambaxxata</l-m> Amerikana f’Londra <l-m>fil-5</l-m> ta’ Awwissu <l-m>tal-1971</l-m> biex jitkixxfu iktar fuq <l-m>is-somma</l-m> ta’ £70 miljun li Malta suppost kellha <l-m>fir-riżervi</l-m> Londra u <l-m>r-risposta</l-m> li ntbagħtet <l-m>l-għada</l-m> fit-telegramma 7311 u li issa tinsab <l-m>fl-istess</l-m> kaxxa numru 728 (“Country </p>
 												</a>
 											</li>
 										
@@ -1402,305 +1718,11 @@
 									
 										
 									
-										
-									
-										
-									
 								</ul>
 							
 						</div>
 					
-						<div id="day"><strong>5</strong>
-							
-								<ul>
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-											<li>
-												<a class="promo promo-almanac awwissu" href="/omar-nshea-es-sidr-1-għasafar-tal-passa/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Es Sidr #1', 43]);">
-													<header>
-														<h6><span style="font-family: mono">1971:</span> Es Sidr #1</h6>
-														
-													</header>
-													
-												</a>
-											</li>
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-								</ul>
-							
-						</div>
-					
-						<div id="day"><strong>6</strong>
+						<div class="day"><strong class="day-header">6</strong>
 							
 								<ul>
 									
@@ -1980,7 +2002,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>7</strong>
+						<div class="day"><strong class="day-header">7</strong>
 							
 								<ul>
 									
@@ -2260,7 +2282,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>8</strong>
+						<div class="day"><strong class="day-header">8</strong>
 							
 								<ul>
 									
@@ -2540,7 +2562,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>9</strong>
+						<div class="day"><strong class="day-header">9</strong>
 							
 								<ul>
 									
@@ -2820,7 +2842,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>10</strong>
+						<div class="day"><strong class="day-header">10</strong>
 							
 								<ul>
 									
@@ -3102,9 +3124,9 @@
 					
 				</div>
 			
-				<div id="month">
+				<div class="week">
 					
-						<div id="day"><strong>11</strong>
+						<div class="day"><strong class="day-header">11</strong>
 							
 								<ul>
 									
@@ -3384,23 +3406,9 @@
 							
 						</div>
 					
-						<div id="day"><strong>12</strong>
+						<div class="day"><strong class="day-header">12</strong>
 							
 								<ul>
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
 									
 										
 									
@@ -3602,14 +3610,28 @@
 									
 										
 											<li>
-												<a class="promo promo-almanac ottubru" href="/omar-nshea-bur-mgħeż-2-dfintha-fil-libsa-li-mietet-fiha/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Bur Mgħeż #2', 107]);">
+												<a class="promo promo-almanac ottubru" href="/omar-nshea-bur-mgħeż-2-dfintha-fil-libsa-li-mietet-fiha/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Bur Mgħeż #2', 100]);">
 													<header>
-														<h6><span style="font-family: mono">1920:</span> Bur Mgħeż #2</h6>
+														<p><span style="font-family: mono">1920:</span> Bur Mgħeż #2</p>
 														
 													</header>
-													
+													<p class="blurb body-text">alutazzjoni għandha tqisu dan. Għaxart ijiem wara, Temi Zammit laqqa’ <l-m>l-Antiquities</l-m> Committee u <l-m>l-membri</l-m> ddeċidew li <l-m>l-prezz</l-m> tal-artijiet ta’ Bur Mgħeż għandu jogħla b’għaxra <l-m>fil-mija</l-m>. Skont nota <l-m>tat-12</l-m> ta’ Awwissu 1920, ma kien hemm <l-m>l-ebda</l-m> vot li minnu setgħet tittieħed <l-m>is-somma</l-m> ta’ flus u Zammit wieġeb <l-m>lit-teżorier</l-m> li kien hemm bżonn jinħareġ permess speċjali taħt <l-m>l-istimi</l-m> għax-xiri ta’ proprjetà. F’każijiet bħal </p>
 												</a>
 											</li>
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
 										
 									
 										
@@ -3674,7 +3696,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>13</strong>
+						<div class="day"><strong class="day-header">13</strong>
 							
 								<ul>
 									
@@ -3954,7 +3976,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>14</strong>
+						<div class="day"><strong class="day-header">14</strong>
 							
 								<ul>
 									
@@ -4067,40 +4089,6 @@
 										
 									
 										
-											<li>
-												<a class="promo promo-almanac april" href="/jimmy-grima-splużjonijiet-1-il-kwiet-u-l-lejl/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Splużjonijiet #1', 55]);">
-													<header>
-														<h6><span style="font-family: mono">1876:</span> Splużjonijiet #1</h6>
-														
-													</header>
-													
-												</a>
-											</li>
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
 									
 										
 									
@@ -4108,12 +4096,12 @@
 									
 										
 											<li>
-												<a class="promo promo-almanac novembru" href="/omar-nshea-bur-mgħeż-3-qegħedtha-ġo-qabar-fuq-l-għolja-tal-ħorr/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Bur Mgħeż #3', 70]);">
+												<a class="promo promo-almanac april" href="/jimmy-grima-splużjonijiet-1-il-kwiet-u-l-lejl/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Splużjonijiet #1', 58]);">
 													<header>
-														<h6><span style="font-family: mono">1933:</span> Bur Mgħeż #3</h6>
+														<p><span style="font-family: mono">1876:</span> Splużjonijiet #1</p>
 														
 													</header>
-													
+													<p class="blurb body-text">militari kien fi żmien <l-m>l-Ingliżi</l-m>. Sa <l-m>mill-1930</l-m> diġà kienu bdew xi prattika fuq <l-m>is-sikek</l-m> tal-madwar. Madankollu, Sultana jikkwota rapport li deher <l-m>fil-Malta</l-m> Times and United Service Gazette <l-m>tal-14</l-m> ta’ Awwissu 1876, li jixhed li <l-m>l-ibbumbardjar</l-m> fuq Filfla kien diġà beda dak <l-m>iż-żmien</l-m>. U Carmel Gauci jgħid li balal li nstabu fuq <l-m>il-post</l-m> fil-ħamsinijiet juru li <l-m>dal-isparar</l-m> kien qed iseħħ sa <l-m>mill-bidu</l-m> tal-preżenza t</p>
 												</a>
 											</li>
 										
@@ -4158,6 +4146,40 @@
 									
 										
 									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+											<li>
+												<a class="promo promo-almanac novembru" href="/omar-nshea-bur-mgħeż-3-qegħedtha-ġo-qabar-fuq-l-għolja-tal-ħorr/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Bur Mgħeż #3', 91]);">
+													<header>
+														<p><span style="font-family: mono">1933:</span> Bur Mgħeż #3</p>
+														
+													</header>
+													<p class="blurb body-text">sit biex jerġa’ jeżaminah ġaladarba issa kellu aktar informazzjoni.<l-m>Il-Ministru</l-m> Mizzi, fuq parir ta’ Temi Zammit, għadda <l-m>l-osservazzjonijiet</l-m> ta’ Cumbo <l-m>lid-Dipartiment</l-m> tax-Xogħlijiet Pubbliċi <l-m>fl-14</l-m> ta’ Awwissu 1933; <l-m>id-Dipartiment</l-m> bdew jaħdmu fuq <l-m>il-każ</l-m> fil-21 ta’ Settembru ta’ dik <l-m>l-istess</l-m> sena. Ħamest ijiem wara — fis-26 ta’ Settembru 1933 — Zammit ikkummenta li ġaladarba jitwettqu <l-m>r-rakkomandazzjonijiet</l-m> ta’ Cumb</p>
+												</a>
+											</li>
 										
 									
 										
@@ -4254,7 +4276,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>15</strong>
+						<div class="day"><strong class="day-header">15</strong>
 							
 								<ul>
 									
@@ -4342,10 +4364,10 @@
 											<li>
 												<a class="promo promo-almanac awwissu" href="/omar-nshea-es-sidr-1-għasafar-tal-passa/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Es Sidr #1', 41]);">
 													<header>
-														<h6><span style="font-family: mono">     </span> Es Sidr #1</h6>
+														<p><span style="font-family: mono"></span> Es Sidr #1</p>
 														
 													</header>
-													
+													<p class="blurb body-text">u tletin miljun m’għand <l-m>il-Franċiżi</l-m>, inħasad. Carrington kien xettiku għall-aħħar dwar <l-m>il-qlajja</l-m>’ li kienet qed tiġri ġewwa <l-m>l-ambaxxati</l-m> li Malta kienet qed tiddgħajjef finanzjarjament u li wara <l-m>l-15</l-m> ta’ Awwissu ma kienx se jkollha biżżejjed biex tħallas <l-m>il-pagi</l-m> taċ-ċivil. Qlajjiet kollha dawn, qal Carrington. Malta għandha £70 miljun imwarrbin <l-m>fir-riżervi</l-m> ta’ Londra. Annenberg insista li kellu </p>
 												</a>
 											</li>
 										
@@ -4544,7 +4566,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>16</strong>
+						<div class="day"><strong class="day-header">16</strong>
 							
 								<ul>
 									
@@ -4824,7 +4846,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>17</strong>
+						<div class="day"><strong class="day-header">17</strong>
 							
 								<ul>
 									
@@ -5106,9 +5128,9 @@
 					
 				</div>
 			
-				<div id="month">
+				<div class="week">
 					
-						<div id="day"><strong>18</strong>
+						<div class="day"><strong class="day-header">18</strong>
 							
 								<ul>
 									
@@ -5173,13 +5195,29 @@
 										
 									
 										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
 											<li>
-												<a class="promo promo-almanac awwissu" href="/omar-nshea-es-sidr-1-għasafar-tal-passa/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Es Sidr #1', 31]);">
+												<a class="promo promo-almanac awwissu" href="/omar-nshea-es-sidr-1-għasafar-tal-passa/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Es Sidr #1', 39]);">
 													<header>
-														<h6><span style="font-family: mono">     </span> Es Sidr #1</h6>
+														<p><span style="font-family: mono"></span> Es Sidr #1</p>
 														
 													</header>
-													
+													<p class="blurb body-text"> kienet ta’ £80 miljun, somma li <l-m>l-uffiċjali</l-m> qalu li kienet tajba biżżejjed biex Mintoff imur jissellef minn banek kummerċjali.Bħal Mejju, Lulju ġie u mar, u Otman ma bagħtilha xejn sakemm <l-m>fit-18</l-m> ta’ Awwissu kitbilha fuq karta safra, legal pad. Ilu jistaqsiha sentejn u għadha ma bagħtitlux ritratt tagħha. Jgħidilha li qed jaħdem <l-m>ix-xift</l-m> ta’ billejl u qed jiftakar f’meta ltaqgħu: hu kien sejjer <l-m>l-ajruport</l-m> </p>
 												</a>
 											</li>
 										
@@ -5378,27 +5416,11 @@
 									
 										
 									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
 								</ul>
 							
 						</div>
 					
-						<div id="day"><strong>19</strong>
+						<div class="day"><strong class="day-header">19</strong>
 							
 								<ul>
 									
@@ -5678,7 +5700,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>20</strong>
+						<div class="day"><strong class="day-header">20</strong>
 							
 								<ul>
 									
@@ -5958,7 +5980,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>21</strong>
+						<div class="day"><strong class="day-header">21</strong>
 							
 								<ul>
 									
@@ -6238,7 +6260,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>22</strong>
+						<div class="day"><strong class="day-header">22</strong>
 							
 								<ul>
 									
@@ -6518,7 +6540,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>23</strong>
+						<div class="day"><strong class="day-header">23</strong>
 							
 								<ul>
 									
@@ -6798,7 +6820,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>24</strong>
+						<div class="day"><strong class="day-header">24</strong>
 							
 								<ul>
 									
@@ -7080,9 +7102,9 @@
 					
 				</div>
 			
-				<div id="month">
+				<div class="week">
 					
-						<div id="day"><strong>25</strong>
+						<div class="day"><strong class="day-header">25</strong>
 							
 								<ul>
 									
@@ -7362,7 +7384,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>26</strong>
+						<div class="day"><strong class="day-header">26</strong>
 							
 								<ul>
 									
@@ -7642,7 +7664,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>27</strong>
+						<div class="day"><strong class="day-header">27</strong>
 							
 								<ul>
 									
@@ -7922,606 +7944,20 @@
 							
 						</div>
 					
-						<div id="day"><strong>28</strong>
+						<div class="day"><strong class="day-header">28</strong>
 							
 								<ul>
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
 									
 										
 									
 										
 											<li>
-												<a class="promo promo-almanac ottubru" href="/omar-nshea-es-sidr-2-ramel-u-muntanji/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Es Sidr #2', 25]);">
+												<a class="promo promo-almanac ottubru" href="/omar-nshea-es-sidr-2-ramel-u-muntanji/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Es Sidr #2', 2]);">
 													<header>
-														<h6><span style="font-family: mono">1972:</span> Es Sidr #2</h6>
+														<p><span style="font-family: mono">1972:</span> Es Sidr #2</p>
 														
 													</header>
-													
-												</a>
-											</li>
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-								</ul>
-							
-						</div>
-					
-						<div id="day"><strong>29</strong>
-							
-								<ul>
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-								</ul>
-							
-						</div>
-					
-						<div id="day"><strong>30</strong>
-							
-								<ul>
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-											<li>
-												<a class="promo promo-almanac ottubru" href="/omar-nshea-es-sidr-2-ramel-u-muntanji/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Es Sidr #2', 10]);">
-													<header>
-														<h6><span style="font-family: mono">1972:</span> Es Sidr #2</h6>
-														
-													</header>
-													
+													<p class="blurb body-text">, u meta jikbru jsibu ruħhom waħedhom — bla tfal, bla ħadd min jieħu ħsiebhom la jikbru. Jien dak li rrid mingħandek — li tkun tifla sew, ħafna ħafna tifla sew. Dak li rrid, fhimtni?#It-28 ta’ Awwissu 1972. Arthur Denis Clift, uffiċjal <l-m>tal-Kunsill</l-m> Nazzjonali <l-m>tas-Sigurtà</l-m>, kiteb memorandum lil Kissinger biex jgħidlu li, skont membru parlamentari Malti, Mintoff kien maħruq u rrabjat <l-m>bl-għajnuna</l-m> li bagħtet</p>
 												</a>
 											</li>
 										
@@ -8778,11 +8214,597 @@
 									
 										
 									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
 								</ul>
 							
 						</div>
 					
-						<div id="day"><strong>31</strong>
+						<div class="day"><strong class="day-header">29</strong>
+							
+								<ul>
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+								</ul>
+							
+						</div>
+					
+						<div class="day"><strong class="day-header">30</strong>
+							
+								<ul>
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+											<li>
+												<a class="promo promo-almanac ottubru" href="/omar-nshea-es-sidr-2-ramel-u-muntanji/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Es Sidr #2', 5]);">
+													<header>
+														<p><span style="font-family: mono">1972:</span> Es Sidr #2</p>
+														
+													</header>
+													<p class="blurb body-text"> jberren u jserrep biex jara mnejn se jagħmel <l-m>il-flus</l-m> għal Malta. Moħħu f’Gaddafi. <l-m>L-opinjoni</l-m> ta’ Clift kienet li ma jagħmlu xejn dwar dan <l-m>l-atteġġament</l-m> ta’ Mintoff u jħalluh jhewden waħdu.30 ta’ Awwissu 1972. Xebbgħatek <l-m>il-ħolma</l-m> tagħna? Jew ħadt għalik għax għamilt xi ġranet ma ktibtlekx? Taf sew li żewġ ajruplani biss hawn <l-m>fil-ġimgħa</l-m> bejn Tripli u <l-m>d-deżert:</l-m> it-Tnejn u <l-m>l-Erbgħa</l-m>. Qalbi, ġieli għedtlek </p>
+												</a>
+											</li>
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+								</ul>
+							
+						</div>
+					
+						<div class="day"><strong class="day-header">31</strong>
 							
 								<ul>
 									

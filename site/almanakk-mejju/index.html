@@ -6,12 +6,29 @@
 		
 	<title>Almanakk · Aphroconfuso</title>
   <style>
-		#month {
+		.week {
 			display: grid;
 			grid-template-columns: repeat(7, 1fr);
 			grid-gap: 0.5em;
 			margin: 0;
 			padding: 0;
+		}
+		.day {
+			border-left: 1px solid #ccc;
+			border-top: 1px solid #ccc;
+			height: calc(1.8rem * 5);
+			overflow: hidden;
+		}
+		.day-header {
+			background-color: #dedede;
+			display: block;
+		}
+		.month {
+			border-bottom: 1px solid #ccc;
+			border-right: 1px solid #ccc;
+		}
+		.blank {
+			background-color: #eee;
 		}
   </style>
 
@@ -34,7 +51,7 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/almanakk-mejju/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-6f49cc9b.css">
+		<link rel="stylesheet" href="/css/style-f8c0f334.css">
 		<script>
 			var
 				audioLoaded,
@@ -161,7 +178,7 @@
 		</script>
 		<script src="../script/script-346af4.js" type="module"></script>
 	</head>
-	<body class="show-nav this-month-marzu">
+	<body class="show-nav this-month-april">
 		<script>initialiseAfterBody();</script>
 		<div id="top-wrapper">
 			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
@@ -185,36 +202,41 @@
 					<span style="display: none">Mobile biss: iftaħ il-menu</span>
 					<div class='menu-button'></div>
 				</label>
-				<menu id="menu-main">
-					<li class="hide-laptop main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
-					<li class="hide-laptop main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
-					<li class="hide-laptop abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
-					<li><a href="/appuntamenti/">Appuntamenti</a></li>
-					<li><a href="/kontributuri/">Kontributuri</a></li>
-					<li><a href="/werrej/">Werrej</a></li>
-					<li><a href="/djarju/">Djarju</a></li>
-					<li><a href="/sensiliet/">Sensiliet</a></li>
-					<li><a href="/podcast/">Podcast</a></li>
-					<li class="hide-mobile"><a href="/kotba/" class="menu-kotba">Kotba</a></li>
-					<li class="hide-laptop choose-theme">
-						<a id="theme-regular" role="button" tabindex="0">s</a>
-						<a id="theme-dark" role="button" tabindex="1">m</a>
-						<a id="theme-contrast" role="button" tabindex="2">c</a>
-						<a id="theme-system" role="button" tabindex="3">p</a>
-					</li>
-					<li><a href="/dwarna/">Dwarna</a></li>
-					<li class="hide-laptop"><a href="/kotba/">Kotba</a></li>
-					<li class="hide-laptop"><a href="/kolofon/">Kolofon</a></li>
-					<li><a href="/newsletter/">Newsletter</a></li>
-					<li class="hide-laptop"><a href="/privatezza/">Privatezza</a></li>
-					<li><a href="/bookmarks/">Bookmarks<span id="bookmarks-number"></span></a></li>
-					<li class="hide-laptop choose-theme" id="text-size-adjust">
-						<a id="font-size-1" role="button" tabindex="8">a</a>
-						<a id="font-size-2" role="button" tabindex="9">a</a>
-						<a id="font-size-3" role="button" tabindex="10">a</a>
-						<a id="font-size-4" role="button" tabindex="11">a</a>
-					</li>
-				</menu>
+				
+					<menu id="menu-main">
+						
+						<li class="hide-laptop main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+						<li class="hide-laptop main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+						<li class="hide-laptop abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
+						<li><a href="/appuntamenti/">Appuntamenti</a></li>
+						<li><a href="/kontributuri/">Kontributuri</a></li>
+						<li><a href="/werrej/">Werrej</a></li>
+						<li><a href="/djarju/">Djarju</a></li>
+						<li><a href="/sensiliet/">Sensiliet</a></li>
+						<li><a href="/podcast/">Podcast</a></li>
+						<li class="hide-mobile"><a href="/kotba/" class="menu-kotba">Kotba</a></li>
+						<li class="hide-laptop choose-theme">
+							<a id="theme-regular" role="button" tabindex="0">s</a>
+							<a id="theme-dark" role="button" tabindex="1">m</a>
+							<a id="theme-contrast" role="button" tabindex="2">c</a>
+							<a id="theme-system" role="button" tabindex="3">p</a>
+						</li>
+						<li><a href="/dwarna/">Dwarna</a></li>
+						<li class="hide-laptop"><a href="/kotba/">Kotba</a></li>
+						<li class="hide-laptop"><a href="/kolofon/">Kolofon</a></li>
+						<li><a href="/newsletter/">Newsletter</a></li>
+						<li class="hide-laptop"><a href="/privatezza/">Privatezza</a></li>
+						<li><a href="/bookmarks/">Bookmarks<span id="bookmarks-number"></span></a></li>
+						<li class="hide-laptop choose-theme" id="text-size-adjust">
+							<a id="font-size-1" role="button" tabindex="8">a</a>
+							<a id="font-size-2" role="button" tabindex="9">a</a>
+							<a id="font-size-3" role="button" tabindex="10">a</a>
+							<a id="font-size-4" role="button" tabindex="11">a</a>
+						</li>
+					</menu>
+					<input class="hide-mobile" type="text" id="search-input" placeholder="fittex..." autocomplete="off" auto-fill="off" type="text" autocapitalize="none" enterkeyhint="search" />
+					<ul id="search-results"><!-- --></ul>
+				
 				<div id="brownline"></div>
 			</nav>
 			<div id="message"><!-- --></div>
@@ -227,32 +249,32 @@
 			<h2></h2>
 		</header>
 		<div class="almanac">
-			<section>
-				<div id="month-header">
-					<div class="day">It-Tnejn</div>
-					<div class="day">It-Tlieta</div>
-					<div class="day">L-Erbgħa</div>
-					<div class="day">Il-Ħamis</div>
-					<div class="day">Il-Ġimgħa</div>
-					<div class="day">Is-Sibt</div>
-					<div class="day">Il-Ħadd</div>
+			<section class="month">
+				<div id="month-header" class="week">
+					<div>It-Tnejn</div>
+					<div>It-Tlieta</div>
+					<div>L-Erbgħa</div>
+					<div>Il-Ħamis</div>
+					<div>Il-Ġimgħa</div>
+					<div>Is-Sibt</div>
+					<div>Il-Ħadd</div>
 				</div>
 			
-				<div id="month">
+				<div class="week">
 					
-						<div id="day"><strong>&nbsp;</strong>
+						<div class="day blank"><strong class="day-header"></strong>
 							
 						</div>
 					
-						<div id="day"><strong>&nbsp;</strong>
+						<div class="day blank"><strong class="day-header"></strong>
 							
 						</div>
 					
-						<div id="day"><strong>&nbsp;</strong>
+						<div class="day blank"><strong class="day-header"></strong>
 							
 						</div>
 					
-						<div id="day"><strong>1</strong>
+						<div class="day"><strong class="day-header">1</strong>
 							
 								<ul>
 									
@@ -260,10 +282,10 @@
 											<li>
 												<a class="promo promo-almanac marzu" href="/kotba-romeo-roxman-gatt-qarn/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Qarn', 1]);">
 													<header>
-														<h6><span style="font-family: mono">2023:</span> Qarn</h6>
+														<p><span style="font-family: mono">2023:</span> Qarn</p>
 														
 													</header>
-													
+													<p class="blurb body-text">kont għadni naf li hekk kelli, jew li hekk jgħidulha. »Tista’ taqra u tisma’ silta itwal minn Qarn ippubblikata f’dan <l-m>il-ġurnal</l-m> fl-1 ta’ Mejju 2023.</p>
 												</a>
 											</li>
 										
@@ -454,84 +476,12 @@
 											<li>
 												<a class="promo promo-almanac ottubru" href="/joe-gatt-kontra-tagħna-għaliex-magħna/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Kontra Tagħna Għaliex Magħna', 93]);">
 													<header>
-														<h6><span style="font-family: mono">     </span> Kontra Tagħna Għaliex Mag…</h6>
+														<p><span style="font-family: mono">1948:</span> Kontra Tagħna Għaliex Mag…</p>
 														
 													</header>
-													
+													<p class="blurb body-text">ktar voti minn Pawlu Boffa, li kien <l-m>il-Kap</l-m> tal-Partit u Prim Ministru. Boffa kien raġel umli, bħala tabib <l-m>tal-familja</l-m> kien jidħol <l-m>fid-djar</l-m> tal-kostitwenti tiegħu u rabba magħhom ċerta intimità. Għall-1 ta’ Mejju <l-m>tal-1948</l-m>, <l-m>il-Malta</l-m> Labour Party ma kien għamel <l-m>l-ebda</l-m> ċelebrazzjoni — forsi biex ma jqajjimx inkwiet. Boffa kien mixgħuf <l-m>bl-interdett</l-m> li kien qala’ meta kien f’koalizzjoni ma’ Strickland <l-m>fit-tletinijiet;</l-m> imma x</p>
 												</a>
 											</li>
-										
-									
-										
-									
-										
-											<li>
-												<a class="promo promo-almanac ottubru" href="/joe-gatt-kontra-tagħna-għaliex-magħna/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Kontra Tagħna Għaliex Magħna', 95]);">
-													<header>
-														<h6><span style="font-family: mono">1948:</span> Kontra Tagħna Għaliex Mag…</h6>
-														
-													</header>
-													
-												</a>
-											</li>
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
 										
 									
 										
@@ -544,16 +494,88 @@
 									
 										
 											<li>
-												<a class="promo promo-almanac mejju" href="/joe-gatt-il-kuxjenza-fit-truf/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Il-Kuxjenza fit-Truf', 129]);">
+												<a class="promo promo-almanac ottubru" href="/joe-gatt-kontra-tagħna-għaliex-magħna/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Kontra Tagħna Għaliex Magħna', 98]);">
 													<header>
-														<h6><span style="font-family: mono">1923:</span> Il-Kuxjenza fit-Truf</h6>
+														<p><span style="font-family: mono"></span> Kontra Tagħna Għaliex Mag…</p>
 														
 													</header>
-													
+													<p class="blurb body-text">llotti kwieti, xebbiet <l-m>tal-affari</l-m> tagħhom — ħadd ma seta’ jfeġġ <l-m>mill-bieb</l-m> ’il &nbsp;barra mingħajr ma jħabbat wiċċu <l-m>mas-Sultana</l-m> tas-Sema, wiċċha kollu dija, tfakkru biex jivvota <l-m>lid-Demokrazija</l-m> Kristjana. <l-m>Fl-1</l-m> ta’ Mejju <l-m>tas-sena</l-m> ta’ qabel, f’Portella della Ginestra, ħdax-il bidwi nqatel u 27 oħra ndarbu waqt li kienu qed jisimgħu lil mexxej komunista jindirizza <l-m>l-folla</l-m>. Kienu sparaw fuqhom <l-m>il-grupp</l-m> ta’ Salvatore Giul</p>
 												</a>
 											</li>
 										
 									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+											<li>
+												<a class="promo promo-almanac mejju" href="/joe-gatt-il-kuxjenza-fit-truf/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Il-Kuxjenza fit-Truf', 130]);">
+													<header>
+														<p><span style="font-family: mono">1923:</span> Il-Kuxjenza fit-Truf</p>
+														
+													</header>
+													<p class="blurb body-text"> kollox. Cosini ma jaħmlux għax jgħid li kieku ma kienx għalih kien ikun jinqala’ għan-negozju, imma Olivi ma jħallih jagħmel xejn.Svevo ppubblika La coscienza di Zeno spejjeż tiegħu <l-m>fl-1</l-m> ta’ Mejju 1923. Għal darba oħra, <l-m>il-ktieb</l-m> ma ġablu kważi ebda rikonoxximent għall-ewwel, imma Joyce u Svevo kienu baqgħu ħbieb u sentejn wara <l-m>l-pubblikazzjoni</l-m> Joyce rrakkomanda <l-m>l-ktieb</l-m> lil xi kritiċi f’Pariġi. Dak </p>
+												</a>
+											</li>
 										
 									
 										
@@ -572,7 +594,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>2</strong>
+						<div class="day"><strong class="day-header">2</strong>
 							
 								<ul>
 									
@@ -852,7 +874,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>3</strong>
+						<div class="day"><strong class="day-header">3</strong>
 							
 								<ul>
 									
@@ -1132,7 +1154,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>4</strong>
+						<div class="day"><strong class="day-header">4</strong>
 							
 								<ul>
 									
@@ -1414,9 +1436,9 @@
 					
 				</div>
 			
-				<div id="month">
+				<div class="week">
 					
-						<div id="day"><strong>5</strong>
+						<div class="day"><strong class="day-header">5</strong>
 							
 								<ul>
 									
@@ -1696,7 +1718,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>6</strong>
+						<div class="day"><strong class="day-header">6</strong>
 							
 								<ul>
 									
@@ -1976,7 +1998,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>7</strong>
+						<div class="day"><strong class="day-header">7</strong>
 							
 								<ul>
 									
@@ -2256,7 +2278,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>8</strong>
+						<div class="day"><strong class="day-header">8</strong>
 							
 								<ul>
 									
@@ -2536,7 +2558,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>9</strong>
+						<div class="day"><strong class="day-header">9</strong>
 							
 								<ul>
 									
@@ -2816,7 +2838,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>10</strong>
+						<div class="day"><strong class="day-header">10</strong>
 							
 								<ul>
 									
@@ -3096,1991 +3118,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>11</strong>
-							
-								<ul>
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-								</ul>
-							
-						</div>
-					
-				</div>
-			
-				<div id="month">
-					
-						<div id="day"><strong>12</strong>
-							
-								<ul>
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-											<li>
-												<a class="promo promo-almanac ottubru" href="/omar-nshea-bur-mgħeż-2-dfintha-fil-libsa-li-mietet-fiha/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Bur Mgħeż #2', 111]);">
-													<header>
-														<h6><span style="font-family: mono">1883:</span> Bur Mgħeż #2</h6>
-														
-													</header>
-													
-												</a>
-											</li>
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-											<li>
-												<a class="promo promo-almanac ottubru" href="/omar-nshea-bur-mgħeż-2-dfintha-fil-libsa-li-mietet-fiha/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Bur Mgħeż #2', 119]);">
-													<header>
-														<h6><span style="font-family: mono">1883:</span> Bur Mgħeż #2</h6>
-														
-													</header>
-													
-												</a>
-											</li>
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-								</ul>
-							
-						</div>
-					
-						<div id="day"><strong>13</strong>
-							
-								<ul>
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-								</ul>
-							
-						</div>
-					
-						<div id="day"><strong>14</strong>
-							
-								<ul>
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-								</ul>
-							
-						</div>
-					
-						<div id="day"><strong>15</strong>
-							
-								<ul>
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-								</ul>
-							
-						</div>
-					
-						<div id="day"><strong>16</strong>
-							
-								<ul>
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-								</ul>
-							
-						</div>
-					
-						<div id="day"><strong>17</strong>
-							
-								<ul>
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-										
-									
-								</ul>
-							
-						</div>
-					
-						<div id="day"><strong>18</strong>
+						<div class="day"><strong class="day-header">11</strong>
 							
 								<ul>
 									
@@ -5362,9 +3400,309 @@
 					
 				</div>
 			
-				<div id="month">
+				<div class="week">
 					
-						<div id="day"><strong>19</strong>
+						<div class="day"><strong class="day-header">12</strong>
+							
+								<ul>
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+											<li>
+												<a class="promo promo-almanac ottubru" href="/omar-nshea-bur-mgħeż-2-dfintha-fil-libsa-li-mietet-fiha/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Bur Mgħeż #2', 104]);">
+													<header>
+														<p><span style="font-family: mono">1883:</span> Bur Mgħeż #2</p>
+														
+													</header>
+													<p class="blurb body-text">em>subutile dominium <l-m>tal-barriera</l-m> f’Bur Mgħeż li fiha kien qed jaħdem Napuljun Tagliaferro. <l-m>Il-kirja</l-m> kienet għas-snin li kien għad baqa’ <l-m>mid-99</l-m> sena li oriġinarjament ġew mogħtija għall-kiri <l-m>fit-12</l-m> ta’ Mejju <l-m>tal-1883</l-m>, meta <l-m>l-art</l-m> kienet marret għand <l-m>l-ewwel</l-m> kerrej Carmelo Caruana, u li kellhom jibdew jiġu skorruti <l-m>mill-15</l-m> ta’ Awwissu <l-m>tal-1885</l-m> skont <l-m>id-dokumenti</l-m> tal-enfitewsi. Mehmuż <l-m>mal-kuntratt</l-m> kien hemm pjanta t</p>
+												</a>
+											</li>
+										
+									
+										
+									
+										
+											<li>
+												<a class="promo promo-almanac ottubru" href="/omar-nshea-bur-mgħeż-2-dfintha-fil-libsa-li-mietet-fiha/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Bur Mgħeż #2', 106]);">
+													<header>
+														<p><span style="font-family: mono">1883:</span> Bur Mgħeż #2</p>
+														
+													</header>
+													<p class="blurb body-text">-Reġistru Pubbliku, imma Caruana krieha lil Innocenzo Zammit u wara mewt Innocenzo din għaddiet għand ibnu Michele <l-m>fl-1895</l-m>. <l-m>L-Atti</l-m> kienu mqiegħda għand <l-m>in-Nutar</l-m> Giovanni Calleja Schembri <l-m>bid-data</l-m> tat-12 ta’ Mejju 1883.<l-m>Id-daqs</l-m> tal-plott ta’ Bur Mgħeż li xtara <l-m>l-Gvern</l-m> kien ta’ 2 mondelli u 8 misure; <l-m>il-plott</l-m> kien imdawwar <l-m>bl-artijiet</l-m> tal-Isqof, li wħud minnhom kienu mixtrija diġà minn Michele Zammit <l-m>in-Naxxar</l-m></p>
+												</a>
+											</li>
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+								</ul>
+							
+						</div>
+					
+						<div class="day"><strong class="day-header">13</strong>
 							
 								<ul>
 									
@@ -5644,7 +3982,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>20</strong>
+						<div class="day"><strong class="day-header">14</strong>
 							
 								<ul>
 									
@@ -5924,7 +4262,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>21</strong>
+						<div class="day"><strong class="day-header">15</strong>
 							
 								<ul>
 									
@@ -6204,7 +4542,1691 @@
 							
 						</div>
 					
-						<div id="day"><strong>22</strong>
+						<div class="day"><strong class="day-header">16</strong>
+							
+								<ul>
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+								</ul>
+							
+						</div>
+					
+						<div class="day"><strong class="day-header">17</strong>
+							
+								<ul>
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+								</ul>
+							
+						</div>
+					
+						<div class="day"><strong class="day-header">18</strong>
+							
+								<ul>
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+								</ul>
+							
+						</div>
+					
+				</div>
+			
+				<div class="week">
+					
+						<div class="day"><strong class="day-header">19</strong>
+							
+								<ul>
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+								</ul>
+							
+						</div>
+					
+						<div class="day"><strong class="day-header">20</strong>
+							
+								<ul>
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+								</ul>
+							
+						</div>
+					
+						<div class="day"><strong class="day-header">21</strong>
+							
+								<ul>
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+										
+									
+								</ul>
+							
+						</div>
+					
+						<div class="day"><strong class="day-header">22</strong>
 							
 								<ul>
 									
@@ -6338,10 +6360,10 @@
 											<li>
 												<a class="promo promo-almanac frar" href="/jien_a-il-mara-tas-suldat/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Il-Mara tas-Suldat', 64]);">
 													<header>
-														<h6><span style="font-family: mono">2023:</span> Il-Mara tas-Suldat</h6>
+														<p><span style="font-family: mono">2023:</span> Il-Mara tas-Suldat</p>
 														
 													</header>
-													
+													<p class="blurb body-text">turnew minn ġew.Fejn jiżloq <l-m>il-pjaċir</l-m>. (Ara iNdewwa.)L-ewwel laqgħa bejn Aphroconfuso u Librerija Geġwiġija dwar dan <l-m>il-proġett</l-m> saret <l-m>fit-22</l-m> ta’ Mejju 2023. <l-m>Is-sensiela</l-m> ta’ workshops — bit-titlu “Noti għal dizzjunarju <l-m>tal-maħbubin</l-m>” — ħabbarnieha <l-m>fl-4</l-m> ta’ Settembru 2023. Kellna workshops online ta’ sagħtejn <l-m>il-wieħed</l-m> nhar <l-m>is-Sibt</l-m> 9 ta’ Settembru u <l-m>l-Ħadd</l-m> l-1</p>
 												</a>
 											</li>
 										
@@ -6494,7 +6516,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>23</strong>
+						<div class="day"><strong class="day-header">23</strong>
 							
 								<ul>
 									
@@ -6774,7 +6796,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>24</strong>
+						<div class="day"><strong class="day-header">24</strong>
 							
 								<ul>
 									
@@ -7046,10 +7068,10 @@
 											<li>
 												<a class="promo promo-almanac dicembru" href="/warren-bartolo-djarju-2024-10-01-l-għasafar-jinstemgħu-foloz/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Djarju #11 Warren Bartolo', 133]);">
 													<header>
-														<h6><span style="font-family: mono">     </span> Djarju #11 Warren Bartolo</h6>
+														<p><span style="font-family: mono"></span> Djarju #11 Warren Bartolo</p>
 														
 													</header>
-													
+													<p class="blurb body-text">t minn ħafna nies li riedu jkunu jafu iktar dwar <l-m>ir-relazzjoni</l-m> tagħhom. <l-m>Il-ktieb</l-m> jieħu <l-m>l-forma</l-m> ta’ ħafna ġeneri, iżda jibda b’daħliet ta’ djarju li jmorru lura għas-sena ta’ qabel, <l-m>l-1998</l-m>, <l-m>mill-Ħadd</l-m>, 24 ta’ Mejju <l-m>sal-Ħadd</l-m>, 21 ta’ Ġunju. Pages dalwaqt se jmur New York, jgħidilna Dustan, fejn se jkun <l-m>l-assistent</l-m> ta’ Nan Goldin. Dustan kien iqis <l-m>ix-xogħol</l-m> ta’ Pages impressjonanti u bla kompromessi. Pages ma kienx</p>
 												</a>
 											</li>
 										
@@ -7064,7 +7086,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>25</strong>
+						<div class="day"><strong class="day-header">25</strong>
 							
 								<ul>
 									
@@ -7346,9 +7368,9 @@
 					
 				</div>
 			
-				<div id="month">
+				<div class="week">
 					
-						<div id="day"><strong>26</strong>
+						<div class="day"><strong class="day-header">26</strong>
 							
 								<ul>
 									
@@ -7628,7 +7650,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>27</strong>
+						<div class="day"><strong class="day-header">27</strong>
 							
 								<ul>
 									
@@ -7736,10 +7758,10 @@
 											<li>
 												<a class="promo promo-almanac mejju" href="/karl-baldacchino-politika-bla-nifs/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Politika bla Nifs', 51]);">
 													<header>
-														<h6><span style="font-family: mono">     </span> Politika bla Nifs</h6>
+														<p><span style="font-family: mono"></span> Politika bla Nifs</p>
 														
 													</header>
-													
+													<p class="blurb body-text">kaġunati <l-m>mill-aħbar</l-m> li se jinqerdu xi siġar <l-m>fl-istess</l-m> park. Minflok din <l-m>ir-roqgħa</l-m> natura, <l-m>il-president</l-m> ħejja pjanijiet sabiex jibni moskea li tiċċelebra <l-m>l-Imperu</l-m> Ottoman. Xi attivisti saru jafu u <l-m>fis-27</l-m> ta’ Mejju okkupaw <l-m>il-park</l-m> fil-ħin li <l-m>l-magni</l-m> kienu se jibdew ikaxkru kollox. <l-m>Il-kelma</l-m> ġriet u <l-m>n-nies</l-m> żdiedu. Jumejn wara, <l-m>il-gvern</l-m> ġie biex ikaxkar lilhom flok <l-m>is-siġar</l-m>.Fl-2013, f’Malta <l-m>s-siġar</l-m> kienu għa</p>
 												</a>
 											</li>
 										
@@ -7918,7 +7940,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>28</strong>
+						<div class="day"><strong class="day-header">28</strong>
 							
 								<ul>
 									
@@ -8198,9 +8220,13 @@
 							
 						</div>
 					
-						<div id="day"><strong>29</strong>
+						<div class="day"><strong class="day-header">29</strong>
 							
 								<ul>
+									
+										
+									
+										
 									
 										
 									
@@ -8318,12 +8344,12 @@
 									
 										
 											<li>
-												<a class="promo promo-almanac april" href="/jimmy-grima-splużjonijiet-1-il-kwiet-u-l-lejl/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Splużjonijiet #1', 58]);">
+												<a class="promo promo-almanac april" href="/jimmy-grima-splużjonijiet-1-il-kwiet-u-l-lejl/" onclick="analytics(['divackEvent', 'Promo', 'minn: Almanakk', 'għal: Splużjonijiet #1', 60]);">
 													<header>
-														<h6><span style="font-family: mono">1962:</span> Splużjonijiet #1</h6>
+														<p><span style="font-family: mono">1962:</span> Splużjonijiet #1</p>
 														
 													</header>
-													
+													<p class="blurb body-text"> Dak responsabbli għall-komunikazzjoni ta’ dan kollu huwa Edgar Cuschieri bħala Segretarju Amministrattiv. Hemm ċertu “Padovani” li qed jiffirma wkoll imma dan ma sibt xejn fuqu.<l-m>Fil-minuti</l-m> tad-29 ta’ Mejju 1962 jidher biċ-ċar li <l-m>l-Maltin </l-m>— li issa kienu kisbu ftit iktar awtonomija — mill-ewwel riedu jrażżnu <l-m>dil-prattika</l-m> militari minħabba <l-m>s-sajjieda</l-m>. Infatti, uffiċjali Maltin taċ-Ċivil sejħu <l-m>l-proposta</l-m> tal-Fishe</p>
 												</a>
 											</li>
 										
@@ -8480,15 +8506,11 @@
 									
 										
 									
-										
-									
-										
-									
 								</ul>
 							
 						</div>
 					
-						<div id="day"><strong>30</strong>
+						<div class="day"><strong class="day-header">30</strong>
 							
 								<ul>
 									
@@ -8768,7 +8790,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>31</strong>
+						<div class="day"><strong class="day-header">31</strong>
 							
 								<ul>
 									
@@ -9048,7 +9070,7 @@
 							
 						</div>
 					
-						<div id="day"><strong>&nbsp;</strong>
+						<div class="day blank"><strong class="day-header"></strong>
 							
 						</div>
 					
