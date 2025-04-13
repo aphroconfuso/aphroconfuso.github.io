@@ -516,6 +516,16 @@ Hackett (is-segretarja tal-Factory) fuq it-telefown u baqa’ sejjer hekk ħdax-
 		}
 		,
 		{
+			"id": "https://aphroconfuso.mt/omar-nshea-gilgamex-dak-li-ra-l-qiegħ/",
+			"url": "https://aphroconfuso.mt/omar-nshea-gilgamex-dak-li-ra-l-qiegħ/",
+			"title": "Gilgamex, Dak li Ra l-Qiegħ",
+			"author": "",
+			"content_html": "L-idea li Gilgamex isib ruħu f’daru fil-kultura u l-lingwa Maltija ma bdietx b’Montebello. Bejn l-1899 u l-1915 Alfons Maria Galea ppubblika sensiela bl-isem Kotba tal-Mogħdija taż-Żmien. Fl-1913 kien ħareġ in-numru 130 ta’ din is-sensiela bl-isem Kif l-Għerf tal-Kangħanin Tnissel fil-Griegi, miktub minn F. Calleja “tal-Alġier”. Kemm kienet tajba t-tixrida ta’ dan il-ktieb ma tantx huwa ċar; li nafu hu li ma kienx hawn ħafna kopji għall-bejgħ għax Calleja kien ħallas għall-pubblikazzjoni minn butu.",
+			"date_published": "2023-05-01T05:00:00.000Z",
+			"date_updated": "2024-09-18T17:03:33.656Z"
+		}
+		,
+		{
 			"id": "https://aphroconfuso.mt/italo-svevo-joe-gatt-it-tipjip/",
 			"url": "https://aphroconfuso.mt/italo-svevo-joe-gatt-it-tipjip/",
 			"title": "It-Tipjip",
@@ -561,16 +571,6 @@ l-għabra qed tagħraxlu
 griżmejh. X’għabra?",
 			"date_published": "2023-05-01T05:00:00.000Z",
 			"date_updated": "2024-08-06T15:23:23.932Z"
-		}
-		,
-		{
-			"id": "https://aphroconfuso.mt/omar-nshea-gilgamex-dak-li-ra-l-qiegħ/",
-			"url": "https://aphroconfuso.mt/omar-nshea-gilgamex-dak-li-ra-l-qiegħ/",
-			"title": "Gilgamex, Dak li Ra l-Qiegħ",
-			"author": "",
-			"content_html": "L-idea li Gilgamex isib ruħu f’daru fil-kultura u l-lingwa Maltija ma bdietx b’Montebello. Bejn l-1899 u l-1915 Alfons Maria Galea ppubblika sensiela bl-isem Kotba tal-Mogħdija taż-Żmien. Fl-1913 kien ħareġ in-numru 130 ta’ din is-sensiela bl-isem Kif l-Għerf tal-Kangħanin Tnissel fil-Griegi, miktub minn F. Calleja “tal-Alġier”. Kemm kienet tajba t-tixrida ta’ dan il-ktieb ma tantx huwa ċar; li nafu hu li ma kienx hawn ħafna kopji għall-bejgħ għax Calleja kien ħallas għall-pubblikazzjoni minn butu.",
-			"date_published": "2023-05-01T05:00:00.000Z",
-			"date_updated": "2024-09-18T17:03:33.656Z"
 		}
 		,
 		{
@@ -1634,7 +1634,7 @@ minnek:
 Xi darba nsibu biċċa oħra.
 Jew, xi darba, konna sħaħ. ",
 			"date_published": "2025-04-13T05:00:00.000Z",
-			"date_updated": "2025-04-12T23:49:56.249Z"
+			"date_updated": "2025-04-13T00:01:09.526Z"
 		}
 		
 	]
