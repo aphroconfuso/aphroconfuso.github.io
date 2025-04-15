@@ -1,0 +1,5306 @@
+<!doctype html>
+<html lang="mt" translate="no">
+
+	<head>
+		<meta charset="utf-8">
+		
+	<title>Werrej · Aphroconfuso</title>
+
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+		<meta content="width=device-width, initial-scale=1" name="viewport">
+		<meta content="width=device-width" initial-scale="1.0" maximum-scale="1.0" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="yes" name="mobile-web-app-capable">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#f9f9f3">
+		<link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon-16x16.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32x32.png">
+		<link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
+		<link rel="mask-icon" href="/img/icons/safari-pinned-tab.svg" color="#5bbad5">
+		<meta property="og:image:type" content="image/jpeg">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
+		<link rel="canonical" href="https://aphroconfuso.mt/werrej/">
+		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
+		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
+		<link rel="stylesheet" href="/css/style-515d1d07.css">
+		<script>
+			var
+				audioLoaded,
+				audioUrls,
+				author,
+				body,
+				bodyEnd,
+				bodyHeight,
+				bodyStart,
+				bodyText,
+				bookmarksArray,
+				bookmarksList,
+				bookmarksMenuElement,
+				charactersPerPixel,
+				charactersPerScreen,
+				currentTime,
+				duration,
+				elapsedTime,
+				hideScrollTools,
+				lastReportedReadingTime,
+				lastReportedScrollPosition,
+				lastScrollPosition,
+				message,
+				issueMonth,
+				issueMonthYear,
+				newScrollPosition,
+				pageHeight,
+				pageReportingTitle,
+				percentageProgress,
+				placeText,
+				podcastUrl,
+				previousTime,
+				progressElement,
+				readingSpeed,
+				reportingTitle,
+				screenHeight,
+				skippedTime,
+				storyCompleted,
+				storyId,
+				storyType,
+				sequenceEpisodeNumber,
+				sequenceEpisodeTitle,
+				timeStarted,
+				pageTitle,
+				wordcount,
+				wordsPerPixel,
+				wordsPerSecond,
+				wordsPerSecondAudio,
+				wordsPerScreen;
+
+			audioLoaded = false;
+			bookmarksArray = [];
+			percentageProgress = 0;
+			previousTime = [];
+			storyCompleted = false;
+
+			const	urlSlug = location.pathname.replace(/\//g, '');
+			const setCookie = (cname, cvalue, exdays = 36500) => {
+				const d = new Date();
+				d.setTime(d.getTime() + (exdays*24*60*60*1000));
+				let expires = "expires="+ d.toUTCString();
+				document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+			}
+			const getCookie = (cname) => {
+				let name = cname + "=";
+				let decodedCookie = decodeURIComponent(document.cookie);
+				let ca = decodedCookie.split(';');
+				for(let i = 0; i < ca.length; i++) {
+					let c = ca[i];
+					while (c.charAt(0) == ' ') {
+						c = c.substring(1);
+					}
+					if (c.indexOf(name) == 0) {
+						return c.substring(name.length, c.length);
+					}
+				}
+				return "";
+			}
+			var _paq = window._paq = window._paq || [];
+			const analytics = (arrayInfo) => {
+				if (location.host !== 'aphroconfuso.mt') console.log(arrayInfo);
+				_paq.push(arrayInfo);
+			}
+			_paq.push(['disableCookies']);
+			_paq.push(['enableJSErrorTracking']);
+			_paq.push(['enableHeartBeatTimer']);
+			_paq.push(['enableLinkTracking']);
+			_paq.push(['trackPageView']);
+			_paq.push(['trackVisibleContentImpressions']);
+			(function () {
+				var u = "//analitika.aphroconfuso.mt/";
+				_paq.push(['setTrackerUrl', u + 'matomo.php']);
+				_paq.push(['setSiteId', location.host === 'aphroconfuso.mt' ? '1' : '2']);
+				var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
+			})();
+			const addRemoveFontSizeClass = (size) => {
+				document.body.classList.remove('font-size-1','font-size-2','font-size-3','font-size-4')
+				document.body.classList.add(`font-size-${ size }`);
+				localStorage.setItem('font', size);
+			}
+			// REVIEW
+			const translateTheme = {
+				'regular': 'regolari',
+				'dark': 'skura',
+				'contrast': 'kuntrast',
+				'system': 'sistema'
+			}
+			const addRemoveTheme = (theme, stored) => {
+				document.body.classList.remove('theme-regular','theme-dark','theme-contrast','theme-system')
+				document.body.classList.add(`theme-${ theme }`);
+				localStorage.setItem('theme', theme);
+				if (stored && theme === 'regular') return;
+				analytics(['trackEvent', 'Tema', `${ stored ? 'Tema storjata' : 'Tema nbidlet' }`, translateTheme[theme]]);
+			}
+			const initialiseAfterBody = () => {
+				document.body.classList.add(location.hostname.replace(/\.?aphroconfuso\.mt/, '') || 'production');
+				addRemoveFontSizeClass(localStorage.getItem('font') || 1);
+				addRemoveTheme(localStorage.getItem('theme') || 'regular', true);
+				if (localStorage.getItem(`tw-${urlSlug}`)) {
+					document.body.classList.add('trigger-warning-closed');
+				}
+			}
+		</script>
+		<script src="../script/script-24450c.js" type="module"></script>
+	</head>
+	<body class="show-nav this-month-april">
+		<script>initialiseAfterBody();</script>
+		<div id="top-wrapper">
+			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
+			<nav id="top-nav">
+				<div id="logo-container-wrapper">
+					<div id="logo-container">
+						<a href="/">
+							<img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" />
+						</a>
+					</div>
+					<menu class="hide-mobile" id="menu-carousels">
+						<li class="abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
+						<li class="ff-2"><a href="/almanakk-april/">Almanakk</a></li>
+					</menu>
+					<menu class="hide-mobile" id="menu-collections">
+						<li class="main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+						<li class="main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					</menu>
+				</div>
+				<input id="menu-toggle" type="checkbox" />
+				<label class='menu-button-container' for="menu-toggle">
+					<span style="display: none">Mobile biss: iftaħ il-menu</span>
+					<div class='menu-button'></div>
+				</label>
+				
+					<menu id="menu-main">
+						
+						<li class="hide-laptop main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+						<li class="hide-laptop main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+						<li class="hide-laptop abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
+						<li class="hide-laptop ff-2"><a href="/almanakk-april/">Almanakk</a></li>
+						<li><a href="/appuntamenti/">Appuntamenti</a></li>
+						<li><a href="/kontributuri/">Kontributuri</a></li>
+						<li><a href="/werrej/">Werrej</a></li>
+						<li><a href="/djarju/">Djarju</a></li>
+						<li><a href="/sensiliet/">Sensiliet</a></li>
+						<li><a href="/podcast/">Podcast</a></li>
+						<li class="hide-mobile"><a href="/kotba/" class="menu-kotba">Kotba</a></li>
+						<li class="hide-laptop choose-theme">
+							<a id="theme-regular" role="button" tabindex="0">s</a>
+							<a id="theme-dark" role="button" tabindex="1">m</a>
+							<a id="theme-contrast" role="button" tabindex="2">c</a>
+							<a id="theme-system" role="button" tabindex="3">p</a>
+						</li>
+						<li><a href="/dwarna/">Dwarna</a></li>
+						<li class="hide-laptop"><a href="/kotba/">Kotba</a></li>
+						<li class="hide-laptop"><a href="/kolofon/">Kolofon</a></li>
+						<li><a href="/newsletter/">Newsletter</a></li>
+						<li class="hide-laptop"><a href="/privatezza/">Privatezza</a></li>
+						<li><a href="/bookmarks/">Bookmarks<span id="bookmarks-number"></span></a></li>
+						<li class="hide-laptop choose-theme" id="text-size-adjust">
+							<a id="font-size-1" role="button" tabindex="8">a</a>
+							<a id="font-size-2" role="button" tabindex="9">a</a>
+							<a id="font-size-3" role="button" tabindex="10">a</a>
+							<a id="font-size-4" role="button" tabindex="11">a</a>
+						</li>
+					</menu>
+					<input class="hide-mobile" type="text" id="search-input" placeholder="fittex..." autocomplete="off" auto-fill="off" type="text" autocapitalize="none" enterkeyhint="search" />
+					<ul id="search-results"><!-- --></ul>
+				
+				<div id="brownline"></div>
+			</nav>
+			<div id="message"><!-- --></div>
+			<main id="skipto">
+				
+	<article class="generic contents">
+		<header>
+			<ul><li class="header-label">&nbsp;</li></ul>
+			<h1>Werrej</h1>
+			<h2>&nbsp;</h2>
+		</header>
+		<div class="container-generic">
+			<section id="grid-body" class="generic-body-text contents">
+				<p>Dan huwa <l-m>x-xogħol</l-m> li ppubblikajna <l-m>fil-ġurnal</l-m> s’issa, f’ordni alfabetika skont <l-m>it-titlu</l-m>. Tista’ wkoll tqalleb <a href="/appuntamenti/"><l-m>bix-xahar</l-m></a> jew skont <a href="/kontributuri/"><l-m>il-kontributur</l-m></a>.</p>
+				
+				
+				
+				
+				
+				<ul class="promo-list collated">
+	
+	
+		
+
+
+<li >
+	<a class="promo  frar promo-storja sequence- story-117" href="/loranne-vella-aċtu-fl-istonku/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Aċtu fl-Istonku', 1]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Frar 2025</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Aċtu <l-m>fl-Istonku</l-m>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Loranne Vella</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>It-te aħdar itiegħem ħażin, forsi għax mhux tajjeb nixorbu filgħodu. Il-bżar mixwi jeħilli fil-gerżuma. Ma rridx nibla’. Imma hemm tliet uċuh iħarsu lejja jien u nipprova nomgħod, ma rridx naqla’ fil-platt quddiemhom. Irrid norqod. Għajjiena dal-aħħar. Bħal meta nitħeddel bis-sħana waranofsinhar. Imma għadna Frar, mit-tieqa nara l-borra nieżla ħafif ħafif, forsi missni ntbaħt dakinhar. Fis-sodda nħossni aħjar. M’iniex f’sikkti. Barxa? Virus? Aċtu fl-istonku? Kont dħaltli għal għarrieda u għamilt ġismi tiegħek, u jien lanqas biss intbaħt bik. Mhux virus. Imma jkolli nħallik taħkimni minn ġewwa, tibdilni għalkollox, irrid u ma rridx. Għal snin twal ma ridtx. Imbagħad meta ridt ma seħħ xejn. Ġejtli meta waqaft irrid u waqaft ma rridx, eżatt l-għada li ma baqax jimpurtani. Donnok kont taf li aħjar hekk, għalija u għalik. Qgħadt mistoħbi l-ġimgħat. Kelli nbul f’vażett tal-plastik bit-tapp aħmar tal-kamin biex insir naf bik. Lit-tabib merejtu, għedtlu li int aċtu fl-istonku, qalli le u feraħli. Jien u sejra lura d-dar battalt il-portmoni miż-żgħar fil-bott tat-tallab. Rari nieqaf intih xi ħaġa. Illum niggżitni l-kuxjenza. Tbissimtlu. Xi darba anki dan kien aċtu fl-istonku ta’ xi ħadd.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-117">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">1 103 kelmiet</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  dicembru promo-esej sequence- story-99" href="/omar-nshea-l-aħħar-ballu-tas-sinjorini/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: L-Aħħar Ballu tas-Sinjorini', 2]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Diċembru 2024</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				L-Aħħar Ballu <l-m>tas-Sinjorini</l-m>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Omar <l-m>N’Shea</l-m></span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Kien wasal lejl ieħor biex immorru n-Natasha’s, ballu tas-sinjorini x-Xemxija li mill-bidu tad-disgħinijiet beda jseħħ kull xahar u li fih konna nilbsu, nitilgħu high, u nixxalaw sakemm il-bijokimika ta’ ġisimna ma kinitx tiflaħ iktar. In-Natasha’s ma kienx post fejn immorru nħufu. Orrajt, kien hemm min jiġi mingħalih se jgħabbi, imma n-Natasha’s kien maħkum minn spirtu ġdid fix-xena tagħna: skoprejna l-kostumi, iż-żebgħa tal-wiċċ, it-tkaken, ix-shows, il-moda DIY, id-DJ sets, il-grunge queer, l-afterhours, u l-empatija kimika li fiha l-ħbieb setgħu jsiru maħbubin anki jekk għal ftit sigħat fi tmiem il-ġimgħa darba fix-xahar. In-Natasha’s kien festa kkulurita ta’ potenzjalità, l-aħħar ballu qabel l-għodwa tal-omonormattività li sebħet u daħlet bħal gaffa fuq ix-xena queer fil-bidu tal-millennju l-ġdid.
+In-Natasha’s mill-ewwel kien jinħass li hu importanti għaliex mill-bidu kien iddokumentat kemm bil-video kif ukoll b’numru enormi ta’ ritratti. Mill-ewwel kien hemm sens li qed tinħoloq komunità, li konna parti minn avveniment storiku għas-sinjorini, li xi darba għad inħarsu lura u nippruvaw nifhmu x’kien qed jiġri. Forsi għax, għall-ewwel darba, l-avvenimenti kienu qed jinħolqu minn persuni queer għal udjenza queer. U għalkemm in-Natasha’s ma kienx proġett iżolat—fil-fatt kien infurmat sew minn kurrenti Londiniżi, speċjalment minn serati bħal Taboo u Kinky Gerlinky—kellu grammatika u loġika li kienu indiġeni sew. U jekk serati oħra spiss kien jingħatalhom isem partikolari, in-Natasha’s kien jissejjaħ bl-isem tal-post innifsu, qisu diġà kien hemm fih dak li Joseph u Stefan bħala organizzaturi riedu jevokaw. Ridna l-attitudni u l-ispettaklu, l-ikkampjar u ż-żagħbil, l-ilbies u l-pirmli. Il-proġett Natasha’s kien jinvolvi organizzazzjoni rudimentarja: il-flyer kien magħmul malajr, ikkupjat fuq magna tal-photocopy tal-Malta Independent fejn għamilt żmien nikteb xi artikli għall-gazzetta tal-Ħadd. Armar ma tantx kien hemm bżonn minħabba li n-Natasha’s kien iħaddan fih il-kollezzjoni vasta li kellu Vince, sid il-post, ta’ modernarjat artistiku: minn maskeruni ta’ Gianni Vella għal-lampi tal-Biba’s Emporium iżejnu kmamar sħaħ miżbugħin roża u terazzin li jagħti għal fuq il-bajja tax-Xemxija. Il-lejla kienet tkun ispirata wkoll kemm mill-mużika kontemporanja kif ukoll mix-xena disco tas-sebgħinijiet u mill-kanzunetti tad-divi Taljani. Id-DJ queer kien fenomenu kważi ġdid—kważi, għaliex Malta diġà kien hemm DJ is-Seabed, club tas-sinjorini l-Belt maġenb it-teatru l-imwaqqa’, taħt l-art. U forsi s-Seabed kien l-ewwel iterazzjoni ta’ dan it-tip ta’ ambjent li fih stajt tmur biex tkun faqgħa. Spiss, il-Ġimgħa u s-Sibt filgħaxija, is-Seabed kien jitbattal min-normali għall-ħabta tal-ħdax u minn ġo kaxxa b’tieqa żgħira li minnha kienet iddoqq, il-Kekina tibda ssensel diska f’diska, sett wara sett ta’ diski kkampjati u emblematiċi għas-sinjorini, li kienu jinkludu “Where is My Man” ta’ Eartha Kitt u “On the Radio” ta’ Donna Summer. In-Natasha’s, però, DJ Pierre kellu repożitorju enormi ta’ mużika ġo rasu u kien beda joħloq sonorità queer partikolari, infurmata minn ħsejjes elettroniċi ġodda mħalltin mad-disco klassiku tax-Chic, l-Inner City, Sylvester, Cerrone u r-ritmi tal-Italodisco.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-99">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">8 783 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  ottubru promo-esej sequence- story-87" href="/ryan-falzon-biex-tara-kif-jgħixu-l-oħrajn/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Biex Tara Kif Jgħixu l-Oħrajn', 3]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Ottubru 2024</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Biex Tara Kif Jgħixu <l-m>l-Oħrajn</l-m>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Ryan Falzon</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Top of the World hu popolari ħafna fuq siti li jissuġġeruh bħala post fejn wieħed imur jimxi, jammira n-natura, il-veduta u l-istorja. Wieħed li jħobb jiġġerra fl-inħawi mal-lejl jista’ faċilment joħloq trinità ta’ żoni adatti għal skappaturi varji fil-viċin, irkejjen adatti għal namur f’karozzi pparkjati waħda wara l-oħra sakemm tiġi xi leħħa blu taħxi l-buzz kollu. Għandek l-inħawi tal-MCAST u l-Ġnien tal-Għarusa tal-Mosta, Top of the World fin-nofs, u ż-żona ta’ wara l-iSplash and Fun. Riċentament, il-ġnien tal-Mosta laqqat proġett ta’ riġenerazzjoni, minn dawk li sirna niddilettaw bihom, u ż-żona ġiet relegata għal dik bl-inqas privatezza fit-tali trinità. Id-dlam tal-parkeġġ ta’ biswit il-binja militari mdawra fi skola tal-arti u d-disinn, inbidel f’illuminazzjoni goffa daqs ground tal-football, u l-ġnien sar miżgħud dawl isfar atmosferiku, baxx mal-art, fejn ħafna saru jiġu għal xi date ħelwa, inkella jbewlu l-kelb mad-dawra tal-Victoria Lines, li jaqtgħu ħesrem max-xibka li ddawwar il-Fortizza tal-Mosta. Top of the World żgħir, jagħlaq għall-karozzi u forsi jipparkjaw erba’ karozzi kollox wara xulxin. Jekk tasal tard, jew fil-ħondoq tal-lejl, hawn jaf ma ssibx issorġi, u jkollok timmanuvra ddawwar ’il barra, bid-dawl jagħti għal ġol-vetturi wieqfa, jaqbad silwetti movimentati f’mumenti ta’ passjoni u ħġieġ. Jew jikxef tnejn ipejpu, jew jagħtu daharhom lil xulxin. Ħafna drabi tispiċċa ddawwar fi dlam ċappa, bl-amment, kontroll sħiħ tal-vettura b’intwizzjoni, għax bid-dawl mixgħul tħossok qisek is-searchlight tal-Ingliżi tgħarrex għal xi għadu ġej bil-vapur minn fuq l-orizzont. Allura titfi biex tkun edukat u ma tarax xeni privati, li taħt is-satra tad-dlam imperreċ fuq għolja qasma, jissarrfu f’xeni semipubbliċi.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-87">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">3 002 kelmiet</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  awwissu promo-esej sequence- story-19" href="/omar-nshea-bil-moħbi-fil-beraħ/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Bil-Moħbi fil-Beraħ', 4]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Awwissu 2023</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Bil-Moħbi <l-m>fil-Beraħ</l-m>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Omar <l-m>N’Shea</l-m></span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Matul il-ġurnata, il-Ġnien, kif kien jissejjaħ, kien post għall-familji, għall-pikniks u għat-tfal biex jilagħbu fuq il-bandli; billejl, il-Ġnien kien isir spazju għall-ħufar u għas-sess, speċifikament għas-sess bejn l-irġiel. Irġiel gay kienu joħorġu sal-Ġnien, waħedhom jew ma’ xi ħbieb, biex jgħidu kelma jew biex isibu ftit intimità u privatezza fil-beraħ. L-irġiel li fil-lejla tal-qtil ta’ Alfie kienu fil-Ġnien tal-Gżira ma kontx normalment tarahom miġburin hekk flimkien f’nofs ta’ lejl. Kont, minflok, tilmaħhom jimxu waħedhom ’il fuq u ’l isfel fuq il-bankina bejn it-triq ta’ ġewwa li tagħti għall-baħar u l-ġnien innifsu, jew jimxu waħedhom ġewwa l-arbuxelli u s-siġar. L-etikett tal-ħufar kien jirrikjedi li s-“sinjorini”, jiġifieri l-irġiel gay u out, jisseparaw meta jaslu u taparsi qegħdin waħedhom għax l-irġiel straight—“normali”—li jinżlu jħufu kienu jitkexkxu jekk jaraw roqgħa sinjorini jħufu flimkien, u allura ma jazzardawx jersqu viċin.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-19">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">5 197 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li  class="multiple-episodes episode-1">
+	<a class="promo  settembru promo-esej sequence-1 story-20 is-episode" href="/omar-nshea-bur-mgħeż-1-ftit-qabel-dfint-l-ommi-mort-infittex-qabar/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Bur Mgħeż #1', 5]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Settembru 2023</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Bur Mgħeż
+				
+					<span class="episode-number">#1</span>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Omar <l-m>N’Shea</l-m></span>
+	</h2>
+
+
+ 
+
+
+	
+		<h3>
+			
+			
+				<span class="episode-number">1. </span>
+			
+			Ftit qabel dfint ’l &nbsp;ommi, mort infittex qabar
+		</h3>
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Bur Mgħeż għeb fil-baħħ. Sparixxa. Kieku ma kinux dawk l-uħud li jsostnu li semgħu lil missirijiethom isemmuh, kont taħseb li ivvintah Napuljun Tagliaferro f’konġura ma’ Temi Zammit. Anki l-isem sparixxa, u sparixxiet ukoll il-grammatika tal-istat kostrutt tiegħu. Imma kif iġġibu lura mill-mewt? Kif toħorġu minn qabru stess? F’dawn l-esejs li ġejjin se nipprova nirkupra ’l-Bur Mgħeż minn għejun differenti. Mill-memorja tal-Imqabbin, fejn mhuwiex sit arkeoloġiku li kellu okkupazzjoni ristretta għal perjodu determinat, imma lokalità ta’ ħafna identitajiet u ismijiet; “ta’ Bur Mgħeż”, “Tal-Isqof”, “Tan-Naxxari”, “ta’ Ċetta Pizzi”. Mill-arkivji nazzjonali fl-isptar Santu Spirtu, fejn sibt l-ewwel konferma li la Tagliaferro u lanqas Zammit ma kienu qed iħarrfu. F’dawn l-arkivji, Bur Mgħeż jinqabad jissielet bejn il-portafoll ta’ proprjetajiet tal-Isqof, il-but tal-familja għonja u filantropika Tan-Naxxari, il-kittieb Alfons Maria Galea u protagonisti oħrajn li b’xi mod jew ieħor sabu mod kif idawru lira minnu.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-20">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">7 051 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li  class="multiple-episodes episode-2">
+	<a class="promo  ottubru promo-esej sequence-1 story-24 is-episode" href="/omar-nshea-bur-mgħeż-2-dfintha-fil-libsa-li-mietet-fiha/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Bur Mgħeż #2', 6]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Ottubru 2023</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Bur Mgħeż
+				
+					<span class="episode-number">#2</span>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Omar <l-m>N’Shea</l-m></span>
+	</h2>
+
+
+ 
+
+
+	
+		<h3>
+			
+			
+				<span class="episode-number">2. </span>
+			
+			Dfintha <l-m>fil-libsa</l-m> li mietet fiha
+		</h3>
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Fl-immaġinarju Malti, l-esproprjazzjoni tal-art minħabba sejbiet arkeoloġiċi għandha post kurjuż ħafna u tqanqal emozzjonijiet ambigwi. Waqt li qed nimxu fl-Isqaq tal-Isqof, infittxu bit-tromba l-fdalijiet tat-toqob tal-Għar ta’ Bur Mgħeż fil-ħitan tal-barriera tal-armata maġenb l-ajruport, Frans qalli li missieru kien jiftaħar li taħt id-dar tagħhom kien kollu oqbra: il-kuntrattur kien radam kollox bis-siment u ma qal xejn għax jiġu tal-Gvern u jwaqqfulek ix-xogħol. Imma Frans kien ambivalenti dwar dan. Ta’ ġuvni kien jaħdem fil-barrieri imma wara li spiċċa l-iskola kompla l-Università. Studja, qara, u llum jagħmel repliki żgħar tal-figurini Neolitiċi ta’ Malta għall-gost. Meta jmur jistad matul il-lejl ma’ xatt il-baħar taħt l-irdum tal-Imtaħleb, inaqqax uċuħ fuq iċ-ċagħaq lixx biex ma jkunx waħdu. Darba nżilt miegħu u wrieni l-uċuħ ta’ dawk li miegħu jgħaddu l-lejl jistennew li r-ril tal-qasba jiġbed. Qalli li oqbra hawn biżżejjed; m’hemmx għalfejn nossessjonaw bil-passat. Kampjun żgħir biżżejjed. Kellimni fuq l-idea li tordom il-qedem, u li miegħu terġa’ tidfen il-midfun. Ħadd ma jiftaħar li kisser xi sejba; it-tifrik m’hemmx ġustifikazzjoni għalih. Imma li terġa’ tordom kollox iva. Wara kollox, mirdum kien, u billi noħorġuh ma jfissirx li qed nistudjawh sew, jew li għandna l-apparat biex neżaminawh u nerġgħu npoġġuh lura f’postu. L-iskavi wkoll huma selħiet f’laħmet l-art, ftuq tal-materja tal-passat li laħqet tfarrket, tmermret, tbielet u saret ħaġa waħda mal-konglomerat ta’ madwarha. Qalli li kif jaħsibha hu, għalkemm il-Gvern jesproprja sit biex jieħu ħsieb il-qedem ta’ ġo fih, biex jipproteġih, biex tiġi studjata s-sejba u b’hekk jikber l-għarfien tagħna tal-passat, fil-verità f’dan id-diskors jiġu fuq quddiem il-bżonnijiet elitisti tax-xjenza. Ħafna drabi dan jiġi ġġustifikat bħala wirt nazzjonali, lokali, jew anki universali u minħabba f’hekk jitwarrbu kemm il-bżonnijiet tal-komunità kif ukoll ir-rabtiet li l-komunità eżistenti għandha mal-lokalità.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-24">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">7 137 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li  class="multiple-episodes episode-3">
+	<a class="promo  novembru promo-esej sequence-1 story-30 is-episode" href="/omar-nshea-bur-mgħeż-3-qegħedtha-ġo-qabar-fuq-l-għolja-tal-ħorr/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Bur Mgħeż #3', 7]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Novembru 2023</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Bur Mgħeż
+				
+					<span class="episode-number">#3</span>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Omar <l-m>N’Shea</l-m></span>
+	</h2>
+
+
+ 
+
+
+	
+		<h3>
+			
+			
+				<span class="episode-number">3. </span>
+			
+			Qegħedtha ġo qabar fuq <l-m>l-Għolja</l-m> tal-Ħorr
+		</h3>
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Wasalt l-Imqabba minn Ħal Lija bil-pass. Dħalt mit-triq tas-Siġġiewi għan-naħa Ta’ Kandja, dort fejn il-Ħabel ta’ San Pawl għal Tas-Sejba u ksirt fuq ix-xellug għall-inħawi ta’ Ħabel ix-Xiħ. Fit-triq Ta’ Kandja, taħt ix-xemx ta’ nofsinhar, kien għaddej konvoj ta’ trakkijiet tal-kostruzzjoni, wieħed wara l-ieħor. M’għadhomx it-trakkijiet tal-kabina ħamra mżejna bit-tberfil u l-laqmijiet tas-sidien, iġorru vjaġġ knaten għall-bini; issa Iveco u Leyland DAF iġorru terrapien u materjali kimiċi impurtati. It-triq dejqa, u t-trakkijiet isuquhom maġenbek. Id-duħħan li joħroġ maħnuq minnhom jitħallat mat-trab li r-roti jtajru minn mal-ġenb tat-triq, munzelli trab fin griż li jidħol fil-pori ta’ ġismek u ġo ħalqek. Trab li jidfen kollox taħtu, inebbaħ li kollox irid jerġa’ jintradam. Mal-ġenb tat-triq, it-trab jitħallat ma’ pakketti u loqmiet tas-sigaretti mgħaffġin, biċċiet tal-ħobż niexef, fliexken tal-plastik mgħattnin, xtieli tal-ferla ta’ Malta, qanċlita u liftija ħerġin minn ġol-ħitan tas-sejjieħ. Il-ħsejjes anzjużi tal-vetturi, il-brejkijiet f’salt meta jindunaw bik miexi, il-ħornijiet ittikati biex iżżul min-nofs, il-gass ivenven tal-karozzi bin-nitro, id-diski jċerċru mill-vetturi, it-tħaffir fit-toroq bil-gafef jissieltu biex jifqgħu l-art, u t-tluq ta’ ajruplani minn Ħal Luqa għal fuq il-medda tat-Tramuntana tal-gżira flimkien jikkonfoffaw biex joħolqu s-sonorità tat-triq Ta’ Kandja fid-daħla tal-Imqabba. Meta nżilt minn Sqaq Buhar u dort għal Tal-Isqof, is-sħana kienet fnietni u sibt kantuniera dellija mal-ħajt tal-barriera ta’ quddiem il-ħofra fejn kien hemm l-Għar ta’ Bur Mgħeż. Ta’ min kienet il-barriera ma nafx, u allura lanqas naf isimha, imma mal-ħajt tagħha sibt biżżejjed dell u kenn biex nistrieħ. Tfajt fuq rasi l-ilma kiesaħ kollu li kelli imma nxift f’ħakka t’għajn. Ħarist madwari. Meta tħares konxjament lejn dak li hu l-familjari, tibda tinnota li qisek qatt ma tkun ħarist lejh qabel. Meta tifli sew dak li mingħalik taf b’għajnejk magħluqin, issib li hu stramb, qisu nbidel quddiem wiċċek u int ma ndunajtx, bħallikieku xi ħadd qarraq bik u wriek ħaġa b’oħra. Qisu dak li naħsbu li nafu sew, fil-verità mhu xejn ħlief ideal effimeru. Tieqaf u taħseb fuq ismek fit-tul u wara ftit tintebaħ kemm hu aljen, kemm m’għandu x’jaqsam xejn ma’ dak li int mingħalik li int. Tħares lejk innifsek biex issib min int fuq it-territorju tal-ġilda mifruxa fuq l-istrutturi anatomiċi ta’ ġismek, u ma ssibekx. Dawwart ħarsti sew lejn il-barriera u rajt xtieli tal-kappar ħerġin mix-xquq tal-ħitan tas-sejjieħ li jdawruha, tawwalin bħalma qatt ma rajthom qabel, ixebilku ’l isfel għal fuq il-ħajt tal-barriera—qoxra trab jitmermer tal-franka safranija li anki fil-qilla tas-sħana tidher niedja—u jiltaqgħu mat-tlugħ tas-siġar tat-tin li kibru mill-qiegħ. Il-kappar u t-tin kienu f’patt bejniethom biex jgħattu d-dagħbien, li kien mimli ċagħaq u ħamrija. Siġar tal-ħarrub u tar-rummien, molol tas-saqqijiet imsaddin, kisi tal-ħitan tal-kmamar tal-banju mormi, forn tal-kċina, terrapien tal-gafef: ix-xquq tal-barriera ta’ maġenb Bur Mgħeż iġorru mirduma ġo fihom it-tifkiriet tal-ewwel ġisem mejjet li tniżżel ġo fihom, imqiegħed ikkurat u mżejjen fil-kurituri mdallma tad-dagħbien taħt l-għelieqi fejn ġrew iċ-ċriev.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-30">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">7 590 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li  class="multiple-episodes episode-4">
+	<a class="promo  jannar promo-esej sequence-1 story-41 is-episode" href="/omar-nshea-bur-mgħeż-4-ħallejt-it-tebut-għal-ġisimha-biss/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Bur Mgħeż #4', 8]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Jannar 2024</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Bur Mgħeż
+				
+					<span class="episode-number">#4</span>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Omar <l-m>N’Shea</l-m></span>
+	</h2>
+
+
+ 
+
+
+	
+		<h3>
+			
+			
+				<span class="episode-number">4. </span>
+			
+			Ħallejt <l-m>it-tebut</l-m> għal ġisimha biss
+		</h3>
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Il-biċċiet tal-fuħħar mifruxa u mxerrda fl-għelieqi fi Triq in-Namur fuq l-għolja tal-Iklin—li ġġib quddiemek il-medda ta’ art li tiġbed mill-Imdina fuq il-lemin għal Ħal Luqa, Ħal Saflieni u Raħal Ġdid u tiftaħ fuq il-Belt fuq ix-xellug—jixhdu li fejn in-nassaba Naxxarin firxu l-imnasab tagħhom kien hemm, fuq il-quċċata tal-għolja, binja megalitika fiż-żmien Neolitiku. Xhieda oħra ta’ dan huma l-megaliti tal-franka mixħutin ’l hawn u ’l hinn, uħud minnhom illum b’avviżi miktubin fuqhom b’żebgħa ħamra li jfakkruk biex iżżomm nadif mill-ħmieġ tal-klieb. Il-passaġġ żgħir li jagħti għal ġewwa tal-għelieqi fejn hemm l-imnasab għattnuh taħt saqajhom l-ewwel nies li telgħu fuq din l-għolja. Wittewh għan-nassaba li llum tkompli tressaqhom ’l hawn l-art ġebbieda eluf ta’ snin wara. Ir-rovini Neolitiċi jagħtu affordanza tajba lin-nassaba: ħadd mhu ġej itella’ xi blokka u allura s-siġar tal-gamiem u l-kalamenti tal-insib jibqgħu hemm ġo nofs radam il-qedem. Fis-sirda Novembrina, xħin jibda jbexbex, jibda ċ-ċenċil tat-tkissir tal-megaliti biex titgħatta d-dura tal-kantun tal-franka riċiklat b’qoxra ta’ ġebel selvaġġ. L-imnasab fuq il-wita bejn Ħaġar Qim u l-Imnajdra wkoll imtellgħin bi knaten tal-franka tal-Qrendi u l-Imqabba, u miksijin b’qoxra tal-qawwi maqtugħa mis-saffi tal-Magħlaq bħallikieku n-nassaba komplew it-tradizzjoni tal-bini megalitiku bil-qawwi fuq barra u l-elementi interni tal-franka. Fl-imnasab tal-għelieqi tad-Debdieba jibda l-ikkurdar: xbieki mifruxa, molol mal-kalamenti, xbieki miftuħa fuq in-naħa tal-ħaxja, il-lasti mwaħħlin mar-rażżi, il-qfiel u ċ-ċfuf maqfula. Id-dikojs tal-gamiem lesti f’posthom u l-gabjetti mqiegħda. Il-lanez tal-ġogi marbutin fejn is-siġġu fid-dura. Il-gamiema bil-kappun imxekkla u marbuta fuq is-seffut. Id-Debdieba ġebbieda, kien qalli l-Mija waqt li kien qed iqalleb fil-kantuniera tiegħu f’Bur Mgħeż ħdejn il-kaxxi tan-naħal, ifittex biċċa qasba. Il-Mija jiddiletta bis-sfafar, u għalkemm qatt ma qalli hu, smajt li kien jinqala’ sew, tant li l-Imqabba jgħidu li kellu esebizzjoni tas-sfafar l-Amerka. Qalli li hemm ħafna tipi ta’ sfafar: is-suffara tat-tgeġgiġ, għall-ġojjini, qisha buttuna tar-ram li titfagħha bejn snienek ta’ quddiem u tonfoħ fiha; iz-zekzieka tar-ram u lakstu, tiġbed il-pluvieri bil-ħoss li joħroġ minnha meta tagħfasha u titlaqha. Imma l-Mija kien jedha jagħmel is-sfafar tal-pluvieri mill-qasab tal-bambù. Omm Shaun qaltli li missierha kellu suffara jgħidulha l-“badabut” u missieru qalli li l-Mija kien ilu jfittex mod kif jagħmel suffara aqwa minn kull suffara oħra: ipprova minn kollox, anki lasti tal-biljard u lasti tal-ixkupi. Għamel żmien twil jonsob bis-suffara tal-ġebla tal-franka. Imma fl-aħħar, l-aħjar suffara li għamel għall-pluvieri kienet magħmula mill-għadam ta’ annimal li sab ġo barriera. Il-Mija kien qalli li ta’ tifel kien diġà jaf ibarqam u jparpar bħall-ħamiem u l-gamiem. Qalli kif kienu jaqsmu minn Bur Mgħeż għad-Debdieba, minn fejn il-kappella ta’ Santa Marija fejn illum hemm ir-runway, biex jaslu fuq il-mansab. Meta ġejt biex nasal hemm jien, kelli ndur bil-pass minn Tas-Sejba għal Ta’ Kandja u mbagħad fuq il-lemin biex nimxi tul it-Triq ta’ Ħal Farruġ. Ħarist ’l isfel ġol-barrieri mimlijin bil-ħamrija u siġar miżgħuda bil-larinġ, u minn ġol-ħofra tal-Ħabel ta’ San Pawl smajt it-tgedwid tal-ħassieba tas-seklu l’għadda, jitħaddtu u jixorbu u jieklu u jimpikaw bl-għerf tagħhom. Hemm kont niltaqa’ ma’ Oliver Friggieri u Joe Grima u Fr Rene, qaltli waħda min-nisa ta’ Triq il-Parroċċa. Bqajt nieżel man-naħa tat-Torri ta’ Wilġa u dort fuq ix-xellug biex nibda nimxi lejn l-għelieqi ta’ fuq il-wied. Żammejt ħarsti fuq ix-xtieli tal-mansab fejn waqaft inħares lejn serbut megaliti li, bħan-Naxxari qablu, iċ-Ċaqnu ċarrat minn laħmet l-art: spettakli ġeoloġiċi b’kull folja daqs żewġ sulari mqiegħda waħda ħdejn l-oħra bħallikieku reġgħu ġew fostna l-ewwel kuntratturi u bennejja fuq il-gżejjer. Ersaqt lejhom u lmaħt warajhom muntanja ġebel tal-franka fuq xulxin. Imxejt sieket lejhom, daħħalt ħarsti ġod-dell tal-għerien ta’ bejniethom, il-frisk ħelu tal-franka li jhennek taħt il-qilla tax-xemx. Il-kobor tal-ġebel isaħħrek meta tkun taħtu u tmissu, tiżnu b’għajnejk, u fi mnifsejk tħalli tidħol l-umdità tal-ħamrija u l-għeruq tax-xtieli mqaċċtin u għadhom imwaħħlin miegħu, bħal dras il-art maqlugħin friski minn ġol-ħanek. Dak li għandna, kien qalli Frans, franka! Taħt saqajja, fuq ix-xeqliba tal-art li tibda tixħtek ’l isfel lejn il-ġebel kbir irrumblat fil-qiegħ tal-wied, rajt qtugħ rettangolari fil-wiċċ tal-blat, bħal oqbra dojoq tat-trabi li bħalhom kont rajt waqt li kont qed infittex l-oqbra fuq ix-xagħri ta’ Santa Margerita ma’ Russell u Aiden. Aiden kien qalli li forsi n-nies ta’ żmien il-bronż kienu jagħmlu x-xtieli tal-għeneb fihom, jew forsi jaħslu l-ġlud tal-annimali wara li jbiċċruhom u jqaxxruhom, u jħallu d-dmija jċarċru fil-kanali dojoq u baxxi li hemm ħdejhom iserrpu ’l isfel. Kmamar abbandunati bil-barumbari meqrudin, passaġġi ta’ siment mixħut u mwitti dan l-aħħar, xatba wara l-oħra magħluqin, bibien f’nofs imkien imsakkrin: id-dawra tal-mansab konfoffa biex jew jobżqok ’il barra, jew jaqflek ġo nofsu. Tikka ħamra tiskariġġa: xi sponsun! Smajt leħen il-Mija: il-ġarġir isfar ta’ taħt saqajk jagħmel għalih il-ġojjin. It-tillier u x-xarbekk, dawk għall-ekri. L-għobbejra għal tal-għana. Poġġa fit-tarf tal-wita jħares ’l isfel, radam ta’ ġebel imrembel mal-għargħar tal-ilma li eluf ta’ snin ilu niżel minn Ħad-Dingli għall-port tal-Marsa, iħares lejn il-marki ta’ tidwir u rrumblar fl-uċuħ tal-ġnub tal-wied u l-għerien, l-għelieqi u l-imnasab, jonfoħ fis-suffara li kien qed ilesti u qalli: hawn kienu jgħixu d-deffiena ta’ Bur Mgħeż.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-41">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">10 568 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li  class="multiple-episodes episode-5">
+	<a class="promo  mejju promo-esej sequence-1 story-59 is-episode" href="/omar-nshea-bur-mgħeż-5-id-difna-tal-memorji/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Bur Mgħeż #5', 9]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Mejju 2024</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Bur Mgħeż
+				
+					<span class="episode-number">#5</span>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Omar <l-m>N’Shea</l-m></span>
+	</h2>
+
+
+ 
+
+
+	
+		<h3>
+			
+			
+				<span class="episode-number">5. </span>
+			
+			Id-difna <l-m>tal-memorji</l-m>
+		</h3>
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Is-sit ta’ Bur Mgħeż jisfida l-bijografija arkeoloġika stretta tal-post; huwa proprju l-istatus ontoloġiku tiegħu bħala rovina li żamm lill-arkeoloġija milli tapproprjah u għalhekk tillimita l-impenn tiegħu mal-inħawi ta’ madwaru u mal-memorja tal-komunità li tiftakru. L-ambigwità materjali u bijografika tal-post, għalhekk, issalvah mill-politika tal-patrimonju mmexxija mill-kapital li jbiddel is-siti f’parks għat-turiżmu. Kif inhuma llum, il-fdalijiet huma parteċipi kif ukoll aġenti attivi fit-trasformazzjoni u l-użu mill-ġdid tal-ispazju tal-barriera. Dan iqajjem riflessjoni fuq il-memorja u t-telf fi ħdan il-komunità tal-Imqabba. Bl-istratifikazzjoni kumplessa tiegħu, min-Neolitiku sa żminijiet moderni, Bur Mgħeż joffri metafora li forsi tista’ tgħinna nagħmlu sens mill-fdalijiet bħala palimpsesti li fihom insibu narrattivi u tifsiriet multipli, kull saff jiżvela aspetti differenti tal-interazzjoni tal-bniedem mal-ambjent filwaqt li l-perċezzjonijiet differenti tal-materjalità tal-ġebla tal-franka — kemm bħala riżors, kif ukoll bħala simbolu tal-wirt kulturali, jew kodiċi semjotiku ta’ rovina — jenfasizzaw in-natura suġġettiva u effimera ta’ kif nifhmu u nivvalutaw id-dinja materjali. Fl-istess ħin, Bur Mgħeż jisfida wkoll lill-arkeoloġija biex issib metodi li bihom tkun tista’ “taqra” u tifhem siti li għebu għalkollox jew kważi.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-59">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">8 192 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  ottubru promo-esej sequence- story-89" href="/kurt-borg-dwar-sens-ta-ħarifa/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Dwar sens ta’ ħarifa', 10]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Ottubru 2024</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Dwar sens ta’ ħarifa
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Kurt Borg</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Nazzarda ngħid li l-esej biddilli ħajti u l-mod kif inħares lejha. Ngħid dan bir-riskju li dal-kliem jinstema’ klixè. Infatti, għalija l-esej bħala tip ta’ kitba jitgeżwer f’dan ir-riskju. Ħafna drabi, jien u nikteb l-esej, kien ikun hemm vuċi ġo fija li tgħidli: “Imma min se jimpurtah minn din il-kitba personali? Dawn il-memorji huma sinifikanti għalik biss.” Dan hu riskju reali ħafna. Li nista’ ngħid hu li jkun żball jekk l-esej personali jipprova jħares biss ’il  ġewwa jew lura biex bħallikieku jaqbad xi ħaġa pura u verġni. L-esej sabiħ meta jkun kapaċi jfettaħ, iwessa’ u jespandi lil hinn mis-singolarità tal-Jien sabiex qarrej li ma jafekx jista’ jieħu xi ħaġa minnu. U minnek.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-89">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">4 119-il kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li  class="multiple-episodes episode-1">
+	<a class="promo  awwissu promo-esej sequence-8 story-78 is-episode" href="/omar-nshea-es-sidr-1-għasafar-tal-passa/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Es Sidr #1', 11]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Awwissu 2024</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Es Sidr
+				
+					<span class="episode-number">#1</span>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Omar <l-m>N’Shea</l-m></span>
+	</h2>
+
+
+ 
+
+
+	
+		<h3>
+			
+			
+				<span class="episode-number">1. </span>
+			
+			Għasafar <l-m>tal-passa</l-m>
+		</h3>
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Darba, waqt dagħdigħa bħal tas-soltu biex nara x’se nsib fil-cupboard ta’ taħt, bqajt inqalleb iktar fil-qiegħ u kien ħareġ dal-file li għandi f’idi llum minn ġo basket tal-plastik isfar. Kien bejn files oħra ta’ ditta Amerikana taż-żejt u karti tal-ittri ta’ ditta li m’għadnix niftakarha. It-toqol tal-file kien mill-ewwel tani indikazzjoni li l-kontenut tiegħu kien importanti u li kien qed jinħeba. Ftaħtu immedjatament u mal-ewwel daqqa t’għajn indunajt li kien fih skoss ittri li kien kiteb Otman Salem Otman lil ommi. Il-kitba tiegħu tixbah ftit lil tagħha. Kitbilha ħafna. Kitbilha spiss. Kont naf min kien, però kont rajtu darba biss, u kont għadni wisq żgħir biex niftakar iktar minn dik il-memorja fuġġenti u effimera li għandi ta’ raġel sħaba f’żona tal-moħħ distanti immens. Nassoċjah ma’ dar żgħira l-Gżira li xi kultant ngħaddi minn ħdejha u nħokk mal-ħajt biex inħalli mal-ġakketta ftit trab mit-tmermir tal-faċċata, ma’ banju ilma sħun ifuħ, ma’ qmis bajda mgħoddija. Però l-memorja li għandi tiegħu tieqaf hemm. Ġieli nara ismu f’xi ċertifikat maħruġ mill-Insinwa, ġieli jkolli niktbu meta nkun qed nimla xi formola, u m’ilux staqsewni għalih biex joħorġu ċ-ċertifikat tal-mewt t’ommi. Il-bqija, baħħ. Niftakar li dakinhar li sibt il-file, kont qrajt biċċiet minn ittri differenti f’salt, u bdejt ngħaqqad kelma minn hawn u kelma minn hemm, u bnejt storja ġo rasi fi ftit minuti. Fl-immaġinarju tiegħi ta’ tfuliti u żgħożiti, dwar Otman kelli biss storja waħda, li spiss kont nirrakkonta lili nnifsi meta t-tfal l-oħra kienu jistaqsuni min hu missieri. Niftakar ħasda kbira dakinhar li smajt leħnu u rajt kliemu għall-ewwel darba f’dawn l-ittri.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-78">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">12 939 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li  class="multiple-episodes episode-2">
+	<a class="promo  ottubru promo-esej sequence-8 story-92 is-episode" href="/omar-nshea-es-sidr-2-ramel-u-muntanji/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Es Sidr #2', 12]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Ottubru 2024</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Es Sidr
+				
+					<span class="episode-number">#2</span>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Omar <l-m>N’Shea</l-m></span>
+	</h2>
+
+
+ 
+
+
+	
+		<h3>
+			
+			
+				<span class="episode-number">2. </span>
+			
+			Ramel u muntanji
+		</h3>
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Qattajt il-vaganzi tas-sajf tal-1980 kważi kollha d-dar t’ommi tal-Iklin. Il-patt magħha biex noqgħod hemm u nkun nista’ ngħum sa billejl, kien li nagħti daqqa t’id, nieħu ħsieb l-annimali, naħsel il-karozzi u niżbogħ ix-xatba. Il-pixxina kienet id-dinja tiegħi: nifta’ l-ġebel fin-naħa l-fonda u nogħdos għalih, intellaq ma’ min jinżel jgħum, u nara x’qabża se nivvinta: jew gabrijoli minn fuq il-madum jew għal rasi minn fuq il-bejt. Ngħum min-naħa għall-oħra u lura fil-qiegħ u nżomm in-nifs. Nitla’ niekol il-patata maxx, nagħti l-laħam u l-ħut bil-moħbi lill-klieb, u nerġa’ ninżel fl-ilma. Is-sajf tal-1980 ma lbistx flokk wieħed. Għamilt sajf bil-malja, norqod, inqum, ngħum u ninħasel fiha. Kienet malja żgħira, bi strixxi ħomor u blu, u stilel bojod—bandiera tal-Amerka. Fid-dar tal-Iklin tgħallimt naqra, nigdeb, innaddaf l-annimali, nagħżaq, ngħum, nitkellem bl-Ingliż, u nibża’. Speċjalment nibża’. Ta’ tifel kont dejjem nibża’ mid-dlam, u l-Iklin kont noħlom li hemm l-erwieħ għaddejjin purċissjoni minn wara l-bieb tal-ħġieġ tal-kċina u jduru dawra mas-siġra l-kbira tal-berquq, iġorru rashom f’idhom. Qatt m’għedt lil ħadd li kont narahom fil-ħolm, u qabel norqod kont nagħfas l-imħadda fuq wiċċi u meta nkun kważi se nifga ngħid lili nnifsi, aħjar nibża’ milli mmut. Ħabib tiegħi fil-klassi għamel żmien twil jgħidli li jara x-xitan jistennieh ġej mill-iskola fuq it-taraġ li kellhom malli tidħol mill-bieb. Jien, l-erwieħ tiegħi żammejthom għalija. Biss, il-biża’ fi tfuliti xi drabi kien jieħu xejra iktar konkreta. Is-sajf tal-1980, żewġ ħallelin kienu daħlu fuqna f’nofs ta’ lejl waqt li jien kont rieqed ma’ Filumena, omm il-mara t’ommi. Ommi kienu l-Gżira, xogħol. Jien kont rieqed ma’ Filumena, hi fil-kamra tagħha maqfula biċ-ċavetta u jien fil-kamra tiegħi, l-ewwel waħda wara l-bieb ta’ barra, fuq ix-xellug, bit-tieqa tagħti għax-xatba. Qajmuni d-dawl ta’ karozza u l-inbiħ tal-klieb. Għall-ewwel ħsibt li kienu waslu ommi u allura għalaqt għajnejja biex norqod. Imma ftit minuti wara li rajt id-dawl tal-karozza jintefa, bdejt nisma’ ħsejjes u tgedwid mhux tas-soltu. Kienu tnejn. Bdejt nismagħhom jissaraw mal-bieb ta’ barra.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-92">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">13 008 kelmiet</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  dicembru promo-poezija sequence- story-32" href="/matteo-pullicino-flaming-fag/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Flaming Fag', 13]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Diċembru 2023</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Flaming Fag
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Matteo Pullicino</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text poetry">
+			
+				<p>int sabiħ
+le / żommh’għalik / jekk troddhieli ma nemmnekx
+meta ngħidlek hekk mhix l-intenzjoni tiegħi / li nagħmel minnek katavru
+kemm-il poeżija xaqqaqna / bl-iskuża tal-għerf / biex kemm ninsewhom / dawk il-ħaġiet mejta / u nġorruhom lura d-dar fuq daharna / mingħajr ’qas kas?
+hekk tgħallimt f’dawk il-mortwarji skolastiċi: / is-sabiħ jitlob li jiġi mifhum / il-fehim jitlob is-sagrifiċċju tas-sabiħ</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-32">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">253 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  april promo-poezija sequence- story-133" href="/leslie-vassallo-frammenti/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Frammenti', 14]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">April 2025</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Frammenti
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Leslie Vassallo</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text poetry">
+			
+				<p>Fl-aħħar mill-aħħar 
+li jifdal:
+Ħarsa ddur kantuniera,
+jew tiżgiċċa 
+waqt li tinqabad.
+
+Naqriet.
+
+*
+
+Fl-aħħar mill-aħħar
+li jifdal:
+Frammenti.
+Biċċiet misjubin
+wara żmien twil,
+minn kullimkien.
+Frak ta’ ġrajja:
+Ħajriet, tamiet, imħabbiet:
+Ħarsa, mixja, tifkira;
+Kelma, nofs kelma, sikta:
+Tbissima, firda, għajbien. 
+
+Frammenti xi darba jinġabru
+f’kaxxetta ħajja.
+
+*
+
+Frammenti:
+Insib farka oħra
+minnek: 
+(Tbissima).
+
+Xi darba nsibu biċċa oħra.
+Jew, xi darba, konna sħaħ. </p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-133">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">153 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  mejju promo-storja sequence- story-60" href="/fatima-a.m.-ġenealoġija-ta-bankina/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: ġenealoġija ta’ bankina', 15]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Mejju 2024</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				ġenealoġija ta’ bankina
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">fatima a.m.</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>faċċata tpoġġi parrukkiera min-Niġerja li tfaqqa’ ċ-chewing gum f’widnejk ma’ kull malju li twaħħallek ma’ rasek. imma hi u sħabha jippranzaw f’nofs il-ħanut meta jkun sar il-ħin tal-ikla ta’ waranofsinhar, allura ma jimpurtax għax dejjem joffrulek ftit u meta tispjegalhom li ma tikolx laħam taqsmilhom qalbhom. ħasbuk cool u interessanti għax bejn sewda u bejn bajda, b’aċċent stramb li kważi tat-turist l-abjad, imma ismek Musulman u forsi qisek xi tip ta’ Afrikana imma anka int sirt vittma tal-Ewropa. ixgħel l-istazzjon li jdoqq l-Afrobeats. meta tqum biex tfarfar ġismek u testendi x-xewka ta’ dahrek, forsi tagħti l-ħajja bejn rukkell u ieħor, ikollok aptit tiżfen. imma ma tazzardax. anka int vittma tal-Ewropa. minn hawn tisma’ l-fdalijiet tal-karaoke tal-bar Ingliż, l-ikbar wieħed f’dik it-triq, imġenġel u ħerqan, imdeffes bejn bar Irlandiż, ħanut tal-ikel Maċedonjan u ieħor Niġerjan mal-kantuniera, li faċċata tiegħu ssib kafetterija Taljana. hawnhekk il-bankina ma tiqafx bil-mod li tistennieha tieqaf, lanqas. jekk tgħaddi minn hemm qabel l-għaxra ta’ filgħodu, taf issib ir-rimi tal-istonku ta’ xi bravu li ħaseb li jiflaħ il-lejl ta’ qabel, jew biċċa pizza mirwija, envelopp t’ikla li ma seħħitx. fil-vini ta’ din il-belt ma ssibx għasafar iduru man-niċeċ u s-saqajn ta’ dawk mixjin fit-triq, mhux bħall-Belt jew Tas-Sliema, allura jibqgħu jinġemgħu l-fdalijiet tal-ikel minsi. jistenna lil taż-żibel. mhux għax post maħmuġ u mitluq, imma għax għandu l-ħajja, ħajja urbana li ma tantx hemm kliem għaliha, sakemm ma ssirx tafha b’mod intimu.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-60">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">703 kelmiet</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  dicembru promo-poezija sequence- story-103" href="/nathan-anthony-pace-il-ġentrifikazzjoni-tas-skiet/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: il-ġentrifikazzjoni tas-skiet', 16]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Diċembru 2024</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				il-ġentrifikazzjoni <l-m>tas-skiet</l-m>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Nathan Anthony Pace</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text poetry">
+			
+				<p>tistenbaħ kakofoniku
+tħawwad il-borma
+tixgħel il-kitla
+tgħalli litru ilma
+trattab l-arja bil-kafè
+fwiħtu tittraslokani fil-belt tal-balavostri mdewda
+u l-frontispizji mnaqqxa biċ-ċikonji
+’l bogħod minn dawn is-subborgi ġentrifikati
+
+qatt m’aft li l-kafè għandu effetti terapewtiċi
+kien mingħalija li l-ħaxixa biss tpejjipha
+biex taqla’ x-xewka f’sormok
+minflokha ddaħħal sensazzjonijiet iċarrtu ħalqhom għal kapriċċik
+biex issebbaħ lok mingħajr prinċipji estetiċi
+biex iċċallsu b’saff verniċ
+
+darba o ħadni praga fit-toroq nervużi ta’ žižkov
+u qalli niddeċiedi jien jekk dil-akkwata kinitx ġentrifikata
+meta għamiltlek dil-mistoqsija
+weġibtni dubjuż jiddependi xi tfisser b’ġentrifikazzjoni u ħallejtni b’hekk
+u lil o weġibtu bil-yoghurt tewmi tad-döner jiċċaflas ma’ ħaddejja
+jiddependi xi tfisser b’ġentrifikazzjoni u ħallejtu b’hekk</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-103">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">229 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  gunju promo-esej sequence- story-14" href="/kurt-borg-ġilda/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Ġilda', 17]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Ġunju 2023</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Ġilda
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Kurt Borg</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Hemm karru bil-ġwienaħ misjuq minn kuċċier miġbud minn żewġt iżwiemel. Żiemel minnhom abjad, b’għonqu wieqaf dritt, grazzjuż. L-ieħor iswed, magħmul ikrah u goff. Bil-frosta f’idu, il-kuċċier qed jittajjar lejn is-sħab u lil hinn minnu. Iż-żwiemel, speċjalment l-iswed, kultant jissaraw mal-kuċċier, jisfidawh, jisfrattaw, għoddhom jaqilbu l-karru. Il-kuċċier iqum bilwieqfa jwiddeb liż-żwiemel. B’idejh it-tnejn jiġbed b’kemm jiflaħ fuq ir-riedni marbutin mal-ilġiem ta’ ġo ħalqhom. Iż-żwiemel jogħtru taħt is-saħħa tal-kuċċier u, bla ma jridu, jobduh. Imma t-taqbida bejniethom tkompli. Żiemel minnhom jiġbed ’l hawn u l-ieħor jiġbed ’l hemm sa ma l-kuċċier jitlef il-kontroll, il-karru jinqasam u jegħleb mis-smewwiet għall-art.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-14">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">5 667 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  gunju promo-storja sequence- story-13" href="/charlene-galea-ġismi-battikata/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Ġismi Battikata', 18]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Ġunju 2023</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Ġismi Battikata
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Charlene Galea</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Ġismi żar ħafna postijiet projbiti jew perikolużi. Ġismi għadu ħaj. Xi daqqa ’l hemm u ’l hawn qala’ wkoll. Relazzjonijiet ta’ mħabba tossika ħallew marki interni u mentali li affettwaw kif jirrelata dan ġismi ma’ ġisem ieħor—sigurtà, kumplessità, thewdin tal-moħħ. L-istonku qala’ minn ġewwa u minn barra. Inpoġġi idi fuqu, hekk, biex inżiegħel l-uġigħ ta’ dan l-għar—mudlam b’xaqq ta’ dawl—b’daħla ċkejkna ta’ tama għal ġenna mingħajr erwieħ—imma għal futur li nemmen li ħa jkun ta’ iktar mistrieħ. Il-kumpless ta’ kull ġisem, kemm tiegħi u kemm tiegħek, saru prodotti għal iktar tħeġġiġ għall-konsumeriżmu. Taqbel miegħi?</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-13">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">2 891 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li  class="multiple-episodes episode-1">
+	<a class="promo  frar promo-esej sequence-11 story-114 is-episode" href="/kristina-borg-għalhekk-qed-nivvjaġġa-bil-mod-1-7236/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Għalhekk qed nivvjaġġa bil-mod #1', 19]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Frar 2025</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Għalhekk qed nivvjaġġa <l-m>bil-mod</l-m>
+				
+					<span class="episode-number">#1</span>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Kristina Borg</span>
+	</h2>
+
+
+ 
+
+
+	
+		<h3>
+			
+			
+				<span class="episode-number">1. </span>
+			
+			7236
+		</h3>
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Niddeċiedi li dan it-terminal ma jeżistix, li jekk m’intix bil-karozza m’hawnx post għalik. Noħroġ ’il  barra, inħalli l-moll warajja u ninxteħitlu għand il-bar ta’ faċċata. Għadhom it-tlieta u nofs ta’ waranofsinhar u ċ-check-in għall-ferry ma jibdiex qabel is-sebgħa u nofs, sagħtejn qabel it-tluq fid-disgħa u n-nofs. Ormai ilni mqajma tnax-il siegħa, u mal-lejl mhux li rqadt wisq. Inpoġġi fuq barra u nordna ġelat tal-frawli fit-tazza u flixkun ilma żgħir kiesaħ, forsi niffriska ftit wara t-traġitt li s’issa xejn ma mexa mal-pjan li tant ilni nfassal. L-istrajk nazzjonali tat-trasport pubbliku Taljan għoġbu jneffaqni kemxa ġmielha għax wara l-katamaran mill-Belt Valletta sa Pozzallo ma kelli ebda għażla ħlief li nieħu private transfer — xi ħaġa li nobgħod immens — sa Catania, biex minn hemm stajt inkompli b’kowċ oħra s’hawn. Miraklu kif tat-taxi rnexxielu jwassalni bl-eżatt biex nilħaq tal-għaxra u nofs. Tal-ħdax u nofs u oħrajn ma ħadmux.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-114">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">3 042 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  april promo-storja sequence- story-58" href="/joe-gatt-general-strike/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: General Strike', 20]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">April 2024</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				General Strike
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Joe Gatt</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Morna lejn il-Marsa u hemmhekk beda l-inkwiet. Kellna l-pitrolju u ċ-ċraret qodma. Xi ħadd ġab miegħu serrieq tal-mastrudaxxa. Inżilna ċ-Ċimiterju tat-Torok, mhux ’il bogħod minn fejn kienu jgħixu xi tnejn jew tlieta minna. Konna nafu fejn kien hemm żewġ arbli tar-Rediffusion, kbar, tal-injam. Ridna naqtgħulhom il-wajers għax ma kinux riedu jxandru l-bulettini tal-union. Propaganda tal-Ingliżi biss riedu, il-ġurnata kollha. Għamilna toqba fl-arblu, xarrabna ċ-ċraret fil-pitrolju, u deffisniehom fit-toqba li konna taqqabna. Qabbadna ċ-ċraret b’sulfarina u rsaqna lura biex naraw l-arbli jinħarqu. Meta konna ċerti li kienu se jinħarqu sal-art, morna lura d-dar għax in-nisa kienu inkwetati u kienu qalulna biex ma nibqgħux barra tard, imma għall-inqas konna nafu li għamilna l-biċċa tagħna. Imbagħad waranofsinhar erġajna ħriġna. Konna xi mitt persuna, jew mitejn, tfajna l-ġebel fuq il-pulizija, u kissirna t-twieqi tal-karozzi li kienu fihom. Smajna li kienu sejrin lejn Blata l-Bajda, allura morn’hemm, ħdejn il-flats tal-Arċisqof, u xħin wasalna rajna li n-nies kienu qed jitfgħulhom il-ġebel lill-pulizija. Surġent ħareġ mill-karozza biex ineħħi l-ġebel li kien qed jimblokka t-triq u xi ħadd mir-Rerum Novarum Flats tefagħlu żewġt iqsari. Il-pulizija l-oħra kienu telgħin l-għolja biex jiċċirkundawna, allura qtajna qalbna u ħallejniehom jarrestawna. Tfajna landa petrol fuq il-gverta ta’ vapur imma ma ġara xejn.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-58">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">5 328 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  mejju promo-esej sequence- story-7" href="/omar-nshea-gilgamex-dak-li-ra-l-qiegħ/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Gilgamex, Dak li Ra l-Qiegħ', 21]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Mejju 2023</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Gilgamex, Dak li Ra <l-m>l-Qiegħ</l-m>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Omar <l-m>N’Shea</l-m></span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>L-idea li Gilgamex isib ruħu f’daru fil-kultura u l-lingwa Maltija ma bdietx b’Montebello. Bejn l-1899 u l-1915 Alfons Maria Galea ppubblika sensiela bl-isem Kotba tal-Mogħdija taż-Żmien. Fl-1913 kien ħareġ in-numru 130 ta’ din is-sensiela bl-isem Kif l-Għerf tal-Kangħanin Tnissel fil-Griegi, miktub minn F. Calleja “tal-Alġier”. Kemm kienet tajba t-tixrida ta’ dan il-ktieb ma tantx huwa ċar; li nafu hu li ma kienx hawn ħafna kopji għall-bejgħ għax Calleja kien ħallas għall-pubblikazzjoni minn butu.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-7">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">6 231 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  mejju promo-storja sequence- story-6" href="/noah-fabri-ħsieb-il-ħamiema/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Ħsieb il-Ħamiema', 22]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Mejju 2023</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Ħsieb <l-m>il-Ħamiema</l-m>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Noah Fabri</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Faqqgħet bħall-qniepen tal-knisja t-twerżiqa ta’ sajjetta tas-sirena tal-pulizija. Maimouna kienet ilha tliet snin taħdem fil-ħanut ħdejn il-pont li jaqsam il-Ħamrun u l-Marsa. Kienet taf kull rokna u xkaffa, kull loġika organizzatorja, u kull bidla li kienet saret fuq il-post. L-irwejjaħ tal-ħitan ma baqgħetx ixxommhom, ix-xufiera li kienu jġibu l-konsenji saret tafhom sew, il-klijenti, sintendi, saru qishom tal-familja, qalb it-tibdil u ċ-ċaqliq tan-nies, u l-kollegi waslu u telqu bħall-għasafar tal-passa. Xorta rnexxielha żżomm ċerta distanza mentali mill-imgħallem u l-ħajja tal-ħanut; minkejja li kienet tħobb taħdem, dan l-aħħar l-idea tax-xogħol innifisha kienet qed taraha velenu tal-moħħ.
+</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-6">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">6 123 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  marzu promo-esej sequence- story-125" href="/davinia-hamilton-ilkoll-parti-mill-istaġun-li-jmiss/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Ilkoll Parti mill-Istaġun li Jmiss', 23]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Marzu 2025</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Ilkoll Parti <l-m>mill-Istaġun</l-m> li Jmiss
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Davinia Hamilton</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Fuq l-internet, mijiet ta’ eluf ta’ nies qed jistokjaw mara. Qegħdin f’April tal-2024, u kuljum eluf oħra jingħaqdu f’dil-kampanja ta’ moħqrija: itellgħu r-ritratti ta’ dil-mara fuq il-feeds tagħhom, iħallu kummenti niggieża fuq il-posts tagħha—“It’s called Karma, bitch!”—jitteggjaw lil sħabhom, jinkoraġġuhom jingħaqdu magħhom. Dil-mara, iktar ma jmur, iktar tidher mitlufa. Ittella’ għexieren ta’ posts kuljum b’risposta għal li qed jiġri. Imma d-disperazzjoni li turi hija bħal xprun għal din il-marmalja diġitali.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-125">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">6 361 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  april promo-esej sequence- story-134" href="/manuela-zammit-immissjajtha-xi-naqra-lil-malta-manuela-/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Immissjajtha Xi Naqra lil Malta, Manuela?', 24]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">April 2025</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Immissjajtha Xi Naqra lil Malta, Manuela?
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Manuela Zammit</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Xi kultant ma nafx għadnix nista’ ngħid li jien minn hawn u ngħidha kif inħossha mingħajr ma nirċievi reazzjoni li s-sottotest tagħha donnu jgħid, “Din ġiet erbat ijiem minn barra u se tibda tikkritika, mingħaliha li laħqet is-sema b’idejha, mingħaliha li issa aħjar minna.” Apparti minn hekk, ċerti nies (normalment dawk li jaduraw il-partit, jew baqgħu b’xi mod leali lejh) qishom joħduha personali meta tgħidilhom li l-affarijiet hawn Malta mhux sejrin sewwa u li issa ma nimmaġinanix nerġa’ ngħix hawnhekk. Daqslikieku issa jiena wkoll barranija u ġaladarba ma ngħixx hawn, m’għandi l-ebda dritt immaqdar. Inutli ngħidilhom li hemm barra mhux perfett lanqas imma li s’issa sibtni aħjar hemm, u li nikkritika għax, minkejja kollox, xorta jimpurtani minn Malta u l-futur tagħha. Ma nasalx ngħid li nħossni barranija essaċċ f’dawn is-sitwazzjonijiet, għax in-nies li qed nitħaddet magħhom nafhom u jafuni sew, għax familjari mal-protokolli soċjali li qed nipparteċipa fihom, u għax konxja biżżejjed u żżejjed ta’ x’inhu jiġi kkomunikat mingħajr ma jingħad. Domt naqra biex wasalt għaliha, imma sa fl-aħħar fhimt eżatt kif inħossni. Inħossni… intruża, eżatt bħalma ddeskriva din il-kundizzjoni Jean-Luc Nancy hu u jiffilosofizza u jipproblematizza d-duwaliżmu ta’ ġewwa/barra, jew familjari/stramb wara li għadda minn trapjant tal-qalb: “… jekk [l-intruż] diġà għandu d-dritt li jidħol u joqgħod, jekk hu mistenni u milqugħ mingħajr l-ebda parti minnu ma tkun sorpriża mhux mistennija jew mhux milqugħa tajjeb, ma jibqa’ la l-intruż, u wisq inqas l-istranġier.”</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-134">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">10 255 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  dicembru promo-esej sequence- story-31" href="/noah-fabri-insalata/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Insalata', 25]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Diċembru 2023</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Insalata
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Noah Fabri</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Il-memorja fl-ikel tinfed b’mod sottili. Jien u nagħmel l-insalata kont qed niftakar, mingħajr ma kelli għalfejn nitkellem, sempliċiment billi nirrepeti b’ġismi l-azzjonijiet li għaddewli ommi u ommha. Meta nikkunsidraw l-ikel, irridu naħsbu fuq lingwa sħiħa mhux mitkellma, irridu naħsbu fuq il-ħin b’mod differenti, irridu nidħlu fi ħsieb fuq livell għalkollox differenti minn dak kapitalist li jorganizzalna l-ħajja ta’ kuljum fid-dinja pubblika tal-lum. Fil-verità, fil-privat u fi ċrieki żgħar, kull wieħed u waħda minna għandna l-possibbiltà biex naħsbu b’ontoloġija kompletament differenti minn dik tal-Illuminiżmu. U iktar ma nsajru flimkien u naqsmu l-ikel u l-għajnuna bejnietna, iktar dawn iċ-ċrieki nistgħu nkabbruhom. L-ikel jgħaqqad u jagħti dar u post għall-kenn lil min joffrih u jaqsmu. Huwa importanti li nagħrfu l-valur politiku li nieħdu ħsieb xulxin, xi ħaġa li t-teorija femminista ilha tinsisti dwarha. Meta taqsam ikla kważi dejjem tkun qed toħloq familja, u għalija l-familja ta’ veru tinħoloq meta nieklu flimkien b’mod intenzjonali.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-31">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">2 655 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  dicembru promo-esej sequence- story-33" href="/omar-nshea-joey-tilbes-it-tabù-tinża/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Joey Tilbes, it-Tabù Tinża&#92;&#39;', 26]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Diċembru 2023</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Joey Tilbes, <l-m>it-Tabù</l-m> Tinża’
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Omar <l-m>N’Shea</l-m></span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Joey kienet tinżel imlibbsa u mpittra, saff eyeshadow abjad mad-dawra, faxx lapes max-xfar, u kulur skur ilellex fuq il-kappell t’għajnejha. Gloss u glitter aħmar, ras nokkli bil-backcombing u l-ġnub miġbudin u llixxati lura b’pettne tad-djamantini. Meta kienet tilbes ta’ mara, kienet tħobb tagħżel xi libsa tal-Haro, li kellhom ħanut tal-ħwejjeġ Tas-Sliema, moda impurtata f’Malta minn familja Anglo-Iżraeljana li kienu jgħixu hawn. Kellhom stabbiliment tal-ħwejjeġ ieħor il-Belt, u r-restorant LeRoy ġewwa Tigné. Lil din il-familja tal-Haro, iz-zija t’ommi, Salvina kienet għall-ewwel isseftrilhom u mbagħad bdiet tieħu ħsieb it-tfal tagħhom għax kienet taf titkellem bl-Ingliż. Kienet fuq tagħha u ommi dejjem tiġri magħha u ġieli kienet tmur magħha għandhom. Din id-dar lil ommi fetħitilha orizzonti ġodda u internazzjonali ħafna, u l-Haro kien nissel fiha sens ta’ moda, avolja qliezet u qomos tal-irġiel biss kienet tilbes. Junior, imma, kien galantom u jberbaq sew fuq Antoinette u l-gwardarobbi tal-Iklin kienu kmamar sħaħ fil-basement tad-dar, li fil-weekend spiss jispiċċaw mimlijin sinjorini jitpittru quddiem mera rettangolari kollha bozoz mad-dawra u ħwejjeġ, parrokki, u tkaken għaddejjin minn id għall-oħra ħa jaraw min se jilbes xiex. Antoinette kellha mijiet ta’ lbiesi, tant li ġieli l-kontestanti tax-shows bħal Miss Sunshine kienu jilbsu kważi biss ħwejjeġ mill-gwardarobba tagħha, qisha l-benefattriċi tat-travestì. Wara joħorġu jiżżagħblu l-Hungry Tiger u jiġu lura l-għada, kulħadd daħna, kollha daħq, żuffjett, ikkampjar, riħa ta’ xorb u sigaretti, u min jorqod ’l hemm u min jorqod ’l hawn. Imma l-parrokki kienu dejjem jidħlu lura ġol-kaxxi tal-kartun roża b’ħabel gold biex iġġorrhom minnu, imqiegħda hemm ġew fuq irjus tondi tal-ġablow li fuqhom Joey kienet tpinġi għajnejn, imnieħer u xufftejn bil-make-up t’Antoinette, u meta jiġu lura miż-żagħbil tal-lejl, kienet taqla’ l-eyelashes foloz u twaħħalhom fuqha. Il-parrokki kienu joħduhom darba fix-xahar il-Village Gossip, għand Manwel u l-Mimì, għal wash u blow dry.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-33">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">5 730 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  gunju promo-poezija sequence- story-69" href="/leslie-vassallo-il-kastell/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Il-Kastell', 27]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Ġunju 2024</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Il-Kastell
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Leslie Vassallo</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text poetry">
+			
+				<p>Minn fuq is-swar tal-belt
+tara għoljiet imwieġ iħaddru—
+Irħula bojod u arbli ta’ knejjes ibaħħru.
+
+Minn fuq il-fortizza
+tilmaħ armati sofor ta’ lellux, ġarġir;
+Fit-toroq qodma l-bizzilla minsuġa tal-belt;
+Fi rkejjen, kull lewn tal-gżira jixxerred fuq tila.
+
+Mat-turġien dojoq taċ-Ċittadella
+żgħożitna ħolmot f’qarn qamar jitferra’;
+ħelsienna ttajjar maż-żifef sal-baħar;
+imħabbitna tnaqqxet mal-ħitan, daħket fil-ħemda.
+</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-69">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">105 kelmiet</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  frar promo-esej sequence- story-49" href="/anton-jäger-karl-baldacchino-kollox-iperpolitiku-ġenealoġija-tal-preżent/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Kollox Iperpolitiku', 28]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Frar 2024</li>
+	
+	
+		<li class="header-label collection-slug collection-2">
+			Indħil Barrani
+		</li>
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Kollox Iperpolitiku
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			<span class="author">Anton Jäger</span> <span class="translator">(tr Karl Baldacchino)</span>
+		
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Ir-ritratti huma ta’ lwien jgħajtu, kważi fluworexxenti. It-tema li tgħaqqadhom hi “l-imħabba”. F’ritratt jismu Love (hands in hair), mara b’xagħar aħmar u għajnejha magħluqin hija miżmuma minn par idejn maskili li jilħquha minn barra l-bordura. F’ritratt ieħor raġel b’ġakketta tal-jeans qed jiżfen waħdu, kważi qed ilaħħaq għal id fil-qrib. F’Love (hands praying), mara b’għajnejha magħluqin torbot idejha f’nofs folla clubbers. Bħallikieku f’ritwal sekulari, timmedita fl-anonimità tad-diskoteka. In-nies fir-ritratt jiżfnu ma’ mużika maħluqa fuq il-bażi ta’ ħsejjes li jarmi l-makkinarju industrijali ta’ Detroit u Manchester, il-bliet tewmin li welldu t-tekno.
+Fl-1989, però—is-sena li fiha ttieħdu dawn ir-ritratti— il-magni m’għadhomx jaħdmu. Ħafna minnhom ċkienu jew ġew irrilokati lejn iċ-Ċina, filwaqt li l-bliet tewmin tat-tekno ġew deindustrijalizzati. Waqt li kienet qed tivvjaġġa ġo megabelt Ċiniża xi snin qabel, il-fotografa Ġermaniża Hilla Becher innotat l-assemblaġġ mill-ġdid ta’ kopja ta’ mitħna tal-azzar li darba ġibdet fl-Ewropa. Issa, iż-żgħażagħ fir-ritratti tal-ħajja ta’ billejl ta’ Wolfgang Tillmans jiżfnu biex jippruvaw ixejnu l-industrija, il-politika u l-istorja nfisha. Ta’ min jinnota ż-żmien u l-post tar-ritratti ta’ Tillmans. Jiddokumentaw Londra taħt Thatcher u Berlin waqt li l-Ħajt nieżel. Lejn il-Lvant, is-soċjaliżmu statali qed joqrob il-kollass. Il-kapitaliżmu globali huwa trijonfanti. Id-deindustrijalizzazzjoni tal-Punent qed taċċellera. Fl-istess sena li x-xjenzat politiku Amerikan Francis Fukuyama ppubblika l-esej leġġendarja tiegħu dwar “it-tmiem tal-istorja” fin-National Interest, il-kamera ta’ Tillmans issa ssir xhieda ta’ eżerċizzju ta’ amnesija kollettiva: tentattiv biex jitkeċċew l-ispettri ideoloġiċi tas-seklu li għadda u bil-kwiet nimxu lejn utopja privata. Żmien il-“postpolitika” infetaħ.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-49">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">5 557 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  ottubru promo-esej sequence- story-25" href="/joe-gatt-kontra-tagħna-għaliex-magħna/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Kontra Tagħna Għaliex Magħna', 29]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Ottubru 2023</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Kontra Tagħna Għaliex Magħna
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Joe Gatt</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Meta wara sentejn f’idejn il-Franċiżi, fl-1800 l-ġżejjer Maltin sabu ruħhom taħt il-ħakma Ingliża, skont it-Trattat ta’ Amiens kellhom jerġgħu jgħaddu lura għand il-Kavallieri biex ikomplu jmexxuha huma bħala pajjiż “newtrali”. Il-qassisin, in-nutara, l-avukati u l-kummerċjanti Maltin tal-“Congresso”, li sa ftit qabel kienu qed imexxu l-insurrezzjoni kontra l-Franċiżi, beżgħu li dan kien ifisser li malajr jerġgħu jiġu taħthom għax l-Ordni kienet iddgħajfet sew u żgur ma kinitx tiflaħ għal Napuljun. Għalhekk, il-104 membri ta’ dan il-kungress kitbu “Dichiarazione dei Diritti degli Abitanti delle Isole di Malta e Gozo”. Ma kinitx dikjarazzjoni radikali bħal dik tal-Indipendenza ta’ Haiti ta’ sentejn wara, li abolixxiet l-iskjavitù, ċaħdet kull rabta mal-kolonjalisti Ewropej u ħalfet il-libertà jew il-mewt. Dik Maltija kienet dikjarazzjoni liberali bl-eku Illuminista ta’ dik tal-Indipendenza tal-Istati Uniti fl-1776 u tad-“Dikjarazzjoni tad-Drittijiet tal-Bniedem u ċ-Ċittadin” fi Franza, tlettax-il sena wara. F’disa’ punti, id-dikjarazzjoni elenkat speċi ta’ kuntratt. Iktar milli stqarrija ta’ drittijiet indirizzata lejn l-ispirtu etern tal-Bniedem, kien quid pro quo ċar u pragmatiku indirizzat lir-Re tar-Renju Unit tal-Gran Brittanja u l-Irlanda u d-dixxendenti tiegħu bħala sovrani fuq il-gżejjer “għal dejjem”. Dan in-nisel nobbli, min-naħa tiegħu, kellu jagħti lill-pajjiż kostituzzjoni li biha kunsill elett mill-“poplu” ikollu dritt jiġbor it-taxxi u jmexxi ’l-pajjiż. Ir-Re ma kellu jindaħal la fit-tmexxija interna tal-pajjiż u lanqas fil-ħajja reliġjuża tiegħu. In-nies—insomma, “gli uomini liberi”—kellhom id-dritt josservaw liema reliġjon riedu, igawdu l-proprjetà tagħhom u jkunu suġġetti biss għal-Liġi. U għar-Re, li kien il-protettur tar-reliġjon. U għall-Papa, li kellu jkun l-uniku referenza fejn jidħlu affarijiet spiritwali; hu u l-ġenerali tal-ordnijiet monastiċi. Intbagħtet lir-Re Ġorġ III, imma nafu biha għax baqgħu kopji tagħha Malta. Fl-arkivji impekkabbli tal-Gran Brittanja m’hemm ebda ħjiel tagħha. Jekk lir-Re waslitlu, ma nafux x’għamel biha. L-Ingliżi bdew imexxu l-gżejjer bħala dittatorjat militari. Fost l-uffiċjali Ingliżi, li ma taw kas la ta’ din id-dikjarazzjoni u lanqas ta’ appelli oħrajn għall-awtonomija, kien hemm l-ewwel Duka ta’ Wellington li jgħidu li qal: Kieku allura nistgħu nagħtu kostituzzjoni lil bastiment tal-gwerra!</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-25">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">9 067 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li  class="multiple-episodes episode-1">
+	<a class="promo  jannar promo-poezija sequence-10 story-105 is-episode" href="/kris-polidano-kullana-ta-għanjiet-dwar-il-ħolm-1-prefazju-numru-wieħed/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Kullana ta’ għanjiet dwar il-ħolm #1', 30]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Jannar 2025</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Kullana ta’ għanjiet dwar <l-m>il-ħolm</l-m>
+				
+					<span class="episode-number">#1</span>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Kris Polidano</span>
+	</h2>
+
+
+ 
+
+
+	
+		<h3>
+			
+			
+				<span class="episode-number">1. </span>
+			
+			Prefazju numru wieħed
+		</h3>
+	
+</header>
+
+		<div class="body-text poetry">
+			
+				<p>Il-Malti jitkellem dwar il-forom tal-verbi. Bl-istess mod, hemm il-forom ta’ kif nippożizzjonaw ruħna meta nkunu reqdin. Fil-forma nsibu l-kontenut—dal-prinċipju narawh fil-qasam tal-bini u f’dak ta’ kif infasslu l-għodod tal-komunikazzjoni tagħna. Il-forom tal-verbi jiddeterminaw it-tifsira. Bl-istess mod, il-forom ta’ kif norqdu u nindifnu kollha għandhom il-konnotazzjonijiet tagħhom.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-105">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">47 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li  class="multiple-episodes episode-2">
+	<a class="promo  jannar promo-poezija sequence-10 story-106 is-episode" href="/kris-polidano-kullana-ta-għanjiet-dwar-il-ħolm-2-forma-numru-wieħed/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Kullana ta’ għanjiet dwar il-ħolm #2', 31]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Jannar 2025</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Kullana ta’ għanjiet dwar <l-m>il-ħolm</l-m>
+				
+					<span class="episode-number">#2</span>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Kris Polidano</span>
+	</h2>
+
+
+ 
+
+
+	
+		<h3>
+			
+			
+				<span class="episode-number">2. </span>
+			
+			Forma numru wieħed
+		</h3>
+	
+</header>
+
+		<div class="body-text poetry">
+			
+				<p>&lt;p&gt;Fuq ix-xaqliba&lt;br&gt;
+	tal-Lvant tal-Qala,&lt;br&gt;
+	idi qiegħda&lt;br&gt;
+	taħt geddumi&lt;/p&gt;
+&lt;p class=&quot;fx-1&quot;&gt;fuq sodda kważi franka&lt;br&gt;
+	&lt;em&gt;moħħi&lt;br&gt;
+	jnixxi&lt;br&gt;
+	l-ħaxix&lt;br&gt;
+	iraxxex&lt;br&gt;
+	maż-żifna&lt;br&gt;
+	tar-riħ&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;is-swaba’ ta’ saqajja&lt;br&gt;
+	jniżżlu għonqhom&lt;br&gt;
+	u driegħi jistrieħ&lt;br&gt;
+	ma’ abti&lt;/p&gt;
+
+&lt;p class=&quot;fx-1&quot;&gt;&lt;em&gt;u qalbi tħabbat&lt;br&gt;
+	mal-mota&lt;br&gt;
+	ta’ San Kerrew&lt;/em&gt;&lt;/p&gt;</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-106">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">35 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li  class="multiple-episodes episode-3">
+	<a class="promo  jannar promo-poezija sequence-10 story-109 is-episode" href="/kris-polidano-kullana-ta-għanjiet-dwar-il-ħolm-3-forma-numru-tnejn/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Kullana ta’ għanjiet dwar il-ħolm #3', 32]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Jannar 2025</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Kullana ta’ għanjiet dwar <l-m>il-ħolm</l-m>
+				
+					<span class="episode-number">#3</span>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Kris Polidano</span>
+	</h2>
+
+
+ 
+
+
+	
+		<h3>
+			
+			
+				<span class="episode-number">3. </span>
+			
+			Forma numru tnejn
+		</h3>
+	
+</header>
+
+		<div class="body-text poetry">
+			
+				<p>&lt;p&gt;Mort ngħum&lt;br&gt;
+saqajja jagħtu&lt;/p&gt;
+			
+&lt;p class=&quot;fx1 enjambed&quot;&gt;u jagħtu&lt;/p&gt;
+&lt;p class=&quot;enjambed&quot;&gt;u jagħtu&lt;br&gt;
+		&lt;p class=&quot;fx1&quot;&gt;u joħolqu ondi kbar&lt;/p&gt;
+
+		&lt;p&gt;li jinkisru mas-saba’ l-kbir&lt;/p&gt;
+
+		&lt;p class=&quot;fx1 enjambed&quot;&gt;ta’ sieqi l-leminija&lt;/p&gt;
+&lt;p&gt;u mbagħad ix-xellugija.&lt;/p&gt;
+		
+&lt;p&gt;L-għaraq jisponta taħt xagħri&lt;br&gt;
+jinżel sa denbi kut’ kut’.&lt;/p&gt;
+
+&lt;p&gt;Purtella tingħalaq f’salt.&lt;br&gt;
+Id-dawl jiftaħli għajnejja.&lt;br&gt;
+L-għaraq jogħdos għal ġol-friex.&lt;/p&gt;</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-109">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">41 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li  class="multiple-episodes episode-4">
+	<a class="promo  jannar promo-poezija sequence-10 story-111 is-episode" href="/kris-polidano-kullana-ta-għanjiet-dwar-il-ħolm-4-prefazju-numru-tnejn/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Kullana ta’ għanjiet dwar il-ħolm #4', 33]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Jannar 2025</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Kullana ta’ għanjiet dwar <l-m>il-ħolm</l-m>
+				
+					<span class="episode-number">#4</span>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Kris Polidano</span>
+	</h2>
+
+
+ 
+
+
+	
+		<h3>
+			
+			
+				<span class="episode-number">4. </span>
+			
+			Prefazju numru tnejn
+		</h3>
+	
+</header>
+
+		<div class="body-text poetry">
+			
+				<p>Is-snajja’ u l-metodi tal-antenati tagħna jibqgħu fostna bla ma nafu kif. Nimxu fit-toroq siekta qalb xogħol idejn nies li m’għadhomx magħna biex iraqqdu lil dawk li m’għadhomx magħhom. Is-snajja’ u l-metodi tal-antenati tagħna jibqgħu fostna bla ma nafu kif. Nimxu fit-toroq siekta qalb xogħol idejn nies li m’għadhomx magħna biex iraqqdu lil dawk li m’għadhomx magħhom.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-111">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">28 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li  class="multiple-episodes episode-5">
+	<a class="promo  jannar promo-poezija sequence-10 story-112 is-episode" href="/kris-polidano-kullana-ta-għanjiet-dwar-il-ħolm-5-forma-numru-tlieta/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Kullana ta’ għanjiet dwar il-ħolm #5', 34]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Jannar 2025</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Kullana ta’ għanjiet dwar <l-m>il-ħolm</l-m>
+				
+					<span class="episode-number">#5</span>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Kris Polidano</span>
+	</h2>
+
+
+ 
+
+
+	
+		<h3>
+			
+			
+				<span class="episode-number">5. </span>
+			
+			Forma numru tlieta
+		</h3>
+	
+</header>
+
+		<div class="body-text poetry">
+			
+				<p>&lt;p&gt;Art…&lt;br&gt;
+Art…&lt;/p&gt;
+
+&lt;p&gt;Ħobbni ħobbni arti ħobbni,&lt;br&gt;
+semmagħli l-għajta t’amorin&lt;/p&gt;
+
+&lt;p&gt;Għandek lili biex issir taf&lt;br&gt;
+u lilna lkoll biex tnin&lt;/p&gt;
+
+&lt;p&gt;Art…&lt;br&gt;
+Art…&lt;/p&gt;
+
+&lt;p&gt;Li kont naf dak nagħsek fejnu&lt;br&gt;
+kont ingħidlek biex iġġemmgħu&lt;br&gt;
+żommu kollu f’vażett ħlejju,&lt;br&gt;
+ostru sew titfgħux għall-bejgħ&lt;/p&gt;
+
+&lt;p&gt;Art…&lt;br&gt;
+Art…&lt;/p&gt;
+
+&lt;p&gt;Art…&lt;br&gt;
+Art…&lt;/p&gt;
+
+&lt;p&gt;Ħobbni ħobbni arti ħobbni,&lt;br&gt;
+semmagħli l-għajta t’amorin&lt;/p&gt;
+
+&lt;p&gt;Għandek lili biex issir taf&lt;br&gt;
+u lilna lkoll biex tnin&lt;/p&gt;
+
+&lt;p&gt;Art…&lt;br&gt;
+Art…&lt;/p&gt;
+
+&lt;p&gt;Li kont naf dak nagħsek fejnu&lt;br&gt;
+kont ingħidlek biex iġġemmgħu&lt;br&gt;
+żommu kollu f’vażett ħlejju,&lt;br&gt;
+ostru sew titfgħux għall-bejgħ&lt;/p&gt;
+
+&lt;p&gt;Art…&lt;br&gt;
+Art…&lt;/p&gt;</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-112">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">41 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li  class="multiple-episodes episode-6">
+	<a class="promo  jannar promo-poezija sequence-10 story-116 is-episode" href="/kris-polidano-kullana-ta-għanjiet-dwar-il-ħolm-6-forma-numru-erbgħa/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Kullana ta’ għanjiet dwar il-ħolm #6', 35]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Jannar 2025</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Kullana ta’ għanjiet dwar <l-m>il-ħolm</l-m>
+				
+					<span class="episode-number">#6</span>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Kris Polidano</span>
+	</h2>
+
+
+ 
+
+
+	
+		<h3>
+			
+			
+				<span class="episode-number">6. </span>
+			
+			Forma numru erbgħa
+		</h3>
+	
+</header>
+
+		<div class="body-text poetry">
+			
+				<p>&lt;p class=&quot;enjambed&quot;&gt;Ballun-ħġieġa jaqa’&lt;/p&gt;
+&lt;p class=&quot;enjambed fx1&quot;&gt;U jis&lt;/p&gt;
+&lt;p class=&quot;enjambed fx2&quot;&gt;&#92;&lt;/p&gt;
+&lt;p class=&quot;enjambed fx3&quot;&gt;piċċa&lt;/p&gt;
+&lt;p class=&quot;enjambed fx2&quot;&gt;/&lt;/p&gt;
+&lt;p class=&quot;enjambed fx4&quot;&gt;ja&lt;/p&gt;
+&lt;p class=&quot;enjambed fx2&quot;&gt;&#92;&lt;/p&gt;
+&lt;p class=&quot;enjambed fx3&quot;&gt;qa’&lt;/p&gt;
+&lt;p class=&quot;enjambed fx2&quot;&gt;/&lt;/p&gt;
+&lt;p class=&quot;enjambed fx4&quot;&gt;fil-&lt;/p&gt;
+&lt;p class=&quot;enjambed fx2&quot;&gt;&#92; &lt;/p&gt;
+&lt;p class=&quot;fx3&quot;&gt;fond&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;ilma&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Wiċċ ċar, bjond,&lt;br&gt;
+Iħares lejn surtu&lt;br&gt;
+jżomm kopp fid-dell&lt;br&gt;
+jitkaxkar mal-jum&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Id titla’ għal fuq moħħ&lt;br&gt;
+––is-silenzju wara li&lt;br&gt; 
+ċagħqa tkexkex l-ilma&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Ix-xemx tinqala’ minn postha&lt;/em&gt;&lt;br&gt;
+u tiltaqa’ mal-art fejn&lt;br&gt;
+is-sħana tinħass&lt;br&gt;
+bejn żewġ koxox taħt gverta&lt;br&gt;
+tas-suf&lt;/p&gt;</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-116">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">51 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li  class="multiple-episodes episode-7">
+	<a class="promo  frar promo-poezija sequence-10 story-118 is-episode" href="/kris-polidano-kullana-ta-għanjiet-dwar-il-ħolm-7-forma-numru-ħamsa/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Kullana ta’ għanjiet dwar il-ħolm #7', 36]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Frar 2025</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Kullana ta’ għanjiet dwar <l-m>il-ħolm</l-m>
+				
+					<span class="episode-number">#7</span>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Kris Polidano</span>
+	</h2>
+
+
+ 
+
+
+	
+		<h3>
+			
+			
+				<span class="episode-number">7. </span>
+			
+			Forma numru ħamsa
+		</h3>
+	
+</header>
+
+		<div class="body-text poetry">
+			
+				<p>&lt;p&gt;Fl-iljieli, nistenna&lt;br&gt;
+l-Marrasa tiddi minn fuq xfieq&lt;br&gt;
+Iħarsu qigħan dil-gżira&lt;/p&gt;
+
+&lt;p class=&quot;enjambed&quot;&gt;Fl-iljieli, nistenna fil-gallarija,&lt;br&gt;
+noqgħod b’abti fuq ħoġor it-tieqa&lt;br&gt;
+tan-nofs, ngħodd il-karozzi, bajda&lt;/p&gt;
+&lt;p class=&quot;enjambed fx1&quot;&gt;bajda&lt;/p&gt;
+&lt;p class=&quot;enjambed fx1&quot;&gt;sewda&lt;/p&gt;
+&lt;p class=&quot;enjambed fx1&quot;&gt;griża&lt;/p&gt;
+&lt;p&gt;Fl-iljieli, narani nitgħannaq&lt;br&gt;
+waqt li nħaddan l-imħadda&lt;br&gt;
+u nħoss is-sema fl-investi&lt;br&gt;
+tal-qoton ċelesti&lt;/p&gt;
+
+&lt;p&gt;Fl-iljieli, narani ndur u nitgerbeb&lt;br&gt;
+sakemm nispiċċa fuq in-naħa&lt;br&gt;
+li dejjem norqod fuqha&lt;br&gt;
+u hemm vera tibda t-tertuqa.&lt;/p&gt;</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-118">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">57 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li  class="multiple-episodes episode-8">
+	<a class="promo  frar promo-poezija sequence-10 story-119 is-episode" href="/kris-polidano-kullana-ta-għanjiet-dwar-il-ħolm-8-prefazju-numru-tlieta/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Kullana ta’ għanjiet dwar il-ħolm #8', 37]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Frar 2025</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Kullana ta’ għanjiet dwar <l-m>il-ħolm</l-m>
+				
+					<span class="episode-number">#8</span>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Kris Polidano</span>
+	</h2>
+
+
+ 
+
+
+	
+		<h3>
+			
+			
+				<span class="episode-number">8. </span>
+			
+			Prefazju numru tlieta
+		</h3>
+	
+</header>
+
+		<div class="body-text poetry">
+			
+				<p>&lt;p&gt;Il-ħolm fejn imur wara li jqajjimna?&lt;/p&gt;
+&lt;p&gt;Il-mewta l-aħħar darba li noħolmu anki jekk għajnejna ma jingħalqux, ġisimna joħroġ il-kimiċi, li jitfgħuna fi stat “ħolmieni”. Kemm jekk aħna konxji tiegħu jew m’aħniex, id-demm uman jiġbed, u f’għadd ta’ kulturi, il-mewt nikkunsidrawha bħala raqda. U l-ħolm—kemm jekk inħallu lilna nfusna nindiehsu ma’ din il-forma ta’ ħsieb jew le—jieqaf u jiżvolġi fl-aħħar raqda għall-aħħar darba.&lt;/p&gt;</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-119">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">64 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li  class="multiple-episodes episode-9">
+	<a class="promo  frar promo-poezija sequence-10 story-120 is-episode" href="/kris-polidano-kullana-ta-għanjiet-dwar-il-ħolm-9-forma-numru-sitta/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Kullana ta’ għanjiet dwar il-ħolm #9', 38]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Frar 2025</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Kullana ta’ għanjiet dwar <l-m>il-ħolm</l-m>
+				
+					<span class="episode-number">#9</span>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Kris Polidano</span>
+	</h2>
+
+
+ 
+
+
+	
+		<h3>
+			
+			
+				<span class="episode-number">9. </span>
+			
+			Forma numru sitta
+		</h3>
+	
+</header>
+
+		<div class="body-text poetry">
+			
+				<p>&lt;p&gt;&lt;em&gt;Fl-aħħar raqda,&lt;br&gt;
+int tkompli għaddej.&lt;/em&gt;&lt;br&gt;
+U z-zijiet jippustjawlek&lt;br&gt;
+xagħrek f’kamra&lt;br&gt;
+kulur ix-xemgħa&lt;br&gt;
+mwarrba, f’San Luqa.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Fl-aħħar raqda,&lt;br&gt;
+int ma tismax.&lt;br&gt;
+Id-dinja tkompli titgerbeb&lt;/em&gt;&lt;br&gt;
+waqt li jdawrulek is-swaba’&lt;br&gt;
+t’idek il-leminija&lt;br&gt;
+ma’ kuruna taż-żibeġ tal-injam.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Fl-aħħar raqda&lt;br&gt;
+int liebes qalziet&lt;br&gt;
+imkemmex.&lt;br&gt;
+Ħalqek ma tiftħux&lt;/em&gt;&lt;br&gt;
+biex tgħidilna&lt;br&gt;
+“għadduh sew.”&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Fl-aħħar raqda,&lt;br&gt;
+ġismek fiss.&lt;br&gt;
+U nħares lejk&lt;br&gt;
+togħdos taħt&lt;br&gt;
+ċorma fjuri mingħajr l-ittra&lt;/em&gt;&lt;br&gt;
+li ma kontx nista’ niktiblek.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Fl-aħħar raqda,&lt;br&gt;
+int tieqaf toħlom&lt;br&gt;
+U aħna mqajmin&lt;br&gt;
+noħolmu bik.&lt;/em&gt;&lt;/p&gt;</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-120">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">74 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  mejju promo-esej sequence- story-11" href="/joe-gatt-il-kuxjenza-fit-truf/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Il-Kuxjenza fit-Truf', 39]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Mejju 2023</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Il-Kuxjenza <l-m>fit-Truf</l-m>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Joe Gatt</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Bħalma żgur skoprew ħafna qabli, meta tkun qed tittraduċi mit-Taljan, il-Malti li qed taħdem bih ma tħossux uniformi. Fih ħafna li hu lixx u duttili, imma fih ukoll l-għoqiedi u l-ingroppi. Fil-Malti hemm ħafna Taljan li jgħaddi mingħajr ma tagħti kasu; imbagħad hemm it-Taljan tal-avukati. Filli tiskrupla għax tħossok m’int qed tagħmel xejn ħlief tbiddel ftit l-ortografija—“io avanzo tale ipotesi per spiegare la mia debolezza giovanile, ma senza una decisa convinzione”—filli ttik rasek għax tinduna li qed tinstema’ iktar Taljan mit-test oriġinali.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-11">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">1 595 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  lulju promo-esej sequence- story-16" href="/loranne-vella-il-lanza-il-labra-il-qoffa-l-azzarin/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Il-Lanza, il-Labra, il-Qoffa, l-Azzarin', 40]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Lulju 2023</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Il-Lanza, <l-m>il-Labra</l-m>, <l-m>il-Qoffa</l-m>, <l-m>l-Azzarin</l-m>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Loranne Vella</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Ġieli jagħti l-każ li, jien u naħseb fuq ktieb li qed naqra, nibda nara f’kotba jew xogħlijiet oħrajn l-istess ħsieb, jew mod ta’ ħsieb mhux wisq ’il bogħod minnu, tant li nibda nissuspetta li fil-fatt qed jgħidu l-istess ħaġa, li l-kwistjoni qed jarawha mill-istess perspettiva. U allura, x’kumbinazzjoni li qed naqra żewġ jew tliet kotba miktubin fi żminijiet għalkollox differenti li qed jipproponu l-istess ħsieb! L-istess jiġrili jien u nikteb. Nibda nhewden fuq idea li mbagħad nibda naraha f’kull kitba oħra li naqra. Għadni kif qrajt it-traduzzjoni mill-Grieg Antik għall-Malti tal-Frammenti ta’ Saffo, ta’ Warren Bartolo. Din l-edizzjoni, li ħarġet f’Mejju 2023, tinkludi daħla, nota tat-traduttur dwar id-dixxiplina tat-traduzzjoni, annotazzjonijiet dettaljati għal kull framment u lista ta’ ismijiet imsemmija fuq wara. Jien u naqra n-noti u l-kummenti tat-traduttur, dwar x’inhu, skont hu, is-sinifikat ta’ Saffo llum, dwar it-traduzzjoni bħala proċess ta’ trasformazzjoni u mutazzjoni, dwar il-ħarsa queer ta’ Saffo, moħħi beda joħodni mingħajr ma rrid għaż-żewġ kotba l-oħra li kelli ħdejja.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-16">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">8 015-il kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  awwissu promo-storja sequence- story-17" href="/miriam-galea-lejl-u-nhar/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Lejl u Nhar', 41]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Awwissu 2023</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Lejl u Nhar
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Miriam Galea</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Il-ħitan bojod joqtluk naqra naqra kuljum.  Tipprova ma tismax is-skiet, itanbar stinat tul il-kurituri, iżda t-tektik ħafif fuq il-keyboards, it-tpetpit solitarju tal-cursor, l-ilħna mbiegħda f’uffiċċju minnhom jibqgħu ma jidfnuhx.  Fil-kamra tal-arkivji xi ħadd jixgħel il-photocopier, li tobżoq folja wara l-oħra, mimlija ċifri, kliem kbir kollu rpużat, taħbiliet ta’ ideat suġġeriti u konsiderazzjonijiet meqjusa f’dokumenti Taljanizzati tal-Unjoni Ewropea.  It-terremot f’Haiti, il-kriżi finanzjarja, il-faqar dinji, l-iżvilupp fil-pajjiżi eks-Komunisti, il-bidla fil-klima, id-dinja li qed titbaskat, tinstamat, tinħall f’taħlita tossika ta’ plastik jinten, jaħraq l-imnifsejn, jistordi l-menti, iżarrat ix-xagħar, inixxef il-ġilda.  U l-photocopier tofroq karta minn oħra, tifrixhom pulit fuq xulxin bħal suldati stenduti, nodfa, stirati, bojod bħal-lożor.  Il-ħoss tal-magna jkompli jħeddlek, mill-uffiċċju ta’ ħdejk tasallek konverżazzjoni bil-Franċiż.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-17">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">2 188 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  marzu promo-storja sequence- story-43" href="/davinia-hamilton-likantropi/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Likantropi', 42]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Marzu 2024</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Likantropi
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Davinia Hamilton</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Kull fejn tħares tara kurċifiss: Kristu tal-ġibs fl-agunija divina. Fuq il-ħitan hemm inkwatri bir-ritratti tal-uċuħ imwerwra tal-bniet li ġew qabilna. Is-sorijiet għaddejjin bit-tonka u l-velu iswed qishom fuq wiċċ l-ilma. Insejħulhom “The Sisterhood”, imma mhux f’wiċċhom. Diffiċli taqta’ kemm għandhom żmien; diffiċli tqishom bħala nisa, bħal ommijietna u z-zijiet li jagħmlu l-lipstick u l-powder u l-fwieħa. Hemm minnhom iktar henjin; hemm min jitkerrah u jirrabja. Kultant, tisparixxi xi waħda minnhom. Tmut, jew tiġi trasferita. Is-soru li kienet tgħallimna l-Franċiż sparixxiet u bla kliem ġiet oħra flokha. Hemm qlajjiet li spiċċat il-manikomju, jew li sabet wieħed. Dawn l-istejjer it-tnejn affaxxinanti u nemmnuhom. Għassa mal-kuritur hemm statwa kbira ta’ Sant’Anjeże, għajnejha kannella jħarsu ’l fuq, b’girlanda fjuri ma’ rasha. Liebsa l-abjad u xalla turkważ fuq spallejha, kollha tal-ġibs, kull tikmixa u kull tinja ffurmata bir-reqqa. F’idha l-leminija qed iżżomm palma, u bl-id l-oħra terfa’ ħaruf żgħir. Tidher dħulija, qisha setgħet kienet waħda minna. Fil-klassi hawn il-bard. It-twieqi ilhom miftuħin il-lejl kollu biex tiċċirkola l-arja li kuljum tisfieq bl-irwejjaħ t’iġsma adolexxenti: għaraq, demm, deodorant u xampù. Inpoġġu tnejn tnejn fuq imwejjed li ilhom hemm minn żmien żemżem. L-injam miksi b’deċennji ta’ marki. Jien u Alice nisperaw dejjem li ma jifirduniex. Qegħdin tletin f’dil-klassi. Ilna flimkien mindu kellna erba’ snin, tlajna flimkien. Lil dax-xebbiet inħobbhom daqskemm nobgħodhom.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-43">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">1 816-il kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  mejju promo-poezija sequence- story-61" href="/jasmine-bajada-lil-poeta-li-qalli-li-qed-jikteb-bħal-wieħed-vera-xiħ-dan-l-aħħar/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: lil poeta li qalli li qed jikteb bħal wieħed vera xiħ dan l-aħħar ', 43]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Mejju 2024</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				lil poeta li qalli li qed jikteb bħal wieħed vera xiħ dan <l-m>l-aħħar </l-m>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Jasmine Bajada</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text poetry">
+			
+				<p>il-kliem li ktibtli dalgħodu m’hediex.
+għadni nhewden x’messni għedt
+biex niskonġr’hom minn għadmek—
+minn leħnek. bexxaqtli tieqa bihom;
+ilmaħtek bilqiegħda fil-kamra, waħdek,
+diqitek tidwi fil-vojt għammieq.
+Mill-bogħod, imbagħad, ġew il-vrus…
+qaluli li inti, poeta, m’għadekx tħożż hekk,
+għall-gost. issa li qbadt ir-ritmu taċ-ċinju
+tixtieqek għadek bilbla tgħanni binhar.
+tibżax: l-istrument għadu f’idejk bla trab.
+u inti bħal wieħed vera xiħ li jinsa kollox,
+ank’isem ommu, qabel jinsa kif jaqbad
+dak l-argunett ta’ dari. titnih kif titnih,
+ħa jdoqqlok ħelu, sabiħ.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-61">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">67 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  settembru promo-esej sequence- story-83" href="/joe-gatt-il-magna-tal-qari/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Il-Magna tal-Qari', 44]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Settembru 2024</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Il-Magna <l-m>tal-Qari</l-m>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Joe Gatt</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Għal żmien twil, il-magni se jkomplu jipproduċu testi banali. Għal żmien twil se jkunu tajbin biss biex jiktbu r-rapporti finanzjarji u d-deskrizzjonijiet tat-tqassim tal-kmamar tad-djar għall-bejgħ. Imbagħad bil-mod il-mod jibdew jipproduċu testi li kapaċi jsibu posthom fit-truf medjokri tal-finzjoni tal-ġeneru, u għad ikun hemm bosta qarrejja li jsibu żvog u forsi anki faraġ fil-proża mhux wisq impenjattiva tagħhom. Biż-żmien, jibdew jitfaċċaw l-opinjonijiet fuq il-websites tal-gazzetti, jgħidulna li fil-fatt dawn it-testi l-ġodda mhumiex ħżiena daqskemm taħseb eh, li fil-fatt dejjem qed isiru aħjar. Xorta waħda mhux se naqbdu u naċċettawhom hekk, f’daqqa waħda. Kultant ikun hemm pass ’il quddiem u tnejn lura. Forsi t-testi awtomatizzati jkunu moda għal xi żmien, imbagħad wara l-voga għall-awtomazzjoni letterarja, inkunu rridu nerġgħu lura għall-kitba maħduma bl-id; bħalma kien ġralna bin-Nescafé. L-esperimentazzjoni u l-innovazzjoni jkunu ppreġjati aktar minn qatt qabel għax jitqiesu kapaċitajiet unikament umani. Imma eventwalment anki dan se jitgħallmu l-magni. Xi darba se jitgħallmu jinterzjaw l-innovazzjoni mal-patrimonju, se jkunu jafu jużaw il-lingwa ta’ kuljum u l-idjoma letterarja u jikkuntrarjawhom biżżejjed biex jibnu xogħlijiet fil-lingwa li joħolqulna dinjiet ġodda fiex ngħammru, toroq ġodda fejn jimraħ moħħna, modi ġodda kif naqsmu qalbna u kif nippruvaw nikkunslawha. Jgħallmuna nixxennqu għal affarijiet li qatt u qatt ma jista’ jkollna għax ikunu xewqat ifformati fuq il-pjan metafiżiku tagħhom. Forsi dan kollu se jieħu ħafna żmien. Forsi se jieħu ħamsin sena, jew mitt sena, jew elf; imma xi darba żgur se jkollna magna, intelliġenza artifiċjali, li tkun kapaċi tikteb rumanzi u esejs u bijografiji u poeżiji u tagħmel traduzzjonijiet li jkollhom dik il-kwalità misterjuża li aħna nagħrfu bħala letteratura, u dan tagħmlu fuq livell li qatt ma nkunu rajna qabel.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-83">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">3 507 kelmiet</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  jannar promo-esej sequence- story-34" href="/kris-polidano-manifest-kontra-ż-żmien/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Manifest Kontra ż-Żmien', 45]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Jannar 2024</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Manifest Kontra <l-m>ż-Żmien</l-m>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Kris Polidano</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Ħames mitt pass. Ħames mitt pass hemm mill-aħħar tarġa quddiem il-bieb tax-xogħol għall-bus stop li rrid nieqaf u nistenna fuqha. Saru l-ħamsa u nofs u ħamsa, u r-riħ ta’ Diċembru reġa’ tani naqra ħajja wara tmien sigħat inħares lejn skrin, inħarbex l-emails li jintemmu bil-kind regards u li jibdew bil-hope this email finds you well—dejjem b’exclamation mark biex il-persuna li tirċeviha tkun taf li jien waħda minn dawk l-orrajt. Inħares lejn it-tabella tal-bus stop darb’oħra biex inkun ċertissima li qiegħda fuq il-waqfa t-tajba. Mhux għax ma nafx jekk jienx ippustjata sew, imma tibda thewden wara li tkun ilek ftit xhur ma taqbad karozza tal-linja. Bħala persuna kwintessenzjalment Maltija, għandi preferenza għall-abbiltà li tagħtini l-karozza, jiġifieri, li nkun nista’ ngħaddi riħ mill-bypass mingħajr ma nieqaf, bi driegħi barra mit-tieqa, indoqq il-mużika livell biss inqas mill-punt meta t-tnabar ta’ widnejja jkunu appena ser jinfaqgħuli. Imma llum ta’ bilfors irrid naqbadha għax ilbieraħ kont għaddejja minn Strada Rjali, Santa Venera u splajsjajt il-mera ma’ trakk mimli żrar tat-tarmak. Ħbatt eżatt quddiem il-Ministeru tat-Trasport. Ħadd ma ħareġ biex jgħinni jew biex iċanfar lil tat-trakk li mblokka nofs it-triq u m’użax is-sinjali stipulati f’artiklu xiex u xiex u dak. Nista’ nsuqha, mind you, il-mera soda daqskemm kienet qabel l-inċident jekk mhux aktar għax waħħalha z-ziju bl-aħjar duct tape li l-ironmongers ta’ Malta jistgħu joffru. Imma wara li għaxar karozzi spiċċaw jgħajruni indannata u jpaqpqu, ma nazzardax insuq. L-avventuri tal-bypass jistgħu jistennew ftit. Illum irrid il-kumdità u l-lussu li xi ħadd iwassalni d-dar, u billi jien tifla brava u nħobb l-ambjent u ma rridx inġiegħel lill-mummy tiġi għalija (għandha d-dwiefer), nagħżel li x-chauffeur lura lejn Birkirkara llum ser ikun wieħed Filippin jew Indjan jew l-ispeċi aktar u aktar rari tax-xufiera—il-Malti qargħi.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-34">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">2 125 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  frar promo-esej sequence- story-40" href="/jien_a-il-mara-tas-suldat/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Il-Mara tas-Suldat', 46]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Frar 2024</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Il-Mara <l-m>tas-Suldat</l-m>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Jien_a</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Fil-bidu, jekk qatt kien hemm bidu, il-maħbubin kollha sejħu lilhom infushom amazzuni. Huma u jgħixu flimkien, jinħabbu, jiċċelebraw lilhom infushom, jilagħbu, fiż-żmien meta x-xogħol kien għadu logħba, il-maħbubin fil-ġnien tal-art baqgħu jsejħu lilhom infushom amazzuni tul Żmien id-Deheb kollu. Imbagħad, xħin twaqqfu l-ewwel bliet, bosta maħbubin kissru l-armonija oriġinali u sejħu lilhom infushom ommijiet. Minn dan iż-żmien ’l hemm, il-kelma amazzuna saret tfisser għalihom tifla, li qatt ma tikber, immatura, dik li qatt ma tħaddan id-destin tagħha. L-amazzuni tkeċċew mill-bliet tal-ommijiet. Kien f’dak il-mument li dawn saru vjolenti u bdew jiġġieldu biex jiddefendu l-armonija. Għalihom, l-isem antik amazzuni baqa’ bit-tifsira oriġinali. U minn issa beda jfisser xi ħaġa aktar: dawk li jħarsu l-armonija. Minn hemm ’il quddiem stajt issib amazzuni f’kull żmien, f’kull kontinent, gżira u xatt. Dħalna fiż-Żmien Glorjuż grazzi għall-amazzuni tal-lum. Ħafna drabi maħbuba tuża ġesti biex b’ġisimha ssir tixbah dak l-annimal jew dawk l-annimali li l-aktar li għandha affinità magħhom u b’hekk tagħti pjaċir lill-maħbuba tagħha. Dan isir aktar faċli meta tkun taħt ipnożi. Trid tinsa l-mossi ta’ kuljum u ssib dawk tal-annimali tagħha. Din mhix imitazzjoni tal-annimalesk: din hija mima. Hija ħaġa diffiċli biex taqbad u tagħmilha spirtu pront, anki jekk il-maħbuba ssaqsiha biex tagħmilhielha bl-ikbar ġentilezza. “Meta ssaqsini biex nagħmilha ta’ ġemel, niddejjaq, għax rari jirnexxili.” (Charlotte Plume, Iċ-Ċirku Tiegħi, Gallija, Żmien il-Konkos.)</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-40">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">4 805 kelmiet</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  novembru promo-poezija sequence- story-28" href="/leslie-vassallo-marċ-maqbuż/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Marċ Maqbuż', 47]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Novembru 2023</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Marċ Maqbuż
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Leslie Vassallo</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text poetry">
+			
+				<p>Ix-xitwa tmut hekk—
+Gżira—jew bastiment—jgħibu fiċ-ċpar;
+Riefnu jiġbed nifs sagħtar—
+Berwieq għarwien fuq irdum,
+wiċċ nemex tal-bużbież;
+iħirsa—jew aħna—max-xifer.
+
+Reżħa titlajja fi rkejjen, fuq għetiebi;
+F’triq dejqa, antika, fi kmajra
+xi ħadd jonqox ħajja—jew mit—f’zokk lewża;
+Tifkira tiġi, minn imkien—jew minn xmara—għoddha taħsdek,
+tmexxik fiha b’ħarsa kaħla, b’xofftejn ħajra,
+sa tħallik—jew tħalliha—f’belt labirint.
+</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-28">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">122 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  lulju promo-storja sequence- story-15" href="/rowena-grech-medusa/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Medusa', 48]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Lulju 2023</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Medusa
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Rowena Grech</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Żgur li ismi familjari. Żgur li smajt bosta stejjer fuqi. Iżda żgur qatt ma smajt dak li ġara bejni u bejn Persew. Nitolbok, iskot ftit u isma’ l-istorja tiegħi qabel nissarraf f’elf framment ta’ miti oħra…
+Mela darba, ħmistax-il sena ilu, meta kont għadni tifla, kont ngħix mal-ġenituri tiegħi, Foriku u Keto, fuq gżira serena mdawra b’baħar blu jwerżaq. Id-dar kienet ċkejkna, bi tlett ikmamar kollox; il-kċina, il-kamra tal-bżonnijet tagħna u l-kamra fejn konna norqdu jien u ħuti l-oħra. Għalkemm bejni u bejn ħuti l-kbar ftit snin biss kienu jifirduna—qabża ta’ sentejn kull wieħed—l-ikbar differenza kienet il-vulnerabbiltà tal-mortalità tiegħi. U meta ħuti, Stenun u Ewrjali, kellhom is-setgħa li jmorru jesploraw l-għelieqi, il-ġenituri kienu jżommuni priġuniera tal-erba’ ħitan kennija tad-dar. Iżda ma kontx  inħabbel wisq rasi għaliex f’nofs dik id-dalma solitudni ltqajt mal-unika mħabba reċiproka f’ħajti: il-kelma. U minn hemm kienu l-bosta sigħat li kont qattajt b’rasi mgħaddsa fil-kotba, nixtarr l-għerf li l-paġni, bla ma jafu, jgħadduli.
+</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-15">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">1 466 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  awwissu promo-poezija sequence- story-18" href="/matthew-schembri-mona-lisa-karnival-ieħor/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: mona lisa | karnival ieħor', 49]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Awwissu 2023</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				mona lisa | karnival ieħor
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Matthew Schembri</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text poetry">
+			
+				<p>Joe, quddiem il-mera. 
+Xagħru kannella skur, maqtugħ qasir. 
+F’rasu, kappa lewn il-ġilda. 
+Għax fil-karnival tista’. 
+Japplika l-kolla fuq ħuġbejh, bil-pinzell. 
+Ħuġbejh kbar. 
+Rani. 
+Inixxifhom, b’fann. 
+Japplikalhom il-powder safrani, il-kolla. 
+Jerġa’ jnixxifhom – din id-darba, sakemm 
+jitqarqċu. 
+Irene. 
+Japplikalhom il-concealer safrani, bl-isponża,  
+sakemm jgħattihom għalkollox. 
+Marisa, Mylene.
+Japplikah ukoll fuq għajnejh, fuq wiċċu kollu.
+Għax fil-karnival tista’.
+Jimmudella ftit synthetic wax fuq il-ponta ta’ mnieħru.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-18">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">404 kelmiet</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  novembru promo-poezija sequence- story-27" href="/kris-polidano-na-i-hom/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: -Na -I -Hom', 50]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Novembru 2023</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				-Na -I -Hom
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Kris Polidano</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text poetry">
+			
+				<p>Fl-ewwel minuti luċidi ta’ kull filgħodu
+naħseb biex immur mixja lejn il-ġnien li jħallini mdellka bin-nostalġija 
+biex inħares lejn il-bieb magħluq li jgħiduli li int kont hemm għassa miegħu kuljum u
+l-kamra kulur it-te meta titfagħlu l-ħalib tal-bott li issa 
+spiċċat mużew tal-karti llaminati li jiftaħ kull jumejn
+
+Il-bejta għall-ħarba kull nhar t’Erbgħa tal-grupp lebsin l-iswed għax cool
+għaddejjin nitmiegħku maż-żrieżaq
+daharna mal-arbli tal-bandli
+nitkażaw dwar x’għamlu dawk fil-kumplessi tal-garaxxijiet—
+l-ispots tal-konsulenzi romantiċi tat-tfal bravi Nsara aged 13 and up</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-27">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">237 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  novembru promo-poezija sequence- story-95" href="/maria-theuma-nibgħatlek-waqt-raxx-id-dlam-tas-sajf-fl-iżvezja/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Nibgħatlek Waqt Raxx id-Dlam tas-Sajf fl-Iżvezja', 51]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Novembru 2024</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Nibgħatlek Waqt Raxx <l-m>id-Dlam</l-m> tas-Sajf <l-m>fl-Iżvezja</l-m>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Maria Theuma</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text poetry">
+			
+				<p>Niktiblek
+Hawnhekk id-dawl qatt ma rajt bħalu
+Blu
+Il-ġilda fih issir blu
+Jew tidher blu
+Ma jidlamx
+typing…
+Ostra
+Għadha kif għaddiet ċerva minn fejni!!!
+Xiex
+Eżatt minn fejnek?
+Ija
+Se nidħol norqod għax ilni mqajma
+Int linja siġar jimmultiplikaw b’mod infinit
+Ġo foresta fl-Iskandinavja tal-metavers
+U jien l-aħħar werqa li għad jifdal
+Itteptep…………………… qabel imur id-dawl u jintefa kollox darba għal dejjem
+Se nibdel il-via ta’ din il-poeżija għax mhix qed togħġobni
+Minn poeżija dwarek se nibdilha għal poeżija oħra……… dwarek
+Kważi dejjem, iktar dejjem milli kważi, nemmen li jien nikteb biex int tħobbni
+Nikteb din il-poeżija……… biss biex tħobbni
+U x’raġuni hemm għall-poeżija
+Jekk mhux biex l-ewwel tiktibha
+Imbagħad iżżommha f’idejk u taqbeż biha b’kollox
+Rasek l-ewwel għal ġo pixxina mimlija sa ruħ ommha bi ħġieġ miksur
+U toħroġ minnha tqattar id-dmija
+biex imbagħad eżatt wara taqbeż……… għal ġo pixxina oħra……… mimlija ħall
+Għax hekk irrid
+Għax ma jimpurtanix minn x’jista’ jgħid ħaddieħor
+Bl-istess mod li bankier ma jimpurtahx mill-kostellazzjonijiet
+Bl-istess mod li l-maltemp ma jimpurtahx minn festin ippjanat għal fuq terrazzin mhux kenni
+Taf kemm hu diffiċli biex ma ngħixx bik f’ħajti
+Daqs ħelikopter li jrid itir imma l-inġinier tah garġi minflok ġwienaħ
+Daqs ħelikopter li jrid jeżisti imma Leonardo da Vinci qatt m’eżista
+Daqs kumpanija li trid tbigħ il-ħelikopters imma m’għandhiex ħelikopters xi tbigħ għax kull min xogħlu jibni l-ħelikopters qiegħed fuq strajk  permanenti
+Aħfirli li dejjem narma firxa wiesgħa ta’ similitudnijiet u niket bejnietna
+Bħal buffet ma jispiċċa qatt f’resort all inclusive
+Noħroġ riġlejja minn fuq l-ikel bħal żewġ kuċċaruni bil-mankijiet twal twal jiġġebbdu lejk
+Aħfirli li dejjem naħseb fuq dak li kieku kien
+Anki bi lsienek bħal tajjar fuq ġismi
+Dejjem nitbikkem dwar kif kellu jkun li tħassar dak li kien hemm bejnietna
+Meta dak li hemm bejnietna għadu ma tħassarx
+Inħobb inkellmek minn kull fejn inkun
+Anki jekk hemm kontinent jifridna
+Naħseb fik kull darba li nara xi ħaġa li tista’ togħġbok
+Naħseb fik kull xħin naħseb f’sentenza
+Irrid insir poeta tajba biex niktiblek poeżija f’għeluq sninek</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-95">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">290 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li  class="multiple-episodes episode-0">
+	<a class="promo  gunju promo-esej sequence-5 story-66 is-episode" href="/franco-bifo-berardi-karl-baldacchino-nifs-kaos-u-poeżija-introduzzjoni/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Nifs', 52]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Ġunju 2024</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Nifs: Kaos u Poeżija
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			<span class="author">Franco “Bifo” Berardi</span> <span class="translator">(tr Karl Baldacchino)</span>
+		
+	</h2>
+
+
+ 
+
+
+	
+		<h3>
+			
+			
+			Introduzzjoni 
+		</h3>
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>F’dal-ktieb il-ġdid, li hu ddedikat lill-kundizzjoni ta’ qtugħ ta’ nifs kontemporanja tagħna, nirritorna għall-metafora tal-poeżija bħala l-unika triq għall-ħarba mis-soffokazzjoni. Illum il-poter hu bbażat fuq relazzjonijiet astratti bejn entitajiet numeriċi. Filwaqt li l-isfera finanzjarja hija ggvernata mill-algoritmi li jgħaqqdu l-frattalji ta’ xogħol prekarju, l-isfera tal-ħajja hija invaduta minn flussi ta’ kaos li jipparalizzaw il-ġisem soċjali u joħonqu n-nifs u jifgawh. M’hemm l-ebda ħarba politika minn din in-nassa: il-poeżija biss, bħala l-eċċess ta’ skambju semjotiku, tista’ terġa’ tattiva n-nifs. Il-poeżija biss tgħinna fl-apokalissi li diġà qed tifferoċja taħt l-effett ta’ deċennji ta’ assolutiżmu finanzjarju. Il-poeżija biss se ttaffi t-tbatija ta’ moħħ l-inġinier u ta’ moħħ il-poeta, u se tkun qed taġixxi biex treġġa’ lura l-ħakma tal-isfera finanzjarja fuq il-lingwa. The Uprising kien esej fil-ġenealoġija tal-qawwa finanzjarja, mil-lat tal-lingwa u partikolarment mil-lat “tal-emanċipazzjoni tas-sinifikat mir-realtà”, li antiċipat l-emanċipazzjoni tal-flus mill-ekonomija reali u l-kobba sħiħa ta’ astrazzjoni preżenti fl-aħħar seklu. The Uprising kien dijanjosi ġenealoġika. Nifs huwa esej fuq it-terapija. Kif ser naġixxu bis-soffokazzjoni li pproduċiet l-astrazzjoni tul l-istorja umana? Jeżisti ħruġ mill-katavru tal-kapitaliżmu finanzjarju.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-66">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">700 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li  class="multiple-episodes episode-1">
+	<a class="promo  gunju promo-esej sequence-5 story-67 is-episode" href="/franco-bifo-berardi-karl-baldacchino-nifs-kaos-u-poeżija-1-ma-nistax-nieħu-nifs/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Nifs: Kaos u Poeżija #1', 53]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Ġunju 2024</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Nifs: Kaos u Poeżija
+				
+					<span class="episode-number">#1</span>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			<span class="author">Franco “Bifo” Berardi</span> <span class="translator">(tr Karl Baldacchino)</span>
+		
+	</h2>
+
+
+ 
+
+
+	
+		<h3>
+			
+			
+				<span class="episode-number">1. </span>
+			
+			Ma nistax nieħu nifs
+		</h3>
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Il-kaos u r-ritmu huma l-linja ta’ ħsieb ewlenija ta’ dan il-ktieb, li jterraq fl-apokalissi ta’ żmienna: fit-tieni deċennju tas-seklu wieħed u għoxrin, il-pajsaġġ mentali u x-xena soċjali huma mgħarrqa minn flussi ta’ skuntentizza u vjolenza. Fil-poeżija tiegħu, Hölderlin jipprevedi l-kaos tal-modernità u n-nuqqas ta’ nifs li ġej. Hija problema ta’ kejl, jgħid hu. M’hemm l-ebda kejl f’din l-art, għalhekk is-sens ta’ kejl tagħna (ir-ritmu) huwa biss projezzjoni tan-nifs tagħna: il-poeżija. Huwa għalhekk li l-bniedem jgħix poetikament, għalkemm “jistħoqqlu” mod ieħor. Hölderlin: “Jista’ bniedem iħares ’il fuq / Mit-tbatija totali ta’ ħajtu / U jgħid: Ħa nkun ukoll / Bħal dawn [allat]? Iva. Sakemm iddum it-tjubija, / Safja, ġewwa qalbu, jista’ jkejjel lilu nnifsu bil-ferħ / Kontra d-divin.”</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-67">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">1 251 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li  class="multiple-episodes episode-2">
+	<a class="promo  awwissu promo-esej sequence-5 story-80 is-episode" href="/franco-bifo-berardi-karl-baldacchino-nifs-kaos-u-poeżija-2-vuċi-ħoss-storbju/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Nifs: Kaos u Poeżija #2', 54]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Awwissu 2024</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Nifs: Kaos u Poeżija
+				
+					<span class="episode-number">#2</span>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			<span class="author">Franco “Bifo” Berardi</span> <span class="translator">(tr Karl Baldacchino)</span>
+		
+	</h2>
+
+
+ 
+
+
+	
+		<h3>
+			
+			
+				<span class="episode-number">2. </span>
+			
+			Vuċi ħoss storbju
+		</h3>
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Fl-era industrijali, meta ritmu dominanti ġie impost fuq ir-ritmi spontanji ta’ individwi soċjali, il-poter seta’ jiġi deskritt bħala kodiċi li jallinja temporalitajiet differenti, ritmu li jħaddan kollox li jinkwadra u jħabbel is-singularità tar-ritornelli tal-individwi. Stajna nitkellmu dwar is-sovranità politika meta l-ħoss tal-liġi kien qed isikket l-istorbju ħiereġ mill-ambjent soċjali. Fis-soċjetà kontemporanja konnettiva postindustrijali tagħna, bil-maqlub: il-poter mhuwiex mibni iktar fuq li jsikket il-folla (pereżempju, permezz taċ-ċensura, il-mezzi tax-xandir, jew is-solennità tad-diskors politiku), iżda huwa bbażat fuq l-intensifikazzjoni bla limitu tal-istorbju. Illum, is-sinifikazzjoni soċjali m’għadhiex sistema ta’ skambju u dikodifikazzjoni ta’ sinifikaturi, iżda saturazzjoni tal-moħħ li jisma’—iperstimulazzjoni newrali. Filwaqt li l-ordni politika kien isir b’vuċi li tipproklama l-liġi fost is-skiet tal-folla, il-poter postpolitiku kontemporanju huwa funzjoni statistika li toħroġ mill-istorbju tal-folla.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-80">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">1 604 kelmiet</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li  class="multiple-episodes episode-3">
+	<a class="promo  settembru promo-esej sequence-5 story-85 is-episode" href="/franco-bifo-berardi-karl-baldacchino-nifs-kaos-u-poeżija-3-il-kaos-u-l-barokk/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Nifs: Kaos u Poeżija #3', 55]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Settembru 2024</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Nifs: Kaos u Poeżija
+				
+					<span class="episode-number">#3</span>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			<span class="author">Franco “Bifo” Berardi</span> <span class="translator">(tr Karl Baldacchino)</span>
+		
+	</h2>
+
+
+ 
+
+
+	
+		<h3>
+			
+			
+				<span class="episode-number">3. </span>
+			
+			Il-kaos u <l-m>l-barokk</l-m>
+		</h3>
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Fis-seklu sittax, il-kultura Spanjola kienet speċi ta’ teatru ta’ proliferazzjoni vertiġinuża ta’ perspettivi li José Antonio Maravall sejjaħ “kosmoviżjoni barokka”. Folol taʼ nies ġejjin mill-kampanja ħakmu l-ispazji urbani, u r-riefnu ta’ esperjenza urbana li segwiet ipprovokat inflazzjoni ta’ tifsir u speċi ta’ splużjoni tal-identità. Fl-istess sena li Kristofru Kolombu niżel fuq l-art Amerikana, il-ħakkiema Spanjoli ordnaw it-tkeċċija tal-infidili. Il-pajjiż kien għadu ħiereġ minn tliet sekli ta’ gwerra reliġjuża: l-identità reliġjuża, l-identità etnika u l-identità soċjali issa daħlu fit-taqlib tal-modernità. L-interrogazzjoni bażika kellha x’taqsam mal-fidi reliġjuża u l-appartenenza etnika: f’kelma waħda, mal-identità, kunċett bla sens u nassa psikoloġika. Fil-kuntest Spanjol tal-aħħar tas-seklu ħmistax, “Int min int?” kienet mistoqsija doppja. Kienet tfisser, x’inhi l-oriġini tiegħek? Inti Nisrani pur jew l-antenati tiegħek tħalltu mal-infidili? Fl-istess ħin kienet tfisser ukoll, x’pożizzjoni soċjali għandek?</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-85">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">1 500 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li  class="multiple-episodes episode-4">
+	<a class="promo  dicembru promo-esej sequence-5 story-100 is-episode" href="/franco-bifo-berardi-karl-baldacchino-nifs-kaos-u-poeżija-4-il-kaos-u-l-moħħ/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Nifs: Kaos u Poeżija #4', 56]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Diċembru 2024</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Nifs: Kaos u Poeżija
+				
+					<span class="episode-number">#4</span>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			<span class="author">Franco “Bifo” Berardi</span> <span class="translator">(tr Karl Baldacchino)</span>
+		
+	</h2>
+
+
+ 
+
+
+	
+		<h3>
+			
+			
+				<span class="episode-number">4. </span>
+			
+			Il-kaos u <l-m>l-moħħ</l-m>
+		</h3>
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Il-preżent jista’ jitqies bħala l-Era tal-Illuminiżmu Mudlam: l-era tar-rifjut tal-Illuminiżmu razzjonalistiku tal-modernità minn dawk li tmexxew biex jissottomettu r-raġuni u l-ħajja għall-feroċità tal-matematika finanzjarja. Il-kategoriji razzjonali tilfu l-ħakma tagħhom fuq l-avvanz soċjali tagħna, u neħtieġu approċċ differenti biex nifhmu l-kundizzjoni postrazzjonali kontemporanja tagħna. Żmienna huwa ttraversat minn ċertu sentiment apokalittiku. L-istituzzjoni l-aktar ikkreditata għall-interpretazzjoni tat-test famuż attribwit lil Ġwanni ta’ Patmos—il-Knisja Kattolika, li l-kompetenza tagħha ilha stabbilita—dan l-aħħar tħawdet minn avvenimenti tal-għaġeb li qatt ma smajna bihom. Fl-2005 Karol Wojtyla, il-Papa li rebaħ il-ġlieda twila kontra l-Imperu tal-Ħażen tal-Unjoni Sovjetika, ta spettaklu ta’ tbatija fiżika estrema u kuraġġ li xxandar mad-dinja kollha. Wara mewtu, Papa ġdid ta’ nisel Ġermaniż wasal Ruma jipproklama l-uniċità inkontestabbli tal-Verità, u jikkundanna r-relattiviżmu.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-100">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">1 735 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li  class="multiple-episodes episode-5">
+	<a class="promo  frar promo-esej sequence-5 story-123 is-episode" href="/franco-bifo-berardi-karl-baldacchino-nifs-kaos-u-poeżija-5-il-kaos-u-l-kontroll/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Nifs: Kaos u Poeżija #5', 57]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Frar 2025</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Nifs: Kaos u Poeżija
+				
+					<span class="episode-number">#5</span>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			<span class="author">Franco “Bifo” Berardi</span> <span class="translator">(tr Karl Baldacchino)</span>
+		
+	</h2>
+
+
+ 
+
+
+	
+		<h3>
+			
+			
+				<span class="episode-number">5. </span>
+			
+			Il-kaos u <l-m>l-kontroll</l-m>
+		</h3>
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Riċentement, l-astrazzjoni bdiet taqbad. Il-finanzjalizzazzjoni tal-ekonomija hija l-iktar prova evidenti ta’ din l-espansjoni tal-isfera tal-astrazzjoni. Imma s-sottomissjoni dejjem tikber tal-ħajja għall-astrazzjoni issa qed tipprovoka reazzjoni negattiva qawwija: il-ħajja qed tirreaġixxi għall-astrazzjoni, u dan ir-ritorn tal-vitalità ħa l-forma tal-affermazzjoni mill-ġdid aggressiva tal-identità—nazzjonali, reliġjuża, razzjali. Ir-ritorn tal-ġisem—il-ġisem bla moħħ li ġie maqlugħ mir-raġuni universali u mill-kompassjoni tal-ġisem—qed jirriżulta fl-emerġenza tal-faxxiżmu postmodern mad-dinja kollha. Hawnhekk, żewġ tendenzi huma teknoloġikament marbutin ma’ xulxin u huma kulturalment diverġenti: l-ewwel waħda hija bbażata fuq it-tnerviż tan-network diġitali fis-sistema newrali u l-iperkonnessjoni tal-moħħ li tirriżulta; it-tieni tendenza hija bbażata fuq l-isplużjoni miġnuna tal-ġisem maqtugħ mill-moħħ bla ġisem. Din l-isplużjoni timmanifesta ruħha fil-ferneżija identitarja li issa qed teqred l-ordni politika taċ-ċivilizzazzjoni umana.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-123">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">1 951 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  mejju promo-poezija sequence- story-9" href="/maria-theuma-nofs-triq-dejjem-nieqaf/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Nofs triq, dejjem nieqaf', 58]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Mejju 2023</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Nofs triq, dejjem nieqaf
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Maria Theuma</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text poetry">
+			
+				<p>Nofs triq, dejjem nieqaf
+u ndur lura, lura għalih
+għax naf li jiddejjaq meta
+
+nħallih warajja. Xi kultant
+jimxiha miegħi, in-nofs triq,
+u jegħja, għarqan xraba
+
+nħallih warajja. Xi kultant
+jimxiha miegħi, in-nofs triq,
+u jegħja, għarqan xraba
+
+anki fi ljieli kesħin
+jibda jkaxkar saqajh
+biex jurini li qabżitlu
+
+jisgħol u jisħaq li
+l-għabra qed tagħraxlu
+griżmejh. X’għabra?</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-9">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">503 kelmiet</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  dicembru promo-storja sequence- story-102" href="/nathan-anthony-pace-nonfoħ-fil-kustilji-allużjonijiet-ġodda/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: nonfoħ fil-kustilji allużjonijiet ġodda', 59]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Diċembru 2024</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				nonfoħ <l-m>fil-kustilji</l-m> allużjonijiet ġodda
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Nathan Anthony Pace</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Tistaqsini jekk nemminx b’Ġesù Kristu imma l-kumplimenti kumplimenti jibqgħu, jiġu mingħand min jiġu. Ngħidilha li Ġesù Kristu żelaq min-nifs li nieħu bħad-dijossidu tal-karbonju u ma nafx għadx jerġa’ jidħol. Tgħidli li Alla nefaħ fil-kustilji t’Adam u ħoloq lill-mara u nħossha tifhimni. Nistaqsiha xi knisja tattendi u tgħidli li hi Mormona. Naqbdu nidħqu bil-ġuvintur bil-qomos bojod u l-qliezet suwed li żgur mhumiex tas-satin iċemplu l-qniepen tan-nies biex iwasslulhom lil Ġesù Kristu. Tgħidli li forsi tliftu għax ma sibtx komunità u ngħidilha li mhux għalhekk imma nkun qed nigdeb.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-102">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">720 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  april promo-esej sequence- story-56" href="/aaron-aquilina-persjani/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Persjani', 60]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">April 2024</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Persjani
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Aaron Aquilina</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Ħa niktibha hawnhekk forsi nikser iċ-ċirku vizzjuż. Fi kliem Keats, il-kapaċità negattiva hi li tkun “kapaċi toqgħod fl-inċertezzi, Misteri, dubji, bla ebda ġiri antipatku wara l-fatti u r-raġuni”. Dan kunċett antik, simili għat-trankwillità, jew ataraxia. Ix-Xettiku Sextus Empiricus u dawk kollha li ġew warajh jissuġġerixxu li din tiġi mill-bilanċ, mill-equipollence (jew għall-inqas hekk isostnu t-tradutturi li għandha tinqaleb il-kelma ἰσοσθένεια). Dan kollu jingħata ħafna iktar kulur u kumplessità minn Husserl bil-kunċett tal-epoché. Keats jgħid, allura, li l-aqwa karatteristika tal-kittieb — u skontu, l-aqwa eżempju ta’ dan huwa Shakespeare — hi l-kapaċità li jkunu jafu li ma jafux, u li jibqgħu f’din il-“ma nafx”, f’din il-boqqaġni, bla ebda attentat għall-għerf u t-teleoloġija. Kif għedt qabel: il-“jien” ta’ Keats la tifhem u lanqas tispjega. Forsi din il-kapaċità negattiva ta’ Keats taf tagħtini xi forma ta’ risposta għall-mistoqsija li dejjem insib ruħi nistaqsi: il-baħar ukoll ħabs? Il-fatt li Malta mdawra bl-ilma: ċella jew ħelsien? Għalkemm postijiet bħall-Awstralja jew ir-Renju Unit huma wkoll imdawrin bl-ibħra u l-oċeani, naħseb kollha kemm aħna nifhmu li post bħal Malta każ kemxejn speċjali. U kemm hi kbira Malta? Għax it-topografija tal-ġebel u l-baħar tifforma wkoll it-topografija kunċettwali-personali tagħna. Il-leġiżlazzjonijiet differenti li jaqsmu l-baħar ta’ madwarna — tal-baħar territorjali, taż-żona kontigwa, taż-żona esklużiva tas-sajd — kollha jqisuna b’kejl differenti. Fuq l-art dil-problema ma ssibx sodezza (niftakru ftit fil-ġuriżdizzjonijiet diversi u mħawdin tal-gvern, tal-knisja, tal-privat), u allura ovvja li nsibu ruħna nixtarru, bla qatt ċertezza, l-oriġini u l-identità tagħna, il-Maltiżmu tagħna mċaflas minn litanija ta’ karatteristiċi li huma fl-istess ħin riġidi daqs iż-żonqor u flessibbli daqs il-mewġ.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-56">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">4 430 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  mejju promo-esej sequence- story-63" href="/karl-baldacchino-politika-bla-nifs/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Politika bla Nifs', 61]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Mejju 2024</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Politika bla Nifs
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Karl Baldacchino</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Ħadd ma jista’ jiċħad li ninsabu f’punt fl-istorja tad-dinja fejn għandna iktar minn kollox. Iktar krudeltajiet, iżda wkoll iktar ġesti ta’ rieda tajba. Iktar problemi finanzjarji, fl-istess ħin li iktar nies qed jistagħnew. Iktar kriżijiet ta’ kull xorta u għamla, ibda mill-ambjent u spiċċa bil-mard. L-istess, it-tagħrif dwar it-tnejn. Iktar ksenofobija u razziżmu, kif ukoll iktar diskorsi ta’ inklużjoni soċjali u ugwaljanza. Primarjament, għandna iktar minn kollox għaliex esposti għal ħafna iktar meta kkumparat ma’ dak li kien qabel jesponina għalih il-ġurnal ta’ kuljum, kemm-il darba kien jinxtara u jinqara. L-esponiment tagħna għal dan kollu issa jinsab biss skrolljatura ’l bogħod, anki jekk mhuwa xejn ħlief dak li Jean Baudrillard isejjaħ simulakru. Meta fl-1991 kiteb li “l-gwerra tal-Golf ma seħħitx”, ried ifisser li l-Punent esperjenza biss rappreżentazzjoni medjatika tal-gwerra. Essenzjalment, dan japplika għal kollox fil-kuntest preżenti ta’ avvanzi teknoloġiċi kontinwi u l-governanza moħbija tal-algoritmi. Iżda, dan huwa biss każ ta’ kif il-mezzi soċjali kapaċi jiġbdulna l-attenzjoni u jamplifikaw is-sensi tagħna? Jew huwa minnu li kollox żdied b’mod goff u li konsegwentament tlifna kull tip ta’ kontroll? Forsi sforz l-indifferenza mifruxa? Forsi sforz l-aljenazzjoni? Il-konsum bla rażan? Il-politika? Ċertament dawn ukoll kollha għandna iktar minnhom. Il-politika, però, b’mod partikolarment ġdid. Kif jikteb Alberto Toscano, “dawk li jsibu ruħhom jgħixu fi żminijiet ta’ kriżi u diżorjentazzjoni spiss ifittxu kenn u gwida fl-analoġiji.” Għaldaqstant, il-politika preżenti bħal donnha bla nifs—kemm għax kollox huwa politiku iktar minn qatt qabel, kif ukoll għax fl-istess ħin hija politika dgħajfa.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-63">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">2 181 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  novembru promo-storja sequence- story-26" href="/simon-bartolo-qamar-aħmar/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Qamar Aħmar', 62]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Novembru 2023</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Qamar Aħmar
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Simon Bartolo</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Virginia weġbitha li dawn huma fatti tal-ħajja u ma nistgħux nibdluhom. Nitwieldu u nikbru. Inwelldu u nkomplu nikbru sa ma fl-aħħar nispiċċaw. M’hemmx mod ieħor. Vera kienet ħarset lejn Virginia b’ċertu diqa. Forsi jmissha insistiet iktar; forsi kieku spjegat ruħha aħjar, Virginia kienet tifhem u ma titlaqx, imma qatgħet qalbha. Ma setgħet tagħmel xejn għajr li tħalli lil oħtha titlaq, tmur tfittex xortiha barra minn Malta, toffri ħajjitha u ġisimha lil raġel li qatt ma seta’ japprezzaha. Tagħtih ulied li mhux talli jerdgħulha ħalibha imma demmha wkoll. Għannqitha waħda tal-aħħar. Tgħanniqa iebsa u tal-aħħar. Saħħa! Xtaqitilha s-saħħa kollha tad-dinja u ma ppruvatx tkellimha iżjed. Daret u telqet, u ħalliet lil Virginia tħares lejha tielqa. Ħarġet fil-ġnien li kien kbir, mogħni bi frott taċ-ċitru u tal-għadma u mdawwar bil-bajtar tax-xewk biex la ħadd seta’ jidħol u lanqas joħroġ minnu ħlief minn dik il-fetħa waħda li kienet tħalliet minn xi antenat tat-tewmin. Imxiet san-naħa l-għolja tal-ġnien fejn kien hemm bank tal-ġebel u poġġiet bilqiegħda, tħares lejn iċ-ċimiterju tar-raħal. Ma reġgħetx ħarset lejn oħtha. Ma marritx taraha tiżżewweġ. Għamlet tabirruħha li kienet marida u ssakkret f’kamritha. Lanqas biss marret taraha tielqa ma’ żewġha u lanqas qatt ma kienet tiftaħ l-ittri li tirċievi mingħandha. Virginia damet ħafna tibgħat. Ma kinetx xi waħda li taqta’ qalbha malajr, iżda bil-mod il-mod indunat li kien kollu ta’ xejn. Vera ma kienet se taċċetta qatt li setgħu jibqgħu ħbieb, li setgħu jibqgħu jinħabbu. Kienet ġegħlitha tagħżel u hi, Virginia, kienet għażlet li tibni familja u futur f’pajjiż ieħor. Ma kinetx għażlet lilha, kienet għażlet lir-raġel. Iżda fil-verità, Vera kienet tkellem lil Virginia kuljum fil-mera. U fil-mera ffukat fuq punt f’wiċċha fejn kien hemm għazza mitlufa, timbaram u tiċċaqlaq ma’ kull tikmixa konfuża.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-26">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">2 944 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  mejju promo-esej sequence- story-8" href="/romeo-roxman-gatt-qarn/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Qarn (silta)', 63]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Mejju 2023</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Qarn (silta)
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Romeo Roxman Gatt</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Idi fil-but, insaffar u nixxuttja l-ġebel—dawn kienu xi azzjonijiet oħra li kont ninnota li ma tantx kienu jinżlu sew meta “tifla” iġġib ruħha b’dal-mod. Jien, għall-kuntrarju, kbirt nagħmilhom. Kont insaffar qabel bdejt nitkellem; it-tort mhux tiegħi, żgur li le, iżda ta’ missieri. Allura ma fhimtx kif darba qisu gerger għax kont qed insaffar. La tifla u lanqas tifel mid-dehra ma kont ikkundizzjonat, għasfur l-ewwel u qabel kollox.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-8">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">7 238 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  mejju promo-storja sequence- story-5" href="/ryan-falzon-reċti-tal-kbar-parties-tat-tfal/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Reċti tal-Kbar, Parties tat-Tfal', 64]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Mejju 2023</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Reċti <l-m>tal-Kbar</l-m>, Parties <l-m>tat-Tfal</l-m>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Ryan Falzon</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Nistgħu niftħu b’xena nsuqu minn fuq flyovers nofshom kompluti waqt li nqallbu l-Facebook weqfin fit-traffiku, ritratt wara l-ieħor ta’ Malta lura fil-passat, l-għelieqi, il-mogħoż jirgħu u jmeċilqu, it-tfal jilagħbu ħafjin, toroq vojta, il-bini żewġ sulari. Malta tikkuntenta lil min iħobb imur sal-Lidl għal offerti fażulli ta’ ħaxix imnawwar u gallettini skaduti, bil-karozza impurtata mill-Japan, jidgħi fit-traffic imma jikkonsla għax l-AC silġa u t-tank tad-diesel mimli full u waqt li jsuq pass ta’ nemla juża l-Bluetooth biex iċempel parlata m’ommu, hands free, bla riskju li jaqla’ ċitazzjoni mingħand warden għassa moħbi wara siġra, għax l-aħħar tax-xahar magħna. Lussu kbir.
+</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-5">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">2 484 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  jannar promo-poezija sequence- story-38" href="/antoine-cassar-is-solitudni-tal-fotografu/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Is-Solitudni tal-Fotografu', 65]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Jannar 2024</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Is-Solitudni <l-m>tal-Fotografu</l-m>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Antoine Cassar</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text poetry">
+			
+				<p>Hawn xbin, trid kafè?
+Minn ġol-džezva
+jissawwab il-meraq ġamri
+li ’l-qalb dalwaqt iġibha 
+ġunġliena mġenġla.
+
+Deħlin u ħerġin 
+ħbieb u sangisugi,
+sangisugi u ħbieb. 
+Min ġej għal daħqa mqaħqħa
+u għabra għerf,
+min ġej ilaqqat qatra
+mit-tlellix t’ismu,
+min ġej jippoża
+bil-ħnejjiet bil-ħbub bil-ħotob b’kollox
+għal kjaroskur fil-ġelatina
+tal-melħ fiddien.
+
+Ħajduk tal-ktieb,
+partiżan tad-dadaiżmu,
+kewkba ħamra tal-kamera
+u tal-kamra skura—
+il-ġinni tal-istanjata
+jaf itella’ fil-wiċċ
+sal-iċken farka dija
+mistoħbija f’kull ruħ.
+
+Ftit jew ħadd
+ma jobsor però
+li wara l-lenti
+fejn l-iktar li jħossu
+dilettant u battal.
+Iktar ma jiżvoga,
+iktar ma jiffoka
+u jkejjel il-waqt
+li jniżżel iż-żewġ terzi ta’ werrej
+għal fuq il-buttuna,
+iktar ikompli jagħfas
+id-diqa mtaħħta ta’ ġo fih.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-38">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">225 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  lulju promo-storja sequence- story-68" href="/glorianne-micallef-sottomissjoni/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Sottomissjoni', 66]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Lulju 2024</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Sottomissjoni
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Glorianne Micallef</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>U bħal b’vendikazzjoni ddeċidiet ma tkomplix tipprova, u għal ftit minuti komplew jixorbu ċ-Cisk fil-kwiet ta’ bejniethom u l-istorbju ta’ madwarhom, fuq it-taraġ tal-Ġugar, waqt li qagħdet taħseb li setgħet għamlet użu aħjar tal-ġurnata off. Torqod. Taħsel il-karozza. Twieġeb dak il-messaġġ ta’ ħabibtha Abby minn xi xahrejn ilu. Kif waslet fl-aħħar boqqa kienet se ssellimlu u tibda miexja lura lejn il-karozza imma minn ħalqha ħarġet proposta li jmorru passiġġata. U ħaditu sal-breakwater, u l-baħar kien kalm u kien hemm il-kwiet għax l-għada kienet ħa tibda l-iskola u l-familji kienu żarmaw. U meta poġġew fuq il-blat qalet lilha nnifisha li llejla le, se żżomm saqajha magħluqa, kienet għadha xi ftit misluħa, u xorta dat-tali ma tantx kien fih għaxqa. U għada xogħol jum sħiħ... U hu u jinstabat ġo fiha, b’żobbu li frankament kien kbir wisq biex jagħtiha pjaċir, u jsabbatha mal-blat ta’ Marsamxett, jisolħilha rkejjen li kienu ħelsuha mill-istmu, hi u tinkwieta li qed jitqattgħalha l-flokk kważi ġdid, waqt li f’moħħha tidwi l-mantra kif-iż-żobb-sibt-ruħi-hawn-kemm-nixtieq-qatt-ma-twelidt, għaddielha l-ħsieb li jekk dal-proxxmu jħabbilha, issemmi t-tarbija Ali, għal Ali la Pointe. Hekk, ħa joħodha t-tagħlima.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-68">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">3 260 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li  class="multiple-episodes episode-0">
+	<a class="promo  marzu promo-storja sequence-14 story-126 is-episode" href="/nicole-borg-is-sovranità-tal-ikel-introduzzjoni/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Is-Sovranità tal-Ikel', 67]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Marzu 2025</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Is-Sovranità <l-m>tal-Ikel</l-m>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Nicole Borg</span>
+	</h2>
+
+
+ 
+
+
+	
+		<h3>
+			
+			
+			Introduzzjoni
+		</h3>
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Kif nistgħu bl-ikel li nieklu, nissalvagwardjaw is-saħħa tagħna u ta’ artna, imma wkoll is-saħħa ta’ dawk il-ftit nies li permezz tagħhom għandna dan l-ikel? Kif nistgħu nieklu b’mod li jħallina nirrifjutaw il-paradigma neoliberali li qed naraw fl-ikel modern, b’mod li jġedded il-wirt? Kif nistgħu nġibu ruħna b’mod li jiffaċilita s-sostenn tal-għajxien għall-bdiewa? Kif nistgħu nieklu b’mod li jgħinna nagħrfu l-iskarsezza tal-ikel Malti bħala effett postkolonjali? Kif nistgħu nerġgħu nindiġenizzaw l-ikel tagħna, billi nimpedixxu l-azzjoni korporattiva u nsaħħu l-interess fil-ġid komuni? Nafu x’ħa jsir minnu l-ikel tagħna? L-ikel sar għażżien wisq. L-ikel Malti mhuwa Malti xejn, l-ikel tagħna għadu kkolonizzat, b’identità batuta li tinħall fl-ilma.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-126">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">983 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li  class="multiple-episodes episode-1">
+	<a class="promo  april promo-esej sequence-4 story-48 is-episode" href="/jimmy-grima-splużjonijiet-1-il-kwiet-u-l-lejl/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Splużjonijiet #1', 68]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">April 2024</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Splużjonijiet
+				
+					<span class="episode-number">#1</span>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Jimmy Grima</span>
+	</h2>
+
+
+ 
+
+
+	
+		<h3>
+			
+			
+				<span class="episode-number">1. </span>
+			
+			Il-kwiet u <l-m>l-lejl</l-m>
+		</h3>
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Kif issejħet f’diversi kitbiet, Filfla qisha artal. Speċjalment meta tqis li faċċata tagħha hemm dawk iż-żewġ strutturi li nsejħulhom tempji. Hekk sejħilhom Temi Zammit u hekk sejħulhom l-arkeologi fiż-żmien kolonjali. Ma tantx iddoqqli din tat-tempju u tal-artal, għax spiċċajna nħarsu lejhom minn narrattiva waħda biss: dik li tiffoka fuq ir-riti u ċ-ċerimonji. B’hekk, possibbilment eskludejna funzjonijiet jew raġunijiet oħra għalfejn kien jeżisti dan il-ħaġar impoġġi b’mod arkitettoniku ta’ barra minn hawn. Il-kelma tempji tirrifletti perspettiva Ewroċentrika li dehret f’perjodu meta l-akkademiċi Ewropej kienu qed jikklassifikaw u jiddeterminaw id-dinja skont in-normi u l-preġudizzji kulturali tagħhom. L-użu tal-kelma “tempji” inevitabbilment tesponi l-aspett reliġjuż jew dak tar-ritwal tas-siti. Din hija spjegazzjoni monofunzjonali li tista’ tkun qed tnaqqas mill-vera funzjoni tagħhom.Meta dawn is-siti jiġu mmarkati bħala “tempji” mill-komunità interpretattiva—li storikament kienet magħmula minn akkademiċi tal-Punent—tieħu l-awtorità li tiddetermina x’inhi u, fl-istess ħin, x’mhijiex. Il-kelma “tempji” f’kuntest kolonjali tikxef l-effetti tal-orjentaliżmu li jirrifletti mhux biss ir-relazzjonijiet tal-poter bejn il-kolonizzatur u l-kolonizzat, iżda wkoll il-mod kif dawn ir-relazzjonijiet jinfluwenzaw il-produzzjoni tal-għarfien.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-48">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">7 214-il kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  mejju promo-xihaga-ohra sequence- story-10" href="/italo-svevo-joe-gatt-it-tipjip/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: It-Tipjip', 69]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Mejju 2023</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				It-Tipjip
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			<span class="author">Italo Svevo</span> <span class="translator">(tr Joe Gatt)</span>
+		
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>L-ewwel sigaretti li pejjipt m’għadekx issibhom għall-bejgħ. Għall-ħabta tal-1870 l-Awstrija kellhom minn dawk li kienu jinbiegħu f’kaxxa tal-kartun żgħira bit-tikketta tal-ajkla b’żewġt irjus. Ara: madwar waħda minn dawn il-kaxxi mill-ewwel jinġabru diversi persuni, kollha b’xi karatteristika minn tagħhom li hi biżżejjed biex tfakkarni x’jisimhom, imma mhux tant li nemozzjona ruħi b’dan l-inkontru bla ħsieb. Nipprova nislet iżjed u mmur sal-pultruna: il-persuni jgħosfru u posthom jeħduh koċċ buffi jiddieħqu bija. Immur lura mifxul lejn il-mejda.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-10">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">6 534 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  novembru promo-poezija sequence- story-29" href="/leslie-vassallo-wirja/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Wirja', 70]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Novembru 2023</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Wirja
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Leslie Vassallo</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text poetry">
+			
+				<p>Immorru, ukoll, minn labirint toroq,
+għal wirja ta’ pitturi, statwi—
+Qlugħ bojod f’ċpar ilwien jinbarmu;
+swaba’ mwieġ deħlin fuq xatt mitluq:
+U nofs dawra qaddisin martri
+b’qillet ġrajjiethom f’idejhom, f’ħarsithom.
+Mal-ħitan stqarrija safra trombi, platti, tnabar—
+
+Minn fuq swar il-belt għajnejn għassiesa:
+Imma aħna ngħaddu maġenb għorof li jafuna,
+barumbara tiġġarraf tbarqam tifkira,
+ġieri jilwi mill-blat, loġġa tittawwal;
+għajn moħbija f’wied ħemda, palma f’dagħbien,
+razzett jidwi daħka mit-twieqi, qasab iħaxwex riħ.
+Żewġ nagħġiet joħorġu, iwieġbu għal leħinna.
+</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-29">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">110 kelmiet</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  ottubru promo-esej sequence- story-22" href="/davinia-hamilton-żerriegħa/" onclick="analytics(['trackEvent', 'Promo', 'minn: Werrej', 'għal: Żerriegħa', 71]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Ottubru 2023</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Żerriegħa
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Davinia Hamilton</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Fil-ħarifa tal-2020, fil-bidu tat-tieni lockdown, żrajt żerriegħa għall-ewwel darba f’ħajti, u r-raħs ta’ idea rabba l-għeruq. Dak iż-żmien konna f’nofs il-pandemija: in-numri—l-infezzjonijiet, il-pazjenti l-ICU, u l-imwiet—kienu telgħin, u konna qegħdin niffaċċjaw xitwa twila u kiefra. Malta kienet tinħass ’il bogħod ’il bogħod—’il bogħod wisq minn dan l-appartament żgħir f’Londra. Iż-żmien kien għaddej b’pass illajmat imma goff, ma jċedi xejn. Ħassejt in-nuqqas ta’ familti, kont ili xhur twal ma narahom, u l-ivvjaġġar kien għadu perikoluż. Kien għad ma kellniex vaċċin biex itaffi l-periklu ta’ dan il-virus li kien qiegħed jeqred tant nies. Bl-ansjetà ttextex f’żaqqi, kont qisni għasfur b’qalbi tgħaġġel, kollni ttikazzjoni u enerġija bla skop.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-22">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">5 952 kelma</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+</ul>
+
+			</section>
+		</div>
+	</article>
+	<script>
+		reportingTitle = "Werrej";
+	</script>
+
+			</main>
+		</div>
+		<div id="bottom-wrapper">
+			<img id="deco" role="none" src="/img/deco-100.svg" alt="Dekorazzjoni art-nouveau" />
+			
+				<div id="newsletter-container-bottom" class="newsletter-container">
+					<section id="form" data-track-content data-content-name="Homepage" data-content-piece="formola">
+						<iframe id="newsletter" class="newsletter-iframe-regular" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#" scrolling="no" title="Abbona fin-newsletter"></iframe>
+<iframe id="newsletter" class="newsletter-iframe-dark" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#|#201e1d|#908984|0|442093344ewr" scrolling="no" title="Abbona fin-newsletter"></iframe>
+<iframe id="newsletter" class="newsletter-iframe-contrast" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#|#000000|#ffffff|0|442093344ewr" scrolling="no" title="Abbona fin-newsletter"></iframe>
+
+					</section>
+				</div>
+			
+			<footer data-track-content data-content-name="Footer" data-content-piece="werrej">
+	<nav class="footer-content">
+		<menu id="housekeeping">
+			<li class="header">Dwarna</li>
+			<li><a href="/kolofon/">Kolofon</a></li>
+			<li><a href="/proċess-editorjali/">Proċess</a></li>
+			<li><a href="/gwida-tal-istil/">Gwida tal-istil</a></li>
+			<li><a href="/cookies/">Cookies</a></li>
+			<li><a href="/privatezza/">Privatezza</a></li>
+			<li><a href="/aċċessibbiltà/">Aċċessibbiltà</a></li>
+			<li><a href="/podcast/">Podcast</a></li>
+			<li><a href="/newsletter/">Newsletter</a></li>
+			<li class="hide-tablet"><a href="/drittijiet/">Drittijiet</a></li>
+		</menu>
+		<menu id="media">
+			<li class="header">Midja</li>
+			<li><a href="/ar/" class="arabic">العربية</a></li>
+			<li><a href="/ca/">Català</a></li>
+			<li><a href="/de/">Deutsch</a></li>
+			<li><a href="/en/">English</a></li>
+			<li><a href="/es/">Español</a></li>
+			<li><a href="/fr/">Français</a></li>
+			<li><a href="/it/">Italiano</a></li>
+			<li><a href="/nl/">Nederlands</a></li>
+			<li class="hide-tablet"><a href="/ro/">Română</a></li>
+		</menu>
+		<menu id="socials">
+			<li class="header">Segwina</li>
+			<li><a href="https://facebook.com/aphroconfuso">Facebook</a></li>
+			<li><a href="https://instagram.com/aphroconfuso">Instagram</a></li>
+			
+			
+			<li><a href="https://whatsapp.com/channel/0029VaysAKP7z4kZHDKdZ71J" rel="me">WhatsApp</a></li>
+			<li><a href="https://aphroconfuso.bsky.social/">Bluesky</a></li>
+			<li><a href="https://youtube.com/@aphroconfuso">Youtube</a></li>
+			<li><a href="https://open.spotify.com/user/31rly4s75gfxs6li6bcxc5bqlgza">Spotify</a></li>
+		</menu>
+		<menu id="podcast">
+			<li class="header">Podcast</li>
+			<li><a href="https://podcasts.apple.com/us/podcast/aphroconfuso/id1686567243">Apple</a></li>
+			
+			<li><a href="https://feeds.acast.com/public/shows/aphroconfuso">RSS feed</a></li>
+			<li><a href="https://open.spotify.com/show/75Lt3UMvC1jE15SGrNFMww">Spotify</a></li>
+			
+		</menu>
+		<div id="logotype-container">
+			<a href="/"><img src="/img/logotype.svg" class="logotype" alt="logo: Aphroconfuso" /></a>
+		</div>
+		<div id="email">
+			<a href="mailto:l-edituri@aphroconfuso.mt" class="email">l-edituri@aphroconfuso.mt</a>
+		</div>
+		<div class="hide-mobile choose-theme choose-theme-footer">
+			<a id="theme-regular-footer" role="button" tabindex="4">s</a>
+			<a id="theme-dark-footer" role="button" tabindex="5">m</a>
+			<a id="theme-contrast-footer" role="button" tabindex="6">c</a>
+			<a id="theme-system-footer" role="button" tabindex="7">p</a>
+		</div>
+		<div id="copyright"><a href="/drittijiet/" class="copyright">&copy; 2023-2025 Aphroconfuso et al</a></div>
+		<div id="qrcode"><img src="/img/qr/werrej.png" width="180" height="180" alt="QR code" /></div>
+		<div id="url">https://aphroconfuso.mt/werrej/</div>
+	</nav>
+</footer>
+
+		</div>
+		<aside id="scroll-tools" class="monthly-outlined">
+			<p><span id="progress"><!-- --></span></p>
+		</aside>
+	</body>
+</html>

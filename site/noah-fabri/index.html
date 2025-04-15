@@ -1,0 +1,1252 @@
+<!doctype html>
+<html lang="mt" translate="no">
+
+	<head>
+		<meta charset="utf-8">
+		
+	<title>Noah Fabri · Aphroconfuso</title>
+	<meta content="Noah Fabri studja l-antropoloġija. Hija tikteb il-mużika, il-proża u għat-teatru. Tipparteċipa f’komunitajiet tal-arti DIY fejn tgħallmet diversi prattiki kollaborattivi li bihom toħloq xogħolha. Hija parti mill-kollettiv mużikali Karmaġenn li ħareġ żewġ albums bejn l-2019 u l-2023. Noah ġieli jesp…" name="description">
+	<meta property="og:image" content="/stampi/social_aphroconfuso_logo_social_kbir_kwadrat_d073f4e24a.jpg">
+
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+		<meta content="width=device-width, initial-scale=1" name="viewport">
+		<meta content="width=device-width" initial-scale="1.0" maximum-scale="1.0" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="yes" name="mobile-web-app-capable">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#f9f9f3">
+		<link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon-16x16.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32x32.png">
+		<link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
+		<link rel="mask-icon" href="/img/icons/safari-pinned-tab.svg" color="#5bbad5">
+		<meta property="og:image:type" content="image/jpeg">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
+		<link rel="canonical" href="https://aphroconfuso.mt/noah-fabri/">
+		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
+		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
+		<link rel="stylesheet" href="/css/style-515d1d07.css">
+		<script>
+			var
+				audioLoaded,
+				audioUrls,
+				author,
+				body,
+				bodyEnd,
+				bodyHeight,
+				bodyStart,
+				bodyText,
+				bookmarksArray,
+				bookmarksList,
+				bookmarksMenuElement,
+				charactersPerPixel,
+				charactersPerScreen,
+				currentTime,
+				duration,
+				elapsedTime,
+				hideScrollTools,
+				lastReportedReadingTime,
+				lastReportedScrollPosition,
+				lastScrollPosition,
+				message,
+				issueMonth,
+				issueMonthYear,
+				newScrollPosition,
+				pageHeight,
+				pageReportingTitle,
+				percentageProgress,
+				placeText,
+				podcastUrl,
+				previousTime,
+				progressElement,
+				readingSpeed,
+				reportingTitle,
+				screenHeight,
+				skippedTime,
+				storyCompleted,
+				storyId,
+				storyType,
+				sequenceEpisodeNumber,
+				sequenceEpisodeTitle,
+				timeStarted,
+				pageTitle,
+				wordcount,
+				wordsPerPixel,
+				wordsPerSecond,
+				wordsPerSecondAudio,
+				wordsPerScreen;
+
+			audioLoaded = false;
+			bookmarksArray = [];
+			percentageProgress = 0;
+			previousTime = [];
+			storyCompleted = false;
+
+			const	urlSlug = location.pathname.replace(/\//g, '');
+			const setCookie = (cname, cvalue, exdays = 36500) => {
+				const d = new Date();
+				d.setTime(d.getTime() + (exdays*24*60*60*1000));
+				let expires = "expires="+ d.toUTCString();
+				document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+			}
+			const getCookie = (cname) => {
+				let name = cname + "=";
+				let decodedCookie = decodeURIComponent(document.cookie);
+				let ca = decodedCookie.split(';');
+				for(let i = 0; i < ca.length; i++) {
+					let c = ca[i];
+					while (c.charAt(0) == ' ') {
+						c = c.substring(1);
+					}
+					if (c.indexOf(name) == 0) {
+						return c.substring(name.length, c.length);
+					}
+				}
+				return "";
+			}
+			var _paq = window._paq = window._paq || [];
+			const analytics = (arrayInfo) => {
+				if (location.host !== 'aphroconfuso.mt') console.log(arrayInfo);
+				_paq.push(arrayInfo);
+			}
+			_paq.push(['disableCookies']);
+			_paq.push(['enableJSErrorTracking']);
+			_paq.push(['enableHeartBeatTimer']);
+			_paq.push(['enableLinkTracking']);
+			_paq.push(['trackPageView']);
+			_paq.push(['trackVisibleContentImpressions']);
+			(function () {
+				var u = "//analitika.aphroconfuso.mt/";
+				_paq.push(['setTrackerUrl', u + 'matomo.php']);
+				_paq.push(['setSiteId', location.host === 'aphroconfuso.mt' ? '1' : '2']);
+				var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
+			})();
+			const addRemoveFontSizeClass = (size) => {
+				document.body.classList.remove('font-size-1','font-size-2','font-size-3','font-size-4')
+				document.body.classList.add(`font-size-${ size }`);
+				localStorage.setItem('font', size);
+			}
+			// REVIEW
+			const translateTheme = {
+				'regular': 'regolari',
+				'dark': 'skura',
+				'contrast': 'kuntrast',
+				'system': 'sistema'
+			}
+			const addRemoveTheme = (theme, stored) => {
+				document.body.classList.remove('theme-regular','theme-dark','theme-contrast','theme-system')
+				document.body.classList.add(`theme-${ theme }`);
+				localStorage.setItem('theme', theme);
+				if (stored && theme === 'regular') return;
+				analytics(['trackEvent', 'Tema', `${ stored ? 'Tema storjata' : 'Tema nbidlet' }`, translateTheme[theme]]);
+			}
+			const initialiseAfterBody = () => {
+				document.body.classList.add(location.hostname.replace(/\.?aphroconfuso\.mt/, '') || 'production');
+				addRemoveFontSizeClass(localStorage.getItem('font') || 1);
+				addRemoveTheme(localStorage.getItem('theme') || 'regular', true);
+				if (localStorage.getItem(`tw-${urlSlug}`)) {
+					document.body.classList.add('trigger-warning-closed');
+				}
+			}
+		</script>
+		<script src="../script/script-24450c.js" type="module"></script>
+	</head>
+	<body class="show-nav this-month-april">
+		<script>initialiseAfterBody();</script>
+		<div id="top-wrapper">
+			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
+			<nav id="top-nav">
+				<div id="logo-container-wrapper">
+					<div id="logo-container">
+						<a href="/">
+							<img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" />
+						</a>
+					</div>
+					<menu class="hide-mobile" id="menu-carousels">
+						<li class="abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
+						<li class="ff-2"><a href="/almanakk-april/">Almanakk</a></li>
+					</menu>
+					<menu class="hide-mobile" id="menu-collections">
+						<li class="main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+						<li class="main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					</menu>
+				</div>
+				<input id="menu-toggle" type="checkbox" />
+				<label class='menu-button-container' for="menu-toggle">
+					<span style="display: none">Mobile biss: iftaħ il-menu</span>
+					<div class='menu-button'></div>
+				</label>
+				
+					<menu id="menu-main">
+						
+						<li class="hide-laptop main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+						<li class="hide-laptop main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+						<li class="hide-laptop abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
+						<li class="hide-laptop ff-2"><a href="/almanakk-april/">Almanakk</a></li>
+						<li><a href="/appuntamenti/">Appuntamenti</a></li>
+						<li><a href="/kontributuri/">Kontributuri</a></li>
+						<li><a href="/werrej/">Werrej</a></li>
+						<li><a href="/djarju/">Djarju</a></li>
+						<li><a href="/sensiliet/">Sensiliet</a></li>
+						<li><a href="/podcast/">Podcast</a></li>
+						<li class="hide-mobile"><a href="/kotba/" class="menu-kotba">Kotba</a></li>
+						<li class="hide-laptop choose-theme">
+							<a id="theme-regular" role="button" tabindex="0">s</a>
+							<a id="theme-dark" role="button" tabindex="1">m</a>
+							<a id="theme-contrast" role="button" tabindex="2">c</a>
+							<a id="theme-system" role="button" tabindex="3">p</a>
+						</li>
+						<li><a href="/dwarna/">Dwarna</a></li>
+						<li class="hide-laptop"><a href="/kotba/">Kotba</a></li>
+						<li class="hide-laptop"><a href="/kolofon/">Kolofon</a></li>
+						<li><a href="/newsletter/">Newsletter</a></li>
+						<li class="hide-laptop"><a href="/privatezza/">Privatezza</a></li>
+						<li><a href="/bookmarks/">Bookmarks<span id="bookmarks-number"></span></a></li>
+						<li class="hide-laptop choose-theme" id="text-size-adjust">
+							<a id="font-size-1" role="button" tabindex="8">a</a>
+							<a id="font-size-2" role="button" tabindex="9">a</a>
+							<a id="font-size-3" role="button" tabindex="10">a</a>
+							<a id="font-size-4" role="button" tabindex="11">a</a>
+						</li>
+					</menu>
+					<input class="hide-mobile" type="text" id="search-input" placeholder="fittex..." autocomplete="off" auto-fill="off" type="text" autocapitalize="none" enterkeyhint="search" />
+					<ul id="search-results"><!-- --></ul>
+				
+				<div id="brownline"></div>
+			</nav>
+			<div id="message"><!-- --></div>
+			<main id="skipto">
+				
+<article class="generic contributor-5" data-pagefind-body>
+	<header>
+		<ul><li class="header-label"><a href="/kontributuri/">Kontributuri</a></li></ul>
+		<h1 data-pagefind-weight="9">Noah Fabri</h1>
+	</header>
+	<div class="container-generic contributor">
+		<section id="grid-body">
+			<div class="generic-body-text" data-pagefind-weight="3">
+				<div data-pagefind-body data-pagefind-weight="1">
+					<p>Noah Fabri studja <l-m>l-antropoloġija</l-m>. Hija tikteb <l-m>il-mużika</l-m>, <l-m>il-proża</l-m> u għat-teatru. Tipparteċipa f’komunitajiet <l-m>tal-arti</l-m> DIY fejn tgħallmet diversi prattiki kollaborattivi li bihom toħloq xogħolha. Hija parti <l-m>mill-kollettiv</l-m> mużikali Karmaġenn li ħareġ żewġ albums bejn <l-m>l-2019</l-m> u <l-m>l-2023</l-m>. Noah ġieli jesperimenta <l-m>bl-arti</l-m> viżiva, u <l-m>fl-2021</l-m> tella’ <l-m>l-performances</l-m> <em>Inbigħu <l-m>l-Imqaret</l-m></em> u <em>Huma Min Huma?</em> F’dik <l-m>is-sena</l-m> wkoll ippubblikat <em>Dar Imħawra</em>, ktieb <l-m>bl-illustrazzjonijiet</l-m> ta’ Martina Farrugia, magħmul <l-m>bl-idejn</l-m> miż-żewġ artisti. <l-m>L-interess</l-m> tagħha <l-m>fil-mixi</l-m>, <l-m>l-ispazju</l-m> pubbliku, u <l-m>l-ġeneru</l-m> jidher ukoll <l-m>fil-film</l-m> <em><l-m>In-Nani</l-m> F’Art <l-m>Il-Ġganti</l-m></em> (2021). <l-m>L-istorja</l-m> “The Wedding Dress” dehret <l-m>fl-ewwel</l-m> antoloġija ta’ Praspar Press (2021). Noah huwa wkoll parti minn Geġwiġija, komunità mibnija madwar librerija temporanja. <l-m>L-ewwel</l-m> rumanz tagħha, <em><l-m>It-Togħma</l-m> Morra taċ-Ċiċri</em> ħareġ <l-m>fl-2024</l-m>. Noah kien ukoll parti <l-m>mill-kollettiva </l-m><a href="/jien_a/">Jien_a</a>.</p>
+				</div>
+				
+				
+					<div class="anthologies">
+						<p class="continuity">Kotba ta’ <span class="contributor">Aphroconfuso</span> bil-kitba ta’ <span class="contributor">Noah</span>:</p>
+						
+						
+						
+						
+						
+						
+						<ul class="promo-list">
+	
+	
+		
+
+
+<li >
+	<a class="promo  ottubru promo-recensjoni sequence- story-88" href="/kotba-antoloġija-1/" onclick="analytics(['trackEvent', 'Promo', 'minn: Noah Fabri', 'għal: Antoloġija 1', 1]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Ottubru 2024</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Antoloġija 1
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Antoloġija 1 hija l-ewwel pubblikazzjoni stampata ta’ Aphroconfuso u tiġbor fiha l-biċċa l-kbira tal-kitba li dehret fl-ewwel sena tal-ġurnal. Din il-ġabra tinkludi esejs, stejjer, poeżiji, djarji, xogħol kollaborattiv u kitba oħra li mhux faċli tikklassifikaha. B&#39;kollox tinkludi 34 xogħol minn 24 kittieb: Aaron Aquilina, Karl Baldacchino, Simon Bartolo, Warren Bartolo, Kurt Borg, Antoine Cassar, Daniel Cossai, Leanne Ellul, Noah Fabri, Ryan Falzon, Charlene Galea, Miriam Galea, Joe Gatt , Romeo Roxman Gatt, Rowena Grech, Jimmy Grima, Davinia Hamilton, Omar N’Shea, Kris Polidano, Matteo Pullicino, Matthew Schembri, Maria Theuma, Leslie Vassallo u Loranne Vella. Joe Gatt u Loranne Vella, edituri.</p>
+			
+			
+				<img src="/stampi/undefined.avif" alt="">
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-88">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+</ul>
+
+					</div>
+				
+				
+					<div class="wrote">
+						<p class="continuity">Kitba ta’ <span class="contributor">Noah</span> fil-ġurnal:</p>
+						
+						
+						
+						
+						
+						<ul class="promo-list">
+	
+	
+		
+
+
+<li >
+	<a class="promo  dicembru promo-esej sequence- story-31" href="/noah-fabri-insalata/" onclick="analytics(['trackEvent', 'Promo', 'minn: Noah Fabri', 'għal: Insalata', 1]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Diċembru 2023</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Insalata
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Il-memorja fl-ikel tinfed b’mod sottili. Jien u nagħmel l-insalata kont qed niftakar, mingħajr ma kelli għalfejn nitkellem, sempliċiment billi nirrepeti b’ġismi l-azzjonijiet li għaddewli ommi u ommha. Meta nikkunsidraw l-ikel, irridu naħsbu fuq lingwa sħiħa mhux mitkellma, irridu naħsbu fuq il-ħin b’mod differenti, irridu nidħlu fi ħsieb fuq livell għalkollox differenti minn dak kapitalist li jorganizzalna l-ħajja ta’ kuljum fid-dinja pubblika tal-lum. Fil-verità, fil-privat u fi ċrieki żgħar, kull wieħed u waħda minna għandna l-possibbiltà biex naħsbu b’ontoloġija kompletament differenti minn dik tal-Illuminiżmu. U iktar ma nsajru flimkien u naqsmu l-ikel u l-għajnuna bejnietna, iktar dawn iċ-ċrieki nistgħu nkabbruhom. L-ikel jgħaqqad u jagħti dar u post għall-kenn lil min joffrih u jaqsmu. Huwa importanti li nagħrfu l-valur politiku li nieħdu ħsieb xulxin, xi ħaġa li t-teorija femminista ilha tinsisti dwarha. Meta taqsam ikla kważi dejjem tkun qed toħloq familja, u għalija l-familja ta’ veru tinħoloq meta nieklu flimkien b’mod intenzjonali.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-31">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  mejju promo-storja sequence- story-6" href="/noah-fabri-ħsieb-il-ħamiema/" onclick="analytics(['trackEvent', 'Promo', 'minn: Noah Fabri', 'għal: Ħsieb il-Ħamiema', 2]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Mejju 2023</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Ħsieb <l-m>il-Ħamiema</l-m>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Faqqgħet bħall-qniepen tal-knisja t-twerżiqa ta’ sajjetta tas-sirena tal-pulizija. Maimouna kienet ilha tliet snin taħdem fil-ħanut ħdejn il-pont li jaqsam il-Ħamrun u l-Marsa. Kienet taf kull rokna u xkaffa, kull loġika organizzatorja, u kull bidla li kienet saret fuq il-post. L-irwejjaħ tal-ħitan ma baqgħetx ixxommhom, ix-xufiera li kienu jġibu l-konsenji saret tafhom sew, il-klijenti, sintendi, saru qishom tal-familja, qalb it-tibdil u ċ-ċaqliq tan-nies, u l-kollegi waslu u telqu bħall-għasafar tal-passa. Xorta rnexxielha żżomm ċerta distanza mentali mill-imgħallem u l-ħajja tal-ħanut; minkejja li kienet tħobb taħdem, dan l-aħħar l-idea tax-xogħol innifisha kienet qed taraha velenu tal-moħħ.
+</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-6">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+</ul>
+
+					</div>
+				
+				
+					<div class="diarised">
+						<p class="continuity">Entrati mid-djarju ta’ <span class="contributor">Noah</span>:</p>
+						
+						
+						
+						
+						<ul class="promo-list collated">
+	
+	
+		
+
+
+<li  class="multiple-episodes episode-1">
+	<a class="promo  marzu promo-djarju sequence-12 story-121 is-episode" href="/ira-melkonyan-ma-noah-fabri-djarju-2022-09-11-id-djarji-tad-demm/" onclick="analytics(['trackEvent', 'Promo', 'minn: Noah Fabri', 'għal: Djarju #1 Ira Melkonyan ma’ Noah Fabri', 1]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">
+			<span class="header-djarju">Djarju</span>
+			
+				<span class="subject-date">11.09.2022</span>
+			
+		</li>
+	
+	
+	</ul>
+	
+	
+		
+	
+	
+
+	
+
+
+
+ 
+
+
+	
+		<h3>
+			
+			
+			Id-djarji <l-m>tad-demm</l-m>
+		</h3>
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Qed naħseb fuq il-letarġija, l-apatija u l-biża’. U fuq kif il-biżgħat tal-oħrajn jaqbżu fuqek u jżidulek tiegħek. Qed naħseb fuq l-artisti kollegi tiegħi — fuq din ix-xewqa u passjoni għas-suċċess li għandhom (ħafna minnhom, għall-inqas). Qed insib ruħi miexja kontra l-kurrent; inħobb min hu umli. Nammiraha u ngħir għaliha dil-forza prużuntuża mimlija passjoni. Qed nitħasseb dwara; ma nistax insibha fija. Letarġija? Apatija? Fejn hi l-passjoni tiegħi? Ili nieħu kollox bil-lajma, nofsni rieqda (qiegħda ħażin?) għall-aħħar għaxart ijiem. Bla motivazzjoni.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-121">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+</ul>
+
+					</div>
+				
+				
+				
+					<div class="collaborated">
+						<p class="continuity">Kollaborazzjonijiet:</p>
+						
+						
+						<ul class="promo-list collated">
+	
+	
+		
+
+
+<li >
+	<a class="promo  frar promo-esej sequence- story-40" href="/jien_a-il-mara-tas-suldat/" onclick="analytics(['trackEvent', 'Promo', 'minn: Noah Fabri', 'għal: Il-Mara tas-Suldat', 1]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Frar 2024</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Il-Mara <l-m>tas-Suldat</l-m>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Jien_a</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Fil-bidu, jekk qatt kien hemm bidu, il-maħbubin kollha sejħu lilhom infushom amazzuni. Huma u jgħixu flimkien, jinħabbu, jiċċelebraw lilhom infushom, jilagħbu, fiż-żmien meta x-xogħol kien għadu logħba, il-maħbubin fil-ġnien tal-art baqgħu jsejħu lilhom infushom amazzuni tul Żmien id-Deheb kollu. Imbagħad, xħin twaqqfu l-ewwel bliet, bosta maħbubin kissru l-armonija oriġinali u sejħu lilhom infushom ommijiet. Minn dan iż-żmien ’l hemm, il-kelma amazzuna saret tfisser għalihom tifla, li qatt ma tikber, immatura, dik li qatt ma tħaddan id-destin tagħha. L-amazzuni tkeċċew mill-bliet tal-ommijiet. Kien f’dak il-mument li dawn saru vjolenti u bdew jiġġieldu biex jiddefendu l-armonija. Għalihom, l-isem antik amazzuni baqa’ bit-tifsira oriġinali. U minn issa beda jfisser xi ħaġa aktar: dawk li jħarsu l-armonija. Minn hemm ’il quddiem stajt issib amazzuni f’kull żmien, f’kull kontinent, gżira u xatt. Dħalna fiż-Żmien Glorjuż grazzi għall-amazzuni tal-lum. Ħafna drabi maħbuba tuża ġesti biex b’ġisimha ssir tixbah dak l-annimal jew dawk l-annimali li l-aktar li għandha affinità magħhom u b’hekk tagħti pjaċir lill-maħbuba tagħha. Dan isir aktar faċli meta tkun taħt ipnożi. Trid tinsa l-mossi ta’ kuljum u ssib dawk tal-annimali tagħha. Din mhix imitazzjoni tal-annimalesk: din hija mima. Hija ħaġa diffiċli biex taqbad u tagħmilha spirtu pront, anki jekk il-maħbuba ssaqsiha biex tagħmilhielha bl-ikbar ġentilezza. “Meta ssaqsini biex nagħmilha ta’ ġemel, niddejjaq, għax rari jirnexxili.” (Charlotte Plume, Iċ-Ċirku Tiegħi, Gallija, Żmien il-Konkos.)</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-40">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  marzu promo-terminu sequence- story-128" href="/il-kliem-fit-teorija-il-politika-tal-kura/" onclick="analytics(['trackEvent', 'Promo', 'minn: Noah Fabri', 'għal: il-politika tal-kura', 2]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">
+			
+				<span class="subject-date">01.03.2025</span>
+			
+		</li>
+	
+	
+		<li class="header-label collection-slug collection-3">
+			Il-Kliem fit-Teorija
+		</li>
+	
+	</ul>
+	
+	
+		
+			<h1>
+				il-politika <l-m>tal-kura</l-m>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Raylene Abdilla</span>, <span class="author">Noah Fabri</span>, <span class="author">Davinia Hamilton</span>, <span class="author">Kurt Borg</span>, <span class="author">Loranne Vella</span>, <span class="author">Kristina Borg</span> & <span class="author">Omar <l-m>N’Shea</l-m></span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Sibt diffikultà bit-traduzzjoni għal “politics of care” bħala “il-politika tal-kura” għaliex il-kelma “kura” bil-Malti hija aktar assoċjata mad-diskors mediku, bħal ngħidu aħna meta t-tabib jikkura pazjent. Bit-Taljan meta ngħidu “ħu ħsieb” tiġi tradotta bħala “stammi bene”, waqt li l-frażi “nieħu ħsiebek” tiġi tradotta għal “mi curo di te”. F’dan is-sens it-Taljan għandu użu usa’ għall-kunċett “curare” li jistà jfisser kemm “tieħu ħsieb” u kemm “kura” mill-mard. Bil-Malti ma nħossx li l-kelma “kura” hija adatta biex taqbad il-kunċett ta “politics of care”.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-128">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  marzu promo-terminu sequence- story-129" href="/il-kliem-fit-teorija-ħu-ħsieb/" onclick="analytics(['trackEvent', 'Promo', 'minn: Noah Fabri', 'għal: ħu ħsieb', 3]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">
+			
+				<span class="subject-date">24.02.2025</span>
+			
+		</li>
+	
+	
+		<li class="header-label collection-slug collection-3">
+			Il-Kliem fit-Teorija
+		</li>
+	
+	</ul>
+	
+	
+		
+			<h1>
+				ħu ħsieb
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Noah Fabri</span>, <span class="author">Kurt Borg</span>, <span class="author">Omar <l-m>N’Shea</l-m></span> & <span class="author">Raylene Abdilla</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Fid-dinja Ingliża u dik tal-Punent, “to care” dejjem kienet distinta minn “thought” u “reason”. “Care” assoċjata ma’ emozzjonijiet, irtubija tal-qalb, femminilità—u mhux il-ħsieb, li dejjem kien meqjus rett, veritier u imparzjali, kif ħafna drabi huwa mfisser fil-Punent. Qisu l-Malti ma jagħmilx din id-distinzjoni radikali bejn il-ħsieb bħala ħsieb astratt u li tieħu ħsieb xi ħadd.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-129">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  marzu promo-terminu sequence- story-52" href="/il-kliem-fit-teorija-queer-kwir/" onclick="analytics(['trackEvent', 'Promo', 'minn: Noah Fabri', 'għal: queer/kwir', 4]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">
+			
+				<span class="subject-date">12.02.2024</span>
+			
+		</li>
+	
+	
+		<li class="header-label collection-slug collection-3">
+			Il-Kliem fit-Teorija
+		</li>
+	
+	</ul>
+	
+	
+		
+			<h1>
+				queer/kwir
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Omar <l-m>N’Shea</l-m></span>, <span class="author">Warren Bartolo</span>, <span class="author">Noah Fabri</span> & <span class="author">Aaron Aquilina</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Meta kont qed naħseb dwar queer, bil-Malti, ħassejt li kemm il-verb (to queer) kif ukoll l-insla tiegħu bħall-aġġettiv queer tant huma dependenti fid-diskors politiku u teoretiku queer fuq l-għeruq tiegħu mil-Latin torquere (Sedgwick, Halberstam, Chen) illi t-tħaddim u l-potenzjal tiegħu jinsab eżattament fl-isfond (u joħroġ mill-isfond ’il barra). Għalkemm il-kelma fil-verżjoni tagħha miktuba kif tinħass (“kwir”) fil-Malti qisha daħlet mhux ħażin, madanakollu, din il-verżjoni taf toskura dan kollu li għadni kif għedt. Mill-Ġermaniku quer nistgħu naslu għat-terminu “laġenbiżmu” (eż. poeżija “la ġenba”) mentri mil-Latin torquere nistgħu naslu għat-terminu “tagħwiġ”. Però nħoss li kelmiet bħal dawn se jiddiżassoċjaw minn (u b’hekk jinjoraw) dak kollu li hu storja queer, passat queer, potenzjal queer. Naqbel mal-entrata ta’ Omar (25.04.23), li parti mir-raġuni li kulħadd qed juża l-kelma queer madwar id-dinja fi kwalunkwe lingwa, hi, nissuspetta, biex tingħaraf. Barra minn hekk, ma nistax ma naħsibx li l-kelma “queer” infiltrat fid-diskors kontemporanju tant li kkristallizzat sal-punt li saret “intraduċibbli” (Cassin, Apter). Dwar il-kontinġenzi, eżempju queering jew queerness, inħoss li minkejja li jistunaw ftit mhux ħażin, għandna nħalluhom hekk. (Eż: “X’jippożizzjona l-queerness bħala għodda…”)</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-52">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+</ul>
+
+					</div>
+				
+				
+					<div class="podcasts">
+						<p class="continuity">Poddati ma’ <span class="contributor">Noah</span>:</p>
+						
+						
+						
+						
+						<ul class="promo-list collated">
+	
+	
+		
+
+
+<li >
+	<a class="promo  jannar promo-poddata sequence- story-113" href="/raylene-abdilla-kurt-borg-noah-fabri-omar-nshea-poddata-2025-01-24-ħbiberija-ħrejjef-komunità-(taħdita)/" onclick="analytics(['trackEvent', 'Promo', 'minn: Noah Fabri', 'għal: Ħbiberija, Ħrejjef, Komunità (taħdita)', 1]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">
+			Poddata
+			
+				<span class="subject-date">24.01.2025</span>
+			
+		</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Ħbiberija, Ħrejjef, Komunità
+			</h1>
+		
+	
+	
+
+	
+
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Fl-24 ta’ Jannar 2025 fis-6:00pm, flimkien ma’ Kurt Borg u Noah Fabri, konna l-mistednin tal-Librerija Pubblika ta’ Pembroke. Raylene Abdilla tkellmet dwar il-kitbiet f’Aphroconfuso u Omar N’Shea mexxa d-diskussjoni. Kurt tkellem dwar il-ġabra ta’ esejs tiegħu sens ta’ ħarifa (Klabb Kotba Maltin 2024) u qara silta minnha. Noah Fabri tkellmet dwar ir-rumanz tagħha It-Togħma Morra taċ-Ċiċri (Merlin 2024) u wkoll qrat silta minnu. Raylene tkellmet dwar diversi kitbiet li jidhru f’Antoloġija 1 u li jidhru wkoll online fosthom Medusa ta’ Rowena Grech, Il-Labra, Il-Lanza, il-Qoffa, l-Azzarin ta’ Loranne Vella, Likantropi ta’ Davinia Hamilton, u d-Djarju ta’ Warren Bartolo. Omar N’Shea mexxa t-taħdita. Tkellimna dwar il-kitba bil-Malti, il-ħbiberija, il-karattri f’rumanz imnebbħin mill-ħbieb tal-awtur, ir-reviżjoni, id-differenza bejn ir-rumanz u l-esej, u bosta suġġetti oħra.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-113">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  mejju promo-poddata sequence- story-62" href="/noah-fabri-poddata-2024-05-11-noti-editorjali-5-noah-fabri/" onclick="analytics(['trackEvent', 'Promo', 'minn: Noah Fabri', 'għal: Noti Editorjali #5: Noah Fabri #5', 2]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">
+			Poddata
+			
+				<span class="subject-date">11.05.2024</span>
+			
+		</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Noti Editorjali<span class="episodeNumber"> #5</span>
+			</h1>
+		
+	
+	
+
+	
+
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>« Dawn il-proċessi kollha huma xi ħaġa li tinteressani peress li ovvjament huma assoċjati aktar man-nisa, max-xogħol tan-nisa, li mhux mhuwiex valutat, ma tistax tikkapitalizzah. Jiġi kkapitalizzat, imma l-bażi tiegħu mhix il-kreazzjoni tal-valur, il-valur tiegħu mhux ekonomiku imma huwa soċjali. Qiegħed biex tirriproduċi s-soċjetà, jew tħaddan ’in-nies, biex tieħu ħsiebhom. Dak huwa l-valur prinċipali ta&#39; dan it-tip ta&#39; xogħol. Allura nieħu gost nuża dan it-tip ta&#39; xogħol meta nkun qed naħdem fuq proġetti artistiċi. Nieħu gost nagħmilhom waqt li nkun qed nitkellem ukoll fuq il-ġeneru. Meta għamilt Huma min huma? kont qed inħit liebsa u nitkellem speċifikament fuq il-pronomi. Għal Insalata għamilt insalata waqt li tkellimt fuq ir-relazzjoni tiegħi mal-ikel u l-ġeneru, il-preżentazzjoni u l-ħsieb tiegħi marbut mal-ikel u l-ġeneru. Jiġifieri dejjem kien hemm dawk l-ideat. Anki fil-kitba, meta nkun qed nikteb, dejjem nidħol fid-dettal fuq l-ikel, fuq is-sensi, fuq l-affarijiet effimeri tal-ħajja ta&#39; kuljum. Jiġu anka mill-istudji tiegħi tal-Antropoloġija, li vera tiffoka fuq il-ħajja ta&#39; kuljum, u vera l-ħajja ta&#39; kuljum iġġibha maġika. U dik xi ħaġa li dejjem pruvajt nagħmel għax għalija l-ħajja ta&#39; kuljum hija maġika speċjalment f&#39;postijiet fejn il-kapitaliżmu ma tantx jirnexxielu em jippenetra. Għalhekk ukoll vera nidħol fuq is-sensi, fuq il-proċessi tal-ġisem. U li l-karattri jkunu konxi mill-ġisem tagħhom, x&#39;qed jagħmlu fl-ispazju u dawn l-affarijiet kollha li l-loġika assoċjata mal-patrijarkat ma tagħtix kas, għalija huma l-aktar affarijiet importanti fil-ħajja tal-bniedem. »</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-62">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  marzu promo-poddata sequence- story-55" href="/aaron-aquilina-noah-fabri-omar-nshea-poddata-2024-03-27-il-kliem-fit-teorija/" onclick="analytics(['trackEvent', 'Promo', 'minn: Noah Fabri', 'għal: Il-Kliem fit-Teorija', 3]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">
+			Poddata
+			
+				<span class="subject-date">27.03.2024</span>
+			
+		</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Il-Kliem <l-m>fit-Teorija</l-m>
+			</h1>
+		
+	
+	
+
+	
+
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Termini fil-ħsieb kontemporanju malajr isibu ruħhom fid-diskors kulturali u politiku mingħajr ma jkun sar ingaġġament mar-raġunijiet għalfejn nużaw lilhom flok oħrajn. Meta niktbu bl-istess lingwa li biha naqraw, faċli nużaw dal-kelmiet mingħajr ma nirriflettu wisq fuqhom. Iżda meta niktbu bil-Malti, id-diffikultà tat-traduzzjoni tista’ ssir privileġġ: tagħtina l-opportunità ningaġġaw mill-qrib mat-termini qabel indaħħluhom fil-lingwa tagħna. “Il-Kliem fit-Teorija” huwa proġett fejn kittieba u speċjalisti jiddiskutu t-traduzzjoni fil-Malti ta’ kliem fil-ħsieb kontemporanju. Il-kelliema kienu Aaron Aquilina, Noah Fabri u Omar N’Shea.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-55">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+</ul>
+
+					</div>
+				
+			</div>
+		</section>
+		<section id="grid-max-panel-left-top" data-pagefind-ignore>
+			<section class="generic-menu contributors-menu">
+	
+		<nav>
+			
+				<li><a href="/raylene-abdilla/">Raylene Abdilla</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/aaron-aquilina/">Aaron Aquilina</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/jasmine-bajada/">Jasmine Bajada</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/karl-baldacchino/">Karl Baldacchino</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/simon-bartolo/">Simon Bartolo</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/warren-bartolo/">Warren Bartolo</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/kristina-borg/">Kristina Borg</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/kurt-borg/">Kurt Borg</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/nicole-borg/">Nicole Borg</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/antoine-cassar/">Antoine Cassar</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/daniel-cossai/">Daniel Cossai</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/leanne-ellul/">Leanne Ellul</a></li>
+			
+		
+	
+		
+			
+				<li class="active">Noah Fabri</li>
+			
+		
+	
+		
+			
+				<li><a href="/ryan-falzon/">Ryan Falzon</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/fatima-a.m./">fatima a.m.</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/charlene-galea/">Charlene Galea</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/miriam-galea/">Miriam Galea</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/joe-gatt/">Joe Gatt</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/romeo-roxman-gatt/">Romeo Roxman Gatt</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/rowena-grech/">Rowena Grech</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/jimmy-grima/">Jimmy Grima</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/davinia-hamilton/">Davinia Hamilton</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/jien_a/">Jien_a</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/ira-melkonyan/">Ira Melkonyan</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/glorianne-micallef/">Glorianne Micallef</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/omar-nshea/">Omar N’Shea</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/nathan-anthony-pace/">Nathan Anthony Pace</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/kris-polidano/">Kris Polidano</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/matteo-pullicino/">Matteo Pullicino</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/matthew-schembri/">Matthew Schembri</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/maria-theuma/">Maria Theuma</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/leslie-vassallo/">Leslie Vassallo</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/loranne-vella/">Loranne Vella</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/manuela-zammit/">Manuela Zammit</a></li>
+			
+		</nav>
+	
+</section>
+
+		</section>
+	</div>
+</article>
+<script>
+	reportingTitle = "Noah Fabri";
+</script>
+
+			</main>
+		</div>
+		<div id="bottom-wrapper">
+			<img id="deco" role="none" src="/img/deco-100.svg" alt="Dekorazzjoni art-nouveau" />
+			
+				<div id="newsletter-container-bottom" class="newsletter-container">
+					<section id="form" data-track-content data-content-name="Homepage" data-content-piece="formola">
+						<iframe id="newsletter" class="newsletter-iframe-regular" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#" scrolling="no" title="Abbona fin-newsletter"></iframe>
+<iframe id="newsletter" class="newsletter-iframe-dark" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#|#201e1d|#908984|0|442093344ewr" scrolling="no" title="Abbona fin-newsletter"></iframe>
+<iframe id="newsletter" class="newsletter-iframe-contrast" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#|#000000|#ffffff|0|442093344ewr" scrolling="no" title="Abbona fin-newsletter"></iframe>
+
+					</section>
+				</div>
+			
+			<footer data-track-content data-content-name="Footer" data-content-piece="noah-fabri">
+	<nav class="footer-content">
+		<menu id="housekeeping">
+			<li class="header">Dwarna</li>
+			<li><a href="/kolofon/">Kolofon</a></li>
+			<li><a href="/proċess-editorjali/">Proċess</a></li>
+			<li><a href="/gwida-tal-istil/">Gwida tal-istil</a></li>
+			<li><a href="/cookies/">Cookies</a></li>
+			<li><a href="/privatezza/">Privatezza</a></li>
+			<li><a href="/aċċessibbiltà/">Aċċessibbiltà</a></li>
+			<li><a href="/podcast/">Podcast</a></li>
+			<li><a href="/newsletter/">Newsletter</a></li>
+			<li class="hide-tablet"><a href="/drittijiet/">Drittijiet</a></li>
+		</menu>
+		<menu id="media">
+			<li class="header">Midja</li>
+			<li><a href="/ar/" class="arabic">العربية</a></li>
+			<li><a href="/ca/">Català</a></li>
+			<li><a href="/de/">Deutsch</a></li>
+			<li><a href="/en/">English</a></li>
+			<li><a href="/es/">Español</a></li>
+			<li><a href="/fr/">Français</a></li>
+			<li><a href="/it/">Italiano</a></li>
+			<li><a href="/nl/">Nederlands</a></li>
+			<li class="hide-tablet"><a href="/ro/">Română</a></li>
+		</menu>
+		<menu id="socials">
+			<li class="header">Segwina</li>
+			<li><a href="https://facebook.com/aphroconfuso">Facebook</a></li>
+			<li><a href="https://instagram.com/aphroconfuso">Instagram</a></li>
+			
+			
+			<li><a href="https://whatsapp.com/channel/0029VaysAKP7z4kZHDKdZ71J" rel="me">WhatsApp</a></li>
+			<li><a href="https://aphroconfuso.bsky.social/">Bluesky</a></li>
+			<li><a href="https://youtube.com/@aphroconfuso">Youtube</a></li>
+			<li><a href="https://open.spotify.com/user/31rly4s75gfxs6li6bcxc5bqlgza">Spotify</a></li>
+		</menu>
+		<menu id="podcast">
+			<li class="header">Podcast</li>
+			<li><a href="https://podcasts.apple.com/us/podcast/aphroconfuso/id1686567243">Apple</a></li>
+			
+			<li><a href="https://feeds.acast.com/public/shows/aphroconfuso">RSS feed</a></li>
+			<li><a href="https://open.spotify.com/show/75Lt3UMvC1jE15SGrNFMww">Spotify</a></li>
+			
+		</menu>
+		<div id="logotype-container">
+			<a href="/"><img src="/img/logotype.svg" class="logotype" alt="logo: Aphroconfuso" /></a>
+		</div>
+		<div id="email">
+			<a href="mailto:l-edituri@aphroconfuso.mt" class="email">l-edituri@aphroconfuso.mt</a>
+		</div>
+		<div class="hide-mobile choose-theme choose-theme-footer">
+			<a id="theme-regular-footer" role="button" tabindex="4">s</a>
+			<a id="theme-dark-footer" role="button" tabindex="5">m</a>
+			<a id="theme-contrast-footer" role="button" tabindex="6">c</a>
+			<a id="theme-system-footer" role="button" tabindex="7">p</a>
+		</div>
+		<div id="copyright"><a href="/drittijiet/" class="copyright">&copy; 2023-2025 Aphroconfuso et al</a></div>
+		<div id="qrcode"><img src="/img/qr/noah-fabri.png" width="180" height="180" alt="QR code" /></div>
+		<div id="url">https://aphroconfuso.mt/noah-fabri/</div>
+	</nav>
+</footer>
+
+		</div>
+		<aside id="scroll-tools" class="monthly-outlined">
+			<p><span id="progress"><!-- --></span></p>
+		</aside>
+	</body>
+</html>

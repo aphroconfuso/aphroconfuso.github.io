@@ -1,0 +1,1430 @@
+<!doctype html>
+<html lang="mt" translate="no">
+
+	<head>
+		<meta charset="utf-8">
+		
+	<title>Kris Polidano · Aphroconfuso</title>
+	<meta content="Kris Polidano għandha tendenza tħuf u tikteb fuq l-istess ponn ta’ memorji li sawruha u fuq xi oħrajn li sawru lill-kollettiv kulturali Malti ta’ bħalissa. Kris hi attiva ħafna fix-xena kulturali Maltija f’diversi oqsma. Taħdem mal-Fondazzjoni Magna Żmien biex jinżammu u jintużaw il-memorji awdjo-v…" name="description">
+	<meta property="og:image" content="/stampi/social_aphroconfuso_logo_social_kbir_kwadrat_d073f4e24a.jpg">
+
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+		<meta content="width=device-width, initial-scale=1" name="viewport">
+		<meta content="width=device-width" initial-scale="1.0" maximum-scale="1.0" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="yes" name="mobile-web-app-capable">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#f9f9f3">
+		<link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon-16x16.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32x32.png">
+		<link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
+		<link rel="mask-icon" href="/img/icons/safari-pinned-tab.svg" color="#5bbad5">
+		<meta property="og:image:type" content="image/jpeg">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
+		<link rel="canonical" href="https://aphroconfuso.mt/kris-polidano/">
+		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
+		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
+		<link rel="stylesheet" href="/css/style-515d1d07.css">
+		<script>
+			var
+				audioLoaded,
+				audioUrls,
+				author,
+				body,
+				bodyEnd,
+				bodyHeight,
+				bodyStart,
+				bodyText,
+				bookmarksArray,
+				bookmarksList,
+				bookmarksMenuElement,
+				charactersPerPixel,
+				charactersPerScreen,
+				currentTime,
+				duration,
+				elapsedTime,
+				hideScrollTools,
+				lastReportedReadingTime,
+				lastReportedScrollPosition,
+				lastScrollPosition,
+				message,
+				issueMonth,
+				issueMonthYear,
+				newScrollPosition,
+				pageHeight,
+				pageReportingTitle,
+				percentageProgress,
+				placeText,
+				podcastUrl,
+				previousTime,
+				progressElement,
+				readingSpeed,
+				reportingTitle,
+				screenHeight,
+				skippedTime,
+				storyCompleted,
+				storyId,
+				storyType,
+				sequenceEpisodeNumber,
+				sequenceEpisodeTitle,
+				timeStarted,
+				pageTitle,
+				wordcount,
+				wordsPerPixel,
+				wordsPerSecond,
+				wordsPerSecondAudio,
+				wordsPerScreen;
+
+			audioLoaded = false;
+			bookmarksArray = [];
+			percentageProgress = 0;
+			previousTime = [];
+			storyCompleted = false;
+
+			const	urlSlug = location.pathname.replace(/\//g, '');
+			const setCookie = (cname, cvalue, exdays = 36500) => {
+				const d = new Date();
+				d.setTime(d.getTime() + (exdays*24*60*60*1000));
+				let expires = "expires="+ d.toUTCString();
+				document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+			}
+			const getCookie = (cname) => {
+				let name = cname + "=";
+				let decodedCookie = decodeURIComponent(document.cookie);
+				let ca = decodedCookie.split(';');
+				for(let i = 0; i < ca.length; i++) {
+					let c = ca[i];
+					while (c.charAt(0) == ' ') {
+						c = c.substring(1);
+					}
+					if (c.indexOf(name) == 0) {
+						return c.substring(name.length, c.length);
+					}
+				}
+				return "";
+			}
+			var _paq = window._paq = window._paq || [];
+			const analytics = (arrayInfo) => {
+				if (location.host !== 'aphroconfuso.mt') console.log(arrayInfo);
+				_paq.push(arrayInfo);
+			}
+			_paq.push(['disableCookies']);
+			_paq.push(['enableJSErrorTracking']);
+			_paq.push(['enableHeartBeatTimer']);
+			_paq.push(['enableLinkTracking']);
+			_paq.push(['trackPageView']);
+			_paq.push(['trackVisibleContentImpressions']);
+			(function () {
+				var u = "//analitika.aphroconfuso.mt/";
+				_paq.push(['setTrackerUrl', u + 'matomo.php']);
+				_paq.push(['setSiteId', location.host === 'aphroconfuso.mt' ? '1' : '2']);
+				var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
+			})();
+			const addRemoveFontSizeClass = (size) => {
+				document.body.classList.remove('font-size-1','font-size-2','font-size-3','font-size-4')
+				document.body.classList.add(`font-size-${ size }`);
+				localStorage.setItem('font', size);
+			}
+			// REVIEW
+			const translateTheme = {
+				'regular': 'regolari',
+				'dark': 'skura',
+				'contrast': 'kuntrast',
+				'system': 'sistema'
+			}
+			const addRemoveTheme = (theme, stored) => {
+				document.body.classList.remove('theme-regular','theme-dark','theme-contrast','theme-system')
+				document.body.classList.add(`theme-${ theme }`);
+				localStorage.setItem('theme', theme);
+				if (stored && theme === 'regular') return;
+				analytics(['trackEvent', 'Tema', `${ stored ? 'Tema storjata' : 'Tema nbidlet' }`, translateTheme[theme]]);
+			}
+			const initialiseAfterBody = () => {
+				document.body.classList.add(location.hostname.replace(/\.?aphroconfuso\.mt/, '') || 'production');
+				addRemoveFontSizeClass(localStorage.getItem('font') || 1);
+				addRemoveTheme(localStorage.getItem('theme') || 'regular', true);
+				if (localStorage.getItem(`tw-${urlSlug}`)) {
+					document.body.classList.add('trigger-warning-closed');
+				}
+			}
+		</script>
+		<script src="../script/script-24450c.js" type="module"></script>
+	</head>
+	<body class="show-nav this-month-april">
+		<script>initialiseAfterBody();</script>
+		<div id="top-wrapper">
+			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
+			<nav id="top-nav">
+				<div id="logo-container-wrapper">
+					<div id="logo-container">
+						<a href="/">
+							<img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" />
+						</a>
+					</div>
+					<menu class="hide-mobile" id="menu-carousels">
+						<li class="abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
+						<li class="ff-2"><a href="/almanakk-april/">Almanakk</a></li>
+					</menu>
+					<menu class="hide-mobile" id="menu-collections">
+						<li class="main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+						<li class="main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					</menu>
+				</div>
+				<input id="menu-toggle" type="checkbox" />
+				<label class='menu-button-container' for="menu-toggle">
+					<span style="display: none">Mobile biss: iftaħ il-menu</span>
+					<div class='menu-button'></div>
+				</label>
+				
+					<menu id="menu-main">
+						
+						<li class="hide-laptop main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+						<li class="hide-laptop main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+						<li class="hide-laptop abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
+						<li class="hide-laptop ff-2"><a href="/almanakk-april/">Almanakk</a></li>
+						<li><a href="/appuntamenti/">Appuntamenti</a></li>
+						<li><a href="/kontributuri/">Kontributuri</a></li>
+						<li><a href="/werrej/">Werrej</a></li>
+						<li><a href="/djarju/">Djarju</a></li>
+						<li><a href="/sensiliet/">Sensiliet</a></li>
+						<li><a href="/podcast/">Podcast</a></li>
+						<li class="hide-mobile"><a href="/kotba/" class="menu-kotba">Kotba</a></li>
+						<li class="hide-laptop choose-theme">
+							<a id="theme-regular" role="button" tabindex="0">s</a>
+							<a id="theme-dark" role="button" tabindex="1">m</a>
+							<a id="theme-contrast" role="button" tabindex="2">c</a>
+							<a id="theme-system" role="button" tabindex="3">p</a>
+						</li>
+						<li><a href="/dwarna/">Dwarna</a></li>
+						<li class="hide-laptop"><a href="/kotba/">Kotba</a></li>
+						<li class="hide-laptop"><a href="/kolofon/">Kolofon</a></li>
+						<li><a href="/newsletter/">Newsletter</a></li>
+						<li class="hide-laptop"><a href="/privatezza/">Privatezza</a></li>
+						<li><a href="/bookmarks/">Bookmarks<span id="bookmarks-number"></span></a></li>
+						<li class="hide-laptop choose-theme" id="text-size-adjust">
+							<a id="font-size-1" role="button" tabindex="8">a</a>
+							<a id="font-size-2" role="button" tabindex="9">a</a>
+							<a id="font-size-3" role="button" tabindex="10">a</a>
+							<a id="font-size-4" role="button" tabindex="11">a</a>
+						</li>
+					</menu>
+					<input class="hide-mobile" type="text" id="search-input" placeholder="fittex..." autocomplete="off" auto-fill="off" type="text" autocapitalize="none" enterkeyhint="search" />
+					<ul id="search-results"><!-- --></ul>
+				
+				<div id="brownline"></div>
+			</nav>
+			<div id="message"><!-- --></div>
+			<main id="skipto">
+				
+<article class="generic contributor-22" data-pagefind-body>
+	<header>
+		<ul><li class="header-label"><a href="/kontributuri/">Kontributuri</a></li></ul>
+		<h1 data-pagefind-weight="9">Kris Polidano</h1>
+	</header>
+	<div class="container-generic contributor">
+		<section id="grid-body">
+			<div class="generic-body-text" data-pagefind-weight="3">
+				<div data-pagefind-body data-pagefind-weight="1">
+					<p>Kris Polidano għandha tendenza tħuf u tikteb fuq <l-m>l-istess</l-m> ponn ta’ memorji li sawruha u fuq xi oħrajn li sawru <l-m>lill-kollettiv</l-m> kulturali Malti ta’ bħalissa. Kris hi attiva ħafna <l-m>fix-xena</l-m> kulturali Maltija f’diversi oqsma. Taħdem <l-m>mal-Fondazzjoni</l-m> Magna Żmien biex jinżammu u jintużaw <l-m>il-memorji</l-m> awdjo-viżivi <l-m>tal-Maltin</l-m> fil-gżira stess u ta’ barra. <l-m>Fil-passat</l-m>, Kris ukoll wettqet intervisti ma’ artisti u riċensjonijiet <l-m>tat-teatru</l-m> fuq Tpespis, sit li ħolqot flimkien ma’ xi ħbieb <l-m>fl-2016</l-m>. <l-m>Il-kitba</l-m> tagħha tidher f’<em>Leħen <l-m>il-Malti</l-m></em>, kif ukoll f’<em>Artpaper</em>.</p>
+				</div>
+				
+				
+					<div class="anthologies">
+						<p class="continuity">Kotba ta’ <span class="contributor">Aphroconfuso</span> bil-kitba ta’ <span class="contributor">Kris</span>:</p>
+						
+						
+						
+						
+						
+						
+						<ul class="promo-list">
+	
+	
+		
+
+
+<li >
+	<a class="promo  ottubru promo-recensjoni sequence- story-88" href="/kotba-antoloġija-1/" onclick="analytics(['trackEvent', 'Promo', 'minn: Kris Polidano', 'għal: Antoloġija 1', 1]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Ottubru 2024</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Antoloġija 1
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Antoloġija 1 hija l-ewwel pubblikazzjoni stampata ta’ Aphroconfuso u tiġbor fiha l-biċċa l-kbira tal-kitba li dehret fl-ewwel sena tal-ġurnal. Din il-ġabra tinkludi esejs, stejjer, poeżiji, djarji, xogħol kollaborattiv u kitba oħra li mhux faċli tikklassifikaha. B&#39;kollox tinkludi 34 xogħol minn 24 kittieb: Aaron Aquilina, Karl Baldacchino, Simon Bartolo, Warren Bartolo, Kurt Borg, Antoine Cassar, Daniel Cossai, Leanne Ellul, Noah Fabri, Ryan Falzon, Charlene Galea, Miriam Galea, Joe Gatt , Romeo Roxman Gatt, Rowena Grech, Jimmy Grima, Davinia Hamilton, Omar N’Shea, Kris Polidano, Matteo Pullicino, Matthew Schembri, Maria Theuma, Leslie Vassallo u Loranne Vella. Joe Gatt u Loranne Vella, edituri.</p>
+			
+			
+				<img src="/stampi/undefined.avif" alt="">
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-88">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+</ul>
+
+					</div>
+				
+				
+					<div class="wrote">
+						<p class="continuity">Kitba ta’ <span class="contributor">Kris</span> fil-ġurnal:</p>
+						
+						
+						
+						
+						
+						<ul class="promo-list">
+	
+	
+		
+
+
+<li  class="multiple-episodes episode-8">
+	<a class="promo  frar promo-poezija sequence-10 story-119 is-episode" href="/kris-polidano-kullana-ta-għanjiet-dwar-il-ħolm-8-prefazju-numru-tlieta/" onclick="analytics(['trackEvent', 'Promo', 'minn: Kris Polidano', 'għal: Kullana ta’ għanjiet dwar il-ħolm #8', 1]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Frar 2025</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Kullana ta’ għanjiet dwar <l-m>il-ħolm</l-m>
+				
+					<span class="episode-number">#8</span>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+
+ 
+
+
+	
+		<h3>
+			
+			
+			Prefazju numru tlieta
+		</h3>
+	
+</header>
+
+		<div class="body-text poetry">
+			
+				<p>&lt;p&gt;Il-ħolm fejn imur wara li jqajjimna?&lt;/p&gt;
+&lt;p&gt;Il-mewta l-aħħar darba li noħolmu anki jekk għajnejna ma jingħalqux, ġisimna joħroġ il-kimiċi, li jitfgħuna fi stat “ħolmieni”. Kemm jekk aħna konxji tiegħu jew m’aħniex, id-demm uman jiġbed, u f’għadd ta’ kulturi, il-mewt nikkunsidrawha bħala raqda. U l-ħolm—kemm jekk inħallu lilna nfusna nindiehsu ma’ din il-forma ta’ ħsieb jew le—jieqaf u jiżvolġi fl-aħħar raqda għall-aħħar darba.&lt;/p&gt;</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-119">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li  class="multiple-episodes episode-9">
+	<a class="promo  frar promo-poezija sequence-10 story-120 is-episode" href="/kris-polidano-kullana-ta-għanjiet-dwar-il-ħolm-9-forma-numru-sitta/" onclick="analytics(['trackEvent', 'Promo', 'minn: Kris Polidano', 'għal: Kullana ta’ għanjiet dwar il-ħolm #9', 2]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Frar 2025</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Kullana ta’ għanjiet dwar <l-m>il-ħolm</l-m>
+				
+					<span class="episode-number">#9</span>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+
+ 
+
+
+	
+		<h3>
+			
+			
+			Forma numru sitta
+		</h3>
+	
+</header>
+
+		<div class="body-text poetry">
+			
+				<p>&lt;p&gt;&lt;em&gt;Fl-aħħar raqda,&lt;br&gt;
+int tkompli għaddej.&lt;/em&gt;&lt;br&gt;
+U z-zijiet jippustjawlek&lt;br&gt;
+xagħrek f’kamra&lt;br&gt;
+kulur ix-xemgħa&lt;br&gt;
+mwarrba, f’San Luqa.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Fl-aħħar raqda,&lt;br&gt;
+int ma tismax.&lt;br&gt;
+Id-dinja tkompli titgerbeb&lt;/em&gt;&lt;br&gt;
+waqt li jdawrulek is-swaba’&lt;br&gt;
+t’idek il-leminija&lt;br&gt;
+ma’ kuruna taż-żibeġ tal-injam.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Fl-aħħar raqda&lt;br&gt;
+int liebes qalziet&lt;br&gt;
+imkemmex.&lt;br&gt;
+Ħalqek ma tiftħux&lt;/em&gt;&lt;br&gt;
+biex tgħidilna&lt;br&gt;
+“għadduh sew.”&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Fl-aħħar raqda,&lt;br&gt;
+ġismek fiss.&lt;br&gt;
+U nħares lejk&lt;br&gt;
+togħdos taħt&lt;br&gt;
+ċorma fjuri mingħajr l-ittra&lt;/em&gt;&lt;br&gt;
+li ma kontx nista’ niktiblek.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Fl-aħħar raqda,&lt;br&gt;
+int tieqaf toħlom&lt;br&gt;
+U aħna mqajmin&lt;br&gt;
+noħolmu bik.&lt;/em&gt;&lt;/p&gt;</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-120">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li  class="multiple-episodes episode-7">
+	<a class="promo  frar promo-poezija sequence-10 story-118 is-episode" href="/kris-polidano-kullana-ta-għanjiet-dwar-il-ħolm-7-forma-numru-ħamsa/" onclick="analytics(['trackEvent', 'Promo', 'minn: Kris Polidano', 'għal: Kullana ta’ għanjiet dwar il-ħolm #7', 3]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Frar 2025</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Kullana ta’ għanjiet dwar <l-m>il-ħolm</l-m>
+				
+					<span class="episode-number">#7</span>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+
+ 
+
+
+	
+		<h3>
+			
+			
+			Forma numru ħamsa
+		</h3>
+	
+</header>
+
+		<div class="body-text poetry">
+			
+				<p>&lt;p&gt;Fl-iljieli, nistenna&lt;br&gt;
+l-Marrasa tiddi minn fuq xfieq&lt;br&gt;
+Iħarsu qigħan dil-gżira&lt;/p&gt;
+
+&lt;p class=&quot;enjambed&quot;&gt;Fl-iljieli, nistenna fil-gallarija,&lt;br&gt;
+noqgħod b’abti fuq ħoġor it-tieqa&lt;br&gt;
+tan-nofs, ngħodd il-karozzi, bajda&lt;/p&gt;
+&lt;p class=&quot;enjambed fx1&quot;&gt;bajda&lt;/p&gt;
+&lt;p class=&quot;enjambed fx1&quot;&gt;sewda&lt;/p&gt;
+&lt;p class=&quot;enjambed fx1&quot;&gt;griża&lt;/p&gt;
+&lt;p&gt;Fl-iljieli, narani nitgħannaq&lt;br&gt;
+waqt li nħaddan l-imħadda&lt;br&gt;
+u nħoss is-sema fl-investi&lt;br&gt;
+tal-qoton ċelesti&lt;/p&gt;
+
+&lt;p&gt;Fl-iljieli, narani ndur u nitgerbeb&lt;br&gt;
+sakemm nispiċċa fuq in-naħa&lt;br&gt;
+li dejjem norqod fuqha&lt;br&gt;
+u hemm vera tibda t-tertuqa.&lt;/p&gt;</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-118">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li  class="multiple-episodes episode-6">
+	<a class="promo  jannar promo-poezija sequence-10 story-116 is-episode" href="/kris-polidano-kullana-ta-għanjiet-dwar-il-ħolm-6-forma-numru-erbgħa/" onclick="analytics(['trackEvent', 'Promo', 'minn: Kris Polidano', 'għal: Kullana ta’ għanjiet dwar il-ħolm #6', 4]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Jannar 2025</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Kullana ta’ għanjiet dwar <l-m>il-ħolm</l-m>
+				
+					<span class="episode-number">#6</span>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+
+ 
+
+
+	
+		<h3>
+			
+			
+			Forma numru erbgħa
+		</h3>
+	
+</header>
+
+		<div class="body-text poetry">
+			
+				<p>&lt;p class=&quot;enjambed&quot;&gt;Ballun-ħġieġa jaqa’&lt;/p&gt;
+&lt;p class=&quot;enjambed fx1&quot;&gt;U jis&lt;/p&gt;
+&lt;p class=&quot;enjambed fx2&quot;&gt;&#92;&lt;/p&gt;
+&lt;p class=&quot;enjambed fx3&quot;&gt;piċċa&lt;/p&gt;
+&lt;p class=&quot;enjambed fx2&quot;&gt;/&lt;/p&gt;
+&lt;p class=&quot;enjambed fx4&quot;&gt;ja&lt;/p&gt;
+&lt;p class=&quot;enjambed fx2&quot;&gt;&#92;&lt;/p&gt;
+&lt;p class=&quot;enjambed fx3&quot;&gt;qa’&lt;/p&gt;
+&lt;p class=&quot;enjambed fx2&quot;&gt;/&lt;/p&gt;
+&lt;p class=&quot;enjambed fx4&quot;&gt;fil-&lt;/p&gt;
+&lt;p class=&quot;enjambed fx2&quot;&gt;&#92; &lt;/p&gt;
+&lt;p class=&quot;fx3&quot;&gt;fond&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;ilma&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Wiċċ ċar, bjond,&lt;br&gt;
+Iħares lejn surtu&lt;br&gt;
+jżomm kopp fid-dell&lt;br&gt;
+jitkaxkar mal-jum&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Id titla’ għal fuq moħħ&lt;br&gt;
+––is-silenzju wara li&lt;br&gt; 
+ċagħqa tkexkex l-ilma&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Ix-xemx tinqala’ minn postha&lt;/em&gt;&lt;br&gt;
+u tiltaqa’ mal-art fejn&lt;br&gt;
+is-sħana tinħass&lt;br&gt;
+bejn żewġ koxox taħt gverta&lt;br&gt;
+tas-suf&lt;/p&gt;</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-116">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li  class="multiple-episodes episode-5">
+	<a class="promo  jannar promo-poezija sequence-10 story-112 is-episode" href="/kris-polidano-kullana-ta-għanjiet-dwar-il-ħolm-5-forma-numru-tlieta/" onclick="analytics(['trackEvent', 'Promo', 'minn: Kris Polidano', 'għal: Kullana ta’ għanjiet dwar il-ħolm #5', 5]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Jannar 2025</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Kullana ta’ għanjiet dwar <l-m>il-ħolm</l-m>
+				
+					<span class="episode-number">#5</span>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+
+ 
+
+
+	
+		<h3>
+			
+			
+			Forma numru tlieta
+		</h3>
+	
+</header>
+
+		<div class="body-text poetry">
+			
+				<p>&lt;p&gt;Art…&lt;br&gt;
+Art…&lt;/p&gt;
+
+&lt;p&gt;Ħobbni ħobbni arti ħobbni,&lt;br&gt;
+semmagħli l-għajta t’amorin&lt;/p&gt;
+
+&lt;p&gt;Għandek lili biex issir taf&lt;br&gt;
+u lilna lkoll biex tnin&lt;/p&gt;
+
+&lt;p&gt;Art…&lt;br&gt;
+Art…&lt;/p&gt;
+
+&lt;p&gt;Li kont naf dak nagħsek fejnu&lt;br&gt;
+kont ingħidlek biex iġġemmgħu&lt;br&gt;
+żommu kollu f’vażett ħlejju,&lt;br&gt;
+ostru sew titfgħux għall-bejgħ&lt;/p&gt;
+
+&lt;p&gt;Art…&lt;br&gt;
+Art…&lt;/p&gt;
+
+&lt;p&gt;Art…&lt;br&gt;
+Art…&lt;/p&gt;
+
+&lt;p&gt;Ħobbni ħobbni arti ħobbni,&lt;br&gt;
+semmagħli l-għajta t’amorin&lt;/p&gt;
+
+&lt;p&gt;Għandek lili biex issir taf&lt;br&gt;
+u lilna lkoll biex tnin&lt;/p&gt;
+
+&lt;p&gt;Art…&lt;br&gt;
+Art…&lt;/p&gt;
+
+&lt;p&gt;Li kont naf dak nagħsek fejnu&lt;br&gt;
+kont ingħidlek biex iġġemmgħu&lt;br&gt;
+żommu kollu f’vażett ħlejju,&lt;br&gt;
+ostru sew titfgħux għall-bejgħ&lt;/p&gt;
+
+&lt;p&gt;Art…&lt;br&gt;
+Art…&lt;/p&gt;</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-112">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li  class="multiple-episodes episode-4">
+	<a class="promo  jannar promo-poezija sequence-10 story-111 is-episode" href="/kris-polidano-kullana-ta-għanjiet-dwar-il-ħolm-4-prefazju-numru-tnejn/" onclick="analytics(['trackEvent', 'Promo', 'minn: Kris Polidano', 'għal: Kullana ta’ għanjiet dwar il-ħolm #4', 6]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Jannar 2025</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Kullana ta’ għanjiet dwar <l-m>il-ħolm</l-m>
+				
+					<span class="episode-number">#4</span>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+
+ 
+
+
+	
+		<h3>
+			
+			
+			Prefazju numru tnejn
+		</h3>
+	
+</header>
+
+		<div class="body-text poetry">
+			
+				<p>Is-snajja’ u l-metodi tal-antenati tagħna jibqgħu fostna bla ma nafu kif. Nimxu fit-toroq siekta qalb xogħol idejn nies li m’għadhomx magħna biex iraqqdu lil dawk li m’għadhomx magħhom. Is-snajja’ u l-metodi tal-antenati tagħna jibqgħu fostna bla ma nafu kif. Nimxu fit-toroq siekta qalb xogħol idejn nies li m’għadhomx magħna biex iraqqdu lil dawk li m’għadhomx magħhom.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-111">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li  class="multiple-episodes episode-3">
+	<a class="promo  jannar promo-poezija sequence-10 story-109 is-episode" href="/kris-polidano-kullana-ta-għanjiet-dwar-il-ħolm-3-forma-numru-tnejn/" onclick="analytics(['trackEvent', 'Promo', 'minn: Kris Polidano', 'għal: Kullana ta’ għanjiet dwar il-ħolm #3', 7]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Jannar 2025</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Kullana ta’ għanjiet dwar <l-m>il-ħolm</l-m>
+				
+					<span class="episode-number">#3</span>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+
+ 
+
+
+	
+		<h3>
+			
+			
+			Forma numru tnejn
+		</h3>
+	
+</header>
+
+		<div class="body-text poetry">
+			
+				<p>&lt;p&gt;Mort ngħum&lt;br&gt;
+saqajja jagħtu&lt;/p&gt;
+			
+&lt;p class=&quot;fx1 enjambed&quot;&gt;u jagħtu&lt;/p&gt;
+&lt;p class=&quot;enjambed&quot;&gt;u jagħtu&lt;br&gt;
+		&lt;p class=&quot;fx1&quot;&gt;u joħolqu ondi kbar&lt;/p&gt;
+
+		&lt;p&gt;li jinkisru mas-saba’ l-kbir&lt;/p&gt;
+
+		&lt;p class=&quot;fx1 enjambed&quot;&gt;ta’ sieqi l-leminija&lt;/p&gt;
+&lt;p&gt;u mbagħad ix-xellugija.&lt;/p&gt;
+		
+&lt;p&gt;L-għaraq jisponta taħt xagħri&lt;br&gt;
+jinżel sa denbi kut’ kut’.&lt;/p&gt;
+
+&lt;p&gt;Purtella tingħalaq f’salt.&lt;br&gt;
+Id-dawl jiftaħli għajnejja.&lt;br&gt;
+L-għaraq jogħdos għal ġol-friex.&lt;/p&gt;</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-109">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li  class="multiple-episodes episode-2">
+	<a class="promo  jannar promo-poezija sequence-10 story-106 is-episode" href="/kris-polidano-kullana-ta-għanjiet-dwar-il-ħolm-2-forma-numru-wieħed/" onclick="analytics(['trackEvent', 'Promo', 'minn: Kris Polidano', 'għal: Kullana ta’ għanjiet dwar il-ħolm #2', 8]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Jannar 2025</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Kullana ta’ għanjiet dwar <l-m>il-ħolm</l-m>
+				
+					<span class="episode-number">#2</span>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+
+ 
+
+
+	
+		<h3>
+			
+			
+			Forma numru wieħed
+		</h3>
+	
+</header>
+
+		<div class="body-text poetry">
+			
+				<p>&lt;p&gt;Fuq ix-xaqliba&lt;br&gt;
+	tal-Lvant tal-Qala,&lt;br&gt;
+	idi qiegħda&lt;br&gt;
+	taħt geddumi&lt;/p&gt;
+&lt;p class=&quot;fx-1&quot;&gt;fuq sodda kważi franka&lt;br&gt;
+	&lt;em&gt;moħħi&lt;br&gt;
+	jnixxi&lt;br&gt;
+	l-ħaxix&lt;br&gt;
+	iraxxex&lt;br&gt;
+	maż-żifna&lt;br&gt;
+	tar-riħ&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;is-swaba’ ta’ saqajja&lt;br&gt;
+	jniżżlu għonqhom&lt;br&gt;
+	u driegħi jistrieħ&lt;br&gt;
+	ma’ abti&lt;/p&gt;
+
+&lt;p class=&quot;fx-1&quot;&gt;&lt;em&gt;u qalbi tħabbat&lt;br&gt;
+	mal-mota&lt;br&gt;
+	ta’ San Kerrew&lt;/em&gt;&lt;/p&gt;</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-106">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li  class="multiple-episodes episode-1">
+	<a class="promo  jannar promo-poezija sequence-10 story-105 is-episode" href="/kris-polidano-kullana-ta-għanjiet-dwar-il-ħolm-1-prefazju-numru-wieħed/" onclick="analytics(['trackEvent', 'Promo', 'minn: Kris Polidano', 'għal: Kullana ta’ għanjiet dwar il-ħolm #1', 9]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Jannar 2025</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Kullana ta’ għanjiet dwar <l-m>il-ħolm</l-m>
+				
+					<span class="episode-number">#1</span>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+
+ 
+
+
+	
+		<h3>
+			
+			
+			Prefazju numru wieħed
+		</h3>
+	
+</header>
+
+		<div class="body-text poetry">
+			
+				<p>Il-Malti jitkellem dwar il-forom tal-verbi. Bl-istess mod, hemm il-forom ta’ kif nippożizzjonaw ruħna meta nkunu reqdin. Fil-forma nsibu l-kontenut—dal-prinċipju narawh fil-qasam tal-bini u f’dak ta’ kif infasslu l-għodod tal-komunikazzjoni tagħna. Il-forom tal-verbi jiddeterminaw it-tifsira. Bl-istess mod, il-forom ta’ kif norqdu u nindifnu kollha għandhom il-konnotazzjonijiet tagħhom.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-105">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  jannar promo-esej sequence- story-34" href="/kris-polidano-manifest-kontra-ż-żmien/" onclick="analytics(['trackEvent', 'Promo', 'minn: Kris Polidano', 'għal: Manifest Kontra ż-Żmien', 10]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Jannar 2024</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Manifest Kontra <l-m>ż-Żmien</l-m>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Ħames mitt pass. Ħames mitt pass hemm mill-aħħar tarġa quddiem il-bieb tax-xogħol għall-bus stop li rrid nieqaf u nistenna fuqha. Saru l-ħamsa u nofs u ħamsa, u r-riħ ta’ Diċembru reġa’ tani naqra ħajja wara tmien sigħat inħares lejn skrin, inħarbex l-emails li jintemmu bil-kind regards u li jibdew bil-hope this email finds you well—dejjem b’exclamation mark biex il-persuna li tirċeviha tkun taf li jien waħda minn dawk l-orrajt. Inħares lejn it-tabella tal-bus stop darb’oħra biex inkun ċertissima li qiegħda fuq il-waqfa t-tajba. Mhux għax ma nafx jekk jienx ippustjata sew, imma tibda thewden wara li tkun ilek ftit xhur ma taqbad karozza tal-linja. Bħala persuna kwintessenzjalment Maltija, għandi preferenza għall-abbiltà li tagħtini l-karozza, jiġifieri, li nkun nista’ ngħaddi riħ mill-bypass mingħajr ma nieqaf, bi driegħi barra mit-tieqa, indoqq il-mużika livell biss inqas mill-punt meta t-tnabar ta’ widnejja jkunu appena ser jinfaqgħuli. Imma llum ta’ bilfors irrid naqbadha għax ilbieraħ kont għaddejja minn Strada Rjali, Santa Venera u splajsjajt il-mera ma’ trakk mimli żrar tat-tarmak. Ħbatt eżatt quddiem il-Ministeru tat-Trasport. Ħadd ma ħareġ biex jgħinni jew biex iċanfar lil tat-trakk li mblokka nofs it-triq u m’użax is-sinjali stipulati f’artiklu xiex u xiex u dak. Nista’ nsuqha, mind you, il-mera soda daqskemm kienet qabel l-inċident jekk mhux aktar għax waħħalha z-ziju bl-aħjar duct tape li l-ironmongers ta’ Malta jistgħu joffru. Imma wara li għaxar karozzi spiċċaw jgħajruni indannata u jpaqpqu, ma nazzardax insuq. L-avventuri tal-bypass jistgħu jistennew ftit. Illum irrid il-kumdità u l-lussu li xi ħadd iwassalni d-dar, u billi jien tifla brava u nħobb l-ambjent u ma rridx inġiegħel lill-mummy tiġi għalija (għandha d-dwiefer), nagħżel li x-chauffeur lura lejn Birkirkara llum ser ikun wieħed Filippin jew Indjan jew l-ispeċi aktar u aktar rari tax-xufiera—il-Malti qargħi.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-34">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  novembru promo-poezija sequence- story-27" href="/kris-polidano-na-i-hom/" onclick="analytics(['trackEvent', 'Promo', 'minn: Kris Polidano', 'għal: -Na -I -Hom', 11]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Novembru 2023</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				-Na -I -Hom
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text poetry">
+			
+				<p>Fl-ewwel minuti luċidi ta’ kull filgħodu
+naħseb biex immur mixja lejn il-ġnien li jħallini mdellka bin-nostalġija 
+biex inħares lejn il-bieb magħluq li jgħiduli li int kont hemm għassa miegħu kuljum u
+l-kamra kulur it-te meta titfagħlu l-ħalib tal-bott li issa 
+spiċċat mużew tal-karti llaminati li jiftaħ kull jumejn
+
+Il-bejta għall-ħarba kull nhar t’Erbgħa tal-grupp lebsin l-iswed għax cool
+għaddejjin nitmiegħku maż-żrieżaq
+daharna mal-arbli tal-bandli
+nitkażaw dwar x’għamlu dawk fil-kumplessi tal-garaxxijiet—
+l-ispots tal-konsulenzi romantiċi tat-tfal bravi Nsara aged 13 and up</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-27">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+</ul>
+
+					</div>
+				
+				
+				
+				
+				
+			</div>
+		</section>
+		<section id="grid-max-panel-left-top" data-pagefind-ignore>
+			<section class="generic-menu contributors-menu">
+	
+		<nav>
+			
+				<li><a href="/raylene-abdilla/">Raylene Abdilla</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/aaron-aquilina/">Aaron Aquilina</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/jasmine-bajada/">Jasmine Bajada</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/karl-baldacchino/">Karl Baldacchino</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/simon-bartolo/">Simon Bartolo</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/warren-bartolo/">Warren Bartolo</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/kristina-borg/">Kristina Borg</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/kurt-borg/">Kurt Borg</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/nicole-borg/">Nicole Borg</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/antoine-cassar/">Antoine Cassar</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/daniel-cossai/">Daniel Cossai</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/leanne-ellul/">Leanne Ellul</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/noah-fabri/">Noah Fabri</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/ryan-falzon/">Ryan Falzon</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/fatima-a.m./">fatima a.m.</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/charlene-galea/">Charlene Galea</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/miriam-galea/">Miriam Galea</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/joe-gatt/">Joe Gatt</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/romeo-roxman-gatt/">Romeo Roxman Gatt</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/rowena-grech/">Rowena Grech</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/jimmy-grima/">Jimmy Grima</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/davinia-hamilton/">Davinia Hamilton</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/jien_a/">Jien_a</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/ira-melkonyan/">Ira Melkonyan</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/glorianne-micallef/">Glorianne Micallef</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/omar-nshea/">Omar N’Shea</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/nathan-anthony-pace/">Nathan Anthony Pace</a></li>
+			
+		
+	
+		
+			
+				<li class="active">Kris Polidano</li>
+			
+		
+	
+		
+			
+				<li><a href="/matteo-pullicino/">Matteo Pullicino</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/matthew-schembri/">Matthew Schembri</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/maria-theuma/">Maria Theuma</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/leslie-vassallo/">Leslie Vassallo</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/loranne-vella/">Loranne Vella</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/manuela-zammit/">Manuela Zammit</a></li>
+			
+		</nav>
+	
+</section>
+
+		</section>
+	</div>
+</article>
+<script>
+	reportingTitle = "Kris Polidano";
+</script>
+
+			</main>
+		</div>
+		<div id="bottom-wrapper">
+			<img id="deco" role="none" src="/img/deco-100.svg" alt="Dekorazzjoni art-nouveau" />
+			
+				<div id="newsletter-container-bottom" class="newsletter-container">
+					<section id="form" data-track-content data-content-name="Homepage" data-content-piece="formola">
+						<iframe id="newsletter" class="newsletter-iframe-regular" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#" scrolling="no" title="Abbona fin-newsletter"></iframe>
+<iframe id="newsletter" class="newsletter-iframe-dark" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#|#201e1d|#908984|0|442093344ewr" scrolling="no" title="Abbona fin-newsletter"></iframe>
+<iframe id="newsletter" class="newsletter-iframe-contrast" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#|#000000|#ffffff|0|442093344ewr" scrolling="no" title="Abbona fin-newsletter"></iframe>
+
+					</section>
+				</div>
+			
+			<footer data-track-content data-content-name="Footer" data-content-piece="kris-polidano">
+	<nav class="footer-content">
+		<menu id="housekeeping">
+			<li class="header">Dwarna</li>
+			<li><a href="/kolofon/">Kolofon</a></li>
+			<li><a href="/proċess-editorjali/">Proċess</a></li>
+			<li><a href="/gwida-tal-istil/">Gwida tal-istil</a></li>
+			<li><a href="/cookies/">Cookies</a></li>
+			<li><a href="/privatezza/">Privatezza</a></li>
+			<li><a href="/aċċessibbiltà/">Aċċessibbiltà</a></li>
+			<li><a href="/podcast/">Podcast</a></li>
+			<li><a href="/newsletter/">Newsletter</a></li>
+			<li class="hide-tablet"><a href="/drittijiet/">Drittijiet</a></li>
+		</menu>
+		<menu id="media">
+			<li class="header">Midja</li>
+			<li><a href="/ar/" class="arabic">العربية</a></li>
+			<li><a href="/ca/">Català</a></li>
+			<li><a href="/de/">Deutsch</a></li>
+			<li><a href="/en/">English</a></li>
+			<li><a href="/es/">Español</a></li>
+			<li><a href="/fr/">Français</a></li>
+			<li><a href="/it/">Italiano</a></li>
+			<li><a href="/nl/">Nederlands</a></li>
+			<li class="hide-tablet"><a href="/ro/">Română</a></li>
+		</menu>
+		<menu id="socials">
+			<li class="header">Segwina</li>
+			<li><a href="https://facebook.com/aphroconfuso">Facebook</a></li>
+			<li><a href="https://instagram.com/aphroconfuso">Instagram</a></li>
+			
+			
+			<li><a href="https://whatsapp.com/channel/0029VaysAKP7z4kZHDKdZ71J" rel="me">WhatsApp</a></li>
+			<li><a href="https://aphroconfuso.bsky.social/">Bluesky</a></li>
+			<li><a href="https://youtube.com/@aphroconfuso">Youtube</a></li>
+			<li><a href="https://open.spotify.com/user/31rly4s75gfxs6li6bcxc5bqlgza">Spotify</a></li>
+		</menu>
+		<menu id="podcast">
+			<li class="header">Podcast</li>
+			<li><a href="https://podcasts.apple.com/us/podcast/aphroconfuso/id1686567243">Apple</a></li>
+			
+			<li><a href="https://feeds.acast.com/public/shows/aphroconfuso">RSS feed</a></li>
+			<li><a href="https://open.spotify.com/show/75Lt3UMvC1jE15SGrNFMww">Spotify</a></li>
+			
+		</menu>
+		<div id="logotype-container">
+			<a href="/"><img src="/img/logotype.svg" class="logotype" alt="logo: Aphroconfuso" /></a>
+		</div>
+		<div id="email">
+			<a href="mailto:l-edituri@aphroconfuso.mt" class="email">l-edituri@aphroconfuso.mt</a>
+		</div>
+		<div class="hide-mobile choose-theme choose-theme-footer">
+			<a id="theme-regular-footer" role="button" tabindex="4">s</a>
+			<a id="theme-dark-footer" role="button" tabindex="5">m</a>
+			<a id="theme-contrast-footer" role="button" tabindex="6">c</a>
+			<a id="theme-system-footer" role="button" tabindex="7">p</a>
+		</div>
+		<div id="copyright"><a href="/drittijiet/" class="copyright">&copy; 2023-2025 Aphroconfuso et al</a></div>
+		<div id="qrcode"><img src="/img/qr/kris-polidano.png" width="180" height="180" alt="QR code" /></div>
+		<div id="url">https://aphroconfuso.mt/kris-polidano/</div>
+	</nav>
+</footer>
+
+		</div>
+		<aside id="scroll-tools" class="monthly-outlined">
+			<p><span id="progress"><!-- --></span></p>
+		</aside>
+	</body>
+</html>

@@ -1,0 +1,695 @@
+<!doctype html>
+<html lang="mt" translate="no">
+
+	<head>
+		<meta charset="utf-8">
+		
+	<title>Jannar 2024 · Aphroconfuso</title>
+	<meta content="Jgħidu li l-ħin jeżisti biex ma jseħħx kollox f’daqqa. Bil-Malti għandna l-idea ta’ ħin u l-idea ta’ żmien bħala fenomeni distinti. Il-ħin qisu dak li jgħaddik minn mument għall-ieħor. Il-ħin tħossu għaddej. Iż-żmien, però, tinduna bih wara; tħares lura u tintebaħ li għaddew is-snin, li ġa ilek f’d…" name="description">
+	<meta property="og:image" content="/stampi/social_aphroconfuso_logo_social_kbir_kwadrat_d073f4e24a.jpg">
+
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+		<meta content="width=device-width, initial-scale=1" name="viewport">
+		<meta content="width=device-width" initial-scale="1.0" maximum-scale="1.0" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="yes" name="mobile-web-app-capable">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#f9f9f3">
+		<link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon-16x16.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32x32.png">
+		<link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
+		<link rel="mask-icon" href="/img/icons/safari-pinned-tab.svg" color="#5bbad5">
+		<meta property="og:image:type" content="image/jpeg">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
+		<link rel="canonical" href="https://aphroconfuso.mt/jannar-2024/">
+		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
+		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
+		<link rel="stylesheet" href="/css/style-515d1d07.css">
+		<script>
+			var
+				audioLoaded,
+				audioUrls,
+				author,
+				body,
+				bodyEnd,
+				bodyHeight,
+				bodyStart,
+				bodyText,
+				bookmarksArray,
+				bookmarksList,
+				bookmarksMenuElement,
+				charactersPerPixel,
+				charactersPerScreen,
+				currentTime,
+				duration,
+				elapsedTime,
+				hideScrollTools,
+				lastReportedReadingTime,
+				lastReportedScrollPosition,
+				lastScrollPosition,
+				message,
+				issueMonth,
+				issueMonthYear,
+				newScrollPosition,
+				pageHeight,
+				pageReportingTitle,
+				percentageProgress,
+				placeText,
+				podcastUrl,
+				previousTime,
+				progressElement,
+				readingSpeed,
+				reportingTitle,
+				screenHeight,
+				skippedTime,
+				storyCompleted,
+				storyId,
+				storyType,
+				sequenceEpisodeNumber,
+				sequenceEpisodeTitle,
+				timeStarted,
+				pageTitle,
+				wordcount,
+				wordsPerPixel,
+				wordsPerSecond,
+				wordsPerSecondAudio,
+				wordsPerScreen;
+
+			audioLoaded = false;
+			bookmarksArray = [];
+			percentageProgress = 0;
+			previousTime = [];
+			storyCompleted = false;
+
+			const	urlSlug = location.pathname.replace(/\//g, '');
+			const setCookie = (cname, cvalue, exdays = 36500) => {
+				const d = new Date();
+				d.setTime(d.getTime() + (exdays*24*60*60*1000));
+				let expires = "expires="+ d.toUTCString();
+				document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+			}
+			const getCookie = (cname) => {
+				let name = cname + "=";
+				let decodedCookie = decodeURIComponent(document.cookie);
+				let ca = decodedCookie.split(';');
+				for(let i = 0; i < ca.length; i++) {
+					let c = ca[i];
+					while (c.charAt(0) == ' ') {
+						c = c.substring(1);
+					}
+					if (c.indexOf(name) == 0) {
+						return c.substring(name.length, c.length);
+					}
+				}
+				return "";
+			}
+			var _paq = window._paq = window._paq || [];
+			const analytics = (arrayInfo) => {
+				if (location.host !== 'aphroconfuso.mt') console.log(arrayInfo);
+				_paq.push(arrayInfo);
+			}
+			_paq.push(['disableCookies']);
+			_paq.push(['enableJSErrorTracking']);
+			_paq.push(['enableHeartBeatTimer']);
+			_paq.push(['enableLinkTracking']);
+			_paq.push(['trackPageView']);
+			_paq.push(['trackVisibleContentImpressions']);
+			(function () {
+				var u = "//analitika.aphroconfuso.mt/";
+				_paq.push(['setTrackerUrl', u + 'matomo.php']);
+				_paq.push(['setSiteId', location.host === 'aphroconfuso.mt' ? '1' : '2']);
+				var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
+			})();
+			const addRemoveFontSizeClass = (size) => {
+				document.body.classList.remove('font-size-1','font-size-2','font-size-3','font-size-4')
+				document.body.classList.add(`font-size-${ size }`);
+				localStorage.setItem('font', size);
+			}
+			// REVIEW
+			const translateTheme = {
+				'regular': 'regolari',
+				'dark': 'skura',
+				'contrast': 'kuntrast',
+				'system': 'sistema'
+			}
+			const addRemoveTheme = (theme, stored) => {
+				document.body.classList.remove('theme-regular','theme-dark','theme-contrast','theme-system')
+				document.body.classList.add(`theme-${ theme }`);
+				localStorage.setItem('theme', theme);
+				if (stored && theme === 'regular') return;
+				analytics(['trackEvent', 'Tema', `${ stored ? 'Tema storjata' : 'Tema nbidlet' }`, translateTheme[theme]]);
+			}
+			const initialiseAfterBody = () => {
+				document.body.classList.add(location.hostname.replace(/\.?aphroconfuso\.mt/, '') || 'production');
+				addRemoveFontSizeClass(localStorage.getItem('font') || 1);
+				addRemoveTheme(localStorage.getItem('theme') || 'regular', true);
+				if (localStorage.getItem(`tw-${urlSlug}`)) {
+					document.body.classList.add('trigger-warning-closed');
+				}
+			}
+		</script>
+		<script src="../script/script-24450c.js" type="module"></script>
+	</head>
+	<body class="show-nav this-month-april">
+		<script>initialiseAfterBody();</script>
+		<div id="top-wrapper">
+			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
+			<nav id="top-nav">
+				<div id="logo-container-wrapper">
+					<div id="logo-container">
+						<a href="/">
+							<img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" />
+						</a>
+					</div>
+					<menu class="hide-mobile" id="menu-carousels">
+						<li class="abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
+						<li class="ff-2"><a href="/almanakk-april/">Almanakk</a></li>
+					</menu>
+					<menu class="hide-mobile" id="menu-collections">
+						<li class="main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+						<li class="main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					</menu>
+				</div>
+				<input id="menu-toggle" type="checkbox" />
+				<label class='menu-button-container' for="menu-toggle">
+					<span style="display: none">Mobile biss: iftaħ il-menu</span>
+					<div class='menu-button'></div>
+				</label>
+				
+					<menu id="menu-main">
+						
+						<li class="hide-laptop main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+						<li class="hide-laptop main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+						<li class="hide-laptop abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
+						<li class="hide-laptop ff-2"><a href="/almanakk-april/">Almanakk</a></li>
+						<li><a href="/appuntamenti/">Appuntamenti</a></li>
+						<li><a href="/kontributuri/">Kontributuri</a></li>
+						<li><a href="/werrej/">Werrej</a></li>
+						<li><a href="/djarju/">Djarju</a></li>
+						<li><a href="/sensiliet/">Sensiliet</a></li>
+						<li><a href="/podcast/">Podcast</a></li>
+						<li class="hide-mobile"><a href="/kotba/" class="menu-kotba">Kotba</a></li>
+						<li class="hide-laptop choose-theme">
+							<a id="theme-regular" role="button" tabindex="0">s</a>
+							<a id="theme-dark" role="button" tabindex="1">m</a>
+							<a id="theme-contrast" role="button" tabindex="2">c</a>
+							<a id="theme-system" role="button" tabindex="3">p</a>
+						</li>
+						<li><a href="/dwarna/">Dwarna</a></li>
+						<li class="hide-laptop"><a href="/kotba/">Kotba</a></li>
+						<li class="hide-laptop"><a href="/kolofon/">Kolofon</a></li>
+						<li><a href="/newsletter/">Newsletter</a></li>
+						<li class="hide-laptop"><a href="/privatezza/">Privatezza</a></li>
+						<li><a href="/bookmarks/">Bookmarks<span id="bookmarks-number"></span></a></li>
+						<li class="hide-laptop choose-theme" id="text-size-adjust">
+							<a id="font-size-1" role="button" tabindex="8">a</a>
+							<a id="font-size-2" role="button" tabindex="9">a</a>
+							<a id="font-size-3" role="button" tabindex="10">a</a>
+							<a id="font-size-4" role="button" tabindex="11">a</a>
+						</li>
+					</menu>
+					<input class="hide-mobile" type="text" id="search-input" placeholder="fittex..." autocomplete="off" auto-fill="off" type="text" autocapitalize="none" enterkeyhint="search" />
+					<ul id="search-results"><!-- --></ul>
+				
+				<div id="brownline"></div>
+			</nav>
+			<div id="message"><!-- --></div>
+			<main id="skipto">
+				
+<article class="generic jannar" data-pagefind-meta="class[class]">
+	<header>
+		<ul><li class="header-label"><a href="/appuntamenti/" data-pagefind-meta="header">Appuntamenti</a></li></ul>
+		<h1>Jannar 2024</h1>
+		<h2></h2>
+	</header>
+	<div class="container-generic generic-body-text appointment">
+		<section id="grid-body" data-pagefind-body data-pagefind-weight="5">
+			<div class="generic-body-text editorial">
+				<div class="text-container">
+					<p><span class="sc">Jgħidu li <l-m>l-ħin</l-m> jeżisti</span> biex ma jseħħx kollox f’daqqa. <l-m>Bil-Malti</l-m> għandna <l-m>l-idea</l-m> ta’ ħin u <l-m>l-idea</l-m> ta’ żmien bħala fenomeni distinti. <l-m>Il-ħin</l-m> qisu dak li jgħaddik minn mument għall-ieħor. <l-m>Il-ħin</l-m> tħossu għaddej. <l-m>Iż-żmien</l-m>, però, tinduna bih wara; tħares lura u tintebaħ li għaddew <l-m>is-snin</l-m>, li ġa ilek f’din <l-m>id-dinja</l-m> għoxrin, tletin, tmenin sena. Tħaffer <l-m>fl-art</l-m> u tintebaħ li ġa għaddew minn fuq <l-m>id-dinja</l-m> eluf ta’ snin, miljuni. F’“Manifest Kontra <l-m>ż-Żmien</l-m>”<span class="pull">,</span> Kris Polidano, f’dik <l-m>in-nofs</l-m> siegħa interminabbli ta’ vjaġġ b’<l-m>tal-linja</l-m>, tkejjel kull mument; kull minuta tagħfas fuqha <l-m>bil-ħsejjes</l-m>, <l-m>l-irwejjaħ</l-m> u <l-m>l-memorji</l-m> tagħha. <l-m>L-eċċezzjoni</l-m> trivjali ta’ ħsara <l-m>fil-karozza</l-m> ġġegħelha taqsam <l-m>il-ħin</l-m> tagħha <l-m>fil-gelgul</l-m> taż-żmien <l-m>mal-folla</l-m> għajjiena wara <l-m>x-xogħol</l-m>. <l-m>L-opportunità</l-m> li tiċċassa ’l &nbsp;barra <l-m>mit-tieqa</l-m> tagħtiha <l-m>ċ-ċans</l-m> li <l-m>l-ħin</l-m> tarah jissarraf fi żmien. “Lil ġismek għalxejn tipprova tgħidlu biex ma jikbirx; dak li jrid jagħmel. <l-m>Il-ġenetika</l-m> diġà qiegħda hemm f’postha, lesta biex tgħidlek li sormok ser jikbirlek u ser jieqaf jidħollok <l-m>ġol-qalziet</l-m> li għext fih għal sajf sħiħ; li <l-m>r-riħa</l-m> ta’ ġismek ser titlef dik <l-m>l-aħħar</l-m> qatra riħa newtrali — ħjiel <l-m>tat-terra</l-m> li jobżqu minn kull pora <l-m>bis-saħħa</l-m> t-tfal, u li nibqgħu nkarkru biha sa ma <l-m>l-ewwel</l-m> xagħra tiżbroffa minn taħt abtna.<span class="pullsemi">”</span> Warren Bartolo, <l-m>fl-entrata</l-m> tad-djarju tiegħu “<l-m>Il-mixja</l-m> lura <l-m>d-dar</l-m> kienet twila sigarett wieħed”<span class="pull">,</span> jaqsam <l-m>il-ħin</l-m> tiegħu bejn sigħat waħdu <l-m>mal-kotba</l-m> u sigħat ma’ sħabu, ma’ rġiel li jiltaqa’ magħhom, u <l-m>mal-bqija</l-m> tal-belt. “Immur nipprotesta għall-Palestina ma’ S. Tibda Republique u tispiċċa Nation. Hemm min qiegħed bilwieqfa fuq <l-m>it-tinda</l-m> tal-bus stop itajjar duħħan <l-m>bil-kuluri</l-m> tal-bandiera <l-m>tal-Palestina…</l-m> Filgħaxija mmorru <l-m>d-dar</l-m> ta’ E u nieklu dumplings <l-m>bil-ħaxix</l-m> u <l-m>bil-kimchi</l-m> (li ma jogħġobnix), pommes noisettes u npejpu ftit. Imbagħad noqgħod nara lil B, E u S jilagħbu Fortnite (ippruvajt nilgħab ftit ukoll).<span class="pullsemi">”</span> Susan Sontag kienet żiedet tgħid li <l-m>l-ispazju</l-m> jeżisti biex mhux kollox jiġri lilek. <l-m>Il-ħin</l-m> tħossu int, iżda qed jiġri lil kulħadd, anki lil dawk li bilkemm nafu xejn dwarhom. “Mhux li tant nixtieq nies f’kitbieti,<span class="pullsemi">”</span> tikteb Loranne Vella <l-m>fit-tielet</l-m> entrata <l-m>tad-djarju</l-m> tagħha. “Jew aħjar, nixtieqhom — jekk ikunu hemm — jibqgħu anonimi, nixtieqhom imċajprin, <l-m>bil-fattizzi</l-m> mżellġin, <l-m>it-tip</l-m> li jħalluk <l-m>fl-għama</l-m> dwar <l-m>x’hemm</l-m> fil-fond ta’ qalbhom, jidher biċ-ċar li qed jaħsbu ħafna aktar milli qed juruk.<span class="pullsemi">”</span> Hemm ukoll dawk <l-m>is-saffi</l-m> li huma eqdem minn kull ħjiel li ħalla warajh <l-m>il-bniedem</l-m>, kif jurina Omar <l-m>N’Shea</l-m> fir-raba’ parti ta’ Bur Mgħeż. <l-m>Is-saffi</l-m> ta’ sena fuq sena li jsiru <l-m>d-dinja</l-m> ta’ madwarna u, taħt saqajna, <l-m>l-art</l-m> li nimxu <l-m>fuqha&nbsp;<span class="end-dot">.</span></l-m></p>
+				</div>
+			</div>
+			<p class="continuity">Din hija l-kitba ppubblikata dax-xahar:</p>
+			
+			
+			
+			
+			
+			
+			<ul class="promo-list">
+	
+	
+		
+
+
+<li >
+	<a class="promo  jannar promo-esej sequence- story-34" href="/kris-polidano-manifest-kontra-ż-żmien/" onclick="analytics(['trackEvent', 'Promo', 'minn: Jannar 2024', 'għal: Manifest Kontra ż-Żmien', 1]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Jannar 2024</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Manifest Kontra <l-m>ż-Żmien</l-m>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Kris Polidano</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Ħames mitt pass. Ħames mitt pass hemm mill-aħħar tarġa quddiem il-bieb tax-xogħol għall-bus stop li rrid nieqaf u nistenna fuqha. Saru l-ħamsa u nofs u ħamsa, u r-riħ ta’ Diċembru reġa’ tani naqra ħajja wara tmien sigħat inħares lejn skrin, inħarbex l-emails li jintemmu bil-kind regards u li jibdew bil-hope this email finds you well—dejjem b’exclamation mark biex il-persuna li tirċeviha tkun taf li jien waħda minn dawk l-orrajt. Inħares lejn it-tabella tal-bus stop darb’oħra biex inkun ċertissima li qiegħda fuq il-waqfa t-tajba. Mhux għax ma nafx jekk jienx ippustjata sew, imma tibda thewden wara li tkun ilek ftit xhur ma taqbad karozza tal-linja. Bħala persuna kwintessenzjalment Maltija, għandi preferenza għall-abbiltà li tagħtini l-karozza, jiġifieri, li nkun nista’ ngħaddi riħ mill-bypass mingħajr ma nieqaf, bi driegħi barra mit-tieqa, indoqq il-mużika livell biss inqas mill-punt meta t-tnabar ta’ widnejja jkunu appena ser jinfaqgħuli. Imma llum ta’ bilfors irrid naqbadha għax ilbieraħ kont għaddejja minn Strada Rjali, Santa Venera u splajsjajt il-mera ma’ trakk mimli żrar tat-tarmak. Ħbatt eżatt quddiem il-Ministeru tat-Trasport. Ħadd ma ħareġ biex jgħinni jew biex iċanfar lil tat-trakk li mblokka nofs it-triq u m’użax is-sinjali stipulati f’artiklu xiex u xiex u dak. Nista’ nsuqha, mind you, il-mera soda daqskemm kienet qabel l-inċident jekk mhux aktar għax waħħalha z-ziju bl-aħjar duct tape li l-ironmongers ta’ Malta jistgħu joffru. Imma wara li għaxar karozzi spiċċaw jgħajruni indannata u jpaqpqu, ma nazzardax insuq. L-avventuri tal-bypass jistgħu jistennew ftit. Illum irrid il-kumdità u l-lussu li xi ħadd iwassalni d-dar, u billi jien tifla brava u nħobb l-ambjent u ma rridx inġiegħel lill-mummy tiġi għalija (għandha d-dwiefer), nagħżel li x-chauffeur lura lejn Birkirkara llum ser ikun wieħed Filippin jew Indjan jew l-ispeċi aktar u aktar rari tax-xufiera—il-Malti qargħi.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-34">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li  class="multiple-episodes episode-1">
+	<a class="promo  jannar promo-djarju sequence-3 story-35 is-episode" href="/warren-bartolo-djarju-2023-11-01-il-mixja-lura-d-dar-kienet-twila-sigarett-wieħed/" onclick="analytics(['trackEvent', 'Promo', 'minn: Jannar 2024', 'għal: Djarju #1 Warren Bartolo', 2]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">
+			<span class="header-djarju">Djarju</span>
+			
+				<span class="subject-date">01.11.2023</span>
+			
+		</li>
+	
+	
+	</ul>
+	
+	
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Warren Bartolo</span>
+	</h2>
+
+
+ 
+
+
+	
+		<h3>
+			
+			
+			Il-mixja lura <l-m>d-dar</l-m> kienet twila sigarett wieħed
+		</h3>
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>L-ewwel ta’ Novembru. Illum għeluq snin ommi. Nibagħtilha messaġġ fuq WhatsApp, happy birthday ma nħobbok u nimmissjak ħafna. Nistaqsiha tibgħatli ritratt tagħha u hi tistaqsini l-istess. Ordnajtilha bukkett fjuri biex filgħodu jitwassal fl-uffiċċju tagħha bħala sorpriża. Wasal nofsinhar u għadni fis-sodda naqra l-aħħar ftit paġni ta’ Skyland (2020) ta’ Andrew Durbin. Iktar tard immur id-dar ta’ C biex nara l-aħħar episodju ta’ Real Housewives of Beverly Hills, għalkemm meta nasal għandhom nindunaw li l-episodju għadu ma ħariġx. Lura d-dar tard waranofsinhar nispiċċa Skyland. Filgħaxija nkaxkar lil S miegħi għal-leaving drinks ta’ T ġewwa l-bar Le Sarrasin, Belleville. L-għada għandu titjira lejn l-Awstralja fejn se jgħix ma’ ħabib tal-familja Melbourne mingħajr ma jħallas kera. Jiċċajta dwar ir-ritorn lejn Pariġi ftit snin wara fejn ikun kompletament trasformat mill-kirurġija plastika. B għamlu kejk delizzjuż taċ-ċikkulata u nintefgħu fis-salott naraw Terrifier 2 (2022), li kienu ssuġġerewlna biex naraw xi ħbieb tagħhom il-ġimgħa l-oħra meta konna l-club. Iżda nieqfu wara ħmistax-il minuta għax insibuh wisq gory. S jitfa’ film ieħor imma jien immur norqod.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-35">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li  class="multiple-episodes episode-3">
+	<a class="promo  jannar promo-djarju sequence-2 story-36 is-episode" href="/loranne-vella-djarju-2023-12-27-dal-mixi-inutli-għalhekk-nimxih/" onclick="analytics(['trackEvent', 'Promo', 'minn: Jannar 2024', 'għal: Djarju #3 Loranne Vella', 3]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">
+			<span class="header-djarju">Djarju</span>
+			
+				<span class="subject-date">27.12.2023</span>
+			
+		</li>
+	
+	
+	</ul>
+	
+	
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Loranne Vella</span>
+	</h2>
+
+
+ 
+
+
+	
+		<h3>
+			
+			
+			Dal-mixi inutli għalhekk nimxih
+		</h3>
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Qed illesti biex nagħmel ftit sens mill-qari tas-sajf u mix-xitwa u r-rebbiegħa ta’ qablu, indur in-noti, nara fejn se joħduni u ma’ min se jlaqqgħuni. Se nħallihom ilaqqgħuni ma’ xi ħadd? Bħalissa ma tantx għandi aptit nies, la madwari u lanqas f’kitbieti. Jew aħjar, nixtieqhom—jekk ikunu hemm—jibqgħu anonimi; avolja, meta sibt karattri anonimi quddiemi f’Portrait d’un inconnu ta’ Nathalie Sarraute tfixkilt u mhux dejjem għaraft persunaġġ minn ieħor. Teoretikament, nixtieqhom bla isem, nixtieqhom imċajprin, bil-fattizzi mżellġin, it-tip li jħalluk fl-għama dwar x’hemm fil-fond ta’ qalbhom, juruk biċ-ċar li qed jaħsbu ħafna iktar milli qed juruk. Imma fil-kitba tiegħi ma nafx nixtiqhomx hekk. Ma rridx niffrustra lil min jaqrani; mhux iżżejjed, għall-inqas. Imma jintrigawni l-persunaġġi anonimi li donnok qatt ma ssir tafhom sew. Però l-ħsieb oriġinali tiegħi kien li lanqas biss ikun hemm nies. Ir-rumanz tal-oġġetti, forsi? Bħal, ngħidu aħna, La Vie mode d’emploi ta’ Perec? Jew ix-chosisme ta’ Alain Robbe-Grillet?</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-36">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  jannar promo-poezija sequence- story-38" href="/antoine-cassar-is-solitudni-tal-fotografu/" onclick="analytics(['trackEvent', 'Promo', 'minn: Jannar 2024', 'għal: Is-Solitudni tal-Fotografu', 4]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Jannar 2024</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Is-Solitudni <l-m>tal-Fotografu</l-m>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Antoine Cassar</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text poetry">
+			
+				<p>Hawn xbin, trid kafè?
+Minn ġol-džezva
+jissawwab il-meraq ġamri
+li ’l-qalb dalwaqt iġibha 
+ġunġliena mġenġla.
+
+Deħlin u ħerġin 
+ħbieb u sangisugi,
+sangisugi u ħbieb. 
+Min ġej għal daħqa mqaħqħa
+u għabra għerf,
+min ġej ilaqqat qatra
+mit-tlellix t’ismu,
+min ġej jippoża
+bil-ħnejjiet bil-ħbub bil-ħotob b’kollox
+għal kjaroskur fil-ġelatina
+tal-melħ fiddien.
+
+Ħajduk tal-ktieb,
+partiżan tad-dadaiżmu,
+kewkba ħamra tal-kamera
+u tal-kamra skura—
+il-ġinni tal-istanjata
+jaf itella’ fil-wiċċ
+sal-iċken farka dija
+mistoħbija f’kull ruħ.
+
+Ftit jew ħadd
+ma jobsor però
+li wara l-lenti
+fejn l-iktar li jħossu
+dilettant u battal.
+Iktar ma jiżvoga,
+iktar ma jiffoka
+u jkejjel il-waqt
+li jniżżel iż-żewġ terzi ta’ werrej
+għal fuq il-buttuna,
+iktar ikompli jagħfas
+id-diqa mtaħħta ta’ ġo fih.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-38">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li  class="multiple-episodes episode-4">
+	<a class="promo  jannar promo-esej sequence-1 story-41 is-episode" href="/omar-nshea-bur-mgħeż-4-ħallejt-it-tebut-għal-ġisimha-biss/" onclick="analytics(['trackEvent', 'Promo', 'minn: Jannar 2024', 'għal: Bur Mgħeż #4', 5]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Jannar 2024</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Bur Mgħeż
+				
+					<span class="episode-number">#4</span>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Omar <l-m>N’Shea</l-m></span>
+	</h2>
+
+
+ 
+
+
+	
+		<h3>
+			
+			
+			Ħallejt <l-m>it-tebut</l-m> għal ġisimha biss
+		</h3>
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Il-biċċiet tal-fuħħar mifruxa u mxerrda fl-għelieqi fi Triq in-Namur fuq l-għolja tal-Iklin—li ġġib quddiemek il-medda ta’ art li tiġbed mill-Imdina fuq il-lemin għal Ħal Luqa, Ħal Saflieni u Raħal Ġdid u tiftaħ fuq il-Belt fuq ix-xellug—jixhdu li fejn in-nassaba Naxxarin firxu l-imnasab tagħhom kien hemm, fuq il-quċċata tal-għolja, binja megalitika fiż-żmien Neolitiku. Xhieda oħra ta’ dan huma l-megaliti tal-franka mixħutin ’l hawn u ’l hinn, uħud minnhom illum b’avviżi miktubin fuqhom b’żebgħa ħamra li jfakkruk biex iżżomm nadif mill-ħmieġ tal-klieb. Il-passaġġ żgħir li jagħti għal ġewwa tal-għelieqi fejn hemm l-imnasab għattnuh taħt saqajhom l-ewwel nies li telgħu fuq din l-għolja. Wittewh għan-nassaba li llum tkompli tressaqhom ’l hawn l-art ġebbieda eluf ta’ snin wara. Ir-rovini Neolitiċi jagħtu affordanza tajba lin-nassaba: ħadd mhu ġej itella’ xi blokka u allura s-siġar tal-gamiem u l-kalamenti tal-insib jibqgħu hemm ġo nofs radam il-qedem. Fis-sirda Novembrina, xħin jibda jbexbex, jibda ċ-ċenċil tat-tkissir tal-megaliti biex titgħatta d-dura tal-kantun tal-franka riċiklat b’qoxra ta’ ġebel selvaġġ. L-imnasab fuq il-wita bejn Ħaġar Qim u l-Imnajdra wkoll imtellgħin bi knaten tal-franka tal-Qrendi u l-Imqabba, u miksijin b’qoxra tal-qawwi maqtugħa mis-saffi tal-Magħlaq bħallikieku n-nassaba komplew it-tradizzjoni tal-bini megalitiku bil-qawwi fuq barra u l-elementi interni tal-franka. Fl-imnasab tal-għelieqi tad-Debdieba jibda l-ikkurdar: xbieki mifruxa, molol mal-kalamenti, xbieki miftuħa fuq in-naħa tal-ħaxja, il-lasti mwaħħlin mar-rażżi, il-qfiel u ċ-ċfuf maqfula. Id-dikojs tal-gamiem lesti f’posthom u l-gabjetti mqiegħda. Il-lanez tal-ġogi marbutin fejn is-siġġu fid-dura. Il-gamiema bil-kappun imxekkla u marbuta fuq is-seffut. Id-Debdieba ġebbieda, kien qalli l-Mija waqt li kien qed iqalleb fil-kantuniera tiegħu f’Bur Mgħeż ħdejn il-kaxxi tan-naħal, ifittex biċċa qasba. Il-Mija jiddiletta bis-sfafar, u għalkemm qatt ma qalli hu, smajt li kien jinqala’ sew, tant li l-Imqabba jgħidu li kellu esebizzjoni tas-sfafar l-Amerka. Qalli li hemm ħafna tipi ta’ sfafar: is-suffara tat-tgeġgiġ, għall-ġojjini, qisha buttuna tar-ram li titfagħha bejn snienek ta’ quddiem u tonfoħ fiha; iz-zekzieka tar-ram u lakstu, tiġbed il-pluvieri bil-ħoss li joħroġ minnha meta tagħfasha u titlaqha. Imma l-Mija kien jedha jagħmel is-sfafar tal-pluvieri mill-qasab tal-bambù. Omm Shaun qaltli li missierha kellu suffara jgħidulha l-“badabut” u missieru qalli li l-Mija kien ilu jfittex mod kif jagħmel suffara aqwa minn kull suffara oħra: ipprova minn kollox, anki lasti tal-biljard u lasti tal-ixkupi. Għamel żmien twil jonsob bis-suffara tal-ġebla tal-franka. Imma fl-aħħar, l-aħjar suffara li għamel għall-pluvieri kienet magħmula mill-għadam ta’ annimal li sab ġo barriera. Il-Mija kien qalli li ta’ tifel kien diġà jaf ibarqam u jparpar bħall-ħamiem u l-gamiem. Qalli kif kienu jaqsmu minn Bur Mgħeż għad-Debdieba, minn fejn il-kappella ta’ Santa Marija fejn illum hemm ir-runway, biex jaslu fuq il-mansab. Meta ġejt biex nasal hemm jien, kelli ndur bil-pass minn Tas-Sejba għal Ta’ Kandja u mbagħad fuq il-lemin biex nimxi tul it-Triq ta’ Ħal Farruġ. Ħarist ’l isfel ġol-barrieri mimlijin bil-ħamrija u siġar miżgħuda bil-larinġ, u minn ġol-ħofra tal-Ħabel ta’ San Pawl smajt it-tgedwid tal-ħassieba tas-seklu l’għadda, jitħaddtu u jixorbu u jieklu u jimpikaw bl-għerf tagħhom. Hemm kont niltaqa’ ma’ Oliver Friggieri u Joe Grima u Fr Rene, qaltli waħda min-nisa ta’ Triq il-Parroċċa. Bqajt nieżel man-naħa tat-Torri ta’ Wilġa u dort fuq ix-xellug biex nibda nimxi lejn l-għelieqi ta’ fuq il-wied. Żammejt ħarsti fuq ix-xtieli tal-mansab fejn waqaft inħares lejn serbut megaliti li, bħan-Naxxari qablu, iċ-Ċaqnu ċarrat minn laħmet l-art: spettakli ġeoloġiċi b’kull folja daqs żewġ sulari mqiegħda waħda ħdejn l-oħra bħallikieku reġgħu ġew fostna l-ewwel kuntratturi u bennejja fuq il-gżejjer. Ersaqt lejhom u lmaħt warajhom muntanja ġebel tal-franka fuq xulxin. Imxejt sieket lejhom, daħħalt ħarsti ġod-dell tal-għerien ta’ bejniethom, il-frisk ħelu tal-franka li jhennek taħt il-qilla tax-xemx. Il-kobor tal-ġebel isaħħrek meta tkun taħtu u tmissu, tiżnu b’għajnejk, u fi mnifsejk tħalli tidħol l-umdità tal-ħamrija u l-għeruq tax-xtieli mqaċċtin u għadhom imwaħħlin miegħu, bħal dras il-art maqlugħin friski minn ġol-ħanek. Dak li għandna, kien qalli Frans, franka! Taħt saqajja, fuq ix-xeqliba tal-art li tibda tixħtek ’l isfel lejn il-ġebel kbir irrumblat fil-qiegħ tal-wied, rajt qtugħ rettangolari fil-wiċċ tal-blat, bħal oqbra dojoq tat-trabi li bħalhom kont rajt waqt li kont qed infittex l-oqbra fuq ix-xagħri ta’ Santa Margerita ma’ Russell u Aiden. Aiden kien qalli li forsi n-nies ta’ żmien il-bronż kienu jagħmlu x-xtieli tal-għeneb fihom, jew forsi jaħslu l-ġlud tal-annimali wara li jbiċċruhom u jqaxxruhom, u jħallu d-dmija jċarċru fil-kanali dojoq u baxxi li hemm ħdejhom iserrpu ’l isfel. Kmamar abbandunati bil-barumbari meqrudin, passaġġi ta’ siment mixħut u mwitti dan l-aħħar, xatba wara l-oħra magħluqin, bibien f’nofs imkien imsakkrin: id-dawra tal-mansab konfoffa biex jew jobżqok ’il barra, jew jaqflek ġo nofsu. Tikka ħamra tiskariġġa: xi sponsun! Smajt leħen il-Mija: il-ġarġir isfar ta’ taħt saqajk jagħmel għalih il-ġojjin. It-tillier u x-xarbekk, dawk għall-ekri. L-għobbejra għal tal-għana. Poġġa fit-tarf tal-wita jħares ’l isfel, radam ta’ ġebel imrembel mal-għargħar tal-ilma li eluf ta’ snin ilu niżel minn Ħad-Dingli għall-port tal-Marsa, iħares lejn il-marki ta’ tidwir u rrumblar fl-uċuħ tal-ġnub tal-wied u l-għerien, l-għelieqi u l-imnasab, jonfoħ fis-suffara li kien qed ilesti u qalli: hawn kienu jgħixu d-deffiena ta’ Bur Mgħeż.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-41">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+</ul>
+
+			<div class="more">
+				
+					<p>Abbona <l-m>fin-</l-m><a href="/newsletter/">newsletter</a> biex tkun infurmat kull meta nippubblikaw xi ħaġa ġdida.</p>
+				
+			</div>
+		</section>
+	</div>
+</article>
+<script>
+	reportingTitle = "Jannar 2024";
+</script>
+
+			</main>
+		</div>
+		<div id="bottom-wrapper">
+			<img id="deco" role="none" src="/img/deco-100.svg" alt="Dekorazzjoni art-nouveau" />
+			
+				<div id="newsletter-container-bottom" class="newsletter-container">
+					<section id="form" data-track-content data-content-name="Homepage" data-content-piece="formola">
+						<iframe id="newsletter" class="newsletter-iframe-regular" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#" scrolling="no" title="Abbona fin-newsletter"></iframe>
+<iframe id="newsletter" class="newsletter-iframe-dark" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#|#201e1d|#908984|0|442093344ewr" scrolling="no" title="Abbona fin-newsletter"></iframe>
+<iframe id="newsletter" class="newsletter-iframe-contrast" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#|#000000|#ffffff|0|442093344ewr" scrolling="no" title="Abbona fin-newsletter"></iframe>
+
+					</section>
+				</div>
+			
+			<footer data-track-content data-content-name="Footer" data-content-piece="jannar-2024">
+	<nav class="footer-content">
+		<menu id="housekeeping">
+			<li class="header">Dwarna</li>
+			<li><a href="/kolofon/">Kolofon</a></li>
+			<li><a href="/proċess-editorjali/">Proċess</a></li>
+			<li><a href="/gwida-tal-istil/">Gwida tal-istil</a></li>
+			<li><a href="/cookies/">Cookies</a></li>
+			<li><a href="/privatezza/">Privatezza</a></li>
+			<li><a href="/aċċessibbiltà/">Aċċessibbiltà</a></li>
+			<li><a href="/podcast/">Podcast</a></li>
+			<li><a href="/newsletter/">Newsletter</a></li>
+			<li class="hide-tablet"><a href="/drittijiet/">Drittijiet</a></li>
+		</menu>
+		<menu id="media">
+			<li class="header">Midja</li>
+			<li><a href="/ar/" class="arabic">العربية</a></li>
+			<li><a href="/ca/">Català</a></li>
+			<li><a href="/de/">Deutsch</a></li>
+			<li><a href="/en/">English</a></li>
+			<li><a href="/es/">Español</a></li>
+			<li><a href="/fr/">Français</a></li>
+			<li><a href="/it/">Italiano</a></li>
+			<li><a href="/nl/">Nederlands</a></li>
+			<li class="hide-tablet"><a href="/ro/">Română</a></li>
+		</menu>
+		<menu id="socials">
+			<li class="header">Segwina</li>
+			<li><a href="https://facebook.com/aphroconfuso">Facebook</a></li>
+			<li><a href="https://instagram.com/aphroconfuso">Instagram</a></li>
+			
+			
+			<li><a href="https://whatsapp.com/channel/0029VaysAKP7z4kZHDKdZ71J" rel="me">WhatsApp</a></li>
+			<li><a href="https://aphroconfuso.bsky.social/">Bluesky</a></li>
+			<li><a href="https://youtube.com/@aphroconfuso">Youtube</a></li>
+			<li><a href="https://open.spotify.com/user/31rly4s75gfxs6li6bcxc5bqlgza">Spotify</a></li>
+		</menu>
+		<menu id="podcast">
+			<li class="header">Podcast</li>
+			<li><a href="https://podcasts.apple.com/us/podcast/aphroconfuso/id1686567243">Apple</a></li>
+			
+			<li><a href="https://feeds.acast.com/public/shows/aphroconfuso">RSS feed</a></li>
+			<li><a href="https://open.spotify.com/show/75Lt3UMvC1jE15SGrNFMww">Spotify</a></li>
+			
+		</menu>
+		<div id="logotype-container">
+			<a href="/"><img src="/img/logotype.svg" class="logotype" alt="logo: Aphroconfuso" /></a>
+		</div>
+		<div id="email">
+			<a href="mailto:l-edituri@aphroconfuso.mt" class="email">l-edituri@aphroconfuso.mt</a>
+		</div>
+		<div class="hide-mobile choose-theme choose-theme-footer">
+			<a id="theme-regular-footer" role="button" tabindex="4">s</a>
+			<a id="theme-dark-footer" role="button" tabindex="5">m</a>
+			<a id="theme-contrast-footer" role="button" tabindex="6">c</a>
+			<a id="theme-system-footer" role="button" tabindex="7">p</a>
+		</div>
+		<div id="copyright"><a href="/drittijiet/" class="copyright">&copy; 2023-2025 Aphroconfuso et al</a></div>
+		<div id="qrcode"><img src="/img/qr/jannar-2024.png" width="180" height="180" alt="QR code" /></div>
+		<div id="url">https://aphroconfuso.mt/jannar-2024/</div>
+	</nav>
+</footer>
+
+		</div>
+		<aside id="scroll-tools" class="monthly-outlined">
+			<p><span id="progress"><!-- --></span></p>
+		</aside>
+	</body>
+</html>

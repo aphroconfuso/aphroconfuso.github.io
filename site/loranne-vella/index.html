@@ -1,0 +1,1410 @@
+<!doctype html>
+<html lang="mt" translate="no">
+
+	<head>
+		<meta charset="utf-8">
+		
+	<title>Loranne Vella · Aphroconfuso</title>
+	<meta content="Loranne Vella hija l-awtur tar-rumanzi Marta Marta, Rokit u Magna Mater, in-novella dawn l-erbat ikmamar l’għandi, u l-ġabra ta’ stejjer qosra mill-bieb ’il ġewwa, kif ukoll tat-Triloġija tal-Fiddien ma’ Simon Bartolo. Hija rebħet il-Premju Nazzjonali tal-Ktieb diversi drabi, fosthom għar-rumanzi M…" name="description">
+	<meta property="og:image" content="/stampi/social_aphroconfuso_logo_social_kbir_kwadrat_d073f4e24a.jpg">
+
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+		<meta content="width=device-width, initial-scale=1" name="viewport">
+		<meta content="width=device-width" initial-scale="1.0" maximum-scale="1.0" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="yes" name="mobile-web-app-capable">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#f9f9f3">
+		<link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon-16x16.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32x32.png">
+		<link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
+		<link rel="mask-icon" href="/img/icons/safari-pinned-tab.svg" color="#5bbad5">
+		<meta property="og:image:type" content="image/jpeg">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
+		<link rel="canonical" href="https://aphroconfuso.mt/loranne-vella/">
+		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
+		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
+		<link rel="stylesheet" href="/css/style-515d1d07.css">
+		<script>
+			var
+				audioLoaded,
+				audioUrls,
+				author,
+				body,
+				bodyEnd,
+				bodyHeight,
+				bodyStart,
+				bodyText,
+				bookmarksArray,
+				bookmarksList,
+				bookmarksMenuElement,
+				charactersPerPixel,
+				charactersPerScreen,
+				currentTime,
+				duration,
+				elapsedTime,
+				hideScrollTools,
+				lastReportedReadingTime,
+				lastReportedScrollPosition,
+				lastScrollPosition,
+				message,
+				issueMonth,
+				issueMonthYear,
+				newScrollPosition,
+				pageHeight,
+				pageReportingTitle,
+				percentageProgress,
+				placeText,
+				podcastUrl,
+				previousTime,
+				progressElement,
+				readingSpeed,
+				reportingTitle,
+				screenHeight,
+				skippedTime,
+				storyCompleted,
+				storyId,
+				storyType,
+				sequenceEpisodeNumber,
+				sequenceEpisodeTitle,
+				timeStarted,
+				pageTitle,
+				wordcount,
+				wordsPerPixel,
+				wordsPerSecond,
+				wordsPerSecondAudio,
+				wordsPerScreen;
+
+			audioLoaded = false;
+			bookmarksArray = [];
+			percentageProgress = 0;
+			previousTime = [];
+			storyCompleted = false;
+
+			const	urlSlug = location.pathname.replace(/\//g, '');
+			const setCookie = (cname, cvalue, exdays = 36500) => {
+				const d = new Date();
+				d.setTime(d.getTime() + (exdays*24*60*60*1000));
+				let expires = "expires="+ d.toUTCString();
+				document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+			}
+			const getCookie = (cname) => {
+				let name = cname + "=";
+				let decodedCookie = decodeURIComponent(document.cookie);
+				let ca = decodedCookie.split(';');
+				for(let i = 0; i < ca.length; i++) {
+					let c = ca[i];
+					while (c.charAt(0) == ' ') {
+						c = c.substring(1);
+					}
+					if (c.indexOf(name) == 0) {
+						return c.substring(name.length, c.length);
+					}
+				}
+				return "";
+			}
+			var _paq = window._paq = window._paq || [];
+			const analytics = (arrayInfo) => {
+				if (location.host !== 'aphroconfuso.mt') console.log(arrayInfo);
+				_paq.push(arrayInfo);
+			}
+			_paq.push(['disableCookies']);
+			_paq.push(['enableJSErrorTracking']);
+			_paq.push(['enableHeartBeatTimer']);
+			_paq.push(['enableLinkTracking']);
+			_paq.push(['trackPageView']);
+			_paq.push(['trackVisibleContentImpressions']);
+			(function () {
+				var u = "//analitika.aphroconfuso.mt/";
+				_paq.push(['setTrackerUrl', u + 'matomo.php']);
+				_paq.push(['setSiteId', location.host === 'aphroconfuso.mt' ? '1' : '2']);
+				var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
+			})();
+			const addRemoveFontSizeClass = (size) => {
+				document.body.classList.remove('font-size-1','font-size-2','font-size-3','font-size-4')
+				document.body.classList.add(`font-size-${ size }`);
+				localStorage.setItem('font', size);
+			}
+			// REVIEW
+			const translateTheme = {
+				'regular': 'regolari',
+				'dark': 'skura',
+				'contrast': 'kuntrast',
+				'system': 'sistema'
+			}
+			const addRemoveTheme = (theme, stored) => {
+				document.body.classList.remove('theme-regular','theme-dark','theme-contrast','theme-system')
+				document.body.classList.add(`theme-${ theme }`);
+				localStorage.setItem('theme', theme);
+				if (stored && theme === 'regular') return;
+				analytics(['trackEvent', 'Tema', `${ stored ? 'Tema storjata' : 'Tema nbidlet' }`, translateTheme[theme]]);
+			}
+			const initialiseAfterBody = () => {
+				document.body.classList.add(location.hostname.replace(/\.?aphroconfuso\.mt/, '') || 'production');
+				addRemoveFontSizeClass(localStorage.getItem('font') || 1);
+				addRemoveTheme(localStorage.getItem('theme') || 'regular', true);
+				if (localStorage.getItem(`tw-${urlSlug}`)) {
+					document.body.classList.add('trigger-warning-closed');
+				}
+			}
+		</script>
+		<script src="../script/script-24450c.js" type="module"></script>
+	</head>
+	<body class="show-nav this-month-april">
+		<script>initialiseAfterBody();</script>
+		<div id="top-wrapper">
+			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
+			<nav id="top-nav">
+				<div id="logo-container-wrapper">
+					<div id="logo-container">
+						<a href="/">
+							<img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" />
+						</a>
+					</div>
+					<menu class="hide-mobile" id="menu-carousels">
+						<li class="abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
+						<li class="ff-2"><a href="/almanakk-april/">Almanakk</a></li>
+					</menu>
+					<menu class="hide-mobile" id="menu-collections">
+						<li class="main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+						<li class="main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					</menu>
+				</div>
+				<input id="menu-toggle" type="checkbox" />
+				<label class='menu-button-container' for="menu-toggle">
+					<span style="display: none">Mobile biss: iftaħ il-menu</span>
+					<div class='menu-button'></div>
+				</label>
+				
+					<menu id="menu-main">
+						
+						<li class="hide-laptop main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+						<li class="hide-laptop main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+						<li class="hide-laptop abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
+						<li class="hide-laptop ff-2"><a href="/almanakk-april/">Almanakk</a></li>
+						<li><a href="/appuntamenti/">Appuntamenti</a></li>
+						<li><a href="/kontributuri/">Kontributuri</a></li>
+						<li><a href="/werrej/">Werrej</a></li>
+						<li><a href="/djarju/">Djarju</a></li>
+						<li><a href="/sensiliet/">Sensiliet</a></li>
+						<li><a href="/podcast/">Podcast</a></li>
+						<li class="hide-mobile"><a href="/kotba/" class="menu-kotba">Kotba</a></li>
+						<li class="hide-laptop choose-theme">
+							<a id="theme-regular" role="button" tabindex="0">s</a>
+							<a id="theme-dark" role="button" tabindex="1">m</a>
+							<a id="theme-contrast" role="button" tabindex="2">c</a>
+							<a id="theme-system" role="button" tabindex="3">p</a>
+						</li>
+						<li><a href="/dwarna/">Dwarna</a></li>
+						<li class="hide-laptop"><a href="/kotba/">Kotba</a></li>
+						<li class="hide-laptop"><a href="/kolofon/">Kolofon</a></li>
+						<li><a href="/newsletter/">Newsletter</a></li>
+						<li class="hide-laptop"><a href="/privatezza/">Privatezza</a></li>
+						<li><a href="/bookmarks/">Bookmarks<span id="bookmarks-number"></span></a></li>
+						<li class="hide-laptop choose-theme" id="text-size-adjust">
+							<a id="font-size-1" role="button" tabindex="8">a</a>
+							<a id="font-size-2" role="button" tabindex="9">a</a>
+							<a id="font-size-3" role="button" tabindex="10">a</a>
+							<a id="font-size-4" role="button" tabindex="11">a</a>
+						</li>
+					</menu>
+					<input class="hide-mobile" type="text" id="search-input" placeholder="fittex..." autocomplete="off" auto-fill="off" type="text" autocapitalize="none" enterkeyhint="search" />
+					<ul id="search-results"><!-- --></ul>
+				
+				<div id="brownline"></div>
+			</nav>
+			<div id="message"><!-- --></div>
+			<main id="skipto">
+				
+<article class="generic contributor-2" data-pagefind-body>
+	<header>
+		<ul><li class="header-label"><a href="/kontributuri/">Kontributuri</a></li></ul>
+		<h1 data-pagefind-weight="9">Loranne Vella</h1>
+	</header>
+	<div class="container-generic contributor">
+		<section id="grid-body">
+			<div class="generic-body-text" data-pagefind-weight="3">
+				<div data-pagefind-body data-pagefind-weight="1">
+					<p>Loranne Vella hija <l-m>l-awtur</l-m> tar-rumanzi <em>Marta Marta</em>, <em>Rokit</em> u <em>Magna Mater</em>, <l-m>in-novella</l-m> <em>dawn <l-m>l-erbat</l-m> ikmamar <l-m>l’għandi</l-m></em>, u <l-m>l-ġabra</l-m> ta’ stejjer qosra <em><l-m>mill-bieb</l-m> ’il &nbsp;ġewwa</em>, kif ukoll <l-m>tat-</l-m><em>Triloġija <l-m>tal-Fiddien</l-m></em> ma’ Simon Bartolo. Hija rebħet <l-m>il-Premju</l-m> Nazzjonali <l-m>tal-Ktieb</l-m> diversi drabi, fosthom għar-rumanzi <em>Marta Marta</em> <l-m>fl-2023</l-m> u <em>Rokit</em> <l-m>fl-2018</l-m>. Loranne hija traduttur professjonali, u <l-m>t-traduzzjonijiet</l-m> tagħha jinkludu wkoll xogħol letterarju: <l-m>fl-2022</l-m> ittraduċiet <l-m>mill-Ġermaniż</l-m> <em>Ma Kuraġġ u Wliedha</em> ta’ Bertolt Brecht għal Teatru Malta. <l-m>Fl-2014</l-m> u <l-m>l-2015</l-m> rebħet <l-m>il-Premju</l-m> Nazzjonali <l-m>tal-Ktieb</l-m> Terramaxka għat-traduzzjoni ta’ kotba għat-tfal. Hija kienet <l-m>il-kofundatur</l-m> tal-grupp teatrali Aleateia, u iktar reċenti, fi Brussell, ta’ Barumbara Collective, li jiffoka fuq avvenimenti performattivi f’kollaborazzjoni ma’ artisti diversi. Loranne kienet ukoll parti <l-m>mill-kollettiva</l-m> <a href="/jien_a/">Jien_a</a>.</p>
+<p>Loranne Vella hija koeditur ta’ Aphroconfuso.</p>
+				</div>
+				
+				
+					<div class="anthologies">
+						<p class="continuity">Kotba ta’ <span class="contributor">Aphroconfuso</span> bil-kitba ta’ <span class="contributor">Loranne</span>:</p>
+						
+						
+						
+						
+						
+						
+						<ul class="promo-list">
+	
+	
+		
+
+
+<li >
+	<a class="promo  ottubru promo-recensjoni sequence- story-88" href="/kotba-antoloġija-1/" onclick="analytics(['trackEvent', 'Promo', 'minn: Loranne Vella', 'għal: Antoloġija 1', 1]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Ottubru 2024</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Antoloġija 1
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Antoloġija 1 hija l-ewwel pubblikazzjoni stampata ta’ Aphroconfuso u tiġbor fiha l-biċċa l-kbira tal-kitba li dehret fl-ewwel sena tal-ġurnal. Din il-ġabra tinkludi esejs, stejjer, poeżiji, djarji, xogħol kollaborattiv u kitba oħra li mhux faċli tikklassifikaha. B&#39;kollox tinkludi 34 xogħol minn 24 kittieb: Aaron Aquilina, Karl Baldacchino, Simon Bartolo, Warren Bartolo, Kurt Borg, Antoine Cassar, Daniel Cossai, Leanne Ellul, Noah Fabri, Ryan Falzon, Charlene Galea, Miriam Galea, Joe Gatt , Romeo Roxman Gatt, Rowena Grech, Jimmy Grima, Davinia Hamilton, Omar N’Shea, Kris Polidano, Matteo Pullicino, Matthew Schembri, Maria Theuma, Leslie Vassallo u Loranne Vella. Joe Gatt u Loranne Vella, edituri.</p>
+			
+			
+				<img src="/stampi/undefined.avif" alt="">
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-88">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+</ul>
+
+					</div>
+				
+				
+					<div class="wrote">
+						<p class="continuity">Kitba ta’ <span class="contributor">Loranne</span> fil-ġurnal:</p>
+						
+						
+						
+						
+						
+						<ul class="promo-list">
+	
+	
+		
+
+
+<li >
+	<a class="promo  frar promo-storja sequence- story-117" href="/loranne-vella-aċtu-fl-istonku/" onclick="analytics(['trackEvent', 'Promo', 'minn: Loranne Vella', 'għal: Aċtu fl-Istonku', 1]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Frar 2025</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Aċtu <l-m>fl-Istonku</l-m>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>It-te aħdar itiegħem ħażin, forsi għax mhux tajjeb nixorbu filgħodu. Il-bżar mixwi jeħilli fil-gerżuma. Ma rridx nibla’. Imma hemm tliet uċuh iħarsu lejja jien u nipprova nomgħod, ma rridx naqla’ fil-platt quddiemhom. Irrid norqod. Għajjiena dal-aħħar. Bħal meta nitħeddel bis-sħana waranofsinhar. Imma għadna Frar, mit-tieqa nara l-borra nieżla ħafif ħafif, forsi missni ntbaħt dakinhar. Fis-sodda nħossni aħjar. M’iniex f’sikkti. Barxa? Virus? Aċtu fl-istonku? Kont dħaltli għal għarrieda u għamilt ġismi tiegħek, u jien lanqas biss intbaħt bik. Mhux virus. Imma jkolli nħallik taħkimni minn ġewwa, tibdilni għalkollox, irrid u ma rridx. Għal snin twal ma ridtx. Imbagħad meta ridt ma seħħ xejn. Ġejtli meta waqaft irrid u waqaft ma rridx, eżatt l-għada li ma baqax jimpurtani. Donnok kont taf li aħjar hekk, għalija u għalik. Qgħadt mistoħbi l-ġimgħat. Kelli nbul f’vażett tal-plastik bit-tapp aħmar tal-kamin biex insir naf bik. Lit-tabib merejtu, għedtlu li int aċtu fl-istonku, qalli le u feraħli. Jien u sejra lura d-dar battalt il-portmoni miż-żgħar fil-bott tat-tallab. Rari nieqaf intih xi ħaġa. Illum niggżitni l-kuxjenza. Tbissimtlu. Xi darba anki dan kien aċtu fl-istonku ta’ xi ħadd.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-117">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  lulju promo-esej sequence- story-16" href="/loranne-vella-il-lanza-il-labra-il-qoffa-l-azzarin/" onclick="analytics(['trackEvent', 'Promo', 'minn: Loranne Vella', 'għal: Il-Lanza, il-Labra, il-Qoffa, l-Azzarin', 2]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Lulju 2023</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Il-Lanza, <l-m>il-Labra</l-m>, <l-m>il-Qoffa</l-m>, <l-m>l-Azzarin</l-m>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Ġieli jagħti l-każ li, jien u naħseb fuq ktieb li qed naqra, nibda nara f’kotba jew xogħlijiet oħrajn l-istess ħsieb, jew mod ta’ ħsieb mhux wisq ’il bogħod minnu, tant li nibda nissuspetta li fil-fatt qed jgħidu l-istess ħaġa, li l-kwistjoni qed jarawha mill-istess perspettiva. U allura, x’kumbinazzjoni li qed naqra żewġ jew tliet kotba miktubin fi żminijiet għalkollox differenti li qed jipproponu l-istess ħsieb! L-istess jiġrili jien u nikteb. Nibda nhewden fuq idea li mbagħad nibda naraha f’kull kitba oħra li naqra. Għadni kif qrajt it-traduzzjoni mill-Grieg Antik għall-Malti tal-Frammenti ta’ Saffo, ta’ Warren Bartolo. Din l-edizzjoni, li ħarġet f’Mejju 2023, tinkludi daħla, nota tat-traduttur dwar id-dixxiplina tat-traduzzjoni, annotazzjonijiet dettaljati għal kull framment u lista ta’ ismijiet imsemmija fuq wara. Jien u naqra n-noti u l-kummenti tat-traduttur, dwar x’inhu, skont hu, is-sinifikat ta’ Saffo llum, dwar it-traduzzjoni bħala proċess ta’ trasformazzjoni u mutazzjoni, dwar il-ħarsa queer ta’ Saffo, moħħi beda joħodni mingħajr ma rrid għaż-żewġ kotba l-oħra li kelli ħdejja.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-16">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+</ul>
+
+					</div>
+				
+				
+					<div class="diarised">
+						<p class="continuity">Entrati mid-djarju ta’ <span class="contributor">Loranne</span>:</p>
+						
+						
+						
+						
+						<ul class="promo-list collated">
+	
+	
+		
+
+
+<li  class="multiple-episodes episode-8">
+	<a class="promo  jannar promo-djarju sequence-2 story-110 is-episode" href="/loranne-vella-djarju-2025-01-01-indawwar-bħal-ċavetta-u-niftaħ-il-bibien/" onclick="analytics(['trackEvent', 'Promo', 'minn: Loranne Vella', 'għal: Djarju #8 Loranne Vella', 1]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">
+			<span class="header-djarju">Djarju</span>
+			
+				<span class="subject-date">01.01.2025</span>
+			
+		</li>
+	
+	
+	</ul>
+	
+	
+		
+	
+	
+
+	
+
+
+
+ 
+
+
+	
+		<h3>
+			
+			
+			Indawwar bħal ċavetta u niftaħ <l-m>il-bibien</l-m>
+		</h3>
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Erba’ abbozzi, erba’ titli, u għadni ma nafx xi nsejjaħlu dak li qed nikteb. Insejjaħlu rumanz għax dak li nħoss li qed nesplora—kitba ta’ rumanz li ma ssegwi l-ebda regola prestabbilita ta’ x’inhu rumanz fejn jidħlu persunaġġi, azzjoni, taqsimiet, kif jiżviluppa r-rakkont innifsu. Nista’ niksirhom kollha iżda mhux it-tul. Għalija rumanz jeħtieġ it-tul u f’dax-xogħol, għall-ewwel darba, tul m’għandix, forsi għad m’għandix, imma dil-kitba qed turini wkoll li tul ma tridx. Sentejn kitba u għadni lanqas ktibt ħmistax-il elf kelma. Fejn qabel kont inpoġġi bilqiegħda u f’ġurnata nikteb kapitlu ta’ elfejn kelma, illum inqatta’ s-sigħat biex nagħżel kelma flok oħra u sa tmiem il-ġurnata nkun meħluba, imma rnexxieli nikteb paragrafu ta’ mitt kelma. Sirt ngħid, lil min jistaqsini x’qed nikteb, “rumanz; imma iktar jinqara bħala poeżija twila, avolja proża.” Fil-verità, mhux li tant importanti nkun naf minn qabel x’se jkun. La niktbu jgħidli hu xi nsejjaħlu.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-110">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li  class="multiple-episodes episode-7">
+	<a class="promo  settembru promo-djarju sequence-2 story-84 is-episode" href="/loranne-vella-djarju-2024-06-24-bħal-mera-maħlula-fgħadira-mfawra/" onclick="analytics(['trackEvent', 'Promo', 'minn: Loranne Vella', 'għal: Djarju #7 Loranne Vella', 2]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">
+			<span class="header-djarju">Djarju</span>
+			
+				<span class="subject-date">24.06.2024</span>
+			
+		</li>
+	
+	
+	</ul>
+	
+	
+		
+	
+	
+
+	
+
+
+
+ 
+
+
+	
+		<h3>
+			
+			
+			Bħal mera maħlula f’għadira mfawra
+		</h3>
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Ħarisna ’l fuq u smajna l-għajta ta’ Nakiryu, id-dragun impitter fuq is-saqaf tat-tempju fil-maqdes ta’ Toshogu, tidwi mad-daqqa tal-klavi minn dak li kien qed jispjegalna dwar il-gwardjani Ċiniżi abbinati mas-snin—il-ġurdien, is-serduq, id-dragun… Meta ħriġna mit-tempju, imxejna fil-kwiet—xi ftit mgħaġġlin biex illaħħqu qabel jibda jidlam—lejn ix-xmara. Hemmhekk qsamna l-pont biex immorru nfittxu l-Jizo, dawk il-mijiet ta’ statwi u ġebliet bil-kappun u l-vavalor aħmar skjerati maġenb xulxin tul it-trejqa qalb il-ħdura selvaġġa tal-foresta, bl-ilmijiet imqanqla faċċata tagħhom. Jgħidu li jekk tgħodd l-istatwi int u dieħel u terġa’ tgħoddhom int u ħiereġ, in-numri ma jaqblux. Bdejt ngħodd imma kien hemm wisq minnhom u waqaft. Emmint li l-għajdut huwa minnu għax stħajjilthom qed jieqfu jiċċaqalqu biss xħin inkun qed inħares lejhom jien; kull wiċċ b’ħarsa differenti minn tal-ieħor, se jibdluha malli nitlaq minn quddiemhom. L-ilma jkompli jitqanqal u, f’dak il-punt magħruf bħala l-Abbissi, tant isir feroċi li jtarraxlek widnejk. Kalma fuq naħa, qilla fuq l-oħra. Kont ilni s-snin nistennieh il-mument li nerġa’ nkun f’dal-post imsaħħar f’Nikko.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-84">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li  class="multiple-episodes episode-6">
+	<a class="promo  lulju promo-djarju sequence-2 story-76 is-episode" href="/loranne-vella-djarju-2024-03-01-nintebaħ-li-terraqt-mhux-ħażin/" onclick="analytics(['trackEvent', 'Promo', 'minn: Loranne Vella', 'għal: Djarju #6 Loranne Vella', 3]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">
+			<span class="header-djarju">Djarju</span>
+			
+				<span class="subject-date">01.03.2024</span>
+			
+		</li>
+	
+	
+	</ul>
+	
+	
+		
+	
+	
+
+	
+
+
+
+ 
+
+
+	
+		<h3>
+			
+			
+			Nintebaħ li terraqt mhux ħażin
+		</h3>
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Fi tfuliti, meta kont għadni ngħix ħdejn il-baħar, kull filgħaxija kont immur nimxi mal-kosta bla ma ngħid ’il ħadd. Mixja mgħaġġla mhux illajmata, nibdieha bin-niżla lejn il-bajja, imbagħad nerħi lejn il-lemin u nibqa’ dieħla ’l ġewwa, naqbeż ir-ramla u ninżel fuq il-blat. ’Il fuq minni stajt nisma’ l-ilħna, it-taħbit u t-tektik tal-boċċi tal-logħob. Iżda moħħi kien biss fuq il-pass li jmiss jien u ntawwal riġlejja biex nevita l-blat ippuntat u l-ħofor mimlijin ilma qiegħed. Nieqaf ħdejn is-salini, inserraħ saqajja fuq ix-xoffa ta’ ħawt minnhom, inħares daqqa minn naħa daqqa minn oħra biex nilmaħ l-ilwien ikanġu tal-kristalli tal-melħ fid-dawl ta’ nżul ix-xemx, imbagħad lejn il-baħar. Kont nistħajjel li l-fetħa tal-baħar quddiemi għad xi darba tittiekel gidma gidma u nkun jien li nibqa’ bil-ġuħ. Nimxi fuq il-ħitan baxxi minquxa fil-blat ta’ madwar l-għanqbuta ta’ ħwat kwadri wieħed maġenb l-ieħor, nipprova ma naqa’ fl-ebda wieħed minnhom. Xi darba ma kien hawn xejn ħlief il-kristalli jleqqu tal-melħ li l-baħar u x-xemx kienu joffru ’l-art. Bdew jieqfu mal-kosta l-baħħara jiġbru l-melħ biex jerfgħu fih il-laħam, il-ħut u l-ġlud ħa jservuhom għal żmien ieħor. It-tmelliħ fost l-eqdem taħwir tal-ikel, u l-imluħa waħda mill-ħames togħmiet li kapaċi ntiegħmu. Insalata mhix ħlief werqa mmellħa. Immellħu l-ilma tax-xorb sa ma jtiegħem ilma baħar u nsejħulu salmura; nimmarinaw il-laħam biex inrattbuh u ntejbuh ħa nomogħduh bi pjaċir. Jekk ma niklux melħ nimirdu, jekk nieħdu wisq immutu. Bil-melħ issiġillajna ftehim bejnietna, roxxejnieh biex nuru ’l Alla li nafdaw fih. Bnejna toroq għall-melħ biss, bih xtrajna, begħna, partatna, għamilna l-kummerċ. Bdejna gwerra minħabba l-melħ. Ħkimna rħula, ħraqnielhom id-djar u ksejnielhom l-uċuħ tar-raba’ bil-melħ biex xejn ma jikber u jmut bil-ġuħ kull min kien fadal ħaj. Morna x-xogħol u fl-aħħar tax-xahar tawna salarju, mil-Latin: salarium, sal, melħ. Bħalma fehem tard wisq Mida, id-deheb tgħaddi mingħajru, il-melħ le. Fit-Tramuntana tal-gżira, ’il bogħod ’il bogħod, kont naf li hemm raħal imsemmi għall-melħ ’ħabba s-salini li m’għadx hemm u l-bur salmastru li sal-lum hemm għadu. </p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-76">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li  class="multiple-episodes episode-5">
+	<a class="promo  mejju promo-djarju sequence-2 story-64 is-episode" href="/loranne-vella-djarju-2024-04-09-se-nħallihom-hawn-jgħidu-tagħhom/" onclick="analytics(['trackEvent', 'Promo', 'minn: Loranne Vella', 'għal: Djarju #5 Loranne Vella', 4]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">
+			<span class="header-djarju">Djarju</span>
+			
+				<span class="subject-date">09.04.2024</span>
+			
+		</li>
+	
+	
+	</ul>
+	
+	
+		
+	
+	
+
+	
+
+
+
+ 
+
+
+	
+		<h3>
+			
+			
+			Se nħallihom hawn, jgħidu tagħhom
+		</h3>
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Dawn il-ħassieba-kittieba kollha kemm huma donnhom tal-istess fehma: “Itlaq il-kotba minn idejk u oħroġ ’il barra. Mur imxi u ħallik mill-kitba ta’ ħaddieħor.” Għandi ħabta nogħxa naqraha kitba bħal din. Imma kultant, meta ninduna li għaddiet ġurnata sħiħa u bqajt ma ħriġtx mid-dar biex nilħaq illesti kollox u nsib ħin naqra u nikteb, inħossni niddispra. Jekk nobdi l-ordni li tgħidli mmur nimxi, fil-pront nikser it-tieni waħda li tgħidli biex ma nintrabatx wisq mal-kotba li naqra. Weħilt f’din id-dilemma. Moħħni biex naqra kitba dwar il-mixi miktuba minn ħassieba li kienu jimxu bejn sitta u tmien sigħat kuljum imbagħad b’xi mod kienu jsibu wkoll ħin biżżejjed biex jiktbu dwar dan u dwar dak kollu li qanqalhom u ħassibhom huma u jimxu fil-kampanja u jitilgħu l-għoljiet. Imma jien biex naqra kitbiethom ma nsibx ħin noħroġ mixja, imqar nofs siegħa kuljum.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-64">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li  class="multiple-episodes episode-4">
+	<a class="promo  marzu promo-djarju sequence-2 story-54 is-episode" href="/loranne-vella-djarju-2024-02-08-it-tluq-dejjem-iħallili-għafsa-xi-mkien/" onclick="analytics(['trackEvent', 'Promo', 'minn: Loranne Vella', 'għal: Djarju #4 Loranne Vella', 5]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">
+			<span class="header-djarju">Djarju</span>
+			
+				<span class="subject-date">08.02.2024</span>
+			
+		</li>
+	
+	
+	</ul>
+	
+	
+		
+	
+	
+
+	
+
+
+
+ 
+
+
+	
+		<h3>
+			
+			
+			It-tluq dejjem iħallili għafsa xi mkien
+		</h3>
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Wara tlett isjuf ta’ Pic Nic The Streets, picnics “kwieti” ta’ protesta kull nhar ta’ Ħadd waranofsinhar quddiem il-Bourse kontra l-fatt li l-karozzi kienu joħonqu l-ispazju pubbliku u jinkwinaw l-arja tar-residenti, fid-29 ta’ Ġunju tal-2015 Boulevard Anspach ingħalaq kompletament għall-karozzi u l-ispazju nfetaħ biss għan-nies bil-mixi. Tħawlu s-siġar fuq il-ġnub, tpoġġew għadd ta’ bankijiet tal-injam u tal-konkrit, tlestiet funtana b’ilma jaqbeż fit-tarf ta’ Rue August Orts faċċata tal-Bourse, ittellgħu stallazzjonijiet tal-arti, u nbena ġnien żgħir fuq Place Fontainas qabel ma t-triq terġa’ ssir tal-karozzi. Ilni ngħix f’dil-belt mill-2008 u l-karozzi, u l-picnics ta’ protesta niftakarhom sew, allura sirt dejjem nimxi “f’nofs tat-triq” meta nsib ruħi fuq dal-boulevard, b’ċelebrazzjoni għal dir-rebħa, żgħira u kbira fl-istess ħin. Dal-proġett ma kienx iżolat, u minn dak iż-żmien fiċ-ċentru ta’ Brussell komplew jingħalqu iktar toroq ċentrali għall-karozzi. Il-pjan reġjonali tal-mobbiltà għall-2020–2030, li jismu “Good Move”, jiffoka fuq is-saħħa fiżika u mentali tar-residenti, it-titjib tal-kwalità tal-ħajja tagħna, it-tnaqqis tal-impatt ħażin tal-karozzi fuq l-arja u fuq l-ambjent, u ż-żieda fis-sigurtà u s-sostenibbiltà tal-mobbiltà. Għandu l-għan li jgħinna nibdlu l-mod kif niċċaqalqu minn post għall-ieħor. Il-lussu, f’dal-pjan, huwa f’li nħaddmu moħħna u nużaw riġlejna, u ngawdu l-belt mingħajr ma nkunu skjavi tal-karozzi. L-istess diskors, però diġà kien qed jingħad ħamsin sena ilu, fil-bidu tas-snin sebgħin, meta l-Grand Place nnifisha kienet għadha tintuża bħala spazju fejn tipparkja l-karozza. Meta nara r-ritratti minn dak iż-żmien niftakar fiż-żmien meta ġieli ħallejt il-karozza pparkjata fit-teatru l-imwaqqa’ l-Belt. F’Jannar tal-2019 begħt il-karozza biex nibda nuża biss it-trasport pubbliku, bl-idea li fil-każ li jkolli bżonn karozza nikri waħda għal dakinhar biss.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-54">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li  class="multiple-episodes episode-3">
+	<a class="promo  jannar promo-djarju sequence-2 story-36 is-episode" href="/loranne-vella-djarju-2023-12-27-dal-mixi-inutli-għalhekk-nimxih/" onclick="analytics(['trackEvent', 'Promo', 'minn: Loranne Vella', 'għal: Djarju #3 Loranne Vella', 6]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">
+			<span class="header-djarju">Djarju</span>
+			
+				<span class="subject-date">27.12.2023</span>
+			
+		</li>
+	
+	
+	</ul>
+	
+	
+		
+	
+	
+
+	
+
+
+
+ 
+
+
+	
+		<h3>
+			
+			
+			Dal-mixi inutli għalhekk nimxih
+		</h3>
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Qed illesti biex nagħmel ftit sens mill-qari tas-sajf u mix-xitwa u r-rebbiegħa ta’ qablu, indur in-noti, nara fejn se joħduni u ma’ min se jlaqqgħuni. Se nħallihom ilaqqgħuni ma’ xi ħadd? Bħalissa ma tantx għandi aptit nies, la madwari u lanqas f’kitbieti. Jew aħjar, nixtieqhom—jekk ikunu hemm—jibqgħu anonimi; avolja, meta sibt karattri anonimi quddiemi f’Portrait d’un inconnu ta’ Nathalie Sarraute tfixkilt u mhux dejjem għaraft persunaġġ minn ieħor. Teoretikament, nixtieqhom bla isem, nixtieqhom imċajprin, bil-fattizzi mżellġin, it-tip li jħalluk fl-għama dwar x’hemm fil-fond ta’ qalbhom, juruk biċ-ċar li qed jaħsbu ħafna iktar milli qed juruk. Imma fil-kitba tiegħi ma nafx nixtiqhomx hekk. Ma rridx niffrustra lil min jaqrani; mhux iżżejjed, għall-inqas. Imma jintrigawni l-persunaġġi anonimi li donnok qatt ma ssir tafhom sew. Però l-ħsieb oriġinali tiegħi kien li lanqas biss ikun hemm nies. Ir-rumanz tal-oġġetti, forsi? Bħal, ngħidu aħna, La Vie mode d’emploi ta’ Perec? Jew ix-chosisme ta’ Alain Robbe-Grillet?</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-36">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li  class="multiple-episodes episode-2">
+	<a class="promo  ottubru promo-djarju sequence-2 story-23 is-episode" href="/loranne-vella-djarju-2023-09-19-biex-bħallikieku-jitimgħu-r-ruħ-u-jtaffulha-l-ġuħ/" onclick="analytics(['trackEvent', 'Promo', 'minn: Loranne Vella', 'għal: Djarju #2 Loranne Vella', 7]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">
+			<span class="header-djarju">Djarju</span>
+			
+				<span class="subject-date">19.09.2023</span>
+			
+		</li>
+	
+	
+	</ul>
+	
+	
+		
+	
+	
+
+	
+
+
+
+ 
+
+
+	
+		<h3>
+			
+			
+			Biex bħallikieku jitimgħu <l-m>r-ruħ</l-m> u jtaffulha <l-m>l-ġuħ</l-m>
+		</h3>
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Waħda mill-isbaħ sensazzjonijiet li nassoċja mal-perjodu ta’ meta ma nkunx għadni bdejt naħseb sew dwar kitba ġdida hija dik li tkun ġejja mill-fatt li, għal ċertu żmien, nista’ naqra li rrid. Dan għax ma jkolli l-ebda impenn li bilfors irrid niffoka fuq ktieb minflok ieħor, jew fuq suġġett partikolari. Is-sensazzjoni ta’ libertà marbuta ma’ dan in-nuqqas ta’ bżonn hija qawwija immens, kważi nħossha tisturdini. Tant li lanqas inkun naf minn fejn se nibda u prattikament naqra dak kollu li jiġi f’idejja: artikli, poeżiji, rumanzi, esejs, teorija, manifesti, programmi ta’ festivals taż-żfin jew tal-films. Kollox isir sors ta’ interess kbir għalija u l-fatt li ma jkolli l-ebda xkiel biex niffoka u napprofondixxi dwar xi tema jew suġġett partikolari, iħallini fil-libertà li nagħti importanza lil firxa wiesgħa ta’ ideat li donnhom m’għandhom xejn x’jaqsmu flimkien.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-23">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li  class="multiple-episodes episode-1">
+	<a class="promo  settembru promo-djarju sequence-2 story-21 is-episode" href="/loranne-vella-djarju-2023-08-23-li-jmiss-se-jkun-għalkollox-differenti/" onclick="analytics(['trackEvent', 'Promo', 'minn: Loranne Vella', 'għal: Djarju #1 Loranne Vella', 8]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">
+			<span class="header-djarju">Djarju</span>
+			
+				<span class="subject-date">23.08.2023</span>
+			
+		</li>
+	
+	
+	</ul>
+	
+	
+		
+	
+	
+
+	
+
+
+
+ 
+
+
+	
+		<h3>
+			
+			
+			Li jmiss se jkun għalkollox differenti
+		</h3>
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>L-ewwel ħsieb marbut ma’ kitba ġdida li għaddieli minn rasi f’Mejju tas-sena l-oħra—wara l-ġimgħa intensiva li kienet it-tnedija ta’ Marta Marta—kien simili ħafna għal dak li dejjem ikolli wara li nlesti biċċa xogħol impenjattiva: “li jmiss se jkun għalkollox differenti”. Ħsieb li jitfaċċa sforz kemm inkun qed inħoss li f’dal-proċess li nkun għadni kif wassalt għat-tmiem tiegħu—li għalija t-tmiem dejjem ifisser meta xogħli nerħih kompletament minn idejja u nħallih imur għand il-qarrej—eżawrejt dak kollu li kienli possibbli. Żgur li jkolli nasal għal das-sentiment ta’ finalità biex nazzarda “nagħlaq”, “nikkonkludi”, “niffinalizza” u nagħmel il-kitba pubblika, minkejja li naf ukoll li, kieku kelli nestendi l-proċess b’sentejn oħra, se nsib ħafna iktar fejn nimraħ, u iktar iva milli le, b’iktar żmien biex naqra, nirriċerka, u naħseb dwar is-suġġett, żgur mhux forsi li nispiċċa nibdel għalkollox dak li nkun ktibt fl-ewwel snin.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-21">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+</ul>
+
+					</div>
+				
+				
+				
+					<div class="collaborated">
+						<p class="continuity">Kollaborazzjonijiet:</p>
+						
+						
+						<ul class="promo-list collated">
+	
+	
+		
+
+
+<li >
+	<a class="promo  frar promo-esej sequence- story-40" href="/jien_a-il-mara-tas-suldat/" onclick="analytics(['trackEvent', 'Promo', 'minn: Loranne Vella', 'għal: Il-Mara tas-Suldat', 1]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Frar 2024</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Il-Mara <l-m>tas-Suldat</l-m>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Jien_a</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Fil-bidu, jekk qatt kien hemm bidu, il-maħbubin kollha sejħu lilhom infushom amazzuni. Huma u jgħixu flimkien, jinħabbu, jiċċelebraw lilhom infushom, jilagħbu, fiż-żmien meta x-xogħol kien għadu logħba, il-maħbubin fil-ġnien tal-art baqgħu jsejħu lilhom infushom amazzuni tul Żmien id-Deheb kollu. Imbagħad, xħin twaqqfu l-ewwel bliet, bosta maħbubin kissru l-armonija oriġinali u sejħu lilhom infushom ommijiet. Minn dan iż-żmien ’l hemm, il-kelma amazzuna saret tfisser għalihom tifla, li qatt ma tikber, immatura, dik li qatt ma tħaddan id-destin tagħha. L-amazzuni tkeċċew mill-bliet tal-ommijiet. Kien f’dak il-mument li dawn saru vjolenti u bdew jiġġieldu biex jiddefendu l-armonija. Għalihom, l-isem antik amazzuni baqa’ bit-tifsira oriġinali. U minn issa beda jfisser xi ħaġa aktar: dawk li jħarsu l-armonija. Minn hemm ’il quddiem stajt issib amazzuni f’kull żmien, f’kull kontinent, gżira u xatt. Dħalna fiż-Żmien Glorjuż grazzi għall-amazzuni tal-lum. Ħafna drabi maħbuba tuża ġesti biex b’ġisimha ssir tixbah dak l-annimal jew dawk l-annimali li l-aktar li għandha affinità magħhom u b’hekk tagħti pjaċir lill-maħbuba tagħha. Dan isir aktar faċli meta tkun taħt ipnożi. Trid tinsa l-mossi ta’ kuljum u ssib dawk tal-annimali tagħha. Din mhix imitazzjoni tal-annimalesk: din hija mima. Hija ħaġa diffiċli biex taqbad u tagħmilha spirtu pront, anki jekk il-maħbuba ssaqsiha biex tagħmilhielha bl-ikbar ġentilezza. “Meta ssaqsini biex nagħmilha ta’ ġemel, niddejjaq, għax rari jirnexxili.” (Charlotte Plume, Iċ-Ċirku Tiegħi, Gallija, Żmien il-Konkos.)</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-40">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  marzu promo-terminu sequence- story-128" href="/il-kliem-fit-teorija-il-politika-tal-kura/" onclick="analytics(['trackEvent', 'Promo', 'minn: Loranne Vella', 'għal: il-politika tal-kura', 2]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">
+			
+				<span class="subject-date">01.03.2025</span>
+			
+		</li>
+	
+	
+		<li class="header-label collection-slug collection-3">
+			Il-Kliem fit-Teorija
+		</li>
+	
+	</ul>
+	
+	
+		
+			<h1>
+				il-politika <l-m>tal-kura</l-m>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Raylene Abdilla</span>, <span class="author">Noah Fabri</span>, <span class="author">Davinia Hamilton</span>, <span class="author">Kurt Borg</span>, <span class="author">Loranne Vella</span>, <span class="author">Kristina Borg</span> & <span class="author">Omar <l-m>N’Shea</l-m></span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Sibt diffikultà bit-traduzzjoni għal “politics of care” bħala “il-politika tal-kura” għaliex il-kelma “kura” bil-Malti hija aktar assoċjata mad-diskors mediku, bħal ngħidu aħna meta t-tabib jikkura pazjent. Bit-Taljan meta ngħidu “ħu ħsieb” tiġi tradotta bħala “stammi bene”, waqt li l-frażi “nieħu ħsiebek” tiġi tradotta għal “mi curo di te”. F’dan is-sens it-Taljan għandu użu usa’ għall-kunċett “curare” li jistà jfisser kemm “tieħu ħsieb” u kemm “kura” mill-mard. Bil-Malti ma nħossx li l-kelma “kura” hija adatta biex taqbad il-kunċett ta “politics of care”.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-128">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  mejju promo-terminu sequence- story-51" href="/il-kliem-fit-teorija-alterità/" onclick="analytics(['trackEvent', 'Promo', 'minn: Loranne Vella', 'għal: alterità', 3]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">
+			
+				<span class="subject-date">27.05.2024</span>
+			
+		</li>
+	
+	
+		<li class="header-label collection-slug collection-3">
+			Il-Kliem fit-Teorija
+		</li>
+	
+	</ul>
+	
+	
+		
+			<h1>
+				alterità
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Omar <l-m>N’Shea</l-m></span>, <span class="author">Davinia Hamilton</span>, <span class="author">Kurt Borg</span>, <span class="author">Aaron Aquilina</span> & <span class="author">Loranne Vella</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Ngħid għalija, meta nagħżel li nuża l-kelma “alterità”, nużaha biex nirreferi għat-tip ta’ “ieħor” li jikteb dwaru Levinas. L-alterità tal-Ieħor m’għandhiex x’taqsam ma’ meta ngħidu li xi ħadd ġie othered, ċjoè meqjus inferjuri, eskluż miċ-ċentru tan-normalità, abjected (din tkun kelma oħra ta’ min ningaġġaw magħha). Kif nifhmu jien, għal Levinas, l-alterità tal-Ieħor hija dik il-kwalità (anzi, hija nonkwalità, għax ma tinqabadx f’kategoriji) li lili twaqqafni milli nirreduċi lill-Ieħor għal sameness. (La qegħdin fiha, sameness kif tiġi bil-Malti? “Identiċità”? “Stessiżmu”? Hekk issuġġerew xi wħud fuq il-grupp Kelmet il-Malti fuq Facebook.) L-alterità, allura, mhijiex vjolenza (bħalma ġeneralment tkun meta xi ħadd jiġi othered); anzi, għal Levinas, il-vjolenza sseħħ appuntu meta l-alterità tal-Ieħor inwaqqgħuha għall-kategorija tal-familjari. B’hekk, inkunu ħnoqnieh lill-Ieħor, ġibnieh oġġett. Allura, “alterità”, għalija, iġġorr magħha konnotazzjonijiet ta’ fraġilità, valur, vulnerabbiltà li tinforma attitudni etika. Wara kollox, il-filosofija ta’ Levinas hija l-etika tal-alterità.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-51">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+</ul>
+
+					</div>
+				
+				
+			</div>
+		</section>
+		<section id="grid-max-panel-left-top" data-pagefind-ignore>
+			<section class="generic-menu contributors-menu">
+	
+		<nav>
+			
+				<li><a href="/raylene-abdilla/">Raylene Abdilla</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/aaron-aquilina/">Aaron Aquilina</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/jasmine-bajada/">Jasmine Bajada</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/karl-baldacchino/">Karl Baldacchino</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/simon-bartolo/">Simon Bartolo</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/warren-bartolo/">Warren Bartolo</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/kristina-borg/">Kristina Borg</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/kurt-borg/">Kurt Borg</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/nicole-borg/">Nicole Borg</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/antoine-cassar/">Antoine Cassar</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/daniel-cossai/">Daniel Cossai</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/leanne-ellul/">Leanne Ellul</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/noah-fabri/">Noah Fabri</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/ryan-falzon/">Ryan Falzon</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/fatima-a.m./">fatima a.m.</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/charlene-galea/">Charlene Galea</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/miriam-galea/">Miriam Galea</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/joe-gatt/">Joe Gatt</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/romeo-roxman-gatt/">Romeo Roxman Gatt</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/rowena-grech/">Rowena Grech</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/jimmy-grima/">Jimmy Grima</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/davinia-hamilton/">Davinia Hamilton</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/jien_a/">Jien_a</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/ira-melkonyan/">Ira Melkonyan</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/glorianne-micallef/">Glorianne Micallef</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/omar-nshea/">Omar N’Shea</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/nathan-anthony-pace/">Nathan Anthony Pace</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/kris-polidano/">Kris Polidano</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/matteo-pullicino/">Matteo Pullicino</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/matthew-schembri/">Matthew Schembri</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/maria-theuma/">Maria Theuma</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/leslie-vassallo/">Leslie Vassallo</a></li>
+			
+		
+	
+		
+			
+				<li class="active">Loranne Vella</li>
+			
+		
+	
+		
+			
+				<li><a href="/manuela-zammit/">Manuela Zammit</a></li>
+			
+		</nav>
+	
+</section>
+
+		</section>
+	</div>
+</article>
+<script>
+	reportingTitle = "Loranne Vella";
+</script>
+
+			</main>
+		</div>
+		<div id="bottom-wrapper">
+			<img id="deco" role="none" src="/img/deco-100.svg" alt="Dekorazzjoni art-nouveau" />
+			
+				<div id="newsletter-container-bottom" class="newsletter-container">
+					<section id="form" data-track-content data-content-name="Homepage" data-content-piece="formola">
+						<iframe id="newsletter" class="newsletter-iframe-regular" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#" scrolling="no" title="Abbona fin-newsletter"></iframe>
+<iframe id="newsletter" class="newsletter-iframe-dark" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#|#201e1d|#908984|0|442093344ewr" scrolling="no" title="Abbona fin-newsletter"></iframe>
+<iframe id="newsletter" class="newsletter-iframe-contrast" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#|#000000|#ffffff|0|442093344ewr" scrolling="no" title="Abbona fin-newsletter"></iframe>
+
+					</section>
+				</div>
+			
+			<footer data-track-content data-content-name="Footer" data-content-piece="loranne-vella">
+	<nav class="footer-content">
+		<menu id="housekeeping">
+			<li class="header">Dwarna</li>
+			<li><a href="/kolofon/">Kolofon</a></li>
+			<li><a href="/proċess-editorjali/">Proċess</a></li>
+			<li><a href="/gwida-tal-istil/">Gwida tal-istil</a></li>
+			<li><a href="/cookies/">Cookies</a></li>
+			<li><a href="/privatezza/">Privatezza</a></li>
+			<li><a href="/aċċessibbiltà/">Aċċessibbiltà</a></li>
+			<li><a href="/podcast/">Podcast</a></li>
+			<li><a href="/newsletter/">Newsletter</a></li>
+			<li class="hide-tablet"><a href="/drittijiet/">Drittijiet</a></li>
+		</menu>
+		<menu id="media">
+			<li class="header">Midja</li>
+			<li><a href="/ar/" class="arabic">العربية</a></li>
+			<li><a href="/ca/">Català</a></li>
+			<li><a href="/de/">Deutsch</a></li>
+			<li><a href="/en/">English</a></li>
+			<li><a href="/es/">Español</a></li>
+			<li><a href="/fr/">Français</a></li>
+			<li><a href="/it/">Italiano</a></li>
+			<li><a href="/nl/">Nederlands</a></li>
+			<li class="hide-tablet"><a href="/ro/">Română</a></li>
+		</menu>
+		<menu id="socials">
+			<li class="header">Segwina</li>
+			<li><a href="https://facebook.com/aphroconfuso">Facebook</a></li>
+			<li><a href="https://instagram.com/aphroconfuso">Instagram</a></li>
+			
+			
+			<li><a href="https://whatsapp.com/channel/0029VaysAKP7z4kZHDKdZ71J" rel="me">WhatsApp</a></li>
+			<li><a href="https://aphroconfuso.bsky.social/">Bluesky</a></li>
+			<li><a href="https://youtube.com/@aphroconfuso">Youtube</a></li>
+			<li><a href="https://open.spotify.com/user/31rly4s75gfxs6li6bcxc5bqlgza">Spotify</a></li>
+		</menu>
+		<menu id="podcast">
+			<li class="header">Podcast</li>
+			<li><a href="https://podcasts.apple.com/us/podcast/aphroconfuso/id1686567243">Apple</a></li>
+			
+			<li><a href="https://feeds.acast.com/public/shows/aphroconfuso">RSS feed</a></li>
+			<li><a href="https://open.spotify.com/show/75Lt3UMvC1jE15SGrNFMww">Spotify</a></li>
+			
+		</menu>
+		<div id="logotype-container">
+			<a href="/"><img src="/img/logotype.svg" class="logotype" alt="logo: Aphroconfuso" /></a>
+		</div>
+		<div id="email">
+			<a href="mailto:l-edituri@aphroconfuso.mt" class="email">l-edituri@aphroconfuso.mt</a>
+		</div>
+		<div class="hide-mobile choose-theme choose-theme-footer">
+			<a id="theme-regular-footer" role="button" tabindex="4">s</a>
+			<a id="theme-dark-footer" role="button" tabindex="5">m</a>
+			<a id="theme-contrast-footer" role="button" tabindex="6">c</a>
+			<a id="theme-system-footer" role="button" tabindex="7">p</a>
+		</div>
+		<div id="copyright"><a href="/drittijiet/" class="copyright">&copy; 2023-2025 Aphroconfuso et al</a></div>
+		<div id="qrcode"><img src="/img/qr/loranne-vella.png" width="180" height="180" alt="QR code" /></div>
+		<div id="url">https://aphroconfuso.mt/loranne-vella/</div>
+	</nav>
+</footer>
+
+		</div>
+		<aside id="scroll-tools" class="monthly-outlined">
+			<p><span id="progress"><!-- --></span></p>
+		</aside>
+	</body>
+</html>

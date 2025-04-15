@@ -1,0 +1,964 @@
+<!doctype html>
+<html lang="mt" translate="no">
+
+	<head>
+		<meta charset="utf-8">
+		
+	<title>Podcast · Aphroconfuso</title>
+	<meta content="Ġurnal letterarju." name="description">
+	<meta property="og:image" content="/stampi/social_aphroconfuso_logo_social_kbir_kwadrat_d073f4e24a.jpg">
+
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+		<meta content="width=device-width, initial-scale=1" name="viewport">
+		<meta content="width=device-width" initial-scale="1.0" maximum-scale="1.0" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="yes" name="mobile-web-app-capable">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#f9f9f3">
+		<link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon-16x16.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32x32.png">
+		<link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
+		<link rel="mask-icon" href="/img/icons/safari-pinned-tab.svg" color="#5bbad5">
+		<meta property="og:image:type" content="image/jpeg">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
+		<link rel="canonical" href="https://aphroconfuso.mt/podcast/">
+		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
+		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
+		<link rel="stylesheet" href="/css/style-515d1d07.css">
+		<script>
+			var
+				audioLoaded,
+				audioUrls,
+				author,
+				body,
+				bodyEnd,
+				bodyHeight,
+				bodyStart,
+				bodyText,
+				bookmarksArray,
+				bookmarksList,
+				bookmarksMenuElement,
+				charactersPerPixel,
+				charactersPerScreen,
+				currentTime,
+				duration,
+				elapsedTime,
+				hideScrollTools,
+				lastReportedReadingTime,
+				lastReportedScrollPosition,
+				lastScrollPosition,
+				message,
+				issueMonth,
+				issueMonthYear,
+				newScrollPosition,
+				pageHeight,
+				pageReportingTitle,
+				percentageProgress,
+				placeText,
+				podcastUrl,
+				previousTime,
+				progressElement,
+				readingSpeed,
+				reportingTitle,
+				screenHeight,
+				skippedTime,
+				storyCompleted,
+				storyId,
+				storyType,
+				sequenceEpisodeNumber,
+				sequenceEpisodeTitle,
+				timeStarted,
+				pageTitle,
+				wordcount,
+				wordsPerPixel,
+				wordsPerSecond,
+				wordsPerSecondAudio,
+				wordsPerScreen;
+
+			audioLoaded = false;
+			bookmarksArray = [];
+			percentageProgress = 0;
+			previousTime = [];
+			storyCompleted = false;
+
+			const	urlSlug = location.pathname.replace(/\//g, '');
+			const setCookie = (cname, cvalue, exdays = 36500) => {
+				const d = new Date();
+				d.setTime(d.getTime() + (exdays*24*60*60*1000));
+				let expires = "expires="+ d.toUTCString();
+				document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+			}
+			const getCookie = (cname) => {
+				let name = cname + "=";
+				let decodedCookie = decodeURIComponent(document.cookie);
+				let ca = decodedCookie.split(';');
+				for(let i = 0; i < ca.length; i++) {
+					let c = ca[i];
+					while (c.charAt(0) == ' ') {
+						c = c.substring(1);
+					}
+					if (c.indexOf(name) == 0) {
+						return c.substring(name.length, c.length);
+					}
+				}
+				return "";
+			}
+			var _paq = window._paq = window._paq || [];
+			const analytics = (arrayInfo) => {
+				if (location.host !== 'aphroconfuso.mt') console.log(arrayInfo);
+				_paq.push(arrayInfo);
+			}
+			_paq.push(['disableCookies']);
+			_paq.push(['enableJSErrorTracking']);
+			_paq.push(['enableHeartBeatTimer']);
+			_paq.push(['enableLinkTracking']);
+			_paq.push(['trackPageView']);
+			_paq.push(['trackVisibleContentImpressions']);
+			(function () {
+				var u = "//analitika.aphroconfuso.mt/";
+				_paq.push(['setTrackerUrl', u + 'matomo.php']);
+				_paq.push(['setSiteId', location.host === 'aphroconfuso.mt' ? '1' : '2']);
+				var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
+			})();
+			const addRemoveFontSizeClass = (size) => {
+				document.body.classList.remove('font-size-1','font-size-2','font-size-3','font-size-4')
+				document.body.classList.add(`font-size-${ size }`);
+				localStorage.setItem('font', size);
+			}
+			// REVIEW
+			const translateTheme = {
+				'regular': 'regolari',
+				'dark': 'skura',
+				'contrast': 'kuntrast',
+				'system': 'sistema'
+			}
+			const addRemoveTheme = (theme, stored) => {
+				document.body.classList.remove('theme-regular','theme-dark','theme-contrast','theme-system')
+				document.body.classList.add(`theme-${ theme }`);
+				localStorage.setItem('theme', theme);
+				if (stored && theme === 'regular') return;
+				analytics(['trackEvent', 'Tema', `${ stored ? 'Tema storjata' : 'Tema nbidlet' }`, translateTheme[theme]]);
+			}
+			const initialiseAfterBody = () => {
+				document.body.classList.add(location.hostname.replace(/\.?aphroconfuso\.mt/, '') || 'production');
+				addRemoveFontSizeClass(localStorage.getItem('font') || 1);
+				addRemoveTheme(localStorage.getItem('theme') || 'regular', true);
+				if (localStorage.getItem(`tw-${urlSlug}`)) {
+					document.body.classList.add('trigger-warning-closed');
+				}
+			}
+		</script>
+		<script src="../script/script-24450c.js" type="module"></script>
+	</head>
+	<body class="show-nav this-month-april">
+		<script>initialiseAfterBody();</script>
+		<div id="top-wrapper">
+			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
+			<nav id="top-nav">
+				<div id="logo-container-wrapper">
+					<div id="logo-container">
+						<a href="/">
+							<img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" />
+						</a>
+					</div>
+					<menu class="hide-mobile" id="menu-carousels">
+						<li class="abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
+						<li class="ff-2"><a href="/almanakk-april/">Almanakk</a></li>
+					</menu>
+					<menu class="hide-mobile" id="menu-collections">
+						<li class="main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+						<li class="main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					</menu>
+				</div>
+				<input id="menu-toggle" type="checkbox" />
+				<label class='menu-button-container' for="menu-toggle">
+					<span style="display: none">Mobile biss: iftaħ il-menu</span>
+					<div class='menu-button'></div>
+				</label>
+				
+					<menu id="menu-main">
+						
+						<li class="hide-laptop main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+						<li class="hide-laptop main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+						<li class="hide-laptop abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
+						<li class="hide-laptop ff-2"><a href="/almanakk-april/">Almanakk</a></li>
+						<li><a href="/appuntamenti/">Appuntamenti</a></li>
+						<li><a href="/kontributuri/">Kontributuri</a></li>
+						<li><a href="/werrej/">Werrej</a></li>
+						<li><a href="/djarju/">Djarju</a></li>
+						<li><a href="/sensiliet/">Sensiliet</a></li>
+						<li><a href="/podcast/">Podcast</a></li>
+						<li class="hide-mobile"><a href="/kotba/" class="menu-kotba">Kotba</a></li>
+						<li class="hide-laptop choose-theme">
+							<a id="theme-regular" role="button" tabindex="0">s</a>
+							<a id="theme-dark" role="button" tabindex="1">m</a>
+							<a id="theme-contrast" role="button" tabindex="2">c</a>
+							<a id="theme-system" role="button" tabindex="3">p</a>
+						</li>
+						<li><a href="/dwarna/">Dwarna</a></li>
+						<li class="hide-laptop"><a href="/kotba/">Kotba</a></li>
+						<li class="hide-laptop"><a href="/kolofon/">Kolofon</a></li>
+						<li><a href="/newsletter/">Newsletter</a></li>
+						<li class="hide-laptop"><a href="/privatezza/">Privatezza</a></li>
+						<li><a href="/bookmarks/">Bookmarks<span id="bookmarks-number"></span></a></li>
+						<li class="hide-laptop choose-theme" id="text-size-adjust">
+							<a id="font-size-1" role="button" tabindex="8">a</a>
+							<a id="font-size-2" role="button" tabindex="9">a</a>
+							<a id="font-size-3" role="button" tabindex="10">a</a>
+							<a id="font-size-4" role="button" tabindex="11">a</a>
+						</li>
+					</menu>
+					<input class="hide-mobile" type="text" id="search-input" placeholder="fittex..." autocomplete="off" auto-fill="off" type="text" autocapitalize="none" enterkeyhint="search" />
+					<ul id="search-results"><!-- --></ul>
+				
+				<div id="brownline"></div>
+			</nav>
+			<div id="message"><!-- --></div>
+			<main id="skipto">
+				
+	<article class="generic contents podcast">
+		<header>
+			<ul><li class="header-label">&nbsp;</li></ul>
+			<h1>Podcast</h1>
+			<h2>&nbsp;</h2>
+		</header>
+		<div class="container">
+			<section id="grid-body">
+				<div class="generic-body-text">
+					<p>Minbarra li nippubblikaw <a href="/awdjo/">verżjoni awdjo</a> ta’ ħafna <l-m>mix-xogħol</l-m> li jidher <l-m>fil-ġurnal</l-m>,  nippubblikaw ukoll taħditiet u intervisti <l-m>mal-kittieba</l-m> tagħna u recordings <l-m>tal-avvenimenti</l-m> tal-ġurnal.</p>
+<p><em>dawn huma <l-m>t-taħditiet</l-m> li ppubblikajna s’issa:</em></p>
+					
+					
+					
+					
+					<ul class="promo-list">
+	
+	
+		
+
+
+<li >
+	<a class="promo  jannar promo-poddata sequence- story-113" href="/raylene-abdilla-kurt-borg-noah-fabri-omar-nshea-poddata-2025-01-24-ħbiberija-ħrejjef-komunità-(taħdita)/" onclick="analytics(['trackEvent', 'Promo', 'minn: Podcast', 'għal: Ħbiberija, Ħrejjef, Komunità (taħdita)', 1]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">
+			Poddata
+			
+				<span class="subject-date">24.01.2025</span>
+			
+		</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Ħbiberija, Ħrejjef, Komunità
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2 class="contains-with">
+		
+		
+			
+				<span class="with">ma’</span>
+			<span class="author">Raylene Abdilla</span>, <span class="author">Kurt Borg</span>, <span class="author">Noah Fabri</span> & <span class="author">Omar <l-m>N’Shea</l-m></span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Fl-24 ta’ Jannar 2025 fis-6:00pm, flimkien ma’ Kurt Borg u Noah Fabri, konna l-mistednin tal-Librerija Pubblika ta’ Pembroke. Raylene Abdilla tkellmet dwar il-kitbiet f’Aphroconfuso u Omar N’Shea mexxa d-diskussjoni. Kurt tkellem dwar il-ġabra ta’ esejs tiegħu sens ta’ ħarifa (Klabb Kotba Maltin 2024) u qara silta minnha. Noah Fabri tkellmet dwar ir-rumanz tagħha It-Togħma Morra taċ-Ċiċri (Merlin 2024) u wkoll qrat silta minnu. Raylene tkellmet dwar diversi kitbiet li jidhru f’Antoloġija 1 u li jidhru wkoll online fosthom Medusa ta’ Rowena Grech, Il-Labra, Il-Lanza, il-Qoffa, l-Azzarin ta’ Loranne Vella, Likantropi ta’ Davinia Hamilton, u d-Djarju ta’ Warren Bartolo. Omar N’Shea mexxa t-taħdita. Tkellimna dwar il-kitba bil-Malti, il-ħbiberija, il-karattri f’rumanz imnebbħin mill-ħbieb tal-awtur, ir-reviżjoni, id-differenza bejn ir-rumanz u l-esej, u bosta suġġetti oħra.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-113">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">87 minuta</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  novembru promo-poddata sequence- story-98" href="/raylene-abdilla-jasmine-bajada-miriam-galea-davinia-hamilton-maria-theuma-poddata-2024-11-26-il-komunità-tal-kitba/" onclick="analytics(['trackEvent', 'Promo', 'minn: Podcast', 'għal: Il-Komunità tal-Kitba', 2]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">
+			Poddata
+			
+				<span class="subject-date">26.11.2024</span>
+			
+		</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Il-Komunità <l-m>tal-Kitba</l-m>
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2 class="contains-with">
+		
+		
+			
+				<span class="with">ma’</span>
+			<span class="author">Raylene Abdilla</span>, <span class="author">Jasmine Bajada</span>, <span class="author">Miriam Galea</span>, <span class="author">Davinia Hamilton</span> & <span class="author">Maria Theuma</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Ħafna drabi meta niktbu nkunu magħluqin f’kamra waħidna, iżda l-kliem li nużaw qatt mhu tagħna biss. Matul l-ewwel sena ta’ Aphroconfuso ridna noħolqu, flimkien mal-kittieba tagħna, komunità fejn il-kliem mhux biss jingħad darba u jintelaq għall-irwiefen taż-żmien, iżda jsib eku u risposta fi kliem ieħor fil-ġurnal stess, fl-istorja letterarja tagħna u tad-dinja. Waqt dal-avveniment introduċejna l-ewwel ktieb ta’ Aphroconfuso, Antoloġija 1.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-98">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">52 minuta</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  mejju promo-poddata sequence- story-62" href="/noah-fabri-poddata-2024-05-11-noti-editorjali-5-noah-fabri/" onclick="analytics(['trackEvent', 'Promo', 'minn: Podcast', 'għal: Noti Editorjali #5 #5', 3]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">
+			Poddata
+			
+				<span class="subject-date">11.05.2024</span>
+			
+		</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Noti Editorjali #5
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2 class="contains-with">
+		
+		
+			
+				<span class="with">ma’</span>
+			<span class="author">Noah Fabri</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>« Dawn il-proċessi kollha huma xi ħaġa li tinteressani peress li ovvjament huma assoċjati aktar man-nisa, max-xogħol tan-nisa, li mhux mhuwiex valutat, ma tistax tikkapitalizzah. Jiġi kkapitalizzat, imma l-bażi tiegħu mhix il-kreazzjoni tal-valur, il-valur tiegħu mhux ekonomiku imma huwa soċjali. Qiegħed biex tirriproduċi s-soċjetà, jew tħaddan ’in-nies, biex tieħu ħsiebhom. Dak huwa l-valur prinċipali ta&#39; dan it-tip ta&#39; xogħol. Allura nieħu gost nuża dan it-tip ta&#39; xogħol meta nkun qed naħdem fuq proġetti artistiċi. Nieħu gost nagħmilhom waqt li nkun qed nitkellem ukoll fuq il-ġeneru. Meta għamilt Huma min huma? kont qed inħit liebsa u nitkellem speċifikament fuq il-pronomi. Għal Insalata għamilt insalata waqt li tkellimt fuq ir-relazzjoni tiegħi mal-ikel u l-ġeneru, il-preżentazzjoni u l-ħsieb tiegħi marbut mal-ikel u l-ġeneru. Jiġifieri dejjem kien hemm dawk l-ideat. Anki fil-kitba, meta nkun qed nikteb, dejjem nidħol fid-dettal fuq l-ikel, fuq is-sensi, fuq l-affarijiet effimeri tal-ħajja ta&#39; kuljum. Jiġu anka mill-istudji tiegħi tal-Antropoloġija, li vera tiffoka fuq il-ħajja ta&#39; kuljum, u vera l-ħajja ta&#39; kuljum iġġibha maġika. U dik xi ħaġa li dejjem pruvajt nagħmel għax għalija l-ħajja ta&#39; kuljum hija maġika speċjalment f&#39;postijiet fejn il-kapitaliżmu ma tantx jirnexxielu em jippenetra. Għalhekk ukoll vera nidħol fuq is-sensi, fuq il-proċessi tal-ġisem. U li l-karattri jkunu konxi mill-ġisem tagħhom, x&#39;qed jagħmlu fl-ispazju u dawn l-affarijiet kollha li l-loġika assoċjata mal-patrijarkat ma tagħtix kas, għalija huma l-aktar affarijiet importanti fil-ħajja tal-bniedem. »</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-62">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">71 minuta</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  marzu promo-poddata sequence- story-55" href="/aaron-aquilina-noah-fabri-omar-nshea-poddata-2024-03-27-il-kliem-fit-teorija/" onclick="analytics(['trackEvent', 'Promo', 'minn: Podcast', 'għal: Il-Kliem fit-Teorija', 4]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">
+			Poddata
+			
+				<span class="subject-date">27.03.2024</span>
+			
+		</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Il-Kliem <l-m>fit-Teorija</l-m>
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2 class="contains-with">
+		
+		
+			
+				<span class="with">ma’</span>
+			<span class="author">Aaron Aquilina</span>, <span class="author">Noah Fabri</span> & <span class="author">Omar <l-m>N’Shea</l-m></span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Termini fil-ħsieb kontemporanju malajr isibu ruħhom fid-diskors kulturali u politiku mingħajr ma jkun sar ingaġġament mar-raġunijiet għalfejn nużaw lilhom flok oħrajn. Meta niktbu bl-istess lingwa li biha naqraw, faċli nużaw dal-kelmiet mingħajr ma nirriflettu wisq fuqhom. Iżda meta niktbu bil-Malti, id-diffikultà tat-traduzzjoni tista’ ssir privileġġ: tagħtina l-opportunità ningaġġaw mill-qrib mat-termini qabel indaħħluhom fil-lingwa tagħna. “Il-Kliem fit-Teorija” huwa proġett fejn kittieba u speċjalisti jiddiskutu t-traduzzjoni fil-Malti ta’ kliem fil-ħsieb kontemporanju. Il-kelliema kienu Aaron Aquilina, Noah Fabri u Omar N’Shea.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-55">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">51 minuta</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  frar promo-poddata sequence- story-45" href="/kurt-borg-poddata-2024-02-22-noti-editorjali-4-kurt-borg/" onclick="analytics(['trackEvent', 'Promo', 'minn: Podcast', 'għal: Noti Editorjali #4 #4', 5]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">
+			Poddata
+			
+				<span class="subject-date">22.02.2024</span>
+			
+		</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Noti Editorjali #4
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2 class="contains-with">
+		
+		
+			
+				<span class="with">ma’</span>
+			<span class="author">Kurt Borg</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>« Dan il-proġett tal-esejs għalija huwa proġett ta’ memorja li l-pandemija tefgħetni fih. Jiġifieri l-pandemija, forsi kif esperjenzaha wkoll ħaddieħor, jien esperjenzajtha b’ċertu żlugar. Żlugar mill-ordinarju. Għaliex? Għax kollox ġie żlugat. Il-ħajja tagħna, għal ħafna nies il-post fejn jgħixu, il-mod kif jgħixu, ix-xogħol, kollox ġie maqtugħ mill-ordinarju. Dak il-qtugħ ħafna nies esperjenzawh bħala trawma, ma nixtieqx inxejjen minn dan, kien hemm ħafna mewt fl-arja, u ħafna nies esperjenzawh b’uġigħ. Oħrajn esperjenzawh b’forma ta’ libertà stramba u libertà ġdida li f’daqqa waħda “għandi ħafna iktar ħin” jew “għandi ħafna iktar ħin id-dar”. Wieħed mill-ħsibijiet li kien ikolli fil-pandemija—naf inqum, saru l-għaxra, fejn is-soltu nkun l-uffiċċju jew xi mkien u qiegħed id-dar—u ngħid id-dawl tax-xemx fuq din il-mejda qatt ma rajtu b&#39;dan il-mod, dak it-tip ta’ ħsibijiet, għax qatt ma nkun id-dar dak il-ħin. Jew qed inħoss il-kamra differenti, jew inkella anka qed immur mixja. Kont maqtugħ mir-rutina. Ġieli kien ikun stramb dan, u ġieli kien idejjaqni, ovvjament, għax kien hemm ħafna stress, ħafna ansjetà u inċertezza. Imma daqstant ieħor kelli bżonn dik il-qatgħa biex lili titfagħni f’ċerta żona fejn ċerti memorji reġgħu bdew ifuru. Jew ċerti emozzjonijiet minn ġo fija erġajt bdejt inħosshom b&#39;ċerta intensità, b’ċerta luċidità. U ħassejt dak kien mument esejistiku għalija. Kien f’dan l-ispirtu li dort lejn l-esej għax xtaqt naqbad xi ħaġa minni nnifsi u mid-dinja li bdejt inħoss li ħa titlaq għal dejjem. »</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-45">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">63 minuta</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  frar promo-poddata sequence- story-46" href="/davinia-hamilton-poddata-2023-12-18-noti-editorjali-3-davinia-hamilton/" onclick="analytics(['trackEvent', 'Promo', 'minn: Podcast', 'għal: Noti Editorjali #3 #3', 6]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">
+			Poddata
+			
+				<span class="subject-date">18.12.2023</span>
+			
+		</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Noti Editorjali #3
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2 class="contains-with">
+		
+		
+			
+				<span class="with">ma’</span>
+			<span class="author">Davinia Hamilton</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Taħdita ma&#39; Davinia Hamilton dwar it-teatru, il-kitba, u r-relazzjoni bejniethom. Fost ħafna affarijiet oħra, nitkellmu wkoll dwar ix-xogħol teatrali Blanket Ban, li ħolqot flimkien ma’ Marta Vella, l-attiviżmu tagħha rigward id-drittijiet riproduttivi, l-istudju tagħha tal-psikanaliżi, u l-kitba tal-esej tagħha Żerriegħa fuq Aphroconfuso. Davinia Hamilton hi gradwata fl-Ingliż mill-Università ta’ Malta, u studjat il-midja diġitali ġewwa Dublin, u t-teatru fl-iskola ArtsEd ġewwa Londra. Hi l-koawtriċi ta’ Blanket Ban, produzzjoni teatrali dwar l-abort f’Malta, ippubblikata minn Bloomsbury Methuen Drama, li rebħet l-Edinburgh Untapped Award, u ġiet innominata għal Off West End Award, kif ukoll Popcorn Writing Award u Sit Up Award.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-46">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">54 minuta</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  frar promo-poddata sequence- story-47" href="/omar-nshea-poddata-2023-11-22-noti-editorjali-2-omar-nshea/" onclick="analytics(['trackEvent', 'Promo', 'minn: Podcast', 'għal: Noti Editorjali #2 #2', 7]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">
+			Poddata
+			
+				<span class="subject-date">22.11.2023</span>
+			
+		</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Noti Editorjali #2
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2 class="contains-with">
+		
+		
+			
+				<span class="with">ma’</span>
+			<span class="author">Omar <l-m>N’Shea</l-m></span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>« Id-differenza fil-fatt hija li jiena meta bdejt nikteb esej li mhuwiex akkademiku, għalkemm huwa tekniku, għalkemm id-dettalji xjentifiċi huma preċiżi ħafna, il-metodoloġija stajt niftaħha ħafna iktar. Jiġifieri jiena stajt nintroduċi l-perspettiva tiegħi, stajt pereżempju nimmaġina l-post stajt, nimmaġina r-rabja li ħass Michele Zammit tan-Naxxari meta skopra li s-sit se jittieħed, meta skopra li mhux se jaqla lira. Stajt nimmaġinahom dawn l-affarijiet. Stajt nimmaġina ċ-ċriev, pereżempju, jirgħu fuq il-wita’ ta’  Bur Mgħeż. Stajt nimmaġina konverżazzjonijiet pereżempju illi l-essej akkademiku ma jħallikx tagħmel. Allura din fetħet orizzonti ġodda fil-mod ta’ kif inti tista’ tingaġġa u tiskopri post mitluf. Jiġifieri biex inti biex inti ġġib lura post mitluf ix-xjenza mhijiex biżżejjed. L-immaġinazzjoni hija wkoll importanti. Il-kreattività hija importanti. Il-lingwa letterarja, il-poeżija hija importanti. »</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-47">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">103 minuti</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  jannar promo-poddata sequence- story-39" href="/kurt-borg-davinia-hamilton-omar-nshea-poddata-2023-11-01-kif-tgħidha-fqalbek/" onclick="analytics(['trackEvent', 'Promo', 'minn: Podcast', 'għal: Kif Tgħidha f’Qalbek', 8]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">
+			Poddata
+			
+				<span class="subject-date">01.11.2023</span>
+			
+		</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Kif Tgħidha f’Qalbek
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2 class="contains-with">
+		
+		
+			
+				<span class="with">ma’</span>
+			<span class="author">Kurt Borg</span>, <span class="author">Davinia Hamilton</span> & <span class="author">Omar <l-m>N’Shea</l-m></span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>“Jekk huwa minnu, bħalma jgħidu ħafna, li kull kitba hija forma ta’ traduzzjoni, il-kitba bil-Malti terġa’ hija traduzzjoni b’mod iktar ovvju minn dak li hu mifhum minn min jgħid hekk. F’dawn l-ewwel xogħlijiet li għandna fil-ġurnal tagħna din it-taqbida kienet ta’ spiss parti importanti mill-kitba u mill-proċess editorjali. Meta l-ewwel niddeċiedu li niktbu dwar suġġetti li aħna intiżi fihom imbagħad wara nagħżlu li niktbu dwarhom bil-Malti, insibu ruħna nipproċessaw ideat illi dejjem qrajniehom b’lingwa oħra, probabbilment bl-Ingliż, u li għalhekk bqajna naħsbuhom b’din il-lingwa. Meta niġu biex nartikolawhom bil-Malti nsibu ruħna nitqabdu bejn l-idea nnifisha u espressjoni preċiża u eleganti.”</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-39">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">59 minuta</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  frar promo-poddata sequence- story-37" href="/warren-bartolo-poddata-2023-08-31-noti-editorjali-1-warren-bartolo/" onclick="analytics(['trackEvent', 'Promo', 'minn: Podcast', 'għal: Noti Editorjali #1 #1', 9]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">
+			Poddata
+			
+				<span class="subject-date">31.08.2023</span>
+			
+		</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Noti Editorjali #1
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2 class="contains-with">
+		
+		
+			
+				<span class="with">ma’</span>
+			<span class="author">Warren Bartolo</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Niltaqgħu ma’ Warren Bartolo, it-traduttur tal-Frammenti ta’ Saffo (EDE Books, 2023) għal taħdita dwar l-imħabba tiegħu għal Saffo u l-lirika tagħha, u dwar il-proċess tat-traduzzjoni mill-Grieg Antik għall-Malti u t-taqbida mal-lingwi l-oħrajn li jinfilsaw bejniethom. F&#39;din il-poddata nsemmu wkoll traduzzjoni oħra ta’ Warren, Kif Tisraq il-Kotba ta’ David Horovitz (Sendb00ks Edition Taube, 2020), kif ukoll Idylle Saphique ta’ Liane de Pougy. Loranne Vella tiddiskuti l-esej tagħha fuq Aphroconfuso, “Il-Lanza, il-Labra, il-Qoffa, l-Azzarin”, li tieħu bħala spunt it-traduzzjoni ta’ Warren.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-37">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+				<li class="wordcount">93 minuta</li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+</ul>
+
+					
+					
+					
+					<ul class="promo-list">
+	
+	
+</ul>
+
+					<p>Tista’ tabbona fil-podcast fuq <a href="https://podcasts.apple.com/us/podcast/aphroconfuso/id1686567243">Apple Podcasts</a>,<a href="https://www.youtube.com/playlist?list=PLvRbv0Lp0vDvHim7kdh7Ac8l97ePgSmUI&playnext=1&index=1">Youtube</a>, <a href="https://pca.st/podcast/af8c44c0-c823-013b-f432-0acc26574db2">Pocket Casts</a>, <a href="https://open.spotify.com/show/75Lt3UMvC1jE15SGrNFMww">Spotify</a>, jew billi tfittex “Aphroconfuso” fuq l-app li tuża. Tista’ wkoll iżżid dan l-<a href="https://feeds.acast.com/public/shows/aphroconfuso">RSS feed</a> fl-app tiegħek.</p>
+<p><input id="podcast-url" type="text" value="https://feeds.acast.com/public/shows/aphroconfuso"></p>
+<ul id="podcast-logos">
+	<li>
+		<a href="https://podcasts.apple.com/us/podcast/aphroconfuso/id1686567243" onclick="analytics(['trackEvent', 'Podcast', 'logo', 'Apple']);">
+			<img src="/img/apple-podcasts-logo.png" width="120" height="120" alt="Logo tal-Apple Podcasts">
+			<p>Apple Podcasts</p>
+		</a>
+	</li>
+	<li>
+		<a href="https://pca.st/podcast/af8c44c0-c823-013b-f432-0acc26574db2" onclick="analytics(['trackEvent', 'Podcast', 'logo', 'Pocket casts']);">
+			<img src="/img/pocketcasts-logo.png" width="120" height="120" alt="Logo tal-Pocket Casts">
+			<p>Pocket Casts</p>
+		</a>
+	</li>
+	<li>
+		<a href="https://open.spotify.com/show/75Lt3UMvC1jE15SGrNFMww" onclick="analytics(['trackEvent', 'Podcast', 'logo', 'Spotify']);">
+			<img src="/img/spotify-logo.png" width="120" height="120" alt="Logo tal-iSpotify">
+			<p>Spotify</p>
+		</a>
+	</li>
+	<li>
+		<a href="https://www.youtube.com/playlist?list=PLvRbv0Lp0vDvHim7kdh7Ac8l97ePgSmUI&playnext=1&index=1" onclick="analytics(['trackEvent', 'Podcast', 'logo', 'Youtube']);">
+			<img src="/img/youtube-logo.png" width="120" height="120" alt="Logo tal-Youtube">
+			<p>Youtube</p>
+		</a>
+	</li>
+</ul>
+
+				</div>
+			</section>
+		</div>
+	</article>
+	<script>
+		reportingTitle = "Podcast";
+	</script>
+
+			</main>
+		</div>
+		<div id="bottom-wrapper">
+			<img id="deco" role="none" src="/img/deco-100.svg" alt="Dekorazzjoni art-nouveau" />
+			
+				<div id="newsletter-container-bottom" class="newsletter-container">
+					<section id="form" data-track-content data-content-name="Homepage" data-content-piece="formola">
+						<iframe id="newsletter" class="newsletter-iframe-regular" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#" scrolling="no" title="Abbona fin-newsletter"></iframe>
+<iframe id="newsletter" class="newsletter-iframe-dark" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#|#201e1d|#908984|0|442093344ewr" scrolling="no" title="Abbona fin-newsletter"></iframe>
+<iframe id="newsletter" class="newsletter-iframe-contrast" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#|#000000|#ffffff|0|442093344ewr" scrolling="no" title="Abbona fin-newsletter"></iframe>
+
+					</section>
+				</div>
+			
+			<footer data-track-content data-content-name="Footer" data-content-piece="podcast">
+	<nav class="footer-content">
+		<menu id="housekeeping">
+			<li class="header">Dwarna</li>
+			<li><a href="/kolofon/">Kolofon</a></li>
+			<li><a href="/proċess-editorjali/">Proċess</a></li>
+			<li><a href="/gwida-tal-istil/">Gwida tal-istil</a></li>
+			<li><a href="/cookies/">Cookies</a></li>
+			<li><a href="/privatezza/">Privatezza</a></li>
+			<li><a href="/aċċessibbiltà/">Aċċessibbiltà</a></li>
+			<li><a href="/podcast/">Podcast</a></li>
+			<li><a href="/newsletter/">Newsletter</a></li>
+			<li class="hide-tablet"><a href="/drittijiet/">Drittijiet</a></li>
+		</menu>
+		<menu id="media">
+			<li class="header">Midja</li>
+			<li><a href="/ar/" class="arabic">العربية</a></li>
+			<li><a href="/ca/">Català</a></li>
+			<li><a href="/de/">Deutsch</a></li>
+			<li><a href="/en/">English</a></li>
+			<li><a href="/es/">Español</a></li>
+			<li><a href="/fr/">Français</a></li>
+			<li><a href="/it/">Italiano</a></li>
+			<li><a href="/nl/">Nederlands</a></li>
+			<li class="hide-tablet"><a href="/ro/">Română</a></li>
+		</menu>
+		<menu id="socials">
+			<li class="header">Segwina</li>
+			<li><a href="https://facebook.com/aphroconfuso">Facebook</a></li>
+			<li><a href="https://instagram.com/aphroconfuso">Instagram</a></li>
+			
+			
+			<li><a href="https://whatsapp.com/channel/0029VaysAKP7z4kZHDKdZ71J" rel="me">WhatsApp</a></li>
+			<li><a href="https://aphroconfuso.bsky.social/">Bluesky</a></li>
+			<li><a href="https://youtube.com/@aphroconfuso">Youtube</a></li>
+			<li><a href="https://open.spotify.com/user/31rly4s75gfxs6li6bcxc5bqlgza">Spotify</a></li>
+		</menu>
+		<menu id="podcast">
+			<li class="header">Podcast</li>
+			<li><a href="https://podcasts.apple.com/us/podcast/aphroconfuso/id1686567243">Apple</a></li>
+			
+			<li><a href="https://feeds.acast.com/public/shows/aphroconfuso">RSS feed</a></li>
+			<li><a href="https://open.spotify.com/show/75Lt3UMvC1jE15SGrNFMww">Spotify</a></li>
+			
+		</menu>
+		<div id="logotype-container">
+			<a href="/"><img src="/img/logotype.svg" class="logotype" alt="logo: Aphroconfuso" /></a>
+		</div>
+		<div id="email">
+			<a href="mailto:l-edituri@aphroconfuso.mt" class="email">l-edituri@aphroconfuso.mt</a>
+		</div>
+		<div class="hide-mobile choose-theme choose-theme-footer">
+			<a id="theme-regular-footer" role="button" tabindex="4">s</a>
+			<a id="theme-dark-footer" role="button" tabindex="5">m</a>
+			<a id="theme-contrast-footer" role="button" tabindex="6">c</a>
+			<a id="theme-system-footer" role="button" tabindex="7">p</a>
+		</div>
+		<div id="copyright"><a href="/drittijiet/" class="copyright">&copy; 2023-2025 Aphroconfuso et al</a></div>
+		<div id="qrcode"><img src="/img/qr/podcast.png" width="180" height="180" alt="QR code" /></div>
+		<div id="url">https://aphroconfuso.mt/podcast/</div>
+	</nav>
+</footer>
+
+		</div>
+		<aside id="scroll-tools" class="monthly-outlined">
+			<p><span id="progress"><!-- --></span></p>
+		</aside>
+	</body>
+</html>

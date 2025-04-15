@@ -1,0 +1,945 @@
+<!doctype html>
+<html lang="mt" translate="no">
+
+	<head>
+		<meta charset="utf-8">
+		
+	<title>Raylene Abdilla · Aphroconfuso</title>
+	<meta content="Raylene Abdilla tgħallem l-Istudji Umanistiċi fl-International School for Foundation Studies tal-Università ta’ Malta, fejn qed tagħmel Dottorat fis-Soċjoloġija. L-interessi tagħha huma fit-teorija post-Marxista, psikoanalitika u poststrutturalista, partikolarment ix-xogħol ta’ Ernesto Laclau u Cha…" name="description">
+	<meta property="og:image" content="/stampi/social_aphroconfuso_logo_social_kbir_kwadrat_d073f4e24a.jpg">
+
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+		<meta content="width=device-width, initial-scale=1" name="viewport">
+		<meta content="width=device-width" initial-scale="1.0" maximum-scale="1.0" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="yes" name="mobile-web-app-capable">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#f9f9f3">
+		<link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon-16x16.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32x32.png">
+		<link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
+		<link rel="mask-icon" href="/img/icons/safari-pinned-tab.svg" color="#5bbad5">
+		<meta property="og:image:type" content="image/jpeg">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
+		<link rel="canonical" href="https://aphroconfuso.mt/raylene-abdilla/">
+		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
+		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
+		<link rel="stylesheet" href="/css/style-515d1d07.css">
+		<script>
+			var
+				audioLoaded,
+				audioUrls,
+				author,
+				body,
+				bodyEnd,
+				bodyHeight,
+				bodyStart,
+				bodyText,
+				bookmarksArray,
+				bookmarksList,
+				bookmarksMenuElement,
+				charactersPerPixel,
+				charactersPerScreen,
+				currentTime,
+				duration,
+				elapsedTime,
+				hideScrollTools,
+				lastReportedReadingTime,
+				lastReportedScrollPosition,
+				lastScrollPosition,
+				message,
+				issueMonth,
+				issueMonthYear,
+				newScrollPosition,
+				pageHeight,
+				pageReportingTitle,
+				percentageProgress,
+				placeText,
+				podcastUrl,
+				previousTime,
+				progressElement,
+				readingSpeed,
+				reportingTitle,
+				screenHeight,
+				skippedTime,
+				storyCompleted,
+				storyId,
+				storyType,
+				sequenceEpisodeNumber,
+				sequenceEpisodeTitle,
+				timeStarted,
+				pageTitle,
+				wordcount,
+				wordsPerPixel,
+				wordsPerSecond,
+				wordsPerSecondAudio,
+				wordsPerScreen;
+
+			audioLoaded = false;
+			bookmarksArray = [];
+			percentageProgress = 0;
+			previousTime = [];
+			storyCompleted = false;
+
+			const	urlSlug = location.pathname.replace(/\//g, '');
+			const setCookie = (cname, cvalue, exdays = 36500) => {
+				const d = new Date();
+				d.setTime(d.getTime() + (exdays*24*60*60*1000));
+				let expires = "expires="+ d.toUTCString();
+				document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+			}
+			const getCookie = (cname) => {
+				let name = cname + "=";
+				let decodedCookie = decodeURIComponent(document.cookie);
+				let ca = decodedCookie.split(';');
+				for(let i = 0; i < ca.length; i++) {
+					let c = ca[i];
+					while (c.charAt(0) == ' ') {
+						c = c.substring(1);
+					}
+					if (c.indexOf(name) == 0) {
+						return c.substring(name.length, c.length);
+					}
+				}
+				return "";
+			}
+			var _paq = window._paq = window._paq || [];
+			const analytics = (arrayInfo) => {
+				if (location.host !== 'aphroconfuso.mt') console.log(arrayInfo);
+				_paq.push(arrayInfo);
+			}
+			_paq.push(['disableCookies']);
+			_paq.push(['enableJSErrorTracking']);
+			_paq.push(['enableHeartBeatTimer']);
+			_paq.push(['enableLinkTracking']);
+			_paq.push(['trackPageView']);
+			_paq.push(['trackVisibleContentImpressions']);
+			(function () {
+				var u = "//analitika.aphroconfuso.mt/";
+				_paq.push(['setTrackerUrl', u + 'matomo.php']);
+				_paq.push(['setSiteId', location.host === 'aphroconfuso.mt' ? '1' : '2']);
+				var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
+			})();
+			const addRemoveFontSizeClass = (size) => {
+				document.body.classList.remove('font-size-1','font-size-2','font-size-3','font-size-4')
+				document.body.classList.add(`font-size-${ size }`);
+				localStorage.setItem('font', size);
+			}
+			// REVIEW
+			const translateTheme = {
+				'regular': 'regolari',
+				'dark': 'skura',
+				'contrast': 'kuntrast',
+				'system': 'sistema'
+			}
+			const addRemoveTheme = (theme, stored) => {
+				document.body.classList.remove('theme-regular','theme-dark','theme-contrast','theme-system')
+				document.body.classList.add(`theme-${ theme }`);
+				localStorage.setItem('theme', theme);
+				if (stored && theme === 'regular') return;
+				analytics(['trackEvent', 'Tema', `${ stored ? 'Tema storjata' : 'Tema nbidlet' }`, translateTheme[theme]]);
+			}
+			const initialiseAfterBody = () => {
+				document.body.classList.add(location.hostname.replace(/\.?aphroconfuso\.mt/, '') || 'production');
+				addRemoveFontSizeClass(localStorage.getItem('font') || 1);
+				addRemoveTheme(localStorage.getItem('theme') || 'regular', true);
+				if (localStorage.getItem(`tw-${urlSlug}`)) {
+					document.body.classList.add('trigger-warning-closed');
+				}
+			}
+		</script>
+		<script src="../script/script-24450c.js" type="module"></script>
+	</head>
+	<body class="show-nav this-month-april">
+		<script>initialiseAfterBody();</script>
+		<div id="top-wrapper">
+			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
+			<nav id="top-nav">
+				<div id="logo-container-wrapper">
+					<div id="logo-container">
+						<a href="/">
+							<img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" />
+						</a>
+					</div>
+					<menu class="hide-mobile" id="menu-carousels">
+						<li class="abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
+						<li class="ff-2"><a href="/almanakk-april/">Almanakk</a></li>
+					</menu>
+					<menu class="hide-mobile" id="menu-collections">
+						<li class="main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+						<li class="main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					</menu>
+				</div>
+				<input id="menu-toggle" type="checkbox" />
+				<label class='menu-button-container' for="menu-toggle">
+					<span style="display: none">Mobile biss: iftaħ il-menu</span>
+					<div class='menu-button'></div>
+				</label>
+				
+					<menu id="menu-main">
+						
+						<li class="hide-laptop main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+						<li class="hide-laptop main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+						<li class="hide-laptop abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
+						<li class="hide-laptop ff-2"><a href="/almanakk-april/">Almanakk</a></li>
+						<li><a href="/appuntamenti/">Appuntamenti</a></li>
+						<li><a href="/kontributuri/">Kontributuri</a></li>
+						<li><a href="/werrej/">Werrej</a></li>
+						<li><a href="/djarju/">Djarju</a></li>
+						<li><a href="/sensiliet/">Sensiliet</a></li>
+						<li><a href="/podcast/">Podcast</a></li>
+						<li class="hide-mobile"><a href="/kotba/" class="menu-kotba">Kotba</a></li>
+						<li class="hide-laptop choose-theme">
+							<a id="theme-regular" role="button" tabindex="0">s</a>
+							<a id="theme-dark" role="button" tabindex="1">m</a>
+							<a id="theme-contrast" role="button" tabindex="2">c</a>
+							<a id="theme-system" role="button" tabindex="3">p</a>
+						</li>
+						<li><a href="/dwarna/">Dwarna</a></li>
+						<li class="hide-laptop"><a href="/kotba/">Kotba</a></li>
+						<li class="hide-laptop"><a href="/kolofon/">Kolofon</a></li>
+						<li><a href="/newsletter/">Newsletter</a></li>
+						<li class="hide-laptop"><a href="/privatezza/">Privatezza</a></li>
+						<li><a href="/bookmarks/">Bookmarks<span id="bookmarks-number"></span></a></li>
+						<li class="hide-laptop choose-theme" id="text-size-adjust">
+							<a id="font-size-1" role="button" tabindex="8">a</a>
+							<a id="font-size-2" role="button" tabindex="9">a</a>
+							<a id="font-size-3" role="button" tabindex="10">a</a>
+							<a id="font-size-4" role="button" tabindex="11">a</a>
+						</li>
+					</menu>
+					<input class="hide-mobile" type="text" id="search-input" placeholder="fittex..." autocomplete="off" auto-fill="off" type="text" autocapitalize="none" enterkeyhint="search" />
+					<ul id="search-results"><!-- --></ul>
+				
+				<div id="brownline"></div>
+			</nav>
+			<div id="message"><!-- --></div>
+			<main id="skipto">
+				
+<article class="generic contributor-32" data-pagefind-body>
+	<header>
+		<ul><li class="header-label"><a href="/kontributuri/">Kontributuri</a></li></ul>
+		<h1 data-pagefind-weight="9">Raylene Abdilla</h1>
+	</header>
+	<div class="container-generic contributor">
+		<section id="grid-body">
+			<div class="generic-body-text" data-pagefind-weight="3">
+				<div data-pagefind-body data-pagefind-weight="1">
+					<p>Raylene Abdilla tgħallem <l-m>l-Istudji</l-m> Umanistiċi <l-m>fl-International</l-m> School for Foundation Studies <l-m>tal-Università</l-m> ta’ Malta, fejn qed tagħmel Dottorat <l-m>fis-Soċjoloġija</l-m>. <l-m>L-interessi</l-m> tagħha huma <l-m>fit-teorija</l-m> post-Marxista, psikoanalitika u poststrutturalista, partikolarment <l-m>ix-xogħol</l-m> ta’ Ernesto Laclau u Chantal Mouffe. <l-m>Ir-riċerka</l-m> tagħha tittratta <l-m>l-analiżi</l-m> ta’ diskorsi <l-m>fil-politika</l-m> Ewropea u <l-m>l-populiżmu</l-m>. Għandha interess f’kif <l-m>il-poter</l-m> u <l-m>l-affett</l-m> jimpattaw <l-m>il-kostruzzjoni</l-m> tal-identità, kemm dik individwali kif ukoll dik kollettiva.</p>
+				</div>
+				
+				
+				
+				
+				
+				
+					<div class="collaborated">
+						<p class="continuity">Kollaborazzjonijiet:</p>
+						
+						
+						<ul class="promo-list">
+	
+	
+		
+
+
+<li >
+	<a class="promo  marzu promo-terminu sequence- story-128" href="/il-kliem-fit-teorija-il-politika-tal-kura/" onclick="analytics(['trackEvent', 'Promo', 'minn: /raylene-abdilla/', 'għal: il-politika tal-kura', 1]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">
+			
+				<span class="subject-date">01.03.2025</span>
+			
+		</li>
+	
+	
+		<li class="header-label collection-slug collection-3">
+			Il-Kliem fit-Teorija
+		</li>
+	
+	</ul>
+	
+	
+		
+			<h1>
+				il-politika <l-m>tal-kura</l-m>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Raylene Abdilla</span>, <span class="author">Noah Fabri</span>, <span class="author">Davinia Hamilton</span>, <span class="author">Kurt Borg</span>, <span class="author">Loranne Vella</span>, <span class="author">Kristina Borg</span> & <span class="author">Omar <l-m>N’Shea</l-m></span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Sibt diffikultà bit-traduzzjoni għal “politics of care” bħala “il-politika tal-kura” għaliex il-kelma “kura” bil-Malti hija aktar assoċjata mad-diskors mediku, bħal ngħidu aħna meta t-tabib jikkura pazjent. Bit-Taljan meta ngħidu “ħu ħsieb” tiġi tradotta bħala “stammi bene”, waqt li l-frażi “nieħu ħsiebek” tiġi tradotta għal “mi curo di te”. F’dan is-sens it-Taljan għandu użu usa’ għall-kunċett “curare” li jistà jfisser kemm “tieħu ħsieb” u kemm “kura” mill-mard. Bil-Malti ma nħossx li l-kelma “kura” hija adatta biex taqbad il-kunċett ta “politics of care”.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-128">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  marzu promo-terminu sequence- story-129" href="/il-kliem-fit-teorija-ħu-ħsieb/" onclick="analytics(['trackEvent', 'Promo', 'minn: /raylene-abdilla/', 'għal: ħu ħsieb', 2]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">
+			
+				<span class="subject-date">24.02.2025</span>
+			
+		</li>
+	
+	
+		<li class="header-label collection-slug collection-3">
+			Il-Kliem fit-Teorija
+		</li>
+	
+	</ul>
+	
+	
+		
+			<h1>
+				ħu ħsieb
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Noah Fabri</span>, <span class="author">Kurt Borg</span>, <span class="author">Omar <l-m>N’Shea</l-m></span> & <span class="author">Raylene Abdilla</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Fid-dinja Ingliża u dik tal-Punent, “to care” dejjem kienet distinta minn “thought” u “reason”. “Care” assoċjata ma’ emozzjonijiet, irtubija tal-qalb, femminilità—u mhux il-ħsieb, li dejjem kien meqjus rett, veritier u imparzjali, kif ħafna drabi huwa mfisser fil-Punent. Qisu l-Malti ma jagħmilx din id-distinzjoni radikali bejn il-ħsieb bħala ħsieb astratt u li tieħu ħsieb xi ħadd.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-129">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  gunju promo-terminu sequence- story-71" href="/il-kliem-fit-teorija-abjad/" onclick="analytics(['trackEvent', 'Promo', 'minn: /raylene-abdilla/', 'għal: abjad', 3]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">
+			
+				<span class="subject-date">05.06.2024</span>
+			
+		</li>
+	
+	
+		<li class="header-label collection-slug collection-3">
+			Il-Kliem fit-Teorija
+		</li>
+	
+	</ul>
+	
+	
+		
+			<h1>
+				abjad
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Omar <l-m>N’Shea</l-m></span>, <span class="author">Raylene Abdilla</span>, <span class="author">Joe Gatt</span>, <span class="author">Karl Baldacchino</span> & <span class="author">fatima a.m.</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Sibt diffikultà nuża l-kliem “raġel abjad” biex ngħid “white male” bil-Malti. Bl-Ingliż, meta jintuża dal-kliem, dejjem hemm is-sens ta’ deskrizzjoni legali/ġuridika jew deskrizzjonijiet ta’ suspettati u kriminali fil-gazzetti u l-films; u allura l-kritika mibnija ġewwa t-terminu minnu nnifsu diġà. Bil-Malti m’hemmx dik l-użanza li “raġel abjad” hija kollokazzjoni li ġġorr dan is-sinifikat. Meta użajtha, ħassejt li tlift ftit minn dak li kont qed nipprova ngħid. L-istess għall-kliem assoċjat, eżempju “suġġett abjad”, “suġġett abjad tal-Punent”, “privileġġ abjad” jew l-iktar xieraq “vantaġġ abjad”.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-71">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  marzu promo-terminu sequence- story-53" href="/il-kliem-fit-teorija-xewqa-xenqa/" onclick="analytics(['trackEvent', 'Promo', 'minn: /raylene-abdilla/', 'għal: xewqa/xenqa', 4]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">
+			
+				<span class="subject-date">13.02.2024</span>
+			
+		</li>
+	
+	
+		<li class="header-label collection-slug collection-3">
+			Il-Kliem fit-Teorija
+		</li>
+	
+	</ul>
+	
+	
+		
+			<h1>
+				xewqa/xenqa
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Davinia Hamilton</span>, <span class="author">Raylene Abdilla</span> & <span class="author">Kurt Borg</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Il-kelma “xewqa” togħġobni iktar ukoll għaliex tista’ timplika element konxju fejn is-suġġett konxjament jista’ jixtieq xi ħaġa partikolari, filwaqt li l-kelma “xenqa” timplika passività fejn is-suġġett ma jistax ma jixxennaqx għal dak li m’għandux. Naħseb li għal Lacan, il-kunċett ta’ désir jopera kemm fil-konxju u kemm fl-inkonxju. F’dan is-sens, is-suġġett inkonxjament jixtieq totalità, jixxennaq għaliha, u fl-istess waqt li dan l-impuls inkonxju jiggverna x-xewqa, ix-xewqa nnifisha titlibbes forma li s-suġġett huwa konxju tagħha, bħal pereżempju: il-fantażija ta’ suġġett Ingliż awtonomu, ħabrieki, patrijott, aħjar mill-Ewropew u miżmum lura appuntu minħabba l-Ewropew inferjuri u l-Ewropew li jrid idaħħal l-immigranti, flimkien ma’ fantażiji dwar narrattivi ta’ grandjożità imperjali u kolonjali. Din il-fantażija Ingliża ġiet immanifestata b’mod konxju f’dawk il-votanti pro-Brexit fl-Ingilterra fl-2016. L-identifikazzjoni mal-kampanja tal-Brexit topera kemm fuq livell konxju fis-sens li s-suġġett Ingliż ħaseb li ġaladarba l-Ingilterra toħroġ mill-UE, ħa jerġa’ jsir sħiħ kif ukoll jitpaxxa (iħoss sens ta’ jouissance) bir-riżultat tal-vot. Fl-istess ħin, din il-faċċata konxja qed tgħatti l-implikazzjoni mistura ta’ xenqa għal totalità li qatt ma tista’ tinkiseb: fejn anki wara Brexit dak li ġie mwiegħed, ma wasalx.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-53">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+</ul>
+
+					</div>
+				
+				
+					<div class="podcasts">
+						<p class="continuity">Poddati ma’ <span class="contributor">Raylene</span>:</p>
+						
+						
+						
+						
+						<ul class="promo-list">
+	
+	
+		
+
+
+<li >
+	<a class="promo  jannar promo-poddata sequence- story-113" href="/raylene-abdilla-kurt-borg-noah-fabri-omar-nshea-poddata-2025-01-24-ħbiberija-ħrejjef-komunità-(taħdita)/" onclick="analytics(['trackEvent', 'Promo', 'minn: /raylene-abdilla/', 'għal: Ħbiberija, Ħrejjef, Komunità (taħdita)', 1]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">
+			Poddata
+			
+				<span class="subject-date">24.01.2025</span>
+			
+		</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Ħbiberija, Ħrejjef, Komunità
+			</h1>
+		
+	
+	
+
+	
+
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Fl-24 ta’ Jannar 2025 fis-6:00pm, flimkien ma’ Kurt Borg u Noah Fabri, konna l-mistednin tal-Librerija Pubblika ta’ Pembroke. Raylene Abdilla tkellmet dwar il-kitbiet f’Aphroconfuso u Omar N’Shea mexxa d-diskussjoni. Kurt tkellem dwar il-ġabra ta’ esejs tiegħu sens ta’ ħarifa (Klabb Kotba Maltin 2024) u qara silta minnha. Noah Fabri tkellmet dwar ir-rumanz tagħha It-Togħma Morra taċ-Ċiċri (Merlin 2024) u wkoll qrat silta minnu. Raylene tkellmet dwar diversi kitbiet li jidhru f’Antoloġija 1 u li jidhru wkoll online fosthom Medusa ta’ Rowena Grech, Il-Labra, Il-Lanza, il-Qoffa, l-Azzarin ta’ Loranne Vella, Likantropi ta’ Davinia Hamilton, u d-Djarju ta’ Warren Bartolo. Omar N’Shea mexxa t-taħdita. Tkellimna dwar il-kitba bil-Malti, il-ħbiberija, il-karattri f’rumanz imnebbħin mill-ħbieb tal-awtur, ir-reviżjoni, id-differenza bejn ir-rumanz u l-esej, u bosta suġġetti oħra.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-113">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  novembru promo-poddata sequence- story-98" href="/raylene-abdilla-jasmine-bajada-miriam-galea-davinia-hamilton-maria-theuma-poddata-2024-11-26-il-komunità-tal-kitba/" onclick="analytics(['trackEvent', 'Promo', 'minn: /raylene-abdilla/', 'għal: Il-Komunità tal-Kitba', 2]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">
+			Poddata
+			
+				<span class="subject-date">26.11.2024</span>
+			
+		</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Il-Komunità <l-m>tal-Kitba</l-m>
+			</h1>
+		
+	
+	
+
+	
+
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Ħafna drabi meta niktbu nkunu magħluqin f’kamra waħidna, iżda l-kliem li nużaw qatt mhu tagħna biss. Matul l-ewwel sena ta’ Aphroconfuso ridna noħolqu, flimkien mal-kittieba tagħna, komunità fejn il-kliem mhux biss jingħad darba u jintelaq għall-irwiefen taż-żmien, iżda jsib eku u risposta fi kliem ieħor fil-ġurnal stess, fl-istorja letterarja tagħna u tad-dinja. Waqt dal-avveniment introduċejna l-ewwel ktieb ta’ Aphroconfuso, Antoloġija 1.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-98">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+</ul>
+
+					</div>
+				
+			</div>
+		</section>
+		<section id="grid-max-panel-left-top" data-pagefind-ignore>
+			<section class="generic-menu contributors-menu">
+	
+		<nav>
+			
+				<li class="active">Raylene Abdilla</li>
+			
+		
+	
+		
+			
+				<li><a href="/aaron-aquilina/">Aaron Aquilina</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/jasmine-bajada/">Jasmine Bajada</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/karl-baldacchino/">Karl Baldacchino</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/simon-bartolo/">Simon Bartolo</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/warren-bartolo/">Warren Bartolo</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/kristina-borg/">Kristina Borg</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/kurt-borg/">Kurt Borg</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/nicole-borg/">Nicole Borg</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/antoine-cassar/">Antoine Cassar</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/daniel-cossai/">Daniel Cossai</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/leanne-ellul/">Leanne Ellul</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/noah-fabri/">Noah Fabri</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/ryan-falzon/">Ryan Falzon</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/fatima-a.m./">fatima a.m.</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/charlene-galea/">Charlene Galea</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/miriam-galea/">Miriam Galea</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/joe-gatt/">Joe Gatt</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/romeo-roxman-gatt/">Romeo Roxman Gatt</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/rowena-grech/">Rowena Grech</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/jimmy-grima/">Jimmy Grima</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/davinia-hamilton/">Davinia Hamilton</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/jien_a/">Jien_a</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/ira-melkonyan/">Ira Melkonyan</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/glorianne-micallef/">Glorianne Micallef</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/omar-nshea/">Omar N’Shea</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/nathan-anthony-pace/">Nathan Anthony Pace</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/kris-polidano/">Kris Polidano</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/matteo-pullicino/">Matteo Pullicino</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/matthew-schembri/">Matthew Schembri</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/maria-theuma/">Maria Theuma</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/leslie-vassallo/">Leslie Vassallo</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/loranne-vella/">Loranne Vella</a></li>
+			
+		
+	
+		
+			
+				<li><a href="/manuela-zammit/">Manuela Zammit</a></li>
+			
+		</nav>
+	
+</section>
+
+		</section>
+	</div>
+</article>
+<script>
+	reportingTitle = "Raylene Abdilla";
+</script>
+
+			</main>
+		</div>
+		<div id="bottom-wrapper">
+			<img id="deco" role="none" src="/img/deco-100.svg" alt="Dekorazzjoni art-nouveau" />
+			
+				<div id="newsletter-container-bottom" class="newsletter-container">
+					<section id="form" data-track-content data-content-name="Homepage" data-content-piece="formola">
+						<iframe id="newsletter" class="newsletter-iframe-regular" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#" scrolling="no" title="Abbona fin-newsletter"></iframe>
+<iframe id="newsletter" class="newsletter-iframe-dark" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#|#201e1d|#908984|0|442093344ewr" scrolling="no" title="Abbona fin-newsletter"></iframe>
+<iframe id="newsletter" class="newsletter-iframe-contrast" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#|#000000|#ffffff|0|442093344ewr" scrolling="no" title="Abbona fin-newsletter"></iframe>
+
+					</section>
+				</div>
+			
+			<footer data-track-content data-content-name="Footer" data-content-piece="raylene-abdilla">
+	<nav class="footer-content">
+		<menu id="housekeeping">
+			<li class="header">Dwarna</li>
+			<li><a href="/kolofon/">Kolofon</a></li>
+			<li><a href="/proċess-editorjali/">Proċess</a></li>
+			<li><a href="/gwida-tal-istil/">Gwida tal-istil</a></li>
+			<li><a href="/cookies/">Cookies</a></li>
+			<li><a href="/privatezza/">Privatezza</a></li>
+			<li><a href="/aċċessibbiltà/">Aċċessibbiltà</a></li>
+			<li><a href="/podcast/">Podcast</a></li>
+			<li><a href="/newsletter/">Newsletter</a></li>
+			<li class="hide-tablet"><a href="/drittijiet/">Drittijiet</a></li>
+		</menu>
+		<menu id="media">
+			<li class="header">Midja</li>
+			<li><a href="/ar/" class="arabic">العربية</a></li>
+			<li><a href="/ca/">Català</a></li>
+			<li><a href="/de/">Deutsch</a></li>
+			<li><a href="/en/">English</a></li>
+			<li><a href="/es/">Español</a></li>
+			<li><a href="/fr/">Français</a></li>
+			<li><a href="/it/">Italiano</a></li>
+			<li><a href="/nl/">Nederlands</a></li>
+			<li class="hide-tablet"><a href="/ro/">Română</a></li>
+		</menu>
+		<menu id="socials">
+			<li class="header">Segwina</li>
+			<li><a href="https://facebook.com/aphroconfuso">Facebook</a></li>
+			<li><a href="https://instagram.com/aphroconfuso">Instagram</a></li>
+			
+			
+			<li><a href="https://whatsapp.com/channel/0029VaysAKP7z4kZHDKdZ71J" rel="me">WhatsApp</a></li>
+			<li><a href="https://aphroconfuso.bsky.social/">Bluesky</a></li>
+			<li><a href="https://youtube.com/@aphroconfuso">Youtube</a></li>
+			<li><a href="https://open.spotify.com/user/31rly4s75gfxs6li6bcxc5bqlgza">Spotify</a></li>
+		</menu>
+		<menu id="podcast">
+			<li class="header">Podcast</li>
+			<li><a href="https://podcasts.apple.com/us/podcast/aphroconfuso/id1686567243">Apple</a></li>
+			
+			<li><a href="https://feeds.acast.com/public/shows/aphroconfuso">RSS feed</a></li>
+			<li><a href="https://open.spotify.com/show/75Lt3UMvC1jE15SGrNFMww">Spotify</a></li>
+			
+		</menu>
+		<div id="logotype-container">
+			<a href="/"><img src="/img/logotype.svg" class="logotype" alt="logo: Aphroconfuso" /></a>
+		</div>
+		<div id="email">
+			<a href="mailto:l-edituri@aphroconfuso.mt" class="email">l-edituri@aphroconfuso.mt</a>
+		</div>
+		<div class="hide-mobile choose-theme choose-theme-footer">
+			<a id="theme-regular-footer" role="button" tabindex="4">s</a>
+			<a id="theme-dark-footer" role="button" tabindex="5">m</a>
+			<a id="theme-contrast-footer" role="button" tabindex="6">c</a>
+			<a id="theme-system-footer" role="button" tabindex="7">p</a>
+		</div>
+		<div id="copyright"><a href="/drittijiet/" class="copyright">&copy; 2023-2025 Aphroconfuso et al</a></div>
+		<div id="qrcode"><img src="/img/qr/raylene-abdilla.png" width="180" height="180" alt="QR code" /></div>
+		<div id="url">https://aphroconfuso.mt/raylene-abdilla/</div>
+	</nav>
+</footer>
+
+		</div>
+		<aside id="scroll-tools" class="monthly-outlined">
+			<p><span id="progress"><!-- --></span></p>
+		</aside>
+	</body>
+</html>

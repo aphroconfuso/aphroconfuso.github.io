@@ -1,0 +1,811 @@
+<!doctype html>
+<html lang="mt" translate="no">
+
+	<head>
+		<meta charset="utf-8">
+		
+	<title>Novembru 2023 · Aphroconfuso</title>
+	<meta content="“Nitwieldu u nikbru. Inwelldu u nkomplu nikbru sa ma fl-aħħar nispiċċaw. M’hemmx mod ieħor.” Hekk tgħid Virginia lil oħtha Vera f’“Qamar Aħmar”, in-novella ta’ Simon Bartolo li qed nibdew biha dax-xahar. “Kollox jitmermer. Kollha se nispiċċaw.” Dan il-fataliżmu jibda ċiklu li jiżvolġi f’ritorn—u bħ…" name="description">
+	<meta property="og:image" content="/stampi/social_aphroconfuso_logo_social_kbir_kwadrat_d073f4e24a.jpg">
+
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+		<meta content="width=device-width, initial-scale=1" name="viewport">
+		<meta content="width=device-width" initial-scale="1.0" maximum-scale="1.0" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="yes" name="mobile-web-app-capable">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#f9f9f3">
+		<link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon-16x16.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32x32.png">
+		<link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
+		<link rel="mask-icon" href="/img/icons/safari-pinned-tab.svg" color="#5bbad5">
+		<meta property="og:image:type" content="image/jpeg">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
+		<link rel="canonical" href="https://aphroconfuso.mt/novembru-2023/">
+		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
+		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
+		<link rel="stylesheet" href="/css/style-515d1d07.css">
+		<script>
+			var
+				audioLoaded,
+				audioUrls,
+				author,
+				body,
+				bodyEnd,
+				bodyHeight,
+				bodyStart,
+				bodyText,
+				bookmarksArray,
+				bookmarksList,
+				bookmarksMenuElement,
+				charactersPerPixel,
+				charactersPerScreen,
+				currentTime,
+				duration,
+				elapsedTime,
+				hideScrollTools,
+				lastReportedReadingTime,
+				lastReportedScrollPosition,
+				lastScrollPosition,
+				message,
+				issueMonth,
+				issueMonthYear,
+				newScrollPosition,
+				pageHeight,
+				pageReportingTitle,
+				percentageProgress,
+				placeText,
+				podcastUrl,
+				previousTime,
+				progressElement,
+				readingSpeed,
+				reportingTitle,
+				screenHeight,
+				skippedTime,
+				storyCompleted,
+				storyId,
+				storyType,
+				sequenceEpisodeNumber,
+				sequenceEpisodeTitle,
+				timeStarted,
+				pageTitle,
+				wordcount,
+				wordsPerPixel,
+				wordsPerSecond,
+				wordsPerSecondAudio,
+				wordsPerScreen;
+
+			audioLoaded = false;
+			bookmarksArray = [];
+			percentageProgress = 0;
+			previousTime = [];
+			storyCompleted = false;
+
+			const	urlSlug = location.pathname.replace(/\//g, '');
+			const setCookie = (cname, cvalue, exdays = 36500) => {
+				const d = new Date();
+				d.setTime(d.getTime() + (exdays*24*60*60*1000));
+				let expires = "expires="+ d.toUTCString();
+				document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+			}
+			const getCookie = (cname) => {
+				let name = cname + "=";
+				let decodedCookie = decodeURIComponent(document.cookie);
+				let ca = decodedCookie.split(';');
+				for(let i = 0; i < ca.length; i++) {
+					let c = ca[i];
+					while (c.charAt(0) == ' ') {
+						c = c.substring(1);
+					}
+					if (c.indexOf(name) == 0) {
+						return c.substring(name.length, c.length);
+					}
+				}
+				return "";
+			}
+			var _paq = window._paq = window._paq || [];
+			const analytics = (arrayInfo) => {
+				if (location.host !== 'aphroconfuso.mt') console.log(arrayInfo);
+				_paq.push(arrayInfo);
+			}
+			_paq.push(['disableCookies']);
+			_paq.push(['enableJSErrorTracking']);
+			_paq.push(['enableHeartBeatTimer']);
+			_paq.push(['enableLinkTracking']);
+			_paq.push(['trackPageView']);
+			_paq.push(['trackVisibleContentImpressions']);
+			(function () {
+				var u = "//analitika.aphroconfuso.mt/";
+				_paq.push(['setTrackerUrl', u + 'matomo.php']);
+				_paq.push(['setSiteId', location.host === 'aphroconfuso.mt' ? '1' : '2']);
+				var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
+			})();
+			const addRemoveFontSizeClass = (size) => {
+				document.body.classList.remove('font-size-1','font-size-2','font-size-3','font-size-4')
+				document.body.classList.add(`font-size-${ size }`);
+				localStorage.setItem('font', size);
+			}
+			// REVIEW
+			const translateTheme = {
+				'regular': 'regolari',
+				'dark': 'skura',
+				'contrast': 'kuntrast',
+				'system': 'sistema'
+			}
+			const addRemoveTheme = (theme, stored) => {
+				document.body.classList.remove('theme-regular','theme-dark','theme-contrast','theme-system')
+				document.body.classList.add(`theme-${ theme }`);
+				localStorage.setItem('theme', theme);
+				if (stored && theme === 'regular') return;
+				analytics(['trackEvent', 'Tema', `${ stored ? 'Tema storjata' : 'Tema nbidlet' }`, translateTheme[theme]]);
+			}
+			const initialiseAfterBody = () => {
+				document.body.classList.add(location.hostname.replace(/\.?aphroconfuso\.mt/, '') || 'production');
+				addRemoveFontSizeClass(localStorage.getItem('font') || 1);
+				addRemoveTheme(localStorage.getItem('theme') || 'regular', true);
+				if (localStorage.getItem(`tw-${urlSlug}`)) {
+					document.body.classList.add('trigger-warning-closed');
+				}
+			}
+		</script>
+		<script src="../script/script-24450c.js" type="module"></script>
+	</head>
+	<body class="show-nav this-month-april">
+		<script>initialiseAfterBody();</script>
+		<div id="top-wrapper">
+			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
+			<nav id="top-nav">
+				<div id="logo-container-wrapper">
+					<div id="logo-container">
+						<a href="/">
+							<img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" />
+						</a>
+					</div>
+					<menu class="hide-mobile" id="menu-carousels">
+						<li class="abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
+						<li class="ff-2"><a href="/almanakk-april/">Almanakk</a></li>
+					</menu>
+					<menu class="hide-mobile" id="menu-collections">
+						<li class="main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+						<li class="main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+					</menu>
+				</div>
+				<input id="menu-toggle" type="checkbox" />
+				<label class='menu-button-container' for="menu-toggle">
+					<span style="display: none">Mobile biss: iftaħ il-menu</span>
+					<div class='menu-button'></div>
+				</label>
+				
+					<menu id="menu-main">
+						
+						<li class="hide-laptop main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
+						<li class="hide-laptop main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+						<li class="hide-laptop abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
+						<li class="hide-laptop ff-2"><a href="/almanakk-april/">Almanakk</a></li>
+						<li><a href="/appuntamenti/">Appuntamenti</a></li>
+						<li><a href="/kontributuri/">Kontributuri</a></li>
+						<li><a href="/werrej/">Werrej</a></li>
+						<li><a href="/djarju/">Djarju</a></li>
+						<li><a href="/sensiliet/">Sensiliet</a></li>
+						<li><a href="/podcast/">Podcast</a></li>
+						<li class="hide-mobile"><a href="/kotba/" class="menu-kotba">Kotba</a></li>
+						<li class="hide-laptop choose-theme">
+							<a id="theme-regular" role="button" tabindex="0">s</a>
+							<a id="theme-dark" role="button" tabindex="1">m</a>
+							<a id="theme-contrast" role="button" tabindex="2">c</a>
+							<a id="theme-system" role="button" tabindex="3">p</a>
+						</li>
+						<li><a href="/dwarna/">Dwarna</a></li>
+						<li class="hide-laptop"><a href="/kotba/">Kotba</a></li>
+						<li class="hide-laptop"><a href="/kolofon/">Kolofon</a></li>
+						<li><a href="/newsletter/">Newsletter</a></li>
+						<li class="hide-laptop"><a href="/privatezza/">Privatezza</a></li>
+						<li><a href="/bookmarks/">Bookmarks<span id="bookmarks-number"></span></a></li>
+						<li class="hide-laptop choose-theme" id="text-size-adjust">
+							<a id="font-size-1" role="button" tabindex="8">a</a>
+							<a id="font-size-2" role="button" tabindex="9">a</a>
+							<a id="font-size-3" role="button" tabindex="10">a</a>
+							<a id="font-size-4" role="button" tabindex="11">a</a>
+						</li>
+					</menu>
+					<input class="hide-mobile" type="text" id="search-input" placeholder="fittex..." autocomplete="off" auto-fill="off" type="text" autocapitalize="none" enterkeyhint="search" />
+					<ul id="search-results"><!-- --></ul>
+				
+				<div id="brownline"></div>
+			</nav>
+			<div id="message"><!-- --></div>
+			<main id="skipto">
+				
+<article class="generic novembru" data-pagefind-meta="class[class]">
+	<header>
+		<ul><li class="header-label"><a href="/appuntamenti/" data-pagefind-meta="header">Appuntamenti</a></li></ul>
+		<h1>Novembru 2023</h1>
+		<h2></h2>
+	</header>
+	<div class="container-generic generic-body-text appointment">
+		<section id="grid-body" data-pagefind-body data-pagefind-weight="5">
+			<div class="generic-body-text editorial">
+				<div class="text-container">
+					<p><em>“</em><span class="sc">Nitwieldu u nikbru.</span> Inwelldu u nkomplu nikbru sa ma <l-m>fl-aħħar</l-m> nispiċċaw. M’hemmx mod ieħor.<span class="pullsemi">”</span> Hekk tgħid Virginia lil oħtha Vera f’“Qamar Aħmar”<span class="pull">,</span> <l-m>in-novella</l-m> ta’ Simon Bartolo li qed nibdew biha <l-m>dax-xahar</l-m>. “Kollox jitmermer. Kollha se nispiċċaw.<span class="pullsemi">”</span> Dan <l-m>il-fataliżmu</l-m> jibda ċiklu li jiżvolġi f’ritorn — u bħal dejjem, <l-m>it-tfittxija</l-m> għall-istorja tagħna hija neċessarjament tfittxija għal dak li fadal minn ta’ qabilna. Ħafna drabi din <l-m>it-tfittxija</l-m> toħodna fuq vjaġġ lura lejn <l-m>il-post</l-m> li nsejħulu <l-m>d-dar</l-m>. <l-m>Id-dar</l-m> tista’ tkun <l-m>tal-ġebel</l-m>, jew tista’ tkun dik <l-m>id-dar</l-m> iktar dejjiema taħt <l-m>il-blat</l-m>, mnejn darba kien ġie <l-m>l-ġebel</l-m> innifsu. <l-m>Il-fdalijiet</l-m> li nsibu jafu jkunu biss għadam, ġebel, kmamar vojta. Drabi oħrajn jifdal biss dokumenti <l-m>fl-arkivji</l-m> għax <l-m>il-qabar</l-m> innifsu ndifen <l-m>maż-żmien</l-m>. <l-m>Fit-tielet</l-m> parti ta’ “Bur Mgħeż”<span class="pull">,</span> Omar <l-m>N’Shea</l-m> jibda <l-m>mill-metodi</l-m> tal-arkeoloġija sakemm jgħaddi għall-mezzi li nużaw bħala bnedmin biex niftakru ’l &nbsp;qrabatna, kemm biex nibqgħu magħhom u kemm biex nerħulhom f’idejn <l-m>iż-żmien</l-m>, “<l-m>il-proċessi</l-m> soċjali, fiżiċi u ontoloġiċi li bihom <l-m>il-ħajjin</l-m> jittrasformaw <l-m>il-ġisem</l-m> bla ħajja <l-m>fil-ġisem</l-m> mejjet”<span class="pull">.</span> <l-m>Il-metodu</l-m> xjentifiku li tuża <l-m>l-arkeoloġija</l-m> moderna hija <l-m>l-istratigrafija</l-m>, tħaffir <l-m>tat-trinek</l-m> li jħalluna naraw <l-m>is-saffi</l-m> li jserrħu wieħed fuq <l-m>l-ieħor</l-m> taħt saqajna. Metodu ieħor <l-m>tal-arkeoloġija</l-m> huwa <l-m>l-kelma</l-m>, <l-m>il-kitba</l-m>, <l-m>it-tfittix</l-m> fl-arkivji fejn kull kelma għandha saff ieħor taħtha, fejn kull riċerkatur qed jibni fuq ta’ qablu; jitgħallem, jikkollabora, imeri, jimpika. Kris Polidano, <l-m>fil-poeżija</l-m> tagħha “-Na -I -Hom” tinħakem <l-m>mill-memorji</l-m> li għadhom qed ifittxu ma’ xiex jaqbdu, ma’ immaġni <l-m>tan-namrar</l-m> tal-ġenituri, <l-m>mal-“kanzunetti</l-m> tad-Depeche Mode/li saru <l-m>tal-quddiesa</l-m> fejn tmur <l-m>il-mummy</l-m> u ma tmurx <l-m>in-nanna</l-m>”<span class="pull">.</span> <l-m>Il-memorji</l-m> tal-kittieba, <l-m>tal-familja</l-m> u <l-m>tar-raħal</l-m> jidħlu f’xulxin. <l-m>Id-dar</l-m>, <l-m>il-ġenituri</l-m>, <l-m>in-nanniet</l-m>, <l-m>fit-tliet</l-m> xogħlijiet li għandna <l-m>dax-xahar</l-m>, mhumiex maqtugħin <l-m>mill-komunità</l-m> li jgħixu fiha. Meta <l-m>ż-żagħżugħ</l-m>, <l-m>fin-novella</l-m> ta’ Simon, jasal <l-m>fir-raħal</l-m> biex ifittex lil oħt nanntu, “<l-m>il-pjan</l-m> kien li jfittex iċ-ċimiterju biex isib <l-m>id-dar</l-m>”<span class="pull">.</span> Iċ-ċimiterju huwa <l-m>r-raħal</l-m> tal-imgħoddi li se jibqa’ tul <l-m>iż-żmien</l-m>, “<l-m>it-tkomplija</l-m> tal-imgħoddi <l-m>fl-issa</l-m> biex jimxi lejn <l-m>id-dejjem</l-m> li ma jafu ħadd”<span class="pull">;</span> <l-m>l-oqbra</l-m> bl-istejjer tagħhom, <l-m>il-kannierja</l-m> li tieħu ’l &nbsp;kulħadd. <l-m>Id-dfin</l-m> kollettiv, jgħidilna Omar, “spiss jingħad li jirrifletti <l-m>l-identità</l-m> ta’ kollettività <l-m>fil-komunità</l-m>, prassi komuni <l-m>fil-preistorja</l-m> <l-m>tal-Mediterran”&nbsp;<span class="end-dot">.</span></l-m></p>
+				</div>
+			</div>
+			<p class="continuity">Din hija l-kitba ppubblikata dax-xahar:</p>
+			
+			
+			
+			
+			
+			
+			<ul class="promo-list">
+	
+	
+		
+
+
+<li >
+	<a class="promo  novembru promo-storja sequence- story-26" href="/simon-bartolo-qamar-aħmar/" onclick="analytics(['trackEvent', 'Promo', 'minn: Novembru 2023', 'għal: Qamar Aħmar', 1]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Novembru 2023</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Qamar Aħmar
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Simon Bartolo</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Virginia weġbitha li dawn huma fatti tal-ħajja u ma nistgħux nibdluhom. Nitwieldu u nikbru. Inwelldu u nkomplu nikbru sa ma fl-aħħar nispiċċaw. M’hemmx mod ieħor. Vera kienet ħarset lejn Virginia b’ċertu diqa. Forsi jmissha insistiet iktar; forsi kieku spjegat ruħha aħjar, Virginia kienet tifhem u ma titlaqx, imma qatgħet qalbha. Ma setgħet tagħmel xejn għajr li tħalli lil oħtha titlaq, tmur tfittex xortiha barra minn Malta, toffri ħajjitha u ġisimha lil raġel li qatt ma seta’ japprezzaha. Tagħtih ulied li mhux talli jerdgħulha ħalibha imma demmha wkoll. Għannqitha waħda tal-aħħar. Tgħanniqa iebsa u tal-aħħar. Saħħa! Xtaqitilha s-saħħa kollha tad-dinja u ma ppruvatx tkellimha iżjed. Daret u telqet, u ħalliet lil Virginia tħares lejha tielqa. Ħarġet fil-ġnien li kien kbir, mogħni bi frott taċ-ċitru u tal-għadma u mdawwar bil-bajtar tax-xewk biex la ħadd seta’ jidħol u lanqas joħroġ minnu ħlief minn dik il-fetħa waħda li kienet tħalliet minn xi antenat tat-tewmin. Imxiet san-naħa l-għolja tal-ġnien fejn kien hemm bank tal-ġebel u poġġiet bilqiegħda, tħares lejn iċ-ċimiterju tar-raħal. Ma reġgħetx ħarset lejn oħtha. Ma marritx taraha tiżżewweġ. Għamlet tabirruħha li kienet marida u ssakkret f’kamritha. Lanqas biss marret taraha tielqa ma’ żewġha u lanqas qatt ma kienet tiftaħ l-ittri li tirċievi mingħandha. Virginia damet ħafna tibgħat. Ma kinetx xi waħda li taqta’ qalbha malajr, iżda bil-mod il-mod indunat li kien kollu ta’ xejn. Vera ma kienet se taċċetta qatt li setgħu jibqgħu ħbieb, li setgħu jibqgħu jinħabbu. Kienet ġegħlitha tagħżel u hi, Virginia, kienet għażlet li tibni familja u futur f’pajjiż ieħor. Ma kinetx għażlet lilha, kienet għażlet lir-raġel. Iżda fil-verità, Vera kienet tkellem lil Virginia kuljum fil-mera. U fil-mera ffukat fuq punt f’wiċċha fejn kien hemm għazza mitlufa, timbaram u tiċċaqlaq ma’ kull tikmixa konfuża.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-26">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  novembru promo-poezija sequence- story-27" href="/kris-polidano-na-i-hom/" onclick="analytics(['trackEvent', 'Promo', 'minn: Novembru 2023', 'għal: -Na -I -Hom', 2]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Novembru 2023</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				-Na -I -Hom
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Kris Polidano</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text poetry">
+			
+				<p>Fl-ewwel minuti luċidi ta’ kull filgħodu
+naħseb biex immur mixja lejn il-ġnien li jħallini mdellka bin-nostalġija 
+biex inħares lejn il-bieb magħluq li jgħiduli li int kont hemm għassa miegħu kuljum u
+l-kamra kulur it-te meta titfagħlu l-ħalib tal-bott li issa 
+spiċċat mużew tal-karti llaminati li jiftaħ kull jumejn
+
+Il-bejta għall-ħarba kull nhar t’Erbgħa tal-grupp lebsin l-iswed għax cool
+għaddejjin nitmiegħku maż-żrieżaq
+daharna mal-arbli tal-bandli
+nitkażaw dwar x’għamlu dawk fil-kumplessi tal-garaxxijiet—
+l-ispots tal-konsulenzi romantiċi tat-tfal bravi Nsara aged 13 and up</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-27">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  novembru promo-poezija sequence- story-28" href="/leslie-vassallo-marċ-maqbuż/" onclick="analytics(['trackEvent', 'Promo', 'minn: Novembru 2023', 'għal: Marċ Maqbuż', 3]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Novembru 2023</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Marċ Maqbuż
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Leslie Vassallo</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text poetry">
+			
+				<p>Ix-xitwa tmut hekk—
+Gżira—jew bastiment—jgħibu fiċ-ċpar;
+Riefnu jiġbed nifs sagħtar—
+Berwieq għarwien fuq irdum,
+wiċċ nemex tal-bużbież;
+iħirsa—jew aħna—max-xifer.
+
+Reżħa titlajja fi rkejjen, fuq għetiebi;
+F’triq dejqa, antika, fi kmajra
+xi ħadd jonqox ħajja—jew mit—f’zokk lewża;
+Tifkira tiġi, minn imkien—jew minn xmara—għoddha taħsdek,
+tmexxik fiha b’ħarsa kaħla, b’xofftejn ħajra,
+sa tħallik—jew tħalliha—f’belt labirint.
+</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-28">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  novembru promo-poezija sequence- story-29" href="/leslie-vassallo-wirja/" onclick="analytics(['trackEvent', 'Promo', 'minn: Novembru 2023', 'għal: Wirja', 4]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Novembru 2023</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Wirja
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Leslie Vassallo</span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text poetry">
+			
+				<p>Immorru, ukoll, minn labirint toroq,
+għal wirja ta’ pitturi, statwi—
+Qlugħ bojod f’ċpar ilwien jinbarmu;
+swaba’ mwieġ deħlin fuq xatt mitluq:
+U nofs dawra qaddisin martri
+b’qillet ġrajjiethom f’idejhom, f’ħarsithom.
+Mal-ħitan stqarrija safra trombi, platti, tnabar—
+
+Minn fuq swar il-belt għajnejn għassiesa:
+Imma aħna ngħaddu maġenb għorof li jafuna,
+barumbara tiġġarraf tbarqam tifkira,
+ġieri jilwi mill-blat, loġġa tittawwal;
+għajn moħbija f’wied ħemda, palma f’dagħbien,
+razzett jidwi daħka mit-twieqi, qasab iħaxwex riħ.
+Żewġ nagħġiet joħorġu, iwieġbu għal leħinna.
+</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-29">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li  class="multiple-episodes episode-3">
+	<a class="promo  novembru promo-esej sequence-1 story-30 is-episode" href="/omar-nshea-bur-mgħeż-3-qegħedtha-ġo-qabar-fuq-l-għolja-tal-ħorr/" onclick="analytics(['trackEvent', 'Promo', 'minn: Novembru 2023', 'għal: Bur Mgħeż #3', 5]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Novembru 2023</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Bur Mgħeż
+				
+					<span class="episode-number">#3</span>
+				
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2>
+		
+		
+			
+			<span class="author">Omar <l-m>N’Shea</l-m></span>
+	</h2>
+
+
+ 
+
+
+	
+		<h3>
+			
+			
+			Qegħedtha ġo qabar fuq <l-m>l-Għolja</l-m> tal-Ħorr
+		</h3>
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>Wasalt l-Imqabba minn Ħal Lija bil-pass. Dħalt mit-triq tas-Siġġiewi għan-naħa Ta’ Kandja, dort fejn il-Ħabel ta’ San Pawl għal Tas-Sejba u ksirt fuq ix-xellug għall-inħawi ta’ Ħabel ix-Xiħ. Fit-triq Ta’ Kandja, taħt ix-xemx ta’ nofsinhar, kien għaddej konvoj ta’ trakkijiet tal-kostruzzjoni, wieħed wara l-ieħor. M’għadhomx it-trakkijiet tal-kabina ħamra mżejna bit-tberfil u l-laqmijiet tas-sidien, iġorru vjaġġ knaten għall-bini; issa Iveco u Leyland DAF iġorru terrapien u materjali kimiċi impurtati. It-triq dejqa, u t-trakkijiet isuquhom maġenbek. Id-duħħan li joħroġ maħnuq minnhom jitħallat mat-trab li r-roti jtajru minn mal-ġenb tat-triq, munzelli trab fin griż li jidħol fil-pori ta’ ġismek u ġo ħalqek. Trab li jidfen kollox taħtu, inebbaħ li kollox irid jerġa’ jintradam. Mal-ġenb tat-triq, it-trab jitħallat ma’ pakketti u loqmiet tas-sigaretti mgħaffġin, biċċiet tal-ħobż niexef, fliexken tal-plastik mgħattnin, xtieli tal-ferla ta’ Malta, qanċlita u liftija ħerġin minn ġol-ħitan tas-sejjieħ. Il-ħsejjes anzjużi tal-vetturi, il-brejkijiet f’salt meta jindunaw bik miexi, il-ħornijiet ittikati biex iżżul min-nofs, il-gass ivenven tal-karozzi bin-nitro, id-diski jċerċru mill-vetturi, it-tħaffir fit-toroq bil-gafef jissieltu biex jifqgħu l-art, u t-tluq ta’ ajruplani minn Ħal Luqa għal fuq il-medda tat-Tramuntana tal-gżira flimkien jikkonfoffaw biex joħolqu s-sonorità tat-triq Ta’ Kandja fid-daħla tal-Imqabba. Meta nżilt minn Sqaq Buhar u dort għal Tal-Isqof, is-sħana kienet fnietni u sibt kantuniera dellija mal-ħajt tal-barriera ta’ quddiem il-ħofra fejn kien hemm l-Għar ta’ Bur Mgħeż. Ta’ min kienet il-barriera ma nafx, u allura lanqas naf isimha, imma mal-ħajt tagħha sibt biżżejjed dell u kenn biex nistrieħ. Tfajt fuq rasi l-ilma kiesaħ kollu li kelli imma nxift f’ħakka t’għajn. Ħarist madwari. Meta tħares konxjament lejn dak li hu l-familjari, tibda tinnota li qisek qatt ma tkun ħarist lejh qabel. Meta tifli sew dak li mingħalik taf b’għajnejk magħluqin, issib li hu stramb, qisu nbidel quddiem wiċċek u int ma ndunajtx, bħallikieku xi ħadd qarraq bik u wriek ħaġa b’oħra. Qisu dak li naħsbu li nafu sew, fil-verità mhu xejn ħlief ideal effimeru. Tieqaf u taħseb fuq ismek fit-tul u wara ftit tintebaħ kemm hu aljen, kemm m’għandu x’jaqsam xejn ma’ dak li int mingħalik li int. Tħares lejk innifsek biex issib min int fuq it-territorju tal-ġilda mifruxa fuq l-istrutturi anatomiċi ta’ ġismek, u ma ssibekx. Dawwart ħarsti sew lejn il-barriera u rajt xtieli tal-kappar ħerġin mix-xquq tal-ħitan tas-sejjieħ li jdawruha, tawwalin bħalma qatt ma rajthom qabel, ixebilku ’l isfel għal fuq il-ħajt tal-barriera—qoxra trab jitmermer tal-franka safranija li anki fil-qilla tas-sħana tidher niedja—u jiltaqgħu mat-tlugħ tas-siġar tat-tin li kibru mill-qiegħ. Il-kappar u t-tin kienu f’patt bejniethom biex jgħattu d-dagħbien, li kien mimli ċagħaq u ħamrija. Siġar tal-ħarrub u tar-rummien, molol tas-saqqijiet imsaddin, kisi tal-ħitan tal-kmamar tal-banju mormi, forn tal-kċina, terrapien tal-gafef: ix-xquq tal-barriera ta’ maġenb Bur Mgħeż iġorru mirduma ġo fihom it-tifkiriet tal-ewwel ġisem mejjet li tniżżel ġo fihom, imqiegħed ikkurat u mżejjen fil-kurituri mdallma tad-dagħbien taħt l-għelieqi fejn ġrew iċ-ċriev.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-30">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  jannar promo-poddata sequence- story-39" href="/kurt-borg-davinia-hamilton-omar-nshea-poddata-2023-11-01-kif-tgħidha-fqalbek/" onclick="analytics(['trackEvent', 'Promo', 'minn: Novembru 2023', 'għal: Kif Tgħidha f’Qalbek', 6]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">
+			Poddata
+			
+				<span class="subject-date">01.11.2023</span>
+			
+		</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Kif Tgħidha f’Qalbek
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2 class="contains-with">
+		
+		
+			
+				<span class="with">ma’</span>
+			<span class="author">Kurt Borg</span>, <span class="author">Davinia Hamilton</span> & <span class="author">Omar <l-m>N’Shea</l-m></span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>“Jekk huwa minnu, bħalma jgħidu ħafna, li kull kitba hija forma ta’ traduzzjoni, il-kitba bil-Malti terġa’ hija traduzzjoni b’mod iktar ovvju minn dak li hu mifhum minn min jgħid hekk. F’dawn l-ewwel xogħlijiet li għandna fil-ġurnal tagħna din it-taqbida kienet ta’ spiss parti importanti mill-kitba u mill-proċess editorjali. Meta l-ewwel niddeċiedu li niktbu dwar suġġetti li aħna intiżi fihom imbagħad wara nagħżlu li niktbu dwarhom bil-Malti, insibu ruħna nipproċessaw ideat illi dejjem qrajniehom b’lingwa oħra, probabbilment bl-Ingliż, u li għalhekk bqajna naħsbuhom b’din il-lingwa. Meta niġu biex nartikolawhom bil-Malti nsibu ruħna nitqabdu bejn l-idea nnifisha u espressjoni preċiża u eleganti.”</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-39">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  frar promo-poddata sequence- story-47" href="/omar-nshea-poddata-2023-11-22-noti-editorjali-2-omar-nshea/" onclick="analytics(['trackEvent', 'Promo', 'minn: Novembru 2023', 'għal: Noti Editorjali #2: Omar N&#92;&#39;Shea #2', 7]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">
+			Poddata
+			
+				<span class="subject-date">22.11.2023</span>
+			
+		</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Noti Editorjali<span class="episodeNumber"> #2</span>
+			</h1>
+		
+	
+	
+
+	
+
+
+	<h2 class="contains-with">
+		
+		
+			
+				<span class="with">ma’</span>
+			<span class="author">Omar <l-m>N’Shea</l-m></span>
+	</h2>
+
+
+ 
+
+
+	
+</header>
+
+		<div class="body-text">
+			
+				<p>« Id-differenza fil-fatt hija li jiena meta bdejt nikteb esej li mhuwiex akkademiku, għalkemm huwa tekniku, għalkemm id-dettalji xjentifiċi huma preċiżi ħafna, il-metodoloġija stajt niftaħha ħafna iktar. Jiġifieri jiena stajt nintroduċi l-perspettiva tiegħi, stajt pereżempju nimmaġina l-post stajt, nimmaġina r-rabja li ħass Michele Zammit tan-Naxxari meta skopra li s-sit se jittieħed, meta skopra li mhux se jaqla lira. Stajt nimmaġinahom dawn l-affarijiet. Stajt nimmaġina ċ-ċriev, pereżempju, jirgħu fuq il-wita’ ta’  Bur Mgħeż. Stajt nimmaġina konverżazzjonijiet pereżempju illi l-essej akkademiku ma jħallikx tagħmel. Allura din fetħet orizzonti ġodda fil-mod ta’ kif inti tista’ tingaġġa u tiskopri post mitluf. Jiġifieri biex inti biex inti ġġib lura post mitluf ix-xjenza mhijiex biżżejjed. L-immaġinazzjoni hija wkoll importanti. Il-kreattività hija importanti. Il-lingwa letterarja, il-poeżija hija importanti. »</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-47">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+</ul>
+
+			<div class="more">
+				
+					<p>Abbona <l-m>fin-</l-m><a href="/newsletter/">newsletter</a> biex dejjem issir taf meta nippubblikaw xi ħaġa ġdida.</p>
+				
+			</div>
+		</section>
+	</div>
+</article>
+<script>
+	reportingTitle = "Novembru 2023";
+</script>
+
+			</main>
+		</div>
+		<div id="bottom-wrapper">
+			<img id="deco" role="none" src="/img/deco-100.svg" alt="Dekorazzjoni art-nouveau" />
+			
+				<div id="newsletter-container-bottom" class="newsletter-container">
+					<section id="form" data-track-content data-content-name="Homepage" data-content-piece="formola">
+						<iframe id="newsletter" class="newsletter-iframe-regular" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#" scrolling="no" title="Abbona fin-newsletter"></iframe>
+<iframe id="newsletter" class="newsletter-iframe-dark" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#|#201e1d|#908984|0|442093344ewr" scrolling="no" title="Abbona fin-newsletter"></iframe>
+<iframe id="newsletter" class="newsletter-iframe-contrast" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#|#000000|#ffffff|0|442093344ewr" scrolling="no" title="Abbona fin-newsletter"></iframe>
+
+					</section>
+				</div>
+			
+			<footer data-track-content data-content-name="Footer" data-content-piece="novembru-2023">
+	<nav class="footer-content">
+		<menu id="housekeeping">
+			<li class="header">Dwarna</li>
+			<li><a href="/kolofon/">Kolofon</a></li>
+			<li><a href="/proċess-editorjali/">Proċess</a></li>
+			<li><a href="/gwida-tal-istil/">Gwida tal-istil</a></li>
+			<li><a href="/cookies/">Cookies</a></li>
+			<li><a href="/privatezza/">Privatezza</a></li>
+			<li><a href="/aċċessibbiltà/">Aċċessibbiltà</a></li>
+			<li><a href="/podcast/">Podcast</a></li>
+			<li><a href="/newsletter/">Newsletter</a></li>
+			<li class="hide-tablet"><a href="/drittijiet/">Drittijiet</a></li>
+		</menu>
+		<menu id="media">
+			<li class="header">Midja</li>
+			<li><a href="/ar/" class="arabic">العربية</a></li>
+			<li><a href="/ca/">Català</a></li>
+			<li><a href="/de/">Deutsch</a></li>
+			<li><a href="/en/">English</a></li>
+			<li><a href="/es/">Español</a></li>
+			<li><a href="/fr/">Français</a></li>
+			<li><a href="/it/">Italiano</a></li>
+			<li><a href="/nl/">Nederlands</a></li>
+			<li class="hide-tablet"><a href="/ro/">Română</a></li>
+		</menu>
+		<menu id="socials">
+			<li class="header">Segwina</li>
+			<li><a href="https://facebook.com/aphroconfuso">Facebook</a></li>
+			<li><a href="https://instagram.com/aphroconfuso">Instagram</a></li>
+			
+			
+			<li><a href="https://whatsapp.com/channel/0029VaysAKP7z4kZHDKdZ71J" rel="me">WhatsApp</a></li>
+			<li><a href="https://aphroconfuso.bsky.social/">Bluesky</a></li>
+			<li><a href="https://youtube.com/@aphroconfuso">Youtube</a></li>
+			<li><a href="https://open.spotify.com/user/31rly4s75gfxs6li6bcxc5bqlgza">Spotify</a></li>
+		</menu>
+		<menu id="podcast">
+			<li class="header">Podcast</li>
+			<li><a href="https://podcasts.apple.com/us/podcast/aphroconfuso/id1686567243">Apple</a></li>
+			
+			<li><a href="https://feeds.acast.com/public/shows/aphroconfuso">RSS feed</a></li>
+			<li><a href="https://open.spotify.com/show/75Lt3UMvC1jE15SGrNFMww">Spotify</a></li>
+			
+		</menu>
+		<div id="logotype-container">
+			<a href="/"><img src="/img/logotype.svg" class="logotype" alt="logo: Aphroconfuso" /></a>
+		</div>
+		<div id="email">
+			<a href="mailto:l-edituri@aphroconfuso.mt" class="email">l-edituri@aphroconfuso.mt</a>
+		</div>
+		<div class="hide-mobile choose-theme choose-theme-footer">
+			<a id="theme-regular-footer" role="button" tabindex="4">s</a>
+			<a id="theme-dark-footer" role="button" tabindex="5">m</a>
+			<a id="theme-contrast-footer" role="button" tabindex="6">c</a>
+			<a id="theme-system-footer" role="button" tabindex="7">p</a>
+		</div>
+		<div id="copyright"><a href="/drittijiet/" class="copyright">&copy; 2023-2025 Aphroconfuso et al</a></div>
+		<div id="qrcode"><img src="/img/qr/novembru-2023.png" width="180" height="180" alt="QR code" /></div>
+		<div id="url">https://aphroconfuso.mt/novembru-2023/</div>
+	</nav>
+</footer>
+
+		</div>
+		<aside id="scroll-tools" class="monthly-outlined">
+			<p><span id="progress"><!-- --></span></p>
+		</aside>
+	</body>
+</html>
