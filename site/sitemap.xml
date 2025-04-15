@@ -268,13 +268,6 @@
 	</url>
 	
 	<url>
-		<loc>https://aphroconfuso.mt/abeċedarju/</loc>
-		<lastmod>2025-04-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-	</url>
-	
-	<url>
 		<loc>https://aphroconfuso.mt/404.html</loc>
 		<lastmod>2025-04-15</lastmod>
     <changefreq>monthly</changefreq>
@@ -1557,6 +1550,13 @@
 	
 	<url>
 		<loc>https://aphroconfuso.mt/almanakk-1-ta-jannar/</loc>
+		<lastmod>2025-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/abeċedarju/</loc>
 		<lastmod>2025-04-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
