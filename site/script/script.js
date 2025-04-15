@@ -673,6 +673,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 		});
 	}
 
+	//Almanac
+	const monthsInMaltese = ['Jannar', 'Frar', 'Marzu', 'April', 'Mejju', 'Ġunju', 'Lulju', 'Awwissu', 'Settembru', 'Ottubru', 'Novembru', 'Diċembru'];
+	const todayId = `${ new Date().getDate() }-ta-${ monthsInMaltese[new Date().getMonth()].toLowerCase() }`;
+	console.log(todayId);
+	document.getElementById(todayId)?.classList.add('today');
 
 	// Pagefind ********************************************************************************************
 	const searchInput = document.getElementById("search-input");
