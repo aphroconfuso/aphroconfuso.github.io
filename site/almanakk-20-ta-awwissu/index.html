@@ -25,10 +25,9 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/almanakk-20-ta-awwissu/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-854fbcb0.css">
+		<link rel="stylesheet" href="/css/style-e1ebbc89.css">
 		<script>
-			var
-				audioLoaded,
+			var audioLoaded,
 				audioUrls,
 				author,
 				body,
@@ -82,18 +81,20 @@
 			previousTime = [];
 			storyCompleted = false;
 
-			const	urlSlug = location.pathname.replace(/\//g, '');
+			const urlSlug = location
+				.pathname
+				.replace(/\//g, '');
 			const setCookie = (cname, cvalue, exdays = 36500) => {
 				const d = new Date();
-				d.setTime(d.getTime() + (exdays*24*60*60*1000));
-				let expires = "expires="+ d.toUTCString();
+				d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+				let expires = "expires=" + d.toUTCString();
 				document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 			}
 			const getCookie = (cname) => {
 				let name = cname + "=";
 				let decodedCookie = decodeURIComponent(document.cookie);
 				let ca = decodedCookie.split(';');
-				for(let i = 0; i < ca.length; i++) {
+				for (let i = 0; i < ca.length; i++) {
 					let c = ca[i];
 					while (c.charAt(0) == ' ') {
 						c = c.substring(1);
@@ -106,7 +107,8 @@
 			}
 			var _paq = window._paq = window._paq || [];
 			const analytics = (arrayInfo) => {
-				if (location.host !== 'aphroconfuso.mt') console.log(arrayInfo);
+				if (location.host !== 'aphroconfuso.mt') 
+					console.log(arrayInfo);
 				_paq.push(arrayInfo);
 			}
 			_paq.push(['disableCookies']);
@@ -117,14 +119,32 @@
 			_paq.push(['trackVisibleContentImpressions']);
 			(function () {
 				var u = "//analitika.aphroconfuso.mt/";
-				_paq.push(['setTrackerUrl', u + 'matomo.php']);
-				_paq.push(['setSiteId', location.host === 'aphroconfuso.mt' ? '1' : '2']);
-				var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
-				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
+				_paq.push([
+					'setTrackerUrl', u + 'matomo.php'
+				]);
+				_paq.push([
+					'setSiteId', location.host === 'aphroconfuso.mt'
+						? '1'
+						: '2'
+				]);
+				var d = document,
+					g = d.createElement('script'),
+					s = d.getElementsByTagName('script')[0];
+				g.async = true;
+				g.src = u + 'matomo.js';
+				s
+					.parentNode
+					.insertBefore(g, s);
 			})();
 			const addRemoveFontSizeClass = (size) => {
-				document.body.classList.remove('font-size-1','font-size-2','font-size-3','font-size-4')
-				document.body.classList.add(`font-size-${ size }`);
+				document
+					.body
+					.classList
+					.remove('font-size-1', 'font-size-2', 'font-size-3', 'font-size-4')
+				document
+					.body
+					.classList
+					.add(`font-size-${size}`);
 				localStorage.setItem('font', size);
 			}
 			// REVIEW
@@ -135,87 +155,155 @@
 				'system': 'sistema'
 			}
 			const addRemoveTheme = (theme, stored) => {
-				document.body.classList.remove('theme-regular','theme-dark','theme-contrast','theme-system')
-				document.body.classList.add(`theme-${ theme }`);
+				document
+					.body
+					.classList
+					.remove('theme-regular', 'theme-dark', 'theme-contrast', 'theme-system')
+				document
+					.body
+					.classList
+					.add(`theme-${theme}`);
 				localStorage.setItem('theme', theme);
-				if (stored && theme === 'regular') return;
-				analytics(['trackEvent', 'Tema', `${ stored ? 'Tema storjata' : 'Tema nbidlet' }`, translateTheme[theme]]);
+				if (stored && theme === 'regular') 
+					return;
+				analytics([
+					'trackEvent', 'Tema', `${stored
+						? 'Tema storjata'
+						: 'Tema nbidlet'}`,
+					translateTheme[theme]
+				]);
 			}
 			const initialiseAfterBody = () => {
-				document.body.classList.add(location.hostname.replace(/\.?aphroconfuso\.mt/, '') || 'production');
+				document
+					.body
+					.classList
+					.add(location.hostname.replace(/\.?aphroconfuso\.mt/, '') || 'production');
 				addRemoveFontSizeClass(localStorage.getItem('font') || 1);
 				addRemoveTheme(localStorage.getItem('theme') || 'regular', true);
 				if (localStorage.getItem(`tw-${urlSlug}`)) {
-					document.body.classList.add('trigger-warning-closed');
+					document
+						.body
+						.classList
+						.add('trigger-warning-closed');
 				}
 			}
 		</script>
 		<script src="../script/script-24450c.js" type="module"></script>
 	</head>
 	<body class="show-nav this-month-april">
-		<script>initialiseAfterBody();</script>
+		<script>
+			initialiseAfterBody();
+		</script>
 		<div id="top-wrapper">
 			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
 			<nav id="top-nav">
 				<div id="logo-container-wrapper">
 					<div id="logo-container">
 						<a href="/">
-							<img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" />
+							<img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso"/>
 						</a>
 					</div>
 					<menu class="hide-mobile" id="menu-carousels">
-						<li class="abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
-						<li class="ff-2"><a href="/almanakk-april/">Almanakk</a></li>
+						<li class="abecedaire">
+							<a href="/abeċedarju/">Abeċedarju</a>
+						</li>
+						<li class="ff-2">
+							<a href="/almanakk-april/">Almanakk</a>
+						</li>
 					</menu>
 					<menu class="hide-mobile" id="menu-collections">
-						<li class="main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
-						<li class="main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+						<li class="main-menu-collection">
+							<a href="/indħil-barrani/">
+								<span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a>
+						</li>
+						<li class="main-menu-collection">
+							<a href="/il-kliem-fit-teorija/">
+								<span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a>
+						</li>
 					</menu>
 				</div>
-				<input id="menu-toggle" type="checkbox" />
+				<input id="menu-toggle" type="checkbox"/>
 				<label class='menu-button-container' for="menu-toggle">
 					<span style="display: none">Mobile biss: iftaħ il-menu</span>
 					<div class='menu-button'></div>
 				</label>
 				
-					<menu id="menu-main">
-						
-						<li class="hide-laptop main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
-						<li class="hide-laptop main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
-						<li class="hide-laptop abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
-						<li class="hide-laptop ff-2"><a href="/almanakk-april/">Almanakk</a></li>
-						<li><a href="/appuntamenti/">Appuntamenti</a></li>
-						<li><a href="/kontributuri/">Kontributuri</a></li>
-						<li><a href="/werrej/">Werrej</a></li>
-						<li><a href="/djarju/">Djarju</a></li>
-						<li><a href="/sensiliet/">Sensiliet</a></li>
-						<li><a href="/podcast/">Podcast</a></li>
-						<li class="hide-mobile"><a href="/kotba/" class="menu-kotba">Kotba</a></li>
-						<li class="hide-laptop choose-theme">
-							<a id="theme-regular" role="button" tabindex="0">s</a>
-							<a id="theme-dark" role="button" tabindex="1">m</a>
-							<a id="theme-contrast" role="button" tabindex="2">c</a>
-							<a id="theme-system" role="button" tabindex="3">p</a>
-						</li>
-						<li><a href="/dwarna/">Dwarna</a></li>
-						<li class="hide-laptop"><a href="/kotba/">Kotba</a></li>
-						<li class="hide-laptop"><a href="/kolofon/">Kolofon</a></li>
-						<li><a href="/newsletter/">Newsletter</a></li>
-						<li class="hide-laptop"><a href="/privatezza/">Privatezza</a></li>
-						<li><a href="/bookmarks/">Bookmarks<span id="bookmarks-number"></span></a></li>
-						<li class="hide-laptop choose-theme" id="text-size-adjust">
-							<a id="font-size-1" role="button" tabindex="8">a</a>
-							<a id="font-size-2" role="button" tabindex="9">a</a>
-							<a id="font-size-3" role="button" tabindex="10">a</a>
-							<a id="font-size-4" role="button" tabindex="11">a</a>
-						</li>
-					</menu>
-					<input class="hide-mobile" type="text" id="search-input" placeholder="fittex..." autocomplete="off" auto-fill="off" type="text" autocapitalize="none" enterkeyhint="search" />
-					<ul id="search-results"><!-- --></ul>
+				<menu id="menu-main">
+					
+					<li class="hide-laptop main-menu-collection">
+						<a href="/indħil-barrani/">
+							<span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a>
+					</li>
+					<li class="hide-laptop main-menu-collection">
+						<a href="/il-kliem-fit-teorija/">
+							<span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a>
+					</li>
+					<li class="hide-laptop a-links">
+						<a href="/abeċedarju/">Abeċedarju</a>
+						<a href="/almanakk-april/" class="ff-2">Almanakk</a>
+					</li>
+					<li>
+						<a href="/appuntamenti/">Appuntamenti</a>
+					</li>
+					<li>
+						<a href="/kontributuri/">Kontributuri</a>
+					</li>
+					<li>
+						<a href="/werrej/">Werrej</a>
+					</li>
+					<li>
+						<a href="/djarju/">Djarju</a>
+					</li>
+					<li>
+						<a href="/sensiliet/">Sensiliet</a>
+					</li>
+					<li>
+						<a href="/podcast/">Podcast</a>
+					</li>
+					<li class="hide-mobile">
+						<a href="/kotba/" class="menu-kotba">Kotba</a>
+					</li>
+					<li class="hide-laptop choose-theme">
+						<a id="theme-regular" role="button" tabindex="0">s</a>
+						<a id="theme-dark" role="button" tabindex="1">m</a>
+						<a id="theme-contrast" role="button" tabindex="2">c</a>
+						<a id="theme-system" role="button" tabindex="3">p</a>
+					</li>
+					<li>
+						<a href="/dwarna/">Dwarna</a>
+					</li>
+					<li class="hide-laptop">
+						<a href="/kotba/">Kotba</a>
+					</li>
+					<li class="hide-laptop">
+						<a href="/kolofon/">Kolofon</a>
+					</li>
+					<li>
+						<a href="/newsletter/">Newsletter</a>
+					</li>
+					<li class="hide-laptop">
+						<a href="/privatezza/">Privatezza</a>
+					</li>
+					<li>
+						<a href="/bookmarks/">Bookmarks<span id="bookmarks-number"></span></a>
+					</li>
+					<li class="hide-laptop choose-theme" id="text-size-adjust">
+						<a id="font-size-1" role="button" tabindex="8">a</a>
+						<a id="font-size-2" role="button" tabindex="9">a</a>
+						<a id="font-size-3" role="button" tabindex="10">a</a>
+						<a id="font-size-4" role="button" tabindex="11">a</a>
+					</li>
+				</menu>
+				<input class="hide-mobile" type="text" id="search-input" placeholder="fittex..." autocomplete="off" auto-fill="off" type="text" autocapitalize="none" enterkeyhint="search"/>
+				<ul id="search-results">
+					<!-- -->
+				</ul>
 				
 				<div id="brownline"></div>
 			</nav>
-			<div id="message"><!-- --></div>
+			<div id="message">
+				<!-- -->
+			</div>
 			<main id="skipto">
 				
 	<article class="generic almanac">
@@ -684,11 +772,21 @@
 						
 					
 						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
 							
 
 
 <li  class="multiple-episodes episode-4">
-	<a class="promo  novembru promo-djarju sequence- story- is-episode" href="/davinia-hamilton-djarju-2024-07-18-ħalli-l-mistoqsijiet-imexxuk/" onclick="analytics(['trackEvent', 'Promo', 'minn: Almanakk {{ day.date | prettifyMaltese }}', 'għal: Djarju #4 Davinia Hamilton', 224]);">
+	<a class="promo  novembru promo-djarju sequence- story- is-episode" href="/davinia-hamilton-djarju-2024-07-18-ħalli-l-mistoqsijiet-imexxuk/" onclick="analytics(['trackEvent', 'Promo', 'minn: Almanakk {{ day.date | prettifyMaltese }}', 'għal: Djarju #4 Davinia Hamilton', 229]);">
 		<header>
 	<ul>
 	
@@ -1025,16 +1123,6 @@
 					
 						
 					
-						
-					
-						
-					
-						
-					
-						
-					
-						
-					
 				</ou>
 			</section>
 		</div>
@@ -1043,7 +1131,7 @@
 			</main>
 		</div>
 		<div id="bottom-wrapper">
-			<img id="deco" role="none" src="/img/deco-100.svg" alt="Dekorazzjoni art-nouveau" />
+			<img id="deco" role="none" src="/img/deco-100.svg" alt="Dekorazzjoni art-nouveau"/>
 			
 				<div id="newsletter-container-bottom" class="newsletter-container">
 					<section id="form" data-track-content data-content-name="Homepage" data-content-piece="formola">
@@ -1119,7 +1207,9 @@
 
 		</div>
 		<aside id="scroll-tools" class="monthly-outlined">
-			<p><span id="progress"><!-- --></span></p>
+			<p>
+				<span id="progress">
+					<!-- --></span></p>
 		</aside>
 	</body>
 </html>
