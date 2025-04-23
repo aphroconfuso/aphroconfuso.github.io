@@ -25,10 +25,9 @@
 		<link rel="canonical" href="https://aphroconfuso.mt/almanakk-mejju/">
 		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
 		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
-		<link rel="stylesheet" href="/css/style-854fbcb0.css">
+		<link rel="stylesheet" href="/css/style-a718222d.css">
 		<script>
-			var
-				audioLoaded,
+			var audioLoaded,
 				audioUrls,
 				author,
 				body,
@@ -82,18 +81,20 @@
 			previousTime = [];
 			storyCompleted = false;
 
-			const	urlSlug = location.pathname.replace(/\//g, '');
+			const urlSlug = location
+				.pathname
+				.replace(/\//g, '');
 			const setCookie = (cname, cvalue, exdays = 36500) => {
 				const d = new Date();
-				d.setTime(d.getTime() + (exdays*24*60*60*1000));
-				let expires = "expires="+ d.toUTCString();
+				d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+				let expires = "expires=" + d.toUTCString();
 				document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 			}
 			const getCookie = (cname) => {
 				let name = cname + "=";
 				let decodedCookie = decodeURIComponent(document.cookie);
 				let ca = decodedCookie.split(';');
-				for(let i = 0; i < ca.length; i++) {
+				for (let i = 0; i < ca.length; i++) {
 					let c = ca[i];
 					while (c.charAt(0) == ' ') {
 						c = c.substring(1);
@@ -106,7 +107,8 @@
 			}
 			var _paq = window._paq = window._paq || [];
 			const analytics = (arrayInfo) => {
-				if (location.host !== 'aphroconfuso.mt') console.log(arrayInfo);
+				if (location.host !== 'aphroconfuso.mt') 
+					console.log(arrayInfo);
 				_paq.push(arrayInfo);
 			}
 			_paq.push(['disableCookies']);
@@ -117,14 +119,32 @@
 			_paq.push(['trackVisibleContentImpressions']);
 			(function () {
 				var u = "//analitika.aphroconfuso.mt/";
-				_paq.push(['setTrackerUrl', u + 'matomo.php']);
-				_paq.push(['setSiteId', location.host === 'aphroconfuso.mt' ? '1' : '2']);
-				var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
-				g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
+				_paq.push([
+					'setTrackerUrl', u + 'matomo.php'
+				]);
+				_paq.push([
+					'setSiteId', location.host === 'aphroconfuso.mt'
+						? '1'
+						: '2'
+				]);
+				var d = document,
+					g = d.createElement('script'),
+					s = d.getElementsByTagName('script')[0];
+				g.async = true;
+				g.src = u + 'matomo.js';
+				s
+					.parentNode
+					.insertBefore(g, s);
 			})();
 			const addRemoveFontSizeClass = (size) => {
-				document.body.classList.remove('font-size-1','font-size-2','font-size-3','font-size-4')
-				document.body.classList.add(`font-size-${ size }`);
+				document
+					.body
+					.classList
+					.remove('font-size-1', 'font-size-2', 'font-size-3', 'font-size-4')
+				document
+					.body
+					.classList
+					.add(`font-size-${size}`);
 				localStorage.setItem('font', size);
 			}
 			// REVIEW
@@ -135,87 +155,155 @@
 				'system': 'sistema'
 			}
 			const addRemoveTheme = (theme, stored) => {
-				document.body.classList.remove('theme-regular','theme-dark','theme-contrast','theme-system')
-				document.body.classList.add(`theme-${ theme }`);
+				document
+					.body
+					.classList
+					.remove('theme-regular', 'theme-dark', 'theme-contrast', 'theme-system')
+				document
+					.body
+					.classList
+					.add(`theme-${theme}`);
 				localStorage.setItem('theme', theme);
-				if (stored && theme === 'regular') return;
-				analytics(['trackEvent', 'Tema', `${ stored ? 'Tema storjata' : 'Tema nbidlet' }`, translateTheme[theme]]);
+				if (stored && theme === 'regular') 
+					return;
+				analytics([
+					'trackEvent', 'Tema', `${stored
+						? 'Tema storjata'
+						: 'Tema nbidlet'}`,
+					translateTheme[theme]
+				]);
 			}
 			const initialiseAfterBody = () => {
-				document.body.classList.add(location.hostname.replace(/\.?aphroconfuso\.mt/, '') || 'production');
+				document
+					.body
+					.classList
+					.add(location.hostname.replace(/\.?aphroconfuso\.mt/, '') || 'production');
 				addRemoveFontSizeClass(localStorage.getItem('font') || 1);
 				addRemoveTheme(localStorage.getItem('theme') || 'regular', true);
 				if (localStorage.getItem(`tw-${urlSlug}`)) {
-					document.body.classList.add('trigger-warning-closed');
+					document
+						.body
+						.classList
+						.add('trigger-warning-closed');
 				}
 			}
 		</script>
 		<script src="../script/script-24450c.js" type="module"></script>
 	</head>
 	<body class="show-nav this-month-april">
-		<script>initialiseAfterBody();</script>
+		<script>
+			initialiseAfterBody();
+		</script>
 		<div id="top-wrapper">
 			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
 			<nav id="top-nav">
 				<div id="logo-container-wrapper">
 					<div id="logo-container">
 						<a href="/">
-							<img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso" />
+							<img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso"/>
 						</a>
 					</div>
 					<menu class="hide-mobile" id="menu-carousels">
-						<li class="abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
-						<li class="ff-2"><a href="/almanakk-april/">Almanakk</a></li>
+						<li class="abecedaire">
+							<a href="/abeċedarju/">Abeċedarju</a>
+						</li>
+						<li class="ff-2">
+							<a href="/almanakk-april/">Almanakk</a>
+						</li>
 					</menu>
 					<menu class="hide-mobile" id="menu-collections">
-						<li class="main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
-						<li class="main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
+						<li class="main-menu-collection">
+							<a href="/indħil-barrani/">
+								<span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a>
+						</li>
+						<li class="main-menu-collection">
+							<a href="/il-kliem-fit-teorija/">
+								<span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a>
+						</li>
 					</menu>
 				</div>
-				<input id="menu-toggle" type="checkbox" />
+				<input id="menu-toggle" type="checkbox"/>
 				<label class='menu-button-container' for="menu-toggle">
 					<span style="display: none">Mobile biss: iftaħ il-menu</span>
 					<div class='menu-button'></div>
 				</label>
 				
-					<menu id="menu-main">
-						
-						<li class="hide-laptop main-menu-collection"><a href="/indħil-barrani/"><span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a></li>
-						<li class="hide-laptop main-menu-collection"><a href="/il-kliem-fit-teorija/"><span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a></li>
-						<li class="hide-laptop abecedaire"><a href="/abeċedarju/">Abeċedarju</a></li>
-						<li class="hide-laptop ff-2"><a href="/almanakk-april/">Almanakk</a></li>
-						<li><a href="/appuntamenti/">Appuntamenti</a></li>
-						<li><a href="/kontributuri/">Kontributuri</a></li>
-						<li><a href="/werrej/">Werrej</a></li>
-						<li><a href="/djarju/">Djarju</a></li>
-						<li><a href="/sensiliet/">Sensiliet</a></li>
-						<li><a href="/podcast/">Podcast</a></li>
-						<li class="hide-mobile"><a href="/kotba/" class="menu-kotba">Kotba</a></li>
-						<li class="hide-laptop choose-theme">
-							<a id="theme-regular" role="button" tabindex="0">s</a>
-							<a id="theme-dark" role="button" tabindex="1">m</a>
-							<a id="theme-contrast" role="button" tabindex="2">c</a>
-							<a id="theme-system" role="button" tabindex="3">p</a>
-						</li>
-						<li><a href="/dwarna/">Dwarna</a></li>
-						<li class="hide-laptop"><a href="/kotba/">Kotba</a></li>
-						<li class="hide-laptop"><a href="/kolofon/">Kolofon</a></li>
-						<li><a href="/newsletter/">Newsletter</a></li>
-						<li class="hide-laptop"><a href="/privatezza/">Privatezza</a></li>
-						<li><a href="/bookmarks/">Bookmarks<span id="bookmarks-number"></span></a></li>
-						<li class="hide-laptop choose-theme" id="text-size-adjust">
-							<a id="font-size-1" role="button" tabindex="8">a</a>
-							<a id="font-size-2" role="button" tabindex="9">a</a>
-							<a id="font-size-3" role="button" tabindex="10">a</a>
-							<a id="font-size-4" role="button" tabindex="11">a</a>
-						</li>
-					</menu>
-					<input class="hide-mobile" type="text" id="search-input" placeholder="fittex..." autocomplete="off" auto-fill="off" type="text" autocapitalize="none" enterkeyhint="search" />
-					<ul id="search-results"><!-- --></ul>
+				<menu id="menu-main">
+					
+					<li class="hide-laptop main-menu-collection">
+						<a href="/indħil-barrani/">
+							<span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a>
+					</li>
+					<li class="hide-laptop main-menu-collection">
+						<a href="/il-kliem-fit-teorija/">
+							<span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a>
+					</li>
+					<li class="hide-laptop a-links">
+						<a href="/abeċedarju/">Abeċedarju</a>
+						<a href="/almanakk-april/" class="ff-2">Almanakk</a>
+					</li>
+					<li>
+						<a href="/appuntamenti/">Appuntamenti</a>
+					</li>
+					<li>
+						<a href="/kontributuri/">Kontributuri</a>
+					</li>
+					<li>
+						<a href="/werrej/">Werrej</a>
+					</li>
+					<li>
+						<a href="/djarju/">Djarju</a>
+					</li>
+					<li>
+						<a href="/sensiliet/">Sensiliet</a>
+					</li>
+					<li>
+						<a href="/podcast/">Podcast</a>
+					</li>
+					<li class="hide-mobile">
+						<a href="/kotba/" class="menu-kotba">Kotba</a>
+					</li>
+					<li class="hide-laptop choose-theme">
+						<a id="theme-regular" role="button" tabindex="0">s</a>
+						<a id="theme-dark" role="button" tabindex="1">m</a>
+						<a id="theme-contrast" role="button" tabindex="2">c</a>
+						<a id="theme-system" role="button" tabindex="3">p</a>
+					</li>
+					<li>
+						<a href="/dwarna/">Dwarna</a>
+					</li>
+					<li class="hide-laptop">
+						<a href="/kotba/">Kotba</a>
+					</li>
+					<li class="hide-laptop">
+						<a href="/kolofon/">Kolofon</a>
+					</li>
+					<li>
+						<a href="/newsletter/">Newsletter</a>
+					</li>
+					<li class="hide-laptop">
+						<a href="/privatezza/">Privatezza</a>
+					</li>
+					<li>
+						<a href="/bookmarks/">Bookmarks<span id="bookmarks-number"></span></a>
+					</li>
+					<li class="hide-laptop choose-theme" id="text-size-adjust">
+						<a id="font-size-1" role="button" tabindex="8">a</a>
+						<a id="font-size-2" role="button" tabindex="9">a</a>
+						<a id="font-size-3" role="button" tabindex="10">a</a>
+						<a id="font-size-4" role="button" tabindex="11">a</a>
+					</li>
+				</menu>
+				<input class="hide-mobile" type="text" id="search-input" placeholder="fittex..." autocomplete="off" auto-fill="off" type="text" autocapitalize="none" enterkeyhint="search"/>
+				<ul id="search-results">
+					<!-- -->
+				</ul>
 				
 				<div id="brownline"></div>
 			</nav>
-			<div id="message"><!-- --></div>
+			<div id="message">
+				<!-- -->
+			</div>
 			<main id="skipto">
 				
 	<article class="generic almanac">
@@ -229,55 +317,77 @@
 			<h2></h2>
 		</header>
 
-		<ol class="almanac-months">
+		<ol class="almanac-months generic-menu">
 			
-				<li>
-					<a href="/almanakk-jannar/">Jannar</a>
-				</li>
+				
+					<li>
+						<a href="/almanakk-jannar/">Jannar</a>
+					</li>
+				
 			
-				<li>
-					<a href="/almanakk-frar/">Frar</a>
-				</li>
+				
+					<li>
+						<a href="/almanakk-frar/">Frar</a>
+					</li>
+				
 			
-				<li>
-					<a href="/almanakk-marzu/">Marzu</a>
-				</li>
+				
+					<li>
+						<a href="/almanakk-marzu/">Marzu</a>
+					</li>
+				
 			
-				<li>
-					<a href="/almanakk-april/">April</a>
-				</li>
+				
+					<li>
+						<a href="/almanakk-april/">April</a>
+					</li>
+				
 			
-				<li>
-					<a href="/almanakk-mejju/">Mejju</a>
-				</li>
+				
+					<li class="active">Mejju</li>
+				
 			
-				<li>
-					<a href="/almanakk-ġunju/">Ġunju</a>
-				</li>
+				
+					<li>
+						<a href="/almanakk-ġunju/">Ġunju</a>
+					</li>
+				
 			
-				<li>
-					<a href="/almanakk-lulju/">Lulju</a>
-				</li>
+				
+					<li>
+						<a href="/almanakk-lulju/">Lulju</a>
+					</li>
+				
 			
-				<li>
-					<a href="/almanakk-awwissu/">Awwissu</a>
-				</li>
+				
+					<li>
+						<a href="/almanakk-awwissu/">Awwissu</a>
+					</li>
+				
 			
-				<li>
-					<a href="/almanakk-settembru/">Settembru</a>
-				</li>
+				
+					<li>
+						<a href="/almanakk-settembru/">Settembru</a>
+					</li>
+				
 			
-				<li>
-					<a href="/almanakk-ottubru/">Ottubru</a>
-				</li>
+				
+					<li>
+						<a href="/almanakk-ottubru/">Ottubru</a>
+					</li>
+				
 			
-				<li>
-					<a href="/almanakk-novembru/">Novembru</a>
-				</li>
+				
+					<li>
+						<a href="/almanakk-novembru/">Novembru</a>
+					</li>
+				
 			
-				<li>
-					<a href="/almanakk-diċembru/">Diċembru</a>
-				</li>
+				
+					<li>
+						<a href="/almanakk-diċembru/">Diċembru</a>
+					</li>
+				
 			
 		</ol>
 
@@ -575,22 +685,6 @@
 												
 											
 												
-													<li>
-														
-														<a class="promo-almanac ottubru" href="/joe-gatt-kontra-tagħna-għaliex-magħna/#:~:text=1 ta’ Mejju" onclick="analytics(['trackEvent', 'Promo', 'minn: Almanakk - Mejju', 'għal: Kontra Tagħna Għaliex Magħna', 1]);">
-															<header>
-																<p>
-																	<span style="font-family: mono">1948:</span>
-																	Kontra Tagħna Għaliex Mag…</p>
-															</header>
-															<p class="blurb body-text">… tabib <l-m>tal-familja</l-m> kien jidħol <l-m>fid-djar</l-m> tal-kostitwenti tiegħu u rabba magħhom ċerta intimità. Għall-<span class="date">1 ta’ Mejju</span> <l-m>tal-1948</l-m>, <l-m>il-Malta</l-m> Labour Party ma kien għamel <l-m>l-ebda</l-m> ċelebrazzjoni — forsi biex ma jqajjimx inkwiet. Boffa kien …</p>
-														</a>
-													</li>
-												
-											
-												
-											
-												
 											
 												
 											
@@ -608,6 +702,22 @@
 																	Kontra Tagħna Għaliex Mag…</p>
 															</header>
 															<p class="blurb body-text">… abbat wiċċu <l-m>mas-Sultana</l-m> tas-Sema, wiċċha kollu dija, tfakkru biex jivvota <l-m>lid-Demokrazija</l-m> Kristjana. <l-m>Fl-</l-m><span class="date">1 ta’ Mejju</span> <l-m>tas-sena</l-m> ta’ qabel, f’Portella della Ginestra, ħdax-il bidwi nqatel u 27 oħra ndarbu waqt li kienu qed …</p>
+														</a>
+													</li>
+												
+											
+												
+											
+												
+													<li>
+														
+														<a class="promo-almanac ottubru" href="/joe-gatt-kontra-tagħna-għaliex-magħna/#:~:text=1 ta’ Mejju" onclick="analytics(['trackEvent', 'Promo', 'minn: Almanakk - Mejju', 'għal: Kontra Tagħna Għaliex Magħna', 1]);">
+															<header>
+																<p>
+																	<span style="font-family: mono">1948:</span>
+																	Kontra Tagħna Għaliex Mag…</p>
+															</header>
+															<p class="blurb body-text">… tabib <l-m>tal-familja</l-m> kien jidħol <l-m>fid-djar</l-m> tal-kostitwenti tiegħu u rabba magħhom ċerta intimità. Għall-<span class="date">1 ta’ Mejju</span> <l-m>tal-1948</l-m>, <l-m>il-Malta</l-m> Labour Party ma kien għamel <l-m>l-ebda</l-m> ċelebrazzjoni — forsi biex ma jqajjimx inkwiet. Boffa kien …</p>
 														</a>
 													</li>
 												
@@ -1680,6 +1790,8 @@
 												
 											
 												
+											
+												
 													<li>
 														
 														<a class="promo-almanac awwissu" href="/davinia-hamilton-djarju-2024-04-24-tistgħu-tgħiduli-min-jien-/#:~:text=2 ta’ Mejju" onclick="analytics(['trackEvent', 'Promo', 'minn: Almanakk - Mejju', 'għal: Djarju #2 Davinia Hamilton', 2]);">
@@ -1691,8 +1803,6 @@
 															<p class="blurb body-text">… ili <l-m>s-snin</l-m> naqa’<span class="pullsemi">,</span> nantiċipa <l-m>l-mument</l-m> meta ħa ninstabat.2<span class="date">2 ta’ Mejju</span> 2024Illejla qiegħda Dublin, <l-m>fl-ispare</l-m> room <l-m>tal-ikbar</l-m> ħabiba tiegħi, H. Ġejt hawn għax g …</p>
 														</a>
 													</li>
-												
-											
 												
 											
 												
@@ -1899,6 +2009,20 @@
 												
 											
 												
+											
+												
+											
+												
+											
+												
+											
+												
+											
+												
+											
+												
+											
+												
 													<li>
 														
 														<a class="promo-almanac ottubru" href="/omar-nshea-es-sidr-2-ramel-u-muntanji/#:~:text=3 ta’ Mejju" onclick="analytics(['trackEvent', 'Promo', 'minn: Almanakk - Mejju', 'għal: Es Sidr #2', 3]);">
@@ -1910,60 +2034,6 @@
 															<p class="blurb body-text">… p>#Xhur ta’ skiet. Inqalleb biex insib xi ittra li timla <l-m>l-vojt</l-m> bejn <l-m>l-aħħar</l-m> ta’ Jannar u <l-m>t-1</l-m><span class="date">3 ta’ Mejju</span>, 1972. Jgħidilha li ilu ma jisma’ mingħandha, li forsi trid jitlaqha <l-m>fil-paċi</l-m>. Sema’ li …</p>
 														</a>
 													</li>
-												
-											
-												
-											
-												
-											
-												
-											
-												
-											
-												
-											
-												
-											
-												
-											
-												
-											
-												
-											
-												
-											
-												
-											
-												
-											
-												
-											
-												
-											
-												
-											
-												
-											
-												
-											
-												
-											
-												
-											
-												
-											
-												
-											
-												
-											
-												
-											
-												
-											
-												
-											
-												
-											
 												
 											
 												
@@ -2455,6 +2525,42 @@
 												
 											
 												
+											
+												
+											
+												
+											
+												
+											
+												
+											
+												
+											
+												
+											
+												
+											
+												
+											
+												
+											
+												
+											
+												
+											
+												
+											
+												
+											
+												
+											
+												
+											
+												
+											
+												
+											
+												
 													<li>
 														
 														<a class="promo-almanac awwissu" href="/davinia-hamilton-djarju-2024-04-24-tistgħu-tgħiduli-min-jien-/#:~:text=3 ta’ Mejju" onclick="analytics(['trackEvent', 'Promo', 'minn: Almanakk - Mejju', 'għal: Djarju #2 Davinia Hamilton', 3]);">
@@ -2466,6 +2572,10 @@
 															<p class="blurb body-text">… telefonata, tiżvela biċċiet <l-m>tal-istorja</l-m>. Jogħġbuni wisq dawn <l-m>l-esperjenzi</l-m> innovattivi.<span class="date">3 ta’ Mejju</span> 2024Ġurnata twila twila xogħol, erba’ shows wieħed wara <l-m>l-ieħor</l-m>. Filgħaxija, imbagħad, …</p>
 														</a>
 													</li>
+												
+											
+												
+											
 												
 											
 												
@@ -3196,6 +3306,10 @@
 												
 											
 												
+											
+												
+											
+												
 													<li>
 														
 														<a class="promo-almanac gunju" href="/warren-bartolo-djarju-2024-05-01-ngħidlu-li-miniex-julia-fox/#:~:text=4 ta’ Mejju" onclick="analytics(['trackEvent', 'Promo', 'minn: Almanakk - Mejju', 'għal: Djarju #6 Warren Bartolo', 4]);">
@@ -3207,10 +3321,6 @@
 															<p class="blurb body-text">… p>Meta nagħlaq għajnejja, nara <l-m>n-nar</l-m>.<span class="date">4 ta’ Mejju</span> <l-m>2024In-nanna</l-m> tidher għajjiena, għajnejha ħomor u miksurin bħal stilla li għadha kif splodiet …</p>
 														</a>
 													</li>
-												
-											
-												
-											
 												
 											
 												
@@ -3951,8 +4061,6 @@
 												
 											
 												
-											
-												
 													<li>
 														
 														<a class="promo-almanac gunju" href="/warren-bartolo-djarju-2024-05-01-ngħidlu-li-miniex-julia-fox/#:~:text=5 ta’ Mejju" onclick="analytics(['trackEvent', 'Promo', 'minn: Almanakk - Mejju', 'għal: Djarju #6 Warren Bartolo', 5]);">
@@ -3964,6 +4072,8 @@
 															<p class="blurb body-text">… roġ tissue mitwija <l-m>mill-clutch</l-m> bag tagħha biex timsaħ imneħirha minn ġenb għall-ieħor.<span class="date">5 ta’ Mejju</span> 2024F’messaġġ, J jgħiduli li raw gremxula u farfett abjad. Niltaqa’ ma’ C u L <l-m>il-Belt</l-m> g …</p>
 														</a>
 													</li>
+												
+											
 												
 											
 												
@@ -7698,6 +7808,8 @@
 												
 											
 												
+											
+												
 													<li>
 														
 														<a class="promo-almanac awwissu" href="/davinia-hamilton-djarju-2024-04-24-tistgħu-tgħiduli-min-jien-/#:~:text=10 ta’ Mejju" onclick="analytics(['trackEvent', 'Promo', 'minn: Almanakk - Mejju', 'għal: Djarju #2 Davinia Hamilton', 10]);">
@@ -7709,8 +7821,6 @@
 															<p class="blurb body-text">… jinsabx fi triqthom lejn <l-m>id-dar</l-m>, iżda <l-m>fid-dar</l-m> stess, <l-m>mill-irġiel</l-m> li suppost iħobbuhom.<span class="date">10 ta’ Mejju</span> <l-m>2024Is-sħana</l-m> waslet ċumm bumm. Filli għadni <l-m>bil-ġerżijiet</l-m> tas-suf nixxennaq għal roqgħa …</p>
 														</a>
 													</li>
-												
-											
 												
 											
 												
@@ -8904,6 +9014,24 @@
 												
 											
 												
+											
+												
+											
+												
+											
+												
+											
+												
+											
+												
+											
+												
+											
+												
+											
+												
+											
+												
 													<li>
 														
 														<a class="promo-almanac ottubru" href="/omar-nshea-bur-mgħeż-2-dfintha-fil-libsa-li-mietet-fiha/#:~:text=12 ta’ Mejju" onclick="analytics(['trackEvent', 'Promo', 'minn: Almanakk - Mejju', 'għal: Bur Mgħeż #2', 12]);">
@@ -8930,26 +9058,6 @@
 												
 											
 												
-											
-												
-											
-												
-											
-												
-											
-												
-											
-												
-											
-												
-											
-												
-											
-												
-											
-												
-											
-												
 													<li>
 														
 														<a class="promo-almanac ottubru" href="/omar-nshea-bur-mgħeż-2-dfintha-fil-libsa-li-mietet-fiha/#:~:text=12 ta’ Mejju" onclick="analytics(['trackEvent', 'Promo', 'minn: Almanakk - Mejju', 'għal: Bur Mgħeż #2', 12]);">
@@ -8961,6 +9069,8 @@
 															<p class="blurb body-text">… and ibnu Michele <l-m>fl-1895</l-m>. <l-m>L-Atti</l-m> kienu mqiegħda għand <l-m>in-Nutar</l-m> Giovanni Calleja Schembri <l-m>bid-data</l-m> tat-<span class="date">12 ta’ Mejju</span> 1883.<l-m>Id-daqs</l-m> tal-plott ta’ Bur Mgħeż li xtara <l-m>l-Gvern</l-m> kien ta’ 2 mondelli u 8 misure; <l-m>il-plott</l-m> kien …</p>
 														</a>
 													</li>
+												
+											
 												
 											
 												
@@ -9945,6 +10055,14 @@
 												
 											
 												
+											
+												
+											
+												
+											
+												
+											
+												
 													<li>
 														
 														<a class="promo-almanac gunju" href="/warren-bartolo-djarju-2024-05-01-ngħidlu-li-miniex-julia-fox/#:~:text=13 ta’ Mejju" onclick="analytics(['trackEvent', 'Promo', 'minn: Almanakk - Mejju', 'għal: Djarju #6 Warren Bartolo', 13]);">
@@ -9956,14 +10074,6 @@
 															<p class="blurb body-text">… <l-m>l-aħħar</l-m>. Jibgħatli hello għall-ħabta <l-m>tal-22h</l-m> u jkollna konverżazzjoni qasira.<span class="date">13 ta’ Mejju</span> 2024Inqum madwar <l-m>is-7h</l-m> minħabba <l-m>l-istorbju</l-m> li ġej <l-m>mill-kostruzzjoni</l-m> tat-toroq. <l-m>Ir-raġel</l-m> …</p>
 														</a>
 													</li>
-												
-											
-												
-											
-												
-											
-												
-											
 												
 											
 												
@@ -11457,20 +11567,6 @@
 												
 											
 												
-											
-												
-											
-												
-											
-												
-											
-												
-											
-												
-											
-												
-											
-												
 													<li>
 														
 														<a class="promo-almanac awwissu" href="/davinia-hamilton-djarju-2024-04-24-tistgħu-tgħiduli-min-jien-/#:~:text=15 ta’ Mejju" onclick="analytics(['trackEvent', 'Promo', 'minn: Almanakk - Mejju', 'għal: Djarju #2 Davinia Hamilton', 15]);">
@@ -11482,6 +11578,20 @@
 															<p class="blurb body-text">… tajba, <l-m>bix-xemx</l-m> fuq wiċċi, daqsxejn imxengla <l-m>bl-inbid</l-m>. <l-m>Ix-xemx</l-m>. <l-m>Ix-xemx</l-m>. <l-m>Ix-xemx</l-m> kollox.<span class="date">15 ta’ Mejju</span> 2024M’iniex insib biżżejjed ħin għall-kitba, u <l-m>t-telfa</l-m> qed inħossha sew. <l-m>Ix-xogħol</l-m> qed …</p>
 														</a>
 													</li>
+												
+											
+												
+											
+												
+											
+												
+											
+												
+											
+												
+											
+												
+											
 												
 											
 												
@@ -12202,12 +12312,6 @@
 												
 											
 												
-											
-												
-											
-												
-											
-												
 													<li>
 														
 														<a class="promo-almanac gunju" href="/warren-bartolo-djarju-2024-05-01-ngħidlu-li-miniex-julia-fox/#:~:text=16 ta’ Mejju" onclick="analytics(['trackEvent', 'Promo', 'minn: Almanakk - Mejju', 'għal: Djarju #6 Warren Bartolo', 16]);">
@@ -12226,6 +12330,18 @@
 												
 											
 												
+											
+												
+											
+												
+											
+												
+											
+												
+											
+												
+											
+												
 													<li>
 														
 														<a class="promo-almanac awwissu" href="/davinia-hamilton-djarju-2024-04-24-tistgħu-tgħiduli-min-jien-/#:~:text=16 ta’ Mejju" onclick="analytics(['trackEvent', 'Promo', 'minn: Almanakk - Mejju', 'għal: Djarju #2 Davinia Hamilton', 16]);">
@@ -12237,12 +12353,6 @@
 															<p class="blurb body-text">… nara. Ideat kemm trid. Dik li tkiddni. Issa li għandi xi ngħid, m’għandix ċans ngħidu.<span class="date">16 ta’ Mejju</span> 2024Illum niltaqa’ ma’ J <l-m>is-Southbank</l-m> Centre u nagħmlu sitt sigħat sħaħ niktbu <l-m>l-ewwel</l-m> …</p>
 														</a>
 													</li>
-												
-											
-												
-											
-												
-											
 												
 											
 												
@@ -12963,6 +13073,14 @@
 												
 											
 												
+											
+												
+											
+												
+											
+												
+											
+												
 													<li>
 														
 														<a class="promo-almanac gunju" href="/warren-bartolo-djarju-2024-05-01-ngħidlu-li-miniex-julia-fox/#:~:text=17 ta’ Mejju" onclick="analytics(['trackEvent', 'Promo', 'minn: Almanakk - Mejju', 'għal: Djarju #6 Warren Bartolo', 17]);">
@@ -13061,12 +13179,6 @@
 												
 											
 												
-											
-												
-											
-												
-											
-												
 													<li>
 														
 														<a class="promo-almanac lulju" href="/loranne-vella-djarju-2024-03-01-nintebaħ-li-terraqt-mhux-ħażin/#:~:text=17 ta’ Mejju" onclick="analytics(['trackEvent', 'Promo', 'minn: Almanakk - Mejju', 'għal: Djarju #6 Loranne Vella', 17]);">
@@ -13078,8 +13190,6 @@
 															<p class="blurb body-text">… qtajna għedtilha li ma kellix idea <l-m>x’beħsiebni</l-m> nħejji, imma xi ħaġa kont se ntella’ żgur.<span class="date">17 ta’ Mejju</span> 2024Irċivejt mingħand Amina <l-m>l-iskeda</l-m> tas-serata fejn sirt naf li <l-m>l-intervent</l-m> tiegħi waqt …</p>
 														</a>
 													</li>
-												
-											
 												
 											
 												
@@ -14505,6 +14615,12 @@
 												
 											
 												
+											
+												
+											
+												
+											
+												
 													<li>
 														
 														<a class="promo-almanac awwissu" href="/davinia-hamilton-djarju-2024-04-24-tistgħu-tgħiduli-min-jien-/#:~:text=19 ta’ Mejju" onclick="analytics(['trackEvent', 'Promo', 'minn: Almanakk - Mejju', 'għal: Djarju #2 Davinia Hamilton', 19]);">
@@ -14516,12 +14632,6 @@
 															<p class="blurb body-text">… Tube lura lejn <l-m>id-dar</l-m>. Nasal <l-m>fit-8pm</l-m> u barra għadu <l-m>d-dawl</l-m>. Inħobbu <l-m>s-sajf</l-m> f’<l-m>dil-belt</l-m>.<span class="date">19 ta’ Mejju</span> <l-m>2024Dal-weekend</l-m> ħdimt tletin siegħa fi tlett ijiem. Issa <l-m>l-Ħadd</l-m> billejl, daqqu <l-m>l-ħdax</l-m> u …</p>
 														</a>
 													</li>
-												
-											
-												
-											
-												
-											
 												
 											
 												
@@ -15248,6 +15358,10 @@
 												
 											
 												
+											
+												
+											
+												
 													<li>
 														
 														<a class="promo-almanac awwissu" href="/davinia-hamilton-djarju-2024-04-24-tistgħu-tgħiduli-min-jien-/#:~:text=20 ta’ Mejju" onclick="analytics(['trackEvent', 'Promo', 'minn: Almanakk - Mejju', 'għal: Djarju #2 Davinia Hamilton', 20]);">
@@ -15259,10 +15373,6 @@
 															<p class="blurb body-text">… <l-m>is-sufan</l-m> sat-tlieta ta’ filgħodu, naqra u niskrollja <l-m>l-mobile</l-m> sa ma tmur għajni bija.<span class="date">20 ta’ Mejju</span> 2024Xi kultant inħossni qisni qed naqa’<span class="pullsemi">.</span> Donnha <l-m>l-art</l-m> infetħet taħti żmien twil ilu, u …</p>
 														</a>
 													</li>
-												
-											
-												
-											
 												
 											
 												
@@ -16356,6 +16466,10 @@
 												
 											
 												
+											
+												
+											
+												
 													<li>
 														
 														<a class="promo-almanac frar" href="/jien_a-il-mara-tas-suldat/#:~:text=22 ta’ Mejju" onclick="analytics(['trackEvent', 'Promo', 'minn: Almanakk - Mejju', 'għal: Il-Mara tas-Suldat', 22]);">
@@ -16367,10 +16481,6 @@
 															<p class="blurb body-text">… span><l-m>DATIL-ewwel</l-m> laqgħa bejn Aphroconfuso u Librerija Geġwiġija dwar dan <l-m>il-proġett</l-m> saret <l-m>fit-</l-m><span class="date">22 ta’ Mejju</span> 2023. <l-m>Is-sensiela</l-m> ta’ workshops — bit-titlu “Noti għal dizzjunarju <l-m>tal-maħbubin</l-m>” — ħabbarnieha <l-m>fl-4</l-m> ta’ Settembru …</p>
 														</a>
 													</li>
-												
-											
-												
-											
 												
 											
 												
@@ -17515,8 +17625,6 @@
 												
 											
 												
-											
-												
 													<li>
 														
 														<a class="promo-almanac awwissu" href="/davinia-hamilton-djarju-2024-04-24-tistgħu-tgħiduli-min-jien-/#:~:text=23 ta’ Mejju" onclick="analytics(['trackEvent', 'Promo', 'minn: Almanakk - Mejju', 'għal: Djarju #2 Davinia Hamilton', 23]);">
@@ -17528,6 +17636,8 @@
 															<p class="blurb body-text">… qalbi ħafna. Niftakar <l-m>is-sena</l-m> li qattajt hawn, meta tlaqt minn Malta. Kont għadni żgħira!<span class="date">23 ta’ Mejju</span> 2024Indumu erba’ sigħat insuqu minn Dublin sa Donegal. Ħin minnhom nieqfu għal kikkra te …</p>
 														</a>
 													</li>
+												
+											
 												
 											
 												
@@ -17690,6 +17800,10 @@
 								
 									
 										<ul>
+											
+												
+											
+												
 											
 												
 											
@@ -18282,8 +18396,6 @@
 												
 											
 												
-											
-												
 													<li>
 														
 														<a class="promo-almanac awwissu" href="/davinia-hamilton-djarju-2024-04-24-tistgħu-tgħiduli-min-jien-/#:~:text=24 ta’ Mejju" onclick="analytics(['trackEvent', 'Promo', 'minn: Almanakk - Mejju', 'għal: Djarju #2 Davinia Hamilton', 24]);">
@@ -18295,8 +18407,6 @@
 															<p class="blurb body-text">… qarabagħli u patata. Inqattgħu serata sħiħa nitkellmu. Fuq kollox. Kelli bżonnha din.<span class="date">24 ta’ Mejju</span> 2024Filgħodu S diġà qiegħda isfel. Lestiet <l-m>il-kafè</l-m> u nferra’ kikkra u mmur inpoġġi ħdejha …</p>
 														</a>
 													</li>
-												
-											
 												
 											
 												
@@ -19033,18 +19143,6 @@
 												
 											
 												
-											
-												
-											
-												
-											
-												
-											
-												
-											
-												
-											
-												
 													<li>
 														
 														<a class="promo-almanac gunju" href="/warren-bartolo-djarju-2024-05-01-ngħidlu-li-miniex-julia-fox/#:~:text=25 ta’ Mejju" onclick="analytics(['trackEvent', 'Promo', 'minn: Almanakk - Mejju', 'għal: Djarju #6 Warren Bartolo', 25]);">
@@ -19056,6 +19154,18 @@
 															<p class="blurb body-text">… Nasal <l-m>id-dar</l-m> f’għaxar minuti u jiddispjaċini li nfaqt <l-m>il-flus</l-m> fuq taxi. Norqod f’23h45.<span class="date">25 ta’ Mejju</span> 2024Imbagħad nibdel <l-m>is-suġġett</l-m> billi nibgħatlu meme ta’ cardboard <l-m>cut-out</l-m> ta’ Ariana Grande …</p>
 														</a>
 													</li>
+												
+											
+												
+											
+												
+											
+												
+											
+												
+											
+												
+											
 												
 											
 												
@@ -20127,6 +20237,8 @@
 												
 											
 												
+											
+												
 													<li>
 														
 														<a class="promo-almanac mejju" href="/karl-baldacchino-politika-bla-nifs/#:~:text=27 ta’ Mejju" onclick="analytics(['trackEvent', 'Promo', 'minn: Almanakk - Mejju', 'għal: Politika bla Nifs', 27]);">
@@ -20138,8 +20250,6 @@
 															<p class="blurb body-text">… president ħejja pjanijiet sabiex jibni moskea li tiċċelebra <l-m>l-Imperu</l-m> Ottoman. Xi attivisti saru jafu u <l-m>fis-</l-m><span class="date">27 ta’ Mejju</span> okkupaw <l-m>il-park</l-m> fil-ħin li <l-m>l-magni</l-m> kienu se jibdew ikaxkru kollox. <l-m>Il-kelma</l-m> ġriet u <l-m>n-nies</l-m> żdiedu. Jumejn …</p>
 														</a>
 													</li>
-												
-											
 												
 											
 												
@@ -21635,12 +21745,6 @@
 												
 											
 												
-											
-												
-											
-												
-											
-												
 													<li>
 														
 														<a class="promo-almanac april" href="/jimmy-grima-splużjonijiet-1-il-kwiet-u-l-lejl/#:~:text=29 ta’ Mejju" onclick="analytics(['trackEvent', 'Promo', 'minn: Almanakk - Mejju', 'għal: Splużjonijiet #1', 29]);">
@@ -21652,6 +21756,12 @@
 															<p class="blurb body-text">… Amministrattiv. Hemm ċertu “Padovani” li qed jiffirma wkoll imma dan ma sibt xejn fuqu.<l-m>Fil-minuti</l-m> tad-<span class="date">29 ta’ Mejju</span> 1962 jidher biċ-ċar li <l-m>l-Maltin </l-m>— li issa kienu kisbu ftit iktar awtonomija — mill-ewwel riedu jrażżnu <l-m>dil-prattika</l-m> …</p>
 														</a>
 													</li>
+												
+											
+												
+											
+												
+											
 												
 											
 												
@@ -22786,10 +22896,6 @@
 												
 											
 												
-											
-												
-											
-												
 													<li>
 														
 														<a class="promo-almanac gunju" href="/warren-bartolo-djarju-2024-05-01-ngħidlu-li-miniex-julia-fox/#:~:text=30 ta’ Mejju" onclick="analytics(['trackEvent', 'Promo', 'minn: Almanakk - Mejju', 'għal: Djarju #6 Warren Bartolo', 30]);">
@@ -22801,6 +22907,10 @@
 															<p class="blurb body-text">… <l-m>mill-ġdid</l-m> issa, inħossni eqreb lejn <l-m>il-karattru</l-m> prinċipali u <l-m>l-mod</l-m> tal-kitba tagħha.<span class="date">30 ta’ Mejju</span> 2024Nispiċċa mmur <l-m>il-bar</l-m> kmieni għax ma ridtx ikolli nħallas kafè ieħor xi mkien ieħor …</p>
 														</a>
 													</li>
+												
+											
+												
+											
 												
 											
 												
@@ -23741,7 +23851,7 @@
 			</main>
 		</div>
 		<div id="bottom-wrapper">
-			<img id="deco" role="none" src="/img/deco-100.svg" alt="Dekorazzjoni art-nouveau" />
+			<img id="deco" role="none" src="/img/deco-100.svg" alt="Dekorazzjoni art-nouveau"/>
 			
 				<div id="newsletter-container-bottom" class="newsletter-container">
 					<section id="form" data-track-content data-content-name="Homepage" data-content-piece="formola">
@@ -23817,7 +23927,9 @@
 
 		</div>
 		<aside id="scroll-tools" class="monthly-outlined">
-			<p><span id="progress"><!-- --></span></p>
+			<p>
+				<span id="progress">
+					<!-- --></span></p>
 		</aside>
 	</body>
 </html>
