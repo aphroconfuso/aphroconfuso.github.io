@@ -1,0 +1,938 @@
+<!doctype html>
+<html lang="mt" translate="no">
+
+	<head>
+		<meta charset="utf-8">
+		
+	<title>Mejju 2024 · Aphroconfuso</title>
+	<meta content="Il-kitba tifred l-Istorja minn kulma ġie qabilha. Mingħajr il-kitba, kulma jħalli warajh il-bniedem irid jiġi skavat, maqlugħ mill-art u interpretat. Minn ftit għadam, minn ftit biċċiet fuħħar, mill-qxur tal-bebbux, l-arkeologi jridu jibnu stampa ta’ dinjiet sħaħ. Fis-sensiela “Bur Mgħeż”, Omar N’S…" name="description">
+	<meta property="og:image" content="/stampi/social_aphroconfuso_logo_social_kbir_kwadrat_d073f4e24a.jpg">
+
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+		<meta content="width=device-width, initial-scale=1" name="viewport">
+		<meta content="width=device-width" initial-scale="1.0" maximum-scale="1.0" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="yes" name="mobile-web-app-capable">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#f9f9f3">
+		<link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon-16x16.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32x32.png">
+		<link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
+		<link rel="mask-icon" href="/img/icons/safari-pinned-tab.svg" color="#5bbad5">
+		<meta property="og:image:type" content="image/jpeg">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
+		<link rel="canonical" href="https://aphroconfuso.mt/mejju-2024/">
+		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
+		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
+		<link rel="stylesheet" href="/css/style-7ed8993c.css">
+		<script>
+			var audioLoaded,
+				audioUrls,
+				author,
+				body,
+				bodyEnd,
+				bodyHeight,
+				bodyStart,
+				bodyText,
+				bookmarksArray,
+				bookmarksList,
+				bookmarksMenuElement,
+				charactersPerPixel,
+				charactersPerScreen,
+				currentTime,
+				duration,
+				elapsedTime,
+				hideScrollTools,
+				lastReportedReadingTime,
+				lastReportedScrollPosition,
+				lastScrollPosition,
+				message,
+				issueMonth,
+				issueMonthYear,
+				newScrollPosition,
+				pageHeight,
+				pageReportingTitle,
+				percentageProgress,
+				placeText,
+				podcastUrl,
+				previousTime,
+				progressElement,
+				readingSpeed,
+				reportingTitle,
+				screenHeight,
+				skippedTime,
+				storyCompleted,
+				storyId,
+				storyType,
+				sequenceEpisodeNumber,
+				sequenceEpisodeTitle,
+				timeStarted,
+				pageTitle,
+				wordcount,
+				wordsPerPixel,
+				wordsPerSecond,
+				wordsPerSecondAudio,
+				wordsPerScreen;
+
+			audioLoaded = false;
+			bookmarksArray = [];
+			percentageProgress = 0;
+			previousTime = [];
+			storyCompleted = false;
+
+			const urlSlug = location
+				.pathname
+				.replace(/\//g, '');
+			const setCookie = (cname, cvalue, exdays = 36500) => {
+				const d = new Date();
+				d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+				let expires = "expires=" + d.toUTCString();
+				document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+			}
+			const getCookie = (cname) => {
+				let name = cname + "=";
+				let decodedCookie = decodeURIComponent(document.cookie);
+				let ca = decodedCookie.split(';');
+				for (let i = 0; i < ca.length; i++) {
+					let c = ca[i];
+					while (c.charAt(0) == ' ') {
+						c = c.substring(1);
+					}
+					if (c.indexOf(name) == 0) {
+						return c.substring(name.length, c.length);
+					}
+				}
+				return "";
+			}
+			var _paq = window._paq = window._paq || [];
+			const analytics = (arrayInfo) => {
+				if (location.host !== 'aphroconfuso.mt') 
+					console.log(arrayInfo);
+				_paq.push(arrayInfo);
+			}
+			_paq.push(['disableCookies']);
+			_paq.push(['enableJSErrorTracking']);
+			_paq.push(['enableHeartBeatTimer']);
+			_paq.push(['enableLinkTracking']);
+			_paq.push(['trackPageView']);
+			_paq.push(['trackVisibleContentImpressions']);
+			(function () {
+				var u = "//analitika.aphroconfuso.mt/";
+				_paq.push([
+					'setTrackerUrl', u + 'matomo.php'
+				]);
+				_paq.push([
+					'setSiteId', location.host === 'aphroconfuso.mt'
+						? '1'
+						: '2'
+				]);
+				var d = document,
+					g = d.createElement('script'),
+					s = d.getElementsByTagName('script')[0];
+				g.async = true;
+				g.src = u + 'matomo.js';
+				s
+					.parentNode
+					.insertBefore(g, s);
+			})();
+			const addRemoveFontSizeClass = (size) => {
+				document
+					.body
+					.classList
+					.remove('font-size-1', 'font-size-2', 'font-size-3', 'font-size-4')
+				document
+					.body
+					.classList
+					.add(`font-size-${size}`);
+				localStorage.setItem('font', size);
+			}
+			// REVIEW
+			const translateTheme = {
+				'regular': 'regolari',
+				'dark': 'skura',
+				'contrast': 'kuntrast',
+				'system': 'sistema'
+			}
+			const addRemoveTheme = (theme, stored) => {
+				document
+					.body
+					.classList
+					.remove('theme-regular', 'theme-dark', 'theme-contrast', 'theme-system')
+				document
+					.body
+					.classList
+					.add(`theme-${theme}`);
+				localStorage.setItem('theme', theme);
+				if (stored && theme === 'regular') 
+					return;
+				analytics([
+					'trackEvent', 'Tema', `${stored
+						? 'Tema storjata'
+						: 'Tema nbidlet'}`,
+					translateTheme[theme]
+				]);
+			}
+			const initialiseAfterBody = () => {
+				document
+					.body
+					.classList
+					.add(location.hostname.replace(/\.?aphroconfuso\.mt/, '') || 'production');
+				addRemoveFontSizeClass(localStorage.getItem('font') || 1);
+				addRemoveTheme(localStorage.getItem('theme') || 'regular', true);
+				if (localStorage.getItem(`tw-${urlSlug}`)) {
+					document
+						.body
+						.classList
+						.add('trigger-warning-closed');
+				}
+			}
+		</script>
+		<script src="../script/script-24450c.js" type="module"></script>
+	</head>
+	<body class="show-nav this-month-april">
+		<script>
+			initialiseAfterBody();
+		</script>
+		<div id="top-wrapper">
+			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
+			<nav id="top-nav">
+				<div id="logo-container-wrapper">
+					<div id="logo-container">
+						<a href="/">
+							<img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso"/>
+						</a>
+					</div>
+					<menu class="hide-mobile" id="menu-carousels">
+						<li class="abecedaire">
+							<a href="/abeċedarju/">Abeċedarju</a>
+						</li>
+						<li class="ff-2">
+							<a href="/almanakk-april/">Almanakk</a>
+						</li>
+					</menu>
+					<menu class="hide-mobile" id="menu-collections">
+						<li class="main-menu-collection">
+							<a href="/indħil-barrani/">
+								<span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a>
+						</li>
+						<li class="main-menu-collection">
+							<a href="/il-kliem-fit-teorija/">
+								<span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a>
+						</li>
+					</menu>
+				</div>
+				<input id="menu-toggle" type="checkbox"/>
+				<label class='menu-button-container' for="menu-toggle">
+					<span style="display: none">Mobile biss: iftaħ il-menu</span>
+					<div class='menu-button'></div>
+				</label>
+				
+				<menu id="menu-main">
+					
+					<li class="hide-laptop main-menu-collection">
+						<a href="/indħil-barrani/">
+							<span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a>
+					</li>
+					<li class="hide-laptop main-menu-collection">
+						<a href="/il-kliem-fit-teorija/">
+							<span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a>
+					</li>
+					<li class="hide-laptop a-links">
+						<a href="/abeċedarju/">Abeċedarju</a>
+						<a href="/almanakk-april/" class="ff-2">Almanakk</a>
+					</li>
+					<li>
+						<a href="/appuntamenti/">Appuntamenti</a>
+					</li>
+					<li>
+						<a href="/kontributuri/">Kontributuri</a>
+					</li>
+					<li>
+						<a href="/werrej/">Werrej</a>
+					</li>
+					<li>
+						<a href="/djarju/">Djarju</a>
+					</li>
+					<li>
+						<a href="/sensiliet/">Sensiliet</a>
+					</li>
+					<li>
+						<a href="/podcast/">Podcast</a>
+					</li>
+					<li class="hide-mobile">
+						<a href="/kotba/" class="menu-kotba">Kotba</a>
+					</li>
+					<li class="hide-laptop choose-theme">
+						<a id="theme-regular" role="button" tabindex="0">s</a>
+						<a id="theme-dark" role="button" tabindex="1">m</a>
+						<a id="theme-contrast" role="button" tabindex="2">c</a>
+						<a id="theme-system" role="button" tabindex="3">p</a>
+					</li>
+					<li>
+						<a href="/dwarna/">Dwarna</a>
+					</li>
+					<li class="hide-laptop">
+						<a href="/kotba/">Kotba</a>
+					</li>
+					<li class="hide-laptop">
+						<a href="/kolofon/">Kolofon</a>
+					</li>
+					<li>
+						<a href="/newsletter/">Newsletter</a>
+					</li>
+					<li class="hide-laptop">
+						<a href="/privatezza/">Privatezza</a>
+					</li>
+					<li>
+						<a href="/bookmarks/">Bookmarks<span id="bookmarks-number"></span></a>
+					</li>
+					<li class="hide-laptop choose-theme" id="text-size-adjust">
+						<a id="font-size-1" role="button" tabindex="8">a</a>
+						<a id="font-size-2" role="button" tabindex="9">a</a>
+						<a id="font-size-3" role="button" tabindex="10">a</a>
+						<a id="font-size-4" role="button" tabindex="11">a</a>
+					</li>
+				</menu>
+				<input class="hide-mobile" type="text" id="search-input" placeholder="fittex..." autocomplete="off" auto-fill="off" type="text" autocapitalize="none" enterkeyhint="search"/>
+				<ul id="search-results">
+					<!-- -->
+				</ul>
+				
+				<div id="brownline"></div>
+			</nav>
+			<div id="message">
+				<!-- -->
+			</div>
+			<main id="skipto">
+				
+<article class="generic mejju" data-pagefind-meta="class[class]">
+	<header>
+		<ul><li class="header-label"><a href="/appuntamenti/" data-pagefind-meta="header">Appuntamenti</a></li></ul>
+		<h1>Mejju 2024</h1>
+		<h2></h2>
+	</header>
+	<div class="container-generic generic-body-text appointment">
+		<section id="grid-body" data-pagefind-body data-pagefind-weight="5">
+			<div class="generic-body-text editorial">
+				<div class="text-container">
+					<p><span class="sc"><l-m>Il-kitba</l-m> tifred <l-m>l-Istorja</l-m></span> minn kulma ġie qabilha. Mingħajr <l-m>il-kitba</l-m>, kulma jħalli warajh <l-m>il-bniedem</l-m> irid jiġi skavat, maqlugħ <l-m>mill-art</l-m> u interpretat. Minn ftit għadam, minn ftit biċċiet fuħħar, <l-m>mill-qxur</l-m> tal-bebbux, <l-m>l-arkeologi</l-m> jridu jibnu stampa ta’ dinjiet sħaħ. <l-m>Fis-sensiela</l-m> “Bur Mgħeż”<span class="pull">,</span> Omar <l-m>N’Shea</l-m> mar ifittex sit Neolitiku minsi <l-m>fil-barrieri</l-m> tal-Imqabba, <l-m>fil-fdalijiet</l-m> fil-mużewijiet <l-m>tal-arkeoloġija</l-m>, u <l-m>fil-memorja</l-m> u <l-m>s-sengħa</l-m> tan-nies <l-m>tal-barrieri</l-m>. Mar ukoll <l-m>fl-Arkivji</l-m> Nazzjonali fejn hemm depożitat <l-m>il-file</l-m> bil-karti, <l-m>il-kuntratti</l-m>, <l-m>il-permessi</l-m> u <l-m>l-korrispondenza</l-m> kollha, <l-m>mill-aħħar</l-m> tas-seklu dsatax sa nofs <l-m>is-seklu</l-m> ta’ wara, li għandhom <l-m>x’jaqsmu</l-m> ma’ Bur Mgħeż. Iżda anki <l-m>l-kitba</l-m> ta’ mitt sena ilu taf tkun opaka daqs <l-m>il-fdalijiet</l-m> ta’ qxur u <l-m>bebbux-buttuni</l-m> minn eluf ta’ snin ilu. F’temp ta’ ftit għexieren ta’ snin, minn dakinhar li reġa’ ntradam <l-m>is-sit</l-m>, <l-m>l-istorja</l-m> ta’ Bur Mgħeż kważi ntesiet u <l-m>l-evidenza</l-m> tad-dokumenti tħajjarna nibnu dinjiet sħaħ minn ftit ittri u rapporti. <l-m>L-intriċċi</l-m> fid-dipartimenti <l-m>tal-gvern</l-m> ta’ ftit qabel <l-m>l-Ewwel</l-m> Gwerra jistgħu jidhru strambi għalina u misterjużi daqs <l-m>ir-ritwali</l-m> tad-dfin <l-m>fiż-żmien</l-m> Neolitiku. <l-m>Il-motiv</l-m> wara dak li ntqal diffiċli biex tinterpretah daqs <l-m>ir-raġuni</l-m> għaliex katavru ġie midfun b’mod u mhux b’ieħor. <l-m>L-istorja</l-m> dejjem iżżid, dejjem tordom fuqha nnifisha. Iktar ma jgħaddi <l-m>ż-żmien</l-m>, iktar ikun hemm saffi minn xiex tiskavaha. <l-m>L-għadam</l-m> ta’ Bur Mgħeż issa rridu niskavawh mhux biss <l-m>mill-art</l-m> iżda <l-m>mill-interpretazzjonijiet</l-m> tal-passat, <l-m>mill-arkivji</l-m> u <l-m>l-mużewijiet</l-m> b’aċċess diffiċli daqs <l-m>l-għerien</l-m> u <l-m>d-dgħaben</l-m> mirduma taħt <l-m>ir-runway</l-m> tal-ajruport, ikkontrollati <l-m>mill-armata</l-m>. “<l-m>X’se</l-m> nieħu miegħi <l-m>fid-dar</l-m> tal-eternità,<span class="pullsemi">”</span> jistaqsi Omar <l-m>fl-esej</l-m> li jagħlaq din <l-m>is-sensiela</l-m>, “barra <l-m>l-għadam</l-m> li hemm ġo fija jżommni wieqaf, barra xedaq snien, dawk li għadhom minn tiegħi kif ukoll dawk taċ-ċeramika li invitawli ġo ħanek mimli <l-m>bl-għadam</l-m> ta’ ħaddieħor, pendent <l-m>tal-bebbux</l-m> tal-baħar li nġorr madwar għonqi, u misluta <l-m>tad-deheb</l-m> imgeżwra <l-m>mal-widna</l-m> tax-xellug?” <l-m>Il-kitba</l-m> hija dejjem għall-ġejjieni, jew ta’ ftit jiem, jew ta’ ftit xhur jew ta’ għexieren u mijiet ta’ snin. <l-m>Bil-kitba</l-m> tagħna qed nixhdu għall-preżent, biex nifhmu lilna nfusna u biex inħallu kliemna jinftiehem u jerġa’ jinftiehem minn dawk li għad jiġu warajna. Iżda <l-m>x’verament</l-m> qed inħallu warajna? Kemm se jkunu koerenti <l-m>d-deskrizzjonijiet</l-m> tagħna <l-m>tal-mument</l-m> għal min se jsibhom warajna? Matul din <l-m>l-ewwel</l-m> sena ta’ <l-m>dal-ġurnal</l-m>, ridna noħolqu, flimkien <l-m>mal-kittieba</l-m> tagħna, komunità fejn <l-m>il-kliem</l-m> mhux biss jingħad darba u jintelaq għall-irwiefen <l-m>taż-żmien</l-m>, iżda jsib eku u risposta fi kliem ieħor <l-m>fil-ġurnal</l-m> stess, <l-m>fl-istorja</l-m> letterarja tagħna u <l-m>tad-dinja</l-m>. Ridna nkunu konxji mhux biss minn dak <l-m>il-kliem</l-m> li se nħallu warajna, iżda wkoll minn kulma se nħallu midfun <l-m>ġol-art</l-m> innifisha. Iktar tard <l-m>dax-xahar</l-m> se nippubblikaw “ġenealoġija ta’ bankina”<span class="pull">.</span> fatima a.m. tħares <l-m>bir-reqqa</l-m> lejn bankina f’Buġibba bħala sit storiku; “<l-m>il-bankina</l-m> qatt ma tispiċċa fejn tistennieha li tispiċċa. ma’ kull kantuniera titbewwaq, tixpakka <l-m>ċ-ċirkonferenza</l-m> u b’xi mod issib estensjoni mibnija ta’ malajr. bejn storja ta’ tetris raffa, bejn logħba jenga li qatt ma ntrebħet. <l-m>is-soluzzjoni</l-m> moderna ferm dejjem immarkata b’linja ħafifa <l-m>tal-metall</l-m>, li tissepara <l-m>l-istorja</l-m> tal-art <l-m>mill-futur</l-m> tagħha, imma <l-m>l-għaksa</l-m> taf tintrewa sa ma toħroġ minn dan <l-m>l-univers</l-m> t’asfalt u tlaqqit. fejn tintefaħ u ddur jitpoġġew <l-m>l-imwejjed</l-m> u <l-m>s-siġġijiet</l-m>, imlaqqtin daqs <l-m>il-bankina</l-m>.<span class="pullsemi">”</span> B’kull dettall li ssemmi fatima tista’ ssawwar f’moħħok b’mod iktar ċar <l-m>id-dinja</l-m> li dejjem qed tinbena u timtela <l-m>bil-ħafna</l-m>, <l-m>id-dinja</l-m> li tatna dik li Karl Baldacchino, <l-m>fl-esej</l-m> tiegħu li wkoll se nippubblikaw <l-m>dax-xahar</l-m>, isejjaħ “politika bla <l-m>nifs”&nbsp;<span class="end-dot">.</span></l-m></p>
+				</div>
+			</div>
+			<p class="continuity">Din hija l-kitba ppubblikata dax-xahar:</p>
+			
+			
+			
+			
+			
+			
+			<ul class="promo-list">
+	
+	
+		
+
+
+<li  class="multiple-episodes episode-5">
+	<a class="promo  mejju promo-esej sequence-1 story-59 is-episode" href="/omar-nshea-bur-mgħeż-5-id-difna-tal-memorji/" onclick="analytics(['trackEvent', 'Promo', 'minn: Mejju 2024', 'għal: Bur Mgħeż #5', 1]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Mejju 2024</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Bur Mgħeż
+				
+					<span class="episode-number">#5</span>
+				
+			</h1>
+		
+	
+	
+
+	
+	<h2>
+		
+		
+			
+			<span class="author">Omar <l-m>N’Shea</l-m></span>
+	</h2>
+
+
+
+
+
+
+	
+		<h3>
+			
+			
+			Id-difna <l-m>tal-memorji</l-m>
+		</h3>
+	
+</header>
+
+		
+		<div class="body-text">
+			
+				<p>Is-sit ta’ Bur Mgħeż jisfida <l-m>l-bijografija</l-m> arkeoloġika stretta <l-m>tal-post;</l-m> huwa proprju <l-m>l-istatus</l-m> ontoloġiku tiegħu bħala rovina li żamm <l-m>lill-arkeoloġija</l-m> milli tapproprjah u għalhekk tillimita <l-m>l-impenn</l-m> tiegħu <l-m>mal-inħawi</l-m> ta’ madwaru u <l-m>mal-memorja</l-m> tal-komunità li tiftakru. <l-m>L-ambigwità</l-m> materjali u bijografika <l-m>tal-post</l-m>, għalhekk, issalvah <l-m>mill-politika</l-m> tal-patrimonju mmexxija <l-m>mill-kapital</l-m> li jbiddel <l-m>is-siti</l-m> f’parks għat-turiżmu. Kif inhuma llum, <l-m>il-fdalijiet</l-m> huma parteċipi kif ukoll aġenti attivi <l-m>fit-trasformazzjoni</l-m> u <l-m>l-użu</l-m> mill-ġdid <l-m>tal-ispazju</l-m> tal-barriera. Dan iqajjem riflessjoni fuq <l-m>il-memorja</l-m> u <l-m>t-telf</l-m> fi ħdan <l-m>il-komunità</l-m> tal-Imqabba. <l-m>Bl-istratifikazzjoni</l-m> kumplessa tiegħu, <l-m>min-Neolitiku</l-m> sa żminijiet moderni, Bur Mgħeż joffri metafora li forsi tista’ tgħinna nagħmlu sens <l-m>mill-fdalijiet</l-m> bħala palimpsesti li fihom insibu narrattivi u tifsiriet multipli, kull saff jiżvela aspetti differenti <l-m>tal-interazzjoni</l-m> tal-bniedem <l-m>mal-ambjent</l-m> filwaqt li <l-m>l-perċezzjonijiet</l-m> differenti <l-m>tal-materjalità</l-m> tal-ġebla <l-m>tal-franka  </l-m>—  kemm bħala riżors, kif ukoll bħala simbolu <l-m>tal-wirt</l-m> kulturali, jew kodiċi semjotiku ta’ rovina  —  jenfasizzaw <l-m>in-natura</l-m> suġġettiva u effimera ta’ kif nifhmu u nivvalutaw <l-m>id-dinja</l-m> materjali. <l-m>Fl-istess</l-m> ħin, Bur Mgħeż jisfida wkoll <l-m>lill-arkeoloġija</l-m> biex issib metodi li bihom tkun tista’ “taqra” u tifhem siti li għebu għalkollox jew kważi.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-59">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  mejju promo-storja sequence- story-60" href="/fatima-a.m.-ġenealoġija-ta-bankina/" onclick="analytics(['trackEvent', 'Promo', 'minn: Mejju 2024', 'għal: ġenealoġija ta’ bankina', 2]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Mejju 2024</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				ġenealoġija ta’ bankina
+				
+			</h1>
+		
+	
+	
+
+	
+	<h2>
+		
+		
+			
+			<span class="author">fatima a.m.</span>
+	</h2>
+
+
+
+
+
+
+	
+</header>
+
+		
+		<div class="body-text">
+			
+				<p>faċċata tpoġġi parrukkiera <l-m>min-Niġerja</l-m> li tfaqqa’ <l-m>ċ-chewing</l-m> gum f’widnejk ma’ kull malju li twaħħallek ma’ rasek. imma hi u sħabha jippranzaw f’nofs <l-m>il-ħanut</l-m> meta jkun sar <l-m>il-ħin</l-m> tal-ikla ta’ waranofsinhar, allura ma jimpurtax għax dejjem joffrulek ftit u meta tispjegalhom li ma tikolx laħam taqsmilhom qalbhom. ħasbuk cool u interessanti għax bejn sewda u bejn bajda, b’aċċent stramb li kważi <l-m>tat-turist</l-m> l-abjad, imma ismek Musulman u forsi qisek xi tip ta’ Afrikana imma anka int sirt vittma <l-m>tal-Ewropa</l-m>. ixgħel <l-m>l-istazzjon</l-m> li jdoqq <l-m>l-Afrobeats</l-m>. meta tqum biex tfarfar ġismek u testendi <l-m>x-xewka</l-m> ta’ dahrek, forsi tagħti <l-m>l-ħajja</l-m> bejn rukkell u ieħor, ikollok aptit tiżfen. imma ma tazzardax. anka int vittma <l-m>tal-Ewropa</l-m>. minn hawn tisma’ <l-m>l-fdalijiet</l-m> tal-karaoke <l-m>tal-bar</l-m> Ingliż, <l-m>l-ikbar</l-m> wieħed f’dik <l-m>it-triq</l-m>, imġenġel u ħerqan, imdeffes bejn bar Irlandiż, ħanut <l-m>tal-ikel</l-m> Maċedonjan u ieħor Niġerjan <l-m>mal-kantuniera</l-m>, li faċċata tiegħu ssib kafetterija Taljana. hawnhekk <l-m>il-bankina</l-m> ma tiqafx <l-m>bil-mod</l-m> li tistennieha tieqaf, lanqas. jekk tgħaddi minn hemm qabel <l-m>l-għaxra</l-m> ta’ filgħodu, taf issib <l-m>ir-rimi</l-m> tal-istonku ta’ xi bravu li ħaseb li jiflaħ <l-m>il-lejl</l-m> ta’ qabel, jew biċċa pizza mirwija, envelopp <l-m>t’ikla</l-m> li ma seħħitx. <l-m>fil-vini</l-m> ta’ din <l-m>il-belt</l-m> ma ssibx għasafar iduru <l-m>man-niċeċ</l-m> u <l-m>s-saqajn</l-m> ta’ dawk mixjin <l-m>fit-triq</l-m>, mhux bħall-Belt jew <l-m>Tas-Sliema</l-m>, allura jibqgħu jinġemgħu <l-m>l-fdalijiet</l-m> tal-ikel minsi. jistenna lil <l-m>taż-żibel</l-m>. mhux għax post maħmuġ u mitluq, imma għax għandu <l-m>l-ħajja</l-m>, ħajja urbana li ma tantx hemm kliem għaliha, sakemm ma ssirx tafha b’mod intimu.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-60">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  mejju promo-poddata sequence- story-62" href="/noah-fabri-poddata-2024-05-11-noti-editorjali-5-noah-fabri/" onclick="analytics(['trackEvent', 'Promo', 'minn: Mejju 2024', 'għal: Noti Editorjali #5: Noah Fabri #5', 3]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">
+			Poddata
+			
+				<span class="subject-date">11.05.2024</span>
+			
+		</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Noti Editorjali<span class="episodeNumber"> #5</span>
+			</h1>
+		
+	
+	
+
+	
+	<h2 class="contains-with">
+		
+		
+			
+				<span class="with">ma’</span>
+			<span class="author">Noah Fabri</span>
+	</h2>
+
+
+
+
+
+
+	
+</header>
+
+		
+		<div class="body-text">
+			
+				<p>«&nbsp;Dawn <l-m>il-proċessi</l-m> kollha huma xi ħaġa li tinteressani peress li ovvjament huma assoċjati aktar <l-m>man-nisa</l-m>, <l-m>max-xogħol</l-m> tan-nisa, li ma tistax tikkapitalizzah. Jiġi kkapitalizzat, imma <l-m>l-bażi</l-m> tiegħu mhix <l-m>il-kreazzjoni</l-m> tal-valur, <l-m>il-valur</l-m> tiegħu mhux ekonomiku imma huwa soċjali. Qiegħed biex tirriproduċi <l-m>s-soċjetà</l-m>, jew tħaddan ’<l-m>in-nies</l-m>, biex tieħu ħsiebhom. Dak huwa <l-m>l-valur</l-m> prinċipali ta’ dan <l-m>it-tip</l-m> ta’ xogħol. Allura nieħu gost nuża <l-m>dat-tip</l-m> ta’ xogħol meta nkun qed naħdem fuq proġetti artistiċi. Nieħu gost nagħmilhom waqt li nkun qed nitkellem ukoll fuq <l-m>il-ġeneru</l-m>. Meta għamilt Huma Min Huma? kont qed inħit libsa u nitkellem speċifikament fuq <l-m>il-pronomi</l-m>. Għal Insalata għamilt insalata waqt li tkellimt fuq <l-m>ir-relazzjoni</l-m> tiegħi <l-m>mal-ikel</l-m> u <l-m>l-ġeneru</l-m>, <l-m>il-preżentazzjoni</l-m> u <l-m>l-ħsieb</l-m> tiegħi marbut <l-m>mal-ikel</l-m> u <l-m>l-ġeneru</l-m>. Jiġifieri dejjem kien hemm dawk <l-m>l-ideat</l-m>. Anki <l-m>fil-kitba</l-m>, meta nkun qed nikteb, dejjem nidħol <l-m>fid-dettall</l-m> fuq <l-m>l-ikel</l-m>, fuq <l-m>is-sensi</l-m>, fuq <l-m>l-affarijiet</l-m> effimeri <l-m>tal-ħajja</l-m> ta’ kuljum. Jiġu anka <l-m>mill-istudji</l-m> tiegħi <l-m>tal-Antropoloġija</l-m>, li vera tiffoka fuq <l-m>il-ħajja</l-m> ta’ kuljum, u vera <l-m>l-ħajja</l-m> ta’ kuljum iġġibha maġika. U dik xi ħaġa li dejjem pruvajt nagħmel għax għalija <l-m>l-ħajja</l-m> ta’ kuljum hija maġika speċjalment f’postijiet fejn <l-m>il-kapitaliżmu</l-m> ma tantx jirnexxilu jippenetra. Għalhekk ukoll vera nidħol fuq <l-m>is-sensi</l-m>, fuq <l-m>il-proċessi</l-m> tal-ġisem. U li <l-m>l-karattri</l-m> jkunu konxji <l-m>mill-ġisem</l-m> tagħhom, <l-m>x’qed</l-m> jagħmlu <l-m>fl-ispazju</l-m> u dawn <l-m>l-affarijiet</l-m> kollha li <l-m>l-loġika</l-m> assoċjata <l-m>mal-patrijarkat</l-m> ma tagħtix kashom, għalija huma <l-m>l-aktar</l-m> affarijiet importanti <l-m>fil-ħajja</l-m> tal-bniedem.&nbsp;»</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-62">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  mejju promo-poezija sequence- story-61" href="/jasmine-bajada-lil-poeta-li-qalli-li-qed-jikteb-bħal-wieħed-vera-xiħ-dan-l-aħħar/" onclick="analytics(['trackEvent', 'Promo', 'minn: Mejju 2024', 'għal: lil poeta li qalli li qed jikteb bħal wieħed vera xiħ dan l-aħħar ', 4]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Mejju 2024</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				lil poeta li qalli li qed jikteb bħal wieħed vera xiħ dan <l-m>l-aħħar </l-m>
+				
+			</h1>
+		
+	
+	
+
+	
+	<h2>
+		
+		
+			
+			<span class="author">Jasmine Bajada</span>
+	</h2>
+
+
+
+
+
+
+	
+</header>
+
+		
+		<div class="body-text poetry">
+			
+				<p>il-kliem li ktibtli dalgħodu m’hediex.<br/>għadni nhewden x’messni għedt<br/>biex niskonġr’hom minn għadmek — <br/>minn leħnek. bexxaqtli tieqa bihom;<br/>ilmaħtek bilqiegħda fil-kamra, waħdek,<br/>diqitek tidwi fil-vojt għammieq.<br/>Mill-bogħod, imbagħad, ġew il-vrus…<br/>qaluli li inti, poeta, m’għadekx tħożż hekk,<br/>għall-gost. issa li qbadt ir-ritmu taċ-ċinju<br/>tixtieqek għadek bilbla tgħanni binhar.<br/>tibżax: l-istrument għadu f’idejk bla trab.<br/>u inti bħal wieħed vera xiħ li jinsa kollox,<br/>ank’isem ommu, qabel jinsa kif jaqbad<br/>dak l-argunett ta’ dari. titnih kif titnih,<br/>ħa jdoqqlok ħelu, sabiħ.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-61">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li  class="multiple-episodes episode-5">
+	<a class="promo  mejju promo-djarju sequence-2 story-64 is-episode" href="/loranne-vella-djarju-2024-04-09-se-nħallihom-hawn-jgħidu-tagħhom/" onclick="analytics(['trackEvent', 'Promo', 'minn: Mejju 2024', 'għal: Djarju #5 Loranne Vella', 5]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">
+			<span class="header-djarju">Djarju</span>
+			
+				<span class="subject-date">09.04.2024</span>
+			
+		</li>
+	
+	
+	</ul>
+	
+	
+		
+	
+	
+
+	
+	<h2>
+		
+		
+			
+			<span class="author">Loranne Vella</span>
+	</h2>
+
+
+
+
+
+
+	
+		<h3>
+			
+			
+			Se nħallihom hawn, jgħidu tagħhom
+		</h3>
+	
+</header>
+
+		
+		<div class="body-text">
+			
+				<p>Dawn <l-m>il-ħassieba-kittieba</l-m> kollha kemm huma donnhom <l-m>tal-istess</l-m> fehma: “Itlaq <l-m>il-kotba</l-m> minn idejk u oħroġ ’il &nbsp;barra. Mur imxi u ħallik <l-m>mill-kitba</l-m> ta’ ħaddieħor.<span class="pullsemi">”</span> Għandi ħabta nogħxa naqraha kitba bħal din. Imma kultant, meta ninduna li għaddiet ġurnata sħiħa u bqajt ma ħriġtx <l-m>mid-dar</l-m> biex nilħaq illesti kollox u nsib ħin naqra u nikteb, inħossni niddispra. Jekk nobdi <l-m>l-ordni</l-m> li tgħidli mmur nimxi, <l-m>fil-pront</l-m> nikser <l-m>it-tieni</l-m> waħda li tgħidli biex ma nintrabatx wisq <l-m>mal-kotba</l-m> li naqra. Weħilt f’din <l-m>id-dilemma</l-m>. Moħħni biex naqra kitba dwar <l-m>il-mixi</l-m> miktuba minn ħassieba li kienu jimxu bejn sitta u tmien sigħat kuljum imbagħad b’xi mod kienu jsibu wkoll ħin biżżejjed biex jiktbu dwar dan u dwar dak kollu li qanqalhom u ħassibhom huma u jimxu <l-m>fil-kampanja</l-m> u jitilgħu <l-m>l-għoljiet</l-m>. Imma jien biex naqra kitbiethom ma nsibx ħin noħroġ mixja, imqar nofs siegħa kuljum.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-64">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  mejju promo-esej sequence- story-63" href="/karl-baldacchino-politika-bla-nifs/" onclick="analytics(['trackEvent', 'Promo', 'minn: Mejju 2024', 'għal: Politika bla Nifs', 6]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">Mejju 2024</li>
+	
+	
+	</ul>
+	
+	
+		
+			<h1>
+				Politika bla Nifs
+				
+			</h1>
+		
+	
+	
+
+	
+	<h2>
+		
+		
+			
+			<span class="author">Karl Baldacchino</span>
+	</h2>
+
+
+
+
+
+
+	
+</header>
+
+		
+		<div class="body-text">
+			
+				<p>Ħadd ma jista’ jiċħad li ninsabu f’punt <l-m>fl-istorja</l-m> tad-dinja fejn għandna iktar minn kollox. Iktar krudeltajiet, iżda wkoll iktar ġesti ta’ rieda tajba. Iktar problemi finanzjarji, <l-m>fl-istess</l-m> ħin li iktar nies qed jistagħnew. Iktar kriżijiet ta’ kull xorta u għamla, ibda <l-m>mill-ambjent</l-m> u spiċċa <l-m>bil-mard</l-m>. <l-m>L-istess</l-m>, <l-m>it-tagħrif</l-m> dwar <l-m>it-tnejn</l-m>. Iktar ksenofobija u razziżmu, kif ukoll iktar diskorsi ta’ inklużjoni soċjali u ugwaljanza. Primarjament, għandna iktar minn kollox għaliex esposti għal ħafna iktar meta kkumparat ma’ dak li kien qabel jesponina għalih <l-m>il-ġurnal</l-m> ta’ kuljum, kemm-il darba kien jinxtara u jinqara. <l-m>L-esponiment</l-m> tagħna għal dan kollu issa jinsab biss skrolljatura ’l &nbsp;bogħod, anki jekk mhuwa xejn ħlief dak li Jean Baudrillard isejjaħ simulakru. Meta <l-m>fl-1991</l-m> kiteb li “<l-m>l-gwerra</l-m> tal-Golf ma seħħitx”<span class="pull">,</span> ried ifisser li <l-m>l-Punent</l-m> esperjenza biss rappreżentazzjoni medjatika <l-m>tal-gwerra</l-m>. Essenzjalment, dan japplika għal kollox <l-m>fil-kuntest</l-m> preżenti ta’ avvanzi teknoloġiċi kontinwi u <l-m>l-governanza</l-m> moħbija <l-m>tal-algoritmi</l-m>. Iżda, dan huwa biss każ ta’ kif <l-m>il-mezzi</l-m> soċjali kapaċi jiġbdulna <l-m>l-attenzjoni</l-m> u jamplifikaw <l-m>is-sensi</l-m> tagħna? Jew huwa minnu li kollox żdied b’mod goff u li konsegwentament tlifna kull tip ta’ kontroll? Forsi sforz <l-m>l-indifferenza</l-m> mifruxa? Forsi sforz <l-m>l-aljenazzjoni</l-m>? <l-m>Il-konsum</l-m> bla rażan? <l-m>Il-politika</l-m>? Ċertament dawn ukoll kollha għandna iktar minnhom. <l-m>Il-politika</l-m>, però, b’mod partikolarment ġdid. Kif jikteb Alberto Toscano, “dawk li jsibu ruħhom jgħixu fi żminijiet ta’ kriżi u diżorjentazzjoni spiss ifittxu kenn u gwida <l-m>fl-analoġiji</l-m>.<span class="pullsemi">”</span> Għaldaqstant, <l-m>il-politika</l-m> preżenti bħal donnha bla nifs — kemm għax kollox huwa politiku iktar minn qatt qabel, kif ukoll għax <l-m>fl-istess</l-m> ħin hija politika dgħajfa.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-63">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li  class="multiple-episodes episode-5">
+	<a class="promo  mejju promo-djarju sequence-3 story-65 is-episode" href="/warren-bartolo-djarju-2024-04-01-noħlom-li-jaqgħuli-s-snien-ta-quddiem/" onclick="analytics(['trackEvent', 'Promo', 'minn: Mejju 2024', 'għal: Djarju #5 Warren Bartolo', 7]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">
+			<span class="header-djarju">Djarju</span>
+			
+				<span class="subject-date">01.04.2024</span>
+			
+		</li>
+	
+	
+	</ul>
+	
+	
+		
+	
+	
+
+	
+	<h2>
+		
+		
+			
+			<span class="author">Warren Bartolo</span>
+	</h2>
+
+
+
+
+
+
+	
+		<h3>
+			
+			
+			Noħlom li jaqgħuli <l-m>s-snien</l-m> ta’ quddiem
+		</h3>
+	
+</header>
+
+		
+		<div class="body-text">
+			
+				<p>Qed insuq <l-m>il-mutur</l-m> ta’ missieri f’ħolma li kienet tinħass verament <l-m>tal-biża</l-m>’<span class="pullsemi">,</span> imbagħad noħroġ <l-m>lill-fekruna</l-m> tiegħu għal mixja u nitlifha xi mkien fejn <l-m>il-baħar</l-m>. Jgħidli li hu ħabib sew ma’ Mathieu Lindon, li jibagħtu <l-m>l-messaġġi</l-m> kull ġimgħa, u li Lindon kien ħabib ta’ Dustan. Jippunta lejn <l-m>il-bar</l-m> ta’ quddiemna u jgħidli li normalment kienu jmorru jixorbu hemm. Hu u Lindon. Jgħix eżatt hemm. Jgħid li hu ħabib sew ma’ Didier Eribon u Geoffroy de Lagasnerie. Ma tantx jiggusta lil Edouard Louis, u ltaqgħu ftit drabi. Huwa dejjem PR mode, jgħid, li jfisser li Edouard Louis dejjem ikun <l-m>fil-karattru</l-m> ta’ kittieb, u hu jsib <l-m>dal-fatt</l-m> naq’a irritanti. Huwa xorta bagħatlu kopja <l-m>tal-ktieb</l-m> tiegħu, u Louis kitiblu biex jirringrazzjah. Nidħlu Eataly. Irid jieħu focaccia biċ-ċikkulata (u xi ingredjent ieħor li ma nistax niftakar). Sadanittant, jien nitla’ <l-m>l-ewwel</l-m> sular biex inbul peress li ma nistax inżomm aktar. Jispiċċa jieħu focaccia sempliċi. Nimxu lejn Etienne Marcel. Jagħtini gidma <l-m>mill-focaccia</l-m> tiegħu. Ma rridx nikolha kollha, jgħid. Ngħidu ċaw.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-65">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+		
+
+
+<li >
+	<a class="promo  mejju promo-terminu sequence- story-51" href="/il-kliem-fit-teorija-alterità/" onclick="analytics(['trackEvent', 'Promo', 'minn: Mejju 2024', 'għal: alterità', 8]);">
+		<header>
+	<ul>
+	
+		<li class="header-label">
+			
+				<span class="subject-date">27.05.2024</span>
+			
+		</li>
+	
+	
+		<li class="header-label collection-slug collection-3">
+			Il-Kliem fit-Teorija
+		</li>
+	
+	</ul>
+	
+	
+		
+			<h1>
+				alterità
+				
+			</h1>
+		
+	
+	
+
+	
+	<h2>
+		
+		
+			
+			<span class="author">Omar <l-m>N’Shea</l-m></span>, <span class="author">Davinia Hamilton</span>, <span class="author">Kurt Borg</span>, <span class="author">Aaron Aquilina</span> & <span class="author">Loranne Vella</span>
+	</h2>
+
+
+
+
+
+
+	
+</header>
+
+		
+		<div class="body-text">
+			
+				<p>Ngħid għalija, meta nagħżel li nuża <l-m>l-kelma</l-m> “alterità”<span class="pull">,</span> nużaha biex nirreferi għat-tip ta’ “ieħor” li jikteb dwaru Levinas. <l-m>L-alterità</l-m> tal-Ieħor m’għandhiex <l-m>x’taqsam</l-m> ma’ meta ngħidu li xi ħadd ġie othered, ċjoè meqjus inferjuri, eskluż miċ-ċentru <l-m>tan-normalità</l-m>, abjected (din tkun kelma oħra ta’ min ningaġġaw magħha). Kif nifhmu jien, għal Levinas, <l-m>l-alterità</l-m> tal-Ieħor hija dik <l-m>il-kwalità</l-m> (anzi, hija nonkwalità, għax ma tinqabadx f’kategoriji) li lili twaqqafni milli nirreduċi <l-m>lill-Ieħor</l-m> għal sameness. (La qegħdin fiha, sameness kif tiġi <l-m>bil-Malti</l-m>? “Identiċità”? “Stessiżmu”? Hekk issuġġerew xi wħud fuq <l-m>il-grupp</l-m> Kelmet <l-m>il-Malti</l-m> fuq Facebook.) <l-m>L-alterità</l-m>, allura, mhijiex vjolenza (bħalma ġeneralment tkun meta xi ħadd jiġi othered); anzi, għal Levinas, <l-m>il-vjolenza</l-m> sseħħ appuntu meta <l-m>l-alterità</l-m> tal-Ieħor inwaqqgħuha għall-kategorija <l-m>tal-familjari</l-m>. B’hekk, inkunu ħnoqnieh <l-m>lill-Ieħor</l-m>, ġibnieh oġġett. Allura, “alterità”<span class="pull">,</span> għalija, iġġorr magħha konnotazzjonijiet ta’ fraġilità, valur, vulnerabbiltà li tinforma attitudni etika. Wara kollox, <l-m>il-filosofija</l-m> ta’ Levinas hija <l-m>l-etika</l-m> tal-alterità.</p>
+			
+			
+		</div>
+	</a>
+	
+	<aside class="promo-aside story-aside-51">
+		<ul>
+			<li class="bookmark-compact"><!-- --></li>
+			
+		</ul>
+	</aside>
+
+
+</li>
+
+	
+</ul>
+
+			<div class="more">
+				
+					<p>Abbona <l-m>fin-</l-m><a href="https://kltyvehasfpmuxan06sa8zie.aphroconfuso.mt/newsletter/">newsletter</a> biex dejjem issir taf meta nippubblikaw xi ħaġa ġdida.</p>
+
+				
+			</div>
+		</section>
+	</div>
+</article>
+<script>
+	reportingTitle = "Mejju 2024";
+</script>
+
+			</main>
+		</div>
+		<div id="bottom-wrapper">
+			<img id="deco" role="none" src="/img/deco-100.svg" alt="Dekorazzjoni art-nouveau"/>
+			
+				<div id="newsletter-container-bottom" class="newsletter-container">
+					<section id="form" data-track-content data-content-name="Homepage" data-content-piece="formola">
+						<iframe id="newsletter" class="newsletter-iframe-regular" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#" scrolling="no" title="Abbona fin-newsletter"></iframe>
+<iframe id="newsletter" class="newsletter-iframe-dark" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#|#201e1d|#908984|0|442093344ewr" scrolling="no" title="Abbona fin-newsletter"></iframe>
+<iframe id="newsletter" class="newsletter-iframe-contrast" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#|#000000|#ffffff|0|442093344ewr" scrolling="no" title="Abbona fin-newsletter"></iframe>
+
+					</section>
+				</div>
+			
+			<footer data-track-content data-content-name="Footer" data-content-piece="mejju-2024">
+	<nav class="footer-content">
+		<menu id="housekeeping">
+			<li class="header">Dwarna</li>
+			<li><a href="/kolofon/">Kolofon</a></li>
+			<li><a href="/proċess-editorjali/">Proċess</a></li>
+			<li><a href="/gwida-tal-istil/">Gwida tal-istil</a></li>
+			<li><a href="/cookies/">Cookies</a></li>
+			<li><a href="/privatezza/">Privatezza</a></li>
+			<li><a href="/aċċessibbiltà/">Aċċessibbiltà</a></li>
+			<li><a href="/podcast/">Podcast</a></li>
+			<li><a href="/newsletter/">Newsletter</a></li>
+			<li class="hide-tablet"><a href="/drittijiet/">Drittijiet</a></li>
+		</menu>
+		<menu id="media">
+			<li class="header">Midja</li>
+			<li><a href="/ar/" class="arabic">العربية</a></li>
+			<li><a href="/ca/">Català</a></li>
+			<li><a href="/de/">Deutsch</a></li>
+			<li><a href="/en/">English</a></li>
+			<li><a href="/es/">Español</a></li>
+			<li><a href="/fr/">Français</a></li>
+			<li><a href="/it/">Italiano</a></li>
+			<li><a href="/nl/">Nederlands</a></li>
+			<li class="hide-tablet"><a href="/ro/">Română</a></li>
+		</menu>
+		<menu id="socials">
+			<li class="header">Segwina</li>
+			<li><a href="https://facebook.com/aphroconfuso">Facebook</a></li>
+			<li><a href="https://instagram.com/aphroconfuso">Instagram</a></li>
+			
+			
+			<li><a href="https://whatsapp.com/channel/0029VaysAKP7z4kZHDKdZ71J" rel="me">WhatsApp</a></li>
+			<li><a href="https://aphroconfuso.bsky.social/">Bluesky</a></li>
+			<li><a href="https://youtube.com/@aphroconfuso">Youtube</a></li>
+			<li><a href="https://open.spotify.com/user/31rly4s75gfxs6li6bcxc5bqlgza">Spotify</a></li>
+		</menu>
+		<menu id="podcast">
+			<li class="header">Podcast</li>
+			<li><a href="https://podcasts.apple.com/us/podcast/aphroconfuso/id1686567243">Apple</a></li>
+			
+			<li><a href="https://feeds.acast.com/public/shows/aphroconfuso">RSS feed</a></li>
+			<li><a href="https://open.spotify.com/show/75Lt3UMvC1jE15SGrNFMww">Spotify</a></li>
+			
+		</menu>
+		<div id="logotype-container">
+			<a href="/"><img src="/img/logotype.svg" class="logotype" alt="logo: Aphroconfuso" /></a>
+		</div>
+		<div id="email">
+			<a href="mailto:l-edituri@aphroconfuso.mt" class="email">l-edituri@aphroconfuso.mt</a>
+		</div>
+		<div class="hide-mobile choose-theme choose-theme-footer">
+			<a id="theme-regular-footer" role="button" tabindex="4">s</a>
+			<a id="theme-dark-footer" role="button" tabindex="5">m</a>
+			<a id="theme-contrast-footer" role="button" tabindex="6">c</a>
+			<a id="theme-system-footer" role="button" tabindex="7">p</a>
+		</div>
+		<div id="copyright"><a href="/drittijiet/" class="copyright">&copy; 2023-2025 Aphroconfuso et al</a></div>
+		<div id="qrcode"><img src="/img/qr/mejju-2024.png" width="180" height="180" alt="QR code" /></div>
+		<div id="url">https://aphroconfuso.mt/mejju-2024/</div>
+	</nav>
+</footer>
+
+		</div>
+		<aside id="scroll-tools" class="monthly-outlined">
+			<p>
+				<span id="progress">
+					<!-- --></span></p>
+		</aside>
+	</body>
+</html>
