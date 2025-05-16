@@ -716,13 +716,6 @@
 	</url>
 	
 	<url>
-		<loc>https://aphroconfuso.mt/kotba/</loc>
-		<lastmod>2025-05-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-	</url>
-	
-	<url>
 		<loc>https://aphroconfuso.mt/nathan-anthony-pace-persefoni-tmur-tixtri-l-ħwejjeġ-secondhand/</loc>
 		<lastmod>2025-05-16</lastmod>
     <changefreq>weekly</changefreq>
@@ -1623,5 +1616,12 @@
 		<lastmod>2025-05-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/kotba/</loc>
+		<lastmod>2025-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
 	</url>
 </urlset>
