@@ -443,6 +443,34 @@
 	</url>
 	
 	<url>
+		<loc>https://aphroconfuso.mt/appuntamenti/</loc>
+		<lastmod>2025-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/abeċedarju/</loc>
+		<lastmod>2025-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/almanakk-1-ta-jannar/</loc>
+		<lastmod>2025-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/kotba/</loc>
+		<lastmod>2025-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
 		<loc>https://aphroconfuso.mt/raylene-abdilla/</loc>
 		<lastmod>2025-05-27</lastmod>
     <changefreq>monthly</changefreq>
@@ -689,34 +717,6 @@
 	
 	<url>
 		<loc>https://aphroconfuso.mt/</loc>
-		<lastmod>2025-05-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-	</url>
-	
-	<url>
-		<loc>https://aphroconfuso.mt/appuntamenti/</loc>
-		<lastmod>2025-05-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-	</url>
-	
-	<url>
-		<loc>https://aphroconfuso.mt/abeċedarju/</loc>
-		<lastmod>2025-05-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-	</url>
-	
-	<url>
-		<loc>https://aphroconfuso.mt/almanakk-1-ta-jannar/</loc>
-		<lastmod>2025-05-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-	</url>
-	
-	<url>
-		<loc>https://aphroconfuso.mt/kotba/</loc>
 		<lastmod>2025-05-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
