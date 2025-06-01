@@ -1129,14 +1129,14 @@
 	</url>
 	
 	<url>
-		<loc>https://aphroconfuso.mt/leslie-vassallo-marċ-maqbuż/</loc>
+		<loc>https://aphroconfuso.mt/leslie-vassallo-wirja/</loc>
 		<lastmod>2025-06-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
 	</url>
 	
 	<url>
-		<loc>https://aphroconfuso.mt/leslie-vassallo-wirja/</loc>
+		<loc>https://aphroconfuso.mt/leslie-vassallo-marċ-maqbuż/</loc>
 		<lastmod>2025-06-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
@@ -1234,13 +1234,6 @@
 	</url>
 	
 	<url>
-		<loc>https://aphroconfuso.mt/omar-nshea-gilgamex-dak-li-ra-l-qiegħ/</loc>
-		<lastmod>2025-06-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1</priority>
-	</url>
-	
-	<url>
 		<loc>https://aphroconfuso.mt/noah-fabri-ħsieb-il-ħamiema/</loc>
 		<lastmod>2025-06-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -1262,13 +1255,6 @@
 	</url>
 	
 	<url>
-		<loc>https://aphroconfuso.mt/joe-gatt-il-kuxjenza-fit-truf/</loc>
-		<lastmod>2025-06-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1</priority>
-	</url>
-	
-	<url>
 		<loc>https://aphroconfuso.mt/maria-theuma-nofs-triq-dejjem-nieqaf/</loc>
 		<lastmod>2025-06-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -1276,7 +1262,21 @@
 	</url>
 	
 	<url>
+		<loc>https://aphroconfuso.mt/joe-gatt-il-kuxjenza-fit-truf/</loc>
+		<lastmod>2025-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+	</url>
+	
+	<url>
 		<loc>https://aphroconfuso.mt/italo-svevo-joe-gatt-it-tipjip/</loc>
+		<lastmod>2025-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/omar-nshea-gilgamex-dak-li-ra-l-qiegħ/</loc>
 		<lastmod>2025-06-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
