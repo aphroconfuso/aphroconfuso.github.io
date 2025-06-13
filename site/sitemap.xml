@@ -723,14 +723,21 @@
 	</url>
 	
 	<url>
-		<loc>https://aphroconfuso.mt/</loc>
+		<loc>https://aphroconfuso.mt/ar/</loc>
 		<lastmod>2025-06-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
 	</url>
 	
 	<url>
-		<loc>https://aphroconfuso.mt/ar/</loc>
+		<loc>https://aphroconfuso.mt/avvenimenti/</loc>
+		<lastmod>2025-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/</loc>
 		<lastmod>2025-06-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -1658,12 +1665,5 @@
 		<lastmod>2025-06-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
-	</url>
-	
-	<url>
-		<loc>https://aphroconfuso.mt/avvenimenti/</loc>
-		<lastmod>2025-06-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
 	</url>
 </urlset>
