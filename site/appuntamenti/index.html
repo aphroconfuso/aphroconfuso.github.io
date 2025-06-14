@@ -1,0 +1,697 @@
+<!doctype html>
+<html lang="mt" translate="no">
+
+	<head>
+		<meta charset="utf-8">
+		
+	<title>Appuntamenti · Aphroconfuso</title>
+	<meta content="Ġurnal letterarju." name="description">
+	<meta property="og:image" content="/stampi/social_aphroconfuso_logo_social_kbir_kwadrat_d073f4e24a.jpg">
+
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+		<meta content="width=device-width, initial-scale=1" name="viewport">
+		<meta content="width=device-width" initial-scale="1.0" maximum-scale="1.0" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="yes" name="mobile-web-app-capable">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#f9f9f3">
+		<link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon-16x16.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32x32.png">
+		<link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
+		<link rel="mask-icon" href="/img/icons/safari-pinned-tab.svg" color="#5bbad5">
+		<meta property="og:image:type" content="image/jpeg">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
+		<link rel="canonical" href="https://aphroconfuso.mt/appuntamenti/">
+		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
+		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
+		<link rel="stylesheet" href="/css/style-985b6a6a.css">
+		<script>
+			var audioLoaded,
+				audioUrls,
+				author,
+				body,
+				bodyEnd,
+				bodyHeight,
+				bodyStart,
+				bodyText,
+				bookmarksArray,
+				bookmarksList,
+				bookmarksMenuElement,
+				charactersPerPixel,
+				charactersPerScreen,
+				currentTime,
+				duration,
+				elapsedTime,
+				hideScrollTools,
+				lastReportedReadingTime,
+				lastReportedScrollPosition,
+				lastScrollPosition,
+				message,
+				issueMonth,
+				issueMonthYear,
+				newScrollPosition,
+				pageHeight,
+				pageReportingTitle,
+				percentageProgress,
+				placeText,
+				podcastUrl,
+				previousTime,
+				progressElement,
+				readingSpeed,
+				reportingTitle,
+				screenHeight,
+				skippedTime,
+				storyCompleted,
+				storyId,
+				storyType,
+				sequenceEpisodeNumber,
+				sequenceEpisodeTitle,
+				timeStarted,
+				pageTitle,
+				wordcount,
+				wordsPerPixel,
+				wordsPerSecond,
+				wordsPerSecondAudio,
+				wordsPerScreen;
+
+			audioLoaded = false;
+			bookmarksArray = [];
+			percentageProgress = 0;
+			previousTime = [];
+			storyCompleted = false;
+
+			const urlSlug = location
+				.pathname
+				.replace(/\//g, '');
+			const setCookie = (cname, cvalue, exdays = 36500) => {
+				const d = new Date();
+				d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+				let expires = "expires=" + d.toUTCString();
+				document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+			}
+			const getCookie = (cname) => {
+				let name = cname + "=";
+				let decodedCookie = decodeURIComponent(document.cookie);
+				let ca = decodedCookie.split(';');
+				for (let i = 0; i < ca.length; i++) {
+					let c = ca[i];
+					while (c.charAt(0) == ' ') {
+						c = c.substring(1);
+					}
+					if (c.indexOf(name) == 0) {
+						return c.substring(name.length, c.length);
+					}
+				}
+				return "";
+			}
+			var _paq = window._paq = window._paq || [];
+			const analytics = (arrayInfo) => {
+				if (location.host != 'aphroconfuso.mt') 
+					console.log(arrayInfo);
+				_paq.push(arrayInfo);
+			}
+			_paq.push(['disableCookies']);
+			_paq.push(['enableJSErrorTracking']);
+			_paq.push(['enableHeartBeatTimer']);
+			_paq.push(['enableLinkTracking']);
+			_paq.push(['trackPageView']);
+			_paq.push(['trackVisibleContentImpressions']);
+			(function () {
+				var u = "//analitika.aphroconfuso.mt/";
+				_paq.push([
+					'setTrackerUrl', u + 'matomo.php'
+				]);
+				_paq.push([
+					'setSiteId', location.host == 'aphroconfuso.mt'
+						? '1'
+						: '2'
+				]);
+				var d = document,
+					g = d.createElement('script'),
+					s = d.getElementsByTagName('script')[0];
+				g.async = true;
+				g.src = u + 'matomo.js';
+				s
+					.parentNode
+					.insertBefore(g, s);
+			})();
+			const addRemoveFontSizeClass = (size) => {
+				document
+					.body
+					.classList
+					.remove('font-size-1', 'font-size-2', 'font-size-3', 'font-size-4')
+				document
+					.body
+					.classList
+					.add(`font-size-${size}`);
+				localStorage.setItem('font', size);
+			}
+			// REVIEW
+			const translateTheme = {
+				'regular': 'regolari',
+				'dark': 'skura',
+				'contrast': 'kuntrast',
+				'system': 'sistema'
+			}
+			const addRemoveTheme = (theme, stored) => {
+				document
+					.body
+					.classList
+					.remove('theme-regular', 'theme-dark', 'theme-contrast', 'theme-system')
+				document
+					.body
+					.classList
+					.add(`theme-${theme}`);
+				localStorage.setItem('theme', theme);
+				if (stored && theme == 'regular') 
+					return;
+				analytics([
+					'trackEvent', 'Tema', `${stored
+						? 'Tema storjata'
+						: 'Tema nbidlet'}`,
+					translateTheme[theme]
+				]);
+			}
+			const initialiseAfterBody = () => {
+				document
+					.body
+					.classList
+					.add(location.hostname.replace(/\.?aphroconfuso\.mt/, '') || 'production');
+				addRemoveFontSizeClass(localStorage.getItem('font') || 1);
+				addRemoveTheme(localStorage.getItem('theme') || 'regular', true);
+				if (localStorage.getItem(`tw-${urlSlug}`)) {
+					document
+						.body
+						.classList
+						.add('trigger-warning-closed');
+				}
+			}
+		</script>
+		<script src="../script/script-9d62e3.js" type="module"></script>
+	</head>
+	<body class="show-nav this-month-gunju">
+		<script>
+			initialiseAfterBody();
+		</script>
+		<div id="top-wrapper">
+			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
+			<nav id="top-nav">
+				<div id="logo-container-wrapper">
+					<div id="logo-container">
+						<a href="/">
+							<img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso"/>
+						</a>
+					</div>
+					<menu class="hide-mobile" id="menu-carousels">
+						<li class="abecedaire">
+							<a href="/abeċedarju/">Abeċedarju</a>
+						</li>
+						<li>
+							<a href="/almanakk-ġunju/">Almanakk</a>
+						</li>
+					</menu>
+					<menu class="hide-mobile" id="menu-collections">
+						<li class="main-menu-collection">
+							<a href="/indħil-barrani/">
+								<span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a>
+						</li>
+						<li class="main-menu-collection">
+							<a href="/il-kliem-fit-teorija/">
+								<span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a>
+						</li>
+					</menu>
+				</div>
+				<input id="menu-toggle" type="checkbox"/>
+				<label class='menu-button-container' for="menu-toggle">
+					<span style="display: none">Mobile biss: iftaħ il-menu</span>
+					<div class='menu-button'></div>
+				</label>
+				
+				<menu id="menu-main">
+					
+					<li class="hide-laptop main-menu-collection">
+						<a href="/indħil-barrani/">
+							<span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a>
+					</li>
+					<li class="hide-laptop main-menu-collection">
+						<a href="/il-kliem-fit-teorija/">
+							<span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a>
+					</li>
+					<li class="hide-laptop a-links">
+						<a href="/abeċedarju/">Abeċedarju</a>
+						<a href="/almanakk-ġunju/">Almanakk</a>
+					</li>
+					<li>
+						<a href="/appuntamenti/">Appuntamenti</a>
+					</li>
+					<li>
+						<a href="/kontributuri/">Kontributuri</a>
+					</li>
+					<li>
+						<a href="/werrej/">Werrej</a>
+					</li>
+					<li>
+						<a href="/djarju/">Djarju</a>
+					</li>
+					<li>
+						<a href="/sensiliet/">Sensiliet</a>
+					</li>
+					<li>
+						<a href="/podcast/">Podcast</a>
+					</li>
+					<li class="hide-mobile">
+						<a href="/kotba/" class="menu-kotba">Kotba</a>
+					</li>
+					<li class="hide-laptop choose-theme">
+						<a id="theme-regular" role="button" tabindex="0">s</a>
+						<a id="theme-dark" role="button" tabindex="1">m</a>
+						<a id="theme-contrast" role="button" tabindex="2">c</a>
+						<a id="theme-system" role="button" tabindex="3">p</a>
+					</li>
+					<li>
+						<a href="/dwarna/">Dwarna</a>
+					</li>
+					<li class="hide-laptop">
+						<a href="/kotba/">Kotba</a>
+					</li>
+					<li class="hide-laptop">
+						<a href="/kolofon/">Kolofon</a>
+					</li>
+					<li>
+						<a href="/newsletter/">Newsletter</a>
+					</li>
+					<li class="hide-laptop">
+						<a href="/privatezza/">Privatezza</a>
+					</li>
+					<li>
+						<a href="/bookmarks/">Bookmarks<span id="bookmarks-number"></span></a>
+					</li>
+					<li class="hide-laptop choose-theme" id="text-size-adjust">
+						<a id="font-size-1" role="button" tabindex="8">a</a>
+						<a id="font-size-2" role="button" tabindex="9">a</a>
+						<a id="font-size-3" role="button" tabindex="10">a</a>
+						<a id="font-size-4" role="button" tabindex="11">a</a>
+					</li>
+				</menu>
+				<input class="hide-mobile" type="text" id="search-input" placeholder="fittex..." autocomplete="off" auto-fill="off" type="text" autocapitalize="none" enterkeyhint="search"/>
+				<ul id="search-results">
+					<!-- -->
+				</ul>
+				
+				<div id="brownline"></div>
+			</nav>
+			<div id="message">
+				<!-- -->
+			</div>
+			<main id="skipto">
+				
+<article class="generic appointments">
+	<header>
+		<ul><li class="header-label">&nbsp;</li></ul>
+		<h1>Appuntamenti</h1>
+		<h2>&nbsp;</h2>
+	</header>
+	<div class="container-generic">
+		<section id="grid-body">
+				<div class="generic-body-text"><p>Għandna Appuntament kull <l-m>l-ewwel</l-m> Tnejn <l-m>tax-xahar</l-m> meta nippubblikaw <l-m>l-ewwel</l-m> xogħol relatat ma’ tema editorjali. Iktar tard matul <l-m>ix-xahar</l-m> nippubblikaw xogħlijiet oħrajn, <l-m>x’aktarx</l-m> ukoll relatati. <l-m>L-Appuntament</l-m> li jmiss huwa għal nhar <l-m>it-Tnejn</l-m>, 2 ta’ Ġunju 2025.</p></div>
+				<ul class="promo-list">
+					
+						<li>
+							<a class="promo gunju" href="/ġunju-2025/">
+								<header>
+									<h1>Ġunju 2025</h1>
+								</header>
+								<div class="body-text">
+									<p>Li gżirietna huma żgħar wisq għall-ambizzjoni tagħna ilna nafuh. <l-m>Il-fantasija</l-m> li nkabbru <l-m>d-daqs</l-m> ta’ artna billi nżidu magħha xi forma ta’ simenta kbira, bħal Manoel Island artifiċjali li tkun tiflaħ <l-m>is-sulari</l-m> vertiġinużi ta’ frugħatna, <l-m>s’issa</l-m> għadha ma twettqitx. <l-m>Il-ftit</l-m> riklamazzjoni li saret ħolqot <l-m>l-art</l-m> fantażma <l-m>tal-Freeport</l-m>, li la hi ġewwa u lanqas barra. Iżda ilna li bdejna noħolqu għalina saff ta’ spazju mobbli, ftit piedi kwadri kull familja, minn qabel ma <l-m>l-art</l-m> ta’ taħtu kienet saret verament tagħna. Minn <l-m>dax-xahar</l-m>,&nbsp;Ryan Falzon jibda jħares lejn dan <l-m>il-post</l-m> enormi li tokkupa <l-m>l-karozza</l-m> fl-immaġinarju Malti. Fi “Ħruġ mingħajr ħruġ”<span class="pull">,</span>&nbsp;esej nostalġiku fuq <l-m>il-vetturi</l-m> privati u <l-m>r-relazzjoni</l-m> mal-ispazju pubbliku f’Malta, u&nbsp;l-ewwel parti <l-m>mis-sensiela</l-m> ġdida&nbsp;Inkejja, Ryan jgħid li “meta <l-m>l-klassi</l-m> tal-ħaddiema … saret taffordja toħroġ karozza ġdida … li biha bdiet tmur u tiġi <l-m>mix-xogħol</l-m> fil-kumdità u <l-m>l-privatezza</l-m> … dan seta’ jitqies bħala pass ’il &nbsp;quddiem, akkwist ta’ flessibbiltà lil hinn <l-m>mix-xkiel</l-m> li wieħed kien ikollu jbakkar biex jilħaq <l-m>il-vann</l-m> ipprovdut <l-m>mill-post</l-m> tax-xogħol.<span class="pullsemi">”</span>&nbsp;Iżda <l-m>l-karozza</l-m>, għalina, qatt ma kienet sempliċiment mezz kif naqsmu <l-m>d-distanzi</l-m> trivjali ta’ bejn raħal u ieħor. <l-m>Il-karozza</l-m> kienet territorju ġdid, personali, appartament u uffiċċju fuq erba’ roti, palk għall-personalità tagħna. Għalkemm issa drajna f’iktar lussu milli kellna <l-m>fiż-żmien</l-m> meta <l-m>l-Escort</l-m>, ftit mgħolli minn wara, kien jirrenja <l-m>fit-toroq</l-m> tagħna, <l-m>ix-xenqa</l-m> għall-ispazju żdiedet mhux naqset (anki għax <l-m>in-numru</l-m> ta’ karozzi <l-m>fit-toroq</l-m> dejjem kompla jiżdied). <l-m>L-ewwel</l-m> ċavetta li nieħdu meta nagħlqu <l-m>t-tmintax</l-m> hija <l-m>tal-karozza</l-m>. “Wieħed jiekol, jara film, ipejjep u jnik <l-m>fil-privatezza</l-m> tal-irkejjen mudlama… <l-m>il-karozza</l-m> toffri sens ta’ indipendenza u awtonomija — spazju fejn wieħed jista’ jħossu adult f’suq fejn <l-m>l-aċċessibbiltà</l-m> ta’ kiri u xiri ta’ proprjetà qiegħda dejjem tonqos. <l-m>Il-vettura</l-m> ssir kamra <l-m>tal-ikel</l-m>, salott, u kamra <l-m>tas-sodda</l-m> f’wieħed, tipprovdi <l-m>l-privatezza</l-m> u <l-m>l-libertà</l-m> li <l-m>d-dar</l-m> tal-ġenituri ma tantx tippermetti.<span class="pullsemi">”</span></p>
+								</div>
+							</a>
+						</li>
+					
+						<li>
+							<a class="promo mejju" href="/mejju-2025/">
+								<header>
+									<h1>Mejju 2025</h1>
+								</header>
+								<div class="body-text">
+									<p>Meta sentejn ilu bdejna Aphroconfuso, konna għedna li <l-m>l-mezz</l-m> ewlieni <l-m>tal-pubblikazzjonijiet</l-m> tagħna huwa dan <l-m>il-website</l-m>. <l-m>Mill-bidu</l-m> nett, għamilna appuntament <l-m>mal-qarrejja</l-m> għal kull <l-m>l-ewwel</l-m> Tnejn <l-m>tax-xahar</l-m>. Dan <l-m>l-appuntament</l-m> dejjem żammejnieh u <l-m>x-xogħol</l-m> ippubblikat fuq <l-m>is-sit</l-m> baqa’ jiżdied regolarment anki bejn appuntament u ieħor, minn ġimgħa għall-oħra u minn xahar għall-ieħor. Minn Ottubru li għadda, bdejna nippubblikaw <l-m>il-kotba</l-m> stampati; <l-m>l-ewwel</l-m> permezz ta’ Antoloġija 1, ġabra <l-m>bil-kitbiet</l-m> li dehru <l-m>fil-ġurnal</l-m> fl-ewwel sena tagħna, imbagħad f’Marzu <l-m>bil-pubblikazzjoni</l-m> ta’ Qarn, li wkoll kien beda bħala silta fuq dan <l-m>is-sit</l-m>. <l-m>Il-ktieb</l-m> stampat għandu awtorità kważi proverbjali. Ħafna minn din <l-m>l-awtorità</l-m> tiġi <l-m>mill-permanenza</l-m> tal-karta. Jew għall-inqas <l-m>il-permanenza</l-m> li nisperaw li għandha <l-m>l-karta</l-m>. <l-m>Il-preżenza</l-m> online għandha permanenza ta’ tip ieħor. <l-m>Il-forom</l-m> l-oħra <l-m>tal-arti</l-m>, bħall-mużika u <l-m>l-films</l-m>, kienu ilhom iżidu <l-m>fil-preżenza</l-m> permanenti tagħhom b’mezzi bħal ngħidu aħna CDs u DVDs. Iżda <l-m>l-preżenza</l-m> u <l-m>l-aċċessibbiltà</l-m> tagħhom online issa tagħtihom ubikwità kważi totali. Minkejja <l-m>l-virtwalità</l-m> li suppost għandu, <l-m>l-internet</l-m> ta <l-m>lill-kultura</l-m> tagħna ċertu tip ta’ eternità. <l-m>L-aħbarijiet</l-m> ta’ għoxrin sena ilu taċċedi għalihom faċilment daqs <l-m>l-aħbarijiet</l-m> tal-lum; bħalma xogħol li ppubblikajna f’Mejju <l-m>tal-2023</l-m> huwa aċċessibbli daqs dak li qed nippubblikaw illum. Online, <l-m>iż-żmien</l-m> huwa ċatt. <l-m>Fil-ħajja</l-m> personali, inżommu djarju bħala ġest kontra dan <l-m>l-iċċattjar</l-m> taż-żmien, biex <l-m>fil-memorja</l-m> tagħna nippruvaw nibqgħu nagħrfu jum minn ieħor. Bħal <l-m>daż-żmien</l-m> sena nedejna <l-m>l-Abeċedarju</l-m>. <l-m>Dax-xahar</l-m> qed inniedu <l-m>l-Almanakk</l-m>, li huwa kemm eżempju <l-m>tal-iċċattjar</l-m> taż-żmien kif ukoll qafas ta’ distinzjoni bejn jum u ieħor, bejn sena u oħra.</p>
+								</div>
+							</a>
+						</li>
+					
+						<li>
+							<a class="promo april" href="/april-2025/">
+								<header>
+									<h1>April 2025</h1>
+								</header>
+								<div class="body-text">
+									<p>F’liema sens qed naħsbu meta naħsbu f’ħaddieħor? <l-m>Ir-raġuni</l-m> u <l-m>l-emozzjoni</l-m> huma, sterjotipikament, żewġ kategoriji separati. Jekk qed naħsbu, mela qed nixtarru <l-m>l-għerf</l-m> li akkwistajna permezz <l-m>tar-raġuni</l-m>, permezz <l-m>tax-xjenza</l-m>, u qed nużaw moħħna. Meta nħossu, meta nħennu, jew jisgħobbina, qed nagħmlu xi ħaġa għalkollox separata u qed nużaw, b’xi mod misterjuż, qalbna. F’waħda <l-m>mill-entrati</l-m> l-ġodda <l-m>tal-Kliem</l-m> fit-Toerija, <l-m>il-kittieba</l-m> tagħna jippruvaw isibu traduzzjoni għall-frażi “take care”<span class="pull">.</span> Jikkunsidraw <l-m>l-espressjoni</l-m> “ħu ħsieb” u waqt li qed jagħmlu dan, jiskopru <l-m>l-ħafna</l-m> modi kif <l-m>il-binarju</l-m> raġuni/emozzjoni jiċċajpar <l-m>bil-mod</l-m> kif nużaw <l-m>il-kliem</l-m> relatat ma’ <l-m>das-sentiment</l-m>, sa ma <l-m>l-ħsieb</l-m> innifsu jasal biex forsi jkun forma ta’ dak li normalment insejħu emozzjoni. “Meta naħsbu f’xi ħadd huwa forma ta’ wens lejhom?” jistaqsi Omar <l-m>N’Shea</l-m>. “Nitwennes jien meta nkun naf li qiegħed fi ħsiebek? Isabbarni <l-m>l-ħsieb</l-m> li int qed taħseb fija?” F’entrata oħra, fejn seba’ kittieba jiddiskutu traduzzjoni sodisfaċenti għal “politics of care”<span class="pull">,</span> Kristina Borg tipprova tfittex <l-m>it-tifsira</l-m> tal-kliem <l-m>fil-konsegwenzi</l-m> tagħhom: “… li qed nipprova nagħmel, naħseb, hu li nfittex <l-m>it-tifsira</l-m> u <l-m>l-valur</l-m> tal-azzjoni u <l-m>l-interazzjoni</l-m> li tirriżulta meta teżisti <l-m>l-vera</l-m> ‘care’<span class="pullsemi">.</span><span class="pullsemi">”</span> Dan minn dejjem kien <l-m>l-iskop</l-m> tal-Kliem <l-m>fit-Teorija;</l-m> li permezz <l-m>tal-logħba</l-m> tat-traduzzjoni nġiegħlu lilna nfusna naħsbu sew fuq dawk <l-m>it-termini</l-m> li nużaw biex naħsbu bihom u nqarrbuhom lejna, lejn ħajjitna. Permezz <l-m>tal-ġenerożità</l-m> tal-kliem, li naħsbu ma’ ħaddieħor huwa wkoll mod kif naħsbu f’ħaddieħor. Manuela Zammit, f’esej li se nippubblikaw iktar tard <l-m>dax-xahar</l-m>, tikteb dwar <l-m>iż-żjarat</l-m> tagħha lura lejn Malta, żjarat ta’ darbtejn, tliet darbiet <l-m>fis-sena</l-m>, żjarat mimlijin ambigwità lejn pajjiż li huwa profondament familjari, għalkemm dejjem jixbah inqas dak <l-m>il-pajjiż</l-m> li darba għexet fih. Żjarat li fihom tqatta’ ħafna ħin ma’ nies li mhux partikolarment tixtieq tqatta’ wisq ħin magħhom; iżda li <l-m>fl-istess</l-m> ħin tinkwieta li daqt se titlifhom. “Jiena u nersaq lejn <l-m>il-bieb</l-m> ta’ barra… tgħaddili minn moħħi li din vera jaf tkun <l-m>l-aħħar</l-m> darba, u li lilhom jaf qed jgħaddilhom <l-m>l-istess</l-m> ħsieb <l-m>fl-istess</l-m> ħin. Ippruvajt ngħidha jien — ‘Narak <l-m>id-darba</l-m> li <l-m>jmiss’ </l-m>— u vera nstemgħet falza, allura ma rġajtx għamiltha. <l-m>Id-darba</l-m> li jmiss forsi ma jkunux għadhom magħna u iktar kemm jgħaddi <l-m>ż-żmien</l-m>, iktar tikber din <l-m>il-probabbilità</l-m>.<span class="pullsemi">”</span> Tibda taħseb li wasal <l-m>iż-żmien</l-m> li tuża <l-m>t-teorija</l-m> kollha li studjat biex tgħinha tifhem ħajjitha, lil Malta, <l-m>lill-familja</l-m> tagħha, li ssir <l-m>l-oġġett</l-m> teoretiku tagħha stess. “Ċaw Manuela, sabiħa,<span class="pullsemi">”</span> jgħidulha qrabatha qabel tagħlaq <l-m>il-bieb</l-m> warajha. “Moħħok hemm.<span class="pullsemi">”</span></p>
+								</div>
+							</a>
+						</li>
+					
+						<li>
+							<a class="promo marzu" href="/marzu-2025/">
+								<header>
+									<h1>Marzu 2025</h1>
+								</header>
+								<div class="body-text">
+									<p>Ħaġa stramba li ffissajna <l-m>fid-demm</l-m> bħala metafora għal dak li verament jagħmilna min aħna. Għal xi ħaġa li hija <l-m>fl-iktar</l-m> parti intima tagħna, ngħidu li qiegħda f’demmna. Fejn naraw <l-m>ix-xebh</l-m>, ngħidu li <l-m>d-demm</l-m> jiġbed. Imbagħad meta xi ħadd fundamentalment ma naħmluhx, ngħidu li m’għandniex demm miegħu, li demmu jsawwatna, li għandna f’demmna għalih. Demmu ma jiġbidniex. <l-m>Id-demm</l-m> huwa metafora stramba għall-identità għax ilna nafu li, ħlief għal ftit kategoriji wisgħin, <l-m>id-demm</l-m> huwa funġibbli. Jekk nitilfu ħafna minnu f’inċident jew waqt operazzjoni, <l-m>il-bank</l-m> tad-demm ikun lest jipprovdilna <l-m>d-demm</l-m> ta’ ħaddieħor biex iġibna f’tagħna. Demm ta’ ħafna nies imħallat flimkien. Jekk ikollna xi marda serja li taffettwana sistemikament, nistgħu anki nbiddlu <l-m>d-demm</l-m> kollu ta’ ġisimna. Ira Melkonyan hija artista u bijologa Ukrena-Maltija li, <l-m>fix-xogħol</l-m> performattiv tagħha, tuża <l-m>l-għarfien</l-m> fil-mikrobijoloġija u <l-m>l-viroloġija</l-m> biex tesplora kif nistgħu nispiraw ruħna <l-m>mis-sistemi</l-m> bijoloġiċi sabiex insibu modi ġodda kif neżistu <l-m>fid-dinja</l-m>. Li <l-m>d-demm</l-m> ikun f’postu hija <l-m>d-definizzjoni</l-m> ta’ li nkunu ħajjin. <l-m>Fix-xogħol</l-m> performattiv ta’ Ira, <l-m>il-fluwidi</l-m> bijoloġiċi huma <l-m>l-protagonisti</l-m>. Narawhom f’tubi trasparenti għaddejjin minn kontenitur għall-ieħor, minn pompa għall-oħra. Meta <l-m>fl-2022</l-m> bdiet <l-m>l-invażjoni</l-m> fuq skala kbira <l-m>tal-Ukrajna</l-m> mir-Russja, <l-m>il-kwistjonijiet</l-m> dwar <l-m>id-demm</l-m>, <l-m>it-tixrid</l-m> tiegħu, ħadu urġenza ġdida. <l-m>Id-demm</l-m> ma kienx qed jitħalla f’postu. Ira, kontra qalbha, kellha tibda taħseb dwar <l-m>il-fruntieri</l-m>, u bdiet iżżomm djarju. Meta, ftit xhur wara, bdiet taħdem f’laboratorju <l-m>tad-demm</l-m>, <l-m>il-ħsieb</l-m> tagħha sab immaġnijiet lesti għal fejn kienet qiegħda tmur <l-m>bil-ħsieb</l-m> u <l-m>l-ħolm</l-m> tagħha. “Kemm hu potenti <l-m>dal-likwidu</l-m> bijoloġiku! U <l-m>dal-post</l-m> hawnhekk hu kollu dwar fruntieri, kontroll, konteniment. Fruntieri li <l-m>d-demm</l-m> ma jistax jaqsam.<span class="pullsemi">”</span> <l-m>Il-waħx</l-m> tal-gwerra qatt mhu ’l &nbsp;bogħod wisq. <l-m>Mill-Olanda</l-m> fejn tgħix tirċievi <l-m>l-aħbarijiet</l-m> kemm <l-m>mill-Ukrajna</l-m>, fejn għad hemm qrabatha, kif ukoll minn Malta, fejn hemm <l-m>il-familja</l-m> immedjata tagħha. “Ommi qed tkun isterikament imbeżżgħa għalija. U jien bdejt nittieħed ukoll <l-m>mill-inkwiet</l-m> tagħha. Fejn tibda hi u fejn nibda jien qed jisfumaw.<span class="pullsemi">”</span> <l-m>Id-djarju</l-m> huwa proverbjalment <l-m>l-iktar</l-m> forma intima ta’ kitba, <l-m>l-iktar</l-m> espressjoni individwali, mhux talli miktuba minn persuna waħda imma talli intenzjonata biex tinqara minn persuna waħda; <l-m>il-konteniment</l-m> tal-ħsieb huwa assolut. Anki <l-m>fid-djarju</l-m> letterarju, għalkemm qed niftħu din <l-m>il-kitba</l-m> għall-qarrejja, dawn jafu li din hija ħajja waħda, ta’ persuna waħda <l-m>fid-dinja</l-m>. <l-m>Id-djarju</l-m> ta’ Ira li se nibdew nippubblikaw minn <l-m>dax-xahar</l-m> huwa <l-m>fil-fatt</l-m> ukoll <l-m>id-djarju</l-m> tal-qalba tiegħu <l-m>fil-Malti</l-m>, djarju li żammet Noah Fabri waqt li kienet qed tittraduċi <l-m>l-kitba</l-m> ta’ Ira. “Mingħajr ma ridt, jien u nittraduċi bdejt niftakar fejn kont jien <l-m>fil-ġranet</l-m> li ssemmi Ira <l-m>fid-djarju</l-m>.<span class="pullsemi">”</span> <l-m>It-traduzzjoni</l-m> nnifisha hija għodda ta’ taħlit, iċċajpar <l-m>il-fruntieri</l-m> bejn <l-m>il-lingwi</l-m>. <l-m>Il-ħsieb</l-m>, <l-m>id-demm</l-m> tal-kitba, jaf jgħaddi minn kittieba għal oħra, minn ilsien għal ieħor, daqskemm <l-m>id-demm</l-m> jaf jaqsam <l-m>il-fruntieri</l-m>.</p>
+								</div>
+							</a>
+						</li>
+					
+						<li>
+							<a class="promo frar" href="/frar-2025/">
+								<header>
+									<h1>Frar 2025</h1>
+								</header>
+								<div class="body-text">
+									<p>L-ivvjaġġar modern donnu jieħu <l-m>l-preġju</l-m> tiegħu <l-m>mill-ħasda;</l-m> filli qegħdin <l-m>id-dar</l-m>, filli qegħdin <l-m>in-naħa</l-m> l-oħra <l-m>tal-Ewropa</l-m>. <l-m>Ir-riklami</l-m> jwegħduk li llejla stess tista’ tkun qed tippranza Pariġi jew Tallin jew Ruma. <l-m>L-ajruplan</l-m> li jieħdok hemm itir f’arja tant fjakka li bilkemm iħossha; metafora għall-proċess kollu li jaħbi kull frizzjoni wara prezzijiet baxxi, munita komuni, fruntieri miftuħin. Kristina Borg, <l-m>fis-sensiela</l-m> li tibda <l-m>dax-xahar</l-m> Għalhekk qed nivvjaġġa <l-m>bil-mod</l-m>, toħodna magħha fuq vjaġġ <l-m>fl-Ewropa</l-m>. Tagħżel li ma taqbadx ajruplan iżda li tivvjaġġa <l-m>bil-pass</l-m> kajman <l-m>tal-ħsieb</l-m>. <l-m>Il-pajsaġġ</l-m> li jinfetaħ għaliha mhuwiex <l-m>il-Walden</l-m> ta’ Thoreau — mhuwiex <l-m>il-memorji</l-m> ta’ passiġġati <l-m>tat-tfulija</l-m> mal-ġenituri li ssib Loranne Vella <l-m>fid-djarju</l-m> tagħha, jew <l-m>id-dinja</l-m> ġdida ta’ ħsejjes u ismijiet li tiskopri Davinia Hamilton qalb <l-m>is-siġar</l-m> fil-parks ta’ Londra. Kristina ssib ferries li jitilqu minn terminals li forsi ma jeżistux, rampi intenzjonati għal karozzi u trakkijiet, u ħaddiema skantati li mara qiegħda tivvjaġġa waħedha. Kif <l-m>mill-ewwel</l-m> tintebaħ, <l-m>il-pass</l-m> tal-ħsieb huwa wkoll <l-m>il-pass</l-m> tad-dubju u <l-m>t-thewdin</l-m>. Ilha taħdem fuq <l-m>dal-proġett</l-m> għaxar snin u tibda taħseb jekk dan <l-m>il-vjaġġ</l-m> partikolari huwiex xi forma ta’ rendikont jew ta’ konklużjoni. Sa ċertu punt, din <l-m>l-opportunità</l-m> biex thewden hija <l-m>l-iskop</l-m> ta’ dan <l-m>il-mod</l-m> ta’ vjaġġar. Mhux thewdin fuq <l-m>l-intoppi</l-m> tal-vjaġġ innifsu, jew <l-m>tal-proġett</l-m> li jagħmel parti minnu, iżda dwar <l-m>l-użu</l-m> tagħna <l-m>tar-riżorsi</l-m> tal-pjaneta biex nittraversawha u ngawduha. Forsi dak hu <l-m>l-punt</l-m> tal-ħasda; li ma nhewdnux wisq, li ninsew kif wasalna fejn wasalna, ninsew xi nfaqna, mhux daqstant minn butna — probabbilment ċuċata — iżda <l-m>mir-riżorsi</l-m> ta’ dik <l-m>l-art</l-m> li nkunu wisq ’il &nbsp;fuq minnha biex naraw. <l-m>L-ivvjaġġar</l-m> mhuwiex biss dwar <l-m>l-ivvjaġġar</l-m>. “Jaqbduni iktar dwejjaq meta nitkellmu fuq <l-m>il-benesseri</l-m> ta’ kulħadd imma mhux daqstant dwar dak <l-m>tal-pjaneta</l-m>, minkejja li, bħalma juri <l-m>l-Kodiċi</l-m> tal-Ġustizzja Klimatika, hija ixjeħ, ikbar u iktar għaqlija minna lkoll.<span class="pullsemi">”</span> Bħala artista Kristina qiegħda wkoll tipprova tħoll kuntradizzjoni <l-m>fil-mod</l-m> kif ngħixu u nipprattikaw <l-m>l-arti</l-m>, speċjalment meta ngħidu li <l-m>l-arti</l-m> tagħna hija kkonċernata proprju <l-m>mill-użu</l-m> tar-riżorsi <l-m>tad-dinja</l-m>. “Inħossni faċċola u impostura nitkellem fuq ħaġa, bħat-tibdil <l-m>fil-klima</l-m>, u nagħmel oħra, bħal nieħu ma nafx kemm-il ajruplan.<span class="pullsemi">”</span> Meta nagħżlu li nterrqu għal rasna, meta nagħżlu li niftakru li aħna iġsma mixjin <l-m>fid-dinja</l-m>, iġsma li jimmetabolizzaw <l-m>il-frott</l-m> tagħha, meta nippruvaw nagħtu ġisimna għat-toqol <l-m>tal-gravità</l-m> u nħallu saqajna jmissu <l-m>l-art </l-m>— l-ewwel reżistenza li nsibu hija <l-m>r-reżistenza</l-m> tas-sistemi li bnejna, li qegħdin jagħmlu minn kollox biex jaqtgħulna qalbna li nimxu <l-m>bil-pass</l-m> tal-ħsieb.</p>
+								</div>
+							</a>
+						</li>
+					
+						<li>
+							<a class="promo jannar" href="/jannar-2025/">
+								<header>
+									<h1>Jannar 2025</h1>
+								</header>
+								<div class="body-text">
+									<p>Jekk <l-m>fid-djarju</l-m> tikteb dak kollu li tgħaddi minnu, <l-m>fil-kitba</l-m> l-oħra <l-m>x’tikteb</l-m>? <l-m>Id-djarji</l-m> li bdejna nippubblikaw fuq Aphroconfuso ftit iktar minn sena ilu huma spazju fejn nistgħu nilagħbu <l-m>bl-ideat</l-m>, niktbu dwarhom mingħajr ma nintrabtu li llestu xogħol ta’ xi forma letterarja partikolari. Imma <l-m>d-djarju</l-m>, anki sempliċiment <l-m>il-fatt</l-m> li qed niktbu taħt data, jagħti <l-m>lill-kitba</l-m> ċerta rabta ma’ ħajjitna. Issa li diġà għandna erba’ djarji u qed nintroduċu djarju ġdid <l-m>dax-xahar</l-m> (u se jkollna iktar djarji <l-m>fix-xhur</l-m> li ġejjin), nistgħu naraw li dik <l-m>id-data</l-m> tqanqal <l-m>mill-kittieba</l-m> reazzjonijiet differenti. Warren Bartolo joħodha bħala istruzzjoni biex jgħidilna <l-m>x’għamel</l-m> dakinhar: “Inqum <l-m>bil-ħoss</l-m> tal-airfryer iżarżar u <l-m>r-riħa</l-m> ta’ patata ħelwa trejjaħ minn taħt <l-m>il-bieb</l-m> tal-kamra <l-m>tas-sodda</l-m> tiegħi,<span class="pullsemi">”</span> għalkemm malajr isib ruħu jikkonfondi dwar <l-m>il-forma</l-m> nnifisha <l-m>tad-djarju:</l-m> “nistaqsi, <l-m>x’jagħmel</l-m> djarju djarju? Huwa titolu ta’ ktieb? <l-m>L-inklużjoni</l-m> ta’ dati preċiżi <l-m>fil-bidu</l-m> ta’ paragrafu? <l-m>L-iżvelar</l-m> tal-kittieb li <l-m>l-ktieb</l-m> tagħhom ħareġ minn perjodu ta’ żamma ta’ djarju?” Loranne Vella tgħidilna li ilha żżomm djarju minn meta kellha għaxar snin u f’kull żmien ikollha iktar minn djarju wieħed miftuħ. Kull wieħed bi skop limitat. Djarju għall-appuntamenti, djarju li tniżżel fih films li rat, djarji ad hoc bħal pitazzi abbinati ma’ vjaġġi speċifiċi. <l-m>Id-djarju</l-m> li għandha miftuħ fuq Aphroconfuso huwa ddedikat biss għall-kitba ta’ rumanz ġdid u <l-m>l-qari</l-m> u <l-m>l-esperjenzi</l-m> marbutin miegħu. Mhux talli hekk, imma waħda <l-m>mill-ewwel</l-m> ideat li kellha għal <l-m>dar-rumanz</l-m> kienet li tibbażah fuq kitbiet <l-m>mill-għexieren</l-m> ta’ djarji li akkumulat tul ħajjitha. “<l-m>Id-djarju</l-m> huwa karta mhux ħajja; <l-m>il-ħajja</l-m> bħal xibka, u <l-m>x-xbieki</l-m> metafora. <l-m>Id-djarju</l-m> bħal nisġa minsuġa <l-m>bil-ħsieb</l-m> li taqbad, iżda huwa ħafna dak li jirnexxilu jaħrab <l-m>mill-ispazju</l-m> bejn għoqda u oħra. <l-m>Il-ħajja</l-m> hija dak kollu li jaħrab; mela <l-m>x’inhu</l-m> dak li jibqa’ maqbud? <l-m>X’inhu</l-m> s-sens <l-m>tal-kronoloġija</l-m>?” Davinia Hamilton tiddikjara <l-m>l-intenzjonijiet</l-m> tagħha għad-djarju fuq Aphroconfuso <l-m>mill-bidu</l-m> nett <l-m>tal-ewwel</l-m> entrata: “Nixtieq inżomm djarju, biex forsi nsib irkaptu ta’ ħsibijieti u nġiegħel lil dawn <l-m>l-ideat</l-m> għażżenin jieħdu forma.<span class="pullsemi">”</span> fatima a.m. tiftaħ entrata b’nota dwar xi ħaġa mundana li tkun għamlet dakinhar u minn hemm titlaq b’idea: “nibda nipprepara biex immur <l-m>il-parties</l-m> irriklamati bħala ċelebrazzjoni <l-m>tas-saħna</l-m> u <l-m>tal-aptit</l-m>, imma <l-m>d-dress</l-m> code tinżilli <l-m>kontr’għasel</l-m>. mhux <l-m>l-ewwel</l-m> darba li sibt ruħi f’dawn <l-m>il-ħnejjiet</l-m> tal-kultura <l-m>tal-clubbing</l-m> f’Malta, imma <l-m>d-drabi</l-m> l-oħra li mort kont kuntenta nkun <l-m>fit-trufijiet</l-m>, <l-m>fil-frenza</l-m> tal-kultura, inħares u niċċassa <l-m>mill-bogħod</l-m>, nitteorizza waħdi u ndur u nitgerbeb <l-m>fil-garigori</l-m> tal-ħsibijiet f’moħħi.<span class="pullsemi">”</span> <l-m>Dax-xahar</l-m> nibdew <l-m>id-djarju</l-m> ta’ Joe Gatt fejn jibda jimxi pass pass <l-m>mal-kitba</l-m> mill-ġdid ta’ rumanz. <l-m>Dad-djarju</l-m> jibda proprju bħal-lum sena, <l-m>fl-Epifanija</l-m> u forsi għal ħafna minna, dak li jistennew <l-m>mill-għaqda</l-m> ta’ data <l-m>mal-kliem</l-m> li nisiltu minnha; xi forma ta’ realizzazzjoni, imqar żgħira, dwar ħajjitna.</p>
+								</div>
+							</a>
+						</li>
+					
+						<li>
+							<a class="promo dicembru" href="/diċembru-2024/">
+								<header>
+									<h1>Diċembru 2024</h1>
+								</header>
+								<div class="body-text">
+									<p>Issa għadda biżżejjed żmien, minn meta <l-m>l-HIV</l-m> l-ewwel feġġ <l-m>fil-Punent</l-m>, biex inħarsu lejn <l-m>l-istorja</l-m> mhux biss ta’ virus, ta’ marda, iżda ta’ reazzjoni, ta’ attitudni soċjali. Uffiċjalment, <l-m>l-ewwel</l-m> każ tfaċċa Malta erbgħin sena ilu, <l-m>fl-1984</l-m>, għalkemm, kif jgħid Omar <l-m>N’Shea</l-m> f’“<l-m>L-Aħħar</l-m> Ballu <l-m>tas-Sinjorini</l-m>”<span class="pull">,</span> “kienu diġà mietu numru ta’ nies <l-m>fix-xena</l-m> queer però ma kellniex <l-m>il-qafas</l-m> mediku, kulturali jew lingwistiku biex nagħmlu sens minn dak li kien qed jiġri.<span class="pullsemi">”</span> Dak <l-m>iż-żmien</l-m>, internazzjonalment, <l-m>il-virus</l-m> kien għadu magħruf bħala HTLV-III u riċerkaturi <l-m>l-Amerka</l-m> kienu għadhom jissuspettaw li <l-m>l-virus</l-m> jista’ jittieħed <l-m>mill-bżieq</l-m>. <l-m>L-istorja</l-m> tal-HIV/AIDS issa saret parti <l-m>mill-istorja</l-m> tas-sesswalità tagħna, anki jekk dan mhux dejjem nagħrfuh. <l-m>L-importanza</l-m> tal-preżentazzjoni pubblika <l-m>tas-sesswalità</l-m>, <l-m>l-idea</l-m> li <l-m>l-ħabi</l-m> jġib <l-m>il-mewt</l-m>, <l-m>l-inkwiet</l-m> dwar <l-m>l-inviżibbiltà</l-m> legali ta’ kull identità mhux eteronormattiva, <l-m>il-biża</l-m>’ li maħbubin li għamlu għomorhom jgħixu flimkien mhux se jkunu kapaċi jieħdu ħsieb <l-m>il-funeral</l-m> ta’ xulxin — dawn kollha b’xi mod jew ieħor huma <l-m>d-dinja</l-m> tas-sesswalità <l-m>tal-ġenerazzjoni</l-m> ta’ wara <l-m>l-AIDS</l-m>. Issa għandna wkoll memorja iktar riċenti ta’ kif virus jista’ jaqleb <l-m>is-soċjetà</l-m> ta’ taħt fuq. Apparti <l-m>d-diskors</l-m> fuq “viral load” u <l-m>l-insistenza</l-m> fuq <l-m>l-użu</l-m> ta’ għata profilattika, fi żmien <l-m>il-Covid</l-m> kien hemm sens qawwi ta’ déjà vu f’dak li rajna għaddej: <l-m>ir-reazzjonijiet</l-m> ta’ paniku, <l-m>il-miraklu</l-m> tax-xjenza medika moderna, <l-m>ir-regħba</l-m> tremenda <l-m>tal-industrija</l-m> farmaċewtika, <l-m>il-perpetwazzjoni</l-m> ta’ distinzjonijiet kolonjalisti. Differenzi kien hemm ukoll; meta tfaċċa <l-m>l-Covid</l-m>, għalaqna <l-m>l-ajruporti</l-m> u <l-m>l-ħwienet</l-m>, ħadna vaċċin wara <l-m>l-ieħor</l-m>, irċivejna <l-m>l-appoġġ</l-m> finanzjarju u <l-m>l-vouchers</l-m>, u issa, ħames snin wara, <l-m>il-virus</l-m> kważi nsejnieh. <l-m>Min-naħa</l-m> l-oħra, kellhom jgħaddu seba’ snin sħaħ <l-m>mill-ewwel</l-m> dehra <l-m>tal-AIDS</l-m> sakemm Ronald Reagan wasal biex ilissen dak <l-m>l-akronimu</l-m> pubblikament. Għalkemm m’għadniex nilbsu <l-m>l-maskri</l-m> u qed nazzardaw nersqu iktar minn metru u nofs qrib xulxin, <l-m>il-pandemija</l-m> riċenti mhux li ma ħallietx effett. F’ħafna pajjiżi ġabet magħha reazzjoni qawwija għall-ftit bidliet pożittivi li konna bdejna nidraw, bidliet li <l-m>x-xogħol</l-m> għalihom kien beda fi żmien <l-m>il-pandemija</l-m> ta’ qabel, u bħala reazzjoni għaliha. Issa <l-m>ż-żewġ</l-m> mewġiet ta’ reazzjoni għal dawn <l-m>il-pandemiji</l-m> qed jitħalltu flimkien, jamplifikaw u jikkanċellaw lil xulxin. <l-m>Il-qawmien</l-m> mill-ġdid <l-m>tal-Lemin</l-m>, kemm <l-m>fl-Amerka</l-m> kif ukoll <l-m>fl-Ewropa</l-m>, qed jikxef mhux biss dawk <l-m>it-tendenzi</l-m> ultrakonservattivi li qatt ma għebu, iżda wkoll <l-m>il-ħbieb</l-m> foloz li darba ppretendew li huma progressivi. Omar jikkwota lil Mario Mieli, li kien qed jikteb <l-m>fl-1977</l-m>, qabel beda dan kollu, meta <l-m>l-innegozjar</l-m> għar-rikonoxximent <l-m>mill-awtoritajiet</l-m> kien għadu qed jibda. “Mieli kien jifhem sew <l-m>l-isfidi</l-m> li ġġib magħha <l-m>n-normalità</l-m>,<span class="pullsemi">”</span> jgħid Omar. “Forsi kien saħansitra jċanfar iktar lil dawk li issa taw <l-m>il-barka</l-m> lill-istat biex jiddefinixxi hu <l-m>x’inhu</l-m> normali.<span class="pullsemi">”</span> Issa, dawk li darba nqdew <l-m>bil-“politika</l-m> tal-identità” għall-vantaġġ elettorali tagħhom, qed jerġa’ jibdielhom, qed jaraw kif jagħmlu biex ħadd ma jaħseb li huma progressivi wisq, li għalihom “mara hija mara”<span class="pull">,</span> li <l-m>t-tfal</l-m> m’hemmx għalfejn toqgħod tħabblilhom rashom b’diskors dwar <l-m>il-ġeneru</l-m>, li <l-m>r-refuġjati</l-m> m’hemmx għalfejn tfissidhom u li forsi aħjar jintbagħtu <l-m>l-Albanija</l-m> jew <l-m>l-Irwanda</l-m> biex jieħdu ħsiebhom hemm. Issa, anki wħud minn dawk li ħadu li riedu qed jagħmlu <l-m>l-kuraġġ</l-m> minn <l-m>dir-reazzjoni</l-m>, u qed tiġihom <l-m>it-tentazzjoni</l-m> jgħidu pubblikament li m’għandniex nesaġeraw, li <l-m>l-attiviżmu</l-m> għandu jkollu linja, u li <l-m>dil-linja</l-m> għandha tkun impinġija b’tali mod li ttihom li jridu mingħajr ma tisfidahom jaħsbu iktar <l-m>fil-fond</l-m> fuq <l-m>ir-realtajiet</l-m> ta’ ħaddieħor. “Meta <l-m>l-gays</l-m> iħambqu biex jassimilaw u jippruvaw jgħaddu ta’ normali, u jippreżentaw lilhom infushom bħal ‘ħaddieħor’<span class="pullsemi">,</span>’’ jgħid Tim Dean <l-m>fid-daħla&nbsp;għall-ktieb</l-m> ta’ Mieli, “<l-m>il-pressjoni</l-m> soċjali li taqa’ fuq dawk li jibqgħu queer mhux biss tibqa’ tintensifika imma ssir perikoluża. Fi kliem ieħor, <l-m>l-opprobrju</l-m> soċjali li <l-m>l-konformisti</l-m> gay jirnexxilhom jeħilsu minnu ma jisparixxix hekk, kif ġieb u laħaq, imma jaqa’ b’toqol ikbar fuq <l-m>il-persuni</l-m> trans, <l-m>il-ħaddiema</l-m> tas-sess, <l-m>il-persuni</l-m> li jilbsu <l-m>l-ġilda</l-m>, <l-m>l-entużjasti</l-m> tas-sadomażo, <l-m>il-persuni</l-m> seropożittivi, <l-m>il-fetixisti</l-m>, u dawk kollha li għadhom stigmatizzati <l-m>min-normi</l-m> tas-sess u <l-m>tal-ġeneru</l-m>.<span class="pullsemi">”</span></p>
+								</div>
+							</a>
+						</li>
+					
+						<li>
+							<a class="promo novembru" href="/novembru-2024/">
+								<header>
+									<h1>Novembru 2024</h1>
+								</header>
+								<div class="body-text">
+									<p>Meta sentejn ilu bdejna naħsbu biex nibdew <l-m>dal-ġurnal</l-m>, ħaġa li konna ċerti dwarha kienet li <l-m>l-ġurnal</l-m> irid iservi. Kellna ħafna ideat oħra imma konna nafu li biex jitwettqu, jew biex ikollna ċans nintebħu li kienu żbaljati, <l-m>il-ġurnal</l-m> irid iservi. <l-m>Bil-ħruġ</l-m> tal-ewwel pubblikazzjoni stampata tagħna lestejna dak li dejjem rajna bħala <l-m>ċ-ċiklu</l-m> sħiħ li tgħaddi minnu kitba f’Aphroconfuso. <l-m>Fil-kultura</l-m> tagħna, <l-m>il-ktieb</l-m>, <l-m>il-codex</l-m>, għandu pożizzjoni storika <l-m>fil-persistenza</l-m> tal-kelma miktuba. Mhux <l-m>l-anqas</l-m> minħabba li <l-m>l-kotba</l-m> jservu <l-m>s-snin</l-m> u jippermettulna nitkellmu ma’ dawk li jiġu warajna. Jippermettulna wkoll li nitkellmu dwarhom u li nħalluhom jitkellmu flimkien. Jikkritikaw u jikkwotaw lil xulxin u jirreferu għal xulxin. F’dawn <l-m>is-sentejn</l-m> skoprejna li kemm <l-m>il-website</l-m> u kemm <l-m>il-podcast</l-m> huma mezzi oħrajn li jippermettu <l-m>d-diskors</l-m> b’mod ieħor. Sibna wkoll mod kif <l-m>il-format</l-m> online u dak stampat jaħdmu flimkien. “Bur Mgħeż” u “Qarn” huma żewġ xogħlijiet li bdew online u qed ikomplu jgħixu u jikbru biex jieħdu ħajja ġdida <l-m>fil-format</l-m> stampat. Bħalhom għandna diversi proġetti li bdejna naħdmu fuqhom ma’ kittieba li sirna nafu f’dawn <l-m>is-sentejn</l-m>. <l-m>L-ebda</l-m> test qatt ma joħroġ <l-m>fil-baħħ</l-m>, mingħajr kuntest. <l-m>L-iskop</l-m> ewlieni <l-m>tal-editorija</l-m> huwa li jinħoloq <l-m>il-kuntest</l-m> intenzjonat li fih kull kitba tingħata <l-m>t-tifsira</l-m>, u tissaħħaħ u tintrabat ma’ testi oħrajn. Mingħajr din <l-m>id-direzzjoni</l-m>, <l-m>il-kliem</l-m> li jiġi ppubblikat jgħaddi bħal ramel minn bejn subgħajna. Biex jintrabat <l-m>fil-kitba</l-m>, <l-m>fid-dinja</l-m>, irridu nibnu dawk <l-m>l-ispazji</l-m> fejn <l-m>il-kitba</l-m> tista’ tiltaqa’ ma’ kitba oħra. Dawn <l-m>l-ispazji</l-m> rridu mmantnuhom biex iservu għal snin twal. <l-m>L-intwizzjoni</l-m> li kellna <l-m>fil-bidu </l-m>— li organu bħal dan biex ikun effettiv irid iservi — issa li bdejna nħarsu lejn <l-m>it-tielet</l-m> sena tagħna nindunaw li saret konvinzjoni ċentrali tagħna. Niktbu biex <l-m>il-kitba</l-m> tagħna tkun ikbar minna. <l-m>Bl-istess</l-m> mod, <l-m>il-ġurnal</l-m> innifsu rriduh li jkun ikbar minna, <l-m>l-individwi</l-m> li ħolquh.</p>
+								</div>
+							</a>
+						</li>
+					
+						<li>
+							<a class="promo ottubru" href="/ottubru-2024/">
+								<header>
+									<h1>Ottubru 2024</h1>
+								</header>
+								<div class="body-text">
+									<p>Il-Victoria Lines, dawk <l-m>il-fortifikazzjonijiet</l-m> li jserrpu bejn <l-m>il-Madliena</l-m> u Fomm <l-m>ir-Riħ</l-m>, inbnew <l-m>mill-Ingliżi</l-m> biex f’każ ta’ bżonn, <l-m>il-parti</l-m> ta’ fuq ta’ Malta tkun tista’ tiġi abbandunata għall-għadu u <l-m>l-parti</l-m> t’isfel issir bħal fortizza. <l-m>L-istorja</l-m> ġeoloġika <l-m>tal-gżira </l-m>— fit-taqtigħa bejn <l-m>il-plakka</l-m> tettonika Afrikana u dik Ewrażjatika — kienet ġa qasmitha hawnhekk <l-m>il-gżira</l-m> tul <l-m>il-Great</l-m> Fault, <l-m>il-Qasma</l-m> l-Kbira, <l-m>it-“tarġa</l-m>” ta’ San Pawl u San Ġużepp <l-m>tat-Tarġa</l-m>. <l-m>L-idea</l-m> li post daqshekk żgħir bħal pajjiżna tista’ ċċekknu iktar u tiddefendi biss <l-m>il-parti</l-m> tiegħu li għandek bżonn int, <l-m>il-port</l-m> u <l-m>t-tarzna</l-m>, tinstema’ xi ftit biżarra u <l-m>fil-fatt</l-m>, ftit snin wara li nbnew, dawn <l-m>il-fortifikazzjonijiet</l-m> saru obsoleti għaliex kien dubjuż kemm verament kienu se jservu ta’ protezzjoni, anki minħabba <l-m>t-topografija</l-m> nnifisha <l-m>tal-madwar</l-m>. Dan huwa <l-m>d-destin</l-m> tal-fortifikazzjonijiet <l-m>l-iktar</l-m> impressjonanti tagħna; <l-m>is-swar</l-m> tal-Belt kienu qishom qed iħarsuna minn trawma <l-m>tal-passat</l-m> iktar <l-m>mill-għadu</l-m> potenzjali <l-m>tal-ġejjieni</l-m>, u qatt ma ntużaw kontra ħadd ħlief kontra <l-m>l-Maltin</l-m> infushom. Dejjem tathom f’għajnhom <l-m>lill-kolonizzaturi</l-m> li ma’ <l-m>dil-biċċa</l-m> art tant strateġika f’nofs <l-m>il-Mediterran</l-m>, jaħasra, kellhom jitwekkew ukoll <l-m>bin-nies</l-m>. Mhux wisq, ftit mijiet ta’ eluf kollox, imma biżżejjed biex ikollok tieħu ħsiebhom jew għall-inqas tinnegozja magħhom. Minn gżira ppruvaw jagħmlu fortizza li tinqata’ għaliha. U minn fortizza, ġieli ppruvaw jagħmlu żona awtonoma navali, vapur, bħalma għamlu <l-m>l-Ingliżi</l-m> b’<l-m>Sant’Anġlu</l-m> meta tawh <l-m>l-istatus</l-m> ta’ stone frigate u semmewh&nbsp;HMS Egmont, iktar tard&nbsp;HMS St Angelo. Qisu dak <l-m>l-ilsien</l-m> art seta’ jinqata’ <l-m>mill-Birgu</l-m> u jsalpa għal rasu <l-m>bil-mod</l-m> il-mod barra <l-m>mill-port</l-m> u jeħles darba għal dejjem <l-m>min-nies</l-m> tal-pajjiż. F’“Biex Tara Kif Jgħixu <l-m>l-Oħrajn</l-m>”<span class="pull">,</span> <l-m>dax-xahar</l-m>, Ryan Falzon joħodna proprju f’dak <l-m>il-post</l-m> li fi storja kontrafattwali seta’ sar parti minn fruntiera li taqsam <l-m>lill-gżira</l-m> f’żewġ pajjiżi. <l-m>Il-Victoria</l-m> Lines qatt ma saru fruntiera, u sittin sena wara <l-m>l-Indipendenza</l-m> żgur m’għadux <l-m>tal-Ingliżi</l-m> hemm. “Kieku qegħdin hawn illum,<span class="pullsemi">”</span> jgħid Ryan dwar <l-m>l-Ingliżi</l-m>, “jgħarrxu <l-m>bis-searchlight</l-m>, jistgħu jaraw <l-m>il-vilel</l-m> ħolma fuq <l-m>ix-xaqliba</l-m> tal-Madliena, jissendikaw <l-m>bit-trombi</l-m> għal parties ħorox li jdumu <l-m>sas-siegħa</l-m> ta’ waranofsinhar. Kienu jisimgħu <l-m>l-mużika</l-m> ddamdam bla rispett <l-m>ġol-wied</l-m> ukoll u min jaf, forsi kienet tiġihom <l-m>l-għira</l-m> u jirrappurtawhom. Jew jisparawlhom.<span class="pullsemi">”</span> Jekk m’għadux <l-m>tas-servizzi</l-m>, ta’ min hu? Kif tagħmlu tiegħek post? Kif tkun taf li sar tiegħek? Jekk “tiġi kmieni, faċli ssib nies jammiraw <l-m>il-veduta</l-m>, jew xi erbat itfal iġibu pizza <l-m>bil-mutur</l-m> delivery sa ħdejn <l-m>il-karozza</l-m> tagħhom, jitfgħu laptop fuq <l-m>id-dashboard</l-m>, iniżżlu <l-m>t-twieqi</l-m> u joqogħdu jfaqqgħu <l-m>d-daħq</l-m>.<span class="pullsemi">”</span> <l-m>Fl-imgħoddi</l-m>, Baħar iċ-Ċagħaq kien baħħ imma llum ikollok tilgħab “logħba ħarba tevita <l-m>l-caravans</l-m> permanenti li sajf u xitwa jkun hemm <l-m>id-dawl</l-m> fihom. Ikollok tippożizzjona ruħek eżatt <l-m>fin-nofs</l-m> tat-triq, bejn <l-m>il-kumpless</l-m>, <l-m>l-għassies</l-m> u <l-m>l-caravans</l-m>. Tippożizzjona ruħek bħalma <l-m>l-Ingliżi</l-m> ppożizzjonaw ruħhom f’punti strateġiċi <l-m>tal-gżira</l-m> ħalli jgawduhom, jikkapparrawhom u jitpaxxew <l-m>bil-veduti</l-m>.<span class="pullsemi">”</span> Bħall-gagazza li jsemmi Ryan, faħam użat <l-m>mill-Ingliżi</l-m> li sar <l-m>il-pajsaġġ</l-m> idealizzat <l-m>tal-presepji</l-m> Maltin, <l-m>l-identità</l-m> hija <l-m>t-tilqit</l-m> tal-istorja. Dak li jibqa’<span class="pullsemi">,</span> kollu għalina; jekk jibqa’<span class="pullsemi">.</span></p>
+								</div>
+							</a>
+						</li>
+					
+						<li>
+							<a class="promo settembru" href="/settembru-2024/">
+								<header>
+									<h1>Settembru 2024</h1>
+								</header>
+								<div class="body-text">
+									<p>Ilu biss ftit eluf ta’ snin li <l-m>l-lingwa</l-m> għaddiet minn fommna għas-swaba’ ta’ jdejna, minn meta bdejna nnaqqxu fuq <l-m>il-ġebel</l-m>, inħarbxu <l-m>bir-rix</l-m> u nagħfsu fuq <l-m>il-buttuni</l-m>. <l-m>Fl-esej</l-m> tiegħu “<l-m>Il-Magna</l-m> tal-Qari”<span class="pull">,</span> Joe Gatt jitkellem dwar <l-m>il-preżent</l-m> bħala <l-m>l-punt</l-m> fl-istorja fejn inħossu li <l-m>dal-fenomenu</l-m> tal-lingwa, <l-m>dal-fenomenu</l-m> li impossibbli nimmaġinaw <l-m>l-ispeċi</l-m> tagħna mingħajru, se jittieħed minn idejna minn teknoloġija ġdida li għall-ewwel dehret li kienet biss użu ġdid <l-m>tal-buttuni</l-m>. Jaf ikun mument ta’ paniku “għalina li ninvestu parti sostanzjali <l-m>tal-amor</l-m> proprju tagħna <l-m>fil-produzzjoni</l-m> manwali <l-m>tat-testi</l-m>”<span class="pull">.</span> Joe jikkwota lil Vilém Flusser, li għalih meta <l-m>l-magni</l-m> jieħdu f’idejhom <l-m>il-kitba</l-m>, ikunu ħadu f’idejhom <l-m>l-istorja</l-m>, imbagħad ikunu jistgħu jiktbu <l-m>l-istorja</l-m> kif iridu huma, <l-m>bil-mod</l-m> ineżorabbli u għaġġiel tagħhom. Li fażi teknoloġika ġdida <l-m>tal-kitba</l-m> tqajjem <l-m>l-inkwiet</l-m> mhi xejn ġdid; <l-m>fl-istess</l-m> esej naraw kif anki <l-m>l-introduzzjoni</l-m> ta’ apparat li llum jidher purament pragmatiku — it-typewriter — kien qajjem eċitament kbir. <l-m>Il-bidla</l-m> teknoloġika <l-m>fil-mod</l-m> kif <l-m>il-lingwa</l-m> hija manifestata f’ħajjitna ma narawhiex biss <l-m>fil-produzzjoni</l-m> tal-lingwa. Forsi <l-m>l-iktar</l-m> aspett li għadna qed nippruvaw nifhmu u nlaħħqu miegħu huwa <l-m>d-disseminazzjoni</l-m> tagħha. Faċli nħossuna maqbudin f’xibka ta’ lingwa li qiegħda taqdi <l-m>l-bżonnijiet</l-m> ta’ forzi ikbar minna, forzi li bilkemm nistgħu narawhom, aħseb u ara nifhmuhom. <l-m>Fit-tieni</l-m> kapitlu ta’&nbsp;Nifs: Kaos u Poeżija, li proprju jismu “Vuċi ħoss storbju” u ppubblikajnieh ftit jiem ilu, Franco “Bifo” Berardi jibni <l-m>l-argument</l-m> tiegħu billi jibda jiddistingwi bejn <l-m>l-istorbju</l-m> medjatiku li ngħixu fih u dak <l-m>ir-ritmu</l-m> poetiku, <l-m>ir-ritmu</l-m> tal-kożmos li dan <l-m>l-istorbju</l-m> qed itarraxxna minnu. <l-m>Il-poter</l-m> m’għadux jipprova jiddominana billi jġegħelna nbaxxu rasna għal vuċi waħda u koerenti li ċċaħħadna <l-m>mill-multipliċità</l-m>. “Issa, <l-m>il-poter</l-m> ifeġġ <l-m>mix-xita</l-m> ta’ vuċijiet li ma jinstemgħux,<span class="pullsemi">”</span> jgħid Berardi <l-m>fit-traduzzjoni</l-m> ta’ Karl Baldacchino. “<l-m>Il-poter</l-m> m’għadux jikkonsisti f’li joqgħod jissamma’ <l-m>bil-moħbi</l-m> u jiċċensura. Għall-kuntrarju, jistimula <l-m>l-espressjoni</l-m> u jfassal regoli ta’ kontroll <l-m>mill-elaborazzjoni</l-m> statistika <l-m>tad-data</l-m> li toħroġ <l-m>mill-istorbju</l-m> tad-dinja. <l-m>Il-ħoss</l-m> soċjali jiġi mibdul fi storbju abjad, dak <l-m>l-istorbju</l-m> bi frekwenzi intensi uniformi, u dan <l-m>l-istorbju</l-m> jsir <l-m>l-ordni</l-m> soċjali.<span class="pullsemi">”</span> <l-m>Fit-teorija</l-m> tal-kommunikazzjoni kif bdieha Claude Shannon, <l-m>id-differenza</l-m> bejn storbju u ħoss, bejn storbju u informazzjoni, hija li <l-m>l-informazzjoni</l-m> għandha probabbiltà baxxa li teżisti. Iktar ma hemm probabbiltà għolja li xi ħaġa tintqal, iktar ma hemm probabbiltà għolja li tintqal <l-m>bil-mod</l-m> kif qiegħda tintqal, iktar qiegħda toqrob lejn <l-m>l-istorbju</l-m>. Sakemm għad għandna <l-m>l-mestjier</l-m> tal-kitba f’idejna, tajjeb li nużaw <l-m>il-letteratura</l-m> biex insibu modi ġodda, modi inqas ordinarji, kif inpoġġu <l-m>l-kliem</l-m>.</p>
+								</div>
+							</a>
+						</li>
+					
+						<li>
+							<a class="promo awwissu" href="/awwissu-2024/">
+								<header>
+									<h1>Awwissu 2024</h1>
+								</header>
+								<div class="body-text">
+									<p>“<l-m>Il-Libja</l-m>, <l-m>fl-immaġinarju</l-m> ta’ tfuliti, kienet dik <l-m>il-periferija</l-m> li kull meta tħares lejha, dejjem taraha toqrob lejk. Dejjem ġejja, dejjem riesqa, <l-m>bil-mod</l-m> il-mod.<span class="pullsemi">”</span> Hekk jgħid Omar <l-m>N’Shea</l-m> fl-ewwel parti ta’ “Es Sidr”<span class="pull">,</span> <l-m>is-sensiela</l-m> li qed inniedu <l-m>dax-xahar</l-m>. Għalih, <l-m>il-Libja</l-m> kienet familjari, dejjem riesqa, imma qisha qatt ma tasal, daqslikieku qed jilmaħha biss minn taħt <l-m>il-għajn</l-m>. Dak li jgħid Omar għall-istorja personali tiegħu nistgħu ngħiduh ukoll għall-istorja riċenti ta’ pajjiżna. Hekk kif jibda jimla <l-m>l-lakuni</l-m> f’dak li jaf dwaru nnifsu, <l-m>fl-istorja</l-m> tiegħu u ta’ niesu, u ta’ min kienu eżattament niesu, jibda jimla wkoll <l-m>il-lakuni</l-m> fl-istorja tagħna. <l-m>Fis-sebgħinijiet</l-m>, <l-m>il-Libja</l-m> u Malta kienu kważi sinkronizzati <l-m>fl-istorja</l-m> tagħhom; <l-m>it-tnejn</l-m> kienu qegħdin jippruvaw jeħilsu <l-m>mill-piż</l-m> ta’ preżenza militari barranija. Iżda waqt li <l-m>l-Libja</l-m> kienet qed tagħmel dan <l-m>bil-kunfidenza</l-m> kollha li kienu jagħtuha bjar imfawrin b’żejt <l-m>tal-ogħla</l-m> kwalità, Malta kienet qiegħda tara kif tista’ tibda <l-m>dal-kapitlu</l-m> ġdid <l-m>tal-istorja</l-m> tagħha mingħajr dipendenza fuq qawwa barranija waħda. Gaddafi kien lest jgħin lil Malta billi jiffinanzja <l-m>dal-ħelsien</l-m>, imma dejjem kien hemm <l-m>ir-riskju</l-m> li jsir hu <l-m>l-ħakkiem</l-m> il-ġdid. Għalkemm huma żewġ pajjiżi daqshekk qrib u minkejja li kienu daqshekk sinkronizzati <l-m>fl-istorja</l-m> tagħhom dak <l-m>iż-żmien</l-m>, aħna ma ridniex naraw lilna nfusna <l-m>fl-istess</l-m> storja. Ridna indipendenza, ridna ħelsien u dikolonizzazzjoni, iżda dikolonizzazzjoni rispettabbli, <l-m>tal-puliti</l-m>. Mhux <l-m>tal-Għarab</l-m>! Kulturalment kien hemm riluttanza kbira li nitbiegħdu <l-m>mit-tgħanniqa</l-m> tal-Punent u kien hemm ukoll <l-m>ix-xettiċiżmu</l-m> fin anki ta’ Mintoff innifsu, li kien iħobb jipprova jlaħħaq m’alla u <l-m>max-xitan</l-m>. Dejjem żammejna <l-m>l-Libja</l-m> qrib biżżejjed biex ninnegozjaw magħha imma mhux tant qrib li nagħmlu parti <l-m>mill-immaġinazzjoni</l-m> ta’ xulxin. Minkejja <l-m>l-prossimità</l-m> ġeografika <l-m>taż-żewġ</l-m> pajjiżi, u sekli sħaħ ta’ storja inkomuni minn żmien <l-m>ir-Rumani</l-m> u qabel, <l-m>sal-istorja</l-m> tal-emigrazzjoni ta’ eluf ta’ Maltin imxerrdin <l-m>mal-kosta</l-m> tal-Afrika ta’ Fuq <l-m>fis-seklu</l-m> dsatax, minkejja li lsienna żviluppa minn djalett Għarbi, u minkejja <l-m>l-fatt</l-m> li ġenerazzjoni sħiħa ta’ Maltin tgħallmet <l-m>l-Għarbi</l-m> l-iskola, għadna nsibu diffikultà biex niktbu fi lsienna kelmiet u ismijiet <l-m>mill-Għarbi</l-m> kontemporanju. Għandna lingwa Għarbija li paradossalment mhix kapaċi taqbad isem Għarbi u tiktbu mingħajr ma tissellef strutturi <l-m>mill-Ingliż</l-m>. “Kont naf li <l-m>l-ortografija</l-m> tiegħu kienet finzjoni legali,<span class="pullsemi">”</span> jgħid Omar dwar kunjomu, “trażliterazzjoni ad hoc ta’ kunjom Għarbi li <l-m>n-nutar</l-m> kien qaleb f’verżjoni vagament anglofonika, iżda li <l-m>l-verżjoni</l-m> tiegħu <l-m>bl-Għarbi</l-m> kienet intilfet <l-m>fid-dokumenti</l-m> notarili u li ma kien hemm <l-m>l-ebda</l-m> karta li fuqha qatt sibt miktub <l-m>x’kien</l-m> eżattament.<span class="pullsemi">”</span> Illum li <l-m>l-personalità</l-m> ta’ Gaddafi m’għadhiex parti <l-m>mill-istruttura</l-m> politika <l-m>tal-Libja</l-m>, illum li qtajnieha <l-m>x-xewqa</l-m> li jkollna <l-m>t-timbru</l-m> ta’ Ewropej, <l-m>l-istampa</l-m> li naraw meta nħarsu lejn <l-m>il-Libja</l-m> hija forsi inqas ċara minn qatt qabel. Nafu li hemm fruntiera militarizzata bejnietna u fuq <l-m>in-naħa</l-m> l-oħra, anki minn tant qrib, lanqas m’aħna ċerti <l-m>x’hemm</l-m> u min qed jieħu ħsieb. <l-m>L-ipokrezija</l-m> tal-Punent <l-m>fir-rigward</l-m> tal-Libja baqgħet baqgħet sa ma qerditu ’<l-m>l-pajjiż</l-m>, radmitu. Issa bħal donnu bejnietna hemm xi difett <l-m>fil-kurvatura</l-m> tal-pjaneta u aħna nibżgħu li naqgħu <l-m>mix-xifer</l-m> jekk nersqu ’l &nbsp;hemm u bosta jinbelgħu minnu meta jippruvaw jersqu ’l &nbsp;hawn.</p>
+								</div>
+							</a>
+						</li>
+					
+						<li>
+							<a class="promo lulju" href="/lulju-2024/">
+								<header>
+									<h1>Lulju 2024</h1>
+								</header>
+								<div class="body-text">
+									<p>F’waħda <l-m>mill-entrati</l-m> tad-djarju tiegħu, Warren Bartolo jitqabad biex isib <l-m>l-enerġija</l-m> jikteb <l-m>il-ġrajjiet</l-m> ta’ dik <l-m>il-ġurnata</l-m>. <l-m>Fid-djarju</l-m> tiegħu stess isib kwotazzjoni ta’ Marina Benjamin li kien żamm: “Li tikkonċernani hija <l-m>l-idea</l-m> pjuttost pulita wisq li <l-m>l-memorja</l-m> hija xi ħaġa li tibqa’ <l-m>fil-wiċċ</l-m> b’mod intatt <l-m>mill-passat</l-m> imċajpar, bħal xi sejba arkeoloġika li tkun skoprejt u li minnha trid sempliċement tfarfar <l-m>it-trab</l-m>. Dak <l-m>il-kunċett</l-m>, naħseb, jista’ jiġi skontat, peress li kull darba li tiftakar xi ħaġa tkun qed tiktibha <l-m>mill-ġdid</l-m>, tqanqal <l-m>il-passat</l-m> fil-proċess. Din <l-m>l-indeterminazzjoni</l-m> organika kollha tagħmel <l-m>il-memorja</l-m> inkwetanti. Tesponiha bħala xi ħaġa mibnija b’mod attiv minn persuna li tħoss, li tħares lura minn punt <l-m>fil-futur</l-m>, li trid tagħti rendikont ta’ kif saru <l-m>l-affarijiet</l-m> sabiex jgħixu <l-m>l-porzjon</l-m> li jmiss <l-m>tal-futur</l-m> tagħhom <l-m>bil-kumdità</l-m>.<span class="pullsemi">”</span> Żgur li wieħed <l-m>mill-għanijiet</l-m> li għalih inżommu djarju huwa li nagħmlu mħatra kontra <l-m>ż-żmien</l-m>, biex ma nħallux <l-m>is-snin</l-m> jgħaddu bħal ramel minn bejn subgħajna; imma <l-m>l-permanenza</l-m> tiegħu taf tkun illużjoni. “Jien u nikber,<span class="pullsemi">”</span> tgħid Loranne Vella <l-m>fl-entrata</l-m> tad-djarju tagħha ta’ <l-m>dax-xahar</l-m>, “kont naħseb li jekk inżomm djarju <l-m>t-tifkiriet</l-m> ma jintilfulix. <l-m>Id-djarji</l-m> li ktibt kollha żammejthom. Imma llum, jien u naqra minn uħud <l-m>mill-paġni</l-m> tagħhom, mhux dejjem nagħraf <l-m>l-ismijiet</l-m> tan-nies u <l-m>l-postijiet</l-m> li għandi miktubin; mhux dejjem niftakar <l-m>il-ġrajjiet</l-m> li kont iddeskrivejt b’tant entużjażmu. <l-m>It-tifkiriet</l-m> jintilfu tul <l-m>it-triq</l-m> u <l-m>l-kliem</l-m> ma jirnexxilux iġibhomli lura.<span class="pullsemi">”</span> Għalkemm <l-m>l-eqreb</l-m> tar-ritmu ta’ ħajjitna fost <l-m>il-forom</l-m> letterarji, <l-m>id-djarju</l-m> huwa wkoll <l-m>l-ewwel</l-m> pass li bih ħajjitna tieħu sura letterarja. “Nixtieq inżomm djarju,<span class="pullsemi">”</span> kitbet Davinia Hamilton <l-m>fl-ewwel</l-m> entrata <l-m>tad-djarju</l-m> tagħha li ppubblikajna f’Ġunju, “biex forsi nsib irkaptu ta’ ħsibijieti u nġiegħel lil dawn <l-m>l-ideat</l-m> għażżenin jieħdu forma.<span class="pullsemi">”</span> <l-m>Bid-djarju</l-m> nkejlu <l-m>l-jiem</l-m> mhux biss <l-m>bis-sigħat</l-m> iżda wkoll <l-m>bil-kliem</l-m>, <l-m>bis-sentenzi</l-m>, li mhux faċli nimmansawhom biex jibqgħu jaħsbu <l-m>fil-ġurnata</l-m> li għaddiet, u lanqas li nġegħluhom jagħrfu bejn dak li ħlomna billejl, dak li għamilna binhar, u dak li ħlomna binhar. <l-m>Bid-djarju</l-m>, <l-m>il-kitba</l-m> tgħix <l-m>fil-ħin</l-m>, <l-m>fiż-żmien</l-m>, magħna. “<l-m>Il-kitba</l-m> ġieli nimmaġinaha bħall-iskultura: irid ikollok biċċa tafal biex tibda tagħtiha forma,<span class="pullsemi">”</span> tikteb Davinia, “Ħa taħdimha u tarmi minnha mhux ħażin sakemm toħroġ <l-m>il-figura</l-m> li taqbel ma’ dik li kellek f’moħħok meta ġietek <l-m>l-idea</l-m>. U <l-m>l-ewwel</l-m> kitba dik kulma hi, tafal.<span class="pullsemi">”</span> F’entrata ta’ ftit xhur ilu, diġà kien għaddielha <l-m>l-ħsieb</l-m> lil Loranne li meta xi darba tiddeċiedi li tpoġġi bilqiegħda u tibda taqrahom <l-m>id-djarji</l-m> kollha li żammet f’ħajjitha, se tkun insiet lil kull min hemm imsemmi fihom. “Imma, forsi għalhekk qed nittratieni, biex meta <l-m>fl-aħħar</l-m> naqrahom inkun qisni qed naqra xi ħaġa għalkollox maqtugħa minni, qisni qed naqra ħajjet ħaddieħor minflok.<span class="pullsemi">”</span> Dak li niktbu <l-m>fid-djarju</l-m> se jkun <l-m>it-tafal</l-m> li minnu nerġgħu nibnu storja dwar ħajjitna. <l-m>Fl-entrata</l-m> ta’ dan <l-m>ix-xahar</l-m>, Loranne tirrakkonta kif minn dak li sabet <l-m>fid-djarji</l-m> antiki tagħha, minn tifkiriet li baqgħu ċari avolja qatt ma niżżlithom imkien, u minn ritratti li sabet, għaqqdet performance dwar Birżebbuġa ta’ tfulitha. “Ħloqt performance dwar <l-m>il-kittieb</l-m>,<span class="pullsemi">”</span> tgħid Loranne, “li skont jien, meta jivvjaġġa, jivvjaġġa kemm ġeografikament kif ukoll <l-m>fiż-żmien</l-m>.<span class="pullsemi">”</span> Minn dan <l-m>ix-xahar</l-m>, se jibda f’<l-m>dal-ġurnal</l-m> id-djarju ta’ fatima a.m. “inħoss <l-m>il-lingwa</l-m> bħala xafra <l-m>fis-saqaf</l-m> ta’ ħalqi,<span class="pullsemi">”</span> tikteb fatima, hi u tiżen bejn <l-m>il-lingwa</l-m> akkademika, <l-m>il-lingwa</l-m> ta’ ommha u <l-m>l-lingwa</l-m> tal-pjaċir. “hemm intersezzjoni li għad m’għandix kliem għaliha, imma qed nirreferi għal dik <l-m>l-intersezzjoni</l-m> bejn <l-m>l-esperjenza</l-m>, <l-m>l-intellettwaliżmu</l-m>, <l-m>il-ħajja</l-m>, <l-m>il-ġisem</l-m>, alla, <l-m>il-ħaxi</l-m> jew <l-m>l-erotiċiżmu</l-m> li mhuwiex lineari.<span class="pullsemi">”</span></p>
+								</div>
+							</a>
+						</li>
+					
+						<li>
+							<a class="promo gunju" href="/ġunju-2024/">
+								<header>
+									<h1>Ġunju 2024</h1>
+								</header>
+								<div class="body-text">
+									<p>“Ma nistax nieħu nifs”<span class="pull">,</span> <l-m>il-kliem</l-m> fgat li baqa’ jtenni Eric Garner sakemm miet taħt idejn <l-m>il-pulizija</l-m> fi Staten Island NY, <l-m>fl-2014</l-m>, kien <l-m>l-ispirazzjoni</l-m> għall-moviment Black Lives Matter li malajr infirex madwar <l-m>id-dinja</l-m> u ġiegħel lil ħafna jħarsu lejn <l-m>l-istorja</l-m> kolonjali u razzjali li għadha ta’ konsegwenza <l-m>fil-ħajja</l-m> ta’ kuljum ta’ miljuni ta’ nies. <l-m>L-istess</l-m> karba baqgħet toħroġ minn fomm iktar vittmi <l-m>tal-pulizija</l-m> fl-Istati Uniti, inċidenti ta’ kuljum li jsiru emblematiċi ta’ inġustizzji sistemiċi. Bħal Garner kien hemm bosta oħrajn sakemm — waqt li f’ħafna pajjiżi kien hemm <l-m>il-lockdown</l-m>, u <l-m>l-inġustizzji</l-m> ħadu <l-m>l-forma</l-m> ġdida tagħhom <l-m>bl-iżbilanċ</l-m> ovvju bejn kif <l-m>il-pandemija</l-m> affettwat pajjiżi u klassijiet soċjali differenti — seħħ <l-m>il-każ</l-m> ta’ George Floyd li għal darb’oħra għaqqad flimkien <l-m>l-inġustizzja</l-m> storika ma’ dik kwotidjana u <l-m>l-kliem</l-m> “ma nistax nieħu nifs” sar proverbjali għal sens ta’ disprament usa’ dwar <l-m>il-qagħda</l-m> politika li dejjem issir iktar u iktar impossibbli b’mod li ma tistax timmaġina li tista’ qatt issir agħar; imbagħad issir agħar. “Ma nistax nibqa’ sejjer hekk,<span class="pullsemi">”</span> jgħid Estragon f’En attendant Godot ta’ Samuel Beckett. U Vladimir jirrispondih: “Dak <l-m>x’taħseb</l-m> int.<span class="pullsemi">”</span> Dan <l-m>l-iskambju</l-m> jservi ta’ epigrafu għall-esej “Kollox Iperpolitiku: Ġenealoġija <l-m>tal-preżent</l-m>” ta’ Anton Jäger li Karl Baldacchino qaleb għall-Malti u ppubblikajna ftit <l-m>tax-xhur</l-m> ilu. Jäger isemmi <l-m>l-protesti</l-m> li rriżultaw <l-m>mill-qtil</l-m> ta’ George Floyd — “eluf ta’ dimostrazzjonijiet, b’attendenza stmata sa 26 miljun <l-m>fl-Istati</l-m> Uniti” — u jgħid li “sens ta’ qtugħ ta’ nifs issa qed jinħass minn fuq <l-m>s’isfel</l-m>”<span class="pull">.</span> <l-m>Fl-esej</l-m> “Politika bla Nifs” Karl ukoll juża <l-m>l-immaġini</l-m> ta’ Godot. Jikkwota lil Geert Lovink, li jgħid li “<l-m>l-istennija</l-m> għal Brussell hija bħall-istennija għal Godot.<span class="pullsemi">”</span> Forsi kien hemm żmien — f’dawk <l-m>is-snin</l-m> ta’ wara <l-m>l-waqgħa</l-m> tal-Ħajt ta’ Berlin għal bosta pajjiżi <l-m>fl-Ewropa</l-m>, jew f’Malta wara <l-m>l-bidla</l-m> tal-gvern <l-m>fl-1987 </l-m>— meta <l-m>l-idea</l-m> tas-sħubija <l-m>fl-Ewropa</l-m> kienet tinħass bħala opportunità għal nifs politiku ġdid. “Biss, għal Malta,<span class="pullsemi">”</span> jgħid Karl, “Godot speċi ta’ tfaċċa.<span class="pullsemi">”</span> Bħalma ndunaw ħafna, però, <l-m>l-istituzzjonijiet</l-m> u <l-m>l-mekkaniżmi</l-m> finanzjarji u leġiżlattivi <l-m>tal-Ewropa</l-m> jagħmlu <l-m>l-qagħda</l-m> iktar, mhux inqas, ikkumplikata u <l-m>s-sens</l-m> ta’ qtugħ ta’ nifs ikompli jikber. “Kif ser nieħdu nifs ġdid hija <l-m>l-isfida</l-m> ta’ żminijietna,<span class="pullsemi">”</span> itemm <l-m>l-esej</l-m> tiegħu Karl, esej li jgħaqqad <l-m>it-traduzzjoni</l-m> tiegħu ta’ “Kollox Iperpolitiku” <l-m>mat-traduzzjoni</l-m> tiegħu wkoll li qed inniedu <l-m>dax-xahar</l-m> tal-ktieb Nifs: Kaos u Poeżija ta’ Franco “Bifo” Berardi. Nifs huwa ktieb dwar <l-m>ir-ritmi</l-m> kaotiċi <l-m>tan-nifs</l-m> li nieħdu, dwar <l-m>is-sens</l-m> ta’ soffokazzjoni li qed jiżdied kullimkien. “Jien inbati <l-m>mill-ażma</l-m>,<span class="pullsemi">”</span> jgħid <l-m>fil-bidu</l-m> Berardi, “allura forsi ġejt affettwat minn sens ta’ solidarjetà ażmatika meta rajt <l-m>il-filmat</l-m> tal-qtil ta’ Eric Garner.<span class="pullsemi">”</span> <l-m>Fil-kapitlu</l-m> minn Nifs li qed nibdew <l-m>dax-xahar</l-m> bih, <l-m>l-ewwel</l-m> referenza li jinvoka hija <l-m>l-poeżija</l-m> ta’ Friedrich Hölderlin u <l-m>r-rabta</l-m> bejn <l-m>in-nifs</l-m> u <l-m>r-ritmu</l-m> poetiku. “Ejja nsibu mod kif nevolvu ritmikament <l-m>mal-kosmu</l-m>,<span class="pullsemi">”</span> jistedinna Berardi. “Ejja noħorġu minn <l-m>das-seklu</l-m> ta’ kejl, ejja noħorġu flimkien nieħdu <l-m>n-nifs</l-m>.<span class="pullsemi">”</span></p>
+								</div>
+							</a>
+						</li>
+					
+						<li>
+							<a class="promo mejju" href="/mejju-2024/">
+								<header>
+									<h1>Mejju 2024</h1>
+								</header>
+								<div class="body-text">
+									<p>Il-kitba tifred <l-m>l-Istorja</l-m> minn kulma ġie qabilha. Mingħajr <l-m>il-kitba</l-m>, kulma jħalli warajh <l-m>il-bniedem</l-m> irid jiġi skavat, maqlugħ <l-m>mill-art</l-m> u interpretat. Minn ftit għadam, minn ftit biċċiet fuħħar, <l-m>mill-qxur</l-m> tal-bebbux, <l-m>l-arkeologi</l-m> jridu jibnu stampa ta’ dinjiet sħaħ. <l-m>Fis-sensiela</l-m> “Bur Mgħeż”<span class="pull">,</span> Omar <l-m>N’Shea</l-m> mar ifittex sit Neolitiku minsi <l-m>fil-barrieri</l-m> tal-Imqabba, <l-m>fil-fdalijiet</l-m> fil-mużewijiet <l-m>tal-arkeoloġija</l-m>, u <l-m>fil-memorja</l-m> u <l-m>s-sengħa</l-m> tan-nies <l-m>tal-barrieri</l-m>. Mar ukoll <l-m>fl-Arkivji</l-m> Nazzjonali fejn hemm depożitat <l-m>il-file</l-m> bil-karti, <l-m>il-kuntratti</l-m>, <l-m>il-permessi</l-m> u <l-m>l-korrispondenza</l-m> kollha, <l-m>mill-aħħar</l-m> tas-seklu dsatax sa nofs <l-m>is-seklu</l-m> ta’ wara, li għandhom <l-m>x’jaqsmu</l-m> ma’ Bur Mgħeż. Iżda anki <l-m>l-kitba</l-m> ta’ mitt sena ilu taf tkun opaka daqs <l-m>il-fdalijiet</l-m> ta’ qxur u <l-m>bebbux-buttuni</l-m> minn eluf ta’ snin ilu. F’temp ta’ ftit għexieren ta’ snin, minn dakinhar li reġa’ ntradam <l-m>is-sit</l-m>, <l-m>l-istorja</l-m> ta’ Bur Mgħeż kważi ntesiet u <l-m>l-evidenza</l-m> tad-dokumenti tħajjarna nibnu dinjiet sħaħ minn ftit ittri u rapporti. <l-m>L-intriċċi</l-m> fid-dipartimenti <l-m>tal-gvern</l-m> ta’ ftit qabel <l-m>l-Ewwel</l-m> Gwerra jistgħu jidhru strambi għalina u misterjużi daqs <l-m>ir-ritwali</l-m> tad-dfin <l-m>fiż-żmien</l-m> Neolitiku. <l-m>Il-motiv</l-m> wara dak li ntqal diffiċli biex tinterpretah daqs <l-m>ir-raġuni</l-m> għaliex katavru ġie midfun b’mod u mhux b’ieħor. <l-m>L-istorja</l-m> dejjem iżżid, dejjem tordom fuqha nnifisha. Iktar ma jgħaddi <l-m>ż-żmien</l-m>, iktar ikun hemm saffi minn xiex tiskavaha. <l-m>L-għadam</l-m> ta’ Bur Mgħeż issa rridu niskavawh mhux biss <l-m>mill-art</l-m> iżda <l-m>mill-interpretazzjonijiet</l-m> tal-passat, <l-m>mill-arkivji</l-m> u <l-m>l-mużewijiet</l-m> b’aċċess diffiċli daqs <l-m>l-għerien</l-m> u <l-m>d-dgħaben</l-m> mirduma taħt <l-m>ir-runway</l-m> tal-ajruport, ikkontrollati <l-m>mill-armata</l-m>. “<l-m>X’se</l-m> nieħu miegħi <l-m>fid-dar</l-m> tal-eternità,<span class="pullsemi">”</span> jistaqsi Omar <l-m>fl-esej</l-m> li jagħlaq din <l-m>is-sensiela</l-m>, “barra <l-m>l-għadam</l-m> li hemm ġo fija jżommni wieqaf, barra xedaq snien, dawk li għadhom minn tiegħi kif ukoll dawk taċ-ċeramika li invitawli ġo ħanek mimli <l-m>bl-għadam</l-m> ta’ ħaddieħor, pendent <l-m>tal-bebbux</l-m> tal-baħar li nġorr madwar għonqi, u misluta <l-m>tad-deheb</l-m> imgeżwra <l-m>mal-widna</l-m> tax-xellug?” <l-m>Il-kitba</l-m> hija dejjem għall-ġejjieni, jew ta’ ftit jiem, jew ta’ ftit xhur jew ta’ għexieren u mijiet ta’ snin. <l-m>Bil-kitba</l-m> tagħna qed nixhdu għall-preżent, biex nifhmu lilna nfusna u biex inħallu kliemna jinftiehem u jerġa’ jinftiehem minn dawk li għad jiġu warajna. Iżda <l-m>x’verament</l-m> qed inħallu warajna? Kemm se jkunu koerenti <l-m>d-deskrizzjonijiet</l-m> tagħna <l-m>tal-mument</l-m> għal min se jsibhom warajna? Matul din <l-m>l-ewwel</l-m> sena ta’ <l-m>dal-ġurnal</l-m>, ridna noħolqu, flimkien <l-m>mal-kittieba</l-m> tagħna, komunità fejn <l-m>il-kliem</l-m> mhux biss jingħad darba u jintelaq għall-irwiefen <l-m>taż-żmien</l-m>, iżda jsib eku u risposta fi kliem ieħor <l-m>fil-ġurnal</l-m> stess, <l-m>fl-istorja</l-m> letterarja tagħna u <l-m>tad-dinja</l-m>. Ridna nkunu konxji mhux biss minn dak <l-m>il-kliem</l-m> li se nħallu warajna, iżda wkoll minn kulma se nħallu midfun <l-m>ġol-art</l-m> innifisha. Iktar tard <l-m>dax-xahar</l-m> se nippubblikaw “ġenealoġija ta’ bankina”<span class="pull">.</span> fatima a.m. tħares <l-m>bir-reqqa</l-m> lejn bankina f’Buġibba bħala sit storiku; “<l-m>il-bankina</l-m> qatt ma tispiċċa fejn tistennieha li tispiċċa. ma’ kull kantuniera titbewwaq, tixpakka <l-m>ċ-ċirkonferenza</l-m> u b’xi mod issib estensjoni mibnija ta’ malajr. bejn storja ta’ tetris raffa, bejn logħba jenga li qatt ma ntrebħet. <l-m>is-soluzzjoni</l-m> moderna ferm dejjem immarkata b’linja ħafifa <l-m>tal-metall</l-m>, li tissepara <l-m>l-istorja</l-m> tal-art <l-m>mill-futur</l-m> tagħha, imma <l-m>l-għaksa</l-m> taf tintrewa sa ma toħroġ minn dan <l-m>l-univers</l-m> t’asfalt u tlaqqit. fejn tintefaħ u ddur jitpoġġew <l-m>l-imwejjed</l-m> u <l-m>s-siġġijiet</l-m>, imlaqqtin daqs <l-m>il-bankina</l-m>.<span class="pullsemi">”</span> B’kull dettall li ssemmi fatima tista’ ssawwar f’moħħok b’mod iktar ċar <l-m>id-dinja</l-m> li dejjem qed tinbena u timtela <l-m>bil-ħafna</l-m>, <l-m>id-dinja</l-m> li tatna dik li Karl Baldacchino, <l-m>fl-esej</l-m> tiegħu li wkoll se nippubblikaw <l-m>dax-xahar</l-m>, isejjaħ “politika bla nifs”<span class="pull">.</span></p>
+								</div>
+							</a>
+						</li>
+					
+						<li>
+							<a class="promo april" href="/april-2024/">
+								<header>
+									<h1>April 2024</h1>
+								</header>
+								<div class="body-text">
+									<p>Forsi hija reazzjoni matura li nammettu <l-m>r-responsabbiltà</l-m> għall-azzjonijiet tagħna, u li meta tiġrilna xi ħaġa ma nwaħħlux <l-m>fil-passat</l-m>, f’dak li għaddejna minnu, f’kif ġejna ttrattati. Iżda hija wkoll maturità u sinjal li qed nippruvaw insiru adulti li nkunu responsabbli mhux biss għall-azzjonijiet tagħna iżda għall-memorja u <l-m>l-istorja</l-m> tagħna. Meta nkunu Ħaġar Qim jew <l-m>l-Imnajdra</l-m> u nħarsu ’l &nbsp;barra lejn <l-m>il-baħar</l-m> naraw <l-m>il-veduta</l-m> evokattiva u romantika <l-m>tal-gżira</l-m> ta’ Filfla. Min jaf kemm ritratti jeżistu tagħha <l-m>dil-veduta</l-m> fil-mobile ta’ kull min ikun għaddej minn ħdejn <l-m>il-Qrendi</l-m> u f’daqqa waħda jilmaħ dik <l-m>il-blata</l-m> f’nofs ta’ baħar. Aħna mingħalina qed inħarsu lejn frott <l-m>il-proċess</l-m> ġeomorfoloġiku, proċess misterjuż ta’ miljuni ta’ snin, <l-m>ir-riżultat</l-m> ta’ bidliet li seħħew fuq skala ta’ ħin ġeoloġiku. Meta, <l-m>fil-fatt</l-m>, <l-m>il-forma</l-m> ta’ Filfla li naraw issawret bomba wara bomba. Kull bidla li saret f’dak <l-m>is-silwett</l-m> famuż kienet <l-m>l-effett</l-m> ta’ splużjoni, azzjoni li damet inqas minn sekonda, iżda rrepetuta jum wara <l-m>l-ieħor</l-m> għal għexieren ta’ snin. Hemm ħafna skali ta’ żmien. <l-m>Iż-żmien</l-m> ġeoloġiku. <l-m>Iż-żmien</l-m> tal-imperi. <l-m>Iż-żmien</l-m> tal-istorja ta’ pajjiżna f’dawk <l-m>id-deċennji</l-m> hekk kif kien ħiereġ <l-m>mill-kolonjaliżmu</l-m>. Jimmy Grima, <l-m>bl-esej</l-m> tiegħu “<l-m>Il-Kwiet</l-m> u <l-m>l-Lejl</l-m>”<span class="pull">,</span> jagħti bidu għas-sensiela <l-m>l-ġdida</l-m> “Splużjonijiet” dwar <l-m>x’wassal</l-m> għal dik <l-m>it-trawma</l-m> prinċipali <l-m>fil-kuxjenza</l-m> ta’ Malta <l-m>l-ġdida</l-m> li ilna ngħixu fiha minn Ottubru 2017. Huwa jmur ifittex <l-m>l-istorja</l-m> twila li wasslet għal kultura fejn hu possibbli li nisplodu <l-m>l-porvli</l-m> mhux biss <l-m>fl-ajru</l-m> b’ċelebrazzjoni, iżda anki <l-m>mal-għetiebi</l-m> tal-bibien b’vendikazzjoni u taħt <l-m>il-karozzi</l-m> tan-nies biex nagħlqulhom ħalqhom. Jimmy jgħid li f’xogħlu jipprova jaqbad <l-m>iż-żmien</l-m>, iżda “hemm ħafna ħofor u spazji mudlama <l-m>fl-istorjografija</l-m> Maltija. Qisna ma tantx sibna <l-m>ċ-ċans</l-m> inħarsu lura lejn kif inkitbet <l-m>l-istorja</l-m> tagħna u weħilna <l-m>man-narrattiva</l-m> orjentalista li kitbu fuqna <l-m>l-barranin</l-m> li kienu jaħkmuna. Jista’ jkun li <l-m>maż-żminijiet</l-m>, dak li nkiteb, bħal fi Ġrajjiet Malta, sar vanġelu u sar <l-m>it-twemmin</l-m>, <l-m>it-tradizzjoni</l-m> u <l-m>l-identità</l-m> Maltija. Finzjoni li ssir <l-m>ir-realtà</l-m>, fejn dak li nkiteb <l-m>fil-kotba</l-m> ta’ gwida għat-turisti <l-m>fis-sittinijiet</l-m> inbidel <l-m>fit-twemmin</l-m> nazzjonali <l-m>tal-identità</l-m> Maltija.<span class="pullsemi">”</span> Anki <l-m>l-istorja</l-m> għandha <l-m>l-istorja</l-m> tagħha. Joe Gatt, <l-m>bir-rakkont</l-m> tiegħu “General Strike” joħodna lura għal avveniment ieħor li, għalkemm huwa punt ċar <l-m>fl-istorja</l-m> ta’ kif ħriġna <l-m>mill-kolonjaliżmu</l-m>, m’għandux <l-m>l-istess</l-m> rispettabbiltà li għandu, pereżempju, <l-m>is-Sette</l-m> Giugno. <l-m>It-28</l-m> ta’ April <l-m>tal-1958</l-m> għadu marbut wisq ma’ storja ta’ partit wieħed. Però, lanqas <l-m>is-Sette</l-m> Giugno ma kien minn dejjem rispettabbli għal kulħadd. Ma kienx hawn monument wieħed li jfakkru għal sebgħa u sittin sena minn meta seħħ, tnejn u għoxrin minnhom f’Malta indipendenti. Forsi għax, bħall-general strike <l-m>tal-1958</l-m> li żvolġa fi speċi ta’ rewwixta orkestrata, għal snin sħaħ <l-m>l-avveniment</l-m> stajna nħarsu lejh biss <l-m>mil-lenti</l-m> partiġġjana. Qisna nistennew li <l-m>ż-żmien</l-m> inaddaf <l-m>l-att</l-m> mill-aspetti kkumplikati u inkonvenjenti tiegħu sakemm <l-m>fil-memorja</l-m> jibqa’ biss avveniment nadif ta’ eroiżmu pur, li fih ħadu sehem biss nies li sibnielhom posthom qalb <l-m>il-ħafna</l-m> qaddisin ta’ dawn <l-m>il-gżejjer</l-m>. La dak li nagħmlu, la dak li niftakru, u lanqas <l-m>l-istorja</l-m> li nirrakkuntaw dwarna nfusna, qatt mhuma għalkollox innoċenti.</p>
+								</div>
+							</a>
+						</li>
+					
+						<li>
+							<a class="promo marzu" href="/marzu-2024/">
+								<header>
+									<h1>Marzu 2024</h1>
+								</header>
+								<div class="body-text">
+									<p>John Maynard Keynes kien jgħid li meta jitkellem <l-m>man-negozjanti</l-m> u <l-m>l-kapijiet</l-m> tal-industrija, kienu jgħidulu li huma nies — irġiel — tad-dinja, nies prattiċi li m’għandhom la bżonn u lanqas ħin għat-teoriji, la tiegħu u lanqas ta’ ħadd. Keynes kien jirrispondihom li mhux talli għandhom bżonnha <l-m>t-teorija</l-m>, talli diġà kienu jużawha, imma jużaw teorija antikwata, u jużawha mingħajr ma jafu. <l-m>Il-prominenza</l-m> tal-filosofija <l-m>fid-diskors</l-m> medjatiku filli tikber, filli tmajna. F’mewġa minnhom, madwar erbgħin sena ilu, bdejna wkoll insejħulha “<l-m>it-Teorija</l-m>”<span class="pull">,</span> għall-inqas <l-m>fl-Anglosfera</l-m> u madwarha. Din <l-m>il-kelma</l-m> forsi daqsxejn <l-m>tal-moda</l-m> u daqsxejn vaga, iżda turi <l-m>l-ħsieb</l-m> u <l-m>l-filosofija</l-m> ħerġin <l-m>mill-konfini</l-m> tad-dipartimenti tagħhom u jibdew jitħalltu <l-m>mad-dixxiplini</l-m> l-oħrajn; <l-m>l-arti</l-m> viżiva, <l-m>il-letteratura</l-m>, <l-m>l-arkitettura</l-m>, u eventwalment kollox. Kliem u kunċetti jgħaddu <l-m>mill-filosofija</l-m> u <l-m>mid-diskors</l-m> akkademiku għad-diskors kulturali u politiku <l-m>l-ħin</l-m> kollu bi proċess kontinwu u kważi inviżibbli. Kliem li ssorprenda <l-m>lin-nies</l-m> meta beda jintuża sar <l-m>il-vokabularju</l-m> li <l-m>l-ġenerazzjoni</l-m> ta’ wara kibret bih. Li kieku niktbu <l-m>bl-istess</l-m> lingwa li biha nagħmlu <l-m>l-parti</l-m> l-kbira <l-m>tal-qari</l-m> tagħna, faċli nużaw <l-m>dal-kelmiet</l-m> mingħajr ma nirriflettu wisq fuqhom. Aħna m’għandniex dak <l-m>il-lussu</l-m>. Iżda għandna lussu ieħor minflok. <l-m>It-traduzzjoni</l-m> ssir privileġġ; għax qabel naqbdu nużaw terminu, qabel naqgħu għall-eżotiċiżmu meżmerizzanti tiegħu, irridu ningaġġaw sew <l-m>mal-ħsieb</l-m> warajh biex naqilbuh għall-Malti. <l-m>L-isfida</l-m> li toffri <l-m>t-terminoloġija</l-m> mhix neċessarjament <l-m>l-ikbar</l-m> waħda <l-m>fit-traduzzjoni</l-m>. Nafu li iktar ma <l-m>l-kliem</l-m> hu sempliċi u “primittiv”<span class="pull">,</span> iktar diffiċli ssib kliem ekwivalenti għalih f’lingwa oħra. Iżda dawn <l-m>it-termini</l-m> jġorru fihom storja twila u kuntesti diversi, li jagħtuna fuq xiex naħdmu waqt li nfittxulhom post <l-m>mal-kliem</l-m> l-ieħor li nużaw biex niffurmaw <l-m>il-ħsieb</l-m> tagħna. F’Ottubru li għadda kellna taħdita waqt <l-m>il-Festival</l-m> tal-Ktieb <l-m>bl-isem</l-m> “Kif tgħidha f’qalbek” fejn tkellimna dwar <l-m>l-element</l-m> ta’ traduzzjoni <l-m>fil-kitba</l-m> bil-Malti, <l-m>l-aktar</l-m> meta niktbu dwar suġġetti li aħna familjari ħafna magħhom b’lingwi oħrajn, speċjalment <l-m>bl-Ingliż</l-m>. Għalkemm <l-m>is-suġġett</l-m> huwa ħafna akbar <l-m>mill-kliem</l-m> individwali, parti kbira <l-m>mill-konverżazzjoni</l-m> daret <l-m>mal-fatt</l-m> li termini li sirna familjari ħafna magħhom f’lingwi oħrajn insibuha bi tqila biex inġibuhom <l-m>fil-Malti</l-m>. Dan <l-m>il-ħsieb</l-m> wassal għall-ħolqien <l-m>tal-proġett</l-m> “<l-m>Il-Kliem</l-m> fit-Teorija” — f’kollaborazzjoni ma’ diversi <l-m>mill-kittieba</l-m> tagħna, uħud minnhom speċjalizzati f’xi qasam akkademiku — fejn bdejna konverżazzjoni dwar għadd ta’ termini li diġà kellna nitqabdu magħhom <l-m>fl-editjar</l-m> tal-ġurnal. Din <l-m>il-konverżazzjoni</l-m> għadha, u se tibqa’<span class="pullsemi">,</span> għaddejja u perjodikament se nippubblikaw entrati (dejjem) proviżorji għat-termini li qed niddiskutu. Iktar tard <l-m>dax-xahar</l-m> se nippubblikaw <l-m>l-ewwel</l-m> termini, u <l-m>l-proġett</l-m> se jitnieda f’avveniment waqt Kampus Kotba <l-m>bil-parteċipazzjoni</l-m> ta’ diversi kittieba li qegħdin jieħdu sehem f’<l-m>dal-proġett</l-m>. <l-m>Il-konverżazzjoni</l-m> bejn <l-m>il-kittieba</l-m> hija waħda <l-m>mill-iktar</l-m> aspetti produttivi <l-m>fit-tiswir</l-m> ta’ <l-m>dal-ġurnal</l-m>. Mingħajrha ma jistax ikun hemm kultura letterarja. Ħafna drabi meta niktbu nkunu magħluqin f’kamra waħidna, iżda <l-m>l-kliem</l-m> li nużaw qatt mhu tagħna biss.</p>
+								</div>
+							</a>
+						</li>
+					
+						<li>
+							<a class="promo frar" href="/frar-2024/">
+								<header>
+									<h1>Frar 2024</h1>
+								</header>
+								<div class="body-text">
+									<p>Kemm huma rilevanti <l-m>l-ideat</l-m> li nimpurtaw minn barra, minn kuntest ieħor, minn ilsien ieħor? Din kienet <l-m>il-mistoqsija</l-m> inizjali li tat spunt għal sensiela ta’ workshops li għamilna ma’ Librerija Geġwiġija bejn Settembru <l-m>tas-sena</l-m> l-oħra u <l-m>l-bidu</l-m> ta’ Frar. <l-m>Il-kitbiet</l-m> ta’ Monique Wittig kienu emblematiċi għalina f’dan <l-m>ir-rigward</l-m>. <l-m>Il-prassi</l-m> politika tagħha dejjem kienet letterarja u użat <l-m>il-lingwa</l-m> nnifisha, <l-m>il-logħob</l-m> bil-kliem u <l-m>l-forom</l-m>, biex tagħmel <l-m>ix-xogħol</l-m> tal-ħsieb tagħha. Illum <l-m>il-kitba</l-m> ta’ Wittig — kitba minn ilsien ieħor, minn kuntest ieħor, minn żmien ieħor — f’daqqa waħda tinħass kontemporanja sew. <l-m>It-traduzzjoni</l-m> kienet qisha ipoteżi inizjali; mod kif nimpurtaw <l-m>l-ideat</l-m>, imma mhux mingħajr ma naħsbu sew fuq <l-m>x’qed</l-m> nagħmlu: <l-m>it-toqol</l-m> li tingħata kull kelma <l-m>fil-femminiżmu</l-m> u <l-m>t-teoriji</l-m> tal-ġeneru jaf jintilef jew jirdoppja meta jaqsam fruntiera <l-m>tal-lingwa</l-m>. Ideat li kienu rilevanti Franza <l-m>fis-sebgħinijiet</l-m> mhux neċessarjament jagħmlu sens għalina llum. <l-m>Ir-reżistenza</l-m> fil-lingwa nnifisha — li rridu naqilbuha, naħdmuha — tista’ tkun mhux intopp imma għodda biex <l-m>l-ideat</l-m>, flok nibilgħuhom sħaħ, nimmetabolizzawhom. <l-m>Il-workshops</l-m> kienu għalhekk opportunità biex dan nagħmluh madwar <l-m>il-mejda</l-m> flimkien, bħal meta nieklu flimkien. <l-m>Il-qari</l-m> individwali <l-m>bil-mod</l-m> il-mod ċeda għall-qari kollettiv, u <l-m>l-metodi</l-m> li kull parteċipant juża biex jaħdem <l-m>mat-test</l-m> bil-kitba personali tiegħu stagħna <l-m>bl-għajnuna</l-m> u <l-m>s-sehem</l-m> tal-grupp kollu. <l-m>Ir-riżultat</l-m> mhuwiex uniformità ta’ idea b’leħen wieħed imma test b’ilħna li jitkellmu flimkien għalkemm mhux dejjem qed jgħidu <l-m>l-istess</l-m> ħaġa. Monique Wittig innifisha kienet involuta f’mument storiku ta’ trasferenza ta’ ideat bejn <l-m>iż-żewġ</l-m> naħat <l-m>tal-Atlantiku</l-m>, kemm meta qalbet għall-Franċiż <l-m>ix-xogħol</l-m> ta’ Marcuse, <l-m>bil-parteċipazzjoni</l-m> tiegħu stess, kif ukoll meta hi marret tgħix <l-m>l-Amerka</l-m> u kkollaborat ma’ Sande Zeig biex taqleb <l-m>il-ktieb</l-m> tagħhom Brouillon pour un dictionnaire des amantes għall-Ingliż. Minn <l-m>dax-xahar</l-m> se nagħtu bidu għal kullana ta’ traduzzjonijiet ta’ esejs dwar <l-m>il-qagħda</l-m> politika kontemporanja. <l-m>L-ewwel</l-m> wieħed se jkun <l-m>l-esej</l-m> “Kollox Iperpolitiku: Ġenealoġija <l-m>tal-Preżent</l-m>” ta’ Anton Jäger, maqlub għall-Malti minn Karl Baldacchino. F’dan <l-m>l-esej</l-m> Jäger jipprova jsib “qafas ġdid adegwat” biex nifhmu <l-m>l-epoka</l-m> ta’ wara <l-m>l-2008</l-m> fil-Punent. Waħda <l-m>mill-karatteristiċi</l-m> ta’ din <l-m>l-era</l-m> hija <l-m>l-mobbiltà</l-m> tremenda ta’ ideat minn persuna għal oħra, minn grupp għal ieħor u minn pajjiż għal ieħor. Jäger irid isib mod kif għandu jinftiehem dan <l-m>il-mument</l-m> politiku ġdid, mingħajr ma jassumi li nistgħu nibqgħu nużaw <l-m>l-istess</l-m> kategoriji u <l-m>l-istess</l-m> vokabularju li dejjem użajna. “<l-m>Mil-lum</l-m> kollox reġa’ sar politiku, u b’mod ferventi.<span class="pullsemi">”</span> Iżda lanqas <l-m>il-kelma</l-m> “politika” stess m’għandna nassumu li għadha tfisser <l-m>l-istess</l-m> ħaġa li kienet tfisser għoxrin sena ilu, jew <l-m>is-seklu</l-m> li għadda. “Minkejja <l-m>l-passjonijiet</l-m> bla fruntieri li qed jaħkmu u jittrasformaw xi wħud <l-m>mill-aktar</l-m> istituzzjonijiet b’saħħithom tagħna,<span class="pullsemi">”</span> jgħid Jäger, “verament ftit huma <l-m>n-nies</l-m> involuti <l-m>fit-tip</l-m> ta’ kunflitti ta’ interessi organizzati li xi darba konna niddeskrivu, f’sens klassiku <l-m>tas-seklu</l-m> għoxrin, bħala ‘politika’”<span class="pull">.</span></p>
+								</div>
+							</a>
+						</li>
+					
+						<li>
+							<a class="promo jannar" href="/jannar-2024/">
+								<header>
+									<h1>Jannar 2024</h1>
+								</header>
+								<div class="body-text">
+									<p>Jgħidu li <l-m>l-ħin</l-m> jeżisti biex ma jseħħx kollox f’daqqa. <l-m>Bil-Malti</l-m> għandna <l-m>l-idea</l-m> ta’ ħin u <l-m>l-idea</l-m> ta’ żmien bħala fenomeni distinti. <l-m>Il-ħin</l-m> qisu dak li jgħaddik minn mument għall-ieħor. <l-m>Il-ħin</l-m> tħossu għaddej. <l-m>Iż-żmien</l-m>, però, tinduna bih wara; tħares lura u tintebaħ li għaddew <l-m>is-snin</l-m>, li ġa ilek f’din <l-m>id-dinja</l-m> għoxrin, tletin, tmenin sena. Tħaffer <l-m>fl-art</l-m> u tintebaħ li ġa għaddew minn fuq <l-m>id-dinja</l-m> eluf ta’ snin, miljuni. F’“Manifest Kontra <l-m>ż-Żmien</l-m>”<span class="pull">,</span> Kris Polidano, f’dik <l-m>in-nofs</l-m> siegħa interminabbli ta’ vjaġġ b’<l-m>tal-linja</l-m>, tkejjel kull mument; kull minuta tagħfas fuqha <l-m>bil-ħsejjes</l-m>, <l-m>l-irwejjaħ</l-m> u <l-m>l-memorji</l-m> tagħha. <l-m>L-eċċezzjoni</l-m> trivjali ta’ ħsara <l-m>fil-karozza</l-m> ġġegħelha taqsam <l-m>il-ħin</l-m> tagħha <l-m>fil-gelgul</l-m> taż-żmien <l-m>mal-folla</l-m> għajjiena wara <l-m>x-xogħol</l-m>. <l-m>L-opportunità</l-m> li tiċċassa ’l &nbsp;barra <l-m>mit-tieqa</l-m> tagħtiha <l-m>ċ-ċans</l-m> li <l-m>l-ħin</l-m> tarah jissarraf fi żmien. “Lil ġismek għalxejn tipprova tgħidlu biex ma jikbirx; dak li jrid jagħmel. <l-m>Il-ġenetika</l-m> diġà qiegħda hemm f’postha, lesta biex tgħidlek li sormok ser jikbirlek u ser jieqaf jidħollok <l-m>ġol-qalziet</l-m> li għext fih għal sajf sħiħ; li <l-m>r-riħa</l-m> ta’ ġismek ser titlef dik <l-m>l-aħħar</l-m> qatra riħa newtrali — ħjiel <l-m>tat-terra</l-m> li jobżqu minn kull pora <l-m>bis-saħħa</l-m> t-tfal, u li nibqgħu nkarkru biha sa ma <l-m>l-ewwel</l-m> xagħra tiżbroffa minn taħt abtna.<span class="pullsemi">”</span> Warren Bartolo, <l-m>fl-entrata</l-m> tad-djarju tiegħu “<l-m>Il-mixja</l-m> lura <l-m>d-dar</l-m> kienet twila sigarett wieħed”<span class="pull">,</span> jaqsam <l-m>il-ħin</l-m> tiegħu bejn sigħat waħdu <l-m>mal-kotba</l-m> u sigħat ma’ sħabu, ma’ rġiel li jiltaqa’ magħhom, u <l-m>mal-bqija</l-m> tal-belt. “Immur nipprotesta għall-Palestina ma’ S. Tibda Republique u tispiċċa Nation. Hemm min qiegħed bilwieqfa fuq <l-m>it-tinda</l-m> tal-bus stop itajjar duħħan <l-m>bil-kuluri</l-m> tal-bandiera <l-m>tal-Palestina…</l-m> Filgħaxija mmorru <l-m>d-dar</l-m> ta’ E u nieklu dumplings <l-m>bil-ħaxix</l-m> u <l-m>bil-kimchi</l-m> (li ma jogħġobnix), pommes noisettes u npejpu ftit. Imbagħad noqgħod nara lil B, E u S jilagħbu Fortnite (ippruvajt nilgħab ftit ukoll).<span class="pullsemi">”</span> Susan Sontag kienet żiedet tgħid li <l-m>l-ispazju</l-m> jeżisti biex mhux kollox jiġri lilek. <l-m>Il-ħin</l-m> tħossu int, iżda qed jiġri lil kulħadd, anki lil dawk li bilkemm nafu xejn dwarhom. “Mhux li tant nixtieq nies f’kitbieti,<span class="pullsemi">”</span> tikteb Loranne Vella <l-m>fit-tielet</l-m> entrata <l-m>tad-djarju</l-m> tagħha. “Jew aħjar, nixtieqhom — jekk ikunu hemm — jibqgħu anonimi, nixtieqhom imċajprin, <l-m>bil-fattizzi</l-m> mżellġin, <l-m>it-tip</l-m> li jħalluk <l-m>fl-għama</l-m> dwar <l-m>x’hemm</l-m> fil-fond ta’ qalbhom, jidher biċ-ċar li qed jaħsbu ħafna aktar milli qed juruk.<span class="pullsemi">”</span> Hemm ukoll dawk <l-m>is-saffi</l-m> li huma eqdem minn kull ħjiel li ħalla warajh <l-m>il-bniedem</l-m>, kif jurina Omar <l-m>N’Shea</l-m> fir-raba’ parti ta’ Bur Mgħeż. <l-m>Is-saffi</l-m> ta’ sena fuq sena li jsiru <l-m>d-dinja</l-m> ta’ madwarna u, taħt saqajna, <l-m>l-art</l-m> li nimxu fuqha.</p>
+								</div>
+							</a>
+						</li>
+					
+						<li>
+							<a class="promo dicembru" href="/diċembru-2023/">
+								<header>
+									<h1>Diċembru 2023</h1>
+								</header>
+								<div class="body-text">
+									<p>“<l-m>L-ikbar</l-m> deċiżjonijiet politiċi li għandna bżonn nieħdu huma dwar <l-m>l-ikel</l-m>”<span class="pull">,</span> tgħid Noah Fabri f’“Insalata”<span class="pull">.</span> <l-m>L-ewwel</l-m> il-pappa. <l-m>L-ikel</l-m> illum “jissimbolizza wkoll <l-m>l-inugwaljanza</l-m> u <l-m>l-inġustizzji</l-m> tal-katini <l-m>tal-provvista</l-m> u <l-m>l-kapitaliżmu</l-m> globali, <l-m>il-ħela</l-m> u <l-m>l-ġuħ</l-m>”<span class="pull">.</span> <l-m>Fil-performance</l-m> li kien jisimha wkoll “Insalata”<span class="pull">,</span> u li ttellgħet bejn Awwissu u Ottubru 2023, Noah tkellmet dwar <l-m>ir-relazzjoni</l-m> bejn <l-m>l-ikel</l-m> u <l-m>l-ġeneru</l-m>. Tiftakar kif <l-m>fl-iktar</l-m> mumenti f’ħajjitha fejn kellha bżonn tikkomunika <l-m>mal-familja</l-m> tagħha, ma’ nannitha u ommha, kien <l-m>bit-tisjir</l-m> li dan sar <l-m>bl-iktar</l-m> mod intens. “<l-m>L-għerf</l-m> tan-nisa jirrikonoxxi li <l-m>l-ikel</l-m> huwa xi ħaġa ħajja li <l-m>l-ħin</l-m> kollu qed terġa’ ssir. <l-m>L-ikel</l-m> ma jemminx <l-m>fit-tradizzjoni</l-m>” u ma’ kull ikla li tissajjar, <l-m>ir-riċetta</l-m> u <l-m>l-ikel</l-m> jinbidlu. <l-m>L-ikel</l-m> huwa <l-m>l-mod</l-m> kif <l-m>id-dinja</l-m> ta’ madwarna tidħol fina, <l-m>il-bidu</l-m> tal-proċess metaboliku tagħna bħala individwi u bħala soċjetà. <l-m>L-ikel</l-m> tagħna mhux innoċenti; mnejn jiġi u kif jaslilna għandu effett fuq <l-m>id-destin</l-m> tal-pjaneta. Noah jinnota kif nanntu kienet issajjar mingħajr ma tiżen jew tkejjel — hemm għarfien li mhux maqbud <l-m>mis-sistemi</l-m> teknokratiċi li jikkwantifikaw u jikkomodifikaw kollox, għarfien li jista’ jgħaddi biss <l-m>fl-intimità</l-m> ta’ bejn persuna u oħra, <l-m>l-intimità</l-m> tal-kċina u <l-m>tal-mejda</l-m>. “Flaming Fag” ta’ Matteo Pullicino toħodna <l-m>fl-intimità</l-m> tal-friex, <l-m>tas-sodda</l-m>, <l-m>fl-intimità</l-m> ta’ bewsa. <l-m>Fl-attentati </l-m>— minkejja <l-m>d-dinja </l-m>— li ngħaddu xi ħaġa, xi forma ta’ ġmiel, wieħed <l-m>lill-ieħor</l-m>, permezz ta’ kliem, ta’ vrus, ta’ poeżija. <l-m>Il-protagonisti</l-m> tal-esej ta’ Omar <l-m>N’Shea</l-m>, “Joey Tilbes, <l-m>it-Tabù</l-m> Tinża’”<span class="pull">,</span> iserrħu fuq lingwa sħiħa li mhux dejjem fiha <l-m>l-kliem</l-m>. “<l-m>L-ilbies</l-m>, <l-m>il-parrokki</l-m>, <l-m>it-tkaken</l-m>, <l-m>il-make-up</l-m> kienu prostetika neċessarja, bħalma kienu <l-m>t-teknoloġiji</l-m> tal-ġisem li jipproduċu affetti u mutetti ta’ jdejn, xufftejn, għajnejn u mossi.<span class="pullsemi">”</span> Jgħaddu għarfien lilhom infushom u liċ-ċirku żgħir ta’ sorellanza madwarhom anki jekk bilfors iridu jagħmlu dan għal udjenzi li huma daqqa ostili u daqqa nejjieka. “Għall-udjenza dan kollu kien farsa, ġesti trivjalizzati; stajt tkun mara biss għal dawk li huma bħalek. <l-m>Il-kummiedja</l-m> tal-ġeneru kienet parti <l-m>mill-idea</l-m> tal-konsum għall-gost.<span class="pullsemi">”</span></p>
+								</div>
+							</a>
+						</li>
+					
+						<li>
+							<a class="promo novembru" href="/novembru-2023/">
+								<header>
+									<h1>Novembru 2023</h1>
+								</header>
+								<div class="body-text">
+									<p>“Nitwieldu u nikbru. Inwelldu u nkomplu nikbru sa ma <l-m>fl-aħħar</l-m> nispiċċaw. M’hemmx mod ieħor.<span class="pullsemi">”</span> Hekk tgħid Virginia lil oħtha Vera f’“Qamar Aħmar”<span class="pull">,</span> <l-m>in-novella</l-m> ta’ Simon Bartolo li qed nibdew biha <l-m>dax-xahar</l-m>. “Kollox jitmermer. Kollha se nispiċċaw.<span class="pullsemi">”</span> Dan <l-m>il-fataliżmu</l-m> jibda ċiklu li jiżvolġi f’ritorn — u bħal dejjem, <l-m>it-tfittxija</l-m> għall-istorja tagħna hija neċessarjament tfittxija għal dak li fadal minn ta’ qabilna. Ħafna drabi din <l-m>it-tfittxija</l-m> toħodna fuq vjaġġ lura lejn <l-m>il-post</l-m> li nsejħulu <l-m>d-dar</l-m>. <l-m>Id-dar</l-m> tista’ tkun <l-m>tal-ġebel</l-m>, jew tista’ tkun dik <l-m>id-dar</l-m> iktar dejjiema taħt <l-m>il-blat</l-m>, mnejn darba kien ġie <l-m>l-ġebel</l-m> innifsu. <l-m>Il-fdalijiet</l-m> li nsibu jafu jkunu biss għadam, ġebel, kmamar vojta. Drabi oħrajn jifdal biss dokumenti <l-m>fl-arkivji</l-m> għax <l-m>il-qabar</l-m> innifsu ndifen <l-m>maż-żmien</l-m>. <l-m>Fit-tielet</l-m> parti ta’ “Bur Mgħeż”<span class="pull">,</span> Omar <l-m>N’Shea</l-m> jibda <l-m>mill-metodi</l-m> tal-arkeoloġija sakemm jgħaddi għall-mezzi li nużaw bħala bnedmin biex niftakru ’l &nbsp;qrabatna, kemm biex nibqgħu magħhom u kemm biex nerħulhom f’idejn <l-m>iż-żmien</l-m>, “<l-m>il-proċessi</l-m> soċjali, fiżiċi u ontoloġiċi li bihom <l-m>il-ħajjin</l-m> jittrasformaw <l-m>il-ġisem</l-m> bla ħajja <l-m>fil-ġisem</l-m> mejjet”<span class="pull">.</span> <l-m>Il-metodu</l-m> xjentifiku li tuża <l-m>l-arkeoloġija</l-m> moderna hija <l-m>l-istratigrafija</l-m>, tħaffir <l-m>tat-trinek</l-m> li jħalluna naraw <l-m>is-saffi</l-m> li jserrħu wieħed fuq <l-m>l-ieħor</l-m> taħt saqajna. Metodu ieħor <l-m>tal-arkeoloġija</l-m> huwa <l-m>l-kelma</l-m>, <l-m>il-kitba</l-m>, <l-m>it-tfittix</l-m> fl-arkivji fejn kull kelma għandha saff ieħor taħtha, fejn kull riċerkatur qed jibni fuq ta’ qablu; jitgħallem, jikkollabora, imeri, jimpika. Kris Polidano, <l-m>fil-poeżija</l-m> tagħha “-Na -I -Hom” tinħakem <l-m>mill-memorji</l-m> li għadhom qed ifittxu ma’ xiex jaqbdu, ma’ immaġni <l-m>tan-namrar</l-m> tal-ġenituri, <l-m>mal-“kanzunetti</l-m> tad-Depeche Mode/li saru <l-m>tal-quddiesa</l-m> fejn tmur <l-m>il-mummy</l-m> u ma tmurx <l-m>in-nanna</l-m>”<span class="pull">.</span> <l-m>Il-memorji</l-m> tal-kittieba, <l-m>tal-familja</l-m> u <l-m>tar-raħal</l-m> jidħlu f’xulxin. <l-m>Id-dar</l-m>, <l-m>il-ġenituri</l-m>, <l-m>in-nanniet</l-m>, <l-m>fit-tliet</l-m> xogħlijiet li għandna <l-m>dax-xahar</l-m>, mhumiex maqtugħin <l-m>mill-komunità</l-m> li jgħixu fiha. Meta <l-m>ż-żagħżugħ</l-m>, <l-m>fin-novella</l-m> ta’ Simon, jasal <l-m>fir-raħal</l-m> biex ifittex lil oħt nanntu, “<l-m>il-pjan</l-m> kien li jfittex iċ-ċimiterju biex isib <l-m>id-dar</l-m>”<span class="pull">.</span> Iċ-ċimiterju huwa <l-m>r-raħal</l-m> tal-imgħoddi li se jibqa’ tul <l-m>iż-żmien</l-m>, “<l-m>it-tkomplija</l-m> tal-imgħoddi <l-m>fl-issa</l-m> biex jimxi lejn <l-m>id-dejjem</l-m> li ma jafu ħadd”<span class="pull">;</span> <l-m>l-oqbra</l-m> bl-istejjer tagħhom, <l-m>il-kannierja</l-m> li tieħu ’l &nbsp;kulħadd. <l-m>Id-dfin</l-m> kollettiv, jgħidilna Omar, “spiss jingħad li jirrifletti <l-m>l-identità</l-m> ta’ kollettività <l-m>fil-komunità</l-m>, prassi komuni <l-m>fil-preistorja</l-m> tal-Mediterran”<span class="pull">.</span></p>
+								</div>
+							</a>
+						</li>
+					
+						<li>
+							<a class="promo ottubru" href="/ottubru-2023/">
+								<header>
+									<h1>Ottubru 2023</h1>
+								</header>
+								<div class="body-text">
+									<p>Kemm hi tagħna <l-m>l-art</l-m> ta’ taħt saqajna? Trid tkun tagħna biex tiflaħna? Dak li hemm taħtha u dak li jikber minnha, f’liema sens għandu jkun tagħna? <l-m>Fil-Ġenesi</l-m>, Adam jieħu <l-m>s-sjieda</l-m> fuq <l-m>il-ħolqien</l-m> billi jagħti isem għal kollox. <l-m>Fl-esej</l-m> tagħha “Żerriegħa”<span class="pull">,</span> Davinia Hamilton tibda <l-m>l-vjaġġ</l-m> ta’ investigazzjoni <l-m>fir-relazzjoni</l-m> tagħha ma’ art twelidha <l-m>bil-memorja</l-m> tal-ismijiet <l-m>tal-għasafar</l-m> u <l-m>tas-siġar</l-m>. “Nipprova nitgħallimhom <l-m>bil-Malti</l-m> dawn <l-m>l-ismijiet</l-m>. Ħafna minnhom ma nafhomx, għax dan <l-m>is-suġġett</l-m> qatt ma kien jinteressani qabel. Infittixhom fuq <l-m>l-internet</l-m> u f’Kelmet <l-m>il-Malti</l-m>. Għandhom ismijiet sbieħ immens. Vjolin <l-m>tax-Xitwa</l-m>, Bufula <l-m>tal-Qamar</l-m>, Sponsun, Primavera, Sultan iċ-Ċawl, Sturnell, Gardell, Ekru. Siġra <l-m>tal-Luq</l-m>, Balluta, Siġra <l-m>tad-Dorf</l-m>, Fraxxnu, Żagħrun.<span class="pullsemi">”</span> <l-m>L-ismijiet</l-m> mhumiex biss sjieda imma wkoll appartenenza. <l-m>L-ismijiet</l-m> huma <l-m>r-rabta</l-m> tagħna <l-m>mad-dinja</l-m>. Fihom <l-m>l-istorja</l-m> ta’ kif għexna magħhom u kif għexna bihom. Meta <l-m>l-proċessi</l-m> storiċi u ekonomiċi jnessuna <l-m>l-ismijiet</l-m> tal-fjuri u <l-m>tas-siġar</l-m>, inessuhomlna bħala parti minn proċess ta’ approprjazzjoni. Meta nindunaw li nsejna <l-m>l-isem</l-m> tagħhom nindunaw ukoll li m’għadhomx tagħna. <l-m>L-art</l-m> ittieħdet minn taħt saqajna. Kif tgħid Davinia, “hemm kliem f’bosta oqsma li jinteressawni li <l-m>bil-Malti</l-m> ma jeżistix — il-psikoanaliżi, <l-m>it-teorija</l-m> queer, <l-m>it-teorija</l-m> femminista, <l-m>it-teatru</l-m>, <l-m>id-disinn</l-m>, <l-m>l-internet</l-m> u <l-m>l-industrija</l-m> soċjali, fost <l-m>l-oħrajn</l-m>. Issir kważi impossibbli li naħseb fuqhom <l-m>fil-lingwa</l-m> nattiva tiegħi. <l-m>Il-lingwa</l-m> Ingliża ssir krozza. Dan huwa effett <l-m>tal-kolonjaliżmu</l-m>, li jagħmilha ta’ arbitru bejni u bejn <l-m>id-dinja</l-m>.<span class="pullsemi">”</span> F’“Kontra Tagħna Għaliex Magħna”<span class="pull">,</span> Joe Gatt jikteb fuq <l-m>l-istorja</l-m> ta’ Malta wara <l-m>l-gwerra</l-m> u kemm kellu jgħaddi żmien qabel konna kapaċi nimmaġinaw pajjiż mingħajr ħakma barranija. U <l-m>l-fdalijiet</l-m> ta’ din <l-m>it-taqbida</l-m> tal-immaġinazzjoni għadhom hemm, fi lsienna, <l-m>fl-imġiba</l-m> tagħna u f’kif inħarsu lejna nfusna. <l-m>L-aljenazzjoni</l-m> kulturali hija riżultat ta’ aljenazzjoni materjali. <l-m>Il-ħsieb</l-m> li <l-m>l-art</l-m> ta’ taħt saqajna m’għandhiex tkun ta’ xi ħadd ieħor kważi kulħadd jaqbel miegħu. Imma tibqa’ <l-m>l-mistoqsija</l-m> ta’ <l-m>x’se</l-m> nagħmlu biha <l-m>l-art</l-m> meta ssir tagħna. Nistgħu naħsbu li <l-m>l-ħelsien</l-m> huwa <l-m>d-dritt</l-m> li nkunu aħna biss li nisfruttawha. Jew inkella, li <l-m>l-ħelsien</l-m> veru huwa li nsibu mod kif naħdmu flimkien <l-m>mad-dinja</l-m>, ingawdu <l-m>l-frott</l-m> tagħha, mingħajr ma nifnuha, mingħajr ma mmarrduha u nġibuha <l-m>fix-xejn</l-m>. U forsi nħallu lil ta’ madwarna, <l-m>lin-natura</l-m>, <l-m>lill-annimali</l-m> u ’<l-m>s-siġar</l-m> jgħidulna huma <l-m>x’jisimhom</l-m>.</p>
+								</div>
+							</a>
+						</li>
+					
+						<li>
+							<a class="promo settembru" href="/settembru-2023/">
+								<header>
+									<h1>Settembru 2023</h1>
+								</header>
+								<div class="body-text">
+									<p>Qabel <l-m>l-arkeoloġija</l-m> hemm <l-m>il-ġeoloġija</l-m>. <l-m>Iż-żmien</l-m> kif tkejlu <l-m>l-ġebla</l-m> kważi impossibbli għalina nimmaġinawh. Dawn <l-m>il-gżejjer</l-m> stess huma dak li fadal <l-m>mill-ħajjiet</l-m> ta’ miljuni ta’ kreaturi li <l-m>mal-medda</l-m> taż-żmien għexu f’dan <l-m>il-baħar</l-m>. Kif jgħid Omar <l-m>N’Shea</l-m> fl-ewwel esej minn serje dwar <l-m>is-sit</l-m> ta’ Bur Mgħeż, kellhom jgħaddu “miljuni fuq miljuni ta’ snin biex <l-m>il-ħlejjaq</l-m> tal-ilma kkonspiraw li jinżgħu ġisimhom u jintelqu mejtin fuq dawk ta’ qabilhom biex <l-m>il-pressa</l-m> tal-ilma baħar tagħġinhom f’ġebla sedimentarja.<span class="pullsemi">”</span> <l-m>L-oqbra</l-m> Neolitiċi ta’ Bur Mgħeż intesew f’temp ta’ ftit għexieren ta’ snin wara li nstabu, u llum <l-m>is-sit</l-m> tfittxu u ma ssibux, ħlief <l-m>fl-għajdut</l-m> u <l-m>l-memorji</l-m> tan-nies u fi ftit noti ’l &nbsp;hawn u ’l &nbsp;hemm <l-m>fl-arkivji</l-m>. <l-m>L-arkeoloġija</l-m> hija ossessjonata <l-m>bl-għadam</l-m> u <l-m>bl-oqbra</l-m> għax <l-m>fil-preistorja</l-m> dak biss kien jifdal minnu <l-m>l-bniedem</l-m>. Għemilu seta’ biss ikun bini, u <l-m>l-bini</l-m> jiġġarraf. Konna nħallu warajna biss <l-m>l-istorja</l-m> ta’ ġisimna, ta’ reazzjonijiet kimiċi u mutazzjonijiet ġenetiċi. Jew għall-inqas hekk dejjem qaltilna <l-m>d-dixxiplina</l-m> tal-arkeoloġija, <l-m>id-dixxiplina</l-m> kolonjali per eċċellenza. Din twaqqfet b’tali mod li tgħidlek li <l-m>l-għarfien</l-m> tan-nies <l-m>tal-post</l-m> huwa sekondarju għall-aħħar. Għall-kuntrarju, <l-m>fl-esej</l-m> tiegħu, Omar — waqt li jmur ifittex <l-m>il-propensità</l-m> tal-bniedem fuq dawn <l-m>il-gżejjer</l-m> li jindifen <l-m>fil-blat </l-m>— jipprova juża mod ieħor kif jitkellem ma’ dawn <l-m>il-bnedmin</l-m> tal-qedem billi jitħaddet ma’ nies li bħalhom <l-m>il-ġebla</l-m> tal-franka “għexu magħha, kielu minnha, inksew biha lejl u nhar”<span class="pull">.</span> <l-m>Ir-rivoluzzjoni</l-m> teknoloġika <l-m>tal-kitba</l-m> biddlet kollox. Issa stajna nħallu warajna mhux biss <l-m>l-istorja</l-m> ta’ kif <l-m>iż-żmien</l-m> għamel ħerba minn ġisimna imma wkoll ta’ dak li ħsibna, ta’ dak li xxennaqna għalih. <l-m>Il-kitba</l-m> mhux stejjer biss tgħid; <l-m>il-kitba</l-m> malajr tibda thewden fuq <l-m>iż-żmien</l-m> u fuqha nnifisha. Minn dan <l-m>ix-xahar</l-m> se nibdew nippubblikaw entrati ta’ djarji minn diversi kittieba. “Għalfejn niktbu għal għada dak li ġara llum?” tistaqsi Loranne Vella <l-m>fid-djarju</l-m> tagħha. “<l-m>X’qed</l-m> inżommu ħaj verament? Għal min qed niktbu? Għalina stess bħala eżerċizzju ta’ kitba? Għalina stess bħala eżerċizzju ta’ qari dwarna stess? Jew għal min jiġi warajna li lanqas biss jafna?” <l-m>Ir-ritwal</l-m> tal-kitba <l-m>fid-djarju</l-m>, bħar-ritwal <l-m>tad-dfin</l-m>, huwa sforz biex ma nintesewx minkejja <l-m>l-eluf</l-m> ta’ snin li jiġu warajna. Meta nindifnu u nsiru ħaġa waħda <l-m>mal-blat</l-m>, <l-m>l-istorja</l-m> tagħna tkompli tiżvolġi fi żmien ġeoloġiku. Imma <l-m>ż-żmien</l-m> tal-kelma jgħaddi f’ħakka <l-m>t’għajn</l-m> għax hemm <l-m>it-tama</l-m> li biha nkunu nistgħu ninftiehmu minn dawk li xi darba għad forsi jiġu jfittxuna.</p>
+								</div>
+							</a>
+						</li>
+					
+						<li>
+							<a class="promo awwissu" href="/awwissu-2023/">
+								<header>
+									<h1>Awwissu 2023</h1>
+								</header>
+								<div class="body-text">
+									<p>Il-qilla <l-m>tax-xemx</l-m> ixxennaqna għall-wens <l-m>tal-lejl</l-m>. <l-m>Is-sigħat</l-m> twal <l-m>tal-jum</l-m>, <l-m>it-toqol</l-m> tal-ħars, <l-m>il-parti</l-m> fil-ħajja li ntgħażlet għalina, li tisirqilna ħajjitna ftit ftit, iġennuna għall-ħarba ġo dawk <l-m>is-sigħat</l-m> ta’ wara nżul <l-m>ix-xemx</l-m>, meta jibda dramm ieħor. Binhar mhux tagħna imma ta’ kull min jitfa’ ħarstu fuqna, ta’ kull rendikont li nagħtu, ta’ kull ritratt li jittiħdilna. <l-m>Id-dawl</l-m> għandu jedd fuqna, jaf xi jrid minna. <l-m>Il-persunaġġi</l-m> fl-istejjer ta’ Miriam Galea jitbattlu <l-m>mid-dija</l-m> qalila <l-m>tax-xemx</l-m> Maltija u jaħarbu ’l &nbsp;fuq lejn belt Ewropea fejn <l-m>il-ġurnata</l-m> mudlama kważi bħal-lejl, fejn “<l-m>it-temp</l-m> ikrah illum” u <l-m>s-“sema</l-m> donnu tbenġila”<span class="pull">.</span> U minkejja <l-m>l-ħarba</l-m>, kollha donnhom jistaqsu <l-m>l-istess</l-m> mistoqsija: “Fejn qed tistaħba <l-m>x-xemx</l-m> tisreġ, fejn mar <l-m>id-dawl</l-m>?” <l-m>Il-lejl</l-m> jgħattik minn ħaddieħor imma jikxfek miegħek innifsek. “<l-m>Fid-dlam</l-m> u <l-m>fix-xita</l-m> qliel kulħadd kien inġabar għall-kenn ta’ daru u jien kont waħda <l-m>mill-ftit</l-m> iterrqu <l-m>t-toroq</l-m> jiżolqu <l-m>tal-belt</l-m>, jirbumbjaw <l-m>bl-eku</l-m> ta’ passi għajjiena.<span class="pullsemi">”</span> <l-m>Id-dellijiet</l-m> jagħtuk <l-m>x’tifhem</l-m> li fihom tista’ timraħ, fihom tista’ ssib solidarjetà erotika, alleanza, sorellanza. Omar <l-m>N’Shea</l-m> jikteb dwar <l-m>il-lejl</l-m> u <l-m>l-ispazju</l-m> erotiku li jinħoloq bejn <l-m>id-dellijiet</l-m> fl-esej “<l-m>Bil-Moħbi</l-m> fil-Beraħ” fejn joħodna lura ġenerazzjoni sħiħa għal realtà li bilkemm għadha teżisti, dinja li sfaxxat <l-m>fil-ġentrifikazzjoni</l-m> politika u elettronika. Dinja <l-m>bl-użanzi</l-m> u <l-m>l-etikett</l-m> tagħha, b’lingwaġġ li fih innifsu kien ukoll parti <l-m>mis-satra</l-m>. Dinja <l-m>bil-ġeografija</l-m> tagħha, <l-m>bil-mapep</l-m> tal-lejl li jistgħu jitqiegħdu fuq dawk ta’ binhar u jittrasformaw <l-m>l-użu</l-m> u <l-m>s-sjieda</l-m> ta’ post pubbliku, <l-m>il-Ġnien</l-m> tal-Gżira — li hu tiegħek għax hu ta’ kulħadd — minn lok imdawwal għat-teatrin <l-m>tal-familja</l-m> matul <l-m>il-jum</l-m> għal wieħed mudlam għall-“ħufar” matul <l-m>il-lejl</l-m>. Imma <l-m>l-wens</l-m> qatt mhu sħiħ, la ta’ billejl, la ta’ binhar, la <l-m>tad-dellijiet</l-m> u lanqas <l-m>tal-irtokk</l-m> li tuża Mona Lisa, <l-m>il-protagonista</l-m> tal-kitba ta’ Matthew Schembri.</p>
+								</div>
+							</a>
+						</li>
+					
+						<li>
+							<a class="promo lulju" href="/lulju-2023/">
+								<header>
+									<h1>Lulju 2023</h1>
+								</header>
+								<div class="body-text">
+									<p>Meta Platun ried ifaħħar lil Saffo, sejħilha <l-m>l-Għaxar</l-m> Muża. <l-m>Id-disgħa</l-m> li ġa kien hemm, biex jgħaddu <l-m>lill-bnedmin</l-m> l-għerf poetiku, artistiku u xjentifiku <l-m>mill-qċaċet</l-m> tal-muntanji fejn kienu jgħammru, kienu jsibu xi raġel Grieg u jfesfsulu f’widintu, biex imbagħad minnu jitkellmu <l-m>l-allat</l-m>. Anki jekk kliem Saffo xi darba tlissen b’leħen <l-m>l-allat</l-m>, illum jaslilna umli u tentattiv, kelma ’l &nbsp;hawn, kelma ’l &nbsp;hemm fuq bċejjeċ ta’ papiru li jdumu sekli sħaħ biex jitfaċċaw. <l-m>It-traduzzjoni</l-m> l-ġdida ta’ Warren Bartolo <l-m>tal-frammenti</l-m> ta’ Saffo, tgħidilna Loranne Vella, tidħol inkiss inkiss <l-m>mat-test</l-m> oriġinali. Biex iġibilna lil Saffo <l-m>bil-Malti</l-m>, <l-m>it-traduttur</l-m> jindiehes magħha, jgħix magħha, joħroġha miegħu, iħalliha ssir parti minn ħajtu ta’ kuljum. Ma jagħmilx vjolenza fuq <l-m>il-poeżija</l-m> imma jħallilna <l-m>l-ispazji</l-m> tal-istorja, ta’ fejn għebu <l-m>l-biċċiet</l-m>. Test ifframmentat nistgħu ninħallu fih daqskemm jinħall fina hu. <l-m>L-istess</l-m> tagħmel Rowena Grech <l-m>bil-ħrejjef</l-m> u <l-m>l-mitoloġija</l-m>, meta taqbad mit u tiddomestikah, tħallih jaħkimha imma wkoll taħkmu hi billi tiġġissem bih. Rowena tidħol <l-m>fl-istorja</l-m> billi tirrakkuntaha <l-m>mill-ġdid</l-m>, billi <l-m>l-istorja</l-m> tilbisha, tiffotografaha, iżżarmaha permezz <l-m>tat-teknoloġiji</l-m> kollha li għandha u ġġiegħel ’<l-m>l-istorja</l-m> tħares lejha nnifisha <l-m>fil-mera</l-m> tal-midja soċjali. F’“Medusa”<span class="pull">,</span> Rowena, bħalma tagħmel f’bosta <l-m>mill-istejjer</l-m> li tirrakkonta, tidħol <l-m>fl-istorja</l-m>, issib <l-m>il-mara</l-m> fiha u ġġibha <l-m>fid-dinja</l-m> tagħna. Ma tagħtiniex <l-m>l-istorja</l-m> tal-eroj, li jagħmel atti ta’ barra minn hawn, u jirbaħ, u jaħkem, u jistupra, u joqtol. Naqraw, minflok, <l-m>l-isforz</l-m> li <l-m>l-protagonista</l-m> tagħmel biex tieħu <l-m>l-forma</l-m> u ssir karattru sħiħ, li titlibbes biha nnifisha. Loranne tikkwota <l-m>l-idea</l-m> ta’ Ursula K. Le Guin li minbarra <l-m>l-istejjer</l-m> vjolenti li ilna nafu <l-m>mill-mitoloġija</l-m>, hemm tip ieħor ta’ storja li ftit ġiet miktuba. “Hemm stejjer <l-m>bil-lanza</l-m>, <l-m>bit-taqtigħa</l-m> sfrenata, imdemmija, dwar dak <l-m>il-wieħed</l-m> li <l-m>fl-aħħar</l-m> joħroġ rebbieħ. Imbagħad hemm <l-m>l-istejjer</l-m> bil-qoffa, li narawha timtela <l-m>bil-mod</l-m> il-mod, nedhew niflu kull frotta li titqiegħed fiha, nistagħġbu <l-m>bil-ġmiel</l-m>, <l-m>bl-ilwien</l-m>, <l-m>bl-emozzjonijiet</l-m> li jitqanqlu fina hekk kif narawha timtela sa ma tfur. Iżda kull fejn inħarsu, <l-m>l-aktar</l-m> li naraw huma <l-m>l-istejjer</l-m> bil-lanza, għax <l-m>l-istejjer</l-m> bil-qoffa ma tantx jagħmlu ħoss.<span class="pullsemi">”</span> Forsi Platun għolla ’l &nbsp;Saffo għal-livell ta’ Muża għax ma riedx jara żewġ nisa jfesfsu f’widnejn xulxin. Wara kollox, bilfors kellu jkun hemm xi spjegazzjoni sopranaturali għall-fatt li Saffo kienet ħakmet <l-m>l-immaġinazzjoni</l-m> tal-qarrejja tagħha bi vrus dwar <l-m>l-imħabba</l-m>, <l-m>il-ġmiel</l-m>, <l-m>il-biżgħat</l-m>. <l-m>Il-kwotidjan</l-m>, <l-m>id-domestiku</l-m>, jaf joħloq theżżiża, <l-m>bil-mod</l-m> kwiet u persistenti tiegħu, daqs <l-m>l-ikbar</l-m> terremot.</p>
+								</div>
+							</a>
+						</li>
+					
+						<li>
+							<a class="promo gunju" href="/ġunju-2023/">
+								<header>
+									<h1>Ġunju 2023</h1>
+								</header>
+								<div class="body-text">
+									<p>Il-kelma “imġissem” <l-m>is-soltu</l-m> nużawha biex infissru persuna b’saħħitha, xi ħadd li forsi qatta’ ħafna ħin f’xogħol manwali jew sigħat twal jerfa’ <l-m>l-ħadid</l-m>. Imma, kif jgħid Kurt Borg <l-m>fl-esej</l-m> “Ġilda”<span class="pull">,</span> <l-m>il-mod</l-m> kif neżistu huwa mod imġissem. <l-m>Il-fatt</l-m> li ngħixu bħala <l-m>dal-ġisem</l-m> jagħtina postna <l-m>fid-dinja</l-m> li ngħixu fiha. Dak li nħossu <l-m>mid-dinja</l-m> u dak li ngħidu <l-m>lid-dinja</l-m> jitniżżel fuq, u jinqara minn, ġisimna. Charlene Galea tieħu ’l &nbsp;ġisimha bħala <l-m>l-ktieb</l-m> ta’ ħajjitha u tagħti vuċi għal kull marka li ssib fuqu. <l-m>Ix-xogħol</l-m> tagħha “Ġismi Battikata” kellu <l-m>l-ġenesi</l-m> tiegħu f’serje ta’ workshops li għamlet Budapest bħala parti minn sensiela ta’ attivitajiet performattivi dwar <l-m>il-ġisem</l-m>, <l-m>il-moviment</l-m> u <l-m>l-vuċi</l-m>, li ilha tesplora dawn <l-m>l-aħħar</l-m> snin. Għaliha <l-m>l-ġisem</l-m> huwa kemm <l-m>is-sors</l-m> ta’ dak li tħoss u kemm <l-m>ir-reċipjent</l-m> ta’ dak li jagħtiha kulma tiltaqa’ miegħu f’ħajjitha. <l-m>Il-ġisem</l-m> ma tħossux biss minn ġewwa, imma tarah ukoll minn barra, <l-m>fil-mera</l-m> tal-imġiba lejha <l-m>tan-nies</l-m>. Għaliex għalkemm ngħixu f’ġisimna, ġisimna mhux tagħna biss. Qed jiġi kkunsmat minn ħaddieħor u ffurmat <l-m>mill-mod</l-m> kif jarawh, kif iriduh. <l-m>Mill-mod</l-m> kif jinħabb minn ħaddieħor u <l-m>l-mod</l-m> kif inhu għodda f’makkinarju ikbar minn kull ġisem individwali, makkinarju ekonomiku u politiku. Fuq <l-m>il-ġisem</l-m> tinkiteb <l-m>l-istorja</l-m> tagħna; <l-m>ir-rendikont</l-m> tal-ġisem huwa <l-m>r-rendikont</l-m> tal-ħajja tagħna. Charlene tieħu <l-m>l-idea</l-m> tal-kitba fuq <l-m>il-ġisem</l-m> ukoll b’mod dirett permezz <l-m>tat-tpinġija</l-m>. Kontra <l-m>l-istorja</l-m> li <l-m>d-dinja</l-m> u <l-m>ż-żmien</l-m> inaqqxu fuq ġisimha, hi tikteb fuq <l-m>il-ġilda</l-m> tagħha ittra <l-m>lid-dinja</l-m> biex tgħidilha xi ħaġa lura. <l-m>In-nifs</l-m>, <l-m>il-vuċi</l-m>, <l-m>il-ħsieb</l-m>, <l-m>il-moviment</l-m>, <l-m>l-azzjoni</l-m> huma kollha <l-m>l-arti</l-m> ta’ Charlene. <l-m>Fil-leħen</l-m> issib <l-m>il-ftit</l-m> garanzija li hemm xi ħaġa li tibda ġewwa u li tipprova tgħid <l-m>l-istorja</l-m> ta’ <l-m>dal-ġisem</l-m> minn taħt <l-m>il-ġilda</l-m>. Kif jikteb Kurt, “<l-m>il-ġilda</l-m> tgħattik filwaqt li tikxfek bħala kreatura vulnerabbli”<span class="pull">.</span> Għalih, <l-m>il-waqgħa</l-m> ta’ <l-m>dal-ġisem</l-m> vulnerabbli, faċilment immarkat, hija dik li tagħmilna bnedmin, dik li żżommna milli nkunu allat.</p>
+								</div>
+							</a>
+						</li>
+					
+						<li>
+							<a class="promo mejju" href="/mejju-2023/">
+								<header>
+									<h1>Mejju 2023</h1>
+								</header>
+								<div class="body-text">
+									<p>Jekk huwa minnu, bħalma jgħidu ħafna, li kull kitba hija forma ta’ traduzzjoni, <l-m>il-kitba</l-m> bil-Malti terġa’ hija traduzzjoni b’mod iktar ovvju minn dak li hu mifhum minn min jgħid hekk. F’dawn <l-m>l-ewwel</l-m> xogħlijiet li għandna <l-m>fil-ġurnal</l-m> tagħna din <l-m>it-taqbida</l-m> kienet ta’ spiss parti importanti <l-m>mill-kitba</l-m> u <l-m>mill-proċess</l-m> editorjali. Meta <l-m>l-ewwel</l-m> niddeċiedu li niktbu dwar suġġetti li aħna intiżi fihom imbagħad wara nagħżlu li niktbu dwarhom <l-m>bil-Malti</l-m>, insibu ruħna nipproċessaw ideat illi dejjem qrajniehom b’lingwa oħra, probabbilment <l-m>bl-Ingliż</l-m>, u li għalhekk bqajna naħsbuhom b’din <l-m>il-lingwa</l-m>. Meta niġu biex nartikolawhom <l-m>bil-Malti</l-m> nsibu ruħna nitqabdu bejn <l-m>l-idea</l-m> nnifisha u espressjoni preċiża u eleganti. Dan huwa <l-m>l-każ</l-m> mhux biss għal suġġetti akkademiċi iżda wkoll għal vjaġġi interni dwar min <l-m>fil-fatt</l-m> aħna. Romeo Roxman Gatt jiġi lura Malta u jibda jaħseb <l-m>bil-Malti</l-m> fuq <l-m>l-istorja</l-m> tal-ġeneru tiegħu, suġġett li kien dejjem jaħseb u jikteb dwaru <l-m>bl-Ingliż</l-m>. Sa dak <l-m>iż-żmien</l-m>, <l-m>l-għażla</l-m> li ma jużax <l-m>il-lingwa</l-m> materna kienet għalih mod kif ifittex kuntest li jħallih jartikola lilu nnifsu. <l-m>L-isforz</l-m> li juża <l-m>l-Malti</l-m> joħroġ <l-m>l-aktar</l-m> meta Romeo jipprova jitkellem dwaru nnifsu u dwar <l-m>il-ħajja</l-m> fid-dar <l-m>mal-familja</l-m>, u f’Malta b’mod ġenerali, <l-m>bl-istess</l-m> lingwa. Din <l-m>tal-Malti</l-m> mhix unika. Kull fejn missew <l-m>l-imperi</l-m> ġabu magħhom u ħallew warajhom frammenti u aljenazzjonijiet. F’La coscienza di Zeno, li ħareġ eżatt mitt sena ilu <l-m>fl-ewwel</l-m> snin <l-m>tal-psikoanaliżi</l-m>, <l-m>il-protagonist</l-m> jibda vjaġġ intern <l-m>bit-Taljan</l-m>, ilsien barrani kemm għal Zeno kif ukoll għall-awtur, Italo Svevo. Jistħi <l-m>mid-“djalett</l-m>” Triestin tiegħu u jgħid illi meta jitkellem bih, jispiċċa jgħid biss dak li għandu frażi lesta għalih, u jħalli barra dak kollu li għalih m’għandux vokabularju. Li nġibu ’l &nbsp;Svevo <l-m>fil-Malti</l-m>, imbagħad, ifisser li qegħdin inħaffru f’iktar minn saff wieħed <l-m>tal-istorja</l-m> tagħna. Ukoll, meta konna qed naħdmu ma’ Omar <l-m>N’Shea</l-m> fuq <l-m>il-proġett</l-m> tat-traduzzjoni tiegħu <l-m>tal-Gilgamex</l-m> fil-Malti, rajna kemm hu sforz kbir li nsibu aċċess dirett għall-idjoma u <l-m>l-kultura</l-m> Semitika mingħajr <l-m>is-saff</l-m> ta’ termini u interpretazzjoni Ingliżi. Li nieqfu naraw din <l-m>id-dinja</l-m> mil-lenti kolonjalista li dejjem għamlet tagħha <l-m>l-istorja</l-m> taċ-ċiviltà.</p>
+								</div>
+							</a>
+						</li>
+					
+				</ul>
+		</section>
+	</div>
+</article>
+
+			</main>
+		</div>
+		<div id="bottom-wrapper">
+			<img id="deco" role="none" src="/img/deco-100.svg" alt="Dekorazzjoni art-nouveau"/>
+			
+				<div id="newsletter-container-bottom" class="newsletter-container">
+					<section id="form" data-track-content data-content-name="Homepage" data-content-piece="formola">
+						<iframe id="newsletter" class="newsletter-iframe-regular" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#" scrolling="no" title="Abbona fin-newsletter"></iframe>
+<iframe id="newsletter" class="newsletter-iframe-dark" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#|#201e1d|#908984|0|442093344ewr" scrolling="no" title="Abbona fin-newsletter"></iframe>
+<iframe id="newsletter" class="newsletter-iframe-contrast" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#|#000000|#ffffff|0|442093344ewr" scrolling="no" title="Abbona fin-newsletter"></iframe>
+
+					</section>
+				</div>
+			
+			<footer data-track-content data-content-name="Footer" data-content-piece="appuntamenti">
+	<nav class="footer-content">
+		<menu id="housekeeping">
+			<li class="header">Dwarna</li>
+			<li><a href="/kolofon/">Kolofon</a></li>
+			<li><a href="/proċess-editorjali/">Proċess</a></li>
+			<li><a href="/gwida-tal-istil/">Gwida tal-istil</a></li>
+			<li><a href="/cookies/">Cookies</a></li>
+			<li><a href="/privatezza/">Privatezza</a></li>
+			<li><a href="/aċċessibbiltà/">Aċċessibbiltà</a></li>
+			<li><a href="/podcast/">Podcast</a></li>
+			<li><a href="/newsletter/">Newsletter</a></li>
+			<li class="hide-tablet"><a href="/drittijiet/">Drittijiet</a></li>
+		</menu>
+		<menu id="media">
+			<li class="header">Midja</li>
+			<li><a href="/ar/" class="arabic">العربية</a></li>
+			<li><a href="/ca/">Català</a></li>
+			<li><a href="/de/">Deutsch</a></li>
+			<li><a href="/en/">English</a></li>
+			<li><a href="/es/">Español</a></li>
+			<li><a href="/fr/">Français</a></li>
+			<li><a href="/it/">Italiano</a></li>
+			<li><a href="/nl/">Nederlands</a></li>
+			<li class="hide-tablet"><a href="/ro/">Română</a></li>
+		</menu>
+		<menu id="socials">
+			<li class="header">Segwina</li>
+			<li><a href="https://facebook.com/aphroconfuso">Facebook</a></li>
+			<li><a href="https://instagram.com/aphroconfuso">Instagram</a></li>
+			
+			
+			<li><a href="https://whatsapp.com/channel/0029VaysAKP7z4kZHDKdZ71J" rel="me">WhatsApp</a></li>
+			<li><a href="https://aphroconfuso.bsky.social/">Bluesky</a></li>
+			<li><a href="https://youtube.com/@aphroconfuso">Youtube</a></li>
+			<li><a href="https://open.spotify.com/user/31rly4s75gfxs6li6bcxc5bqlgza">Spotify</a></li>
+		</menu>
+		<menu id="podcast">
+			<li class="header">Podcast</li>
+			<li><a href="https://podcasts.apple.com/us/podcast/aphroconfuso/id1686567243">Apple</a></li>
+			
+			<li><a href="https://feeds.acast.com/public/shows/aphroconfuso">RSS feed</a></li>
+			<li><a href="https://open.spotify.com/show/75Lt3UMvC1jE15SGrNFMww">Spotify</a></li>
+			
+		</menu>
+		<div id="logotype-container">
+			<a href="/"><img src="/img/logotype.svg" class="logotype" alt="logo: Aphroconfuso" /></a>
+		</div>
+		<div id="email">
+			<a href="mailto:l-edituri@aphroconfuso.mt" class="email">l-edituri@aphroconfuso.mt</a>
+		</div>
+		<div class="hide-mobile choose-theme choose-theme-footer">
+			<a id="theme-regular-footer" role="button" tabindex="4">s</a>
+			<a id="theme-dark-footer" role="button" tabindex="5">m</a>
+			<a id="theme-contrast-footer" role="button" tabindex="6">c</a>
+			<a id="theme-system-footer" role="button" tabindex="7">p</a>
+		</div>
+		<div id="copyright"><a href="/drittijiet/" class="copyright">&copy; 2023-2025 Aphroconfuso et al</a></div>
+		<div id="qrcode"><img src="/img/qr/appuntamenti.png" width="180" height="180" alt="QR code" /></div>
+		<div id="url">https://aphroconfuso.mt/appuntamenti/</div>
+	</nav>
+</footer>
+
+		</div>
+		<aside id="scroll-tools" class="monthly-outlined">
+			<p>
+				<span id="progress">
+					<!-- --></span></p>
+		</aside>
+	</body>
+</html>
