@@ -737,13 +737,6 @@
 	</url>
 	
 	<url>
-		<loc>https://aphroconfuso.mt/</loc>
-		<lastmod>2025-06-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-	</url>
-	
-	<url>
 		<loc>https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-3-it-tielet/</loc>
 		<lastmod>2025-06-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -1686,5 +1679,12 @@
 		<lastmod>2025-06-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/</loc>
+		<lastmod>2025-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
 	</url>
 </urlset>
