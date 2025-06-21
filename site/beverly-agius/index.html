@@ -1,0 +1,1215 @@
+<!doctype html>
+<html lang="mt" translate="no">
+
+	<head>
+		<meta charset="utf-8">
+		
+	<title>Beverly Agius · Aphroconfuso</title>
+	<meta content="Beverly Agius tikteb il-poeżiji u qed tagħmel dottorat fid-Dipartiment tal-Malti, fl-Università ta’ Malta. L-interessi tar-riċerka tagħha jinkludu l-filosofija, l-ekoloġija, il-kritika letterarja, u l-poeżija, b’mod partikolari, dik lokali. Ix-xogħlijiet akkademiċi u kreattivi tagħha dehru f’ħarġie…" name="description">
+	<meta property="og:image" content="/stampi/social_aphroconfuso_logo_social_kbir_kwadrat_d073f4e24a.jpg">
+
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+		<meta content="width=device-width, initial-scale=1" name="viewport">
+		<meta content="width=device-width" initial-scale="1.0" maximum-scale="1.0" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="yes" name="mobile-web-app-capable">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#f9f9f3">
+		<link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon-16x16.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32x32.png">
+		<link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
+		<link rel="mask-icon" href="/img/icons/safari-pinned-tab.svg" color="#5bbad5">
+		<meta property="og:image:type" content="image/jpeg">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
+		<link rel="canonical" href="https://aphroconfuso.mt/beverly-agius/">
+		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
+		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
+		<link rel="stylesheet" href="/css/style-64ba6cf4.css">
+		<script>
+			var audioLoaded,
+				audioUrls,
+				author,
+				body,
+				bodyEnd,
+				bodyHeight,
+				bodyStart,
+				bodyText,
+				bookmarksArray,
+				bookmarksList,
+				bookmarksMenuElement,
+				charactersPerPixel,
+				charactersPerScreen,
+				currentTime,
+				duration,
+				elapsedTime,
+				hideScrollTools,
+				lastReportedReadingTime,
+				lastReportedScrollPosition,
+				lastScrollPosition,
+				message,
+				issueMonth,
+				issueMonthYear,
+				newScrollPosition,
+				pageHeight,
+				pageReportingTitle,
+				percentageProgress,
+				placeText,
+				podcastUrl,
+				previousTime,
+				progressElement,
+				readingSpeed,
+				reportingTitle,
+				screenHeight,
+				skippedTime,
+				storyCompleted,
+				storyId,
+				storyType,
+				sequenceEpisodeNumber,
+				sequenceEpisodeTitle,
+				timeStarted,
+				pageTitle,
+				wordcount,
+				wordsPerPixel,
+				wordsPerSecond,
+				wordsPerSecondAudio,
+				wordsPerScreen;
+
+			audioLoaded = false;
+			bookmarksArray = [];
+			percentageProgress = 0;
+			previousTime = [];
+			storyCompleted = false;
+
+			const urlSlug = location
+				.pathname
+				.replace(/\//g, '');
+			const setCookie = (cname, cvalue, exdays = 36500) => {
+				const d = new Date();
+				d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+				let expires = "expires=" + d.toUTCString();
+				document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+			}
+			const getCookie = (cname) => {
+				let name = cname + "=";
+				let decodedCookie = decodeURIComponent(document.cookie);
+				let ca = decodedCookie.split(';');
+				for (let i = 0; i < ca.length; i++) {
+					let c = ca[i];
+					while (c.charAt(0) == ' ') {
+						c = c.substring(1);
+					}
+					if (c.indexOf(name) == 0) {
+						return c.substring(name.length, c.length);
+					}
+				}
+				return "";
+			}
+			var _paq = window._paq = window._paq || [];
+			const analytics = (arrayInfo) => {
+				if (location.host != 'aphroconfuso.mt') 
+					console.log(arrayInfo);
+				_paq.push(arrayInfo);
+			}
+			_paq.push(['disableCookies']);
+			_paq.push(['enableJSErrorTracking']);
+			_paq.push(['enableHeartBeatTimer']);
+			_paq.push(['enableLinkTracking']);
+			_paq.push(['trackPageView']);
+			_paq.push(['trackVisibleContentImpressions']);
+			(function () {
+				var u = "//analitika.aphroconfuso.mt/";
+				_paq.push([
+					'setTrackerUrl', u + 'matomo.php'
+				]);
+				_paq.push([
+					'setSiteId', location.host == 'aphroconfuso.mt'
+						? '1'
+						: '2'
+				]);
+				var d = document,
+					g = d.createElement('script'),
+					s = d.getElementsByTagName('script')[0];
+				g.async = true;
+				g.src = u + 'matomo.js';
+				s
+					.parentNode
+					.insertBefore(g, s);
+			})();
+			const addRemoveFontSizeClass = (size) => {
+				document
+					.body
+					.classList
+					.remove('font-size-1', 'font-size-2', 'font-size-3', 'font-size-4')
+				document
+					.body
+					.classList
+					.add(`font-size-${size}`);
+				localStorage.setItem('font', size);
+			}
+			// REVIEW
+			const translateTheme = {
+				'regular': 'regolari',
+				'dark': 'skura',
+				'contrast': 'kuntrast',
+				'system': 'sistema'
+			}
+			const addRemoveTheme = (theme, stored) => {
+				document
+					.body
+					.classList
+					.remove('theme-regular', 'theme-dark', 'theme-contrast', 'theme-system')
+				document
+					.body
+					.classList
+					.add(`theme-${theme}`);
+				localStorage.setItem('theme', theme);
+				if (stored && theme == 'regular') 
+					return;
+				analytics([
+					'trackEvent', 'Tema', `${stored
+						? 'Tema storjata'
+						: 'Tema nbidlet'}`,
+					translateTheme[theme]
+				]);
+			}
+			const initialiseAfterBody = () => {
+				document
+					.body
+					.classList
+					.add(location.hostname.replace(/\.?aphroconfuso\.mt/, '') || 'production');
+				addRemoveFontSizeClass(localStorage.getItem('font') || 1);
+				addRemoveTheme(localStorage.getItem('theme') || 'regular', true);
+				if (localStorage.getItem(`tw-${urlSlug}`)) {
+					document
+						.body
+						.classList
+						.add('trigger-warning-closed');
+				}
+			}
+		</script>
+		<script src="../script/script-9d62e3.js" type="module"></script>
+	</head>
+	<body class="show-nav this-month-gunju">
+		<script>
+			initialiseAfterBody();
+		</script>
+		<div id="top-wrapper">
+			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
+			<nav id="top-nav">
+				<div id="logo-container-wrapper">
+					<div id="logo-container">
+						<a href="/">
+							<img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso"/>
+						</a>
+					</div>
+					<menu class="hide-mobile" id="menu-carousels">
+						<li class="abecedaire">
+							<a href="/abeċedarju/">Abeċedarju</a>
+						</li>
+						<li>
+							<a href="/almanakk-ġunju/">Almanakk</a>
+						</li>
+					</menu>
+					<menu class="hide-mobile" id="menu-collections">
+						<li class="main-menu-collection">
+							<a href="/indħil-barrani/">
+								<span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a>
+						</li>
+						<li class="main-menu-collection">
+							<a href="/il-kliem-fit-teorija/">
+								<span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a>
+						</li>
+					</menu>
+				</div>
+				<input id="menu-toggle" type="checkbox"/>
+				<label class='menu-button-container' for="menu-toggle">
+					<span style="display: none">Mobile biss: iftaħ il-menu</span>
+					<div class='menu-button'></div>
+				</label>
+				
+				<menu id="menu-main">
+					
+					<li class="hide-laptop main-menu-collection">
+						<a href="/indħil-barrani/">
+							<span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a>
+					</li>
+					<li class="hide-laptop main-menu-collection">
+						<a href="/il-kliem-fit-teorija/">
+							<span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a>
+					</li>
+					<li class="hide-laptop a-links">
+						<a href="/abeċedarju/">Abeċedarju</a>
+						<a href="/almanakk-ġunju/">Almanakk</a>
+					</li>
+					<li>
+						<a href="/appuntamenti/">Appuntamenti</a>
+					</li>
+					<li>
+						<a href="/kontributuri/">Kontributuri</a>
+					</li>
+					<li>
+						<a href="/werrej/">Werrej</a>
+					</li>
+					<li>
+						<a href="/djarju/">Djarju</a>
+					</li>
+					<li>
+						<a href="/sensiliet/">Sensiliet</a>
+					</li>
+					<li>
+						<a href="/podcast/">Podcast</a>
+					</li>
+					<li class="hide-mobile">
+						<a href="/kotba/" class="menu-kotba">Kotba</a>
+					</li>
+					<li class="hide-laptop choose-theme">
+						<a id="theme-regular" role="button" tabindex="0">s</a>
+						<a id="theme-dark" role="button" tabindex="1">m</a>
+						<a id="theme-contrast" role="button" tabindex="2">c</a>
+						<a id="theme-system" role="button" tabindex="3">p</a>
+					</li>
+					<li>
+						<a href="/dwarna/">Dwarna</a>
+					</li>
+					<li class="hide-laptop">
+						<a href="/kotba/">Kotba</a>
+					</li>
+					<li class="hide-laptop">
+						<a href="/kolofon/">Kolofon</a>
+					</li>
+					<li>
+						<a href="/newsletter/">Newsletter</a>
+					</li>
+					<li class="hide-laptop">
+						<a href="/privatezza/">Privatezza</a>
+					</li>
+					<li>
+						<a href="/bookmarks/">Bookmarks<span id="bookmarks-number"></span></a>
+					</li>
+					<li class="hide-laptop choose-theme" id="text-size-adjust">
+						<a id="font-size-1" role="button" tabindex="8">a</a>
+						<a id="font-size-2" role="button" tabindex="9">a</a>
+						<a id="font-size-3" role="button" tabindex="10">a</a>
+						<a id="font-size-4" role="button" tabindex="11">a</a>
+					</li>
+				</menu>
+				<input class="hide-mobile" type="text" id="search-input" placeholder="fittex..." autocomplete="off" auto-fill="off" type="text" autocapitalize="none" enterkeyhint="search"/>
+				<ul id="search-results">
+					<!-- -->
+				</ul>
+				
+				<div id="brownline"></div>
+			</nav>
+			<div id="message">
+				<!-- -->
+			</div>
+			<main id="skipto">
+				
+	<article class="generic contributor-43" data-pagefind-body>
+		<header>
+			<ul>
+				<li class="header-label">
+					<a href="/kontributuri/">Kontributuri</a>
+				</li>
+			</ul>
+			<h1 data-pagefind-weight="9">Beverly Agius</h1>
+		</header>
+		<div class="container-generic contributor">
+			<section id="grid-body">
+				<div class="generic-body-text" data-pagefind-weight="3">
+					<div data-pagefind-body data-pagefind-weight="1">
+						<p>Beverly Agius tikteb <l-m>il-poeżiji</l-m> u qed tagħmel dottorat <l-m>fid-Dipartiment</l-m> tal-Malti, <l-m>fl-Università</l-m> ta’ Malta. <l-m>L-interessi</l-m> tar-riċerka tagħha jinkludu <l-m>l-filosofija</l-m>, <l-m>l-ekoloġija</l-m>, <l-m>il-kritika</l-m> letterarja, u <l-m>l-poeżija</l-m>, b’mod partikolari, dik lokali. <l-m>Ix-xogħlijiet</l-m> akkademiċi u kreattivi tagħha dehru f’ħarġiet ta’ <em>Leħen <l-m>il-Malti</l-m>, <l-m>Il-Malti</l-m></em> u <em>?aplatform?</em> Inqraw ukoll waqt konferenzi u serati letterarji. <l-m>Fl-2015</l-m> il-poeżija tagħha “Kull Lejla” ġiet immużikata minn Cryptic Street (illum: ĠENN) u ħarġet <l-m>fl-EP</l-m> tagħhom <em>The Stranger</em>. <l-m>Fil-passat</l-m> ħadet sehem fi programmi <l-m>tal-kitba</l-m> kreattiva, bħall-edizzjonijiet ta’ <em>Taħżiż</em>, li xi drabi ntemmu f’pubblikazzjoni.</p>
+					</div>
+					
+					
+						<div class="anthologies books">
+							<p class="continuity">Kotba ta’ <span class="contributor">Aphroconfuso</span> bil-kitba ta’ <span class="contributor">Beverly</span>:</p>
+							
+							
+							<ul class="promo-list">
+	
+	
+		
+			
+
+
+<li >
+	<a class="promo  novembru promo-ktieb-stampat sequence- story-145" href="/kotba-antoloġija-2/" onclick="analytics(['trackEvent', 'Promo', 'minn: Beverly Agius', 'għal: Antoloġija 2', 1]);">
+		
+			
+				
+				
+				
+				<div class="book-wrapper">
+					<figure class="editorial-image">
+	
+	
+	
+	<picture>
+		
+			
+			<source media="(min-width: 749px)" type="image/avif" srcset="
+				
+				/stampi/large_uncropped_avif_x2_qoxra_dummy_antologija_2_previst_6b83d634cc.avif 2x,
+				/stampi/large_uncropped_avif_x3_qoxra_dummy_antologija_2_previst_6b83d634cc.avif 3x
+			">
+			<source media="(min-width: 749px)" type="image/jpeg" srcset="
+				
+				/stampi/large_uncropped_jpeg_x2_qoxra_dummy_antologija_2_previst_6b83d634cc.jpg 2x,
+				/stampi/large_uncropped_jpeg_x3_qoxra_dummy_antologija_2_previst_6b83d634cc.jpg 3x
+			">
+			<source media="(min-width: 1px)" type="image/avif" srcset="/stampi/large_uncropped_avif_qoxra_dummy_antologija_2_previst_6b83d634cc.avif">
+			<source media="(min-width: 1px)" type="image/jpeg" srcset="/stampi/large_uncropped_jpeg_qoxra_dummy_antologija_2_previst_6b83d634cc.jpg">
+		
+		<img
+			src="/stampi/social_qoxra_dummy_antologija_2_previst_6b83d634cc.jpg"
+			alt=""
+			
+		>
+	</picture>
+	
+</figure>
+
+					
+					
+						
+					
+				</div>
+			
+		
+	</a>
+	
+	<aside class="promo-aside story-aside-145">
+		<ul>
+			<li class="bookmark-compact">
+				<!-- -->
+			</li>
+			<li class="wordcount">
+				
+				
+					
+				
+			</li>
+		</ul>
+	</aside>
+
+
+
+
+</li>
+
+		
+	
+</ul>
+
+						</div>
+					
+					
+						<div class="wrote">
+							<p class="continuity">Kitba ta’ <span class="contributor">Beverly</span> fil-ġurnal:</p>
+							
+							
+							
+							
+							
+							
+							<ul class="promo-list">
+	
+	
+		
+			
+
+
+<li  class="multiple-episodes episode-3">
+	<a class="promo  gunju promo-poezija sequence-15 story-155 is-episode" href="/beverly-agius-invokazzjonijiet-3-it-tielet/" onclick="analytics(['trackEvent', 'Promo', 'minn: Beverly Agius', 'għal: Invokazzjonijiet #3', 1]);">
+		
+			<header>
+	<ul>
+		
+			<li class="header-label">Ġunju 2025</li>
+		
+		
+	</ul>
+	
+	
+		
+			<h1>
+				Invokazzjonijiet
+				
+					<span class="episode-number">#3</span>
+				
+			</h1>
+		
+	
+	
+
+	
+	<h2>
+		
+		
+			
+			
+				
+					
+						<span class="author">Beverly Agius</span>
+					
+					
+	</h2>
+
+
+
+
+
+	
+		<h3>
+			
+			
+			it-tielet
+		</h3>
+	
+</header>
+
+			
+			<div class="body-text poetry">
+				
+					<p>Aphroconfuso<br/>għax sirtlek ruħ għedtli<br/>meta tlaqtlek wara tliet<br/>xhur u waqaft inkellmek <br/><br/>zoptu — ma tafx li nsiru<br/>erwieħ wara li mmutu?<br/><br/>Aphroconfuso<br/>għax sirtlek ruħ għedtli<br/>meta tlaqtlek wara tliet<br/>xhur u waqaft inkellmek <br/><br/>zoptu — ma tafx li nsiru<br/>erwieħ wara li mmutu?<br/><br/>Aphroconfuso<br/>għax sirtlek ruħ għedtli<br/>meta tlaqtlek wara tliet<br/>xhur u waqaft inkellmek <br/><br/>zoptu — ma tafx li nsiru<br/>erwieħ wara li mmutu?</p>
+				
+			</div>
+		
+	</a>
+	
+	<aside class="promo-aside story-aside-155">
+		<ul>
+			<li class="bookmark-compact">
+				<!-- -->
+			</li>
+			<li class="wordcount">
+				
+				
+			</li>
+		</ul>
+	</aside>
+
+
+
+
+</li>
+
+		
+	
+		
+			
+
+
+<li  class="multiple-episodes episode-4">
+	<a class="promo  gunju promo-poezija sequence-15 story-156 is-episode" href="/beverly-agius-invokazzjonijiet-4-ir-raba/" onclick="analytics(['trackEvent', 'Promo', 'minn: Beverly Agius', 'għal: Invokazzjonijiet #4', 2]);">
+		
+			<header>
+	<ul>
+		
+			<li class="header-label">Ġunju 2025</li>
+		
+		
+	</ul>
+	
+	
+		
+			<h1>
+				Invokazzjonijiet
+				
+					<span class="episode-number">#4</span>
+				
+			</h1>
+		
+	
+	
+
+	
+	<h2>
+		
+		
+			
+			
+				
+					
+						<span class="author">Beverly Agius</span>
+					
+					
+	</h2>
+
+
+
+
+
+	
+		<h3>
+			
+			
+			ir-raba’
+		</h3>
+	
+</header>
+
+			
+			<div class="body-text poetry">
+				
+					<p>Aphroconfuso,<br/>la nerġgħu flimkien<br/>iseħħu t-terremoti,<br/><br/>tgħidli, u nitħasseb<br/>dwar il-ġlied, imma<br/><br/>int tgeżwer iperbole<br/>mit-tqanqil. immerik<br/><br/>li kultant il-litterali<br/>isbaħ mil-letterarju<br/><br/>Aphroconfuso,<br/>la nerġgħu flimkien<br/>iseħħu t-terremoti,<br/><br/>tgħidli, u nitħasseb<br/>dwar il-ġlied, imma<br/><br/>int tgeżwer iperbole<br/>mit-tqanqil. immerik<br/><br/>li kultant il-litterali<br/>isbaħ mil-letterarju</p>
+				
+			</div>
+		
+	</a>
+	
+	<aside class="promo-aside story-aside-156">
+		<ul>
+			<li class="bookmark-compact">
+				<!-- -->
+			</li>
+			<li class="wordcount">
+				
+				
+			</li>
+		</ul>
+	</aside>
+
+
+
+
+</li>
+
+		
+	
+		
+			
+
+
+<li  class="multiple-episodes episode-5">
+	<a class="promo  gunju promo-poezija sequence-15 story-157 is-episode" href="/beverly-agius-invokazzjonijiet-5-il-ħames/" onclick="analytics(['trackEvent', 'Promo', 'minn: Beverly Agius', 'għal: Invokazzjonijiet #5', 3]);">
+		
+			<header>
+	<ul>
+		
+			<li class="header-label">Ġunju 2025</li>
+		
+		
+	</ul>
+	
+	
+		
+			<h1>
+				Invokazzjonijiet
+				
+					<span class="episode-number">#5</span>
+				
+			</h1>
+		
+	
+	
+
+	
+	<h2>
+		
+		
+			
+			
+				
+					
+						<span class="author">Beverly Agius</span>
+					
+					
+	</h2>
+
+
+
+
+
+	
+		<h3>
+			
+			
+			il-ħames
+		</h3>
+	
+</header>
+
+			
+			<div class="body-text poetry">
+				
+					<p>Aphroconfuso,<br/>għalik insir platonika<br/>biss la nittieħed<br/>mid-dinja tal-forom.<br/><br/>Aphroconfuso,<br/>għalik insir platonika<br/>biss la nittieħed<br/>mid-dinja tal-forom.<br/><br/>Aphroconfuso,<br/>għalik insir platonika<br/>biss la nittieħed<br/>mid-dinja tal-forom.<br/><br/>Aphroconfuso,<br/>għalik insir platonika<br/>biss la nittieħed<br/>mid-dinja tal-forom.<br/><br/>Aphroconfuso,<br/>għalik insir platonika<br/>biss la nittieħed<br/>mid-dinja tal-forom.<br/><br/>Aphroconfuso,<br/>għalik insir platonika<br/>biss la nittieħed<br/>mid-dinja tal-forom.</p>
+				
+			</div>
+		
+	</a>
+	
+	<aside class="promo-aside story-aside-157">
+		<ul>
+			<li class="bookmark-compact">
+				<!-- -->
+			</li>
+			<li class="wordcount">
+				
+				
+			</li>
+		</ul>
+	</aside>
+
+
+
+
+</li>
+
+		
+	
+		
+			
+
+
+<li  class="multiple-episodes episode-1">
+	<a class="promo  april promo-poezija sequence-15 story-137 is-episode" href="/beverly-agius-invokazzjonijiet-1-l-ewwel/" onclick="analytics(['trackEvent', 'Promo', 'minn: Beverly Agius', 'għal: Invokazzjonijiet #1', 4]);">
+		
+			<header>
+	<ul>
+		
+			<li class="header-label">April 2025</li>
+		
+		
+	</ul>
+	
+	
+		
+			<h1>
+				Invokazzjonijiet
+				
+					<span class="episode-number">#1</span>
+				
+			</h1>
+		
+	
+	
+
+	
+	<h2>
+		
+		
+			
+			
+				
+					
+						<span class="author">Beverly Agius</span>
+					
+					
+	</h2>
+
+
+
+
+
+	
+		<h3>
+			
+			
+			l-ewwel
+		</h3>
+	
+</header>
+
+			
+			<div class="body-text poetry">
+				
+					<p>Aphroconfuso<br/>xħin rajtni nintelaq fl-ilma ta’ <br/>għajn tuffieħa u ħsibtni mhux<br/>f’sikkti għax ngħasi ried jgħibni<br/>mill-bajja bojja biex nitfaċċa nitfa<br/>rondinella tpassi l-ibħra inkella <br/>monakella taqbeż bejnet il-blat — <br/>kif aphroconfuso għadni mqabbda<br/>ma’ qaddek u ma salpajtx ’il &nbsp;fejn<br/>ħjut il-ħut minn rasi mgħaddsa<br/>qegħdin għalenija jqaddfuli?<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/></p>
+				
+			</div>
+		
+	</a>
+	
+	<aside class="promo-aside story-aside-137">
+		<ul>
+			<li class="bookmark-compact">
+				<!-- -->
+			</li>
+			<li class="wordcount">
+				
+				
+			</li>
+		</ul>
+	</aside>
+
+
+
+
+</li>
+
+		
+	
+		
+			
+
+
+<li  class="multiple-episodes episode-2">
+	<a class="promo  april promo-poezija sequence-15 story-138 is-episode" href="/beverly-agius-invokazzjonijiet-2-it-tieni/" onclick="analytics(['trackEvent', 'Promo', 'minn: Beverly Agius', 'għal: Invokazzjonijiet #2', 5]);">
+		
+			<header>
+	<ul>
+		
+			<li class="header-label">April 2025</li>
+		
+		
+	</ul>
+	
+	
+		
+			<h1>
+				Invokazzjonijiet
+				
+					<span class="episode-number">#2</span>
+				
+			</h1>
+		
+	
+	
+
+	
+	<h2>
+		
+		
+			
+			
+				
+					
+						<span class="author">Beverly Agius</span>
+					
+					
+	</h2>
+
+
+
+
+
+	
+		<h3>
+			
+			
+			it-tieni
+		</h3>
+	
+</header>
+
+			
+			<div class="body-text poetry">
+				
+					<p>Aphroconfuso,<br/>jaqaw sirt taf li qed niktbek?<br/>b’hekk qed tħallini kkalzrata<br/>fi mkejjen, pjazez il-memorja<br/>ta’ Castellania biex tieħu minni <br/>bandi ta’ tama mwerżqa fin-niċċa, <br/><br/>il-berlina li għalaqtni fiha, jew trid <br/>tal-kastig tibqa’ f’xi bnadi għama?<br/><br/>Aphroconfuso,<br/>jaqaw sirt taf li qed niktbek?<br/>b’hekk qed tħallini kkalzrata<br/>fi mkejjen, pjazez il-memorja<br/>ta’ Castellania biex tieħu minni <br/>bandi ta’ tama mwerżqa fin-niċċa, <br/><br/>il-berlina li għalaqtni fiha, jew trid <br/>tal-kastig tibqa’ f’xi bnadi għama?<br/></p>
+				
+			</div>
+		
+	</a>
+	
+	<aside class="promo-aside story-aside-138">
+		<ul>
+			<li class="bookmark-compact">
+				<!-- -->
+			</li>
+			<li class="wordcount">
+				
+				
+			</li>
+		</ul>
+	</aside>
+
+
+
+
+</li>
+
+		
+	
+</ul>
+
+						</div>
+					
+					
+					
+					
+					
+				</div>
+			</section>
+			<section id="grid-max-panel-left-top" data-pagefind-ignore>
+				<section class="generic-menu contributors-menu">
+	
+		
+			<nav>
+			
+			
+				<li>
+					<a href="/raylene-abdilla/">Raylene Abdilla</a>
+				</li>
+			
+			
+	
+		
+			
+				<li class="active">Beverly Agius</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/aaron-aquilina/">Aaron Aquilina</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/jasmine-bajada/">Jasmine Bajada</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/karl-baldacchino/">Karl Baldacchino</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/simon-bartolo/">Simon Bartolo</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/warren-bartolo/">Warren Bartolo</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/kristina-borg/">Kristina Borg</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/kurt-borg/">Kurt Borg</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/nicole-borg/">Nicole Borg</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/antoine-cassar/">Antoine Cassar</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/daniel-cossai/">Daniel Cossai</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/leanne-ellul/">Leanne Ellul</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/noah-fabri/">Noah Fabri</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/ryan-falzon/">Ryan Falzon</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/fatima-a.m./">fatima a.m.</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/charlene-galea/">Charlene Galea</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/miriam-galea/">Miriam Galea</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/joe-gatt/">Joe Gatt</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/romeo-roxman-gatt/">Romeo Roxman Gatt</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/rowena-grech/">Rowena Grech</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/jimmy-grima/">Jimmy Grima</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/davinia-hamilton/">Davinia Hamilton</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/jien_a/">Jien_a</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/ira-melkonyan/">Ira Melkonyan</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/glorianne-micallef/">Glorianne Micallef</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/omar-nshea/">Omar N’Shea</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/nathan-anthony-pace/">Nathan Anthony Pace</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/kris-polidano/">Kris Polidano</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/matteo-pullicino/">Matteo Pullicino</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/matthew-schembri/">Matthew Schembri</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/maria-theuma/">Maria Theuma</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/leslie-vassallo/">Leslie Vassallo</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/loranne-vella/">Loranne Vella</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/manuela-zammit/">Manuela Zammit</a>
+				</li>
+			
+			
+			</nav>
+		
+	
+</section>
+
+			</section>
+		</div>
+	</article>
+	<script>
+		reportingTitle = "Beverly Agius";
+	</script>
+
+			</main>
+		</div>
+		<div id="bottom-wrapper">
+			<img id="deco" role="none" src="/img/deco-100.svg" alt="Dekorazzjoni art-nouveau"/>
+			
+				<div id="newsletter-container-bottom" class="newsletter-container">
+					<section id="form" data-track-content data-content-name="Homepage" data-content-piece="formola">
+						<iframe id="newsletter" class="newsletter-iframe-regular" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#" scrolling="no" title="Abbona fin-newsletter"></iframe>
+<iframe id="newsletter" class="newsletter-iframe-dark" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#|#201e1d|#908984|0|442093344ewr" scrolling="no" title="Abbona fin-newsletter"></iframe>
+<iframe id="newsletter" class="newsletter-iframe-contrast" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#|#000000|#ffffff|0|442093344ewr" scrolling="no" title="Abbona fin-newsletter"></iframe>
+
+					</section>
+				</div>
+			
+			<footer data-track-content data-content-name="Footer" data-content-piece="beverly-agius">
+	<nav class="footer-content">
+		<menu id="housekeeping">
+			<li class="header">Dwarna</li>
+			<li><a href="/kolofon/">Kolofon</a></li>
+			<li><a href="/proċess-editorjali/">Proċess</a></li>
+			<li><a href="/gwida-tal-istil/">Gwida tal-istil</a></li>
+			<li><a href="/cookies/">Cookies</a></li>
+			<li><a href="/privatezza/">Privatezza</a></li>
+			<li><a href="/aċċessibbiltà/">Aċċessibbiltà</a></li>
+			<li><a href="/podcast/">Podcast</a></li>
+			<li><a href="/newsletter/">Newsletter</a></li>
+			<li class="hide-tablet"><a href="/drittijiet/">Drittijiet</a></li>
+		</menu>
+		<menu id="media">
+			<li class="header">Midja</li>
+			<li><a href="/ar/" class="arabic">العربية</a></li>
+			<li><a href="/ca/">Català</a></li>
+			<li><a href="/de/">Deutsch</a></li>
+			<li><a href="/en/">English</a></li>
+			<li><a href="/es/">Español</a></li>
+			<li><a href="/fr/">Français</a></li>
+			<li><a href="/it/">Italiano</a></li>
+			<li><a href="/nl/">Nederlands</a></li>
+			<li class="hide-tablet"><a href="/ro/">Română</a></li>
+		</menu>
+		<menu id="socials">
+			<li class="header">Segwina</li>
+			<li><a href="https://facebook.com/aphroconfuso">Facebook</a></li>
+			<li><a href="https://instagram.com/aphroconfuso">Instagram</a></li>
+			
+			
+			<li><a href="https://whatsapp.com/channel/0029VaysAKP7z4kZHDKdZ71J" rel="me">WhatsApp</a></li>
+			<li><a href="https://aphroconfuso.bsky.social/">Bluesky</a></li>
+			<li><a href="https://youtube.com/@aphroconfuso">Youtube</a></li>
+			<li><a href="https://open.spotify.com/user/31rly4s75gfxs6li6bcxc5bqlgza">Spotify</a></li>
+		</menu>
+		<menu id="podcast">
+			<li class="header">Podcast</li>
+			<li><a href="https://podcasts.apple.com/us/podcast/aphroconfuso/id1686567243">Apple</a></li>
+			
+			<li><a href="https://feeds.acast.com/public/shows/aphroconfuso">RSS feed</a></li>
+			<li><a href="https://open.spotify.com/show/75Lt3UMvC1jE15SGrNFMww">Spotify</a></li>
+			
+		</menu>
+		<div id="logotype-container">
+			<a href="/"><img src="/img/logotype.svg" class="logotype" alt="logo: Aphroconfuso" /></a>
+		</div>
+		<div id="email">
+			<a href="mailto:l-edituri@aphroconfuso.mt" class="email">l-edituri@aphroconfuso.mt</a>
+		</div>
+		<div class="hide-mobile choose-theme choose-theme-footer">
+			<a id="theme-regular-footer" role="button" tabindex="4">s</a>
+			<a id="theme-dark-footer" role="button" tabindex="5">m</a>
+			<a id="theme-contrast-footer" role="button" tabindex="6">c</a>
+			<a id="theme-system-footer" role="button" tabindex="7">p</a>
+		</div>
+		<div id="copyright"><a href="/drittijiet/" class="copyright">&copy; 2023-2025 Aphroconfuso et al</a></div>
+		<div id="qrcode"><img src="/img/qr/beverly-agius.png" width="180" height="180" alt="QR code" /></div>
+		<div id="url">https://aphroconfuso.mt/beverly-agius/</div>
+	</nav>
+</footer>
+
+		</div>
+		<aside id="scroll-tools" class="monthly-outlined">
+			<p>
+				<span id="progress">
+					<!-- --></span></p>
+		</aside>
+	</body>
+</html>

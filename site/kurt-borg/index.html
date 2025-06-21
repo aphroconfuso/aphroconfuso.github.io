@@ -1,0 +1,2207 @@
+<!doctype html>
+<html lang="mt" translate="no">
+
+	<head>
+		<meta charset="utf-8">
+		
+	<title>Kurt Borg · Aphroconfuso</title>
+	<meta content="Kurt Borg huwa Lettur fid-Dipartiment tal-Politika Pubblika fl-Università ta’ Malta. Huwa ggradwa b’Dottorat fil-Filosofija u l-Istudji Umanistiċi mill-Università ta’ Staffordshire, b’riċerka dwar l-etika u l-politika tan-narrazzjoni tat-trawma f’kuntesti istituzzjonali. Fost oqsma oħrajn, jispeċja…" name="description">
+	<meta property="og:image" content="/stampi/social_aphroconfuso_logo_social_kbir_kwadrat_d073f4e24a.jpg">
+
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+		<meta content="width=device-width, initial-scale=1" name="viewport">
+		<meta content="width=device-width" initial-scale="1.0" maximum-scale="1.0" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="yes" name="mobile-web-app-capable">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#f9f9f3">
+		<link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon-16x16.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32x32.png">
+		<link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
+		<link rel="mask-icon" href="/img/icons/safari-pinned-tab.svg" color="#5bbad5">
+		<meta property="og:image:type" content="image/jpeg">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
+		<link rel="canonical" href="https://aphroconfuso.mt/kurt-borg/">
+		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
+		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
+		<link rel="stylesheet" href="/css/style-64ba6cf4.css">
+		<script>
+			var audioLoaded,
+				audioUrls,
+				author,
+				body,
+				bodyEnd,
+				bodyHeight,
+				bodyStart,
+				bodyText,
+				bookmarksArray,
+				bookmarksList,
+				bookmarksMenuElement,
+				charactersPerPixel,
+				charactersPerScreen,
+				currentTime,
+				duration,
+				elapsedTime,
+				hideScrollTools,
+				lastReportedReadingTime,
+				lastReportedScrollPosition,
+				lastScrollPosition,
+				message,
+				issueMonth,
+				issueMonthYear,
+				newScrollPosition,
+				pageHeight,
+				pageReportingTitle,
+				percentageProgress,
+				placeText,
+				podcastUrl,
+				previousTime,
+				progressElement,
+				readingSpeed,
+				reportingTitle,
+				screenHeight,
+				skippedTime,
+				storyCompleted,
+				storyId,
+				storyType,
+				sequenceEpisodeNumber,
+				sequenceEpisodeTitle,
+				timeStarted,
+				pageTitle,
+				wordcount,
+				wordsPerPixel,
+				wordsPerSecond,
+				wordsPerSecondAudio,
+				wordsPerScreen;
+
+			audioLoaded = false;
+			bookmarksArray = [];
+			percentageProgress = 0;
+			previousTime = [];
+			storyCompleted = false;
+
+			const urlSlug = location
+				.pathname
+				.replace(/\//g, '');
+			const setCookie = (cname, cvalue, exdays = 36500) => {
+				const d = new Date();
+				d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+				let expires = "expires=" + d.toUTCString();
+				document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+			}
+			const getCookie = (cname) => {
+				let name = cname + "=";
+				let decodedCookie = decodeURIComponent(document.cookie);
+				let ca = decodedCookie.split(';');
+				for (let i = 0; i < ca.length; i++) {
+					let c = ca[i];
+					while (c.charAt(0) == ' ') {
+						c = c.substring(1);
+					}
+					if (c.indexOf(name) == 0) {
+						return c.substring(name.length, c.length);
+					}
+				}
+				return "";
+			}
+			var _paq = window._paq = window._paq || [];
+			const analytics = (arrayInfo) => {
+				if (location.host != 'aphroconfuso.mt') 
+					console.log(arrayInfo);
+				_paq.push(arrayInfo);
+			}
+			_paq.push(['disableCookies']);
+			_paq.push(['enableJSErrorTracking']);
+			_paq.push(['enableHeartBeatTimer']);
+			_paq.push(['enableLinkTracking']);
+			_paq.push(['trackPageView']);
+			_paq.push(['trackVisibleContentImpressions']);
+			(function () {
+				var u = "//analitika.aphroconfuso.mt/";
+				_paq.push([
+					'setTrackerUrl', u + 'matomo.php'
+				]);
+				_paq.push([
+					'setSiteId', location.host == 'aphroconfuso.mt'
+						? '1'
+						: '2'
+				]);
+				var d = document,
+					g = d.createElement('script'),
+					s = d.getElementsByTagName('script')[0];
+				g.async = true;
+				g.src = u + 'matomo.js';
+				s
+					.parentNode
+					.insertBefore(g, s);
+			})();
+			const addRemoveFontSizeClass = (size) => {
+				document
+					.body
+					.classList
+					.remove('font-size-1', 'font-size-2', 'font-size-3', 'font-size-4')
+				document
+					.body
+					.classList
+					.add(`font-size-${size}`);
+				localStorage.setItem('font', size);
+			}
+			// REVIEW
+			const translateTheme = {
+				'regular': 'regolari',
+				'dark': 'skura',
+				'contrast': 'kuntrast',
+				'system': 'sistema'
+			}
+			const addRemoveTheme = (theme, stored) => {
+				document
+					.body
+					.classList
+					.remove('theme-regular', 'theme-dark', 'theme-contrast', 'theme-system')
+				document
+					.body
+					.classList
+					.add(`theme-${theme}`);
+				localStorage.setItem('theme', theme);
+				if (stored && theme == 'regular') 
+					return;
+				analytics([
+					'trackEvent', 'Tema', `${stored
+						? 'Tema storjata'
+						: 'Tema nbidlet'}`,
+					translateTheme[theme]
+				]);
+			}
+			const initialiseAfterBody = () => {
+				document
+					.body
+					.classList
+					.add(location.hostname.replace(/\.?aphroconfuso\.mt/, '') || 'production');
+				addRemoveFontSizeClass(localStorage.getItem('font') || 1);
+				addRemoveTheme(localStorage.getItem('theme') || 'regular', true);
+				if (localStorage.getItem(`tw-${urlSlug}`)) {
+					document
+						.body
+						.classList
+						.add('trigger-warning-closed');
+				}
+			}
+		</script>
+		<script src="../script/script-9d62e3.js" type="module"></script>
+	</head>
+	<body class="show-nav this-month-gunju">
+		<script>
+			initialiseAfterBody();
+		</script>
+		<div id="top-wrapper">
+			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
+			<nav id="top-nav">
+				<div id="logo-container-wrapper">
+					<div id="logo-container">
+						<a href="/">
+							<img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso"/>
+						</a>
+					</div>
+					<menu class="hide-mobile" id="menu-carousels">
+						<li class="abecedaire">
+							<a href="/abeċedarju/">Abeċedarju</a>
+						</li>
+						<li>
+							<a href="/almanakk-ġunju/">Almanakk</a>
+						</li>
+					</menu>
+					<menu class="hide-mobile" id="menu-collections">
+						<li class="main-menu-collection">
+							<a href="/indħil-barrani/">
+								<span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a>
+						</li>
+						<li class="main-menu-collection">
+							<a href="/il-kliem-fit-teorija/">
+								<span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a>
+						</li>
+					</menu>
+				</div>
+				<input id="menu-toggle" type="checkbox"/>
+				<label class='menu-button-container' for="menu-toggle">
+					<span style="display: none">Mobile biss: iftaħ il-menu</span>
+					<div class='menu-button'></div>
+				</label>
+				
+				<menu id="menu-main">
+					
+					<li class="hide-laptop main-menu-collection">
+						<a href="/indħil-barrani/">
+							<span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a>
+					</li>
+					<li class="hide-laptop main-menu-collection">
+						<a href="/il-kliem-fit-teorija/">
+							<span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a>
+					</li>
+					<li class="hide-laptop a-links">
+						<a href="/abeċedarju/">Abeċedarju</a>
+						<a href="/almanakk-ġunju/">Almanakk</a>
+					</li>
+					<li>
+						<a href="/appuntamenti/">Appuntamenti</a>
+					</li>
+					<li>
+						<a href="/kontributuri/">Kontributuri</a>
+					</li>
+					<li>
+						<a href="/werrej/">Werrej</a>
+					</li>
+					<li>
+						<a href="/djarju/">Djarju</a>
+					</li>
+					<li>
+						<a href="/sensiliet/">Sensiliet</a>
+					</li>
+					<li>
+						<a href="/podcast/">Podcast</a>
+					</li>
+					<li class="hide-mobile">
+						<a href="/kotba/" class="menu-kotba">Kotba</a>
+					</li>
+					<li class="hide-laptop choose-theme">
+						<a id="theme-regular" role="button" tabindex="0">s</a>
+						<a id="theme-dark" role="button" tabindex="1">m</a>
+						<a id="theme-contrast" role="button" tabindex="2">c</a>
+						<a id="theme-system" role="button" tabindex="3">p</a>
+					</li>
+					<li>
+						<a href="/dwarna/">Dwarna</a>
+					</li>
+					<li class="hide-laptop">
+						<a href="/kotba/">Kotba</a>
+					</li>
+					<li class="hide-laptop">
+						<a href="/kolofon/">Kolofon</a>
+					</li>
+					<li>
+						<a href="/newsletter/">Newsletter</a>
+					</li>
+					<li class="hide-laptop">
+						<a href="/privatezza/">Privatezza</a>
+					</li>
+					<li>
+						<a href="/bookmarks/">Bookmarks<span id="bookmarks-number"></span></a>
+					</li>
+					<li class="hide-laptop choose-theme" id="text-size-adjust">
+						<a id="font-size-1" role="button" tabindex="8">a</a>
+						<a id="font-size-2" role="button" tabindex="9">a</a>
+						<a id="font-size-3" role="button" tabindex="10">a</a>
+						<a id="font-size-4" role="button" tabindex="11">a</a>
+					</li>
+				</menu>
+				<input class="hide-mobile" type="text" id="search-input" placeholder="fittex..." autocomplete="off" auto-fill="off" type="text" autocapitalize="none" enterkeyhint="search"/>
+				<ul id="search-results">
+					<!-- -->
+				</ul>
+				
+				<div id="brownline"></div>
+			</nav>
+			<div id="message">
+				<!-- -->
+			</div>
+			<main id="skipto">
+				
+	<article class="generic contributor-4" data-pagefind-body>
+		<header>
+			<ul>
+				<li class="header-label">
+					<a href="/kontributuri/">Kontributuri</a>
+				</li>
+			</ul>
+			<h1 data-pagefind-weight="9">Kurt Borg</h1>
+		</header>
+		<div class="container-generic contributor">
+			<section id="grid-body">
+				<div class="generic-body-text" data-pagefind-weight="3">
+					<div data-pagefind-body data-pagefind-weight="1">
+						<p>Kurt Borg huwa Lettur <l-m>fid-Dipartiment</l-m> tal-Politika Pubblika <l-m>fl-Università</l-m> ta’ Malta. Huwa ggradwa b’Dottorat <l-m>fil-Filosofija</l-m> u <l-m>l-Istudji</l-m> Umanistiċi <l-m>mill-Università</l-m> ta’ Staffordshire, b’riċerka dwar <l-m>l-etika</l-m> u <l-m>l-politika</l-m> tan-narrazzjoni <l-m>tat-trawma</l-m> f’kuntesti istituzzjonali. Fost oqsma oħrajn, jispeċjalizza <l-m>fit-teorija</l-m> poststrutturalista, partikolarment <l-m>fix-xogħol</l-m> ta’ Michel Foucault u Judith Butler, u juża xogħolhom biex jistudja fenomeni bħall-identità, <l-m>il-poter</l-m> soċjali u <l-m>r-reżistenza</l-m>. Ippubblika bosta kapitli u artikli f’kotba u ġurnali akkademiċi. Huwa koeditur <l-m>tal-ktieb</l-m> li ħareġ f’Mejju 2023 li jiġbor fih konverżazzjonijiet interdixxiplinarji dwar <l-m>il-mistoqsija</l-m>, <em>Xi Tfisser Tkun Bniedem?</em> Għandu għal qalbu <l-m>l-ġeneru</l-m> tal-esej, u bħalissa qed jaħdem fuq ġabra ta’ esejs dwar temi varji, fosthom <l-m>il-memorja</l-m>, <l-m>il-vulnerabbiltà</l-m> u <l-m>l-ġeneru</l-m>.</p>
+					</div>
+					
+					
+						<div class="anthologies books">
+							<p class="continuity">Kotba ta’ <span class="contributor">Aphroconfuso</span> bil-kitba ta’ <span class="contributor">Kurt</span>:</p>
+							
+							
+							<ul class="promo-list">
+	
+	
+		
+			
+
+
+<li >
+	<a class="promo  novembru promo-ktieb-stampat sequence- story-145" href="/kotba-antoloġija-2/" onclick="analytics(['trackEvent', 'Promo', 'minn: Kurt Borg', 'għal: Antoloġija 2', 1]);">
+		
+			
+				
+				
+				
+				<div class="book-wrapper">
+					<figure class="editorial-image">
+	
+	
+	
+	<picture>
+		
+			
+			<source media="(min-width: 749px)" type="image/avif" srcset="
+				
+				/stampi/large_uncropped_avif_x2_qoxra_dummy_antologija_2_previst_6b83d634cc.avif 2x,
+				/stampi/large_uncropped_avif_x3_qoxra_dummy_antologija_2_previst_6b83d634cc.avif 3x
+			">
+			<source media="(min-width: 749px)" type="image/jpeg" srcset="
+				
+				/stampi/large_uncropped_jpeg_x2_qoxra_dummy_antologija_2_previst_6b83d634cc.jpg 2x,
+				/stampi/large_uncropped_jpeg_x3_qoxra_dummy_antologija_2_previst_6b83d634cc.jpg 3x
+			">
+			<source media="(min-width: 1px)" type="image/avif" srcset="/stampi/large_uncropped_avif_qoxra_dummy_antologija_2_previst_6b83d634cc.avif">
+			<source media="(min-width: 1px)" type="image/jpeg" srcset="/stampi/large_uncropped_jpeg_qoxra_dummy_antologija_2_previst_6b83d634cc.jpg">
+		
+		<img
+			src="/stampi/social_qoxra_dummy_antologija_2_previst_6b83d634cc.jpg"
+			alt=""
+			
+		>
+	</picture>
+	
+</figure>
+
+					
+					
+						
+					
+				</div>
+			
+		
+	</a>
+	
+	<aside class="promo-aside story-aside-145">
+		<ul>
+			<li class="bookmark-compact">
+				<!-- -->
+			</li>
+			<li class="wordcount">
+				
+				
+					
+				
+			</li>
+		</ul>
+	</aside>
+
+
+
+
+</li>
+
+		
+	
+		
+			
+
+
+<li >
+	<a class="promo  ottubru promo-ktieb-stampat sequence- story-88" href="/kotba-antoloġija-1/" onclick="analytics(['trackEvent', 'Promo', 'minn: Kurt Borg', 'għal: Antoloġija 1', 2]);">
+		
+			
+				
+				
+				
+				<div class="book-wrapper">
+					<figure class="editorial-image">
+	
+	
+	
+	<picture>
+		
+			
+			<source media="(min-width: 749px)" type="image/avif" srcset="
+				
+				/stampi/large_uncropped_avif_x2_qoxra_dummy_antologija_1_5dae1b2f1f.avif 2x,
+				/stampi/large_uncropped_avif_x3_qoxra_dummy_antologija_1_5dae1b2f1f.avif 3x
+			">
+			<source media="(min-width: 749px)" type="image/jpeg" srcset="
+				
+				/stampi/large_uncropped_jpeg_x2_qoxra_dummy_antologija_1_5dae1b2f1f.jpg 2x,
+				/stampi/large_uncropped_jpeg_x3_qoxra_dummy_antologija_1_5dae1b2f1f.jpg 3x
+			">
+			<source media="(min-width: 1px)" type="image/avif" srcset="/stampi/large_uncropped_avif_qoxra_dummy_antologija_1_5dae1b2f1f.avif">
+			<source media="(min-width: 1px)" type="image/jpeg" srcset="/stampi/large_uncropped_jpeg_qoxra_dummy_antologija_1_5dae1b2f1f.jpg">
+		
+		<img
+			src="/stampi/social_qoxra_dummy_antologija_1_5dae1b2f1f.jpg"
+			alt=""
+			
+		>
+	</picture>
+	
+</figure>
+
+					
+					
+						
+					
+				</div>
+			
+		
+	</a>
+	
+	<aside class="promo-aside story-aside-88">
+		<ul>
+			<li class="bookmark-compact">
+				<!-- -->
+			</li>
+			<li class="wordcount">
+				
+				
+					
+				
+			</li>
+		</ul>
+	</aside>
+
+
+
+
+</li>
+
+		
+	
+</ul>
+
+						</div>
+					
+					
+						<div class="wrote">
+							<p class="continuity">Kitba ta’ <span class="contributor">Kurt</span> fil-ġurnal:</p>
+							
+							
+							
+							
+							
+							
+							<ul class="promo-list">
+	
+	
+		
+			
+
+
+<li >
+	<a class="promo  ottubru promo-esej sequence- story-89" href="/kurt-borg-dwar-sens-ta-ħarifa/" onclick="analytics(['trackEvent', 'Promo', 'minn: Kurt Borg', 'għal: Dwar sens ta’ ħarifa', 1]);">
+		
+			<header>
+	<ul>
+		
+			<li class="header-label">Ottubru 2024</li>
+		
+		
+	</ul>
+	
+	
+		
+			<h1>
+				Dwar sens ta’ ħarifa
+				
+			</h1>
+		
+	
+	
+
+	
+	<h2>
+		
+		
+			
+			
+				
+					
+						<span class="author">Kurt Borg</span>
+					
+					
+	</h2>
+
+
+
+
+
+	
+</header>
+
+			
+			<div class="body-text">
+				
+					<p>Nazzarda ngħid li <l-m>l-esej</l-m> biddilli ħajti u <l-m>l-mod</l-m> kif inħares lejha. Ngħid dan <l-m>bir-riskju</l-m> li <l-m>dal-kliem</l-m> jinstema’ klixè. Infatti, għalija <l-m>l-esej</l-m> bħala tip ta’ kitba jitgeżwer f’dan <l-m>ir-riskju</l-m>. Ħafna drabi, jien u nikteb <l-m>l-esej</l-m>, kien ikun hemm vuċi ġo fija li tgħidli: “Imma min se jimpurtah minn din <l-m>il-kitba</l-m> personali? Dawn <l-m>il-memorji</l-m> huma sinifikanti għalik biss.<span class="pullsemi">”</span> Dan hu riskju reali ħafna. Li nista’ ngħid hu li jkun żball jekk <l-m>l-esej</l-m> personali jipprova jħares biss ’il &nbsp;ġewwa jew lura biex bħallikieku jaqbad xi ħaġa pura u verġni. <l-m>L-esej</l-m> sabiħ meta jkun kapaċi jfettaħ, iwessa’ u jespandi lil hinn <l-m>mis-singolarità</l-m> tal-Jien sabiex qarrej li ma jafekx jista’ jieħu xi ħaġa minnu. U minnek.</p>
+				
+			</div>
+		
+	</a>
+	
+	<aside class="promo-aside story-aside-89">
+		<ul>
+			<li class="bookmark-compact">
+				<!-- -->
+			</li>
+			<li class="wordcount">
+				
+				
+					
+						4 119-il kelma</li>
+					
+				
+			</li>
+		</ul>
+	</aside>
+
+
+
+
+</li>
+
+		
+	
+		
+			
+
+
+<li >
+	<a class="promo  gunju promo-esej sequence- story-14" href="/kurt-borg-ġilda/" onclick="analytics(['trackEvent', 'Promo', 'minn: Kurt Borg', 'għal: Ġilda', 2]);">
+		
+			<header>
+	<ul>
+		
+			<li class="header-label">Ġunju 2023</li>
+		
+		
+	</ul>
+	
+	
+		
+			<h1>
+				Ġilda
+				
+			</h1>
+		
+	
+	
+
+	
+	<h2>
+		
+		
+			
+			
+				
+					
+						<span class="author">Kurt Borg</span>
+					
+					
+	</h2>
+
+
+
+
+
+	
+</header>
+
+			
+			<div class="body-text">
+				
+					<p>Hemm karru <l-m>bil-ġwienaħ</l-m> misjuq minn kuċċier miġbud minn żewġt iżwiemel. Żiemel minnhom abjad, b’għonqu wieqaf dritt, grazzjuż. <l-m>L-ieħor</l-m> iswed, magħmul ikrah u goff. <l-m>Bil-frosta</l-m> f’idu, <l-m>il-kuċċier</l-m> qed jittajjar lejn <l-m>is-sħab</l-m> u lil hinn minnu. <l-m>Iż-żwiemel</l-m>, speċjalment <l-m>l-iswed</l-m>, kultant jissaraw <l-m>mal-kuċċier</l-m>, jisfidawh, jisfrattaw, għoddhom jaqilbu <l-m>l-karru</l-m>. <l-m>Il-kuċċier</l-m> iqum bilwieqfa jwiddeb <l-m>liż-żwiemel</l-m>. B’idejh <l-m>it-tnejn</l-m> jiġbed b’kemm jiflaħ fuq <l-m>ir-riedni</l-m> marbutin <l-m>mal-ilġiem</l-m> ta’ ġo ħalqhom. <l-m>Iż-żwiemel</l-m> jogħtru taħt <l-m>is-saħħa</l-m> tal-kuċċier u, bla ma jridu, jobduh. Imma <l-m>t-taqbida</l-m> bejniethom tkompli. Żiemel minnhom jiġbed ’l &nbsp;hawn u <l-m>l-ieħor</l-m> jiġbed ’l &nbsp;hemm sa ma <l-m>l-kuċċier</l-m> jitlef <l-m>il-kontroll</l-m>, <l-m>il-karru</l-m> jinqasam u jegħleb <l-m>mis-smewwiet</l-m> għall-art.</p>
+				
+			</div>
+		
+	</a>
+	
+	<aside class="promo-aside story-aside-14">
+		<ul>
+			<li class="bookmark-compact">
+				<!-- -->
+			</li>
+			<li class="wordcount">
+				
+				
+					
+						5 667 kelma</li>
+					
+				
+			</li>
+		</ul>
+	</aside>
+
+
+
+
+</li>
+
+		
+	
+</ul>
+
+						</div>
+					
+					
+						<div class="diarised">
+							<p class="continuity">Entrati mid-djarju ta’ <span class="contributor">Kurt</span>:</p>
+							
+							
+							
+							
+							<ul class="promo-list collated">
+	
+	
+		
+			
+
+
+<li  class="multiple-episodes episode-4">
+	<a class="promo  gunju promo-djarju sequence-13 story-158 is-episode" href="/kurt-borg-djarju-2024-09-04-dejjem-ħrabt-minnu-dan-l-iċċattjar/" onclick="analytics(['trackEvent', 'Promo', 'minn: Kurt Borg', 'għal: Djarju #4 Kurt Borg', 1]);">
+		
+			<header>
+	<ul>
+		
+			<li class="header-label">
+				<span class="header-djarju">Djarju</span>
+				
+					<span class="subject-date">04.09.2024</span>
+				
+			</li>
+		
+		
+	</ul>
+	
+	
+		
+	
+	
+
+	
+	<h2>
+		
+		
+			
+			
+				
+					
+						<span class="author">Kurt Borg</span>
+					
+					
+	</h2>
+
+
+
+
+
+	
+		<h3>
+			
+			
+			Dejjem ħrabt minnu dan <l-m>l-iċċattjar</l-m>
+		</h3>
+	
+</header>
+
+			
+			<div class="body-text">
+				
+					<p>Ftit minuti ilu reġa’ spunta fija ħsieb li ġieni xi jiem ilu, u għalkemm dakinhar poġġejt miegħu u segwejtu, forsi ma elaborajtux biżżejjed f’moħħi. Le, anzi, elaborajtu, imma ma eżawrejtux għax għandu dejjem iktar qtar inixxi minnu. Kien ħsieb dwar <l-m>l-idea</l-m> li hemm fażijiet <l-m>fil-ħajja </l-m>— mhux biss fażijiet, imma mumenti, istanti — jiġuni iktar faċli li niftakarhom filwaqt li oħrajn jaħarbuli. Mhux jisparixxuli, imma bħallikieku dawk <l-m>il-ġranet</l-m> kont qed ngħixhom bla ma nirreġistrahom. Bħal qisu dawk <l-m>il-ġranet</l-m> ma kontx qed ngħixhom b’mod fond, ma kontx qed nistampahom sew <l-m>fit-tessut</l-m> tal-memorja. Tgħid dawn memorji li telquli għalkollox? Jew għad forsi jerġgħu jitilgħu <l-m>fil-wiċċ</l-m>, b’mod involontarju meta xi darba <l-m>s-sensi</l-m> jilħqu dak <l-m>il-bir</l-m> li hemm ġo fija? Kif spjegaha Proust. Erġajt qrajt <l-m>l-aħħar</l-m> paġni ta’ “Combray I” ftit jiem ilu; ħanina kif regħduni dawk <l-m>il-paġni</l-m>, kemm sfumaturi ta’ kulur jikxfu, kemm sens(i) iġorru fihom.</p>
+				
+			</div>
+		
+	</a>
+	
+	<aside class="promo-aside story-aside-158">
+		<ul>
+			<li class="bookmark-compact">
+				<!-- -->
+			</li>
+			<li class="wordcount">
+				
+				
+					
+						1 263 kelma</li>
+					
+				
+			</li>
+		</ul>
+	</aside>
+
+
+
+
+</li>
+
+		
+	
+		
+			
+
+
+<li  class="multiple-episodes episode-3">
+	<a class="promo  mejju promo-djarju sequence-13 story-150 is-episode" href="/kurt-borg-djarju-2024-08-23-xi-ħaġa-fija-mhux-mixgħula/" onclick="analytics(['trackEvent', 'Promo', 'minn: Kurt Borg', 'għal: Djarju #3 Kurt Borg', 2]);">
+		
+			<header>
+	<ul>
+		
+			<li class="header-label">
+				<span class="header-djarju">Djarju</span>
+				
+					<span class="subject-date">23.08.2024</span>
+				
+			</li>
+		
+		
+	</ul>
+	
+	
+		
+	
+	
+
+	
+	<h2>
+		
+		
+			
+			
+				
+					
+						<span class="author">Kurt Borg</span>
+					
+					
+	</h2>
+
+
+
+
+
+	
+		<h3>
+			
+			
+			Xi ħaġa fija mhux mixgħula
+		</h3>
+	
+</header>
+
+			
+			<div class="body-text">
+				
+					<p>Ftit minuti ilu reġa’ spunta fija ħsieb li ġieni xi jiem ilu, u għalkemm dakinhar poġġejt miegħu u segwejtu, forsi ma elaborajtux biżżejjed f’moħħi. Le, anzi, elaborajtu, imma ma eżawrejtux għax għandu dejjem iktar qtar inixxi minnu. Kien ħsieb dwar <l-m>l-idea</l-m> li hemm fażijiet <l-m>fil-ħajja </l-m>— mhux biss fażijiet, imma mumenti, istanti — jiġuni iktar faċli li niftakarhom filwaqt li oħrajn jaħarbuli. Mhux jisparixxuli, imma bħallikieku dawk <l-m>il-ġranet</l-m> kont qed ngħixhom bla ma nirreġistrahom. Bħal qisu dawk <l-m>il-ġranet</l-m> ma kontx qed ngħixhom b’mod fond, ma kontx qed nistampahom sew <l-m>fit-tessut</l-m> tal-memorja. Tgħid dawn memorji li telquli għalkollox? Jew għad forsi jerġgħu jitilgħu <l-m>fil-wiċċ</l-m>, b’mod involontarju meta xi darba <l-m>s-sensi</l-m> jilħqu dak <l-m>il-bir</l-m> li hemm ġo fija? Kif spjegaha Proust. Erġajt qrajt <l-m>l-aħħar</l-m> paġni ta’ “Combray I” ftit jiem ilu; ħanina kif regħduni dawk <l-m>il-paġni</l-m>, kemm sfumaturi ta’ kulur jikxfu, kemm sens(i) iġorru fihom.</p>
+				
+			</div>
+		
+	</a>
+	
+	<aside class="promo-aside story-aside-150">
+		<ul>
+			<li class="bookmark-compact">
+				<!-- -->
+			</li>
+			<li class="wordcount">
+				
+				
+					
+						2 715-il kelma</li>
+					
+				
+			</li>
+		</ul>
+	</aside>
+
+
+
+
+</li>
+
+		
+	
+		
+			
+
+
+<li  class="multiple-episodes episode-2">
+	<a class="promo  april promo-djarju sequence-13 story-136 is-episode" href="/kurt-borg-djarju-2024-08-19-bħal-tagħfas-buttuna-u-kollox-relax/" onclick="analytics(['trackEvent', 'Promo', 'minn: Kurt Borg', 'għal: Djarju #2 Kurt Borg', 3]);">
+		
+			<header>
+	<ul>
+		
+			<li class="header-label">
+				<span class="header-djarju">Djarju</span>
+				
+					<span class="subject-date">19.08.2024</span>
+				
+			</li>
+		
+		
+	</ul>
+	
+	
+		
+	
+	
+
+	
+	<h2>
+		
+		
+			
+			
+				
+					
+						<span class="author">Kurt Borg</span>
+					
+					
+	</h2>
+
+
+
+
+
+	
+		<h3>
+			
+			
+			Bħal tagħfas buttuna u kollox relax
+		</h3>
+	
+</header>
+
+			
+			<div class="body-text">
+				
+					<p>Hemm min jgħid li min iżomm djarju jaf ikollu teorija <l-m>tad-djarju</l-m>. Jien ma nafx jekk għandix teorija <l-m>tad-djarju</l-m>. Jew forsi għandi, għax <l-m>l-element</l-m> konfessjonali <l-m>tad-djarju</l-m> dejjem ġibidni, minn meta kont tifel. Imma issa qisni ma rridx nibqa’ mwaħħal ma’ dak <l-m>l-impuls</l-m> biss — li jħares lura u jeqred. Avolja dawn huma karatteristiċi ċari fija u f’kitbieti. Inżomm djarju biex niddokumenta <l-m>l-ispirtu</l-m> ta’ ruħi, <l-m>it-togħmiet</l-m> li kapaċi (u li m’iniex kapaċi) intiegħem ta’ kuljum, <l-m>it-taqbida</l-m> li nħoss <l-m>mas-sensi</l-m> tiegħi hekk kif inħossni inkapaċi ngħix <l-m>il-letteratura</l-m> bil-mod li nixtieq għalkollox. Dik <l-m>il-ħajta</l-m> ta’ dissodisfazzjon hija għajn għall-kitba tiegħi. Mhux biss nostalġija, imma wkoll kilba, għafsa, għatx, xenqa, xewqa għal konnessjoni — inħoss li dawn huma <l-m>l-affetti</l-m> tal-kitba tiegħi. Tenerezza u fraġilità.</p>
+				
+			</div>
+		
+	</a>
+	
+	<aside class="promo-aside story-aside-136">
+		<ul>
+			<li class="bookmark-compact">
+				<!-- -->
+			</li>
+			<li class="wordcount">
+				
+				
+					
+						2 087 kelma</li>
+					
+				
+			</li>
+		</ul>
+	</aside>
+
+
+
+
+</li>
+
+		
+	
+		
+			
+
+
+<li  class="multiple-episodes episode-1">
+	<a class="promo  frar promo-djarju sequence-13 story-122 is-episode" href="/kurt-borg-djarju-2024-08-10-inqas-ħsieb-u-iktar-ritmu/" onclick="analytics(['trackEvent', 'Promo', 'minn: Kurt Borg', 'għal: Djarju #1 Kurt Borg', 4]);">
+		
+			<header>
+	<ul>
+		
+			<li class="header-label">
+				<span class="header-djarju">Djarju</span>
+				
+					<span class="subject-date">10.08.2024</span>
+				
+			</li>
+		
+		
+	</ul>
+	
+	
+		
+	
+	
+
+	
+	<h2>
+		
+		
+			
+			
+				
+					
+						<span class="author">Kurt Borg</span>
+					
+					
+	</h2>
+
+
+
+
+
+	
+		<h3>
+			
+			
+			Inqas ħsieb u iktar ritmu
+		</h3>
+	
+</header>
+
+			
+			<div class="body-text">
+				
+					<p>Qabel irqadt ġieni ħsieb, sentenza ta’ ftuħ jew tema għal esej. Ħsibt <l-m>fl-ewwel</l-m> ta’ Settembru, tibdil <l-m>fl-ajru</l-m>, imma iktar tibdil ġewwa fija. Ħsibt f’kif ġieli, dawk <l-m>il-ġranet</l-m> bikrin ta’ Settembru jġibuli magħhom ħajta dwejjaq. Qisu hemm xi swiċċ li jifred <l-m>l-affett</l-m> sajfi minn dak ħarifi. Skola, kapitli ġodda, lura għal rutina <l-m>mill-anarkija</l-m> sajfija. Imma mbagħad ħsibt f’kif dak <l-m>l-arranġament</l-m> emozzjonali m’għadux hekk. <l-m>Il-kapitli</l-m> differenti m’għadhomx jinfirdu minn xulxin b’mod daqshekk preċiż. Kollox bħal qed isir massa waħda. Inklużi <l-m>l-emozzjonijiet</l-m>. M’għadx hemm separazzjoni bejn punt u ieħor. M’għadx hemm <l-m>it-tranżizzjoni</l-m> evidenti bejn ferħ u diqa. Issa hemm livell wieħed, diqa perpetwa, u <l-m>l-ferħ</l-m> huwa sospensjoni temporanja minn dan <l-m>l-istat</l-m> li jħallik timraħ għal ftit lil hinn sa ma mbagħad terġa’ tirritorna għalih. Għad-dwejjaq stabbli.</p>
+				
+			</div>
+		
+	</a>
+	
+	<aside class="promo-aside story-aside-122">
+		<ul>
+			<li class="bookmark-compact">
+				<!-- -->
+			</li>
+			<li class="wordcount">
+				
+				
+					
+						2 562 kelma</li>
+					
+				
+			</li>
+		</ul>
+	</aside>
+
+
+
+
+</li>
+
+		
+	
+</ul>
+
+						</div>
+					
+					
+					
+						<div class="collaborated">
+							<p class="continuity">Kollaborazzjonijiet:</p>
+							
+							
+							<ul class="promo-list collated">
+	
+	
+		
+			
+
+
+<li >
+	<a class="promo  marzu promo-terminu sequence- story-128" href="/il-kliem-fit-teorija-il-politika-tal-kura/" onclick="analytics(['trackEvent', 'Promo', 'minn: Kurt Borg', 'għal: il-politika tal-kura', 1]);">
+		
+			<header>
+	<ul>
+		
+			<li class="header-label">
+				
+					<span class="subject-date">01.03.2025</span>
+				
+			</li>
+		
+		
+			<li class="header-label collection-slug collection-3">
+				Il-Kliem fit-Teorija
+			</li>
+		
+	</ul>
+	
+	
+		
+			<h1>
+				il-politika <l-m>tal-kura</l-m>
+				
+			</h1>
+		
+	
+	
+
+	
+	<h2>
+		
+		
+			
+			
+				
+					
+						<span class="author">Raylene Abdilla</span>
+					
+					, 
+				
+					
+						<span class="author">Noah Fabri</span>
+					
+					, 
+				
+					
+						<span class="author">Davinia Hamilton</span>
+					
+					, 
+				
+					
+						<span class="author">Kurt Borg</span>
+					
+					, 
+				
+					
+						<span class="author">Loranne Vella</span>
+					
+					, 
+				
+					
+						<span class="author">Kristina Borg</span>
+					
+					 & 
+				
+					
+						<span class="author">Omar <l-m>N’Shea</l-m></span>
+					
+					
+	</h2>
+
+
+
+
+
+	
+</header>
+
+			
+			<div class="body-text">
+				
+					<p>Sibt diffikultà <l-m>bit-traduzzjoni</l-m> għal “politics of care” bħala “<l-m>il-politika</l-m> tal-kura” għaliex <l-m>il-kelma</l-m> “kura” <l-m>bil-Malti</l-m> hija aktar assoċjata <l-m>mad-diskors</l-m> mediku, bħal ngħidu aħna meta <l-m>t-tabib</l-m> jikkura pazjent. <l-m>Bit-Taljan</l-m> meta ngħidu “ħu ħsieb” tiġi tradotta bħala “stammi bene”<span class="pull">,</span> waqt li <l-m>l-frażi</l-m> “nieħu ħsiebek” tiġi tradotta għal “mi curo di te”<span class="pull">.</span> F’dan <l-m>is-sens</l-m> it-Taljan għandu użu usa’ għall-kunċett “curare” li jistà jfisser kemm “tieħu ħsieb” u kemm “kura” <l-m>mill-mard</l-m>. <l-m>Bil-Malti</l-m> ma nħossx li <l-m>l-kelma</l-m> “kura” hija adatta biex taqbad <l-m>il-kunċett</l-m> ta “politics of care”<span class="pull">.</span></p>
+				
+			</div>
+		
+	</a>
+	
+	<aside class="promo-aside story-aside-128">
+		<ul>
+			<li class="bookmark-compact">
+				<!-- -->
+			</li>
+			<li class="wordcount">
+				
+				
+					
+						729 kelma</li>
+					
+				
+			</li>
+		</ul>
+	</aside>
+
+
+
+
+</li>
+
+		
+	
+		
+			
+
+
+<li >
+	<a class="promo  marzu promo-terminu sequence- story-129" href="/il-kliem-fit-teorija-ħu-ħsieb/" onclick="analytics(['trackEvent', 'Promo', 'minn: Kurt Borg', 'għal: ħu ħsieb', 2]);">
+		
+			<header>
+	<ul>
+		
+			<li class="header-label">
+				
+					<span class="subject-date">24.02.2025</span>
+				
+			</li>
+		
+		
+			<li class="header-label collection-slug collection-3">
+				Il-Kliem fit-Teorija
+			</li>
+		
+	</ul>
+	
+	
+		
+			<h1>
+				ħu ħsieb
+				
+			</h1>
+		
+	
+	
+
+	
+	<h2>
+		
+		
+			
+			
+				
+					
+						<span class="author">Noah Fabri</span>
+					
+					, 
+				
+					
+						<span class="author">Kurt Borg</span>
+					
+					, 
+				
+					
+						<span class="author">Omar <l-m>N’Shea</l-m></span>
+					
+					 & 
+				
+					
+						<span class="author">Raylene Abdilla</span>
+					
+					
+	</h2>
+
+
+
+
+
+	
+</header>
+
+			
+			<div class="body-text">
+				
+					<p>Fid-dinja Ingliża u dik <l-m>tal-Punent</l-m>, “to care” dejjem kienet distinta minn “thought” u “reason”<span class="pull">.</span> “Care” assoċjata ma’ emozzjonijiet, irtubija <l-m>tal-qalb</l-m>, femminilità — u mhux <l-m>il-ħsieb</l-m>, li dejjem kien meqjus rett, veritier u imparzjali, kif ħafna drabi huwa mfisser <l-m>fil-Punent</l-m>. Qisu <l-m>l-Malti</l-m> ma jagħmilx din <l-m>id-distinzjoni</l-m> radikali bejn <l-m>il-ħsieb</l-m> bħala ħsieb astratt u li tieħu ħsieb xi ħadd.</p>
+				
+			</div>
+		
+	</a>
+	
+	<aside class="promo-aside story-aside-129">
+		<ul>
+			<li class="bookmark-compact">
+				<!-- -->
+			</li>
+			<li class="wordcount">
+				
+				
+					
+						587 kelma</li>
+					
+				
+			</li>
+		</ul>
+	</aside>
+
+
+
+
+</li>
+
+		
+	
+		
+			
+
+
+<li >
+	<a class="promo  marzu promo-terminu sequence- story-130" href="/il-kliem-fit-teorija-ħarsa-lemħa/" onclick="analytics(['trackEvent', 'Promo', 'minn: Kurt Borg', 'għal: ħarsa/lemħa', 3]);">
+		
+			<header>
+	<ul>
+		
+			<li class="header-label">
+				
+					<span class="subject-date">24.02.2025</span>
+				
+			</li>
+		
+		
+			<li class="header-label collection-slug collection-3">
+				Il-Kliem fit-Teorija
+			</li>
+		
+	</ul>
+	
+	
+		
+			<h1>
+				ħarsa/lemħa
+				
+			</h1>
+		
+	
+	
+
+	
+	<h2>
+		
+		
+			
+			
+				
+					
+						<span class="author">Kurt Borg</span>
+					
+					, 
+				
+					
+						<span class="author">Omar <l-m>N’Shea</l-m></span>
+					
+					 & 
+				
+					
+						<span class="author">Davinia Hamilton</span>
+					
+					
+	</h2>
+
+
+
+
+
+	
+</header>
+
+			
+			<div class="body-text">
+				
+					<p>M’iniex għalkollox ċert dwar “lemħa” għax għalija din <l-m>il-kelma</l-m> għandha konnotazzjonijiet passivi, <l-m>fis-sens</l-m> li tkun qed tiġri xi ħaġa u inti tilmaħha; u mhux <l-m>is-sens</l-m> li inti qed tħares b’mod attiv u intenzjonat lejn xi ħaġa. “Lemaħ” fuq verb.mt qed tiġi tradotta bħala “to catch sight of”<span class="pull">.</span> <l-m>Fil-każ</l-m> ta’ “the look on his face” ma taħdimx “lemħa” (“<l-m>il-ħarsa</l-m> fuq wiċċu”).</p>
+				
+			</div>
+		
+	</a>
+	
+	<aside class="promo-aside story-aside-130">
+		<ul>
+			<li class="bookmark-compact">
+				<!-- -->
+			</li>
+			<li class="wordcount">
+				
+				
+					
+						188 kelma</li>
+					
+				
+			</li>
+		</ul>
+	</aside>
+
+
+
+
+</li>
+
+		
+	
+		
+			
+
+
+<li >
+	<a class="promo  marzu promo-terminu sequence- story-131" href="/il-kliem-fit-teorija-tpaxxa/" onclick="analytics(['trackEvent', 'Promo', 'minn: Kurt Borg', 'għal: tpaxxa', 4]);">
+		
+			<header>
+	<ul>
+		
+			<li class="header-label">
+				
+					<span class="subject-date">24.02.2025</span>
+				
+			</li>
+		
+		
+			<li class="header-label collection-slug collection-3">
+				Il-Kliem fit-Teorija
+			</li>
+		
+	</ul>
+	
+	
+		
+			<h1>
+				tpaxxa
+				
+			</h1>
+		
+	
+	
+
+	
+	<h2>
+		
+		
+			
+			
+				
+					
+						<span class="author">Davinia Hamilton</span>
+					
+					, 
+				
+					
+						<span class="author">Kurt Borg</span>
+					
+					 & 
+				
+					
+						<span class="author">Omar <l-m>N’Shea</l-m></span>
+					
+					
+	</h2>
+
+
+
+
+
+	
+</header>
+
+			
+			<div class="body-text">
+				
+					<p>Jouissance, kif nafha jien, ma tfissirx biss pjaċir, imma xi ħaġa <l-m>fl-estrem</l-m>, li tista’ wkoll tinkludi <l-m>l-uġigħ</l-m> u <l-m>s-sofferenza</l-m>. Jouissance mhix pura, fiha hemm <l-m>l-eċċess</l-m>, hemm <l-m>il-mewt</l-m>, livell ta’ eċitazzjoni li kważi ma tiflaħhiex. Lacan jagħmel distinzjoni bejn <l-m>il-pjaċir</l-m> u <l-m>l-jouissance</l-m>. <l-m>Il-pjaċir</l-m> jobdi <l-m>l-liġi</l-m> tal-omeostażi li nsibu f’Beyond the Pleasure Principle [Jenseits des Lustprinzips], fejn <l-m>il-moħħ</l-m> ifittex <l-m>l-inqas</l-m> tensjoni. B’hekk, <l-m>il-prinċipju</l-m> tal-pjaċir ipoġġi limitu fuq <l-m>il-pjaċir</l-m>. <l-m>Min-naħa</l-m> l-oħra, <l-m>il-jouissance</l-m> tikser din <l-m>il-liġi</l-m> u hi “beyond the pleasure principle” u iktar tallinja ruħha <l-m>mad-death</l-m> drive [Todestrieb].</p>
+				
+			</div>
+		
+	</a>
+	
+	<aside class="promo-aside story-aside-131">
+		<ul>
+			<li class="bookmark-compact">
+				<!-- -->
+			</li>
+			<li class="wordcount">
+				
+				
+					
+						332 kelma</li>
+					
+				
+			</li>
+		</ul>
+	</aside>
+
+
+
+
+</li>
+
+		
+	
+		
+			
+
+
+<li >
+	<a class="promo  mejju promo-terminu sequence- story-51" href="/il-kliem-fit-teorija-alterità/" onclick="analytics(['trackEvent', 'Promo', 'minn: Kurt Borg', 'għal: alterità', 5]);">
+		
+			<header>
+	<ul>
+		
+			<li class="header-label">
+				
+					<span class="subject-date">27.05.2024</span>
+				
+			</li>
+		
+		
+			<li class="header-label collection-slug collection-3">
+				Il-Kliem fit-Teorija
+			</li>
+		
+	</ul>
+	
+	
+		
+			<h1>
+				alterità
+				
+			</h1>
+		
+	
+	
+
+	
+	<h2>
+		
+		
+			
+			
+				
+					
+						<span class="author">Omar <l-m>N’Shea</l-m></span>
+					
+					, 
+				
+					
+						<span class="author">Davinia Hamilton</span>
+					
+					, 
+				
+					
+						<span class="author">Kurt Borg</span>
+					
+					, 
+				
+					
+						<span class="author">Aaron Aquilina</span>
+					
+					 & 
+				
+					
+						<span class="author">Loranne Vella</span>
+					
+					
+	</h2>
+
+
+
+
+
+	
+</header>
+
+			
+			<div class="body-text">
+				
+					<p>Ngħid għalija, meta nagħżel li nuża <l-m>l-kelma</l-m> “alterità”<span class="pull">,</span> nużaha biex nirreferi għat-tip ta’ “ieħor” li jikteb dwaru Levinas. <l-m>L-alterità</l-m> tal-Ieħor m’għandhiex <l-m>x’taqsam</l-m> ma’ meta ngħidu li xi ħadd ġie othered, ċjoè meqjus inferjuri, eskluż miċ-ċentru <l-m>tan-normalità</l-m>, abjected (din tkun kelma oħra ta’ min ningaġġaw magħha). Kif nifhmu jien, għal Levinas, <l-m>l-alterità</l-m> tal-Ieħor hija dik <l-m>il-kwalità</l-m> (anzi, hija nonkwalità, għax ma tinqabadx f’kategoriji) li lili twaqqafni milli nirreduċi <l-m>lill-Ieħor</l-m> għal sameness. (La qegħdin fiha, sameness kif tiġi <l-m>bil-Malti</l-m>? “Identiċità”? “Stessiżmu”? Hekk issuġġerew xi wħud fuq <l-m>il-grupp</l-m> Kelmet <l-m>il-Malti</l-m> fuq Facebook.) <l-m>L-alterità</l-m>, allura, mhijiex vjolenza (bħalma ġeneralment tkun meta xi ħadd jiġi othered); anzi, għal Levinas, <l-m>il-vjolenza</l-m> sseħħ appuntu meta <l-m>l-alterità</l-m> tal-Ieħor inwaqqgħuha għall-kategorija <l-m>tal-familjari</l-m>. B’hekk, inkunu ħnoqnieh <l-m>lill-Ieħor</l-m>, ġibnieh oġġett. Allura, “alterità”<span class="pull">,</span> għalija, iġġorr magħha konnotazzjonijiet ta’ fraġilità, valur, vulnerabbiltà li tinforma attitudni etika. Wara kollox, <l-m>il-filosofija</l-m> ta’ Levinas hija <l-m>l-etika</l-m> tal-alterità.</p>
+				
+			</div>
+		
+	</a>
+	
+	<aside class="promo-aside story-aside-51">
+		<ul>
+			<li class="bookmark-compact">
+				<!-- -->
+			</li>
+			<li class="wordcount">
+				
+				
+					
+						1 200 kelma</li>
+					
+				
+			</li>
+		</ul>
+	</aside>
+
+
+
+
+</li>
+
+		
+	
+		
+			
+
+
+<li >
+	<a class="promo  marzu promo-terminu sequence- story-53" href="/il-kliem-fit-teorija-xewqa-xenqa/" onclick="analytics(['trackEvent', 'Promo', 'minn: Kurt Borg', 'għal: xewqa/xenqa', 6]);">
+		
+			<header>
+	<ul>
+		
+			<li class="header-label">
+				
+					<span class="subject-date">13.02.2024</span>
+				
+			</li>
+		
+		
+			<li class="header-label collection-slug collection-3">
+				Il-Kliem fit-Teorija
+			</li>
+		
+	</ul>
+	
+	
+		
+			<h1>
+				xewqa/xenqa
+				
+			</h1>
+		
+	
+	
+
+	
+	<h2>
+		
+		
+			
+			
+				
+					
+						<span class="author">Davinia Hamilton</span>
+					
+					, 
+				
+					
+						<span class="author">Raylene Abdilla</span>
+					
+					 & 
+				
+					
+						<span class="author">Kurt Borg</span>
+					
+					
+	</h2>
+
+
+
+
+
+	
+</header>
+
+			
+			<div class="body-text">
+				
+					<p>Il-kelma “xewqa” togħġobni iktar ukoll għaliex tista’ timplika element konxju fejn <l-m>is-suġġett</l-m> konxjament jista’ jixtieq xi ħaġa partikolari, filwaqt li <l-m>l-kelma</l-m> “xenqa” timplika passività fejn <l-m>is-suġġett</l-m> ma jistax ma jixxennaqx għal dak li m’għandux. Naħseb li għal Lacan, <l-m>il-kunċett</l-m> ta’ désir jopera kemm <l-m>fil-konxju</l-m> u kemm <l-m>fl-inkonxju</l-m>. F’dan <l-m>is-sens</l-m>, <l-m>is-suġġett</l-m> inkonxjament jixtieq totalità, jixxennaq għaliha, u <l-m>fl-istess</l-m> waqt li dan <l-m>l-impuls</l-m> inkonxju jiggverna <l-m>x-xewqa</l-m>, <l-m>ix-xewqa</l-m> nnifisha titlibbes forma li <l-m>s-suġġett</l-m> huwa konxju tagħha, bħal pereżempju: <l-m>il-fantażija</l-m> ta’ suġġett Ingliż awtonomu, ħabrieki, patrijott, aħjar <l-m>mill-Ewropew</l-m> u miżmum lura appuntu minħabba <l-m>l-Ewropew</l-m> inferjuri u <l-m>l-Ewropew</l-m> li jrid idaħħal <l-m>l-immigranti</l-m>, flimkien ma’ fantażiji dwar narrattivi ta’ grandjożità imperjali u kolonjali. Din <l-m>il-fantażija</l-m> Ingliża ġiet immanifestata b’mod konxju f’dawk <l-m>il-votanti</l-m> pro-Brexit <l-m>fl-Ingilterra</l-m> fl-2016. <l-m>L-identifikazzjoni</l-m> mal-kampanja <l-m>tal-Brexit</l-m> topera kemm fuq livell konxju <l-m>fis-sens</l-m> li <l-m>s-suġġett</l-m> Ingliż ħaseb li ġaladarba <l-m>l-Ingilterra</l-m> toħroġ <l-m>mill-UE</l-m>, ħa jerġa’ jsir sħiħ kif ukoll jitpaxxa (iħoss sens ta’ jouissance) <l-m>bir-riżultat</l-m> tal-vot. <l-m>Fl-istess</l-m> ħin, din <l-m>il-faċċata</l-m> konxja qed tgħatti <l-m>l-implikazzjoni</l-m> mistura ta’ xenqa għal totalità li qatt ma tista’ tinkiseb: fejn anki wara Brexit dak li ġie mwiegħed, ma wasalx.</p>
+				
+			</div>
+		
+	</a>
+	
+	<aside class="promo-aside story-aside-53">
+		<ul>
+			<li class="bookmark-compact">
+				<!-- -->
+			</li>
+			<li class="wordcount">
+				
+				
+					
+						1 170 kelma</li>
+					
+				
+			</li>
+		</ul>
+	</aside>
+
+
+
+
+</li>
+
+		
+	
+</ul>
+
+						</div>
+					
+					
+						<div class="podcasts">
+							<p class="continuity">Poddati ma’ <span class="contributor">Kurt</span>:</p>
+							
+							
+							
+							
+							<ul class="promo-list collated">
+	
+	
+		
+			
+
+
+<li >
+	<a class="promo  jannar promo-poddata sequence- story-113" href="/raylene-abdilla-kurt-borg-noah-fabri-omar-nshea-poddata-2025-01-24-ħbiberija-ħrejjef-komunità-(taħdita)/" onclick="analytics(['trackEvent', 'Promo', 'minn: Kurt Borg', 'għal: Ħbiberija, Ħrejjef, Komunità (taħdita)', 1]);">
+		
+			<header>
+	<ul>
+		
+			<li class="header-label">
+			Poddata
+			
+					<span class="subject-date">24.01.2025</span>
+				
+			</li>
+		
+		
+	</ul>
+	
+	
+		
+			<h1>
+				Ħbiberija, Ħrejjef, Komunità
+			</h1>
+		
+	
+	
+
+
+
+
+
+	
+</header>
+
+			
+			<div class="body-text">
+				
+					<p>Fl-24 ta’ Jannar 2025 <l-m>fis-6:00pm</l-m>, flimkien ma’ Kurt Borg u Noah Fabri, konna <l-m>l-mistednin</l-m> tal-Librerija Pubblika ta’ Pembroke. Raylene Abdilla tkellmet dwar <l-m>il-kitbiet</l-m> f’Aphroconfuso u Omar <l-m>N’Shea</l-m> mexxa <l-m>d-diskussjoni</l-m>. Kurt tkellem dwar <l-m>il-ġabra</l-m> ta’ esejs tiegħu sens ta’ ħarifa (Klabb Kotba Maltin 2024) u qara silta minnha. Noah Fabri tkellmet dwar <l-m>ir-rumanz</l-m> tagħha <l-m>It-Togħma</l-m> Morra taċ-Ċiċri (Merlin 2024) u wkoll qrat silta minnu. Raylene tkellmet dwar diversi kitbiet li jidhru f’Antoloġija 1 u li jidhru wkoll online fosthom Medusa ta’ Rowena Grech, <l-m>Il-Labra</l-m>, <l-m>Il-Lanza</l-m>, <l-m>il-Qoffa</l-m>, <l-m>l-Azzarin</l-m> ta’ Loranne Vella, Likantropi ta’ Davinia Hamilton, u <l-m>d-Djarju</l-m> ta’ Warren Bartolo. Omar <l-m>N’Shea</l-m> mexxa <l-m>t-taħdita</l-m>. Tkellimna dwar <l-m>il-kitba</l-m> bil-Malti, <l-m>il-ħbiberija</l-m>, <l-m>il-karattri</l-m> f’rumanz imnebbħin <l-m>mill-ħbieb</l-m> tal-awtur, <l-m>ir-reviżjoni</l-m>, <l-m>id-differenza</l-m> bejn <l-m>ir-rumanz</l-m> u <l-m>l-esej</l-m>, u bosta suġġetti oħra.</p>
+				
+			</div>
+		
+	</a>
+	
+	<aside class="promo-aside story-aside-113">
+		<ul>
+			<li class="bookmark-compact">
+				<!-- -->
+			</li>
+			<li class="wordcount">
+				
+				
+					
+				
+			</li>
+		</ul>
+	</aside>
+
+
+
+
+</li>
+
+		
+	
+		
+			
+
+
+<li >
+	<a class="promo  frar promo-poddata sequence- story-45" href="/kurt-borg-poddata-2024-02-22-noti-editorjali-4-kurt-borg/" onclick="analytics(['trackEvent', 'Promo', 'minn: Kurt Borg', 'għal: Noti Editorjali #4: Kurt Borg #4', 2]);">
+		
+			<header>
+	<ul>
+		
+			<li class="header-label">
+			Poddata
+			
+					<span class="subject-date">22.02.2024</span>
+				
+			</li>
+		
+		
+	</ul>
+	
+	
+		
+			<h1>
+				Noti Editorjali<span class="episodeNumber"> #4</span>
+			</h1>
+		
+	
+	
+
+
+
+
+
+	
+</header>
+
+			
+			<div class="body-text">
+				
+					<p>«&nbsp;Dan <l-m>il-proġett</l-m> tal-esejs għalija huwa proġett ta’ memorja li <l-m>l-pandemija</l-m> tefgħetni fih. Jiġifieri <l-m>l-pandemija</l-m>, forsi kif esperjenzaha wkoll ħaddieħor, jien esperjenzajtha b’ċertu żlugar. Żlugar <l-m>mill-ordinarju</l-m>. Għaliex? Għax kollox ġie żlugat. <l-m>Il-ħajja</l-m> tagħna, għal ħafna nies <l-m>il-post</l-m> fejn jgħixu, <l-m>il-mod</l-m> kif jgħixu, <l-m>ix-xogħol</l-m>, kollox ġie maqtugħ <l-m>mill-ordinarju</l-m>. Dak <l-m>il-qtugħ</l-m> ħafna nies esperjenzawh bħala trawma, ma nixtieqx inxejjen minn dan, kien hemm ħafna mewt <l-m>fl-arja</l-m>, u ħafna nies esperjenzawh b’uġigħ. Oħrajn esperjenzawh b’forma ta’ libertà stramba u libertà ġdida li f’daqqa waħda “għandi ħafna iktar ħin” jew “għandi ħafna iktar ħin <l-m>id-dar</l-m>”<span class="pull">.</span> Wieħed <l-m>mill-ħsibijiet</l-m> li kien ikolli <l-m>fil-pandemija </l-m>— naf inqum, saru <l-m>l-għaxra</l-m>, fejn <l-m>is-soltu</l-m> nkun <l-m>l-uffiċċju</l-m> jew xi mkien u qiegħed <l-m>id-dar </l-m>— u ngħid <l-m>id-dawl</l-m> tax-xemx fuq din <l-m>il-mejda</l-m> qatt ma rajtu b’dan <l-m>il-mod</l-m>, dak <l-m>it-tip</l-m> ta’ ħsibijiet, għax qatt ma nkun <l-m>id-dar</l-m> dak <l-m>il-ħin</l-m>. Jew qed inħoss <l-m>il-kamra</l-m> differenti, jew inkella anka qed immur mixja. Kont maqtugħ <l-m>mir-rutina</l-m>. Ġieli kien ikun stramb dan, u ġieli kien idejjaqni, ovvjament, għax kien hemm ħafna stress, ħafna ansjetà u inċertezza. Imma daqstant ieħor kelli bżonn dik <l-m>il-qatgħa</l-m> biex lili titfagħni f’ċerta żona fejn ċerti memorji reġgħu bdew ifuru. Jew ċerti emozzjonijiet minn ġo fija erġajt bdejt inħosshom b’ċerta intensità, b’ċerta luċidità. U ħassejt dak kien mument esejistiku għalija. Kien f’dan <l-m>l-ispirtu</l-m> li dort lejn <l-m>l-esej</l-m> għax xtaqt naqbad xi ħaġa minni nnifsi u <l-m>mid-dinja</l-m> li bdejt inħoss li ħa titlaq għal dejjem.&nbsp;»</p>
+				
+			</div>
+		
+	</a>
+	
+	<aside class="promo-aside story-aside-45">
+		<ul>
+			<li class="bookmark-compact">
+				<!-- -->
+			</li>
+			<li class="wordcount">
+				
+				
+					
+				
+			</li>
+		</ul>
+	</aside>
+
+
+
+
+</li>
+
+		
+	
+		
+			
+
+
+<li >
+	<a class="promo  jannar promo-poddata sequence- story-39" href="/kurt-borg-davinia-hamilton-omar-nshea-poddata-2023-11-01-kif-tgħidha-fqalbek/" onclick="analytics(['trackEvent', 'Promo', 'minn: Kurt Borg', 'għal: Kif Tgħidha f’Qalbek', 3]);">
+		
+			<header>
+	<ul>
+		
+			<li class="header-label">
+			Poddata
+			
+					<span class="subject-date">01.11.2023</span>
+				
+			</li>
+		
+		
+	</ul>
+	
+	
+		
+			<h1>
+				Kif Tgħidha f’Qalbek
+			</h1>
+		
+	
+	
+
+
+
+
+
+	
+</header>
+
+			
+			<div class="body-text">
+				
+					<p>“Jekk huwa minnu, bħalma jgħidu ħafna, li kull kitba hija forma ta’ traduzzjoni, <l-m>il-kitba</l-m> bil-Malti terġa’ hija traduzzjoni b’mod iktar ovvju minn dak li hu mifhum minn min jgħid hekk. F’dawn <l-m>l-ewwel</l-m> xogħlijiet li għandna <l-m>fil-ġurnal</l-m> tagħna din <l-m>it-taqbida</l-m> kienet ta’ spiss parti importanti <l-m>mill-kitba</l-m> u <l-m>mill-proċess</l-m> editorjali. Meta <l-m>l-ewwel</l-m> niddeċiedu li niktbu dwar suġġetti li aħna intiżi fihom imbagħad wara nagħżlu li niktbu dwarhom <l-m>bil-Malti</l-m>, insibu ruħna nipproċessaw ideat illi dejjem qrajniehom b’lingwa oħra, probabbilment <l-m>bl-Ingliż</l-m>, u li għalhekk bqajna naħsbuhom b’din <l-m>il-lingwa</l-m>. Meta niġu biex nartikolawhom <l-m>bil-Malti</l-m> nsibu ruħna nitqabdu bejn <l-m>l-idea</l-m> nnifisha u espressjoni preċiża u eleganti.<span class="pullsemi">”</span></p>
+				
+			</div>
+		
+	</a>
+	
+	<aside class="promo-aside story-aside-39">
+		<ul>
+			<li class="bookmark-compact">
+				<!-- -->
+			</li>
+			<li class="wordcount">
+				
+				
+					
+				
+			</li>
+		</ul>
+	</aside>
+
+
+
+
+</li>
+
+		
+	
+</ul>
+
+						</div>
+					
+				</div>
+			</section>
+			<section id="grid-max-panel-left-top" data-pagefind-ignore>
+				<section class="generic-menu contributors-menu">
+	
+		
+			<nav>
+			
+			
+				<li>
+					<a href="/raylene-abdilla/">Raylene Abdilla</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/beverly-agius/">Beverly Agius</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/aaron-aquilina/">Aaron Aquilina</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/jasmine-bajada/">Jasmine Bajada</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/karl-baldacchino/">Karl Baldacchino</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/simon-bartolo/">Simon Bartolo</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/warren-bartolo/">Warren Bartolo</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/kristina-borg/">Kristina Borg</a>
+				</li>
+			
+			
+	
+		
+			
+				<li class="active">Kurt Borg</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/nicole-borg/">Nicole Borg</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/antoine-cassar/">Antoine Cassar</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/daniel-cossai/">Daniel Cossai</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/leanne-ellul/">Leanne Ellul</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/noah-fabri/">Noah Fabri</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/ryan-falzon/">Ryan Falzon</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/fatima-a.m./">fatima a.m.</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/charlene-galea/">Charlene Galea</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/miriam-galea/">Miriam Galea</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/joe-gatt/">Joe Gatt</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/romeo-roxman-gatt/">Romeo Roxman Gatt</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/rowena-grech/">Rowena Grech</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/jimmy-grima/">Jimmy Grima</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/davinia-hamilton/">Davinia Hamilton</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/jien_a/">Jien_a</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/ira-melkonyan/">Ira Melkonyan</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/glorianne-micallef/">Glorianne Micallef</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/omar-nshea/">Omar N’Shea</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/nathan-anthony-pace/">Nathan Anthony Pace</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/kris-polidano/">Kris Polidano</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/matteo-pullicino/">Matteo Pullicino</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/matthew-schembri/">Matthew Schembri</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/maria-theuma/">Maria Theuma</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/leslie-vassallo/">Leslie Vassallo</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/loranne-vella/">Loranne Vella</a>
+				</li>
+			
+			
+	
+		
+			
+				<li>
+					<a href="/manuela-zammit/">Manuela Zammit</a>
+				</li>
+			
+			
+			</nav>
+		
+	
+</section>
+
+			</section>
+		</div>
+	</article>
+	<script>
+		reportingTitle = "Kurt Borg";
+	</script>
+
+			</main>
+		</div>
+		<div id="bottom-wrapper">
+			<img id="deco" role="none" src="/img/deco-100.svg" alt="Dekorazzjoni art-nouveau"/>
+			
+				<div id="newsletter-container-bottom" class="newsletter-container">
+					<section id="form" data-track-content data-content-name="Homepage" data-content-piece="formola">
+						<iframe id="newsletter" class="newsletter-iframe-regular" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#" scrolling="no" title="Abbona fin-newsletter"></iframe>
+<iframe id="newsletter" class="newsletter-iframe-dark" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#|#201e1d|#908984|0|442093344ewr" scrolling="no" title="Abbona fin-newsletter"></iframe>
+<iframe id="newsletter" class="newsletter-iframe-contrast" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#|#000000|#ffffff|0|442093344ewr" scrolling="no" title="Abbona fin-newsletter"></iframe>
+
+					</section>
+				</div>
+			
+			<footer data-track-content data-content-name="Footer" data-content-piece="kurt-borg">
+	<nav class="footer-content">
+		<menu id="housekeeping">
+			<li class="header">Dwarna</li>
+			<li><a href="/kolofon/">Kolofon</a></li>
+			<li><a href="/proċess-editorjali/">Proċess</a></li>
+			<li><a href="/gwida-tal-istil/">Gwida tal-istil</a></li>
+			<li><a href="/cookies/">Cookies</a></li>
+			<li><a href="/privatezza/">Privatezza</a></li>
+			<li><a href="/aċċessibbiltà/">Aċċessibbiltà</a></li>
+			<li><a href="/podcast/">Podcast</a></li>
+			<li><a href="/newsletter/">Newsletter</a></li>
+			<li class="hide-tablet"><a href="/drittijiet/">Drittijiet</a></li>
+		</menu>
+		<menu id="media">
+			<li class="header">Midja</li>
+			<li><a href="/ar/" class="arabic">العربية</a></li>
+			<li><a href="/ca/">Català</a></li>
+			<li><a href="/de/">Deutsch</a></li>
+			<li><a href="/en/">English</a></li>
+			<li><a href="/es/">Español</a></li>
+			<li><a href="/fr/">Français</a></li>
+			<li><a href="/it/">Italiano</a></li>
+			<li><a href="/nl/">Nederlands</a></li>
+			<li class="hide-tablet"><a href="/ro/">Română</a></li>
+		</menu>
+		<menu id="socials">
+			<li class="header">Segwina</li>
+			<li><a href="https://facebook.com/aphroconfuso">Facebook</a></li>
+			<li><a href="https://instagram.com/aphroconfuso">Instagram</a></li>
+			
+			
+			<li><a href="https://whatsapp.com/channel/0029VaysAKP7z4kZHDKdZ71J" rel="me">WhatsApp</a></li>
+			<li><a href="https://aphroconfuso.bsky.social/">Bluesky</a></li>
+			<li><a href="https://youtube.com/@aphroconfuso">Youtube</a></li>
+			<li><a href="https://open.spotify.com/user/31rly4s75gfxs6li6bcxc5bqlgza">Spotify</a></li>
+		</menu>
+		<menu id="podcast">
+			<li class="header">Podcast</li>
+			<li><a href="https://podcasts.apple.com/us/podcast/aphroconfuso/id1686567243">Apple</a></li>
+			
+			<li><a href="https://feeds.acast.com/public/shows/aphroconfuso">RSS feed</a></li>
+			<li><a href="https://open.spotify.com/show/75Lt3UMvC1jE15SGrNFMww">Spotify</a></li>
+			
+		</menu>
+		<div id="logotype-container">
+			<a href="/"><img src="/img/logotype.svg" class="logotype" alt="logo: Aphroconfuso" /></a>
+		</div>
+		<div id="email">
+			<a href="mailto:l-edituri@aphroconfuso.mt" class="email">l-edituri@aphroconfuso.mt</a>
+		</div>
+		<div class="hide-mobile choose-theme choose-theme-footer">
+			<a id="theme-regular-footer" role="button" tabindex="4">s</a>
+			<a id="theme-dark-footer" role="button" tabindex="5">m</a>
+			<a id="theme-contrast-footer" role="button" tabindex="6">c</a>
+			<a id="theme-system-footer" role="button" tabindex="7">p</a>
+		</div>
+		<div id="copyright"><a href="/drittijiet/" class="copyright">&copy; 2023-2025 Aphroconfuso et al</a></div>
+		<div id="qrcode"><img src="/img/qr/kurt-borg.png" width="180" height="180" alt="QR code" /></div>
+		<div id="url">https://aphroconfuso.mt/kurt-borg/</div>
+	</nav>
+</footer>
+
+		</div>
+		<aside id="scroll-tools" class="monthly-outlined">
+			<p>
+				<span id="progress">
+					<!-- --></span></p>
+		</aside>
+	</body>
+</html>
