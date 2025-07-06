@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="mt" translate="no">
+
+	<head>
+		<meta charset="utf-8">
+		
+	<title>Lulju 2025 · Aphroconfuso</title>
+	<meta content="M’hemmx konnessjoni iktar diretta bejnna u bejn artna mill-ikel li nieklu. Id-drawwiet tagħna ta’ kif nieklu, kif nakkwistaw l-ikel, kif inkabbruh, kif insiru nafu x’għandna nieklu u xi rridu nieklu—dawn huma l-modi kif aħna nimmetabolizzaw in-natura ta’ madwarna, kif id-dinja tgħaddi minn ġo fina …" name="description">
+	<meta property="og:image" content="/stampi/social_aphroconfuso_logo_social_kbir_kwadrat_d073f4e24a.jpg">
+
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+		<meta content="width=device-width, initial-scale=1" name="viewport">
+		<meta content="width=device-width" initial-scale="1.0" maximum-scale="1.0" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="yes" name="mobile-web-app-capable">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#f9f9f3">
+		<link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon-16x16.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32x32.png">
+		<link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
+		<link rel="mask-icon" href="/img/icons/safari-pinned-tab.svg" color="#5bbad5">
+		<meta property="og:image:type" content="image/jpeg">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
+		<link rel="canonical" href="https://aphroconfuso.mt/lulju-2025/">
+		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
+		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
+		<link rel="stylesheet" href="/css/style-91018ae7.css">
+		<script>
+			var audioLoaded,
+				audioUrls,
+				author,
+				body,
+				bodyEnd,
+				bodyHeight,
+				bodyStart,
+				bodyText,
+				bookmarksArray,
+				bookmarksList,
+				bookmarksMenuElement,
+				charactersPerPixel,
+				charactersPerScreen,
+				currentTime,
+				duration,
+				elapsedTime,
+				hideScrollTools,
+				lastReportedReadingTime,
+				lastReportedScrollPosition,
+				lastScrollPosition,
+				message,
+				issueMonth,
+				issueMonthYear,
+				newScrollPosition,
+				pageHeight,
+				pageReportingTitle,
+				percentageProgress,
+				placeText,
+				podcastUrl,
+				previousTime,
+				progressElement,
+				readingSpeed,
+				reportingTitle,
+				screenHeight,
+				skippedTime,
+				storyCompleted,
+				storyId,
+				storyType,
+				sequenceEpisodeNumber,
+				sequenceEpisodeTitle,
+				timeStarted,
+				pageTitle,
+				wordcount,
+				wordsPerPixel,
+				wordsPerSecond,
+				wordsPerSecondAudio,
+				wordsPerScreen;
+
+			audioLoaded = false;
+			bookmarksArray = [];
+			percentageProgress = 0;
+			previousTime = [];
+			storyCompleted = false;
+
+			const urlSlug = location
+				.pathname
+				.replace(/\//g, '');
+			const setCookie = (cname, cvalue, exdays = 36500) => {
+				const d = new Date();
+				d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+				let expires = "expires=" + d.toUTCString();
+				document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+			}
+			const getCookie = (cname) => {
+				let name = cname + "=";
+				let decodedCookie = decodeURIComponent(document.cookie);
+				let ca = decodedCookie.split(';');
+				for (let i = 0; i < ca.length; i++) {
+					let c = ca[i];
+					while (c.charAt(0) == ' ') {
+						c = c.substring(1);
+					}
+					if (c.indexOf(name) == 0) {
+						return c.substring(name.length, c.length);
+					}
+				}
+				return "";
+			}
+			var _paq = window._paq = window._paq || [];
+			const analytics = (arrayInfo) => {
+				if (location.host != 'aphroconfuso.mt') 
+					console.log(arrayInfo);
+				_paq.push(arrayInfo);
+			}
+			_paq.push(['disableCookies']);
+			_paq.push(['enableJSErrorTracking']);
+			_paq.push(['enableHeartBeatTimer']);
+			_paq.push(['enableLinkTracking']);
+			_paq.push(['trackPageView']);
+			_paq.push(['trackVisibleContentImpressions']);
+			(function () {
+				var u = "//analitika.aphroconfuso.mt/";
+				_paq.push([
+					'setTrackerUrl', u + 'matomo.php'
+				]);
+				_paq.push([
+					'setSiteId', location.host == 'aphroconfuso.mt'
+						? '1'
+						: '2'
+				]);
+				var d = document,
+					g = d.createElement('script'),
+					s = d.getElementsByTagName('script')[0];
+				g.async = true;
+				g.src = u + 'matomo.js';
+				s
+					.parentNode
+					.insertBefore(g, s);
+			})();
+			const addRemoveFontSizeClass = (size) => {
+				document
+					.body
+					.classList
+					.remove('font-size-1', 'font-size-2', 'font-size-3', 'font-size-4')
+				document
+					.body
+					.classList
+					.add(`font-size-${size}`);
+				localStorage.setItem('font', size);
+			}
+			// REVIEW
+			const translateTheme = {
+				'regular': 'regolari',
+				'dark': 'skura',
+				'contrast': 'kuntrast',
+				'system': 'sistema'
+			}
+			const addRemoveTheme = (theme, stored) => {
+				document
+					.body
+					.classList
+					.remove('theme-regular', 'theme-dark', 'theme-contrast', 'theme-system')
+				document
+					.body
+					.classList
+					.add(`theme-${theme}`);
+				localStorage.setItem('theme', theme);
+				if (stored && theme == 'regular') 
+					return;
+				analytics([
+					'trackEvent', 'Tema', `${stored
+						? 'Tema storjata'
+						: 'Tema nbidlet'}`,
+					translateTheme[theme]
+				]);
+			}
+			const initialiseAfterBody = () => {
+				document
+					.body
+					.classList
+					.add(location.hostname.replace(/\.?aphroconfuso\.mt/, '') || 'production');
+				addRemoveFontSizeClass(localStorage.getItem('font') || 1);
+				addRemoveTheme(localStorage.getItem('theme') || 'regular', true);
+				if (localStorage.getItem(`tw-${urlSlug}`)) {
+					document
+						.body
+						.classList
+						.add('trigger-warning-closed');
+				}
+			}
+		</script>
+		<script src="../script/script-9d62e3.js" type="module"></script>
+	</head>
+	<body class="show-nav this-month-lulju">
+		<script>
+			initialiseAfterBody();
+		</script>
+		<div id="top-wrapper">
+			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
+			<nav id="top-nav">
+				<div id="logo-container-wrapper">
+					<div id="logo-container">
+						<a href="/">
+							<img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso"/>
+						</a>
+					</div>
+					<menu class="hide-mobile" id="menu-carousels">
+						<li class="abecedaire">
+							<a href="/abeċedarju/">Abeċedarju</a>
+						</li>
+						<li>
+							<a href="/almanakk-lulju/">Almanakk</a>
+						</li>
+					</menu>
+					<menu class="hide-mobile" id="menu-collections">
+						<li class="main-menu-collection">
+							<a href="/indħil-barrani/">
+								<span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a>
+						</li>
+						<li class="main-menu-collection">
+							<a href="/il-kliem-fit-teorija/">
+								<span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a>
+						</li>
+					</menu>
+				</div>
+				<input id="menu-toggle" type="checkbox"/>
+				<label class='menu-button-container' for="menu-toggle">
+					<span style="display: none">Mobile biss: iftaħ il-menu</span>
+					<div class='menu-button'></div>
+				</label>
+				
+				<menu id="menu-main">
+					
+					<li class="hide-laptop main-menu-collection">
+						<a href="/indħil-barrani/">
+							<span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a>
+					</li>
+					<li class="hide-laptop main-menu-collection">
+						<a href="/il-kliem-fit-teorija/">
+							<span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a>
+					</li>
+					<li class="hide-laptop a-links">
+						<a href="/abeċedarju/">Abeċedarju</a>
+						<a href="/almanakk-lulju/">Almanakk</a>
+					</li>
+					<li>
+						<a href="/appuntamenti/">Appuntamenti</a>
+					</li>
+					<li>
+						<a href="/kontributuri/">Kontributuri</a>
+					</li>
+					<li>
+						<a href="/werrej/">Werrej</a>
+					</li>
+					<li>
+						<a href="/djarju/">Djarju</a>
+					</li>
+					<li>
+						<a href="/sensiliet/">Sensiliet</a>
+					</li>
+					<li>
+						<a href="/podcast/">Podcast</a>
+					</li>
+					<li class="hide-mobile">
+						<a href="/kotba/" class="menu-kotba">Kotba</a>
+					</li>
+					<li class="hide-laptop choose-theme">
+						<a id="theme-regular" role="button" tabindex="0">s</a>
+						<a id="theme-dark" role="button" tabindex="1">m</a>
+						<a id="theme-contrast" role="button" tabindex="2">c</a>
+						<a id="theme-system" role="button" tabindex="3">p</a>
+					</li>
+					<li>
+						<a href="/dwarna/">Dwarna</a>
+					</li>
+					<li class="hide-laptop">
+						<a href="/kotba/">Kotba</a>
+					</li>
+					<li class="hide-laptop">
+						<a href="/kolofon/">Kolofon</a>
+					</li>
+					<li>
+						<a href="/newsletter/">Newsletter</a>
+					</li>
+					<li class="hide-laptop">
+						<a href="/privatezza/">Privatezza</a>
+					</li>
+					<li>
+						<a href="/bookmarks/">Bookmarks<span id="bookmarks-number"></span></a>
+					</li>
+					<li class="hide-laptop choose-theme" id="text-size-adjust">
+						<a id="font-size-1" role="button" tabindex="8">a</a>
+						<a id="font-size-2" role="button" tabindex="9">a</a>
+						<a id="font-size-3" role="button" tabindex="10">a</a>
+						<a id="font-size-4" role="button" tabindex="11">a</a>
+					</li>
+				</menu>
+				<input class="hide-mobile" type="text" id="search-input" placeholder="fittex..." autocomplete="off" auto-fill="off" type="text" autocapitalize="none" enterkeyhint="search"/>
+				<ul id="search-results">
+					<!-- -->
+				</ul>
+				
+				<div id="brownline"></div>
+			</nav>
+			<div id="message">
+				<!-- -->
+			</div>
+			<main id="skipto">
+				
+<article class="generic lulju" data-pagefind-meta="class[class]">
+	<header>
+		<ul><li class="header-label"><a href="/appuntamenti/" data-pagefind-meta="header">Appuntamenti</a></li></ul>
+		<h1>Lulju 2025</h1>
+		<h2></h2>
+	</header>
+	<div class="container-generic generic-body-text appointment">
+		<section id="grid-body" data-pagefind-body data-pagefind-weight="5">
+			<div class="generic-body-text editorial">
+				<div class="text-container">
+					<p><span class="sc">M’hemmx konnessjoni iktar</span> diretta bejnna u bejn artna <l-m>mill-ikel</l-m> li nieklu. <l-m>Id-drawwiet</l-m> tagħna ta’ kif nieklu, kif nakkwistaw <l-m>l-ikel</l-m>, kif inkabbruh, kif insiru nafu <l-m>x’għandna</l-m> nieklu u xi rridu nieklu — dawn huma <l-m>l-modi</l-m> kif aħna nimmetabolizzaw <l-m>in-natura</l-m> ta’ madwarna, kif <l-m>id-dinja</l-m> tgħaddi minn ġo fina u ssawwarna. Dan ma nagħmluhx għal rasna, <l-m>fil-moħbi:</l-m> għal eluf ta’ snin ilna nagħżlu li, meta nistgħu, nieklu flimkien, fuq <l-m>l-istess</l-m> mejda. Dak li nagħmlu bi frott artna rari huwa xi ħaġa li nivvintaw aħna dak <l-m>il-ħin</l-m>. <l-m>Ir-riċetti</l-m> jgħaddu minn ġenerazzjoni għal oħra, minn pajjiż għal ieħor, minn żmien għal ieħor. Minn fejn jiġi dan <l-m>il-frott</l-m>, jekk jiġix minn gżiritna jew jekk jaqsamx nofs <l-m>id-dinja</l-m> biex jasal għandna, huwa <l-m>r-riżultat</l-m> ta’ proċess storiku twil, ta’ relazzjonijiet ekonomiċi u skambji kulturali, <l-m>tal-politika</l-m> ta’ issa u <l-m>tas-sekli</l-m> li għaddew. <l-m>Bil-proġett</l-m> tagħha Indiġikċina, f’kollaborazzjoni ma’ <l-m>dal-ġurnal</l-m>, Nicole Borg qiegħda teżamina <l-m>r-relazzjonijiet</l-m> tagħna ma’ dak li nieklu. Tibda <l-m>mill-kunċett</l-m> tas-sovranità <l-m>tal-ikel:</l-m> kemm għandna kontroll fuq dak li nieklu, kemm nafu dwar dak li qed nieklu, kemm nafu għaliex nieklu dak li nieklu? “Kif nistgħu <l-m>bl-ikel</l-m> li nieklu, nissalvagwardjaw <l-m>is-saħħa</l-m> tagħna u ta’ artna, imma wkoll <l-m>is-saħħa</l-m> ta’ dawk <l-m>il-ftit</l-m> nies li permezz tagħhom għandna dan <l-m>l-ikel</l-m>?” tkompli tistaqsi Nicole. “Kif nistgħu nieklu b’mod li jħallina nirrifjutaw <l-m>il-paradigma</l-m> neoliberali li qed naraw <l-m>fl-ikel</l-m> modern, b’mod li jġedded <l-m>il-wirt</l-m>? Kif nistgħu nġibu ruħna b’mod li jiffaċilita <l-m>s-sostenn</l-m> tal-għajxien għall-bdiewa? Kif nistgħu nieklu b’mod li jgħinna nagħrfu <l-m>l-iskarsezza</l-m> tal-ikel Malti bħala effett postkolonjali? Kif nistgħu nerġgħu nindiġenizzaw <l-m>l-ikel</l-m> tagħna, billi nimpedixxu <l-m>l-azzjoni</l-m> korporattiva u nsaħħu <l-m>l-interess</l-m> fil-ġid komuni? Nafu <l-m>x’ħa</l-m> jsir minnu <l-m>l-ikel</l-m> tagħna?” F’dan <l-m>il-proġett</l-m> li jinkludi <l-m>t-tisjir</l-m> u ċeni miftuħin għall-pubbliku, Nicole qed tinvestiga <l-m>l-impożizzjonijiet</l-m> kolonjali li aljenawna minn artna, u <l-m>l-pressjonijiet</l-m> neokolonjali <l-m>tal-kapitaliżmu</l-m> kontemporanju. Ikidduha dawk <l-m>l-ingredjenti </l-m>— bħar-rummien, <l-m>il-pjanta</l-m> tal-bużbież u <l-m>l-kosbor </l-m>— li għalkemm artna tfissidna bihom, ninjorawhom u nibqgħu nħalluhom barra <l-m>mir-riċetti</l-m> tagħna. Iżda dan mhuwiex proġett li jfittex xi kċina fundamentalista. Kunċett ieħor importanti f’<l-m>dal-proġett</l-m> huwa <l-m>l-ambigwità</l-m> kulinarja: <l-m>l-importanza</l-m> li nagħrfu u nħaddnu <l-m>l-effetti</l-m> tal-istorja ta’ pajjiżna u <l-m>l-bijografija</l-m> tagħna bħala individwi fuq <l-m>il-gosti</l-m> tagħna <l-m>fl-ikel</l-m>, u nsibu modi interessanti kif ninkorporawhom <l-m>fir-riċetti</l-m> tagħna. <l-m>Fl-ewwel</l-m> ċena, pereżempju, Nicole inkludiet <l-m>fil-menu-manifest</l-m> tagħha ħelwa tqarmeċ <l-m>tal-ġunġlien</l-m>, b’rikonoxximent <l-m>tan-nostalġija</l-m> li jħoss missierha għall-ħelu importat u speċjalment, f’<l-m>dal-każ</l-m>, <l-m>il-Mr</l-m>. <l-m>Tom&nbsp;<span class="end-dot">.</span></l-m></p>
+				</div>
+			</div>
+			<p class="continuity">Din hija l-kitba ppubblikata dax-xahar:</p>
+			
+			
+			
+			
+			
+			
+			<ul class="promo-list">
+	
+	
+		
+			
+
+
+<li  class="multiple-episodes episode-1">
+	<a class="promo  lulju promo-esej sequence-14 story-163 is-episode" href="/nicole-borg-is-sovranità-tal-ikel-1-l-ewwel-ċena/" onclick="analytics(['trackEvent', 'Promo', 'minn: Lulju 2025', 'għal: Is-Sovranità tal-Ikel #1', 1]);">
+		
+			<header>
+	<ul>
+		
+			<li class="header-label">Lulju 2025</li>
+		
+		
+	</ul>
+	
+	
+		
+			<h1>
+				Is-Sovranità <l-m>tal-Ikel</l-m>
+				
+					<span class="episode-number">#1</span>
+				
+			</h1>
+		
+	
+	
+
+
+	
+	<h2>
+		
+		
+			
+			
+				
+					
+						<span class="author">Nicole Borg</span>
+					
+					
+	</h2>
+
+
+
+
+
+	
+		<h3>
+			
+			
+			L-ewwel ċena
+		</h3>
+	
+</header>
+
+			
+			<div class="body-text">
+				
+					<p>L-ikel Malti huwa dimostrazzjoni <l-m>tat-tradizzjoni</l-m> u <l-m>l-modernità</l-m>. <l-m>Ir-relazzjoni</l-m> bejn <l-m>iż-żewġ</l-m> sferi tifforma parti kbira <l-m>mill-interess</l-m> usa’ tagħna li niddefinixxu <l-m>l-identità</l-m> tagħna. Dan <l-m>il-proċess</l-m> fih innifsu jippreżenta sfida emozzjonali. F’dan <l-m>ir-rigward</l-m>, <l-m>l-idea</l-m> ta’ ambigwità relatata <l-m>mal-ikel</l-m> tagħna tista’ saħansitra titqies bħala forma ta’ “nazzjonaliżmu banali”<span class="pull">.</span> Dan kif japplika għalina bħala Maltin? Min kienu, min huma u min se jkunu <l-m>l-protagonisti</l-m> fl-istorja <l-m>tal-ikel</l-m> tagħna? Bħala etnopajsaġġi kulinarji nifhem li <l-m>l-gżejjer</l-m> tagħna għaddew minn rinaxximent bla tmiem. Għadhom jirrakkuntaw storja, u se jibqgħu jirrakkuntawha. <l-m>It-termini</l-m> “tradizzjoni”<span class="pull">,</span> “innovazzjoni”<span class="pull">,</span> “kwalità” u “awtentiċità” spiss intużaw b’mod interkambjabbli u dibattibbli. Iżda <l-m>l-użu</l-m> ta’ dawn <l-m>it-termini</l-m>, <l-m>fl-esperjenza</l-m> tiegħi, fih innifsu huwa deċiżjoni konxja li <l-m>l-pajsaġġi</l-m> tal-ikel jintużaw bħala għodda għall-awtofehim.</p>
+				
+			</div>
+		
+	</a>
+	
+	<aside class="promo-aside story-aside-163">
+		<ul>
+			<li class="bookmark-compact">
+				<!-- -->
+			</li>
+			<li class="wordcount">
+				
+				
+					
+				
+			</li>
+		</ul>
+	</aside>
+
+
+
+
+</li>
+
+		
+	
+</ul>
+
+			<div class="more">
+				
+					<p>Abbona <l-m>fin-<a href="/newsletter/">newsletter</a></l-m> biex dejjem issir taf meta nippubblikaw xi ħaġa ġdida.</p>
+				
+			</div>
+		</section>
+	</div>
+</article>
+<script>
+	reportingTitle = "Lulju 2025";
+</script>
+
+			</main>
+		</div>
+		<div id="bottom-wrapper">
+			<img id="deco" role="none" src="/img/deco-100.svg" alt="Dekorazzjoni art-nouveau"/>
+			
+				<div id="newsletter-container-bottom" class="newsletter-container">
+					<section id="form" data-track-content data-content-name="Homepage" data-content-piece="formola">
+						<iframe id="newsletter" class="newsletter-iframe-regular" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#" scrolling="no" title="Abbona fin-newsletter"></iframe>
+<iframe id="newsletter" class="newsletter-iframe-dark" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#|#201e1d|#908984|0|442093344ewr" scrolling="no" title="Abbona fin-newsletter"></iframe>
+<iframe id="newsletter" class="newsletter-iframe-contrast" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#|#000000|#ffffff|0|442093344ewr" scrolling="no" title="Abbona fin-newsletter"></iframe>
+
+					</section>
+				</div>
+			
+			<footer data-track-content data-content-name="Footer" data-content-piece="lulju-2025">
+	<nav class="footer-content">
+		<menu id="housekeeping">
+			<li class="header">Dwarna</li>
+			<li><a href="/kolofon/">Kolofon</a></li>
+			<li><a href="/proċess-editorjali/">Proċess</a></li>
+			<li><a href="/gwida-tal-istil/">Gwida tal-istil</a></li>
+			<li><a href="/cookies/">Cookies</a></li>
+			<li><a href="/privatezza/">Privatezza</a></li>
+			<li><a href="/aċċessibbiltà/">Aċċessibbiltà</a></li>
+			<li><a href="/podcast/">Podcast</a></li>
+			<li><a href="/newsletter/">Newsletter</a></li>
+			<li class="hide-tablet"><a href="/drittijiet/">Drittijiet</a></li>
+		</menu>
+		<menu id="media">
+			<li class="header">Midja</li>
+			<li><a href="/ar/" class="arabic">العربية</a></li>
+			<li><a href="/ca/">Català</a></li>
+			<li><a href="/de/">Deutsch</a></li>
+			<li><a href="/en/">English</a></li>
+			<li><a href="/es/">Español</a></li>
+			<li><a href="/fr/">Français</a></li>
+			<li><a href="/it/">Italiano</a></li>
+			<li><a href="/nl/">Nederlands</a></li>
+			<li class="hide-tablet"><a href="/ro/">Română</a></li>
+		</menu>
+		<menu id="socials">
+			<li class="header">Segwina</li>
+			<li><a href="https://facebook.com/aphroconfuso">Facebook</a></li>
+			<li><a href="https://instagram.com/aphroconfuso">Instagram</a></li>
+			
+			
+			<li><a href="https://whatsapp.com/channel/0029VaysAKP7z4kZHDKdZ71J" rel="me">WhatsApp</a></li>
+			<li><a href="https://aphroconfuso.bsky.social/">Bluesky</a></li>
+			<li><a href="https://youtube.com/@aphroconfuso">Youtube</a></li>
+			<li><a href="https://open.spotify.com/user/31rly4s75gfxs6li6bcxc5bqlgza">Spotify</a></li>
+		</menu>
+		<menu id="podcast">
+			<li class="header">Podcast</li>
+			<li><a href="https://podcasts.apple.com/us/podcast/aphroconfuso/id1686567243">Apple</a></li>
+			
+			<li><a href="https://feeds.acast.com/public/shows/aphroconfuso">RSS feed</a></li>
+			<li><a href="https://open.spotify.com/show/75Lt3UMvC1jE15SGrNFMww">Spotify</a></li>
+			
+		</menu>
+		<div id="logotype-container">
+			<a href="/"><img src="/img/logotype.svg" class="logotype" alt="logo: Aphroconfuso" /></a>
+		</div>
+		<div id="email">
+			<a href="mailto:l-edituri@aphroconfuso.mt" class="email">l-edituri@aphroconfuso.mt</a>
+		</div>
+		<div class="hide-mobile choose-theme choose-theme-footer">
+			<a id="theme-regular-footer" role="button" tabindex="4">s</a>
+			<a id="theme-dark-footer" role="button" tabindex="5">m</a>
+			<a id="theme-contrast-footer" role="button" tabindex="6">c</a>
+			<a id="theme-system-footer" role="button" tabindex="7">p</a>
+		</div>
+		<div id="copyright"><a href="/drittijiet/" class="copyright">&copy; 2023-2025 Aphroconfuso et al</a></div>
+		<div id="qrcode"><img src="/img/qr/lulju-2025.png" width="180" height="180" alt="QR code" /></div>
+		<div id="url">https://aphroconfuso.mt/lulju-2025/</div>
+	</nav>
+</footer>
+
+		</div>
+		<aside id="scroll-tools" class="monthly-outlined">
+			<p>
+				<span id="progress">
+					<!-- --></span></p>
+		</aside>
+	</body>
+</html>
