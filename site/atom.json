@@ -496,6 +496,16 @@ Hackett (is-segretarja tal-Factory) fuq it-telefown u baqa’ sejjer hekk ħdax-
 		}
 		,
 		{
+			"id": "https://aphroconfuso.mt/il-kliem-fit-teorija-ħarsa-lemħa/",
+			"url": "https://aphroconfuso.mt/il-kliem-fit-teorija-ħarsa-lemħa/",
+			"title": "ħarsa/lemħa",
+			"author": "",
+			"content_html": "M’iniex għalkollox ċert dwar “lemħa” għax għalija din il-kelma għandha konnotazzjonijiet passivi, fis-sens li tkun qed tiġri xi ħaġa u inti tilmaħha; u mhux is-sens li inti qed tħares b’mod attiv u intenzjonat lejn xi ħaġa. “Lemaħ” fuq verb.mt qed tiġi tradotta bħala “to catch sight of”. Fil-każ ta’ “the look on his face” ma taħdimx “lemħa” (“il-ħarsa fuq wiċċu”).",
+			"date_published": "2025-04-06T05:00:00.000Z",
+			"date_updated": "2025-04-05T21:20:58.141Z"
+		}
+		,
+		{
 			"id": "https://aphroconfuso.mt/il-kliem-fit-teorija-tpaxxa/",
 			"url": "https://aphroconfuso.mt/il-kliem-fit-teorija-tpaxxa/",
 			"title": "tpaxxa",
@@ -513,16 +523,6 @@ Hackett (is-segretarja tal-Factory) fuq it-telefown u baqa’ sejjer hekk ħdax-
 			"content_html": "Fid-dinja Ingliża u dik tal-Punent, “to care” dejjem kienet distinta minn “thought” u “reason”. “Care” assoċjata ma’ emozzjonijiet, irtubija tal-qalb, femminilità—u mhux il-ħsieb, li dejjem kien meqjus rett, veritier u imparzjali, kif ħafna drabi huwa mfisser fil-Punent. Qisu l-Malti ma jagħmilx din id-distinzjoni radikali bejn il-ħsieb bħala ħsieb astratt u li tieħu ħsieb xi ħadd.",
 			"date_published": "2025-04-06T05:00:00.000Z",
 			"date_updated": "2025-04-06T08:00:46.367Z"
-		}
-		,
-		{
-			"id": "https://aphroconfuso.mt/il-kliem-fit-teorija-ħarsa-lemħa/",
-			"url": "https://aphroconfuso.mt/il-kliem-fit-teorija-ħarsa-lemħa/",
-			"title": "ħarsa/lemħa",
-			"author": "",
-			"content_html": "M’iniex għalkollox ċert dwar “lemħa” għax għalija din il-kelma għandha konnotazzjonijiet passivi, fis-sens li tkun qed tiġri xi ħaġa u inti tilmaħha; u mhux is-sens li inti qed tħares b’mod attiv u intenzjonat lejn xi ħaġa. “Lemaħ” fuq verb.mt qed tiġi tradotta bħala “to catch sight of”. Fil-każ ta’ “the look on his face” ma taħdimx “lemħa” (“il-ħarsa fuq wiċċu”).",
-			"date_published": "2025-04-06T05:00:00.000Z",
-			"date_updated": "2025-04-05T21:20:58.141Z"
 		}
 		,
 		{
@@ -805,29 +805,6 @@ l-ispots tal-konsulenzi romantiċi tat-tfal bravi Nsara aged 13 and up",
 		}
 		,
 		{
-			"id": "https://aphroconfuso.mt/leslie-vassallo-marċ-maqbuż/",
-			"url": "https://aphroconfuso.mt/leslie-vassallo-marċ-maqbuż/",
-			"title": "Marċ Maqbuż",
-			"author": "",
-			"content_html": "Ix-xitwa tmut hekk—
-Gżira—jew bastiment—jgħibu fiċ-ċpar;
-Riefnu jiġbed nifs sagħtar—
-Berwieq għarwien fuq irdum,
-wiċċ nemex tal-bużbież;
-iħirsa—jew aħna—max-xifer.
-
-Reżħa titlajja fi rkejjen, fuq għetiebi;
-F’triq dejqa, antika, fi kmajra
-xi ħadd jonqox ħajja—jew mit—f’zokk lewża;
-Tifkira tiġi, minn imkien—jew minn xmara—għoddha taħsdek,
-tmexxik fiha b’ħarsa kaħla, b’xofftejn ħajra,
-sa tħallik—jew tħalliha—f’belt labirint.
-",
-			"date_published": "2023-11-23T06:00:00.000Z",
-			"date_updated": "2025-06-01T15:26:03.596Z"
-		}
-		,
-		{
 			"id": "https://aphroconfuso.mt/leslie-vassallo-wirja/",
 			"url": "https://aphroconfuso.mt/leslie-vassallo-wirja/",
 			"title": "Wirja",
@@ -850,6 +827,29 @@ razzett jidwi daħka mit-twieqi, qasab iħaxwex riħ.
 ",
 			"date_published": "2023-11-23T06:00:00.000Z",
 			"date_updated": "2025-06-01T15:25:43.680Z"
+		}
+		,
+		{
+			"id": "https://aphroconfuso.mt/leslie-vassallo-marċ-maqbuż/",
+			"url": "https://aphroconfuso.mt/leslie-vassallo-marċ-maqbuż/",
+			"title": "Marċ Maqbuż",
+			"author": "",
+			"content_html": "Ix-xitwa tmut hekk—
+Gżira—jew bastiment—jgħibu fiċ-ċpar;
+Riefnu jiġbed nifs sagħtar—
+Berwieq għarwien fuq irdum,
+wiċċ nemex tal-bużbież;
+iħirsa—jew aħna—max-xifer.
+
+Reżħa titlajja fi rkejjen, fuq għetiebi;
+F’triq dejqa, antika, fi kmajra
+xi ħadd jonqox ħajja—jew mit—f’zokk lewża;
+Tifkira tiġi, minn imkien—jew minn xmara—għoddha taħsdek,
+tmexxik fiha b’ħarsa kaħla, b’xofftejn ħajra,
+sa tħallik—jew tħalliha—f’belt labirint.
+",
+			"date_published": "2023-11-23T06:00:00.000Z",
+			"date_updated": "2025-06-01T15:26:03.596Z"
 		}
 		,
 		{
@@ -1645,6 +1645,16 @@ u hemm vera tibda t-tertuqa.",
 		}
 		,
 		{
+			"id": "https://aphroconfuso.mt/kris-polidano-kullana-ta-għanjiet-dwar-il-ħolm-8-prefazju-numru-tlieta/",
+			"url": "https://aphroconfuso.mt/kris-polidano-kullana-ta-għanjiet-dwar-il-ħolm-8-prefazju-numru-tlieta/",
+			"title": "Kullana ta’ għanjiet dwar il-ħolm",
+			"author": "",
+			"content_html": "Il-ħolm fejn imur wara li jqajjimna? Il-mewta l-aħħar darba li noħolmu anki jekk għajnejna ma jingħalqux, ġisimna joħroġ il-kimiċi, li jitfgħuna fi stat “ħolmieni”. Kemm jekk aħna konxji tiegħu jew m’aħniex, id-demm uman jiġbed, u f’għadd ta’ kulturi, il-mewt nikkunsidrawha bħala raqda. U l-ħolm — kemm jekk inħallu lilna nfusna nindiehsu ma’ din il-forma ta’ ħsieb jew le — jieqaf u jiżvolġi fl-aħħar raqda għall-aħħar darba.",
+			"date_published": "2025-02-14T21:00:00.000Z",
+			"date_updated": "2025-04-21T13:17:34.385Z"
+		}
+		,
+		{
 			"id": "https://aphroconfuso.mt/kris-polidano-kullana-ta-għanjiet-dwar-il-ħolm-9-forma-numru-sitta/",
 			"url": "https://aphroconfuso.mt/kris-polidano-kullana-ta-għanjiet-dwar-il-ħolm-9-forma-numru-sitta/",
 			"title": "Kullana ta’ għanjiet dwar il-ħolm",
@@ -1683,16 +1693,6 @@ U aħna mqajmin
 noħolmu bik.",
 			"date_published": "2025-02-14T21:00:00.000Z",
 			"date_updated": "2025-04-21T13:02:35.028Z"
-		}
-		,
-		{
-			"id": "https://aphroconfuso.mt/kris-polidano-kullana-ta-għanjiet-dwar-il-ħolm-8-prefazju-numru-tlieta/",
-			"url": "https://aphroconfuso.mt/kris-polidano-kullana-ta-għanjiet-dwar-il-ħolm-8-prefazju-numru-tlieta/",
-			"title": "Kullana ta’ għanjiet dwar il-ħolm",
-			"author": "",
-			"content_html": "Il-ħolm fejn imur wara li jqajjimna? Il-mewta l-aħħar darba li noħolmu anki jekk għajnejna ma jingħalqux, ġisimna joħroġ il-kimiċi, li jitfgħuna fi stat “ħolmieni”. Kemm jekk aħna konxji tiegħu jew m’aħniex, id-demm uman jiġbed, u f’għadd ta’ kulturi, il-mewt nikkunsidrawha bħala raqda. U l-ħolm — kemm jekk inħallu lilna nfusna nindiehsu ma’ din il-forma ta’ ħsieb jew le — jieqaf u jiżvolġi fl-aħħar raqda għall-aħħar darba.",
-			"date_published": "2025-02-14T21:00:00.000Z",
-			"date_updated": "2025-04-21T13:17:34.385Z"
 		}
 		,
 		{
@@ -1915,40 +1915,6 @@ ix-xaħam bqit f’żaqqi.",
 		}
 		,
 		{
-			"id": "https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-4-ir-raba/",
-			"url": "https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-4-ir-raba/",
-			"title": "Invokazzjonijiet",
-			"author": "",
-			"content_html": "Aphroconfuso,
-la nerġgħu flimkien
-iseħħu t-terremoti,
-
-tgħidli, u nitħasseb
-dwar il-ġlied, imma
-
-int tgeżwer iperbole
-mit-tqanqil. immerik
-
-li kultant il-litterali
-isbaħ mil-letterarju
-
-Aphroconfuso,
-la nerġgħu flimkien
-iseħħu t-terremoti,
-
-tgħidli, u nitħasseb
-dwar il-ġlied, imma
-
-int tgeżwer iperbole
-mit-tqanqil. immerik
-
-li kultant il-litterali
-isbaħ mil-letterarju",
-			"date_published": "2025-06-16T05:00:00.000Z",
-			"date_updated": "2025-06-27T08:32:19.216Z"
-		}
-		,
-		{
 			"id": "https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-3-it-tielet/",
 			"url": "https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-3-it-tielet/",
 			"title": "Invokazzjonijiet",
@@ -2019,6 +1985,40 @@ mid-dinja tal-forom.",
 		}
 		,
 		{
+			"id": "https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-4-ir-raba/",
+			"url": "https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-4-ir-raba/",
+			"title": "Invokazzjonijiet",
+			"author": "",
+			"content_html": "Aphroconfuso,
+la nerġgħu flimkien
+iseħħu t-terremoti,
+
+tgħidli, u nitħasseb
+dwar il-ġlied, imma
+
+int tgeżwer iperbole
+mit-tqanqil. immerik
+
+li kultant il-litterali
+isbaħ mil-letterarju
+
+Aphroconfuso,
+la nerġgħu flimkien
+iseħħu t-terremoti,
+
+tgħidli, u nitħasseb
+dwar il-ġlied, imma
+
+int tgeżwer iperbole
+mit-tqanqil. immerik
+
+li kultant il-litterali
+isbaħ mil-letterarju",
+			"date_published": "2025-06-16T05:00:00.000Z",
+			"date_updated": "2025-06-27T08:32:19.216Z"
+		}
+		,
+		{
 			"id": "https://aphroconfuso.mt/omar-nshea-es-sidr-4-nafta/",
 			"url": "https://aphroconfuso.mt/omar-nshea-es-sidr-4-nafta/",
 			"title": "Es Sidr",
@@ -2035,7 +2035,7 @@ mid-dinja tal-forom.",
 			"author": "",
 			"content_html": "&lt;p&gt;L-ikel Malti huwa dimostrazzjoni tat-tradizzjoni u l-modernità. Ir-relazzjoni bejn iż-żewġ sferi tifforma parti kbira mill-interess usa’ tagħna li niddefinixxu l-identità tagħna. Dan il-proċess fih innifsu jippreżenta sfida emozzjonali. F’dan ir-rigward, l-idea ta’ ambigwità relatata mal-ikel tagħna tista’ saħansitra titqies bħala forma ta’ “nazzjonaliżmu banali”. Dan kif japplika għalina bħala Maltin? Min kienu, min huma u min se jkunu l-protagonisti fl-istorja tal-ikel tagħna? Bħala etnopajsaġġi kulinarji nifhem li l-gżejjer tagħna għaddew minn rinaxximent bla tmiem. Għadhom jirrakkuntaw storja, u se jibqgħu jirrakkuntawha. It-termini “tradizzjoni”, “innovazzjoni”, “kwalità” u “awtentiċità” spiss intużaw b’mod interkambjabbli u dibattibbli. Iżda l-użu ta’ dawn it-termini, fl-esperjenza tiegħi, fih innifsu huwa deċiżjoni konxja li l-pajsaġġi tal-ikel jintużaw bħala għodda għall-awtofehim.&lt;/p&gt;",
 			"date_published": "2025-07-07T05:00:00.000Z",
-			"date_updated": "2025-07-05T17:36:53.324Z"
+			"date_updated": "2025-07-06T08:26:51.946Z"
 		}
 		,
 		{
