@@ -615,16 +615,6 @@ griżmejh. X’għabra?",
 		}
 		,
 		{
-			"id": "https://aphroconfuso.mt/romeo-roxman-gatt-qarn/",
-			"url": "https://aphroconfuso.mt/romeo-roxman-gatt-qarn/",
-			"title": "Qarn (silta)",
-			"author": "",
-			"content_html": "Idi fil-but, insaffar u nixxuttja l-ġebel—dawn kienu xi azzjonijiet oħra li kont ninnota li ma tantx kienu jinżlu sew meta “tifla” iġġib ruħha b’dal-mod. Jien, għall-kuntrarju, kbirt nagħmilhom. Kont insaffar qabel bdejt nitkellem; it-tort mhux tiegħi, żgur li le, iżda ta’ missieri. Allura ma fhimtx kif darba qisu gerger għax kont qed insaffar. La tifla u lanqas tifel mid-dehra ma kont ikkundizzjonat, għasfur l-ewwel u qabel kollox.",
-			"date_published": "2023-05-01T05:00:00.000Z",
-			"date_updated": "2025-06-01T15:24:32.560Z"
-		}
-		,
-		{
 			"id": "https://aphroconfuso.mt/joe-gatt-il-kuxjenza-fit-truf/",
 			"url": "https://aphroconfuso.mt/joe-gatt-il-kuxjenza-fit-truf/",
 			"title": "Il-Kuxjenza fit-Truf",
@@ -632,6 +622,16 @@ griżmejh. X’għabra?",
 			"content_html": "Bħalma żgur skoprew ħafna qabli, meta tkun qed tittraduċi mit-Taljan, il-Malti li qed taħdem bih ma tħossux uniformi. Fih ħafna li hu lixx u duttili, imma fih ukoll l-għoqiedi u l-ingroppi. Fil-Malti hemm ħafna Taljan li jgħaddi mingħajr ma tagħti kasu; imbagħad hemm it-Taljan tal-avukati. Filli tiskrupla għax tħossok m’int qed tagħmel xejn ħlief tbiddel ftit l-ortografija—“io avanzo tale ipotesi per spiegare la mia debolezza giovanile, ma senza una decisa convinzione”—filli ttik rasek għax tinduna li qed tinstema’ iktar Taljan mit-test oriġinali.",
 			"date_published": "2023-05-01T05:00:00.000Z",
 			"date_updated": "2025-06-01T15:18:52.540Z"
+		}
+		,
+		{
+			"id": "https://aphroconfuso.mt/romeo-roxman-gatt-qarn/",
+			"url": "https://aphroconfuso.mt/romeo-roxman-gatt-qarn/",
+			"title": "Qarn (silta)",
+			"author": "",
+			"content_html": "Idi fil-but, insaffar u nixxuttja l-ġebel—dawn kienu xi azzjonijiet oħra li kont ninnota li ma tantx kienu jinżlu sew meta “tifla” iġġib ruħha b’dal-mod. Jien, għall-kuntrarju, kbirt nagħmilhom. Kont insaffar qabel bdejt nitkellem; it-tort mhux tiegħi, żgur li le, iżda ta’ missieri. Allura ma fhimtx kif darba qisu gerger għax kont qed insaffar. La tifla u lanqas tifel mid-dehra ma kont ikkundizzjonat, għasfur l-ewwel u qabel kollox.",
+			"date_published": "2023-05-01T05:00:00.000Z",
+			"date_updated": "2025-06-01T15:24:32.560Z"
 		}
 		,
 		{
@@ -2189,7 +2189,7 @@ u frankament tista’ troddha
 
 ",
 			"date_published": "2025-07-25T05:00:00.000Z",
-			"date_updated": "2025-07-25T17:18:32.288Z"
+			"date_updated": "2025-07-25T17:31:53.716Z"
 		}
 		,
 		{
