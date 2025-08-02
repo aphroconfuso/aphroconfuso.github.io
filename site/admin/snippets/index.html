@@ -1,0 +1,846 @@
+<!doctype html>
+<html lang="mt" translate="no">
+
+	<head>
+		<meta charset="utf-8">
+		
+	<title>Snippets · Aphroconfuso</title>
+
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+		<meta content="width=device-width, initial-scale=1" name="viewport">
+		<meta content="width=device-width" initial-scale="1.0" maximum-scale="1.0" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="yes" name="mobile-web-app-capable">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#f9f9f3">
+		<link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon-16x16.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32x32.png">
+		<link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
+		<link rel="mask-icon" href="/img/icons/safari-pinned-tab.svg" color="#5bbad5">
+		<meta property="og:image:type" content="image/jpeg">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
+		<link rel="canonical" href="https://aphroconfuso.mt/admin/snippets/">
+		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
+		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
+		<link rel="stylesheet" href="/css/style-b24614d4.css">
+		<script>
+			var audioLoaded,
+				audioUrls,
+				author,
+				body,
+				bodyEnd,
+				bodyHeight,
+				bodyStart,
+				bodyText,
+				bookmarksArray,
+				bookmarksList,
+				bookmarksMenuElement,
+				charactersPerPixel,
+				charactersPerScreen,
+				currentTime,
+				duration,
+				elapsedTime,
+				hideScrollTools,
+				lastReportedReadingTime,
+				lastReportedScrollPosition,
+				lastScrollPosition,
+				message,
+				issueMonth,
+				issueMonthYear,
+				newScrollPosition,
+				pageHeight,
+				pageReportingTitle,
+				percentageProgress,
+				placeText,
+				podcastUrl,
+				previousTime,
+				progressElement,
+				readingSpeed,
+				reportingTitle,
+				screenHeight,
+				skippedTime,
+				storyCompleted,
+				storyId,
+				storyType,
+				sequenceEpisodeNumber,
+				sequenceEpisodeTitle,
+				timeStarted,
+				pageTitle,
+				wordcount,
+				wordsPerPixel,
+				wordsPerSecond,
+				wordsPerSecondAudio,
+				wordsPerScreen;
+
+			audioLoaded = false;
+			bookmarksArray = [];
+			percentageProgress = 0;
+			previousTime = [];
+			storyCompleted = false;
+
+			const urlSlug = location
+				.pathname
+				.replace(/\//g, '');
+			const setCookie = (cname, cvalue, exdays = 36500) => {
+				const d = new Date();
+				d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+				let expires = "expires=" + d.toUTCString();
+				document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+			}
+			const getCookie = (cname) => {
+				let name = cname + "=";
+				let decodedCookie = decodeURIComponent(document.cookie);
+				let ca = decodedCookie.split(';');
+				for (let i = 0; i < ca.length; i++) {
+					let c = ca[i];
+					while (c.charAt(0) == ' ') {
+						c = c.substring(1);
+					}
+					if (c.indexOf(name) == 0) {
+						return c.substring(name.length, c.length);
+					}
+				}
+				return "";
+			}
+			var _paq = window._paq = window._paq || [];
+			const analytics = (arrayInfo) => {
+				if (location.host != 'aphroconfuso.mt')
+					console.log(arrayInfo);
+				_paq.push(arrayInfo);
+			}
+			_paq.push(['disableCookies']);
+			_paq.push(['enableJSErrorTracking']);
+			_paq.push(['enableHeartBeatTimer']);
+			_paq.push(['enableLinkTracking']);
+			_paq.push(['trackPageView']);
+			_paq.push(['trackVisibleContentImpressions']);
+			(function () {
+				var u = "//analitika.aphroconfuso.mt/";
+				_paq.push([
+					'setTrackerUrl', u + 'matomo.php'
+				]);
+				_paq.push([
+					'setSiteId', location.host == 'aphroconfuso.mt'
+						? '1'
+						: '2'
+				]);
+				var d = document,
+					g = d.createElement('script'),
+					s = d.getElementsByTagName('script')[0];
+				g.async = true;
+				g.src = u + 'matomo.js';
+				s
+					.parentNode
+					.insertBefore(g, s);
+			})();
+			const addRemoveFontSizeClass = (size) => {
+				document
+					.body
+					.classList
+					.remove('font-size-1', 'font-size-2', 'font-size-3', 'font-size-4')
+				document
+					.body
+					.classList
+					.add(`font-size-${size}`);
+				localStorage.setItem('font', size);
+			}
+			// REVIEW
+			const translateTheme = {
+				'regular': 'regolari',
+				'dark': 'skura',
+				'contrast': 'kuntrast',
+				'system': 'sistema'
+			}
+			const addRemoveTheme = (theme, stored) => {
+				document
+					.body
+					.classList
+					.remove('theme-regular', 'theme-dark', 'theme-contrast', 'theme-system')
+				document
+					.body
+					.classList
+					.add(`theme-${theme}`);
+				localStorage.setItem('theme', theme);
+				if (stored && theme == 'regular')
+					return;
+				analytics([
+					'trackEvent', 'Tema', `${stored
+						? 'Tema storjata'
+						: 'Tema nbidlet'}`,
+					translateTheme[theme]
+				]);
+			}
+			const initialiseAfterBody = () => {
+				document
+					.body
+					.classList
+					.add(location.hostname.replace(/\.?aphroconfuso\.mt/, '') || 'production');
+				addRemoveFontSizeClass(localStorage.getItem('font') || 1);
+				addRemoveTheme(localStorage.getItem('theme') || 'regular', true);
+				if (localStorage.getItem(`tw-${urlSlug}`)) {
+					document
+						.body
+						.classList
+						.add('trigger-warning-closed');
+				}
+			}
+		</script>
+		<script src="../../script/script-9d62e3.js" type="module"></script>
+	</head>
+	<body class="show-nav this-month-awwissu">
+		<script>
+			initialiseAfterBody();
+		</script>
+		<div id="top-wrapper">
+			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
+			<nav id="top-nav">
+				<div id="logo-container-wrapper">
+					<div id="logo-container">
+						<a href="/">
+							<img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso"/>
+						</a>
+					</div>
+					<menu class="hide-mobile" id="menu-carousels">
+						<li class="abecedaire">
+							<a href="/abeċedarju/">Abeċedarju</a>
+						</li>
+						<li>
+							<a href="/almanakk-awwissu/">Almanakk</a>
+						</li>
+					</menu>
+					<menu class="hide-mobile" id="menu-collections">
+						<li class="main-menu-collection">
+							<a href="/indħil-barrani/">
+								<span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a>
+						</li>
+						<li class="main-menu-collection">
+							<a href="/il-kliem-fit-teorija/">
+								<span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a>
+						</li>
+					</menu>
+				</div>
+				<input id="menu-toggle" type="checkbox"/>
+				<label class='menu-button-container' for="menu-toggle">
+					<span style="display: none">Mobile biss: iftaħ il-menu</span>
+					<div class='menu-button'></div>
+				</label>
+				
+				<menu id="menu-main">
+					
+					<li class="hide-laptop main-menu-collection">
+						<a href="/indħil-barrani/">
+							<span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a>
+					</li>
+					<li class="hide-laptop main-menu-collection">
+						<a href="/il-kliem-fit-teorija/">
+							<span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a>
+					</li>
+					<li class="hide-laptop a-links">
+						<a href="/abeċedarju/">Abeċedarju</a>
+						<a href="/almanakk-awwissu/">Almanakk</a>
+					</li>
+					<li>
+						<a href="/appuntamenti/">Appuntamenti</a>
+					</li>
+					<li>
+						<a href="/kontributuri/">Kontributuri</a>
+					</li>
+					<li>
+						<a href="/werrej/">Werrej</a>
+					</li>
+					<li>
+						<a href="/djarju/">Djarju</a>
+					</li>
+					<li>
+						<a href="/sensiliet/">Sensiliet</a>
+					</li>
+					<li>
+						<a href="/podcast/">Podcast</a>
+					</li>
+					<li class="hide-mobile">
+						<a href="/kotba/" class="menu-kotba">Kotba</a>
+					</li>
+					<li class="hide-laptop choose-theme">
+						<a id="theme-regular" role="button" tabindex="0">s</a>
+						<a id="theme-dark" role="button" tabindex="1">m</a>
+						<a id="theme-contrast" role="button" tabindex="2">c</a>
+						<a id="theme-system" role="button" tabindex="3">p</a>
+					</li>
+					<li>
+						<a href="/dwarna/">Dwarna</a>
+					</li>
+					<li class="hide-laptop">
+						<a href="/kotba/">Kotba</a>
+					</li>
+					<li class="hide-laptop">
+						<a href="/kolofon/">Kolofon</a>
+					</li>
+					<li>
+						<a href="/newsletter/">Newsletter</a>
+					</li>
+					<li class="hide-laptop">
+						<a href="/privatezza/">Privatezza</a>
+					</li>
+					<li>
+						<a href="/bookmarks/">Bookmarks<span id="bookmarks-number"></span></a>
+					</li>
+					<li class="hide-laptop choose-theme" id="text-size-adjust">
+						<a id="font-size-1" role="button" tabindex="8">a</a>
+						<a id="font-size-2" role="button" tabindex="9">a</a>
+						<a id="font-size-3" role="button" tabindex="10">a</a>
+						<a id="font-size-4" role="button" tabindex="11">a</a>
+					</li>
+				</menu>
+				<input class="hide-mobile" type="text" id="search-input" placeholder="fittex..." autocomplete="off" auto-fill="off" type="text" autocapitalize="none" enterkeyhint="search"/>
+				<ul id="search-results">
+					<!-- -->
+				</ul>
+				
+				<div id="brownline"></div>
+			</nav>
+			<div id="message">
+				<!-- -->
+			</div>
+			<main id="skipto">
+				
+	<article>
+		<header>
+			<ul>
+				<li>&nbsp;</li>
+			</ul>
+			<h1>Snippets</h1>
+			<h2></h2>
+		</header>
+		<div class="abecedaire abecedaire-full snippets">
+			<section id="grid-body">
+				<div class="body-text">
+					<ol>
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+								<li>
+									<a class="promo promo-abecedaire" href="http://aphroconfuso.mt/franco-bifo-berardi-karl-baldacchino-nifs-kaos-u-poeżija-6-purità/?mtm_campaign=Snippets&mtm_kwd=%20-%20">
+										<p class="blurb">Fil-kitbiet ta’ DeLillo, bħal f’ta’ Baudrillard, <l-m>l-iżvolġiment</l-m> tal-apokalissi qed jiġi pperċepit <l-m>mill-perspettiva</l-m> ta’ immaġinazzjoni utopika falluta. Iżda Franzen jesprimi <l-m>l-burdata</l-m> tal-ġenerazzjoni ta’ wara: għalih, <l-m>it-telf</l-m> ta’ sinifikat kondiviż m’għadux skandlu jew afflizzjoni jew avventura eċitanti, iżda pjuttost <l-m>il-kundizzjoni</l-m> permanenti li <l-m>s-soċjetà</l-m> tal-Punent (u mhux hi biss) stabbiliet lilha nnifisha taħtha. Tletin sena wara Baudrillard, Franzen jirrakkonta <l-m>d-distopja</l-m> tat-teorist postmodern bħala norma insuperabbli, ċirku li jibqa’ jdur fuqu nnifsu mingħajr linji ta’ ħarba.</p>
+										<p class="credit">— “Nifs: Kaos u Poeżija” ta’ Franco &quot;Bifo&quot; Berardi</p>
+										<p class="credit credit-full">
+											— “Nifs: Kaos u Poeżija”
+											
+												<br><em>6. Purità</em>
+											
+											<br>ta’ Franco &quot;Bifo&quot; Berardi
+											
+												<span class="translator"> (tr Karl Baldacchino</span>)
+											
+										</p>
+									</a>
+								</li>
+							
+								<li>
+									<a class="promo promo-abecedaire" href="http://aphroconfuso.mt/franco-bifo-berardi-karl-baldacchino-nifs-kaos-u-poeżija-6-purità/?mtm_campaign=Snippets&mtm_kwd=%20-%20">
+										<p class="blurb">Il-“libertà” li Franzen jikteb dwarha hija libertà mingħajr ħbiberija — jiġifieri libertà mingħajr sinifikat. <l-m>Id-djalogi</l-m> maħdumin bizzilla <l-m>tal-kotba</l-m> tiegħu huma <l-m>l-mera</l-m> morra ta’ umanità li tilfet <l-m>l-abbiltà</l-m> tagħha li tikkondividi <l-m>l-pjaċir</l-m> tal-eżistenza. Dik li toffrilna <l-m>l-possibbiltà</l-m> li nsibu sinifikat u pjaċir <l-m>fl-okkorrenzi</l-m> ta’ din <l-m>il-ħajja</l-m> hija relazzjoni dijaloġika li tistabbilixxi spazju ta’ ftehim reċiproku. <l-m>Is-sinifikat</l-m> huwa interpretazzjoni interpersonali, <l-m>il-mogħdija</l-m> kondiviża <l-m>tal-kuxjenza</l-m>. <l-m>L-eżistenza</l-m> waħedha m’għandha <l-m>l-ebda</l-m> sinifikat.</p>
+										<p class="credit">— “Nifs: Kaos u Poeżija” ta’ Franco &quot;Bifo&quot; Berardi</p>
+										<p class="credit credit-full">
+											— “Nifs: Kaos u Poeżija”
+											
+												<br><em>6. Purità</em>
+											
+											<br>ta’ Franco &quot;Bifo&quot; Berardi
+											
+												<span class="translator"> (tr Karl Baldacchino</span>)
+											
+										</p>
+									</a>
+								</li>
+							
+								<li>
+									<a class="promo promo-abecedaire" href="http://aphroconfuso.mt/franco-bifo-berardi-karl-baldacchino-nifs-kaos-u-poeżija-6-purità/?mtm_campaign=Snippets&mtm_kwd=%20-%20">
+										<p class="blurb">Bħal f’<em>Madame Bovary</em>, hawn insibu wkoll <l-m>l-angoxxa</l-m> tal-libertà femminili, imma Emma ta’ Flaubert batiet minn tip differenti ta’ malesseri — dwejjaq li rriżulta minn nuqqas ta’ stimoli, <l-m>mill-vojt</l-m> eżistenzjali <l-m>tal-ħajja</l-m> provinċjali Franċiża ta’ żmienha. Għall-kuntrarju, Patty tbati minn ansjetà dipressiva li ġejja minn eċċess ta’ stimoli, minn tagħbija żejda ta’ wegħdiet, minn orizzont bla limiti ta’ “opportunitajiet” li qatt mhu se jissarrfu f’avventura jew pjaċir kondiviżi.</p>
+										<p class="credit">— “Nifs: Kaos u Poeżija” ta’ Franco &quot;Bifo&quot; Berardi</p>
+										<p class="credit credit-full">
+											— “Nifs: Kaos u Poeżija”
+											
+												<br><em>6. Purità</em>
+											
+											<br>ta’ Franco &quot;Bifo&quot; Berardi
+											
+												<span class="translator"> (tr Karl Baldacchino</span>)
+											
+										</p>
+									</a>
+								</li>
+							
+								<li>
+									<a class="promo promo-abecedaire" href="http://aphroconfuso.mt/franco-bifo-berardi-karl-baldacchino-nifs-kaos-u-poeżija-6-purità/?mtm_campaign=Snippets&mtm_kwd=%20-%20">
+										<p class="blurb">Il-komunità Amerikana ilha <l-m>mill-oriġini</l-m> tagħha bbażata fuq <l-m>il-kliem:</l-m> l-ewwel, fuq <l-m>il-kelma</l-m> ta’ Alla; imbagħad, fuq <l-m>il-kliem</l-m> tar-raġuni kostituzzjonali fformulata <l-m>fid-Dikjarazzjoni</l-m> tal-Indipendenza, li inawgurat <l-m>l-identità</l-m> Amerikana bħala tabula rasa. Din <l-m>il-magna</l-m> purament verbali <l-m>tal-identità</l-m> Amerikana (deskritta tajjeb minn Samuel Huntington f’Who Are We?) hija kundizzjoni antropoloġika u epistemoloġika li finalment evolviet <l-m>fil-forma</l-m> perfetta tagħha — dik diġitali.</p>
+										<p class="credit">— “Nifs: Kaos u Poeżija” ta’ Franco &quot;Bifo&quot; Berardi</p>
+										<p class="credit credit-full">
+											— “Nifs: Kaos u Poeżija”
+											
+												<br><em>6. Purità</em>
+											
+											<br>ta’ Franco &quot;Bifo&quot; Berardi
+											
+												<span class="translator"> (tr Karl Baldacchino</span>)
+											
+										</p>
+									</a>
+								</li>
+							
+								<li>
+									<a class="promo promo-abecedaire" href="http://aphroconfuso.mt/franco-bifo-berardi-karl-baldacchino-nifs-kaos-u-poeżija-6-purità/?mtm_campaign=Snippets&mtm_kwd=%20-%20">
+										<p class="blurb">Id-diskors neoliberali huwa akkużat b’retorika <l-m>tal-individwu</l-m>, iżda <l-m>l-prattika</l-m> neoliberali <l-m>fil-fatt</l-m> teqred <l-m>il-libertà</l-m> individwali. <l-m>Il-kompetizzjoni</l-m> u <l-m>l-konformiżmu</l-m> huma żewġ uċuħ <l-m>tal-istess</l-m> munita <l-m>fl-isfera</l-m> tas-suq. <l-m>L-individwi</l-m> llum m’għadhomx isegwu proġetti awtonomi <l-m>tal-ħajja</l-m>. Minflok, huma frammenti ta’ żmien prekarju, frattali rikombinati bla waqfien, unitajiet konnettivi li għandhom jinterfaċċaw perfettament jekk iridu jkunu effettivi skont <l-m>ir-regola</l-m> tar-rendibbiltà ekonomika.</p>
+										<p class="credit">— “Nifs: Kaos u Poeżija” ta’ Franco &quot;Bifo&quot; Berardi</p>
+										<p class="credit credit-full">
+											— “Nifs: Kaos u Poeżija”
+											
+												<br><em>6. Purità</em>
+											
+											<br>ta’ Franco &quot;Bifo&quot; Berardi
+											
+												<span class="translator"> (tr Karl Baldacchino</span>)
+											
+										</p>
+									</a>
+								</li>
+							
+								<li>
+									<a class="promo promo-abecedaire" href="http://aphroconfuso.mt/franco-bifo-berardi-karl-baldacchino-nifs-kaos-u-poeżija-6-purità/?mtm_campaign=Snippets&mtm_kwd=%20-%20">
+										<p class="blurb">Xi nkunu qed ngħidu meta ngħidu “realtà” jew “fatt”? <l-m>Il-fatti</l-m> jsiru <l-m>fl-isfera</l-m> tal-konvenzjonijiet umani; <l-m>it-terminu</l-m> ġej <l-m>mil-Latin</l-m> <em>facere</em>, li tfisser “għamel”<span class="pull">.</span> <l-m>Il-fatt</l-m> huwa <l-m>l-prodott</l-m> tas-semjożi fattwali <l-m>tal-individwi</l-m> soċjali. U <l-m>r-realtà</l-m> hija <l-m>l-punt</l-m> psikodinamiku ta’ intersezzjoni ta’ għadd kbir ta’ projezzjonijiet ta’ flussi ta’ simulazzjoni li jipproċedu minn organiżmi umani u minn magni semjotiċi. <l-m>Ir-realtà</l-m> ma teżistix minn qabel <l-m>l-att</l-m> ta’ semjożi u ta’ komunikazzjoni; anzi, hija kostruzzjoni li temerġi minn suġġettivitajiet multipli.</p>
+										<p class="credit">— “Nifs: Kaos u Poeżija” ta’ Franco &quot;Bifo&quot; Berardi</p>
+										<p class="credit credit-full">
+											— “Nifs: Kaos u Poeżija”
+											
+												<br><em>6. Purità</em>
+											
+											<br>ta’ Franco &quot;Bifo&quot; Berardi
+											
+												<span class="translator"> (tr Karl Baldacchino</span>)
+											
+										</p>
+									</a>
+								</li>
+							
+								<li>
+									<a class="promo promo-abecedaire" href="http://aphroconfuso.mt/franco-bifo-berardi-karl-baldacchino-nifs-kaos-u-poeżija-6-purità/?mtm_campaign=Snippets&mtm_kwd=%20-%20">
+										<p class="blurb">Is-sekwenza loġika <l-m>tal-kawża</l-m> u <l-m>l-effett</l-m> hija mħawda, u <l-m>l-pedament</l-m> tal-verità minsi. Għalhekk, <l-m>l-għażla</l-m> etika ma tistax tkun ibbażata fuq xi ċertezza teoloġika jew xi sinifikat fattwali evidenti. Għażla etika hija bbażata fuq kunflitt ta’ sensibilitajiet, u fuq għarfien ironiku <l-m>tar-relattività</l-m> tas-simulazzjoni tagħna stess <l-m>tad-dinja</l-m>, <l-m>tal-projezzjoni</l-m> tagħna <l-m>tar-realtà</l-m>. <l-m>Is-sors</l-m> tal-għarfien etiku mhuwiex <l-m>il-konformità</l-m> ma’ valuri teoloġiċi jew storiċi assoluti, imma <l-m>l-imħabba</l-m> empatika għalina nfusna li ma tistax tkun diżassoċjata <l-m>mill-benessri</l-m> tal-oħrajn.</p>
+										<p class="credit">— “Nifs: Kaos u Poeżija” ta’ Franco &quot;Bifo&quot; Berardi</p>
+										<p class="credit credit-full">
+											— “Nifs: Kaos u Poeżija”
+											
+												<br><em>6. Purità</em>
+											
+											<br>ta’ Franco &quot;Bifo&quot; Berardi
+											
+												<span class="translator"> (tr Karl Baldacchino</span>)
+											
+										</p>
+									</a>
+								</li>
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+								<li>
+									<a class="promo promo-abecedaire" href="http://aphroconfuso.mt/omar-nshea-bur-mgħeż-5-id-difna-tal-memorji/?mtm_campaign=Snippets&mtm_kwd=%20-%20">
+										<p class="blurb">X’se nieħu miegħi <l-m>fid-dar</l-m> tal-eternità barra <l-m>l-għadam</l-m> li hemm ġo fija jżommni wieqaf, barra xedaq snien, dawk li għadhom minn tiegħi kif ukoll dawk taċ-ċeramika li invitawli ġo ħanek mimli <l-m>bl-għadam</l-m> ta’ ħaddieħor, pendent <l-m>tal-bebbux</l-m> tal-baħar li nġorr madwar għonqi, u misluta <l-m>tad-deheb</l-m> imgeżwra <l-m>mal-widna</l-m> tax-xellug? Ommi kienet kollezzjonista <l-m>tal-memorji:</l-m> ritratti, riċetti, kitbiet, ħwejjeġ, kartolini, qtugħ <l-m>mill-gazzetti</l-m> ta’ kitbiet li kont nagħmel jien f’żgħożiti, kalzetti, xalel u kutri maħduma <l-m>bil-ġanċ</l-m>, diski, ċwievet, fwejjaħ… Repertorju ta’ oġġetti li kull wieħed kien jiftaħ dinja enormi ta’ ħajja tremenda, ta’ ħajja maqbuda tixxengel u titbandal bejn <l-m>l-esperjenza</l-m> bla rażan u <l-m>r-riflessjoni</l-m> axxetika <l-m>fis-skiet</l-m>. Bejn saħħa u dawl. Bejn mard u stojċiżmu żonqri. U jien, hawn, <l-m>l-aħħar</l-m> werriet <l-m>tal-memorji</l-m> tagħna.</p>
+										<p class="credit">— “Bur Mgħeż” ta’ Omar N’Shea</p>
+										<p class="credit credit-full">
+											— “Bur Mgħeż”
+											
+												<br><em>5. Id-difna tal-memorji</em>
+											
+											<br>ta’ Omar N’Shea
+											
+										</p>
+									</a>
+								</li>
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+					</ol>
+					
+				</div>
+			</section>
+		</div>
+	</article>
+	<script>
+		reportingTitle = "Snippets";
+	</script>
+
+			</main>
+		</div>
+		<div id="bottom-wrapper">
+			<img id="deco" role="none" src="/img/deco-100.svg" alt="Dekorazzjoni art-nouveau"/>
+			
+				<div id="newsletter-container-bottom" class="newsletter-container">
+					<section id="form" data-track-content data-content-name="Homepage" data-content-piece="formola">
+						<iframe id="newsletter" class="newsletter-iframe-regular" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#" scrolling="no" title="Abbona fin-newsletter"></iframe>
+<iframe id="newsletter" class="newsletter-iframe-dark" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#|#201e1d|#908984|0|442093344ewr" scrolling="no" title="Abbona fin-newsletter"></iframe>
+<iframe id="newsletter" class="newsletter-iframe-contrast" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#|#000000|#ffffff|0|442093344ewr" scrolling="no" title="Abbona fin-newsletter"></iframe>
+
+					</section>
+				</div>
+			
+			<footer data-track-content data-content-name="Footer" data-content-piece="adminsnippets">
+	<nav class="footer-content">
+		<menu id="housekeeping">
+			<li class="header">Dwarna</li>
+			<li><a href="/kolofon/">Kolofon</a></li>
+			<li><a href="/proċess-editorjali/">Proċess</a></li>
+			<li><a href="/gwida-tal-istil/">Gwida tal-istil</a></li>
+			<li><a href="/cookies/">Cookies</a></li>
+			<li><a href="/privatezza/">Privatezza</a></li>
+			<li><a href="/aċċessibbiltà/">Aċċessibbiltà</a></li>
+			<li><a href="/podcast/">Podcast</a></li>
+			<li><a href="/newsletter/">Newsletter</a></li>
+			<li class="hide-tablet"><a href="/drittijiet/">Drittijiet</a></li>
+		</menu>
+		<menu id="media">
+			<li class="header">Midja</li>
+			<li><a href="/ar/" class="arabic">العربية</a></li>
+			<li><a href="/ca/">Català</a></li>
+			<li><a href="/de/">Deutsch</a></li>
+			<li><a href="/en/">English</a></li>
+			<li><a href="/es/">Español</a></li>
+			<li><a href="/fr/">Français</a></li>
+			<li><a href="/it/">Italiano</a></li>
+			<li><a href="/nl/">Nederlands</a></li>
+			<li class="hide-tablet"><a href="/ro/">Română</a></li>
+		</menu>
+		<menu id="socials">
+			<li class="header">Segwina</li>
+			<li><a href="https://facebook.com/aphroconfuso">Facebook</a></li>
+			<li><a href="https://instagram.com/aphroconfuso">Instagram</a></li>
+			
+			
+			<li><a href="https://whatsapp.com/channel/0029VaysAKP7z4kZHDKdZ71J" rel="me">WhatsApp</a></li>
+			<li><a href="https://aphroconfuso.bsky.social/">Bluesky</a></li>
+			<li><a href="https://youtube.com/@aphroconfuso">Youtube</a></li>
+			<li><a href="https://open.spotify.com/user/31rly4s75gfxs6li6bcxc5bqlgza">Spotify</a></li>
+		</menu>
+		<menu id="podcast">
+			<li class="header">Podcast</li>
+			<li><a href="https://podcasts.apple.com/us/podcast/aphroconfuso/id1686567243">Apple</a></li>
+			
+			<li><a href="https://feeds.acast.com/public/shows/aphroconfuso">RSS feed</a></li>
+			<li><a href="https://open.spotify.com/show/75Lt3UMvC1jE15SGrNFMww">Spotify</a></li>
+			
+		</menu>
+		<div id="logotype-container">
+			<a href="/"><img src="/img/logotype.svg" class="logotype" alt="logo: Aphroconfuso" /></a>
+		</div>
+		<div id="email">
+			<a href="mailto:l-edituri@aphroconfuso.mt" class="email">l-edituri@aphroconfuso.mt</a>
+		</div>
+		<div class="hide-mobile choose-theme choose-theme-footer">
+			<a id="theme-regular-footer" role="button" tabindex="4">s</a>
+			<a id="theme-dark-footer" role="button" tabindex="5">m</a>
+			<a id="theme-contrast-footer" role="button" tabindex="6">c</a>
+			<a id="theme-system-footer" role="button" tabindex="7">p</a>
+		</div>
+		<div id="copyright"><a href="/drittijiet/" class="copyright">&copy; 2023-2025 Aphroconfuso et al</a></div>
+		<div id="qrcode"><img src="/img/qr/adminsnippets.png" width="180" height="180" alt="QR code" /></div>
+		<div id="url">https://aphroconfuso.mt/admin/snippets/</div>
+	</nav>
+</footer>
+
+		</div>
+		<aside id="scroll-tools" class="monthly-outlined">
+			<p>
+				<span id="progress">
+					<!-- --></span></p>
+		</aside>
+	</body>
+</html>
