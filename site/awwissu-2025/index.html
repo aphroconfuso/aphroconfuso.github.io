@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="mt" translate="no">
+
+	<head>
+		<meta charset="utf-8">
+		
+	<title>Awwissu 2025 · Aphroconfuso</title>
+	<meta content="Madwar seba’ snin ilu, meta Franco “Bifo” Berardi kien qed jikteb Nifs: Kaos u Poeżija, il-karatteristika li l-iktar kienet tispikka tad-dinja l-ġdida wara l-ewwel rebħa ta’ Donald Trump kienet in-natura postfattwali tagħha. Fejn qabel gidba waħda setgħet ittemm karriera politika, issa bħal konna q…" name="description">
+	<meta property="og:image" content="/stampi/social_aphroconfuso_logo_social_kbir_kwadrat_d073f4e24a.jpg">
+
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+		<meta content="width=device-width, initial-scale=1" name="viewport">
+		<meta content="width=device-width" initial-scale="1.0" maximum-scale="1.0" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="yes" name="mobile-web-app-capable">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#f9f9f3">
+		<link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon-16x16.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32x32.png">
+		<link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
+		<link rel="mask-icon" href="/img/icons/safari-pinned-tab.svg" color="#5bbad5">
+		<meta property="og:image:type" content="image/jpeg">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
+		<link rel="canonical" href="https://aphroconfuso.mt/awwissu-2025/">
+		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
+		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
+		<link rel="stylesheet" href="/css/style-b24614d4.css">
+		<script>
+			var audioLoaded,
+				audioUrls,
+				author,
+				body,
+				bodyEnd,
+				bodyHeight,
+				bodyStart,
+				bodyText,
+				bookmarksArray,
+				bookmarksList,
+				bookmarksMenuElement,
+				charactersPerPixel,
+				charactersPerScreen,
+				currentTime,
+				duration,
+				elapsedTime,
+				hideScrollTools,
+				lastReportedReadingTime,
+				lastReportedScrollPosition,
+				lastScrollPosition,
+				message,
+				issueMonth,
+				issueMonthYear,
+				newScrollPosition,
+				pageHeight,
+				pageReportingTitle,
+				percentageProgress,
+				placeText,
+				podcastUrl,
+				previousTime,
+				progressElement,
+				readingSpeed,
+				reportingTitle,
+				screenHeight,
+				skippedTime,
+				storyCompleted,
+				storyId,
+				storyType,
+				sequenceEpisodeNumber,
+				sequenceEpisodeTitle,
+				timeStarted,
+				pageTitle,
+				wordcount,
+				wordsPerPixel,
+				wordsPerSecond,
+				wordsPerSecondAudio,
+				wordsPerScreen;
+
+			audioLoaded = false;
+			bookmarksArray = [];
+			percentageProgress = 0;
+			previousTime = [];
+			storyCompleted = false;
+
+			const urlSlug = location
+				.pathname
+				.replace(/\//g, '');
+			const setCookie = (cname, cvalue, exdays = 36500) => {
+				const d = new Date();
+				d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+				let expires = "expires=" + d.toUTCString();
+				document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+			}
+			const getCookie = (cname) => {
+				let name = cname + "=";
+				let decodedCookie = decodeURIComponent(document.cookie);
+				let ca = decodedCookie.split(';');
+				for (let i = 0; i < ca.length; i++) {
+					let c = ca[i];
+					while (c.charAt(0) == ' ') {
+						c = c.substring(1);
+					}
+					if (c.indexOf(name) == 0) {
+						return c.substring(name.length, c.length);
+					}
+				}
+				return "";
+			}
+			var _paq = window._paq = window._paq || [];
+			const analytics = (arrayInfo) => {
+				if (location.host != 'aphroconfuso.mt')
+					console.log(arrayInfo);
+				_paq.push(arrayInfo);
+			}
+			_paq.push(['disableCookies']);
+			_paq.push(['enableJSErrorTracking']);
+			_paq.push(['enableHeartBeatTimer']);
+			_paq.push(['enableLinkTracking']);
+			_paq.push(['trackPageView']);
+			_paq.push(['trackVisibleContentImpressions']);
+			(function () {
+				var u = "//analitika.aphroconfuso.mt/";
+				_paq.push([
+					'setTrackerUrl', u + 'matomo.php'
+				]);
+				_paq.push([
+					'setSiteId', location.host == 'aphroconfuso.mt'
+						? '1'
+						: '2'
+				]);
+				var d = document,
+					g = d.createElement('script'),
+					s = d.getElementsByTagName('script')[0];
+				g.async = true;
+				g.src = u + 'matomo.js';
+				s
+					.parentNode
+					.insertBefore(g, s);
+			})();
+			const addRemoveFontSizeClass = (size) => {
+				document
+					.body
+					.classList
+					.remove('font-size-1', 'font-size-2', 'font-size-3', 'font-size-4')
+				document
+					.body
+					.classList
+					.add(`font-size-${size}`);
+				localStorage.setItem('font', size);
+			}
+			// REVIEW
+			const translateTheme = {
+				'regular': 'regolari',
+				'dark': 'skura',
+				'contrast': 'kuntrast',
+				'system': 'sistema'
+			}
+			const addRemoveTheme = (theme, stored) => {
+				document
+					.body
+					.classList
+					.remove('theme-regular', 'theme-dark', 'theme-contrast', 'theme-system')
+				document
+					.body
+					.classList
+					.add(`theme-${theme}`);
+				localStorage.setItem('theme', theme);
+				if (stored && theme == 'regular')
+					return;
+				analytics([
+					'trackEvent', 'Tema', `${stored
+						? 'Tema storjata'
+						: 'Tema nbidlet'}`,
+					translateTheme[theme]
+				]);
+			}
+			const initialiseAfterBody = () => {
+				document
+					.body
+					.classList
+					.add(location.hostname.replace(/\.?aphroconfuso\.mt/, '') || 'production');
+				addRemoveFontSizeClass(localStorage.getItem('font') || 1);
+				addRemoveTheme(localStorage.getItem('theme') || 'regular', true);
+				if (localStorage.getItem(`tw-${urlSlug}`)) {
+					document
+						.body
+						.classList
+						.add('trigger-warning-closed');
+				}
+			}
+		</script>
+		<script src="../script/script-9d62e3.js" type="module"></script>
+	</head>
+	<body class="show-nav this-month-awwissu">
+		<script>
+			initialiseAfterBody();
+		</script>
+		<div id="top-wrapper">
+			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
+			<nav id="top-nav">
+				<div id="logo-container-wrapper">
+					<div id="logo-container">
+						<a href="/">
+							<img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso"/>
+						</a>
+					</div>
+					<menu class="hide-mobile" id="menu-carousels">
+						<li class="abecedaire">
+							<a href="/abeċedarju/">Abeċedarju</a>
+						</li>
+						<li>
+							<a href="/almanakk-awwissu/">Almanakk</a>
+						</li>
+					</menu>
+					<menu class="hide-mobile" id="menu-collections">
+						<li class="main-menu-collection">
+							<a href="/indħil-barrani/">
+								<span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a>
+						</li>
+						<li class="main-menu-collection">
+							<a href="/il-kliem-fit-teorija/">
+								<span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a>
+						</li>
+					</menu>
+				</div>
+				<input id="menu-toggle" type="checkbox"/>
+				<label class='menu-button-container' for="menu-toggle">
+					<span style="display: none">Mobile biss: iftaħ il-menu</span>
+					<div class='menu-button'></div>
+				</label>
+				
+				<menu id="menu-main">
+					
+					<li class="hide-laptop main-menu-collection">
+						<a href="/indħil-barrani/">
+							<span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a>
+					</li>
+					<li class="hide-laptop main-menu-collection">
+						<a href="/il-kliem-fit-teorija/">
+							<span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a>
+					</li>
+					<li class="hide-laptop a-links">
+						<a href="/abeċedarju/">Abeċedarju</a>
+						<a href="/almanakk-awwissu/">Almanakk</a>
+					</li>
+					<li>
+						<a href="/appuntamenti/">Appuntamenti</a>
+					</li>
+					<li>
+						<a href="/kontributuri/">Kontributuri</a>
+					</li>
+					<li>
+						<a href="/werrej/">Werrej</a>
+					</li>
+					<li>
+						<a href="/djarju/">Djarju</a>
+					</li>
+					<li>
+						<a href="/sensiliet/">Sensiliet</a>
+					</li>
+					<li>
+						<a href="/podcast/">Podcast</a>
+					</li>
+					<li class="hide-mobile">
+						<a href="/kotba/" class="menu-kotba">Kotba</a>
+					</li>
+					<li class="hide-laptop choose-theme">
+						<a id="theme-regular" role="button" tabindex="0">s</a>
+						<a id="theme-dark" role="button" tabindex="1">m</a>
+						<a id="theme-contrast" role="button" tabindex="2">c</a>
+						<a id="theme-system" role="button" tabindex="3">p</a>
+					</li>
+					<li>
+						<a href="/dwarna/">Dwarna</a>
+					</li>
+					<li class="hide-laptop">
+						<a href="/kotba/">Kotba</a>
+					</li>
+					<li class="hide-laptop">
+						<a href="/kolofon/">Kolofon</a>
+					</li>
+					<li>
+						<a href="/newsletter/">Newsletter</a>
+					</li>
+					<li class="hide-laptop">
+						<a href="/privatezza/">Privatezza</a>
+					</li>
+					<li>
+						<a href="/bookmarks/">Bookmarks<span id="bookmarks-number"></span></a>
+					</li>
+					<li class="hide-laptop choose-theme" id="text-size-adjust">
+						<a id="font-size-1" role="button" tabindex="8">a</a>
+						<a id="font-size-2" role="button" tabindex="9">a</a>
+						<a id="font-size-3" role="button" tabindex="10">a</a>
+						<a id="font-size-4" role="button" tabindex="11">a</a>
+					</li>
+				</menu>
+				<input class="hide-mobile" type="text" id="search-input" placeholder="fittex..." autocomplete="off" auto-fill="off" type="text" autocapitalize="none" enterkeyhint="search"/>
+				<ul id="search-results">
+					<!-- -->
+				</ul>
+				
+				<div id="brownline"></div>
+			</nav>
+			<div id="message">
+				<!-- -->
+			</div>
+			<main id="skipto">
+				
+<article class="generic awwissu" data-pagefind-meta="class[class]">
+	<header>
+		<ul><li class="header-label"><a href="/appuntamenti/" data-pagefind-meta="header">Appuntamenti</a></li></ul>
+		<h1>Awwissu 2025</h1>
+		<h2></h2>
+	</header>
+	<div class="container-generic generic-body-text appointment">
+		<section id="grid-body" data-pagefind-body data-pagefind-weight="5">
+			<div class="generic-body-text editorial">
+				<div class="text-container">
+					<p><span class="sc">Madwar seba’ snin ilu</span>, meta Franco “Bifo” Berardi kien qed jikteb <em>Nifs: Kaos u Poeżija</em>, <l-m>il-karatteristika</l-m> li <l-m>l-iktar</l-m> kienet tispikka <l-m>tad-dinja</l-m> l-ġdida wara <l-m>l-ewwel</l-m> rebħa ta’ Donald Trump kienet <l-m>in-natura</l-m> postfattwali tagħha. Fejn qabel gidba waħda setgħet ittemm karriera politika, issa bħal konna qattajna darba għal dejjem <l-m>il-kuntratt</l-m> epistemoloġiku. Iċ-ċpar proverbjali <l-m>tal-gwerra</l-m> jiksi ħajjitna ta’ kuljum, u kull gidba tiġi ribattuta mhux <l-m>bil-fatti</l-m>, iżda b’gidba oħra u oħra, kull skandlu bi skandlu ieħor u ikbar li jaljenana minn ta’ qablu. “<l-m>Il-President</l-m> Clinton għadda minn proċess ta’ impeachment talli gideb dwar suġġett intimu li ma kellu <l-m>l-ebda</l-m> rabta <l-m>mar-rwol</l-m> politiku tiegħu,<span class="pullsemi">”</span> jgħid Berardi <l-m>fil-Kapitlu</l-m> 6 ta’ Nifs li qed nippubblikaw <l-m>dax-xahar</l-m>, traduzzjoni ta’ Karl Baldacchino. “Dan <l-m>l-aħħar</l-m>, <l-m>is-suġġett</l-m> tal-verità politika reġa’ ħa post ċentrali, wara <l-m>l-pataflun</l-m> gideb, aħbarijiet foloz, u manipulazzjonijiet redikoli li kellhom rwol kruċjali <l-m>fil-kampanja</l-m> ta’ Trump u <l-m>l-ewwel</l-m> sena <l-m>fil-kariga</l-m>. Permezz <l-m>tal-multiplikazzjoni</l-m> ta’ shitstorms <l-m>fin-networks</l-m> soċjali u <l-m>fl-infosfera</l-m> b’mod ġenerali, <l-m>ir-reġim</l-m> tal-verità ħa theżżiża, u wassal biex ġurnalisti u filosofi ewlenin jistaqsu jekk aħniex qed ngħammru f’dinja diskursiva postfattwali.<span class="pullsemi">”</span> Illum, <l-m>l-iktar</l-m> persuna li għadha tuża <l-m>l-frażi</l-m> “fake news” hija Donald Trump innifsu, <l-m>l-iktar</l-m> fuq <l-m>il-midja</l-m> soċjali tiegħu stess, Truth Social. Għalkemm probabbilment kienet <l-m>l-inkompetenza</l-m> tiegħu waqt żmien <l-m>il-COVID</l-m> 19 li tellfitu <l-m>l-elezzjoni</l-m> tal-2020 lil Trump, <l-m>l-effetti</l-m> tal-pandemija fuq <l-m>il-psike</l-m> dinjija kienu responsabbli għar-rebħa tiegħu iktar qawwija <l-m>tal-2024</l-m>. Illum nafu li <l-m>l-pandemija</l-m> għamlet ħerba minn ħafna veritajiet antiki, iżda Berardi, li kien qed jikteb qabel <l-m>il-COVID</l-m> 19, ifittex <l-m>is-sors</l-m> tal-qalba għal dinja postfattwali f’dak li ġara wara pandemija li ġiet qabel. “<l-m>Il-fatt</l-m> li <l-m>l-kriżi</l-m> [tal-AIDS] identifikat <l-m>il-pjaċir</l-m> mal-mard <l-m>bil-mod</l-m> dawwar <l-m>il-ħajja</l-m> soċjali f’deżert. Temmew għexieren ta’ snin ta’ solidarjetà soċjali u mħabba ħielsa, u segwiet <l-m>il-mutazzjoni</l-m> diġitali, u meta <l-m>t-teknoloġija</l-m> diġitali ppervadiet <l-m>l-isfera</l-m> tal-komunikazzjoni <l-m>tal-bniedem</l-m>, din issostitwiet <l-m>il-konġunzjoni</l-m> bil-konnessjoni. Anki jekk trasmess <l-m>bil-kuntatt</l-m> sesswali, <l-m>l-AIDS</l-m> kien prinċipalment epidemija psikomedjatika. Kien ibbażat fuq <l-m>il-komunikazzjoni</l-m> ta’ retrovirus, iżda rriżulta <l-m>fil-komunikazzjoni</l-m> tal-biża’<span class="pullsemi">.</span> Meta <l-m>l-kuntatt</l-m> mal-ġisem <l-m>tal-Ieħor</l-m> beda jiġi pperċepit bħala periklu — u meta dan <l-m>is-sens</l-m> ta’ periklu rabba’ <l-m>l-għeruq</l-m> fl-inkonxju soċjali — il-lingwa ttrasmigrat <l-m>mill-isfera</l-m> konġuntiva għal dik konnettiva.<span class="pullsemi">”</span> Kliem Berardi llum jgħodd iktar minn meta kitbu. Waqt <l-m>il-pandemija</l-m> tal-COVID 19, <l-m>l-iżolament</l-m> kellu <l-m>l-effett</l-m> li jnaqqas <l-m>il-kuntatt</l-m> personali u jkompli jżid <l-m>id-dipendenza</l-m> fuq <l-m>il-kuntatt</l-m> diġitali; borma tbaqbaq perfetta għad-dinja postfattwali. <l-m>Il-fatti</l-m>, jgħidilna Berardi, huma frott <l-m>ir-relazzjonijiet</l-m> ta’ bejnietna. Meta tinqered <l-m>l-intimità</l-m>, jew tkun primarjament ikkomodifikata permezz <l-m>tal-mezzi</l-m> diġitali, <l-m>l-informazzjoni</l-m> ma tibqax ankrata <l-m>fil-ħajja</l-m> tal-bniedem, u ssir manipulabbli u evanexxenti daqs kull riklam ieħor li naraw f’kull mument ta’ <l-m>ħajjitna&nbsp;<span class="end-dot">.</span></l-m></p>
+				</div>
+			</div>
+			<p class="continuity">Din hija l-kitba ppubblikata dax-xahar:</p>
+			
+			
+			
+			
+			
+			
+			<ul class="promo-list">
+	
+	
+		
+			
+
+
+<li  class="multiple-episodes episode-6">
+	<a class="promo  awwissu promo-esej sequence-5 story-168 is-episode" href="/franco-bifo-berardi-karl-baldacchino-nifs-kaos-u-poeżija-6-purità/" onclick="analytics(['trackEvent', 'Promo', 'minn: Awwissu 2025', 'għal: Nifs:: Kaos u Poeżija #6', 1]);">
+		
+			<header>
+	<ul>
+		
+			<li class="header-label">Awwissu 2025</li>
+		
+		
+	</ul>
+	
+	
+		
+			<h1>
+				Nifs: Kaos u Poeżija
+				
+					<span class="episode-number">#6</span>
+				
+			</h1>
+		
+	
+	
+
+
+	
+	<h2>
+		
+		
+			<span class="author">Franco “Bifo” Berardi</span>
+			<span class="translator">(tr Karl Baldacchino)</span>
+		
+	</h2>
+
+
+
+
+
+	
+		<h3>
+			
+			
+			Purità
+		</h3>
+	
+</header>
+
+			
+			<div class="body-text">
+				
+					<p>Xi nkunu qed ngħidu meta ngħidu “realtà” jew “fatt”? <l-m>Il-fatti</l-m> jsiru <l-m>fl-isfera</l-m> tal-konvenzjonijiet umani; <l-m>it-terminu</l-m> ġej <l-m>mil-Latin</l-m> facere, li tfisser “għamel”<span class="pull">.</span> <l-m>Il-fatt</l-m> huwa <l-m>l-prodott</l-m> tas-semjożi fattwali <l-m>tal-individwi</l-m> soċjali. U <l-m>r-realtà</l-m> hija <l-m>l-punt</l-m> psikodinamiku ta’ intersezzjoni ta’ għadd kbir ta’ projezzjonijiet ta’ flussi ta’ simulazzjoni li jipproċedu minn organiżmi umani u minn magni semjotiċi. <l-m>Ir-realtà</l-m> ma teżistix minn qabel <l-m>l-att</l-m> ta’ semjożi u ta’ komunikazzjoni; anzi, hija kostruzzjoni li temerġi minn suġġettivitajiet multipli. Dawk li jaħsbu li <l-m>l-filosfi</l-m> postmoderni qerdu <l-m>l-pedamenti</l-m> tal-ħajja etika u <l-m>tad-demokrazija</l-m> billi mminaw <l-m>il-fidi</l-m> fil-verità fattwali qed jitfixklu <l-m>l-kawżi</l-m> u <l-m>l-effetti:</l-m> il-filosfi ma qerdux <l-m>il-bażi</l-m> teoloġika <l-m>tal-ħajja</l-m> etika, huma sempliċiment ħabbru li <l-m>l-ħajja</l-m> etika m’għandha <l-m>l-ebda</l-m> bażi teoloġika, li <l-m>l-ħajja</l-m> etika hija għażla bbażata fuq interpretazzjoni u kondiviżjoni eżistenzjali. <l-m>Is-sekwenza</l-m> loġika <l-m>tal-kawża</l-m> u <l-m>l-effett</l-m> hija mħawda, u <l-m>l-pedament</l-m> tal-verità minsi. Għalhekk, <l-m>l-għażla</l-m> etika ma tistax tkun ibbażata fuq xi ċertezza teoloġika jew xi sinifikat fattwali evidenti. Għażla etika hija bbażata fuq kunflitt ta’ sensibilitajiet, u fuq għarfien ironiku <l-m>tar-relattività</l-m> tas-simulazzjoni tagħna stess <l-m>tad-dinja</l-m>, <l-m>tal-projezzjoni</l-m> tagħna <l-m>tar-realtà</l-m>. <l-m>Is-sors</l-m> tal-għarfien etiku mhuwiex <l-m>il-konformità</l-m> ma’ valuri teoloġiċi jew storiċi assoluti, imma <l-m>l-imħabba</l-m> empatika għalina nfusna li ma tistax tkun diżassoċjata <l-m>mill-benessri</l-m> tal-oħrajn.</p>
+				
+			</div>
+		
+	</a>
+	
+	<aside class="promo-aside story-aside-168">
+		<ul>
+			<li class="bookmark-compact">
+				<!-- -->
+			</li>
+			<li class="wordcount">
+				
+			</li>
+		</ul>
+	</aside>
+
+
+</li>
+
+		
+	
+</ul>
+
+			<div class="more">
+				
+					<p>Abbona <l-m>fin-<a href="/newsletter/">newsletter</a></l-m> biex dejjem issir taf meta nippubblikaw xi ħaġa ġdida.</p>
+				
+			</div>
+		</section>
+	</div>
+</article>
+<script>
+	reportingTitle = "Awwissu 2025";
+</script>
+
+			</main>
+		</div>
+		<div id="bottom-wrapper">
+			<img id="deco" role="none" src="/img/deco-100.svg" alt="Dekorazzjoni art-nouveau"/>
+			
+				<div id="newsletter-container-bottom" class="newsletter-container">
+					<section id="form" data-track-content data-content-name="Homepage" data-content-piece="formola">
+						<iframe id="newsletter" class="newsletter-iframe-regular" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#" scrolling="no" title="Abbona fin-newsletter"></iframe>
+<iframe id="newsletter" class="newsletter-iframe-dark" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#|#201e1d|#908984|0|442093344ewr" scrolling="no" title="Abbona fin-newsletter"></iframe>
+<iframe id="newsletter" class="newsletter-iframe-contrast" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#|#000000|#ffffff|0|442093344ewr" scrolling="no" title="Abbona fin-newsletter"></iframe>
+
+					</section>
+				</div>
+			
+			<footer data-track-content data-content-name="Footer" data-content-piece="awwissu-2025">
+	<nav class="footer-content">
+		<menu id="housekeeping">
+			<li class="header">Dwarna</li>
+			<li><a href="/kolofon/">Kolofon</a></li>
+			<li><a href="/proċess-editorjali/">Proċess</a></li>
+			<li><a href="/gwida-tal-istil/">Gwida tal-istil</a></li>
+			<li><a href="/cookies/">Cookies</a></li>
+			<li><a href="/privatezza/">Privatezza</a></li>
+			<li><a href="/aċċessibbiltà/">Aċċessibbiltà</a></li>
+			<li><a href="/podcast/">Podcast</a></li>
+			<li><a href="/newsletter/">Newsletter</a></li>
+			<li class="hide-tablet"><a href="/drittijiet/">Drittijiet</a></li>
+		</menu>
+		<menu id="media">
+			<li class="header">Midja</li>
+			<li><a href="/ar/" class="arabic">العربية</a></li>
+			<li><a href="/ca/">Català</a></li>
+			<li><a href="/de/">Deutsch</a></li>
+			<li><a href="/en/">English</a></li>
+			<li><a href="/es/">Español</a></li>
+			<li><a href="/fr/">Français</a></li>
+			<li><a href="/it/">Italiano</a></li>
+			<li><a href="/nl/">Nederlands</a></li>
+			<li class="hide-tablet"><a href="/ro/">Română</a></li>
+		</menu>
+		<menu id="socials">
+			<li class="header">Segwina</li>
+			<li><a href="https://facebook.com/aphroconfuso">Facebook</a></li>
+			<li><a href="https://instagram.com/aphroconfuso">Instagram</a></li>
+			
+			
+			<li><a href="https://whatsapp.com/channel/0029VaysAKP7z4kZHDKdZ71J" rel="me">WhatsApp</a></li>
+			<li><a href="https://aphroconfuso.bsky.social/">Bluesky</a></li>
+			<li><a href="https://youtube.com/@aphroconfuso">Youtube</a></li>
+			<li><a href="https://open.spotify.com/user/31rly4s75gfxs6li6bcxc5bqlgza">Spotify</a></li>
+		</menu>
+		<menu id="podcast">
+			<li class="header">Podcast</li>
+			<li><a href="https://podcasts.apple.com/us/podcast/aphroconfuso/id1686567243">Apple</a></li>
+			
+			<li><a href="https://feeds.acast.com/public/shows/aphroconfuso">RSS feed</a></li>
+			<li><a href="https://open.spotify.com/show/75Lt3UMvC1jE15SGrNFMww">Spotify</a></li>
+			
+		</menu>
+		<div id="logotype-container">
+			<a href="/"><img src="/img/logotype.svg" class="logotype" alt="logo: Aphroconfuso" /></a>
+		</div>
+		<div id="email">
+			<a href="mailto:l-edituri@aphroconfuso.mt" class="email">l-edituri@aphroconfuso.mt</a>
+		</div>
+		<div class="hide-mobile choose-theme choose-theme-footer">
+			<a id="theme-regular-footer" role="button" tabindex="4">s</a>
+			<a id="theme-dark-footer" role="button" tabindex="5">m</a>
+			<a id="theme-contrast-footer" role="button" tabindex="6">c</a>
+			<a id="theme-system-footer" role="button" tabindex="7">p</a>
+		</div>
+		<div id="copyright"><a href="/drittijiet/" class="copyright">&copy; 2023-2025 Aphroconfuso et al</a></div>
+		<div id="qrcode"><img src="/img/qr/awwissu-2025.png" width="180" height="180" alt="QR code" /></div>
+		<div id="url">https://aphroconfuso.mt/awwissu-2025/</div>
+	</nav>
+</footer>
+
+		</div>
+		<aside id="scroll-tools" class="monthly-outlined">
+			<p>
+				<span id="progress">
+					<!-- --></span></p>
+		</aside>
+	</body>
+</html>
