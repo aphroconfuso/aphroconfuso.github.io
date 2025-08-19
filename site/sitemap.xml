@@ -1241,14 +1241,14 @@
 	</url>
 	
 	<url>
-		<loc>https://aphroconfuso.mt/leslie-vassallo-wirja/</loc>
+		<loc>https://aphroconfuso.mt/leslie-vassallo-marċ-maqbuż/</loc>
 		<lastmod>2025-08-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
 	</url>
 	
 	<url>
-		<loc>https://aphroconfuso.mt/leslie-vassallo-marċ-maqbuż/</loc>
+		<loc>https://aphroconfuso.mt/leslie-vassallo-wirja/</loc>
 		<lastmod>2025-08-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
@@ -1416,13 +1416,6 @@
 	</url>
 	
 	<url>
-		<loc>https://aphroconfuso.mt/il-kliem-fit-teorija-tpaxxa/</loc>
-		<lastmod>2025-08-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1</priority>
-	</url>
-	
-	<url>
 		<loc>https://aphroconfuso.mt/il-kliem-fit-teorija-ħarsa-lemħa/</loc>
 		<lastmod>2025-08-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -1431,6 +1424,13 @@
 	
 	<url>
 		<loc>https://aphroconfuso.mt/il-kliem-fit-teorija-ħu-ħsieb/</loc>
+		<lastmod>2025-08-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/il-kliem-fit-teorija-tpaxxa/</loc>
 		<lastmod>2025-08-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
