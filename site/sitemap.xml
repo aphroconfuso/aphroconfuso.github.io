@@ -723,6 +723,55 @@
 	</url>
 	
 	<url>
+		<loc>https://aphroconfuso.mt/ar/</loc>
+		<lastmod>2025-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/</loc>
+		<lastmod>2025-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/admin/kliem-mhux-suppost/</loc>
+		<lastmod>2025-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/admin/kalendarju/</loc>
+		<lastmod>2025-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/newsletter/</loc>
+		<lastmod>2025-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/404.html</loc>
+		<lastmod>2025-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/avvenimenti/</loc>
+		<lastmod>2025-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
 		<loc>https://aphroconfuso.mt/kotba-antoloġija-3/</loc>
 		<lastmod>2025-08-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -1770,54 +1819,5 @@
 		<lastmod>2025-08-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1</priority>
-	</url>
-	
-	<url>
-		<loc>https://aphroconfuso.mt/ar/</loc>
-		<lastmod>2025-08-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-	</url>
-	
-	<url>
-		<loc>https://aphroconfuso.mt/</loc>
-		<lastmod>2025-08-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-	</url>
-	
-	<url>
-		<loc>https://aphroconfuso.mt/admin/kliem-mhux-suppost/</loc>
-		<lastmod>2025-08-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-	</url>
-	
-	<url>
-		<loc>https://aphroconfuso.mt/admin/kalendarju/</loc>
-		<lastmod>2025-08-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-	</url>
-	
-	<url>
-		<loc>https://aphroconfuso.mt/newsletter/</loc>
-		<lastmod>2025-08-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-	</url>
-	
-	<url>
-		<loc>https://aphroconfuso.mt/404.html</loc>
-		<lastmod>2025-08-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-	</url>
-	
-	<url>
-		<loc>https://aphroconfuso.mt/avvenimenti/</loc>
-		<lastmod>2025-08-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
 	</url>
 </urlset>
