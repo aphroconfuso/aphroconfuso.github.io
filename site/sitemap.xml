@@ -247,13 +247,6 @@
 	</url>
 	
 	<url>
-		<loc>https://aphroconfuso.mt/404.html</loc>
-		<lastmod>2025-08-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-	</url>
-	
-	<url>
 		<loc>https://aphroconfuso.mt/awwissu-2025/</loc>
 		<lastmod>2025-08-21</lastmod>
     <changefreq>monthly</changefreq>
@@ -724,13 +717,6 @@
 	
 	<url>
 		<loc>https://aphroconfuso.mt/manuela-zammit/</loc>
-		<lastmod>2025-08-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-	</url>
-	
-	<url>
-		<loc>https://aphroconfuso.mt/events/</loc>
 		<lastmod>2025-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -1816,6 +1802,20 @@
 	
 	<url>
 		<loc>https://aphroconfuso.mt/newsletter/</loc>
+		<lastmod>2025-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/404.html</loc>
+		<lastmod>2025-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/avvenimenti/</loc>
 		<lastmod>2025-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
