@@ -5,7 +5,7 @@
 	<language>mt</language>
 	<link href="https://aphroconfuso.mt/atom.xml" rel="self"/>
 	<link href="https://aphroconfuso.mt/"/>
-	<updated>2025-08-22T16:55:57Z</updated>
+	<updated>2025-08-22T17:32:14Z</updated>
 	<id>https://aphroconfuso.mt</id>
 	<author>
 		<name>Aphroconfuso</name>
@@ -558,6 +558,18 @@ Hackett (is-segretarja tal-Factory) fuq it-telefown u baqa’ sejjer hekk ħdax-
 		</entry>
 		
 		<entry>
+			<title>Antoloġija 1</title>
+			<author>
+				<name></name>
+			</author>
+			<link href="https://aphroconfuso.mt/kotba-antoloġija-1/"/>
+			<published>2024-10-31T18:00:00.000Z</published>
+			<updated>2025-08-22T17:30:08.554Z</updated>
+			<id>https://aphroconfuso.mt/kotba-antoloġija-1/</id>
+			<content type="html">Antoloġija 1 hija l-ewwel pubblikazzjoni stampata ta’ Aphroconfuso u tiġbor fiha l-biċċa l-kbira tal-kitba li dehret fl-ewwel sena tal-ġurnal. Din il-ġabra tinkludi esejs, stejjer, poeżiji, djarji, xogħol kollaborattiv u kitba oħra li mhux faċli tikklassifikaha. B&#39;kollox tinkludi 34 xogħol minn 24 kittieb: Aaron Aquilina, Karl Baldacchino, Simon Bartolo, Warren Bartolo, Kurt Borg, Antoine Cassar, Daniel Cossai, Leanne Ellul, Noah Fabri, Ryan Falzon, Charlene Galea, Miriam Galea, Joe Gatt , Romeo Roxman Gatt, Rowena Grech, Jimmy Grima, Davinia Hamilton, Omar N’Shea, Kris Polidano, Matteo Pullicino, Matthew Schembri, Maria Theuma, Leslie Vassallo u Loranne Vella. Joe Gatt u Loranne Vella, edituri.</content>
+		</entry>
+		
+		<entry>
 			<title>Il-Komunità tal-Kitba</title>
 			<author>
 				<name></name>
@@ -606,15 +618,15 @@ Hackett (is-segretarja tal-Factory) fuq it-telefown u baqa’ sejjer hekk ħdax-
 		</entry>
 		
 		<entry>
-			<title>ħu ħsieb</title>
+			<title>tpaxxa</title>
 			<author>
 				<name></name>
 			</author>
-			<link href="https://aphroconfuso.mt/il-kliem-fit-teorija-ħu-ħsieb/"/>
+			<link href="https://aphroconfuso.mt/il-kliem-fit-teorija-tpaxxa/"/>
 			<published>2025-04-06T05:00:00.000Z</published>
-			<updated>2025-04-06T08:00:46.367Z</updated>
-			<id>https://aphroconfuso.mt/il-kliem-fit-teorija-ħu-ħsieb/</id>
-			<content type="html">Fid-dinja Ingliża u dik tal-Punent, “to care” dejjem kienet distinta minn “thought” u “reason”. “Care” assoċjata ma’ emozzjonijiet, irtubija tal-qalb, femminilità—u mhux il-ħsieb, li dejjem kien meqjus rett, veritier u imparzjali, kif ħafna drabi huwa mfisser fil-Punent. Qisu l-Malti ma jagħmilx din id-distinzjoni radikali bejn il-ħsieb bħala ħsieb astratt u li tieħu ħsieb xi ħadd.</content>
+			<updated>2025-07-14T16:36:18.359Z</updated>
+			<id>https://aphroconfuso.mt/il-kliem-fit-teorija-tpaxxa/</id>
+			<content type="html">Jouissance, kif nafha jien, ma tfissirx biss pjaċir, imma xi ħaġa fl-estrem, li tista’ wkoll tinkludi l-uġigħ u s-sofferenza. Jouissance mhix pura, fiha hemm l-eċċess, hemm il-mewt, livell ta’ eċitazzjoni li kważi ma tiflaħhiex. Lacan jagħmel distinzjoni bejn il-pjaċir u l-jouissance. Il-pjaċir jobdi l-liġi tal-omeostażi li nsibu f’Beyond the Pleasure Principle [Jenseits des Lustprinzips], fejn il-moħħ ifittex l-inqas tensjoni. B’hekk, il-prinċipju tal-pjaċir ipoġġi limitu fuq il-pjaċir. Min-naħa l-oħra, il-jouissance tikser din il-liġi u hi “beyond the pleasure principle” u iktar tallinja ruħha mad-death drive [Todestrieb].</content>
 		</entry>
 		
 		<entry>
@@ -630,15 +642,15 @@ Hackett (is-segretarja tal-Factory) fuq it-telefown u baqa’ sejjer hekk ħdax-
 		</entry>
 		
 		<entry>
-			<title>tpaxxa</title>
+			<title>ħu ħsieb</title>
 			<author>
 				<name></name>
 			</author>
-			<link href="https://aphroconfuso.mt/il-kliem-fit-teorija-tpaxxa/"/>
+			<link href="https://aphroconfuso.mt/il-kliem-fit-teorija-ħu-ħsieb/"/>
 			<published>2025-04-06T05:00:00.000Z</published>
-			<updated>2025-07-14T16:36:18.359Z</updated>
-			<id>https://aphroconfuso.mt/il-kliem-fit-teorija-tpaxxa/</id>
-			<content type="html">Jouissance, kif nafha jien, ma tfissirx biss pjaċir, imma xi ħaġa fl-estrem, li tista’ wkoll tinkludi l-uġigħ u s-sofferenza. Jouissance mhix pura, fiha hemm l-eċċess, hemm il-mewt, livell ta’ eċitazzjoni li kważi ma tiflaħhiex. Lacan jagħmel distinzjoni bejn il-pjaċir u l-jouissance. Il-pjaċir jobdi l-liġi tal-omeostażi li nsibu f’Beyond the Pleasure Principle [Jenseits des Lustprinzips], fejn il-moħħ ifittex l-inqas tensjoni. B’hekk, il-prinċipju tal-pjaċir ipoġġi limitu fuq il-pjaċir. Min-naħa l-oħra, il-jouissance tikser din il-liġi u hi “beyond the pleasure principle” u iktar tallinja ruħha mad-death drive [Todestrieb].</content>
+			<updated>2025-04-06T08:00:46.367Z</updated>
+			<id>https://aphroconfuso.mt/il-kliem-fit-teorija-ħu-ħsieb/</id>
+			<content type="html">Fid-dinja Ingliża u dik tal-Punent, “to care” dejjem kienet distinta minn “thought” u “reason”. “Care” assoċjata ma’ emozzjonijiet, irtubija tal-qalb, femminilità—u mhux il-ħsieb, li dejjem kien meqjus rett, veritier u imparzjali, kif ħafna drabi huwa mfisser fil-Punent. Qisu l-Malti ma jagħmilx din id-distinzjoni radikali bejn il-ħsieb bħala ħsieb astratt u li tieħu ħsieb xi ħadd.</content>
 		</entry>
 		
 		<entry>
@@ -675,6 +687,19 @@ Hackett (is-segretarja tal-Factory) fuq it-telefown u baqa’ sejjer hekk ħdax-
 			<updated>2025-04-21T17:31:51.436Z</updated>
 			<id>https://aphroconfuso.mt/ryan-falzon-poddata-2025-04-21-noti-editorjali-6-ryan-falzon/</id>
 			<content type="html">« Jien dejjem għedt, jiena ħa nikteb fuq l-idea ta’ dominanza, fuq l-idea ta’ aggressjoni, fuq l-idea ta’ intrużjoni, invażjoni, permezz ta’ vettura u l-ħoss tagħha u l-kulur tagħha. Biss sibtni nikteb fuq xi ħaġa ħafna iktar doċli, ħafna iktar ratba. Sibt lili nnifsi nikteb fuq il-ħruġ tal-Ħadd waranofsinhar bil-karozza. Kienet għażla għax ħsibt ħafna fuqha, għax ovvjament il-ħruġ bil-karozzi llum il-ġurnata jsir ukoll. Il-Ħadd filgħodu kmieni huwa l-unika slott fejn wieħed jista’ joħroġ vettura klassika u ma jsibx daqshekk traffiku, forsi joħroġ ħafna iktar moħħu mistrieħ li mhux ħa jsib dak il-ġenn. Jekk għandu karozza ta’ preġju li tista’ tkun involuta f’aċċident... Imma jiena qed inħares lejn il-ħarġa klassika ta’ wieħed kiel, ħareġ il-karozza b’mod ċerimonjuż għall-aħħar, saq għal xi mkien, baqa’ fil-karozza. Ittratta l-karozza bħala estensjoni tad-dar, bħala kamra tad-dar, mar lura u daqshekk. Dan ġeneralment qatt ma ħareġ mid-dar, jiġifieri qisu baqa’ f’ambjent domestiku… Meta aħna ngħidu ħarġa l-Ħadd bil-karozza waranofsinhar ħafna drabi jiġu f’moħħna xi koppja anzjani jew koppja bit-tfal, biss ukoll hemm kultura fost iż-żgħażagħ li għadha b’saħħitha ħafna u kien ta’ faxxinu kif it-teknoloġija u l-avvanzi għenu biex il-karozza ġiet domestikata iktar minn qatt qabel. Jieħdu l-laptop magħhom jaraw Netflix fil-karozza u jġibu takeaway. Il-vettura li għandha l-potenzjal illi timxi u ddur u tiċċaqlaq tibqa’ statika, u vettura oħra tiġi sserviha. Jiena għalija dik hija affaxxinanti, il-fatt li qisek bqajt hemm, qisek litteralment qbadt kamra minn ġod-dar ħriġtha u poġġejtha xi mkien ieħor imma xorta bqajna fil-konfini tad-domestiċità. »</content>
+		</entry>
+		
+		<entry>
+			<title>Antoloġija 2</title>
+			<author>
+				<name></name>
+			</author>
+			<link href="https://aphroconfuso.mt/kotba-antoloġija-2/"/>
+			<published>2025-11-08T18:01:00.000Z</published>
+			<updated>2025-08-22T17:31:05.153Z</updated>
+			<id>https://aphroconfuso.mt/kotba-antoloġija-2/</id>
+			<content type="html">&lt;p&gt;&lt;strong&gt;&lt;em&gt;Antoloġija 2&lt;/em&gt; se tiġi ppubblikata f’Novembru 2025.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Din hija t-tieni ġabra annwali ta’ Aphroconfuso u tiġbor fiha l-biċċa l-kbira tal-kitba li dehret fit-tieni sena tal-ġurnal, mill-1 ta’ Mejju 2024. &lt;i&gt;Antoloġija 2&lt;/i&gt; tinkludi esejs, stejjer, poeżiji, djarji, xogħol kollaborattiv u kitba oħra li mhux faċli tikklassifikaha.&lt;/p&gt;</content>
 		</entry>
 		
 		<entry>
@@ -1425,18 +1450,6 @@ imħabbitna tnaqqxet mal-ħitan, daħket fil-ħemda.
 		</entry>
 		
 		<entry>
-			<title>Antoloġija 1</title>
-			<author>
-				<name></name>
-			</author>
-			<link href="https://aphroconfuso.mt/kotba-antoloġija-1/"/>
-			<published>2024-10-31T18:00:00.000Z</published>
-			<updated>2025-06-12T17:43:59.961Z</updated>
-			<id>https://aphroconfuso.mt/kotba-antoloġija-1/</id>
-			<content type="html">Antoloġija 1 hija l-ewwel pubblikazzjoni stampata ta’ Aphroconfuso u tiġbor fiha l-biċċa l-kbira tal-kitba li dehret fl-ewwel sena tal-ġurnal. Din il-ġabra tinkludi esejs, stejjer, poeżiji, djarji, xogħol kollaborattiv u kitba oħra li mhux faċli tikklassifikaha. B&#39;kollox tinkludi 34 xogħol minn 24 kittieb: Aaron Aquilina, Karl Baldacchino, Simon Bartolo, Warren Bartolo, Kurt Borg, Antoine Cassar, Daniel Cossai, Leanne Ellul, Noah Fabri, Ryan Falzon, Charlene Galea, Miriam Galea, Joe Gatt , Romeo Roxman Gatt, Rowena Grech, Jimmy Grima, Davinia Hamilton, Omar N’Shea, Kris Polidano, Matteo Pullicino, Matthew Schembri, Maria Theuma, Leslie Vassallo u Loranne Vella. Joe Gatt u Loranne Vella, edituri.</content>
-		</entry>
-		
-		<entry>
 			<title>Nibgħatlek Waqt Raxx id-Dlam tas-Sajf fl-Iżvezja</title>
 			<author>
 				<name></name>
@@ -1901,6 +1914,18 @@ u hemm vera tibda t-tertuqa.</content>
 			<author>
 				<name></name>
 			</author>
+			<link href="https://aphroconfuso.mt/kris-polidano-kullana-ta-għanjiet-dwar-il-ħolm-8-prefazju-numru-tlieta/"/>
+			<published>2025-02-14T21:00:00.000Z</published>
+			<updated>2025-04-21T13:17:34.385Z</updated>
+			<id>https://aphroconfuso.mt/kris-polidano-kullana-ta-għanjiet-dwar-il-ħolm-8-prefazju-numru-tlieta/</id>
+			<content type="html">Il-ħolm fejn imur wara li jqajjimna? Il-mewta l-aħħar darba li noħolmu anki jekk għajnejna ma jingħalqux, ġisimna joħroġ il-kimiċi, li jitfgħuna fi stat “ħolmieni”. Kemm jekk aħna konxji tiegħu jew m’aħniex, id-demm uman jiġbed, u f’għadd ta’ kulturi, il-mewt nikkunsidrawha bħala raqda. U l-ħolm — kemm jekk inħallu lilna nfusna nindiehsu ma’ din il-forma ta’ ħsieb jew le — jieqaf u jiżvolġi fl-aħħar raqda għall-aħħar darba.</content>
+		</entry>
+		
+		<entry>
+			<title>Kullana ta’ Għanjiet Dwar il-Ħolm</title>
+			<author>
+				<name></name>
+			</author>
 			<link href="https://aphroconfuso.mt/kris-polidano-kullana-ta-għanjiet-dwar-il-ħolm-9-forma-numru-sitta/"/>
 			<published>2025-02-14T21:00:00.000Z</published>
 			<updated>2025-04-21T13:02:35.028Z</updated>
@@ -1937,18 +1962,6 @@ Fl-aħħar raqda,
 int tieqaf toħlom
 U aħna mqajmin
 noħolmu bik.</content>
-		</entry>
-		
-		<entry>
-			<title>Kullana ta’ Għanjiet Dwar il-Ħolm</title>
-			<author>
-				<name></name>
-			</author>
-			<link href="https://aphroconfuso.mt/kris-polidano-kullana-ta-għanjiet-dwar-il-ħolm-8-prefazju-numru-tlieta/"/>
-			<published>2025-02-14T21:00:00.000Z</published>
-			<updated>2025-04-21T13:17:34.385Z</updated>
-			<id>https://aphroconfuso.mt/kris-polidano-kullana-ta-għanjiet-dwar-il-ħolm-8-prefazju-numru-tlieta/</id>
-			<content type="html">Il-ħolm fejn imur wara li jqajjimna? Il-mewta l-aħħar darba li noħolmu anki jekk għajnejna ma jingħalqux, ġisimna joħroġ il-kimiċi, li jitfgħuna fi stat “ħolmieni”. Kemm jekk aħna konxji tiegħu jew m’aħniex, id-demm uman jiġbed, u f’għadd ta’ kulturi, il-mewt nikkunsidrawha bħala raqda. U l-ħolm — kemm jekk inħallu lilna nfusna nindiehsu ma’ din il-forma ta’ ħsieb jew le — jieqaf u jiżvolġi fl-aħħar raqda għall-aħħar darba.</content>
 		</entry>
 		
 		<entry>
@@ -2199,35 +2212,39 @@ ix-xaħam bqit f’żaqqi.</content>
 			<author>
 				<name></name>
 			</author>
-			<link href="https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-4-ir-raba/"/>
+			<link href="https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-5-il-ħames/"/>
 			<published>2025-06-16T05:00:00.000Z</published>
-			<updated>2025-06-27T08:32:19.216Z</updated>
-			<id>https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-4-ir-raba/</id>
+			<updated>2025-06-27T08:38:25.243Z</updated>
+			<id>https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-5-il-ħames/</id>
 			<content type="html">Aphroconfuso,
-la nerġgħu flimkien
-iseħħu t-terremoti,
-
-tgħidli, u nitħasseb
-dwar il-ġlied, imma
-
-int tgeżwer iperbole
-mit-tqanqil. immerik
-
-li kultant il-litterali
-isbaħ mil-letterarju
+għalik insir platonika
+biss la nittieħed
+mid-dinja tal-forom.
 
 Aphroconfuso,
-la nerġgħu flimkien
-iseħħu t-terremoti,
+għalik insir platonika
+biss la nittieħed
+mid-dinja tal-forom.
 
-tgħidli, u nitħasseb
-dwar il-ġlied, imma
+Aphroconfuso,
+għalik insir platonika
+biss la nittieħed
+mid-dinja tal-forom.
 
-int tgeżwer iperbole
-mit-tqanqil. immerik
+Aphroconfuso,
+għalik insir platonika
+biss la nittieħed
+mid-dinja tal-forom.
 
-li kultant il-litterali
-isbaħ mil-letterarju</content>
+Aphroconfuso,
+għalik insir platonika
+biss la nittieħed
+mid-dinja tal-forom.
+
+Aphroconfuso,
+għalik insir platonika
+biss la nittieħed
+mid-dinja tal-forom.</content>
 		</entry>
 		
 		<entry>
@@ -2269,39 +2286,35 @@ erwieħ wara li mmutu?</content>
 			<author>
 				<name></name>
 			</author>
-			<link href="https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-5-il-ħames/"/>
+			<link href="https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-4-ir-raba/"/>
 			<published>2025-06-16T05:00:00.000Z</published>
-			<updated>2025-06-27T08:38:25.243Z</updated>
-			<id>https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-5-il-ħames/</id>
+			<updated>2025-06-27T08:32:19.216Z</updated>
+			<id>https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-4-ir-raba/</id>
 			<content type="html">Aphroconfuso,
-għalik insir platonika
-biss la nittieħed
-mid-dinja tal-forom.
+la nerġgħu flimkien
+iseħħu t-terremoti,
+
+tgħidli, u nitħasseb
+dwar il-ġlied, imma
+
+int tgeżwer iperbole
+mit-tqanqil. immerik
+
+li kultant il-litterali
+isbaħ mil-letterarju
 
 Aphroconfuso,
-għalik insir platonika
-biss la nittieħed
-mid-dinja tal-forom.
+la nerġgħu flimkien
+iseħħu t-terremoti,
 
-Aphroconfuso,
-għalik insir platonika
-biss la nittieħed
-mid-dinja tal-forom.
+tgħidli, u nitħasseb
+dwar il-ġlied, imma
 
-Aphroconfuso,
-għalik insir platonika
-biss la nittieħed
-mid-dinja tal-forom.
+int tgeżwer iperbole
+mit-tqanqil. immerik
 
-Aphroconfuso,
-għalik insir platonika
-biss la nittieħed
-mid-dinja tal-forom.
-
-Aphroconfuso,
-għalik insir platonika
-biss la nittieħed
-mid-dinja tal-forom.</content>
+li kultant il-litterali
+isbaħ mil-letterarju</content>
 		</entry>
 		
 		<entry>
@@ -2326,6 +2339,52 @@ mid-dinja tal-forom.</content>
 			<updated>2025-07-07T09:27:35.204Z</updated>
 			<id>https://aphroconfuso.mt/nicole-borg-is-sovranità-tal-ikel-1-l-ewwel-ċena/</id>
 			<content type="html">&lt;p&gt;L-ikel Malti huwa dimostrazzjoni tat-tradizzjoni u l-modernità. Ir-relazzjoni bejn iż-żewġ sferi tifforma parti kbira mill-interess usa’ tagħna li niddefinixxu l-identità tagħna. Dan il-proċess fih innifsu jippreżenta sfida emozzjonali. Dan kif japplika għalina bħala Maltin? Min kienu, min huma u min se jkunu l-protagonisti fl-istorja tal-ikel tagħna? Bħala etnopajsaġġi kulinarji nifhem li l-gżejjer tagħna għaddew minn rinaxximent bla tmiem. Għadhom jirrakkuntaw storja, u se jibqgħu jirrakkuntawha. It-termini “tradizzjoni”, “innovazzjoni”, “kwalità” u “awtentiċità” spiss intużaw b’mod interkambjabbli u dibattibbli. Iżda l-użu ta’ dawn it-termini, fl-esperjenza tiegħi, fih innifsu huwa deċiżjoni konxja li l-pajsaġġi tal-ikel jintużaw bħala għodda għall-awtofehim.&lt;/p&gt;</content>
+		</entry>
+		
+		<entry>
+			<title>Invokazzjonijiet</title>
+			<author>
+				<name></name>
+			</author>
+			<link href="https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-8-(it-tmien)/"/>
+			<published>2025-07-25T05:00:00.000Z</published>
+			<updated>2025-07-25T18:57:05.095Z</updated>
+			<id>https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-8-(it-tmien)/</id>
+			<content type="html">(Aphroconfuso,
+la ma tridx taf iktar bija
+insir għalik il-poeżija
+
+dawn l-invokazzjonijiet
+il-vuċijiet
+
+nidhirlek fil-kelma
+nibqa’ ninvokak
+
+bħal ruħ mid-dinja l-oħra
+bħal belha mitlufa f’din)
+
+
+
+
+Aphroconfuso 
+għax meta tħobb aphroconfuso
+bħalek xejn ma jibqa’ tiegħek:
+
+la qalbek la laħmek la ngħasek
+la rqadek la għadmek la leħnek
+la ħinek la żmienek la xagħrek
+
+aħmar jilheġ ix-xemx mielħa
+sbieħ Awwissu għatxan / xejn
+
+ma jibqa’ tiegħek lanqas ħajtek,
+ħlief mewtek. din biss tiegħek,
+
+u frankament tista’ troddha
+
+
+
+</content>
 		</entry>
 		
 		<entry>
@@ -2433,52 +2492,6 @@ niġborha.
 		</entry>
 		
 		<entry>
-			<title>Invokazzjonijiet</title>
-			<author>
-				<name></name>
-			</author>
-			<link href="https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-8-(it-tmien)/"/>
-			<published>2025-07-25T05:00:00.000Z</published>
-			<updated>2025-07-25T18:57:05.095Z</updated>
-			<id>https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-8-(it-tmien)/</id>
-			<content type="html">(Aphroconfuso,
-la ma tridx taf iktar bija
-insir għalik il-poeżija
-
-dawn l-invokazzjonijiet
-il-vuċijiet
-
-nidhirlek fil-kelma
-nibqa’ ninvokak
-
-bħal ruħ mid-dinja l-oħra
-bħal belha mitlufa f’din)
-
-
-
-
-Aphroconfuso 
-għax meta tħobb aphroconfuso
-bħalek xejn ma jibqa’ tiegħek:
-
-la qalbek la laħmek la ngħasek
-la rqadek la għadmek la leħnek
-la ħinek la żmienek la xagħrek
-
-aħmar jilheġ ix-xemx mielħa
-sbieħ Awwissu għatxan / xejn
-
-ma jibqa’ tiegħek lanqas ħajtek,
-ħlief mewtek. din biss tiegħek,
-
-u frankament tista’ troddha
-
-
-
-</content>
-		</entry>
-		
-		<entry>
 			<title>Nifs: Kaos u Poeżija</title>
 			<author>
 				<name> (tr Karl Baldacchino)</name>
@@ -2550,19 +2563,6 @@ Nistenniek</content>
 			<updated>2025-08-22T15:20:32.820Z</updated>
 			<id>https://aphroconfuso.mt/kotba-omar-nshea-es-sidr/</id>
 			<content type="html">Es Sidr se jiġi ppubblikat f’Novembru 2025. Wara l-mewt ta&#39; ommu, Omar N’ Shea jsib file li donnha kienet ħallitlu apposta biex isibu. “Il-file mimli, imbulmat b’ittri miktubin mill-istess id u li kumbinazzjoni tixbah lil tagħha, organizzati skont id-data ta’ meta nkitbu, bl-ewwel waħda fuq u l-aħħar waħda taħt nett.” Il-file kien rah qabel, snin ilu.</content>
-		</entry>
-		
-		<entry>
-			<title>Antoloġija 2</title>
-			<author>
-				<name></name>
-			</author>
-			<link href="https://aphroconfuso.mt/kotba-antoloġija-2/"/>
-			<published>2025-11-04T18:01:00.000Z</published>
-			<updated>2025-08-22T15:32:55.608Z</updated>
-			<id>https://aphroconfuso.mt/kotba-antoloġija-2/</id>
-			<content type="html">&lt;p&gt;&lt;strong&gt;&lt;em&gt;Antoloġija 2&lt;/em&gt; se tiġi ppubblikata f’Novembru 2025.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Din hija t-tieni ġabra annwali ta’ Aphroconfuso u tiġbor fiha l-biċċa l-kbira tal-kitba li dehret fit-tieni sena tal-ġurnal, mill-1 ta’ Mejju 2024. &lt;i&gt;Antoloġija 2&lt;/i&gt; tinkludi esejs, stejjer, poeżiji, djarji, xogħol kollaborattiv u kitba oħra li mhux faċli tikklassifikaha.&lt;/p&gt;</content>
 		</entry>
 		
 		<entry>
