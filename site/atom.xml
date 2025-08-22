@@ -5,7 +5,7 @@
 	<language>mt</language>
 	<link href="https://aphroconfuso.mt/atom.xml" rel="self"/>
 	<link href="https://aphroconfuso.mt/"/>
-	<updated>2025-08-22T17:32:14Z</updated>
+	<updated>2025-08-22T17:34:53Z</updated>
 	<id>https://aphroconfuso.mt</id>
 	<author>
 		<name>Aphroconfuso</name>
@@ -618,6 +618,18 @@ Hackett (is-segretarja tal-Factory) fuq it-telefown u baqa’ sejjer hekk ħdax-
 		</entry>
 		
 		<entry>
+			<title>ħu ħsieb</title>
+			<author>
+				<name></name>
+			</author>
+			<link href="https://aphroconfuso.mt/il-kliem-fit-teorija-ħu-ħsieb/"/>
+			<published>2025-04-06T05:00:00.000Z</published>
+			<updated>2025-04-06T08:00:46.367Z</updated>
+			<id>https://aphroconfuso.mt/il-kliem-fit-teorija-ħu-ħsieb/</id>
+			<content type="html">Fid-dinja Ingliża u dik tal-Punent, “to care” dejjem kienet distinta minn “thought” u “reason”. “Care” assoċjata ma’ emozzjonijiet, irtubija tal-qalb, femminilità—u mhux il-ħsieb, li dejjem kien meqjus rett, veritier u imparzjali, kif ħafna drabi huwa mfisser fil-Punent. Qisu l-Malti ma jagħmilx din id-distinzjoni radikali bejn il-ħsieb bħala ħsieb astratt u li tieħu ħsieb xi ħadd.</content>
+		</entry>
+		
+		<entry>
 			<title>tpaxxa</title>
 			<author>
 				<name></name>
@@ -639,18 +651,6 @@ Hackett (is-segretarja tal-Factory) fuq it-telefown u baqa’ sejjer hekk ħdax-
 			<updated>2025-04-05T21:20:58.141Z</updated>
 			<id>https://aphroconfuso.mt/il-kliem-fit-teorija-ħarsa-lemħa/</id>
 			<content type="html">M’iniex għalkollox ċert dwar “lemħa” għax għalija din il-kelma għandha konnotazzjonijiet passivi, fis-sens li tkun qed tiġri xi ħaġa u inti tilmaħha; u mhux is-sens li inti qed tħares b’mod attiv u intenzjonat lejn xi ħaġa. “Lemaħ” fuq verb.mt qed tiġi tradotta bħala “to catch sight of”. Fil-każ ta’ “the look on his face” ma taħdimx “lemħa” (“il-ħarsa fuq wiċċu”).</content>
-		</entry>
-		
-		<entry>
-			<title>ħu ħsieb</title>
-			<author>
-				<name></name>
-			</author>
-			<link href="https://aphroconfuso.mt/il-kliem-fit-teorija-ħu-ħsieb/"/>
-			<published>2025-04-06T05:00:00.000Z</published>
-			<updated>2025-04-06T08:00:46.367Z</updated>
-			<id>https://aphroconfuso.mt/il-kliem-fit-teorija-ħu-ħsieb/</id>
-			<content type="html">Fid-dinja Ingliża u dik tal-Punent, “to care” dejjem kienet distinta minn “thought” u “reason”. “Care” assoċjata ma’ emozzjonijiet, irtubija tal-qalb, femminilità—u mhux il-ħsieb, li dejjem kien meqjus rett, veritier u imparzjali, kif ħafna drabi huwa mfisser fil-Punent. Qisu l-Malti ma jagħmilx din id-distinzjoni radikali bejn il-ħsieb bħala ħsieb astratt u li tieħu ħsieb xi ħadd.</content>
 		</entry>
 		
 		<entry>
@@ -696,7 +696,7 @@ Hackett (is-segretarja tal-Factory) fuq it-telefown u baqa’ sejjer hekk ħdax-
 			</author>
 			<link href="https://aphroconfuso.mt/kotba-antoloġija-2/"/>
 			<published>2025-11-08T18:01:00.000Z</published>
-			<updated>2025-08-22T17:31:05.153Z</updated>
+			<updated>2025-08-22T17:33:58.863Z</updated>
 			<id>https://aphroconfuso.mt/kotba-antoloġija-2/</id>
 			<content type="html">&lt;p&gt;&lt;strong&gt;&lt;em&gt;Antoloġija 2&lt;/em&gt; se tiġi ppubblikata f’Novembru 2025.&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Din hija t-tieni ġabra annwali ta’ Aphroconfuso u tiġbor fiha l-biċċa l-kbira tal-kitba li dehret fit-tieni sena tal-ġurnal, mill-1 ta’ Mejju 2024. &lt;i&gt;Antoloġija 2&lt;/i&gt; tinkludi esejs, stejjer, poeżiji, djarji, xogħol kollaborattiv u kitba oħra li mhux faċli tikklassifikaha.&lt;/p&gt;</content>
