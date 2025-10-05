@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="mt" translate="no">
+
+	<head>
+		<meta charset="utf-8">
+		
+	<title>Ottubru 2025 · Aphroconfuso</title>
+	<meta content="L-istorja hija dejjem inqas ambigwa mill-aħbarijiet. Dan ilna nafuh, anki jekk kultant ikollna nostalġija perversa għal żminijiet iktar sempliċi meta, skont kif internalizzajna l-Istorja, kulħadd kien jaf fejn hu fid-dawra ta’ ġrajjietna u d-distinzjoni bejn stat ta’ gwerra u stat ta’ paċi kienet ċ…" name="description">
+	<meta property="og:image" content="/stampi/social_aphroconfuso_logo_social_kbir_kwadrat_d073f4e24a.jpg">
+
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+		<meta content="width=device-width, initial-scale=1" name="viewport">
+		<meta content="width=device-width" initial-scale="1.0" maximum-scale="1.0" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="yes" name="mobile-web-app-capable">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#f9f9f3">
+		<link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon-16x16.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32x32.png">
+		<link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
+		<link rel="mask-icon" href="/img/icons/safari-pinned-tab.svg" color="#5bbad5">
+		<meta property="og:image:type" content="image/jpeg">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
+		<link rel="canonical" href="https://aphroconfuso.mt/ottubru-2025/">
+		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
+		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
+		<link rel="stylesheet" href="/css/style-6c3698d3.css">
+		<script>
+			var audioLoaded,
+				audioUrls,
+				author,
+				body,
+				bodyEnd,
+				bodyHeight,
+				bodyStart,
+				bodyText,
+				bookmarksArray,
+				bookmarksList,
+				bookmarksMenuElement,
+				charactersPerPixel,
+				charactersPerScreen,
+				currentTime,
+				duration,
+				elapsedTime,
+				hideScrollTools,
+				lastReportedReadingTime,
+				lastReportedScrollPosition,
+				lastScrollPosition,
+				message,
+				issueMonth,
+				issueMonthYear,
+				newScrollPosition,
+				pageHeight,
+				pageReportingTitle,
+				percentageProgress,
+				placeText,
+				podcastUrl,
+				previousTime,
+				progressElement,
+				readingSpeed,
+				reportingTitle,
+				screenHeight,
+				skippedTime,
+				storyCompleted,
+				storyId,
+				storyType,
+				sequenceEpisodeNumber,
+				sequenceEpisodeTitle,
+				timeStarted,
+				pageTitle,
+				wordcount,
+				wordsPerPixel,
+				wordsPerSecond,
+				wordsPerSecondAudio,
+				wordsPerScreen;
+
+			audioLoaded = false;
+			bookmarksArray = [];
+			percentageProgress = 0;
+			previousTime = [];
+			storyCompleted = false;
+
+			const urlSlug = location
+				.pathname
+				.replace(/\//g, '');
+			const setCookie = (cname, cvalue, exdays = 36500) => {
+				const d = new Date();
+				d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+				let expires = "expires=" + d.toUTCString();
+				document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+			}
+			const getCookie = (cname) => {
+				let name = cname + "=";
+				let decodedCookie = decodeURIComponent(document.cookie);
+				let ca = decodedCookie.split(';');
+				for (let i = 0; i < ca.length; i++) {
+					let c = ca[i];
+					while (c.charAt(0) == ' ') {
+						c = c.substring(1);
+					}
+					if (c.indexOf(name) == 0) {
+						return c.substring(name.length, c.length);
+					}
+				}
+				return "";
+			}
+			var _paq = window._paq = window._paq || [];
+			const analytics = (arrayInfo) => {
+				if (location.host != 'aphroconfuso.mt')
+					console.log(arrayInfo);
+				_paq.push(arrayInfo);
+			}
+			_paq.push(['disableCookies']);
+			_paq.push(['enableJSErrorTracking']);
+			_paq.push(['enableHeartBeatTimer']);
+			_paq.push(['enableLinkTracking']);
+			_paq.push(['trackPageView']);
+			_paq.push(['trackVisibleContentImpressions']);
+			(function () {
+				var u = "//analitika.aphroconfuso.mt/";
+				_paq.push([
+					'setTrackerUrl', u + 'matomo.php'
+				]);
+				_paq.push([
+					'setSiteId', location.host == 'aphroconfuso.mt'
+						? '1'
+						: '2'
+				]);
+				var d = document,
+					g = d.createElement('script'),
+					s = d.getElementsByTagName('script')[0];
+				g.async = true;
+				g.src = u + 'matomo.js';
+				s
+					.parentNode
+					.insertBefore(g, s);
+			})();
+			const addRemoveFontSizeClass = (size) => {
+				document
+					.body
+					.classList
+					.remove('font-size-1', 'font-size-2', 'font-size-3', 'font-size-4')
+				document
+					.body
+					.classList
+					.add(`font-size-${size}`);
+				localStorage.setItem('font', size);
+			}
+			// REVIEW
+			const translateTheme = {
+				'regular': 'regolari',
+				'dark': 'skura',
+				'contrast': 'kuntrast',
+				'system': 'sistema'
+			}
+			const addRemoveTheme = (theme, stored) => {
+				document
+					.body
+					.classList
+					.remove('theme-regular', 'theme-dark', 'theme-contrast', 'theme-system')
+				document
+					.body
+					.classList
+					.add(`theme-${theme}`);
+				localStorage.setItem('theme', theme);
+				if (stored && theme == 'regular')
+					return;
+				analytics([
+					'trackEvent', 'Tema', `${stored
+						? 'Tema storjata'
+						: 'Tema nbidlet'}`,
+					translateTheme[theme]
+				]);
+			}
+			const initialiseAfterBody = () => {
+				document
+					.body
+					.classList
+					.add(location.hostname.replace(/\.?aphroconfuso\.mt/, '') || 'production');
+				addRemoveFontSizeClass(localStorage.getItem('font') || 1);
+				addRemoveTheme(localStorage.getItem('theme') || 'regular', true);
+				if (localStorage.getItem(`tw-${urlSlug}`)) {
+					document
+						.body
+						.classList
+						.add('trigger-warning-closed');
+				}
+			}
+		</script>
+		<script src="../script/script-9d62e3.js" type="module"></script>
+	</head>
+	<body class="show-nav this-month-ottubru">
+		<script>
+			initialiseAfterBody();
+		</script>
+		<div id="top-wrapper">
+			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
+			<nav id="top-nav">
+				<div id="logo-container-wrapper">
+					<div id="logo-container">
+						<a href="/">
+							<img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso"/>
+						</a>
+					</div>
+					<menu class="hide-mobile" id="menu-carousels">
+						<li class="abecedaire">
+							<a href="/abeċedarju/">Abeċedarju</a>
+						</li>
+						<li>
+							<a href="/almanakk-ottubru/">Almanakk</a>
+						</li>
+					</menu>
+					<menu class="hide-mobile" id="menu-collections">
+						<li class="main-menu-collection">
+							<a href="/indħil-barrani/">
+								<span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a>
+						</li>
+						<li class="main-menu-collection">
+							<a href="/il-kliem-fit-teorija/">
+								<span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a>
+						</li>
+					</menu>
+				</div>
+				<input id="menu-toggle" type="checkbox"/>
+				<label class='menu-button-container' for="menu-toggle">
+					<span style="display: none">Mobile biss: iftaħ il-menu</span>
+					<div class='menu-button'></div>
+				</label>
+				
+				<menu id="menu-main">
+					
+					<li class="hide-laptop main-menu-collection">
+						<a href="/indħil-barrani/">
+							<span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a>
+					</li>
+					<li class="hide-laptop main-menu-collection">
+						<a href="/il-kliem-fit-teorija/">
+							<span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a>
+					</li>
+					<li class="hide-laptop a-links">
+						<a href="/abeċedarju/">Abeċedarju</a>
+						<a href="/almanakk-ottubru/">Almanakk</a>
+					</li>
+					<li>
+						<a href="/appuntamenti/">Appuntamenti</a>
+					</li>
+					<li>
+						<a href="/kontributuri/">Kontributuri</a>
+					</li>
+					<li>
+						<a href="/werrej/">Werrej</a>
+					</li>
+					<li>
+						<a href="/djarju/">Djarju</a>
+					</li>
+					<li>
+						<a href="/sensiliet/">Sensiliet</a>
+					</li>
+					<li id="podcast-audio">
+						<a href="/awdjo/">awdjo&#8239;/&#8239;</a><a href="/podcast/">Podcast</a>
+					</li>
+					<li class="hide-mobile">
+						<a href="/kotba/" class="menu-kotba">Kotba</a>
+					</li>
+					<li class="hide-laptop choose-theme">
+						<a id="theme-regular" role="button" tabindex="0">s</a>
+						<a id="theme-dark" role="button" tabindex="1">m</a>
+						<a id="theme-contrast" role="button" tabindex="2">c</a>
+						<a id="theme-system" role="button" tabindex="3">p</a>
+					</li>
+					<li>
+						<a href="/dwarna/">Dwarna</a>
+					</li>
+					<li class="hide-laptop">
+						<a href="/kotba/">Kotba</a>
+					</li>
+					<li class="hide-laptop">
+						<a href="/kolofon/">Kolofon</a>
+					</li>
+					<li>
+						<a href="/newsletter/">Newsletter</a>
+					</li>
+					<li class="hide-laptop">
+						<a href="/privatezza/">Privatezza</a>
+					</li>
+					<li>
+						<a href="/bookmarks/">Bookmarks<span id="bookmarks-number"></span></a>
+					</li>
+					<li class="hide-laptop choose-theme" id="text-size-adjust">
+						<a id="font-size-1" role="button" tabindex="8">a</a>
+						<a id="font-size-2" role="button" tabindex="9">a</a>
+						<a id="font-size-3" role="button" tabindex="10">a</a>
+						<a id="font-size-4" role="button" tabindex="11">a</a>
+					</li>
+				</menu>
+				<input class="hide-mobile" type="text" id="search-input" placeholder="fittex..." autocomplete="off" auto-fill="off" type="text" autocapitalize="none" enterkeyhint="search"/>
+				<ul id="search-results">
+					<!-- -->
+				</ul>
+				
+				<div id="brownline"></div>
+			</nav>
+			<div id="message">
+				<!-- -->
+			</div>
+			<main id="skipto">
+				
+<article class="generic ottubru" data-pagefind-meta="class[class]">
+	<header>
+		<ul><li class="header-label"><a href="/appuntamenti/" data-pagefind-meta="header">Appuntamenti</a></li></ul>
+		<h1>Ottubru 2025</h1>
+		<h2></h2>
+	</header>
+	<div class="container-generic generic-body-text appointment">
+		<section id="grid-body" data-pagefind-body data-pagefind-weight="5">
+			<div class="generic-body-text editorial">
+				<div class="text-container">
+					<p><span class="sc"><l-m>L-istorja</l-m> hija dejjem</span> inqas ambigwa <l-m>mill-aħbarijiet</l-m>. Dan ilna nafuh, anki jekk kultant ikollna nostalġija perversa għal żminijiet iktar sempliċi meta, skont kif internalizzajna <l-m>l-Istorja</l-m>, kulħadd kien jaf fejn hu <l-m>fid-dawra</l-m> ta’ ġrajjietna u <l-m>d-distinzjoni</l-m> bejn stat ta’ gwerra u stat ta’ paċi kienet ċara daqs dik bejn lejl u nhar. Issa <l-m>d-dinja</l-m> hija mappa mċajpra ta’ gwerer mhux iddikkjarati, gwerer minsija, massakri li jissejħu gwerer, gwerer li ma jissejħux gwerer, gwerer li ħadd ma jiftakar li għadhom għaddejjin, gwerer li ħadd ma jaf fiex qegħdin. <l-m>L-atturi</l-m> tat-teatri <l-m>tal-gwerra</l-m> huma mferrxin <l-m>mal-erbat</l-m> irjieħ. Ġieli dawn <l-m>il-gwerer</l-m> huma dwar fruntieri li nħolqu jew tħassru <l-m>fil-gwerer</l-m> ta’ qabel. Bosta drabi gwerra li sehemna fiha jista’ komodament jinħeba <l-m>fid-distanza</l-m> u <l-m>ċ-ċpar</l-m> tal-battalja, tqanqal gwerra oħra <l-m>fil-pajjiżi</l-m> tagħna meta nies li ħarbu minn dawk <l-m>il-gwerer</l-m> jazzardaw jersqu lejn xtutna. <l-m>L-erba</l-m>’ siltiet li qed nippubblikaw dan <l-m>ix-xahar</l-m> jagħtuna ritratt minn naħat differenti, minn punti differenti taċ-ċiklu storiku li jħarbat <l-m>il-mapep</l-m> u <l-m>l-ħajjiet</l-m>. “#Amerikapost Tqila” ta’ Lusine Khartyan tlaqqagħna ma’ protagonista Armena li ssib solidarjetajiet sottili u eki <l-m>tal-imgħoddi</l-m> fil-ħajja ġdida tagħha ġewwa <l-m>l-Amerka</l-m>. Għalkemm suppost għandha kulma trid f’dan <l-m>il-pajjiż</l-m>, xorta għadha tinħakem minn biżgħat antiki, u tiggranfa ma’ kull ħaġa li tista’ sserħilha rasha li verament sabet <l-m>id-dar</l-m> tagħha. F’“Shaft <l-m>taż-Żibel</l-m>”<span class="pull">,</span> Iva Pezuashvili jirrakkonta <l-m>l-istorja</l-m> ta’ Genna u Milla, storja normali ta’ mħabba u ġiri <l-m>bir-rota</l-m> li kultant tiġi interrotta minn kapitlu ġdid u vjolenti <l-m>fl-istorja</l-m> tat-Tmiem <l-m>tal-Unjoni</l-m> Sovjetika. Fiċ-ċiklu ta’ poeżiji “Fejn Ħallejtha <l-m>r-Rota</l-m> Meta Ħrabt?”<span class="pull">,</span> Karl Schembri jagħtina <l-m>l-istorja</l-m> ta’ dawk li għalihom m’hemm ebda ambigwità dwar <l-m>il-gwerra</l-m>, dawk li għalihom <l-m>il-ġwerra</l-m> għandha prezz għoli u immedjat ta’ demm u terrapien. <l-m>Il-poeżiji</l-m> ta’ Karl huma ġejjin minn intervisti li għamel <l-m>man-nies</l-m> tal-post waqt li kien qed jaħdem bħala ġurnalist, u jużaw <l-m>il-forma</l-m> tal-poeżija veritiera biex dawn <l-m>l-istejjer</l-m> jeħlu b’mod iktar permanenti milli <l-m>s-soltu</l-m> tippermettilna <l-m>ż-żifna</l-m> makabra <l-m>tal-aħbarijiet</l-m>. <l-m>Fl-aħħar</l-m> nett Ilija Đurović jirrifletti dwar ilsienu, u għalkemm kulħadd jixtieq iserraħlu moħħu li <l-m>fid-dinja</l-m> m’hawnx lingwi kbar u żgħar, hu jaf eżatt <l-m>x’jaħseb</l-m> dwar dan. <l-m>L-esej</l-m> tiegħu dwar <l-m>l-esperjenza</l-m> tiegħu <l-m>fl-istituzzjonijiet</l-m> letterarji Ewropej jisimha “<l-m>Il-Lingwa</l-m> tal-Ewropa Hija <l-m>l-Ipokrizija</l-m> u <l-m>l-Flus</l-m>”<span class="pull">.</span> Jekk ngħixu fi żmien meta lanqas nafu eżattament min hu fi gwerra u min mhux, jekk aħna aħniex fi gwerra, jew jekk <l-m>il-gwerer</l-m> anki <l-m>fil-pajjiżi</l-m> ġirien tagħna spiċċawx jew għadx iridu jibdew, kif nistgħu nkunu nafu jekk aħna hux qed ngħixu <l-m>fil-paċi</l-m>? Kif jista’ jkollna stampa ċara ta’ xi nfissru meta ngħidu li rridu ngħixu <l-m>fil-paċi</l-m>? Bħalma hawn min <l-m>lill-ġenoċidju</l-m> jrid isejjaħlu gwerra, hawn min <l-m>lill-kompliċità</l-m> jrid isejħilha <l-m>paċi&nbsp;<span class="end-dot">.</span></l-m></p>
+				</div>
+			</div>
+			<p class="continuity">Din hija l-kitba ppubblikata dax-xahar:</p>
+			
+			
+			
+			
+			
+			
+			<ul class="promo-list">
+	
+	
+		
+			
+
+
+<li >
+	<a class="promo  ottubru promo-storja sequence- story-182" href="/lusine-kharatyan-joe-gatt-amerkapost-tqila/" onclick="analytics(['trackEvent', 'Promo', 'minn: Ottubru 2025', 'għal: #Amerkapost Tqila', 1]);">
+		
+			<header>
+	<ul>
+		
+			<li class="header-label">Ottubru 2025</li>
+		
+		
+			<li class="header-label collection-slug collection-4">
+				Fruntieri/Paċi
+			</li>
+		
+	</ul>
+	
+	
+		
+			<h1>
+				#Amerkapost Tqila
+				
+			</h1>
+		
+	
+	
+
+
+	
+	<h2>
+		
+		
+			<span class="author">Lusine Kharatyan</span>
+			<span class="translator">(tr Joe Gatt)</span>
+		
+	</h2>
+
+
+
+
+
+	
+</header>
+
+			
+			<div class="body-text">
+				
+					<p>Il-ħaddiema <l-m>tat-tifi</l-m> tan-nar qed jippassiġġaw u jħabirku. Jirrispettaw żaqqi u jagħmlulna <l-m>l-wisa</l-m>’<span class="pullsemi">.</span> Kill Bill. Min qallek tara dak <l-m>il-film</l-m> meta int daqshekk tqila? qaltli Karine. Għadha ma tkellimnix <l-m>sal-ġurnata</l-m> tal-lum. Minn dakinhar. <l-m>Is-sala</l-m> taċ-ċinema mimlija. Ċomp ċomp. <l-m>Il-popcorn</l-m> f’ħalqi u Thurman tiftaħ għajnejha f’rasi. Tumm-tumm-tumm. Thurman timxi f’rasi. Sparar. Ħġieġ. Għarusa bajda b’żaqq ħobla u ħafna demm. Baħar ta’ demm. Kollox aħmar. Dak <l-m>il-period</l-m> tiegħi? Kif jista’ jkun? Jien tqila. Daħlet ġo żaqqi. Dawret kollox ta’ taħt fuq. Naħrab. <l-m>L-għarusa</l-m> qed tiġri warajja. Karine u Thurman ġo rasi. Tliftha ’l &nbsp;Karine dakinhar. Ma tkellimnix, ma tgħidlix saħħa. Dari hija ġufi.</p>
+				
+			</div>
+		
+	</a>
+	
+	<aside class="promo-aside story-aside-182">
+		<ul>
+			<li class="bookmark-compact">
+				<!-- -->
+			</li>
+			<li class="wordcount">
+				
+			</li>
+		</ul>
+	</aside>
+
+
+</li>
+
+		
+	
+		
+			
+
+
+<li >
+	<a class="promo  ottubru promo-esej sequence- story-181" href="/ilija-đurović-joe-gatt-il-lingwa-tal-ewropa-hija-l-ipokrizija-u-l-flus/" onclick="analytics(['trackEvent', 'Promo', 'minn: Ottubru 2025', 'għal: Il-Lingwa tal-Ewropa Hija l-Ipokrizija u l-Flus', 2]);">
+		
+			<header>
+	<ul>
+		
+			<li class="header-label">Ottubru 2025</li>
+		
+		
+			<li class="header-label collection-slug collection-4">
+				Fruntieri/Paċi
+			</li>
+		
+	</ul>
+	
+	
+		
+			<h1>
+				Il-Lingwa <l-m>tal-Ewropa</l-m> Hija <l-m>l-Ipokrizija</l-m> u <l-m>l-Flus</l-m>
+				
+			</h1>
+		
+	
+	
+
+
+	
+	<h2>
+		
+		
+			<span class="author">Ilija Đurović</span>
+			<span class="translator">(tr Joe Gatt)</span>
+		
+	</h2>
+
+
+
+
+
+	
+</header>
+
+			
+			<div class="body-text">
+				
+					<p>Qisek tkun mitluq fuq wiċċ <l-m>l-oċean</l-m>, tisma’ <l-m>t-tkarwit</l-m> ta’ qiegħ <l-m>il-baħar</l-m> f’widnejk, waqt li fuqek, bħal <l-m>fl-1</l-m> ta’ Mejju 1999, disat ijiem qabel għeluq <l-m>id-disa</l-m>’ sena tiegħi, jets <l-m>tan-NATO</l-m> jtiru <l-m>mid-direzzjoni</l-m> tal-baħar bħal għasafar <l-m>tal-passa</l-m> sejrin lejn <l-m>l-art</l-m>. <l-m>Il-fatt</l-m> li ftakart <l-m>dil-immaġni</l-m> li kont ilni li nsejt waqt li qed nikteb dwar <l-m>il-lingwa</l-m> bħala mezz ta’ paċi u taqbid probabbli jgħid xi ħaġa dwari. Psikoloġikament ma jimpurtanix <l-m>x’jgħid</l-m> dwari. Lingwistikament juri li, meta nikteb, għandi bżonn nimxi <l-m>fil-lingwa</l-m> b’mod assoċjattiv, mingħajr ma nħossni li qed naħrab minn xi ħaġa jew li għandi nagħti prova ta’ xi ħaġa lil xi ħadd.</p>
+				
+			</div>
+		
+	</a>
+	
+	<aside class="promo-aside story-aside-181">
+		<ul>
+			<li class="bookmark-compact">
+				<!-- -->
+			</li>
+			<li class="wordcount">
+				
+			</li>
+		</ul>
+	</aside>
+
+
+</li>
+
+		
+	
+		
+			
+
+
+<li  class="multiple-episodes episode-0">
+	<a class="promo  ottubru promo-esej sequence-17 story-180 is-episode" href="/karl-schembri-fejn-ħallejtha-r-rota-meta-ħrabt-introduzzjoni/" onclick="analytics(['trackEvent', 'Promo', 'minn: Ottubru 2025', 'għal: Fejn Ħallejtha r-Rota Meta Ħrabt?', 3]);">
+		
+			<header>
+	<ul>
+		
+			<li class="header-label">Ottubru 2025</li>
+		
+		
+			<li class="header-label collection-slug collection-4">
+				Fruntieri/Paċi
+			</li>
+		
+	</ul>
+	
+	
+		
+			<h1>
+				Fejn Ħallejtha <l-m>r-Rota</l-m> Meta Ħrabt?
+				
+			</h1>
+		
+	
+	
+
+
+	
+	<h2>
+		
+		
+			
+			
+				
+					
+						<span class="author">Karl Schembri</span>
+					
+					
+	</h2>
+
+
+
+
+
+	
+		<h3>
+			
+			
+			Introduzzjoni
+		</h3>
+	
+</header>
+
+			
+			<div class="body-text">
+				
+					<p>L-immaġni <l-m>tar-raġel</l-m> bir-rota baqgħet f’moħħi għal snin twal mindu pproċessajtha u kienet ippubblikata. Meta faqqgħet <l-m>il-gwerra</l-m> fuq <l-m>l-Ukrajna</l-m>, reġgħet feġġet lura f’moħħi b’iżjed qawwa. <l-m>X’sar</l-m> minnu <l-m>dal-proxxmu</l-m> bla isem? Fejn mar <l-m>bir-rota</l-m>, <l-m>dat-teżor</l-m> żgħir imħolli lilu f’nofs <l-m>dil-ħerba</l-m>? U kienet proprju din <l-m>l-immaġni</l-m> f’moħħi meta ktibt “Fejn ħallejtha <l-m>r-rota</l-m> meta ħrabt?” <l-m>X’sar</l-m> minnu <l-m>dar-raġel</l-m>, u hemm xi ħadd li jimpurtah? <l-m>Il-ġenerożità</l-m> lejn <l-m>ir-refuġjati</l-m> Ukreni filwaqt li <l-m>l-Ewropa</l-m> tkompli tibni <l-m>l-ħitan</l-m> tal-fortizza kontra kulħadd, tfakkarna <l-m>fil-barbariżmu</l-m> tal-mexxejja tagħna. B’din <l-m>il-poeżija</l-m>, u <l-m>l-oħrajn</l-m> kollha miġbura hawn, ridt infakkar <l-m>lill-mexxejja</l-m> tagħna f’dan <l-m>ir-raġel</l-m> anonimu miexi <l-m>bir-rota</l-m>, li jista’ jmut bħala konsegwenza <l-m>tad-deċiżjonijiet</l-m> tagħhom.</p>
+				
+			</div>
+		
+	</a>
+	
+	<aside class="promo-aside story-aside-180">
+		<ul>
+			<li class="bookmark-compact">
+				<!-- -->
+			</li>
+			<li class="wordcount">
+				
+			</li>
+		</ul>
+	</aside>
+
+
+</li>
+
+		
+	
+</ul>
+
+			<div class="more">
+				
+					<p>Abbona <l-m>fin-<a href="/newsletter/">newsletter</a></l-m> biex dejjem issir taf meta nippubblikaw xi ħaġa ġdida.</p>
+				
+			</div>
+		</section>
+	</div>
+</article>
+<script>
+	reportingTitle = "Ottubru 2025";
+</script>
+
+			</main>
+		</div>
+		<div id="bottom-wrapper">
+			<img id="deco" role="none" src="/img/deco-100.svg" alt="Dekorazzjoni art-nouveau"/>
+			
+				<div id="newsletter-container-bottom" class="newsletter-container">
+					<section id="form" data-track-content data-content-name="Homepage" data-content-piece="formola">
+						<iframe id="newsletter" class="newsletter-iframe-regular" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#" scrolling="no" title="Abbona fin-newsletter"></iframe>
+<iframe id="newsletter" class="newsletter-iframe-dark" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#|#201e1d|#908984|0|442093344ewr" scrolling="no" title="Abbona fin-newsletter"></iframe>
+<iframe id="newsletter" class="newsletter-iframe-contrast" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#|#000000|#ffffff|0|442093344ewr" scrolling="no" title="Abbona fin-newsletter"></iframe>
+
+					</section>
+				</div>
+			
+			<footer data-track-content data-content-name="Footer" data-content-piece="ottubru-2025">
+	<nav class="footer-content">
+		<menu id="housekeeping">
+			<li class="header">Dwarna</li>
+			<li><a href="/kolofon/">Kolofon</a></li>
+			<li><a href="/proċess-editorjali/">Proċess</a></li>
+			<li><a href="/gwida-tal-istil/">Gwida tal-istil</a></li>
+			<li><a href="/cookies/">Cookies</a></li>
+			<li><a href="/privatezza/">Privatezza</a></li>
+			<li><a href="/aċċessibbiltà/">Aċċessibbiltà</a></li>
+			<li><a href="/podcast/">Podcast</a></li>
+			<li><a href="/newsletter/">Newsletter</a></li>
+			<li class="hide-tablet"><a href="/drittijiet/">Drittijiet</a></li>
+		</menu>
+		<menu id="media">
+			<li class="header">Midja</li>
+			<li><a href="/ar/" class="arabic">العربية</a></li>
+			<li><a href="/ca/">Català</a></li>
+			<li><a href="/de/">Deutsch</a></li>
+			<li><a href="/en/">English</a></li>
+			<li><a href="/es/">Español</a></li>
+			<li><a href="/fr/">Français</a></li>
+			<li><a href="/it/">Italiano</a></li>
+			<li><a href="/nl/">Nederlands</a></li>
+			<li class="hide-tablet"><a href="/ro/">Română</a></li>
+		</menu>
+		<menu id="socials">
+			<li class="header">Segwina</li>
+			<li><a href="https://facebook.com/aphroconfuso">Facebook</a></li>
+			<li><a href="https://instagram.com/aphroconfuso">Instagram</a></li>
+			
+			
+			<li><a href="https://whatsapp.com/channel/0029VaysAKP7z4kZHDKdZ71J" rel="me">WhatsApp</a></li>
+			<li><a href="https://aphroconfuso.bsky.social/">Bluesky</a></li>
+			<li><a href="https://youtube.com/@aphroconfuso">Youtube</a></li>
+			<li><a href="https://open.spotify.com/user/31rly4s75gfxs6li6bcxc5bqlgza">Spotify</a></li>
+		</menu>
+		<menu id="podcast">
+			<li class="header">Podcast</li>
+			<li><a href="https://podcasts.apple.com/us/podcast/aphroconfuso/id1686567243">Apple</a></li>
+			
+			<li><a href="https://feeds.acast.com/public/shows/aphroconfuso">RSS feed</a></li>
+			<li><a href="https://open.spotify.com/show/75Lt3UMvC1jE15SGrNFMww">Spotify</a></li>
+			
+		</menu>
+		<div id="logotype-container">
+			<a href="/"><img src="/img/logotype.svg" class="logotype" alt="logo: Aphroconfuso" /></a>
+		</div>
+		<div id="email">
+			<a href="mailto:l-edituri@aphroconfuso.mt" class="email">l-edituri@aphroconfuso.mt</a>
+		</div>
+		<div class="hide-mobile choose-theme choose-theme-footer">
+			<a id="theme-regular-footer" role="button" tabindex="4">s</a>
+			<a id="theme-dark-footer" role="button" tabindex="5">m</a>
+			<a id="theme-contrast-footer" role="button" tabindex="6">c</a>
+			<a id="theme-system-footer" role="button" tabindex="7">p</a>
+		</div>
+		<div id="copyright"><a href="/drittijiet/" class="copyright">&copy; 2023-2025 Aphroconfuso et al</a></div>
+		<div id="qrcode"><img src="/img/qr/ottubru-2025.png" width="180" height="180" alt="QR code" /></div>
+		<div id="url">https://aphroconfuso.mt/ottubru-2025/</div>
+	</nav>
+</footer>
+
+		</div>
+		<aside id="scroll-tools" class="monthly-outlined">
+			<p>
+				<span id="progress">
+					<!-- --></span></p>
+		</aside>
+	</body>
+</html>
