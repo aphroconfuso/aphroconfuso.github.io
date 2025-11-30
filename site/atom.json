@@ -526,16 +526,6 @@ Hackett (is-segretarja tal-Factory) fuq it-telefown u baqa’ sejjer hekk ħdax-
 		}
 		,
 		{
-			"id": "https://aphroconfuso.mt/il-kliem-fit-teorija-ħarsa-lemħa/",
-			"url": "https://aphroconfuso.mt/il-kliem-fit-teorija-ħarsa-lemħa/",
-			"title": "ħarsa/lemħa",
-			"author": "",
-			"content_html": "M’iniex għalkollox ċert dwar “lemħa” għax għalija din il-kelma għandha konnotazzjonijiet passivi, fis-sens li tkun qed tiġri xi ħaġa u inti tilmaħha; u mhux is-sens li inti qed tħares b’mod attiv u intenzjonat lejn xi ħaġa. “Lemaħ” fuq verb.mt qed tiġi tradotta bħala “to catch sight of”. Fil-każ ta’ “the look on his face” ma taħdimx “lemħa” (“il-ħarsa fuq wiċċu”).",
-			"date_published": "2025-04-06T05:00:00.000Z",
-			"date_updated": "2025-04-05T21:20:58.141Z"
-		}
-		,
-		{
 			"id": "https://aphroconfuso.mt/il-kliem-fit-teorija-ħu-ħsieb/",
 			"url": "https://aphroconfuso.mt/il-kliem-fit-teorija-ħu-ħsieb/",
 			"title": "ħu ħsieb",
@@ -543,6 +533,16 @@ Hackett (is-segretarja tal-Factory) fuq it-telefown u baqa’ sejjer hekk ħdax-
 			"content_html": "Fid-dinja Ingliża u dik tal-Punent, “to care” dejjem kienet distinta minn “thought” u “reason”. “Care” assoċjata ma’ emozzjonijiet, irtubija tal-qalb, femminilità—u mhux il-ħsieb, li dejjem kien meqjus rett, veritier u imparzjali, kif ħafna drabi huwa mfisser fil-Punent. Qisu l-Malti ma jagħmilx din id-distinzjoni radikali bejn il-ħsieb bħala ħsieb astratt u li tieħu ħsieb xi ħadd.",
 			"date_published": "2025-04-06T05:00:00.000Z",
 			"date_updated": "2025-04-06T08:00:46.367Z"
+		}
+		,
+		{
+			"id": "https://aphroconfuso.mt/il-kliem-fit-teorija-ħarsa-lemħa/",
+			"url": "https://aphroconfuso.mt/il-kliem-fit-teorija-ħarsa-lemħa/",
+			"title": "ħarsa/lemħa",
+			"author": "",
+			"content_html": "M’iniex għalkollox ċert dwar “lemħa” għax għalija din il-kelma għandha konnotazzjonijiet passivi, fis-sens li tkun qed tiġri xi ħaġa u inti tilmaħha; u mhux is-sens li inti qed tħares b’mod attiv u intenzjonat lejn xi ħaġa. “Lemaħ” fuq verb.mt qed tiġi tradotta bħala “to catch sight of”. Fil-każ ta’ “the look on his face” ma taħdimx “lemħa” (“il-ħarsa fuq wiċċu”).",
+			"date_published": "2025-04-06T05:00:00.000Z",
+			"date_updated": "2025-04-05T21:20:58.141Z"
 		}
 		,
 		{
@@ -3246,9 +3246,9 @@ inkella ġebla umda
 			"url": "https://aphroconfuso.mt/franco-bifo-berardi-karl-baldacchino-nifs-kaos-u-poeżija-7-tbiċċir/",
 			"title": "Nifs: Kaos u Poeżija",
 			"author": " (tr Karl Baldacchino)",
-			"content_html": "Xi nkunu qed ngħidu meta ngħidu “realtà” jew “fatt”? Il-fatti jsiru fl-isfera tal-konvenzjonijiet umani; it-terminu ġej mil-Latin facere, li tfisser “għamel”. Il-fatt huwa l-prodott tas-semjożi fattwali tal-individwi soċjali. U r-realtà hija l-punt psikodinamiku ta’ intersezzjoni ta’ għadd kbir ta’ projezzjonijiet ta’ flussi ta’ simulazzjoni li jipproċedu minn organiżmi umani u minn magni semjotiċi. Ir-realtà ma teżistix minn qabel l-att ta’ semjożi u ta’ komunikazzjoni; anzi, hija kostruzzjoni li temerġi minn suġġettivitajiet multipli. Dawk li jaħsbu li l-filosfi postmoderni qerdu l-pedamenti tal-ħajja etika u tad-demokrazija billi mminaw il-fidi fil-verità fattwali qed jitfixklu l-kawżi u l-effetti: il-filosfi ma qerdux il-bażi teoloġika tal-ħajja etika, huma sempliċiment ħabbru li l-ħajja etika m’għandha l-ebda bażi teoloġika, li l-ħajja etika hija għażla bbażata fuq interpretazzjoni u kondiviżjoni eżistenzjali. Is-sekwenza loġika tal-kawża u l-effett hija mħawda, u l-pedament tal-verità minsi. Għalhekk, l-għażla etika ma tistax tkun ibbażata fuq xi ċertezza teoloġika jew xi sinifikat fattwali evidenti. Għażla etika hija bbażata fuq kunflitt ta’ sensibilitajiet, u fuq għarfien ironiku tar-relattività tas-simulazzjoni tagħna stess tad-dinja, tal-projezzjoni tagħna tar-realtà. Is-sors tal-għarfien etiku mhuwiex il-konformità ma’ valuri teoloġiċi jew storiċi assoluti, imma l-imħabba empatika għalina nfusna li ma tistax tkun diżassoċjata mill-benessri tal-oħrajn.",
+			"content_html": "X’inhu s-sors tat-twemmin li, li tipprokrea huwa aħjar milli ma tipprokreax? Din hija enigma għalija, imma naħseb li din il-fissazzjoni ma tistax tinftiehem sakemm ma nqisux il-qawmien mill-ġdid psikotiku tar-razziżmu. Għaliex għandna nibżgħu mit-tnaqqis fil-popolazzjoni? Wieħed jista’ jargumenta li t-tnaqqis fil-popolazzjoni jista’ jiġġenera problema ekonomika u fiskali, iżda jekk dan hu minnu, is-soluzzjoni tinsab hawn: aħna, l-Ewropej, għandna nistimulaw l-immigrazzjoni u norganizzaw l-akkoljenza u l-integrazzjoni ta’ iktar nies minn pajjiżi maħmukin mill-miżerja u l-gwerra. Din is-soluzzjoni hija eżattament l-oppost taċ-ċaħda paranojka li tagħmel il-Fortizza Ewropea fuq il-mewġa ta’ migrazzjoni li ġejja minn pajjiżi Afrikani, tal-Lvant Nofsani u Asjatiċi. Fl-Italja, l-immigranti qed iħallsu parti importanti mid-dħul tas-sigurtà soċjali tal-pajjiż. Għandna għalhekk nippromovu l-adozzjonijiet, niffaċilitaw il-proċeduri, nagħtu ċ-ċittadinanza Ewropea lil mijiet ta’ eluf ta’ trabi li bħalissa huma mitlufin f’kampijiet ta’ konċentrament Torok jew Libjani. Madankollu, il-mexxejja politiċi Ewropej u l-maġġoranza tal-pubbliku Ewropew jiċħdu b’vuċi waħda din is-soluzzjoni. Għaliex? It-tweġiba mhux imlissna hija li r-razza bajda tkun fil-periklu ta’ estinzjoni. X’għarukaża!",
 			"date_published": "2025-12-01T06:00:00.000Z",
-			"date_updated": "2025-11-30T11:17:02.436Z"
+			"date_updated": "2025-11-30T18:43:41.216Z"
 		}
 		,
 		{
