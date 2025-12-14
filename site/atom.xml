@@ -5,7 +5,7 @@
 	<language>mt</language>
 	<link href="https://aphroconfuso.mt/atom.xml" rel="self"/>
 	<link href="https://aphroconfuso.mt/"/>
-	<updated>2025-12-09T16:35:24Z</updated>
+	<updated>2025-12-14T12:38:11Z</updated>
 	<id>https://aphroconfuso.mt</id>
 	<author>
 		<name>Aphroconfuso</name>
@@ -630,18 +630,6 @@ Hackett (is-segretarja tal-Factory) fuq it-telefown u baqa’ sejjer hekk ħdax-
 		</entry>
 		
 		<entry>
-			<title>ħu ħsieb</title>
-			<author>
-				<name></name>
-			</author>
-			<link href="https://aphroconfuso.mt/il-kliem-fit-teorija-ħu-ħsieb/"/>
-			<published>2025-04-06T05:00:00.000Z</published>
-			<updated>2025-04-06T08:00:46.367Z</updated>
-			<id>https://aphroconfuso.mt/il-kliem-fit-teorija-ħu-ħsieb/</id>
-			<content type="html">Fid-dinja Ingliża u dik tal-Punent, “to care” dejjem kienet distinta minn “thought” u “reason”. “Care” assoċjata ma’ emozzjonijiet, irtubija tal-qalb, femminilità—u mhux il-ħsieb, li dejjem kien meqjus rett, veritier u imparzjali, kif ħafna drabi huwa mfisser fil-Punent. Qisu l-Malti ma jagħmilx din id-distinzjoni radikali bejn il-ħsieb bħala ħsieb astratt u li tieħu ħsieb xi ħadd.</content>
-		</entry>
-		
-		<entry>
 			<title>tpaxxa</title>
 			<author>
 				<name></name>
@@ -651,6 +639,18 @@ Hackett (is-segretarja tal-Factory) fuq it-telefown u baqa’ sejjer hekk ħdax-
 			<updated>2025-07-14T16:36:18.359Z</updated>
 			<id>https://aphroconfuso.mt/il-kliem-fit-teorija-tpaxxa/</id>
 			<content type="html">Jouissance, kif nafha jien, ma tfissirx biss pjaċir, imma xi ħaġa fl-estrem, li tista’ wkoll tinkludi l-uġigħ u s-sofferenza. Jouissance mhix pura, fiha hemm l-eċċess, hemm il-mewt, livell ta’ eċitazzjoni li kważi ma tiflaħhiex. Lacan jagħmel distinzjoni bejn il-pjaċir u l-jouissance. Il-pjaċir jobdi l-liġi tal-omeostażi li nsibu f’Beyond the Pleasure Principle [Jenseits des Lustprinzips], fejn il-moħħ ifittex l-inqas tensjoni. B’hekk, il-prinċipju tal-pjaċir ipoġġi limitu fuq il-pjaċir. Min-naħa l-oħra, il-jouissance tikser din il-liġi u hi “beyond the pleasure principle” u iktar tallinja ruħha mad-death drive [Todestrieb].</content>
+		</entry>
+		
+		<entry>
+			<title>ħu ħsieb</title>
+			<author>
+				<name></name>
+			</author>
+			<link href="https://aphroconfuso.mt/il-kliem-fit-teorija-ħu-ħsieb/"/>
+			<published>2025-04-06T05:00:00.000Z</published>
+			<updated>2025-04-06T08:00:46.367Z</updated>
+			<id>https://aphroconfuso.mt/il-kliem-fit-teorija-ħu-ħsieb/</id>
+			<content type="html">Fid-dinja Ingliża u dik tal-Punent, “to care” dejjem kienet distinta minn “thought” u “reason”. “Care” assoċjata ma’ emozzjonijiet, irtubija tal-qalb, femminilità—u mhux il-ħsieb, li dejjem kien meqjus rett, veritier u imparzjali, kif ħafna drabi huwa mfisser fil-Punent. Qisu l-Malti ma jagħmilx din id-distinzjoni radikali bejn il-ħsieb bħala ħsieb astratt u li tieħu ħsieb xi ħadd.</content>
 		</entry>
 		
 		<entry>
@@ -708,7 +708,7 @@ Hackett (is-segretarja tal-Factory) fuq it-telefown u baqa’ sejjer hekk ħdax-
 			</author>
 			<link href="https://aphroconfuso.mt/kotba-omar-nshea-es-sidr/"/>
 			<published>2025-11-04T18:00:00.000Z</published>
-			<updated>2025-12-08T09:46:07.832Z</updated>
+			<updated>2025-12-14T12:10:25.000Z</updated>
 			<id>https://aphroconfuso.mt/kotba-omar-nshea-es-sidr/</id>
 			<content type="html">Wara l-mewt ta&#39; ommu, Omar N’ Shea jsib file li donnha kienet ħallitlu apposta biex isibu. “Il-file mimli, imbulmat b’ittri miktubin mill-istess id u li kumbinazzjoni tixbah lil tagħha, organizzati skont id-data ta’ meta nkitbu, bl-ewwel waħda fuq u l-aħħar waħda taħt nett.” Il-file kien rah qabel, snin ilu... Mill-ittri li jsib f’dan il-file, ittri mibgħuta mil-Libja, Omar fl-aħħar jibda jgħaqqad l-istorja ta’ ommu u Otman, jibda jifhem l-aġir tal-familja tiegħu u t-tifsira ta’ ċerti memorji. U hekk kif jibda jimla l-lakuni f’dak li jaf dwaru nnifsu, fl-istorja tiegħu u ta’ niesu, u ta’ min kienu eżattament niesu, jibda jimla wkoll il-lakuni fl-istorja tagħna. L-istorja tibda fis-sebgħinijiet, f’dawk is-snin meta dan il-pajjiż tant qrib tagħna, f&#39;daqqa waħda beda jinħass eqreb minn qatt qabel.</content>
 		</entry>
@@ -726,6 +726,18 @@ Hackett (is-segretarja tal-Factory) fuq it-telefown u baqa’ sejjer hekk ħdax-
 		</entry>
 		
 		<entry>
+			<title>Es Sidr (taħdita u siltiet)</title>
+			<author>
+				<name></name>
+			</author>
+			<link href="https://aphroconfuso.mt/omar-nshea-poddata-2025-12-03-es-sidr-(taħdita-u-siltiet)/"/>
+			<published>2025-12-14T12:00:00.000Z</published>
+			<updated>2025-12-14T12:37:09.708Z</updated>
+			<id>https://aphroconfuso.mt/omar-nshea-poddata-2025-12-03-es-sidr-(taħdita-u-siltiet)/</id>
+			<content type="html">« Meta kont qiegħed infittex il-ġeneru ta’ kitba fil-Malti li seta’ jgħinni ngħid dak li kont qed nipprova ngħid, ovvjament mort l-ewwel lejn il-kotba tal-istorja u lejn il-bijografiji, l-awtobiografiji, u mhux fil-Malti biss, ovvjament ġej minn letteratura ħafna iktar wiesgħa. Però ridt inħares lejn il-Malti speċifikament. Ħassejt illi s-suġġett huwa dejjem fiss fil-memoir, fil-bijografija, fl-istorja is-suġġett huwa dejjem fiss jiġifieri inti qed taħdem minn suġġett illi huwa dejjem fiss. Jiena kelli kollox ħlief suġġett fiss, jiġifieri jiena dawn in-nies li qed nikteb fuqhom assolutament ma kont naf xejn dwarhom ħlief li kelli teoriji ġo rasi. Allura ndunajt illi assolutament ma nistax nikteb memoir għaliex jiena ma kelli xejn fuqhom u lanqas ma kelli fuqi nnifsi. Lanqas kelli l-lingwa biex nikteb fuqi nnifsi, allura bdejt infittex dak il-ġeneru li lili beda jtini l-possibbiltà biex nitteorizza s-suġġettività tiegħi. Mhux biex nitkellem fuqi però biex nitkellem fuq dawk in-nies bħali illi jiena ma bdejtx nara  fil-kitbiet li kont qed infittex. Ovvjament, għandna ħafna bijografiji ta’ politikanti, avukati, nutara, kollha erbgħin euro u ħamsin euro. Għandna ħafna memoirs. Inħoss illi meta inti tiġi minn klassi speċifika, klassi rispettata mis-soċjetà, klassi li hija rappreżentata tajjeb, klassi illi hija emanċipata ħafna, klassi li għandha rappreżentazzjoni vera, anke fis-soċjetà, inti konxju ħafna tas-suġġettività tiegħek. U peress illi inti konxju tas-suġġettività tiegħek għandek ħabta tirrekordja s-suġġettività tiegħek, iżżomm djarju pereżempju. Li tikteb il-memoir tiegħek, li taf f’xi punt xi ħadd se jikteb il-memoir tiegħek, allura anke tgħix il-ħajja kważi koreografata jew kurata b’dan il-mod illi taf li xi darba xi ħadd ħa jikteb fuqek jew inkella għall-inqas li ħajtek hija denja li tikteb fuqha. Jiena ma niġix mill-klassi soċjali fejn nista’ nagħmel dan. Jiena ħbejt id-dettalji ta’ ħajti, mhux niżżilthom fid-djarju. Allura meta bdejt niltaqa’ mal-esej u mal-esejistika u l-kitba letterarja esejistika bdejt inħoss li hemmhekk tista’ tilgħab ħafna iktar, għaliex il-ġeneru mhux daqshekk fiss. Anki għaliex iħallik iddaħħal tropes letterarji, pereżempju, jew mill-arkivji. Issa, ftakar illi jiena bħala Assirologu niġi ħafna mill-kultura tal-kolofon. Jiġifieri kull darba li qed inħares lejn maduma, qed inħares lejn xi test jew xi poeżija jew xi innu jew xi ħaġa hekk, fuq il-ġenb dejjem għandek id-dettalji personali ta’ min qed jikteb jew min qed jikkopja. Allura jiena niġi minn din it-tradizzjoni fejn il-maduma tiflaħ ħafna affarijiet, tiflaħ il-kompożizzjoni letterarja, tiflaħ l-esejistika fil-ġenb. L-esej iħallini wkoll mhux biss niftakar, anke jekk b’mod impreċiż ovvjament għaliex fl-aħħar mill-aħħar il-ktieb fil-verità huwa fuqi fil-preżent, huwa jiena issa. U lanqas huwa fuqi issa però fuq is-suġġettività tiegħi, fuq dik il-klassi ta’ nies  bl-internazzjonalità li qed nipprova nirrappreżenta, u li qed nipprova nikteb għalina. Għaliex ħadd mhu qed jikteb għalina u ħadd ma qed jikteb fuqna għaliex ħajjitna  mhijiex denja li tinkiteb fuqha. Jiena trabbejt nemmen illi fil-kotba, fid-dinja tal-kotba, fl-ekosistema tal-kotba, nies bħali m’hemmx għalfejn, anzi mhux talli m’hemmx għalfejn ikun hemm ktieb fuqhom talli m’aħniex denji li jkun hemm kitba fuqna. Allura ovvjament jiena ġej minnha u għandi bżonn nitteorizzaha din, u l-memoir ma jħallinix nitteorizzaha. Jiġifieri meta taqraw Es Sidr, ovvjament Es Sidr huwa teorija sħiħa fuq l-internazzjonalità tal-ġeneru, tal-klassi, tal-etnija, u tal-ġisem fl-istorja, huwa teorija sħiħa. U allura hemmhekk l-esej jagħtini l-ispazju, u jagħtini n-nifs, biex nitteorizzaha mingħajr ma nkun qed nagħmel teorija espliċita ta’ metodoloġija, bħalma nagħmlu fl-akkademja, ovvjament, għaliex ġej mil-letteratura. Meta nitkellmu fuq ħajjitna ħafna drabi niġu patoloġizzati, kemm għandek ħajtek trawmatika, pereżempju, qed tikteb it-trawma. Le jiena qed nikteb l-affarijiet li vera nħobb fi tfuliti. Dawn l-istrateġiji ta’ ħabi, dawn l-affarijiet li kienu jdejquni, jien inħobbhom u ngħożżhom u tgħallimt ngħix bihom, u tgħallimt ngħix magħhom, bħalma nies bħali tgħallmu jgħixu magħhom. M’iniex qed nikteb it-trawma, però qiegħed nikteb kif għext ħajti, u ħajti ma kinitx trawmatika bl-ebda mod, kieku kienet trawmatika m’iniex qiegħed hawnhekk. Min għex tfulitu miegħi,  hawn xi nies hawnhekk li għexna tfulitna flimkien, nafu illi ħadna ħafna pjaċir f’ħajjitna. Però meta ppruvajna nitkellmu barra minn dak il-milieu soċjali kulħadd tħassarna, jew kulħadd qalilna li għandna bżonn il-kura mentali, jew għandna bżonn il-psikologu, jew għandna bżonn noħorġu minnha din il-ħajja, għandna bżonn nagħmlu ħilitna biex nedukaw ruħna u noħorġu minnha. U allura f’dan is-sens  qed nipprova nirkupraha. Però, nista’ nirkupra biss mit-teorija. Tant dfintha u tant ħbejtha u tant regħxitni meta ħriġt minnha, meta ppruvajt noħroġ minnha, li jibqagħli biss l-esej. Jibqagħli biss l-esej bħala għodda biex nesprimi ruħi, anke għaliex ma rridx nidħol fil-memoir, għax il-memoir narah klassist. »</content>
+		</entry>
+		
+		<entry>
 			<title>Noti Editorjali #7</title>
 			<author>
 				<name></name>
@@ -738,31 +750,6 @@ Hackett (is-segretarja tal-Factory) fuq it-telefown u baqa’ sejjer hekk ħdax-
 		</entry>
 		
 		<entry>
-			<title>Gilgamex, Dak li Ra l-Qiegħ</title>
-			<author>
-				<name></name>
-			</author>
-			<link href="https://aphroconfuso.mt/omar-nshea-gilgamex-dak-li-ra-l-qiegħ/"/>
-			<published>2023-05-01T05:00:00.000Z</published>
-			<updated>2025-07-19T11:17:07.913Z</updated>
-			<id>https://aphroconfuso.mt/omar-nshea-gilgamex-dak-li-ra-l-qiegħ/</id>
-			<content type="html">L-idea li Gilgamex isib ruħu f’daru fil-kultura u l-lingwa Maltija ma bdietx b’Montebello. Bejn l-1899 u l-1915 Alfons Maria Galea ppubblika sensiela bl-isem Kotba tal-Mogħdija taż-Żmien. Fl-1913 kien ħareġ in-numru 130 ta’ din is-sensiela bl-isem Kif l-Għerf tal-Kangħanin Tnissel fil-Griegi, miktub minn F. Calleja “tal-Alġier”. Kemm kienet tajba t-tixrida ta’ dan il-ktieb ma tantx huwa ċar; li nafu hu li ma kienx hawn ħafna kopji għall-bejgħ għax Calleja kien ħallas għall-pubblikazzjoni minn butu.</content>
-		</entry>
-		
-		<entry>
-			<title>Ħsieb il-Ħamiema</title>
-			<author>
-				<name></name>
-			</author>
-			<link href="https://aphroconfuso.mt/noah-fabri-ħsieb-il-ħamiema/"/>
-			<published>2023-05-01T05:00:00.000Z</published>
-			<updated>2025-07-19T11:16:41.076Z</updated>
-			<id>https://aphroconfuso.mt/noah-fabri-ħsieb-il-ħamiema/</id>
-			<content type="html">Faqqgħet bħall-qniepen tal-knisja t-twerżiqa ta’ sajjetta tas-sirena tal-pulizija. Maimouna kienet ilha tliet snin taħdem fil-ħanut ħdejn il-pont li jaqsam il-Ħamrun u l-Marsa. Kienet taf kull rokna u xkaffa, kull loġika organizzatorja, u kull bidla li kienet saret fuq il-post. L-irwejjaħ tal-ħitan ma baqgħetx ixxommhom, ix-xufiera li kienu jġibu l-konsenji saret tafhom sew, il-klijenti, sintendi, saru qishom tal-familja, qalb it-tibdil u ċ-ċaqliq tan-nies, u l-kollegi waslu u telqu bħall-għasafar tal-passa. Xorta rnexxielha żżomm ċerta distanza mentali mill-imgħallem u l-ħajja tal-ħanut; minkejja li kienet tħobb taħdem, dan l-aħħar l-idea tax-xogħol innifisha kienet qed taraha velenu tal-moħħ.
-</content>
-		</entry>
-		
-		<entry>
 			<title>Qarn (silta)</title>
 			<author>
 				<name></name>
@@ -772,18 +759,6 @@ Hackett (is-segretarja tal-Factory) fuq it-telefown u baqa’ sejjer hekk ħdax-
 			<updated>2025-09-27T19:08:59.273Z</updated>
 			<id>https://aphroconfuso.mt/romeo-roxman-gatt-qarn/</id>
 			<content type="html">Idi fil-but, insaffar u nixxuttja l-ġebel—dawn kienu xi azzjonijiet oħra li kont ninnota li ma tantx kienu jinżlu sew meta “tifla” iġġib ruħha b’dal-mod. Jien, għall-kuntrarju, kbirt nagħmilhom. Kont insaffar qabel bdejt nitkellem; it-tort mhux tiegħi, żgur li le, iżda ta’ missieri. Allura ma fhimtx kif darba qisu gerger għax kont qed insaffar. La tifla u lanqas tifel mid-dehra ma kont ikkundizzjonat, għasfur l-ewwel u qabel kollox.</content>
-		</entry>
-		
-		<entry>
-			<title>It-Tipjip</title>
-			<author>
-				<name> (tr Joe Gatt)</name>
-			</author>
-			<link href="https://aphroconfuso.mt/italo-svevo-joe-gatt-it-tipjip/"/>
-			<published>2023-05-01T05:00:00.000Z</published>
-			<updated>2025-08-23T11:04:19.528Z</updated>
-			<id>https://aphroconfuso.mt/italo-svevo-joe-gatt-it-tipjip/</id>
-			<content type="html">L-ewwel sigaretti li pejjipt m’għadekx issibhom għall-bejgħ. Għall-ħabta tal-1870 l-Awstrija kellhom minn dawk li kienu jinbiegħu f’kaxxa tal-kartun żgħira bit-tikketta tal-ajkla b’żewġt irjus. Ara: madwar waħda minn dawn il-kaxxi mill-ewwel jinġabru diversi persuni, kollha b’xi karatteristika minn tagħhom li hi biżżejjed biex tfakkarni x’jisimhom, imma mhux tant li nemozzjona ruħi b’dan l-inkontru bla ħsieb. Nipprova nislet iżjed u mmur sal-pultruna: il-persuni jgħosfru u posthom jeħduh koċċ buffi jiddieħqu bija. Immur lura mifxul lejn il-mejda.</content>
 		</entry>
 		
 		<entry>
@@ -817,15 +792,15 @@ griżmejh. X’għabra?</content>
 		</entry>
 		
 		<entry>
-			<title>Il-Kuxjenza fit-Truf</title>
+			<title>It-Tipjip</title>
 			<author>
-				<name></name>
+				<name> (tr Joe Gatt)</name>
 			</author>
-			<link href="https://aphroconfuso.mt/joe-gatt-il-kuxjenza-fit-truf/"/>
+			<link href="https://aphroconfuso.mt/italo-svevo-joe-gatt-it-tipjip/"/>
 			<published>2023-05-01T05:00:00.000Z</published>
-			<updated>2025-07-28T07:45:58.654Z</updated>
-			<id>https://aphroconfuso.mt/joe-gatt-il-kuxjenza-fit-truf/</id>
-			<content type="html">Bħalma żgur skoprew ħafna qabli, meta tkun qed tittraduċi mit-Taljan, il-Malti li qed taħdem bih ma tħossux uniformi. Fih ħafna li hu lixx u duttili, imma fih ukoll l-għoqiedi u l-ingroppi. Fil-Malti hemm ħafna Taljan li jgħaddi mingħajr ma tagħti kasu; imbagħad hemm it-Taljan tal-avukati. Filli tiskrupla għax tħossok m’int qed tagħmel xejn ħlief tbiddel ftit l-ortografija—“io avanzo tale ipotesi per spiegare la mia debolezza giovanile, ma senza una decisa convinzione”—filli ttik rasek għax tinduna li qed tinstema’ iktar Taljan mit-test oriġinali.</content>
+			<updated>2025-08-23T11:04:19.528Z</updated>
+			<id>https://aphroconfuso.mt/italo-svevo-joe-gatt-it-tipjip/</id>
+			<content type="html">L-ewwel sigaretti li pejjipt m’għadekx issibhom għall-bejgħ. Għall-ħabta tal-1870 l-Awstrija kellhom minn dawk li kienu jinbiegħu f’kaxxa tal-kartun żgħira bit-tikketta tal-ajkla b’żewġt irjus. Ara: madwar waħda minn dawn il-kaxxi mill-ewwel jinġabru diversi persuni, kollha b’xi karatteristika minn tagħhom li hi biżżejjed biex tfakkarni x’jisimhom, imma mhux tant li nemozzjona ruħi b’dan l-inkontru bla ħsieb. Nipprova nislet iżjed u mmur sal-pultruna: il-persuni jgħosfru u posthom jeħduh koċċ buffi jiddieħqu bija. Immur lura mifxul lejn il-mejda.</content>
 		</entry>
 		
 		<entry>
@@ -839,6 +814,43 @@ griżmejh. X’għabra?</content>
 			<id>https://aphroconfuso.mt/ryan-falzon-reċti-tal-kbar-parties-tat-tfal/</id>
 			<content type="html">Nistgħu niftħu b’xena nsuqu minn fuq flyovers nofshom kompluti waqt li nqallbu l-Facebook weqfin fit-traffiku, ritratt wara l-ieħor ta’ Malta lura fil-passat, l-għelieqi, il-mogħoż jirgħu u jmeċilqu, it-tfal jilagħbu ħafjin, toroq vojta, il-bini żewġ sulari. Malta tikkuntenta lil min iħobb imur sal-Lidl għal offerti fażulli ta’ ħaxix imnawwar u gallettini skaduti, bil-karozza impurtata mill-Japan, jidgħi fit-traffic imma jikkonsla għax l-AC silġa u t-tank tad-diesel mimli full u waqt li jsuq pass ta’ nemla juża l-Bluetooth biex iċempel parlata m’ommu, hands free, bla riskju li jaqla’ ċitazzjoni mingħand warden għassa moħbi wara siġra, għax l-aħħar tax-xahar magħna. Lussu kbir.
 </content>
+		</entry>
+		
+		<entry>
+			<title>Ħsieb il-Ħamiema</title>
+			<author>
+				<name></name>
+			</author>
+			<link href="https://aphroconfuso.mt/noah-fabri-ħsieb-il-ħamiema/"/>
+			<published>2023-05-01T05:00:00.000Z</published>
+			<updated>2025-07-19T11:16:41.076Z</updated>
+			<id>https://aphroconfuso.mt/noah-fabri-ħsieb-il-ħamiema/</id>
+			<content type="html">Faqqgħet bħall-qniepen tal-knisja t-twerżiqa ta’ sajjetta tas-sirena tal-pulizija. Maimouna kienet ilha tliet snin taħdem fil-ħanut ħdejn il-pont li jaqsam il-Ħamrun u l-Marsa. Kienet taf kull rokna u xkaffa, kull loġika organizzatorja, u kull bidla li kienet saret fuq il-post. L-irwejjaħ tal-ħitan ma baqgħetx ixxommhom, ix-xufiera li kienu jġibu l-konsenji saret tafhom sew, il-klijenti, sintendi, saru qishom tal-familja, qalb it-tibdil u ċ-ċaqliq tan-nies, u l-kollegi waslu u telqu bħall-għasafar tal-passa. Xorta rnexxielha żżomm ċerta distanza mentali mill-imgħallem u l-ħajja tal-ħanut; minkejja li kienet tħobb taħdem, dan l-aħħar l-idea tax-xogħol innifisha kienet qed taraha velenu tal-moħħ.
+</content>
+		</entry>
+		
+		<entry>
+			<title>Gilgamex, Dak li Ra l-Qiegħ</title>
+			<author>
+				<name></name>
+			</author>
+			<link href="https://aphroconfuso.mt/omar-nshea-gilgamex-dak-li-ra-l-qiegħ/"/>
+			<published>2023-05-01T05:00:00.000Z</published>
+			<updated>2025-07-19T11:17:07.913Z</updated>
+			<id>https://aphroconfuso.mt/omar-nshea-gilgamex-dak-li-ra-l-qiegħ/</id>
+			<content type="html">L-idea li Gilgamex isib ruħu f’daru fil-kultura u l-lingwa Maltija ma bdietx b’Montebello. Bejn l-1899 u l-1915 Alfons Maria Galea ppubblika sensiela bl-isem Kotba tal-Mogħdija taż-Żmien. Fl-1913 kien ħareġ in-numru 130 ta’ din is-sensiela bl-isem Kif l-Għerf tal-Kangħanin Tnissel fil-Griegi, miktub minn F. Calleja “tal-Alġier”. Kemm kienet tajba t-tixrida ta’ dan il-ktieb ma tantx huwa ċar; li nafu hu li ma kienx hawn ħafna kopji għall-bejgħ għax Calleja kien ħallas għall-pubblikazzjoni minn butu.</content>
+		</entry>
+		
+		<entry>
+			<title>Il-Kuxjenza fit-Truf</title>
+			<author>
+				<name></name>
+			</author>
+			<link href="https://aphroconfuso.mt/joe-gatt-il-kuxjenza-fit-truf/"/>
+			<published>2023-05-01T05:00:00.000Z</published>
+			<updated>2025-07-28T07:45:58.654Z</updated>
+			<id>https://aphroconfuso.mt/joe-gatt-il-kuxjenza-fit-truf/</id>
+			<content type="html">Bħalma żgur skoprew ħafna qabli, meta tkun qed tittraduċi mit-Taljan, il-Malti li qed taħdem bih ma tħossux uniformi. Fih ħafna li hu lixx u duttili, imma fih ukoll l-għoqiedi u l-ingroppi. Fil-Malti hemm ħafna Taljan li jgħaddi mingħajr ma tagħti kasu; imbagħad hemm it-Taljan tal-avukati. Filli tiskrupla għax tħossok m’int qed tagħmel xejn ħlief tbiddel ftit l-ortografija—“io avanzo tale ipotesi per spiegare la mia debolezza giovanile, ma senza una decisa convinzione”—filli ttik rasek għax tinduna li qed tinstema’ iktar Taljan mit-test oriġinali.</content>
 		</entry>
 		
 		<entry>
@@ -1344,11 +1356,11 @@ dak l-argunett ta’ dari. titnih kif titnih,
 			<author>
 				<name> (tr Karl Baldacchino)</name>
 			</author>
-			<link href="https://aphroconfuso.mt/franco-bifo-berardi-karl-baldacchino-nifs-kaos-u-poeżija-introduzzjoni/"/>
+			<link href="https://aphroconfuso.mt/franco-bifo-berardi-karl-baldacchino-nifs-kaos-u-poeżija-1-ma-nistax-nieħu-nifs/"/>
 			<published>2024-06-03T05:00:00.000Z</published>
-			<updated>2024-08-13T17:01:47.752Z</updated>
-			<id>https://aphroconfuso.mt/franco-bifo-berardi-karl-baldacchino-nifs-kaos-u-poeżija-introduzzjoni/</id>
-			<content type="html">F’dal-ktieb il-ġdid, li hu ddedikat lill-kundizzjoni ta’ qtugħ ta’ nifs kontemporanja tagħna, nirritorna għall-metafora tal-poeżija bħala l-unika triq għall-ħarba mis-soffokazzjoni. Illum il-poter hu bbażat fuq relazzjonijiet astratti bejn entitajiet numeriċi. Filwaqt li l-isfera finanzjarja hija ggvernata mill-algoritmi li jgħaqqdu l-frattalji ta’ xogħol prekarju, l-isfera tal-ħajja hija invaduta minn flussi ta’ kaos li jipparalizzaw il-ġisem soċjali u joħonqu n-nifs u jifgawh. M’hemm l-ebda ħarba politika minn din in-nassa: il-poeżija biss, bħala l-eċċess ta’ skambju semjotiku, tista’ terġa’ tattiva n-nifs. Il-poeżija biss tgħinna fl-apokalissi li diġà qed tifferoċja taħt l-effett ta’ deċennji ta’ assolutiżmu finanzjarju. Il-poeżija biss se ttaffi t-tbatija ta’ moħħ l-inġinier u ta’ moħħ il-poeta, u se tkun qed taġixxi biex treġġa’ lura l-ħakma tal-isfera finanzjarja fuq il-lingwa. The Uprising kien esej fil-ġenealoġija tal-qawwa finanzjarja, mil-lat tal-lingwa u partikolarment mil-lat “tal-emanċipazzjoni tas-sinifikat mir-realtà”, li antiċipat l-emanċipazzjoni tal-flus mill-ekonomija reali u l-kobba sħiħa ta’ astrazzjoni preżenti fl-aħħar seklu. The Uprising kien dijanjosi ġenealoġika. Nifs huwa esej fuq it-terapija. Kif ser naġixxu bis-soffokazzjoni li pproduċiet l-astrazzjoni tul l-istorja umana? Jeżisti ħruġ mill-katavru tal-kapitaliżmu finanzjarju.</content>
+			<updated>2024-08-22T10:49:40.709Z</updated>
+			<id>https://aphroconfuso.mt/franco-bifo-berardi-karl-baldacchino-nifs-kaos-u-poeżija-1-ma-nistax-nieħu-nifs/</id>
+			<content type="html">Il-kaos u r-ritmu huma l-linja ta’ ħsieb ewlenija ta’ dan il-ktieb, li jterraq fl-apokalissi ta’ żmienna: fit-tieni deċennju tas-seklu wieħed u għoxrin, il-pajsaġġ mentali u x-xena soċjali huma mgħarrqa minn flussi ta’ skuntentizza u vjolenza. Fil-poeżija tiegħu, Hölderlin jipprevedi l-kaos tal-modernità u n-nuqqas ta’ nifs li ġej. Hija problema ta’ kejl, jgħid hu. M’hemm l-ebda kejl f’din l-art, għalhekk is-sens ta’ kejl tagħna (ir-ritmu) huwa biss projezzjoni tan-nifs tagħna: il-poeżija. Huwa għalhekk li l-bniedem jgħix poetikament, għalkemm “jistħoqqlu” mod ieħor. Hölderlin: “Jista’ bniedem iħares ’il fuq / Mit-tbatija totali ta’ ħajtu / U jgħid: Ħa nkun ukoll / Bħal dawn [allat]? Iva. Sakemm iddum it-tjubija, / Safja, ġewwa qalbu, jista’ jkejjel lilu nnifsu bil-ferħ / Kontra d-divin.”</content>
 		</entry>
 		
 		<entry>
@@ -1356,11 +1368,11 @@ dak l-argunett ta’ dari. titnih kif titnih,
 			<author>
 				<name> (tr Karl Baldacchino)</name>
 			</author>
-			<link href="https://aphroconfuso.mt/franco-bifo-berardi-karl-baldacchino-nifs-kaos-u-poeżija-1-ma-nistax-nieħu-nifs/"/>
+			<link href="https://aphroconfuso.mt/franco-bifo-berardi-karl-baldacchino-nifs-kaos-u-poeżija-introduzzjoni/"/>
 			<published>2024-06-03T05:00:00.000Z</published>
-			<updated>2024-08-22T10:49:40.709Z</updated>
-			<id>https://aphroconfuso.mt/franco-bifo-berardi-karl-baldacchino-nifs-kaos-u-poeżija-1-ma-nistax-nieħu-nifs/</id>
-			<content type="html">Il-kaos u r-ritmu huma l-linja ta’ ħsieb ewlenija ta’ dan il-ktieb, li jterraq fl-apokalissi ta’ żmienna: fit-tieni deċennju tas-seklu wieħed u għoxrin, il-pajsaġġ mentali u x-xena soċjali huma mgħarrqa minn flussi ta’ skuntentizza u vjolenza. Fil-poeżija tiegħu, Hölderlin jipprevedi l-kaos tal-modernità u n-nuqqas ta’ nifs li ġej. Hija problema ta’ kejl, jgħid hu. M’hemm l-ebda kejl f’din l-art, għalhekk is-sens ta’ kejl tagħna (ir-ritmu) huwa biss projezzjoni tan-nifs tagħna: il-poeżija. Huwa għalhekk li l-bniedem jgħix poetikament, għalkemm “jistħoqqlu” mod ieħor. Hölderlin: “Jista’ bniedem iħares ’il fuq / Mit-tbatija totali ta’ ħajtu / U jgħid: Ħa nkun ukoll / Bħal dawn [allat]? Iva. Sakemm iddum it-tjubija, / Safja, ġewwa qalbu, jista’ jkejjel lilu nnifsu bil-ferħ / Kontra d-divin.”</content>
+			<updated>2024-08-13T17:01:47.752Z</updated>
+			<id>https://aphroconfuso.mt/franco-bifo-berardi-karl-baldacchino-nifs-kaos-u-poeżija-introduzzjoni/</id>
+			<content type="html">F’dal-ktieb il-ġdid, li hu ddedikat lill-kundizzjoni ta’ qtugħ ta’ nifs kontemporanja tagħna, nirritorna għall-metafora tal-poeżija bħala l-unika triq għall-ħarba mis-soffokazzjoni. Illum il-poter hu bbażat fuq relazzjonijiet astratti bejn entitajiet numeriċi. Filwaqt li l-isfera finanzjarja hija ggvernata mill-algoritmi li jgħaqqdu l-frattalji ta’ xogħol prekarju, l-isfera tal-ħajja hija invaduta minn flussi ta’ kaos li jipparalizzaw il-ġisem soċjali u joħonqu n-nifs u jifgawh. M’hemm l-ebda ħarba politika minn din in-nassa: il-poeżija biss, bħala l-eċċess ta’ skambju semjotiku, tista’ terġa’ tattiva n-nifs. Il-poeżija biss tgħinna fl-apokalissi li diġà qed tifferoċja taħt l-effett ta’ deċennji ta’ assolutiżmu finanzjarju. Il-poeżija biss se ttaffi t-tbatija ta’ moħħ l-inġinier u ta’ moħħ il-poeta, u se tkun qed taġixxi biex treġġa’ lura l-ħakma tal-isfera finanzjarja fuq il-lingwa. The Uprising kien esej fil-ġenealoġija tal-qawwa finanzjarja, mil-lat tal-lingwa u partikolarment mil-lat “tal-emanċipazzjoni tas-sinifikat mir-realtà”, li antiċipat l-emanċipazzjoni tal-flus mill-ekonomija reali u l-kobba sħiħa ta’ astrazzjoni preżenti fl-aħħar seklu. The Uprising kien dijanjosi ġenealoġika. Nifs huwa esej fuq it-terapija. Kif ser naġixxu bis-soffokazzjoni li pproduċiet l-astrazzjoni tul l-istorja umana? Jeżisti ħruġ mill-katavru tal-kapitaliżmu finanzjarju.</content>
 		</entry>
 		
 		<entry>
@@ -1949,6 +1961,18 @@ u hemm vera tibda t-tertuqa.</content>
 			<author>
 				<name></name>
 			</author>
+			<link href="https://aphroconfuso.mt/kris-polidano-kullana-ta-għanjiet-dwar-il-ħolm-8-prefazju-numru-tlieta/"/>
+			<published>2025-02-14T21:00:00.000Z</published>
+			<updated>2025-04-21T13:17:34.385Z</updated>
+			<id>https://aphroconfuso.mt/kris-polidano-kullana-ta-għanjiet-dwar-il-ħolm-8-prefazju-numru-tlieta/</id>
+			<content type="html">Il-ħolm fejn imur wara li jqajjimna? Il-mewta l-aħħar darba li noħolmu anki jekk għajnejna ma jingħalqux, ġisimna joħroġ il-kimiċi, li jitfgħuna fi stat “ħolmieni”. Kemm jekk aħna konxji tiegħu jew m’aħniex, id-demm uman jiġbed, u f’għadd ta’ kulturi, il-mewt nikkunsidrawha bħala raqda. U l-ħolm — kemm jekk inħallu lilna nfusna nindiehsu ma’ din il-forma ta’ ħsieb jew le — jieqaf u jiżvolġi fl-aħħar raqda għall-aħħar darba.</content>
+		</entry>
+		
+		<entry>
+			<title>Kullana ta’ Għanjiet Dwar il-Ħolm</title>
+			<author>
+				<name></name>
+			</author>
 			<link href="https://aphroconfuso.mt/kris-polidano-kullana-ta-għanjiet-dwar-il-ħolm-9-forma-numru-sitta/"/>
 			<published>2025-02-14T21:00:00.000Z</published>
 			<updated>2025-04-21T13:02:35.028Z</updated>
@@ -1985,18 +2009,6 @@ Fl-aħħar raqda,
 int tieqaf toħlom
 U aħna mqajmin
 noħolmu bik.</content>
-		</entry>
-		
-		<entry>
-			<title>Kullana ta’ Għanjiet Dwar il-Ħolm</title>
-			<author>
-				<name></name>
-			</author>
-			<link href="https://aphroconfuso.mt/kris-polidano-kullana-ta-għanjiet-dwar-il-ħolm-8-prefazju-numru-tlieta/"/>
-			<published>2025-02-14T21:00:00.000Z</published>
-			<updated>2025-04-21T13:17:34.385Z</updated>
-			<id>https://aphroconfuso.mt/kris-polidano-kullana-ta-għanjiet-dwar-il-ħolm-8-prefazju-numru-tlieta/</id>
-			<content type="html">Il-ħolm fejn imur wara li jqajjimna? Il-mewta l-aħħar darba li noħolmu anki jekk għajnejna ma jingħalqux, ġisimna joħroġ il-kimiċi, li jitfgħuna fi stat “ħolmieni”. Kemm jekk aħna konxji tiegħu jew m’aħniex, id-demm uman jiġbed, u f’għadd ta’ kulturi, il-mewt nikkunsidrawha bħala raqda. U l-ħolm — kemm jekk inħallu lilna nfusna nindiehsu ma’ din il-forma ta’ ħsieb jew le — jieqaf u jiżvolġi fl-aħħar raqda għall-aħħar darba.</content>
 		</entry>
 		
 		<entry>
@@ -2281,42 +2293,6 @@ erwieħ wara li mmutu?</content>
 			<author>
 				<name></name>
 			</author>
-			<link href="https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-4-ir-raba/"/>
-			<published>2025-06-16T05:00:00.000Z</published>
-			<updated>2025-06-27T08:32:19.216Z</updated>
-			<id>https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-4-ir-raba/</id>
-			<content type="html">Aphroconfuso,
-la nerġgħu flimkien
-iseħħu t-terremoti,
-
-tgħidli, u nitħasseb
-dwar il-ġlied, imma
-
-int tgeżwer iperbole
-mit-tqanqil. immerik
-
-li kultant il-litterali
-isbaħ mil-letterarju
-
-Aphroconfuso,
-la nerġgħu flimkien
-iseħħu t-terremoti,
-
-tgħidli, u nitħasseb
-dwar il-ġlied, imma
-
-int tgeżwer iperbole
-mit-tqanqil. immerik
-
-li kultant il-litterali
-isbaħ mil-letterarju</content>
-		</entry>
-		
-		<entry>
-			<title>Invokazzjonijiet</title>
-			<author>
-				<name></name>
-			</author>
 			<link href="https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-5-il-ħames/"/>
 			<published>2025-06-16T05:00:00.000Z</published>
 			<updated>2025-08-23T11:01:33.828Z</updated>
@@ -2350,6 +2326,42 @@ Aphroconfuso,
 għalik insir platonika
 biss la nittieħed
 mid-dinja tal-forom.</content>
+		</entry>
+		
+		<entry>
+			<title>Invokazzjonijiet</title>
+			<author>
+				<name></name>
+			</author>
+			<link href="https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-4-ir-raba/"/>
+			<published>2025-06-16T05:00:00.000Z</published>
+			<updated>2025-06-27T08:32:19.216Z</updated>
+			<id>https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-4-ir-raba/</id>
+			<content type="html">Aphroconfuso,
+la nerġgħu flimkien
+iseħħu t-terremoti,
+
+tgħidli, u nitħasseb
+dwar il-ġlied, imma
+
+int tgeżwer iperbole
+mit-tqanqil. immerik
+
+li kultant il-litterali
+isbaħ mil-letterarju
+
+Aphroconfuso,
+la nerġgħu flimkien
+iseħħu t-terremoti,
+
+tgħidli, u nitħasseb
+dwar il-ġlied, imma
+
+int tgeżwer iperbole
+mit-tqanqil. immerik
+
+li kultant il-litterali
+isbaħ mil-letterarju</content>
 		</entry>
 		
 		<entry>
@@ -2437,25 +2449,23 @@ niġborha.
 			<author>
 				<name></name>
 			</author>
-			<link href="https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-7-is-seba/"/>
+			<link href="https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-8-(it-tmien)/"/>
 			<published>2025-07-25T05:00:00.000Z</published>
-			<updated>2025-07-25T18:56:39.829Z</updated>
-			<id>https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-7-is-seba/</id>
-			<content type="html">Aphroconfuso 
-għax meta tħobb aphroconfuso
-bħalek xejn ma jibqa’ tiegħek:
+			<updated>2025-07-25T18:57:05.095Z</updated>
+			<id>https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-8-(it-tmien)/</id>
+			<content type="html">(Aphroconfuso,
+la ma tridx taf iktar bija
+insir għalik il-poeżija
 
-la qalbek la laħmek la ngħasek
-la rqadek la għadmek la leħnek
-la ħinek la żmienek la xagħrek
+dawn l-invokazzjonijiet
+il-vuċijiet
 
-aħmar jilheġ ix-xemx mielħa
-sbieħ Awwissu għatxan / xejn
+nidhirlek fil-kelma
+nibqa’ ninvokak
 
-ma jibqa’ tiegħek lanqas ħajtek,
-ħlief mewtek. din biss tiegħek,
+bħal ruħ mid-dinja l-oħra
+bħal belha mitlufa f’din)
 
-u frankament tista’ troddha
 
 
 
@@ -2485,23 +2495,25 @@ u frankament tista’ troddha
 			<author>
 				<name></name>
 			</author>
-			<link href="https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-8-(it-tmien)/"/>
+			<link href="https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-7-is-seba/"/>
 			<published>2025-07-25T05:00:00.000Z</published>
-			<updated>2025-07-25T18:57:05.095Z</updated>
-			<id>https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-8-(it-tmien)/</id>
-			<content type="html">(Aphroconfuso,
-la ma tridx taf iktar bija
-insir għalik il-poeżija
+			<updated>2025-07-25T18:56:39.829Z</updated>
+			<id>https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-7-is-seba/</id>
+			<content type="html">Aphroconfuso 
+għax meta tħobb aphroconfuso
+bħalek xejn ma jibqa’ tiegħek:
 
-dawn l-invokazzjonijiet
-il-vuċijiet
+la qalbek la laħmek la ngħasek
+la rqadek la għadmek la leħnek
+la ħinek la żmienek la xagħrek
 
-nidhirlek fil-kelma
-nibqa’ ninvokak
+aħmar jilheġ ix-xemx mielħa
+sbieħ Awwissu għatxan / xejn
 
-bħal ruħ mid-dinja l-oħra
-bħal belha mitlufa f’din)
+ma jibqa’ tiegħek lanqas ħajtek,
+ħlief mewtek. din biss tiegħek,
 
+u frankament tista’ troddha
 
 
 
@@ -2813,18 +2825,6 @@ mill-arterji. aphroconfuso l-elettrokuzzjoni</content>
 		</entry>
 		
 		<entry>
-			<title>#Amerkapost Tqila</title>
-			<author>
-				<name> (tr Joe Gatt)</name>
-			</author>
-			<link href="https://aphroconfuso.mt/lusine-kharatyan-joe-gatt-amerkapost-tqila/"/>
-			<published>2025-10-06T05:00:00.000Z</published>
-			<updated>2025-10-29T07:13:10.362Z</updated>
-			<id>https://aphroconfuso.mt/lusine-kharatyan-joe-gatt-amerkapost-tqila/</id>
-			<content type="html">Il-ħaddiema tat-tifi tan-nar qed jippassiġġaw u jħabirku. Jirrispettaw żaqqi u jagħmlulna l-wisa’. Kill Bill. Min qallek tara dak il-film meta int daqshekk tqila? qaltli Karine. Għadha ma tkellimnix sal-ġurnata tal-lum. Minn dakinhar. Is-sala taċ-ċinema mimlija. Ċomp ċomp. Il-popcorn f’ħalqi u Thurman tiftaħ għajnejha f’rasi. Tumm-tumm-tumm. Thurman timxi f’rasi. Sparar. Ħġieġ. Għarusa bajda b’żaqq ħobla u ħafna demm. Baħar ta’ demm. Kollox aħmar. Dak il-period tiegħi? Kif jista’ jkun? Jien tqila. Daħlet ġo żaqqi. Dawret kollox ta’ taħt fuq. Naħrab. L-għarusa qed tiġri warajja. Karine u Thurman ġo rasi. Tliftha ’l  Karine dakinhar. Ma tkellimnix, ma tgħidlix saħħa. Dari hija ġufi.</content>
-		</entry>
-		
-		<entry>
 			<title>Shaft taż-Żibel (silta)</title>
 			<author>
 				<name> (tr Joe Gatt)</name>
@@ -2834,6 +2834,18 @@ mill-arterji. aphroconfuso l-elettrokuzzjoni</content>
 			<updated>2025-10-13T18:49:24.246Z</updated>
 			<id>https://aphroconfuso.mt/iva-pezuashvili-joe-gatt-shaft-taż-żibel-(silta)/</id>
 			<content type="html">Dawk ir-roti tal-ġenerazzjoni l-ġdida, Десна-два, kellhom roti żgħar imma jservu, frame jintewa, u prezz għoli żżejjed mgħolli jerġa’ iktar minn dawk il mingħula tal-black market. Madankollu, is-sidien tal-Десна-два, jew anzi l-ġenituri tagħhom, ma kinux qammiela għax fl-Unjoni Sovjetika xejn ma ħadem daqstant tajjeb daqs l-istituzzjoni tat-tqanqil tal-għira. Ġenituri foqra Sovjetiċi kienu jagħmlu iktar milli jistgħu biex ma jidhrux inferjuri għall-oħrajn, u kienu jixtru dir-rota “lussuża” għat-tfal tagħhom. Anki kienu jippruvaw jgħallmuhom jirkbuha binhar u fil-beraħ, biex iġiegħlu nies relattivament fil-bżonn jiħdaru bl-għira. Xejn ma kien meqjus kitsch daqs il-wiċċ daħqani ta’ tfajjel riekeb Десна-два, u peress li l-Unjoni Sovjetika nnifisha kienet ċappa magħquda ta’ ħażen u kitsch, wiċċ simili spiss kien jinstab fuq il-mużajk, il-posters u anki l-bolol. Imma ż-żgħażagħ Sovjetiċi kienu jiġu jitnejku minn dan; għall-kuntrarju, trid tara kif kienu jitolbu għall-inġiniera u d-disinjaturi tar-roti, ifaħħru jdejhom u l-imħuħ perspikaċi tagħhom talli waħħlulha seat fuq wara.</content>
+		</entry>
+		
+		<entry>
+			<title>#Amerkapost Tqila</title>
+			<author>
+				<name> (tr Joe Gatt)</name>
+			</author>
+			<link href="https://aphroconfuso.mt/lusine-kharatyan-joe-gatt-amerkapost-tqila/"/>
+			<published>2025-10-06T05:00:00.000Z</published>
+			<updated>2025-10-29T07:13:10.362Z</updated>
+			<id>https://aphroconfuso.mt/lusine-kharatyan-joe-gatt-amerkapost-tqila/</id>
+			<content type="html">Il-ħaddiema tat-tifi tan-nar qed jippassiġġaw u jħabirku. Jirrispettaw żaqqi u jagħmlulna l-wisa’. Kill Bill. Min qallek tara dak il-film meta int daqshekk tqila? qaltli Karine. Għadha ma tkellimnix sal-ġurnata tal-lum. Minn dakinhar. Is-sala taċ-ċinema mimlija. Ċomp ċomp. Il-popcorn f’ħalqi u Thurman tiftaħ għajnejha f’rasi. Tumm-tumm-tumm. Thurman timxi f’rasi. Sparar. Ħġieġ. Għarusa bajda b’żaqq ħobla u ħafna demm. Baħar ta’ demm. Kollox aħmar. Dak il-period tiegħi? Kif jista’ jkun? Jien tqila. Daħlet ġo żaqqi. Dawret kollox ta’ taħt fuq. Naħrab. L-għarusa qed tiġri warajja. Karine u Thurman ġo rasi. Tliftha ’l  Karine dakinhar. Ma tkellimnix, ma tgħidlix saħħa. Dari hija ġufi.</content>
 		</entry>
 		
 		<entry>
@@ -3337,37 +3349,33 @@ m’intix tara li għandi x’nagħmel?</content>
 			<author>
 				<name></name>
 			</author>
-			<link href="https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-16-is-sittax/"/>
+			<link href="https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-15-il-ħmistax/"/>
 			<published>2025-10-26T18:00:00.000Z</published>
-			<updated>2025-10-26T10:53:05.987Z</updated>
-			<id>https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-16-is-sittax/</id>
-			<content type="html">Aphroconfuso
-għax meta borża sewda tkun ilha
-tiġma’ tibda terħi l-intiena tal-ħmieġ
-u l-katavri—il-meraq tad-disprezz.
-imbagħad mhux
-lakemm iżżommha,
-hux viera? u bejnietna
-smajt li dil-magħtab fiha
-veduta iżjed mis-soltu għoljiet
-li toqogħdu tifirħu bihom. lol
-run for the—eh stenn’
-jien beverly hills.
-stay toxic, girls.
-
-Aphroconfuso
-għax meta borża sewda tkun ilha
-tiġma’ tibda terħi l-intiena tal-ħmieġ
-u l-katavri—il-meraq tad-disprezz.
-imbagħad mhux
-lakemm iżżommha,
-hux viera? u bejnietna
-smajt li dil-magħtab fiha
-veduta iżjed mis-soltu għoljiet
-li toqogħdu tifirħu bihom. lol
-run for the—eh stenn’
-jien beverly hills.
-stay toxic, girls.</content>
+			<updated>2025-10-26T10:53:37.698Z</updated>
+			<id>https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-15-il-ħmistax/</id>
+			<content type="html">Aphroconfuso?
+jaħasra, ġie jfittex konsolazzjoni
+fi vrusi. ma jafx li kurunazzjoni
+tad-diq jonqoshom—mingħajr
+stmerrijiet. u bilħaqq, jekk nannietek  
+ma jiswewx karlin, tiegħi ninvokahom
+sa m’ogħla s-smewwiet u jekk nista’
+ 
+nistampahom fuq kull
+aphroconfuso taħżiż:
+daqshom ħadd għażiż.
+eh, u tiffanfrax wisq għax
+tiegħi flushom kollha taw
+biex m’ommi jgħajxu tlitt
+ibniet. u jekk sa issa (kif?)
+għadek qatt ma doqt id-diq,
+l-iżjed flixkun li jinbiegħ, kun af,
+li dik il-mirra—le, mhux birra, għax
+forsi lanqas din ma taf—ili nniżżilha
+f’pinet sa minn qabel
+twelidt. imma jekk
+trid, sieħeb b’suffraġju,
+dar-round—morr—fuqi</content>
 		</entry>
 		
 		<entry>
@@ -3407,33 +3415,37 @@ bla loppju</content>
 			<author>
 				<name></name>
 			</author>
-			<link href="https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-15-il-ħmistax/"/>
+			<link href="https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-16-is-sittax/"/>
 			<published>2025-10-26T18:00:00.000Z</published>
-			<updated>2025-10-26T10:53:37.698Z</updated>
-			<id>https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-15-il-ħmistax/</id>
-			<content type="html">Aphroconfuso?
-jaħasra, ġie jfittex konsolazzjoni
-fi vrusi. ma jafx li kurunazzjoni
-tad-diq jonqoshom—mingħajr
-stmerrijiet. u bilħaqq, jekk nannietek  
-ma jiswewx karlin, tiegħi ninvokahom
-sa m’ogħla s-smewwiet u jekk nista’
- 
-nistampahom fuq kull
-aphroconfuso taħżiż:
-daqshom ħadd għażiż.
-eh, u tiffanfrax wisq għax
-tiegħi flushom kollha taw
-biex m’ommi jgħajxu tlitt
-ibniet. u jekk sa issa (kif?)
-għadek qatt ma doqt id-diq,
-l-iżjed flixkun li jinbiegħ, kun af,
-li dik il-mirra—le, mhux birra, għax
-forsi lanqas din ma taf—ili nniżżilha
-f’pinet sa minn qabel
-twelidt. imma jekk
-trid, sieħeb b’suffraġju,
-dar-round—morr—fuqi</content>
+			<updated>2025-10-26T10:53:05.987Z</updated>
+			<id>https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-16-is-sittax/</id>
+			<content type="html">Aphroconfuso
+għax meta borża sewda tkun ilha
+tiġma’ tibda terħi l-intiena tal-ħmieġ
+u l-katavri—il-meraq tad-disprezz.
+imbagħad mhux
+lakemm iżżommha,
+hux viera? u bejnietna
+smajt li dil-magħtab fiha
+veduta iżjed mis-soltu għoljiet
+li toqogħdu tifirħu bihom. lol
+run for the—eh stenn’
+jien beverly hills.
+stay toxic, girls.
+
+Aphroconfuso
+għax meta borża sewda tkun ilha
+tiġma’ tibda terħi l-intiena tal-ħmieġ
+u l-katavri—il-meraq tad-disprezz.
+imbagħad mhux
+lakemm iżżommha,
+hux viera? u bejnietna
+smajt li dil-magħtab fiha
+veduta iżjed mis-soltu għoljiet
+li toqogħdu tifirħu bihom. lol
+run for the—eh stenn’
+jien beverly hills.
+stay toxic, girls.</content>
 		</entry>
 		
 		<entry>
@@ -3465,39 +3477,65 @@ dar-round—morr—fuqi</content>
 			<author>
 				<name></name>
 			</author>
-			<link href="https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-19-id-dsatax/"/>
+			<link href="https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-21-il-wieħed-u-għoxrin/"/>
 			<published>2025-11-23T10:00:00.000Z</published>
-			<updated>2025-11-23T09:20:39.931Z</updated>
-			<id>https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-19-id-dsatax/</id>
+			<updated>2025-11-23T09:19:00.219Z</updated>
+			<id>https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-21-il-wieħed-u-għoxrin/</id>
 			<content type="html">Aphroconfuso,
-sibt ruħek reffiegħ
-pellegrin fil-kripta
-ta’ aphroconfuso
-ġos-sarkofagu.
-sa fl-aħħar il-pjaċir
-li ngħix ta’ mumja
-inkella ġebla umda
-
+nibda l-mixja fi triq brighella
+ninsa triq il-qalb imqaddsa—
+wiċċi wiċċ l-addolorata.
+niżbokka fuq il-pont
+sultana tal-mewt.
+ħajrana għal difna
+taħt il-mina sparata.
+dwejjaq kif fil-kċina
+niftaħ għajnejja
 
 
 
 Aphroconfuso,
-sibt ruħek reffiegħ
-pellegrin fil-kripta
-ta’ aphroconfuso
-ġos-sarkofagu.
-sa fl-aħħar il-pjaċir
-li ngħix ta’ mumja
-inkella ġebla umda
+nibda l-mixja fi triq brighella
+ninsa triq il-qalb imqaddsa—
+wiċċi wiċċ l-addolorata.
+niżbokka fuq il-pont
+sultana tal-mewt.
+ħajrana għal difna
+taħt il-mina sparata.
+dwejjaq kif fil-kċina
+niftaħ għajnejja
+</content>
+		</entry>
+		
+		<entry>
+			<title>Invokazzjonijiet</title>
+			<author>
+				<name></name>
+			</author>
+			<link href="https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-18-it-tmintax/"/>
+			<published>2025-11-23T10:00:00.000Z</published>
+			<updated>2025-11-23T09:21:11.717Z</updated>
+			<id>https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-18-it-tmintax/</id>
+			<content type="html">Aphroconfuso
+fuq tal-linja qabel il-midfna
+l-iskrin tal-mobile f’idek
+relikwarju tar-reħja fija
+u tal-waqfa li jmiss:
+fatati, il-ħamrun
 
-Aphroconfuso,
-sibt ruħek reffiegħ
-pellegrin fil-kripta
-ta’ aphroconfuso
-ġos-sarkofagu.
-sa fl-aħħar il-pjaċir
-li ngħix ta’ mumja
-inkella ġebla umda
+Aphroconfuso
+fuq tal-linja qabel il-midfna
+l-iskrin tal-mobile f’idek
+relikwarju tar-reħja fija
+u tal-waqfa li jmiss:
+fatati, il-ħamrun
+
+Aphroconfuso
+fuq tal-linja qabel il-midfna
+l-iskrin tal-mobile f’idek
+relikwarju tar-reħja fija
+u tal-waqfa li jmiss:
+fatati, il-ħamrun
 </content>
 		</entry>
 		
@@ -3543,65 +3581,39 @@ saqajn bħal tagħhom għandi?</content>
 			<author>
 				<name></name>
 			</author>
-			<link href="https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-18-it-tmintax/"/>
+			<link href="https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-19-id-dsatax/"/>
 			<published>2025-11-23T10:00:00.000Z</published>
-			<updated>2025-11-23T09:21:11.717Z</updated>
-			<id>https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-18-it-tmintax/</id>
-			<content type="html">Aphroconfuso
-fuq tal-linja qabel il-midfna
-l-iskrin tal-mobile f’idek
-relikwarju tar-reħja fija
-u tal-waqfa li jmiss:
-fatati, il-ħamrun
-
-Aphroconfuso
-fuq tal-linja qabel il-midfna
-l-iskrin tal-mobile f’idek
-relikwarju tar-reħja fija
-u tal-waqfa li jmiss:
-fatati, il-ħamrun
-
-Aphroconfuso
-fuq tal-linja qabel il-midfna
-l-iskrin tal-mobile f’idek
-relikwarju tar-reħja fija
-u tal-waqfa li jmiss:
-fatati, il-ħamrun
-</content>
-		</entry>
-		
-		<entry>
-			<title>Invokazzjonijiet</title>
-			<author>
-				<name></name>
-			</author>
-			<link href="https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-21-il-wieħed-u-għoxrin/"/>
-			<published>2025-11-23T10:00:00.000Z</published>
-			<updated>2025-11-23T09:19:00.219Z</updated>
-			<id>https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-21-il-wieħed-u-għoxrin/</id>
+			<updated>2025-11-23T09:20:39.931Z</updated>
+			<id>https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-19-id-dsatax/</id>
 			<content type="html">Aphroconfuso,
-nibda l-mixja fi triq brighella
-ninsa triq il-qalb imqaddsa—
-wiċċi wiċċ l-addolorata.
-niżbokka fuq il-pont
-sultana tal-mewt.
-ħajrana għal difna
-taħt il-mina sparata.
-dwejjaq kif fil-kċina
-niftaħ għajnejja
+sibt ruħek reffiegħ
+pellegrin fil-kripta
+ta’ aphroconfuso
+ġos-sarkofagu.
+sa fl-aħħar il-pjaċir
+li ngħix ta’ mumja
+inkella ġebla umda
+
 
 
 
 Aphroconfuso,
-nibda l-mixja fi triq brighella
-ninsa triq il-qalb imqaddsa—
-wiċċi wiċċ l-addolorata.
-niżbokka fuq il-pont
-sultana tal-mewt.
-ħajrana għal difna
-taħt il-mina sparata.
-dwejjaq kif fil-kċina
-niftaħ għajnejja
+sibt ruħek reffiegħ
+pellegrin fil-kripta
+ta’ aphroconfuso
+ġos-sarkofagu.
+sa fl-aħħar il-pjaċir
+li ngħix ta’ mumja
+inkella ġebla umda
+
+Aphroconfuso,
+sibt ruħek reffiegħ
+pellegrin fil-kripta
+ta’ aphroconfuso
+ġos-sarkofagu.
+sa fl-aħħar il-pjaċir
+li ngħix ta’ mumja
+inkella ġebla umda
 </content>
 		</entry>
 		
@@ -3615,64 +3627,6 @@ niftaħ għajnejja
 			<updated>2025-12-01T13:24:08.229Z</updated>
 			<id>https://aphroconfuso.mt/franco-bifo-berardi-karl-baldacchino-nifs-kaos-u-poeżija-7-tbiċċir/</id>
 			<content type="html">X’inhu s-sors tat-twemmin li, li tipprokrea huwa aħjar milli ma tipprokreax? Din hija enigma għalija, imma naħseb li din il-fissazzjoni ma tistax tinftiehem sakemm ma nqisux il-qawmien mill-ġdid psikotiku tar-razziżmu. Għaliex għandna nibżgħu mit-tnaqqis fil-popolazzjoni? Wieħed jista’ jargumenta li t-tnaqqis fil-popolazzjoni jista’ jiġġenera problema ekonomika u fiskali, iżda jekk dan hu minnu, is-soluzzjoni tinsab hawn: aħna, l-Ewropej, għandna nistimulaw l-immigrazzjoni u norganizzaw l-akkoljenza u l-integrazzjoni ta’ iktar nies minn pajjiżi maħmukin mill-miżerja u l-gwerra. Din is-soluzzjoni hija eżattament l-oppost taċ-ċaħda paranojka li tagħmel il-Fortizza Ewropea fuq il-mewġa ta’ migrazzjoni li ġejja minn pajjiżi Afrikani, tal-Lvant Nofsani u Asjatiċi. Fl-Italja, l-immigranti qed iħallsu parti importanti mid-dħul tas-sigurtà soċjali tal-pajjiż. Għandna għalhekk nippromovu l-adozzjonijiet, niffaċilitaw il-proċeduri, nagħtu ċ-ċittadinanza Ewropea lil mijiet ta’ eluf ta’ trabi li bħalissa huma mitlufin f’kampijiet ta’ konċentrament Torok jew Libjani. Madankollu, il-mexxejja politiċi Ewropej u l-maġġoranza tal-pubbliku Ewropew jiċħdu b’vuċi waħda din is-soluzzjoni. Għaliex? It-tweġiba mhux imlissna hija li r-razza bajda tkun fil-periklu ta’ estinzjoni. X’għarukaża!</content>
-		</entry>
-		
-		<entry>
-			<title>Invokazzjonijiet</title>
-			<author>
-				<name></name>
-			</author>
-			<link href="https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-23-it-tlieta-u-għoxrin/"/>
-			<published>2025-12-07T14:00:00.000Z</published>
-			<updated>2025-12-07T13:45:46.575Z</updated>
-			<id>https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-23-it-tlieta-u-għoxrin/</id>
-			<content type="html">Aproconfuso
-meta għaddejtek ġuri
-u sibtek ħati tal-ħars
-
-misruq li minn taħt
-għaddejtli biex nifli
-
-u nara nsibx provi, indizji:
-il-fattizzi jidħquli
-	l-ġesti ġentlomi
-elementi ta’ reati infatwati.
-
-fuq il-pedana
-tal-innoċenti
-il-preżunzjoni; 
-
-prosekuzzjoni 
-ta’ ġmielek statali,
-skietek kriminali. 
-
-Aphroconfuso, kif 
-se tiddefendi ruħek?
-
-
-
-Aproconfuso
-meta għaddejtek ġuri
-u sibtek ħati tal-ħars
-
-misruq li minn taħt
-għaddejtli biex nifli
-
-u nara nsibx provi, indizji:
-il-fattizzi jidħquli
-	l-ġesti ġentlomi
-elementi ta’ reati infatwati.
-
-fuq il-pedana
-tal-innoċenti
-il-preżunzjoni; 
-
-prosekuzzjoni 
-ta’ ġmielek statali,
-skietek kriminali. 
-
-Aphroconfuso, kif 
-se tiddefendi ruħek?</content>
 		</entry>
 		
 		<entry>
@@ -3761,6 +3715,64 @@ m’hemmx x’tifhem u tferi
 meta togħdos f’Giverny
 u titla’ fil-wiċċ, nymphaea
 se ssib tistenniek</content>
+		</entry>
+		
+		<entry>
+			<title>Invokazzjonijiet</title>
+			<author>
+				<name></name>
+			</author>
+			<link href="https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-23-it-tlieta-u-għoxrin/"/>
+			<published>2025-12-07T14:00:00.000Z</published>
+			<updated>2025-12-07T13:45:46.575Z</updated>
+			<id>https://aphroconfuso.mt/beverly-agius-invokazzjonijiet-23-it-tlieta-u-għoxrin/</id>
+			<content type="html">Aproconfuso
+meta għaddejtek ġuri
+u sibtek ħati tal-ħars
+
+misruq li minn taħt
+għaddejtli biex nifli
+
+u nara nsibx provi, indizji:
+il-fattizzi jidħquli
+	l-ġesti ġentlomi
+elementi ta’ reati infatwati.
+
+fuq il-pedana
+tal-innoċenti
+il-preżunzjoni; 
+
+prosekuzzjoni 
+ta’ ġmielek statali,
+skietek kriminali. 
+
+Aphroconfuso, kif 
+se tiddefendi ruħek?
+
+
+
+Aproconfuso
+meta għaddejtek ġuri
+u sibtek ħati tal-ħars
+
+misruq li minn taħt
+għaddejtli biex nifli
+
+u nara nsibx provi, indizji:
+il-fattizzi jidħquli
+	l-ġesti ġentlomi
+elementi ta’ reati infatwati.
+
+fuq il-pedana
+tal-innoċenti
+il-preżunzjoni; 
+
+prosekuzzjoni 
+ta’ ġmielek statali,
+skietek kriminali. 
+
+Aphroconfuso, kif 
+se tiddefendi ruħek?</content>
 		</entry>
 		
 		<entry>
