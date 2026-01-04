@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="mt" translate="no">
+
+	<head>
+		<meta charset="utf-8">
+		
+	<title>Jannar 2026 · Aphroconfuso</title>
+	<meta content="Ir-rota tal-konservatiżmu daret iktar minn dawra waħda minn żmien Herbert Ganado ’l hawn. Fi żmienu, Ganado kien diġà jidher antikwat—karatteristika li ironikament iżżommok lura anki fid-dinja konservattiva. Kien għadu wisq imwaħħal ma’ djul l-awtoritajiet tal-Knisja u ma kienx aġli biżżejjed biex …" name="description">
+	<meta property="og:image" content="/stampi/social_aphroconfuso_logo_social_kbir_kwadrat_d073f4e24a.jpg">
+
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+		<meta content="width=device-width, initial-scale=1" name="viewport">
+		<meta content="width=device-width" initial-scale="1.0" maximum-scale="1.0" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="yes" name="mobile-web-app-capable">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#f9f9f3">
+		<link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon-16x16.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32x32.png">
+		<link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
+		<link rel="mask-icon" href="/img/icons/safari-pinned-tab.svg" color="#5bbad5">
+		<meta property="og:image:type" content="image/jpeg">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
+		<link rel="canonical" href="https://aphroconfuso.mt/jannar-2026/">
+		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
+		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
+		<link rel="stylesheet" href="/css/style-c667dd28.css">
+		<script>
+			var audioLoaded,
+				audioUrls,
+				author,
+				body,
+				bodyEnd,
+				bodyHeight,
+				bodyStart,
+				bodyText,
+				bookmarksArray,
+				bookmarksList,
+				bookmarksMenuElement,
+				charactersPerPixel,
+				charactersPerScreen,
+				currentTime,
+				duration,
+				elapsedTime,
+				hideScrollTools,
+				lastReportedReadingTime,
+				lastReportedScrollPosition,
+				lastScrollPosition,
+				message,
+				issueMonth,
+				issueMonthYear,
+				newScrollPosition,
+				pageHeight,
+				pageReportingTitle,
+				percentageProgress,
+				placeText,
+				podcastUrl,
+				previousTime,
+				progressElement,
+				readingSpeed,
+				reportingTitle,
+				screenHeight,
+				skippedTime,
+				storyCompleted,
+				storyId,
+				storyType,
+				sequenceEpisodeNumber,
+				sequenceEpisodeTitle,
+				timeStarted,
+				pageTitle,
+				wordcount,
+				wordsPerPixel,
+				wordsPerSecond,
+				wordsPerSecondAudio,
+				wordsPerScreen;
+
+			audioLoaded = false;
+			bookmarksArray = [];
+			percentageProgress = 0;
+			previousTime = [];
+			storyCompleted = false;
+
+			const urlSlug = location
+				.pathname
+				.replace(/\//g, '');
+			const setCookie = (cname, cvalue, exdays = 36500) => {
+				const d = new Date();
+				d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+				let expires = "expires=" + d.toUTCString();
+				document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+			}
+			const getCookie = (cname) => {
+				let name = cname + "=";
+				let decodedCookie = decodeURIComponent(document.cookie);
+				let ca = decodedCookie.split(';');
+				for (let i = 0; i < ca.length; i++) {
+					let c = ca[i];
+					while (c.charAt(0) == ' ') {
+						c = c.substring(1);
+					}
+					if (c.indexOf(name) == 0) {
+						return c.substring(name.length, c.length);
+					}
+				}
+				return "";
+			}
+			var _paq = window._paq = window._paq || [];
+			const analytics = (arrayInfo) => {
+				if (location.host != 'aphroconfuso.mt')
+					console.log(arrayInfo);
+				_paq.push(arrayInfo);
+			}
+			_paq.push(['disableCookies']);
+			_paq.push(['enableJSErrorTracking']);
+			_paq.push(['enableHeartBeatTimer']);
+			_paq.push(['enableLinkTracking']);
+			_paq.push(['trackPageView']);
+			_paq.push(['trackVisibleContentImpressions']);
+			(function () {
+				var u = "//analitika.aphroconfuso.mt/";
+				_paq.push([
+					'setTrackerUrl', u + 'matomo.php'
+				]);
+				_paq.push([
+					'setSiteId', location.host == 'aphroconfuso.mt'
+						? '1'
+						: '2'
+				]);
+				var d = document,
+					g = d.createElement('script'),
+					s = d.getElementsByTagName('script')[0];
+				g.async = true;
+				g.src = u + 'matomo.js';
+				s
+					.parentNode
+					.insertBefore(g, s);
+			})();
+			const addRemoveFontSizeClass = (size) => {
+				document
+					.body
+					.classList
+					.remove('font-size-1', 'font-size-2', 'font-size-3', 'font-size-4')
+				document
+					.body
+					.classList
+					.add(`font-size-${size}`);
+				localStorage.setItem('font', size);
+			}
+			// REVIEW
+			const translateTheme = {
+				'regular': 'regolari',
+				'dark': 'skura',
+				'contrast': 'kuntrast',
+				'system': 'sistema'
+			}
+			const addRemoveTheme = (theme, stored) => {
+				document
+					.body
+					.classList
+					.remove('theme-regular', 'theme-dark', 'theme-contrast', 'theme-system')
+				document
+					.body
+					.classList
+					.add(`theme-${theme}`);
+				localStorage.setItem('theme', theme);
+				if (stored && theme == 'regular')
+					return;
+				analytics([
+					'trackEvent', 'Tema', `${stored
+						? 'Tema storjata'
+						: 'Tema nbidlet'}`,
+					translateTheme[theme]
+				]);
+			}
+			const initialiseAfterBody = () => {
+				document
+					.body
+					.classList
+					.add(location.hostname.replace(/\.?aphroconfuso\.mt/, '') || 'production');
+				addRemoveFontSizeClass(localStorage.getItem('font') || 1);
+				addRemoveTheme(localStorage.getItem('theme') || 'regular', true);
+				if (localStorage.getItem(`tw-${urlSlug}`)) {
+					document
+						.body
+						.classList
+						.add('trigger-warning-closed');
+				}
+			}
+		</script>
+		<script src="../script/script-9d62e3.js" type="module"></script>
+	</head>
+	<body class="show-nav this-month-jannar">
+		<script>
+			initialiseAfterBody();
+		</script>
+		<div id="top-wrapper">
+			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
+			<nav id="top-nav">
+				<div id="logo-container-wrapper">
+					<div id="logo-container">
+						<a href="/">
+							<img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso"/>
+						</a>
+					</div>
+					<menu class="hide-mobile" id="menu-carousels">
+						<li class="abecedaire">
+							<a href="/abeċedarju/">Abeċedarju</a>
+						</li>
+						<li>
+							<a href="/almanakk-jannar/">Almanakk</a>
+						</li>
+					</menu>
+					<menu class="hide-mobile" id="menu-collections">
+						<li class="main-menu-collection">
+							<a href="/indħil-barrani/">
+								<span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a>
+						</li>
+						<li class="main-menu-collection">
+							<a href="/il-kliem-fit-teorija/">
+								<span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a>
+						</li>
+					</menu>
+				</div>
+				<input id="menu-toggle" type="checkbox"/>
+				<label class='menu-button-container' for="menu-toggle">
+					<span style="display: none">Mobile biss: iftaħ il-menu</span>
+					<div class='menu-button'></div>
+				</label>
+				
+				<menu id="menu-main">
+					
+					<li class="hide-laptop main-menu-collection">
+						<a href="/indħil-barrani/">
+							<span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a>
+					</li>
+					<li class="hide-laptop main-menu-collection">
+						<a href="/il-kliem-fit-teorija/">
+							<span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a>
+					</li>
+					<li class="hide-laptop a-links">
+						<a href="/abeċedarju/">Abeċedarju</a>
+						<a href="/almanakk-jannar/">Almanakk</a>
+					</li>
+					<li>
+						<a href="/appuntamenti/">Appuntamenti</a>
+					</li>
+					<li>
+						<a href="/kontributuri/">Kontributuri</a>
+					</li>
+					<li>
+						<a href="/werrej/">Werrej</a>
+					</li>
+					<li>
+						<a href="/djarju/">Djarju</a>
+					</li>
+					<li>
+						<a href="/sensiliet/">Sensiliet</a>
+					</li>
+					<li id="podcast-audio">
+						<a href="/awdjo/">awdjo&#8239;/&#8239;</a><a href="/podcast/">Podcast</a>
+					</li>
+					<li class="hide-mobile">
+						<a href="/kotba/" class="menu-kotba">Kotba</a>
+					</li>
+					<li class="hide-laptop choose-theme">
+						<a id="theme-regular" role="button" tabindex="0">s</a>
+						<a id="theme-dark" role="button" tabindex="1">m</a>
+						<a id="theme-contrast" role="button" tabindex="2">c</a>
+						<a id="theme-system" role="button" tabindex="3">p</a>
+					</li>
+					<li>
+						<a href="/dwarna/">Dwarna</a>
+					</li>
+					<li class="hide-laptop">
+						<a href="/kotba/">Kotba</a>
+					</li>
+					<li class="hide-laptop">
+						<a href="/kolofon/">Kolofon</a>
+					</li>
+					<li>
+						<a href="/newsletter/">Newsletter</a>
+					</li>
+					<li class="hide-laptop">
+						<a href="/privatezza/">Privatezza</a>
+					</li>
+					<li>
+						<a href="/bookmarks/">Bookmarks<span id="bookmarks-number"></span></a>
+					</li>
+					<li class="hide-laptop choose-theme" id="text-size-adjust">
+						<a id="font-size-1" role="button" tabindex="8">a</a>
+						<a id="font-size-2" role="button" tabindex="9">a</a>
+						<a id="font-size-3" role="button" tabindex="10">a</a>
+						<a id="font-size-4" role="button" tabindex="11">a</a>
+					</li>
+				</menu>
+				<input class="hide-mobile" type="text" id="search-input" placeholder="fittex..." autocomplete="off" auto-fill="off" type="text" autocapitalize="none" enterkeyhint="search"/>
+				<ul id="search-results">
+					<!-- -->
+				</ul>
+				
+				<div id="brownline"></div>
+			</nav>
+			<div id="message">
+				<!-- -->
+			</div>
+			<main id="skipto">
+				
+<article class="generic jannar" data-pagefind-meta="class[class]">
+	<header>
+		<ul><li class="header-label"><a href="/appuntamenti/" data-pagefind-meta="header">Appuntamenti</a></li></ul>
+		<h1>Jannar 2026</h1>
+		<h2></h2>
+	</header>
+	<div class="container-generic generic-body-text appointment">
+		<section id="grid-body" data-pagefind-body data-pagefind-weight="5">
+			<div class="generic-body-text editorial">
+				<div class="text-container">
+					<p><span class="sc"><l-m>Ir-rota</l-m> tal-konservatiżmu</span> daret iktar minn dawra waħda minn żmien Herbert Ganado ’l&nbsp;hawn. Fi żmienu, Ganado kien diġà jidher antikwat — karatteristika li ironikament iżżommok lura anki <l-m>fid-dinja</l-m> konservattiva. Kien għadu wisq imwaħħal ma’ djul <l-m>l-awtoritajiet</l-m> tal-Knisja u ma kienx aġli biżżejjed biex jinqeda biha kemm kellu bżonn mingħajr ma jħalliha tiskreditah bħala Prim Ministru plawżibbli; u dan iddistingwieh anki <l-m>min-Nazzjonalisti</l-m> l-oħrajn. Mhux għax <l-m>ir-reliġjon</l-m> ma kienx għad għandha post <l-m>fil-politika</l-m> Maltija. Meta <l-m>l-Partit</l-m> Nazzjonalista ġie rriformat, kien qassis ieħor, iktar sottili <l-m>mill-Arċisqof</l-m> Gonzi u forsi iktar makakk, Peter Serracino Inglott, li għamlu partit modern u “ta’ veru”<span class="pull">.</span> Minn dak <l-m>iż-żmien</l-m> ’l&nbsp;hawn, Augusto Pinochet, Margaret Thatcher u Ronald Reagan użaw <l-m>il-konservatiżmu</l-m> biex joħolqu <l-m>l-illużjoni</l-m> ta’ stabbiltà waqt li <l-m>l-veru</l-m> proġett, bħal dejjem, kien dak ekonomiku, <l-m>in-neoliberaliżmu</l-m> li issa bela’ <l-m>l-ispettru</l-m> politiku kważi kollu. <l-m>Il-konservatiżmu</l-m> jaqbad immaġni partikolari <l-m>fil-passat</l-m>, bosta drabi verżjoni idealizzata <l-m>tal-istorja</l-m> tal-ġens jew <l-m>in-nazzjon</l-m>, u jiġġustifika kull azzjoni billi jgħid li tippreserva u tqarreb dik <l-m>il-viżjoni</l-m>. <l-m>Il-Kattoliċiżmu</l-m> tradizzjonalista joffri estetika pura li jista’ jkollok <l-m>l-ambizzjoni</l-m> tippreservaha mingħajr wisq konsegwenzi ekonomiċi. Għad-Dinja <l-m>l-Ġdida</l-m>, speċjalment għad-dinja Puritana <l-m>tal-Amerka</l-m> ta’ Fuq, <l-m>id-damask</l-m> u <l-m>l-kant</l-m> bil-Latin huma impressjonanti ħafna, u jissodisfaw <l-m>l-aspettazzjonijiet</l-m> kollha ta’ kif għandha tkun dinja antika u tradizzjonali. Dan huwa <l-m>s-Sindromu</l-m> ta’ Stendhal bħala proġett politiku. Iżda dan huwa <l-m>t-tradizzjonaliżmu</l-m> tal-era individwalista, li ma jemminx <l-m>bl-ubbidjenza</l-m>. <l-m>Il-fedeltà</l-m> lejn <l-m>il-ġerarkija</l-m> u <l-m>t-tradizzjoni</l-m> Kattolika kienet tressaq lil Ganado bilfors lejn <l-m>it-“tagħlim</l-m> soċjali” <l-m>tal-Knisja</l-m>, li kien għalih mappa għall-progress materjali mingħajr soċjaliżmu, u li għal oħrajn <l-m>fl-istess</l-m> snin kien xejn inqas minn manifest rivoluzzjonarju. <l-m>Il-parti</l-m> l-kbira ta’ dawn <l-m>il-Kattoliċi</l-m> l-ġodda, li llum qed ifasslu <l-m>l-pjanijiet</l-m> politiċi tagħhom, ma juru assolutament ebda interess f’dan <l-m>it-“tagħlim</l-m> soċjali”<span class="pull">,</span> ħlief meta jsemmu <l-m>l-ftit</l-m> elementi li jaqblu magħhom; bħar-“rispett għall-ħajja ta’ kull bniedem”<span class="pull">,</span> sakemm <l-m>il-“bniedem</l-m>” ikun għadu ma ħariġx minn ġuf ommu. <l-m>Il-Papa</l-m>, għalihom, mhux Kattoliku biżżejjed. Għalissa, Malta tidher qisha oasi sekularista f’Ewropa fejn partiti <l-m>tal-lemin</l-m> estrem u teokratiċi qed japprofittaw ruħhom minn kull forma ta’ reazzjoni għall-ftit progress soċjali f’dawn <l-m>l-aħħar</l-m> snin biex ma jkun hemm bżonn itejbu xejn <l-m>fir-realta</l-m> materjali ta’ dawk li jsegwuhom. Forsi pajjiżna għadu qed jirkeb <l-m>il-mewġa</l-m> tal-ewwel ewforja ta’ edoniżmu u flus <l-m>mid-dħul</l-m> tagħna <l-m>fl-Ewropa</l-m>. Forsi aħna familjari wisq <l-m>mal-kultura</l-m> Kattolika biex nerġgħu nħalluha tistordina. Jekk hemm linja bejn <l-m>il-</l-m><em>Leħen <l-m>is-Sewwa</l-m></em> u <l-m>t-Truth</l-m> Social, hija linja kollha tidwir, imma hawn min għandu <l-m>l-paċenzja</l-m> kollha, u <l-m>r-rieda</l-m>, li <l-m>jsegwiha&nbsp;<span class="end-dot">.</span></l-m></p>
+				</div>
+			</div>
+			<p class="continuity">Din hija l-kitba ppubblikata dax-xahar:</p>
+			
+			
+			
+			
+			
+			
+			<ul class="promo-list">
+	
+	
+		
+			
+
+
+<li >
+	<a class="promo  jannar promo-esej sequence- story-208" href="/joe-gatt-leħen-ganado/" onclick="analytics(['trackEvent', 'Promo', 'minn: Jannar 2026', 'għal: Leħen Ganado', 1]);">
+		
+			<header>
+	<ul>
+		
+			<li class="header-label">Jannar 2026</li>
+		
+		
+	</ul>
+	
+	
+		
+			<h1>
+				Leħen Ganado
+				
+			</h1>
+		
+	
+	
+
+
+	
+	<h2>
+		
+		
+			
+			
+				
+					
+						<span class="author">Joe Gatt</span>
+					
+					
+	</h2>
+
+
+
+
+
+	
+</header>
+
+			
+			<div class="body-text">
+				
+					<p>Ganado dejjem jisħaq li ma għandux flus, li waqt li kulħadd beda jixtri <l-m>l-ishma</l-m> hu ma kellu xejn, la Brażiljani u lanqas Ġappuniżi. Meta, wara <l-m>s-serqa</l-m> tat-Tarzna, Alda tibda tibża’ li jidħlu jisirquhom, hu jidħaq biha għax ma kellhom xejn <l-m>x’jisirqulhom</l-m>. Dejjem ħerqan li jfaħħar <l-m>it-tagħlim</l-m> soċjali <l-m>tal-Knisja</l-m> Kattolika, li beda <l-m>bir-Rerum</l-m> Novarum bħala sfida diretta għall-Manifest <l-m>tal-Partit</l-m> Komunista u kompla <l-m>bil-Quadragesimo</l-m> Anno. Għal ħafna snin, <l-m>il-kitba</l-m> tiegħu fuq <l-m>il-Leħen</l-m> is-Sewwa dehret taħt <l-m>il-psewdonimu</l-m> improbabbli “Wieħed Minnkom”<span class="pull">.</span> Sikwit imaqdar <l-m>ir-regħba</l-m>. Meta ġie lura <l-m>mill-Uganda</l-m>, mar idur ma’ Malta biex jara <l-m>l-ħerba</l-m> li ħalliet warajha <l-m>l-gwerra</l-m>. <l-m>L-iktar</l-m> bidliet ħesrem li ġarrbet Malta <l-m>fil-fatt</l-m> Herbert Ganado ma rahomx b’għajnejh. <l-m>L-Isla</l-m> ma jarax ħlief “rovini wisq iktar <l-m>mill-Belt</l-m> u <l-m>mill-Furjana</l-m>”<span class="pull">.</span> <l-m>Iż-żewġt</l-m> itfal tiegħu jaqbdulu jdejh u jħarsu miegħu. Jiltaqa’ ma’ Frans, ġuvni <l-m>mill-Belt</l-m>, li <l-m>l-aħħar</l-m> li kien jafu kien “nofsu għarus ma’ xebba <l-m>mill-aħjar</l-m>”<span class="pull">.</span> Issa kien magħlub, għadma u ġilda, anki jekk għajnejh kienu għadhom ileqqu. Frans kien iċċaħħad <l-m>mill-ikel</l-m> waqt <l-m>il-gwerra</l-m> biex setgħu jieklu ħutu u marad b’sidru. Doris telqitu u issa kienet se tiżżewweġ. <l-m>Il-ġuvni</l-m> jgħidlu, setgħet imqar stennietu jmut. “<l-m>It-tfal</l-m> ħarsu lejh skantati,<span class="pullsemi">”</span> jgħidilna Ganado. Wieħed minnhom jgħidlu li Doris kienet “cruel” iżda lilna, Ganado jgħidilna li “Kulħadd <l-m>fil-ħajja</l-m> għandu <l-m>l-problemi</l-m> tiegħu, u ma tista’ tikkundanna lil ħadd.<span class="pullsemi">”</span> <l-m>Il-gwerra</l-m>, jgħid, għallmitu jkun iktar prattiku.</p>
+				
+			</div>
+		
+	</a>
+	
+	<aside class="promo-aside story-aside-208">
+		<ul>
+			<li class="bookmark-compact">
+				<!-- -->
+			</li>
+			<li class="wordcount">
+				
+			</li>
+		</ul>
+	</aside>
+
+
+</li>
+
+		
+	
+</ul>
+
+			<div class="more">
+				
+					<p>Abbona <l-m>fin-<a href="/newsletter/">newsletter</a></l-m> biex dejjem issir taf meta nippubblikaw xi ħaġa ġdida.</p>
+				
+			</div>
+		</section>
+	</div>
+</article>
+<script>
+	reportingTitle = "Jannar 2026";
+</script>
+
+			</main>
+		</div>
+		<div id="bottom-wrapper">
+			<img id="deco" role="none" src="/img/deco-100.svg" alt="Dekorazzjoni art-nouveau"/>
+			
+				<div id="newsletter-container-bottom" class="newsletter-container">
+					<section id="form" data-track-content data-content-name="Homepage" data-content-piece="formola">
+						<iframe id="newsletter" class="newsletter-iframe-regular" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#" scrolling="no" title="Abbona fin-newsletter"></iframe>
+<iframe id="newsletter" class="newsletter-iframe-dark" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#|#201e1d|#908984|0|442093344ewr" scrolling="no" title="Abbona fin-newsletter"></iframe>
+<iframe id="newsletter" class="newsletter-iframe-contrast" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#|#000000|#ffffff|0|442093344ewr" scrolling="no" title="Abbona fin-newsletter"></iframe>
+
+					</section>
+				</div>
+			
+			<footer data-track-content data-content-name="Footer" data-content-piece="jannar-2026">
+	<nav class="footer-content">
+		<menu id="housekeeping">
+			<li class="header">Dwarna</li>
+			<li><a href="/kolofon/">Kolofon</a></li>
+			<li><a href="/proċess-editorjali/">Proċess</a></li>
+			<li><a href="/gwida-tal-istil/">Gwida tal-istil</a></li>
+			<li><a href="/cookies/">Cookies</a></li>
+			<li><a href="/privatezza/">Privatezza</a></li>
+			<li><a href="/aċċessibbiltà/">Aċċessibbiltà</a></li>
+			<li><a href="/podcast/">Podcast</a></li>
+			<li><a href="/newsletter/">Newsletter</a></li>
+			<li class="hide-tablet"><a href="/drittijiet/">Drittijiet</a></li>
+		</menu>
+		<menu id="media">
+			<li class="header">Midja</li>
+			<li><a href="/ar/" class="arabic">العربية</a></li>
+			<li><a href="/ca/">Català</a></li>
+			<li><a href="/de/">Deutsch</a></li>
+			<li><a href="/en/">English</a></li>
+			<li><a href="/es/">Español</a></li>
+			<li><a href="/fr/">Français</a></li>
+			<li><a href="/it/">Italiano</a></li>
+			<li><a href="/nl/">Nederlands</a></li>
+			<li class="hide-tablet"><a href="/ro/">Română</a></li>
+		</menu>
+		<menu id="socials">
+			<li class="header">Segwina</li>
+			<li><a href="https://facebook.com/aphroconfuso">Facebook</a></li>
+			<li><a href="https://instagram.com/aphroconfuso">Instagram</a></li>
+			
+			
+			<li><a href="https://whatsapp.com/channel/0029VaysAKP7z4kZHDKdZ71J" rel="me">WhatsApp</a></li>
+			<li><a href="https://aphroconfuso.bsky.social/">Bluesky</a></li>
+			<li><a href="https://youtube.com/@aphroconfuso">Youtube</a></li>
+			<li><a href="https://open.spotify.com/user/31rly4s75gfxs6li6bcxc5bqlgza">Spotify</a></li>
+		</menu>
+		<menu id="podcast">
+			<li class="header">Podcast</li>
+			<li><a href="https://podcasts.apple.com/us/podcast/aphroconfuso/id1686567243">Apple</a></li>
+			
+			<li><a href="https://feeds.acast.com/public/shows/aphroconfuso">RSS feed</a></li>
+			<li><a href="https://open.spotify.com/show/75Lt3UMvC1jE15SGrNFMww">Spotify</a></li>
+			
+		</menu>
+		<div id="logotype-container">
+			<a href="/"><img src="/img/logotype.svg" class="logotype" alt="logo: Aphroconfuso" /></a>
+		</div>
+		<div id="email">
+			<a href="mailto:l-edituri@aphroconfuso.mt" class="email">l-edituri@aphroconfuso.mt</a>
+		</div>
+		<div id="theme" class="hide-mobile choose-theme choose-theme-footer">
+			<a id="theme-regular-footer" role="button" tabindex="4">s</a>
+			<a id="theme-dark-footer" role="button" tabindex="5">m</a>
+			<a id="theme-contrast-footer" role="button" tabindex="6">c</a>
+			<a id="theme-system-footer" role="button" tabindex="7">p</a>
+		</div>
+		<div id="organisation"><p>Aphroconfuso huwa organizzazjoni mhux għall-profitt irreġistrata bin-numru <span class="sc">VO/2619</span>.</p></div>
+		<div id="copyright"><p><a href="/drittijiet/" class="copyright">&copy; 2023-2026 Aphroconfuso et al</a></p></div>
+		<div id="qrcode"><img src="/img/qr/jannar-2026.png" width="180" height="180" alt="QR code" /></div>
+		<div id="url">https://aphroconfuso.mt/jannar-2026/</div>
+	</nav>
+</footer>
+
+		</div>
+		<aside id="scroll-tools" class="monthly-outlined">
+			<p>
+				<span id="progress">
+					<!-- --></span></p>
+		</aside>
+	</body>
+</html>
