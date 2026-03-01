@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="mt" translate="no">
+
+	<head>
+		<meta charset="utf-8">
+		
+	<title>Marzu 2026 · Aphroconfuso</title>
+	<meta content="Kif jixhed ismu, il-Mediterran, il-baħar tagħna, huwa baħar magħluq. Klawstrofobiku, maqsum minn eluf ta’ rotot marittimi, iffullat u mniġġes. Iżda għal għawwiem li qabeż minn fuq il-blat Malti, li nbeżaq ’il barra mit-toroq mimlijin karozzi u l-qilla tas-sħana, jidher kważi infint, għadu mhux mins…" name="description">
+	<meta property="og:image" content="/stampi/social_aphroconfuso_logo_social_kbir_kwadrat_d073f4e24a.jpg">
+
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+		<meta content="width=device-width, initial-scale=1" name="viewport">
+		<meta content="width=device-width" initial-scale="1.0" maximum-scale="1.0" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="yes" name="mobile-web-app-capable">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#f9f9f3">
+		<link rel="apple-touch-icon" sizes="180x180" href="/img/icons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/img/icons/favicon-16x16.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32x32.png">
+		<link rel="manifest" href="/manifest.json" crossorigin="use-credentials">
+		<link rel="mask-icon" href="/img/icons/safari-pinned-tab.svg" color="#5bbad5">
+		<meta property="og:image:type" content="image/jpeg">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
+		<link rel="canonical" href="https://aphroconfuso.mt/marzu-2026/">
+		<link rel="alternate" type="application/atom+xml" href="http://aphroconfuso.mt/atom.xml">
+		<link rel="alternate" type="application/atom+json" href="http://aphroconfuso.mt/atom.json">
+		<link rel="stylesheet" href="/css/style-b17b26fe.css">
+		<script>
+			var audioLoaded,
+				audioUrls,
+				author,
+				body,
+				bodyEnd,
+				bodyHeight,
+				bodyStart,
+				bodyText,
+				bookmarksArray,
+				bookmarksList,
+				bookmarksMenuElement,
+				charactersPerPixel,
+				charactersPerScreen,
+				currentTime,
+				duration,
+				elapsedTime,
+				hideScrollTools,
+				lastReportedReadingTime,
+				lastReportedScrollPosition,
+				lastScrollPosition,
+				message,
+				issueMonth,
+				issueMonthYear,
+				newScrollPosition,
+				pageHeight,
+				pageReportingTitle,
+				percentageProgress,
+				placeText,
+				podcastUrl,
+				previousTime,
+				progressElement,
+				readingSpeed,
+				reportingTitle,
+				screenHeight,
+				skippedTime,
+				storyCompleted,
+				storyId,
+				storyType,
+				sequenceEpisodeNumber,
+				sequenceEpisodeTitle,
+				timeStarted,
+				pageTitle,
+				wordcount,
+				wordsPerPixel,
+				wordsPerSecond,
+				wordsPerSecondAudio,
+				wordsPerScreen;
+
+			audioLoaded = false;
+			bookmarksArray = [];
+			percentageProgress = 0;
+			previousTime = [];
+			storyCompleted = false;
+
+			const urlSlug = location
+				.pathname
+				.replace(/\//g, '');
+			const setCookie = (cname, cvalue, exdays = 36500) => {
+				const d = new Date();
+				d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+				let expires = "expires=" + d.toUTCString();
+				document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+			}
+			const getCookie = (cname) => {
+				let name = cname + "=";
+				let decodedCookie = decodeURIComponent(document.cookie);
+				let ca = decodedCookie.split(';');
+				for (let i = 0; i < ca.length; i++) {
+					let c = ca[i];
+					while (c.charAt(0) == ' ') {
+						c = c.substring(1);
+					}
+					if (c.indexOf(name) == 0) {
+						return c.substring(name.length, c.length);
+					}
+				}
+				return "";
+			}
+			var _paq = window._paq = window._paq || [];
+			const analytics = (arrayInfo) => {
+				if (location.host != 'aphroconfuso.mt')
+					console.log(arrayInfo);
+				_paq.push(arrayInfo);
+			}
+			_paq.push(['disableCookies']);
+			_paq.push(['enableJSErrorTracking']);
+			_paq.push(['enableHeartBeatTimer']);
+			_paq.push(['enableLinkTracking']);
+			_paq.push(['trackPageView']);
+			_paq.push(['trackVisibleContentImpressions']);
+			(function () {
+				var u = "//analitika.aphroconfuso.mt/";
+				_paq.push([
+					'setTrackerUrl', u + 'matomo.php'
+				]);
+				_paq.push([
+					'setSiteId', location.host == 'aphroconfuso.mt'
+						? '1'
+						: '2'
+				]);
+				var d = document,
+					g = d.createElement('script'),
+					s = d.getElementsByTagName('script')[0];
+				g.async = true;
+				g.src = u + 'matomo.js';
+				s
+					.parentNode
+					.insertBefore(g, s);
+			})();
+			const addRemoveFontSizeClass = (size) => {
+				document
+					.body
+					.classList
+					.remove('font-size-1', 'font-size-2', 'font-size-3', 'font-size-4')
+				document
+					.body
+					.classList
+					.add(`font-size-${size}`);
+				localStorage.setItem('font', size);
+			}
+			// REVIEW
+			const translateTheme = {
+				'regular': 'regolari',
+				'dark': 'skura',
+				'contrast': 'kuntrast',
+				'system': 'sistema'
+			}
+			const addRemoveTheme = (theme, stored) => {
+				document
+					.body
+					.classList
+					.remove('theme-regular', 'theme-dark', 'theme-contrast', 'theme-system')
+				document
+					.body
+					.classList
+					.add(`theme-${theme}`);
+				localStorage.setItem('theme', theme);
+				if (stored && theme == 'regular')
+					return;
+				analytics([
+					'trackEvent', 'Tema', `${stored
+						? 'Tema storjata'
+						: 'Tema nbidlet'}`,
+					translateTheme[theme]
+				]);
+			}
+			const initialiseAfterBody = () => {
+				document
+					.body
+					.classList
+					.add(location.hostname.replace(/\.?aphroconfuso\.mt/, '') || 'production');
+				addRemoveFontSizeClass(localStorage.getItem('font') || 1);
+				addRemoveTheme(localStorage.getItem('theme') || 'regular', true);
+				if (localStorage.getItem(`tw-${urlSlug}`)) {
+					document
+						.body
+						.classList
+						.add('trigger-warning-closed');
+				}
+			}
+		</script>
+		<script src="../script/script-4a8a98.js" type="module"></script>
+	</head>
+	<body class="show-nav this-month-marzu">
+		<script>
+			initialiseAfterBody();
+		</script>
+		<div id="top-wrapper">
+			<a id="skip" href="#skipto">Mur għall-kontenut propju</a>
+			<nav id="top-nav">
+				<div id="logo-container-wrapper">
+					<div id="logo-container">
+						<a href="/">
+							<img src="/img/logo-4C4845.svg" id="logo" alt="logo: Aphroconfuso"/>
+						</a>
+					</div>
+					<menu class="hide-mobile" id="menu-carousels">
+						<li class="abecedaire">
+							<a href="/abeċedarju/">Abeċedarju</a>
+						</li>
+						<li>
+							<a href="/almanakk-marzu/">Almanakk</a>
+						</li>
+					</menu>
+					<menu class="hide-mobile" id="menu-collections">
+						<li class="main-menu-collection">
+							<a href="/indħil-barrani/">
+								<span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a>
+						</li>
+						<li class="main-menu-collection">
+							<a href="/il-kliem-fit-teorija/">
+								<span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a>
+						</li>
+					</menu>
+				</div>
+				<input id="menu-toggle" type="checkbox"/>
+				<label class='menu-button-container' for="menu-toggle">
+					<span style="display: none">Mobile biss: iftaħ il-menu</span>
+					<div class='menu-button'></div>
+				</label>
+				
+				<menu id="menu-main">
+					
+					<li class="hide-laptop main-menu-collection">
+						<a href="/indħil-barrani/">
+							<span class="collection-2 main-menu-collection-span">Indħil Barrani</span></a>
+					</li>
+					<li class="hide-laptop main-menu-collection">
+						<a href="/il-kliem-fit-teorija/">
+							<span class="collection-3 main-menu-collection-span">Il-Kliem fit-Teorija</span></a>
+					</li>
+					<li class="hide-laptop a-links">
+						<a href="/abeċedarju/">Abeċedarju</a>
+						<a href="/almanakk-marzu/">Almanakk</a>
+					</li>
+					<li>
+						<a href="/appuntamenti/">Appuntamenti</a>
+					</li>
+					<li>
+						<a href="/kontributuri/">Kontributuri</a>
+					</li>
+					<li>
+						<a href="/werrej/">Werrej</a>
+					</li>
+					<li>
+						<a href="/djarju/">Djarju</a>
+					</li>
+					<li>
+						<a href="/sensiliet/">Sensiliet</a>
+					</li>
+					<li id="podcast-audio">
+						<a href="/awdjo/">awdjo&#8239;/&#8239;</a><a href="/podcast/">Podcast</a>
+					</li>
+					<li class="hide-mobile">
+						<a href="/kotba/" class="menu-kotba">Kotba</a>
+					</li>
+					<li class="hide-laptop choose-theme">
+						<a id="theme-regular" role="button" tabindex="0">s</a>
+						<a id="theme-dark" role="button" tabindex="1">m</a>
+						<a id="theme-contrast" role="button" tabindex="2">c</a>
+						<a id="theme-system" role="button" tabindex="3">p</a>
+					</li>
+					<li>
+						<a href="/dwarna/">Dwarna</a>
+					</li>
+					<li class="hide-laptop">
+						<a href="/kotba/">Kotba</a>
+					</li>
+					<li class="hide-laptop">
+						<a href="/kolofon/">Kolofon</a>
+					</li>
+					<li>
+						<a href="/newsletter/">Newsletter</a>
+					</li>
+					<li class="hide-laptop">
+						<a href="/privatezza/">Privatezza</a>
+					</li>
+					<li>
+						<a href="/bookmarks/">Bookmarks<span id="bookmarks-number"></span></a>
+					</li>
+					<li class="hide-laptop choose-theme" id="text-size-adjust">
+						<a id="font-size-1" role="button" tabindex="8">a</a>
+						<a id="font-size-2" role="button" tabindex="9">a</a>
+						<a id="font-size-3" role="button" tabindex="10">a</a>
+						<a id="font-size-4" role="button" tabindex="11">a</a>
+					</li>
+				</menu>
+				<input class="hide-mobile" type="text" id="search-input" placeholder="fittex..." autocomplete="off" auto-fill="off" type="text" autocapitalize="none" enterkeyhint="search"/>
+				<ul id="search-results">
+					<!-- -->
+				</ul>
+				
+				<div id="brownline"></div>
+			</nav>
+			<div id="message">
+				<!-- -->
+			</div>
+			<main id="skipto">
+				
+<article class="generic marzu" data-pagefind-meta="class[class]">
+	<header>
+		<ul><li class="header-label"><a href="/appuntamenti/" data-pagefind-meta="header">Appuntamenti</a></li></ul>
+		<h1>Marzu 2026</h1>
+		<h2></h2>
+	</header>
+	<div class="container-generic generic-body-text appointment">
+		<section id="grid-body" data-pagefind-body data-pagefind-weight="5">
+			<div class="generic-body-text editorial">
+				<div class="text-container">
+					<p><span class="sc">Kif jixhed ismu</span>, <l-m>il-Mediterran</l-m>, <l-m>il-baħar</l-m> tagħna, huwa baħar magħluq. Klawstrofobiku, maqsum minn eluf ta’ rotot marittimi, iffullat u mniġġes. Iżda għal għawwiem li qabeż minn fuq <l-m>il-blat</l-m> Malti, li nbeżaq ’il&nbsp;barra <l-m>mit-toroq</l-m> mimlijin karozzi u <l-m>l-qilla</l-m> tas-sħana, jidher kważi infint, għadu mhux minsus <l-m>mit-tfassil</l-m> tal-bniedem. Għal <l-m>dal-għawwiem</l-m>, <l-m>il-baħar</l-m> “la għandu bankini u lanqas sinjali,<span class="pullsemi">”</span> kif jgħid Jean Paul Borg <l-m>fl-esej</l-m> tiegħu, “Distanzi Twal”<span class="pull">,</span> li bih qed nibdew <l-m>dax-xahar</l-m>. “<l-m>L-uniku</l-m> sinjal, <l-m>il-blat</l-m> tal-kosta. Jekk insib ruħi ’l&nbsp;bogħod minnu jfisser qed ngħum bla direzzjoni.<span class="pullsemi">”</span> <l-m>Dal-baħar</l-m> tista’ tintilef fih. “<l-m>Fil-baħar</l-m>, inti u hu biss.<span class="pullsemi">”</span> <l-m>Fil-ftuħ</l-m>, <l-m>il-qadfa</l-m>, <l-m>il-pass</l-m>, u <l-m>l-ħsieb</l-m> imorru flimkien. <l-m>Il-pass</l-m> isir <l-m>il-ħsieb</l-m>. U <l-m>l-ħsieb</l-m> irid <l-m>il-wita</l-m>. <l-m>Fir-rumanz</l-m> il-ġdid ta’ Loranne Vella, li qed inħabbru <l-m>dax-xahar</l-m>, <em>Travi taċ-Ċedru Saqaf taċ-Ċipress</em>, <l-m>il-protagonista</l-m> ssib ruħha tfittex dan <l-m>is-sens</l-m> ta’ spazju <l-m>fil-memorji</l-m> tagħha, <l-m>fil-ħsieb</l-m> tagħha u, <l-m>fl-aħħar</l-m> mill-aħħar, <l-m>fit-terren</l-m> ta’ madwarha u lil hinn. Hi wkoll tfittex li titbiegħed <l-m>mill-għagħa</l-m> tan-nies, <l-m>tal-belt:</l-m> “<l-m>It-tarf</l-m>, <l-m>it-truf</l-m>, <l-m>l-orizzont</l-m>. Irrid, <l-m>il-gżira</l-m>, nimxiha minn tarf sa tarf. Irrid indur dawra sħiħa magħha. Irrid insib <l-m>l-iktar</l-m> tarf imbiegħed u nħares ’il&nbsp;barra. <l-m>L-ilma</l-m>, <l-m>id-dgħajsa</l-m>, <l-m>il-baħar</l-m>, <l-m>l-għerien</l-m>, taħt <l-m>il-baħar</l-m>, <l-m>il-ħut;</l-m> irrid inżur <l-m>il-gżejjer</l-m> ta’ Malta <l-m>bid-dgħajsa</l-m>, <l-m>bil-moqdief</l-m>. Irrid nintilef bejniethom. Irrid ninżel <l-m>fl-ilma</l-m>, nidħol <l-m>ġol-għerien</l-m>. <l-m>Il-bidu</l-m> hu <l-m>l-baħar</l-m>, <l-m>it-tmiem</l-m> fil-baħar.<span class="pullsemi">”</span> Għal Jean Paul, waħdu <l-m>fil-baħar</l-m>, <l-m>il-ħelsien</l-m> mit-toqol <l-m>tal-art</l-m> huwa kważi totali. “B’wiċċek <l-m>fl-ilma</l-m> f’wiċċ <l-m>il-baħar</l-m>, f’qagħda orizzontali, daqslikieku <l-m>l-gravità</l-m> sospiża, kulma tara qiegħ <l-m>il-baħar</l-m> u tisma’ biss ’il&nbsp;nifsek.<span class="pullsemi">”</span> Tinħeles kważi minn kollox. “Forsi wkoll, <l-m>l-eqreb</l-m> li tista’ toqrob għal titjira?”&nbsp;<span class="end-dot">.</span></p>
+				</div>
+			</div>
+			<p class="continuity">Din hija l-kitba ppubblikata dax-xahar:</p>
+			
+			
+			
+			
+			
+			
+			<ul class="promo-list">
+	
+	
+		
+			
+
+
+<li >
+	<a class="promo  marzu promo-esej sequence- story-225" href="/jean-paul-borg-distanzi-twal/" onclick="analytics(['trackEvent', 'Promo', 'minn: Marzu 2026', 'għal: Distanzi Twal', 1]);">
+		
+			<header>
+	<ul>
+		
+			<li class="header-label">Marzu 2026</li>
+		
+		
+	</ul>
+	
+	
+		
+			<h1>
+				Distanzi Twal
+				
+			</h1>
+		
+	
+	
+
+
+	
+	<h2>
+		
+		
+			
+			
+				
+					
+						<span class="author">Jean Paul Borg</span>
+					
+					
+	</h2>
+
+
+
+
+
+	
+</header>
+
+			
+			<div class="body-text">
+				
+					<p>L-esklussività <l-m>tad-dinja</l-m> tal-baħar fissret solitudni aktar intensa, u aktar kemm ikun fond aktar tintensifika. <l-m>Il-baħar</l-m> baxx, <l-m>il-qiegħ</l-m> tista’ tmissu b’saqajk speċjalment <l-m>fil-bidu</l-m> ta’ xi bajja, jistieden <l-m>lin-nies</l-m>, jagħmlu aktar aċċessibbli, kważi kważi anki jekk ma tafx tgħum. Għandu element ta’ frivolità, huwa parti minn bajja, jistieden <l-m>il-logħob</l-m> bil-ballun, taf ukoll li tista’ ddawwar denbek xħin trid u ssib ruħek fuq <l-m>l-art</l-m>, soda. Saħansitra tista’ tieħu <l-m>r-ritratti</l-m> bil-mobile mingħajr ma xxarrbu għax tista’ ma tintelaqx fih. <l-m>Ix-xemx</l-m> tibqa’ għaddejja <l-m>sal-qiegħ</l-m>, <l-m>il-baħar</l-m> jinħass aktar ċar, jibqa’ trasparenti, u fih m’hemmx wisq fejn tistaħba. Lanqas tista’ timmaġina <l-m>x’hemm</l-m> taħtek, kollox mikxuf. Ma jħallilekx misteru. Lanqas biża’<span class="pullsemi">.</span> <l-m>Il-baħar</l-m> fond, imbagħad, jippermetti <l-m>l-ikħal</l-m> jintensifika, u jilgħab <l-m>il-logħba</l-m> ta’ kuluri differenti bejn saff u ieħor. Iċekknek, u maċ-ċkunija tiżdied <l-m>il-vulnerabbiltà</l-m>. <l-m>Fil-baħar</l-m> fond, ċkejken, b’malja, goggles u arloġġ, tmur lura għal sens ta’ primittività. Kważi nud, kważi b’xejn. <l-m>Il-mobile</l-m> tħallih warajk. <l-m>Il-kuntatt</l-m> jinqatagħlek. Titgħaddas <l-m>fl-ilma</l-m>, issir parti minnu, issir suġġett għall-elementi, imqar żiffa taffettwak. <l-m>Il-baħar</l-m>, daqskemm żaqqu ratba, af xi drabi jrid jimlieha. Imma <l-m>dal-ħsieb</l-m> jibdel <l-m>l-għawm</l-m> f’logħba ta’ nkejja miegħu, u <l-m>fl-istess</l-m> ħin rispett. Meta titgħaddas fih trid iċċedi lilek innifsek għalih. Jekk jinqala’ intopp mhux se ċċempel; ma tistax iġġib taxi jekk tegħja, lanqas tista’ tordna flixkun ilma jekk jaqbdek <l-m>l-għatx</l-m>. Jerġa’ kif tkun, orizzontali flok vertikali, kważi ma tista’ ġġorr xejn miegħek. Sa ħwejġek li kont liebes qabel inżilt isiru vulnerabbli. Tħallihom warajk fuq <l-m>ix-xatt</l-m>, lil hinn minnek. La tmur lura taf ma ssibhomx. <l-m>Fil-baħar</l-m>, inti u hu biss.</p>
+				
+			</div>
+		
+	</a>
+	
+	<aside class="promo-aside story-aside-225">
+		<ul>
+			<li class="bookmark-compact">
+				<!-- -->
+			</li>
+			<li class="wordcount">
+				
+			</li>
+		</ul>
+	</aside>
+
+
+</li>
+
+		
+	
+</ul>
+
+			<div class="more">
+				
+					<p>Abbona <l-m>fin-<a href="/newsletter/">newsletter</a></l-m> biex dejjem issir taf meta nippubblikaw xi ħaġa ġdida.</p>
+				
+			</div>
+		</section>
+	</div>
+</article>
+<script>
+	reportingTitle = "Marzu 2026";
+</script>
+
+			</main>
+		</div>
+		<div id="bottom-wrapper">
+			<img id="deco" role="none" src="/img/deco-100.svg" alt="Dekorazzjoni art-nouveau"/>
+			
+				<div id="newsletter-container-bottom" class="newsletter-container">
+					<section id="form" data-track-content data-content-name="Homepage" data-content-piece="formola">
+						<iframe id="newsletter" class="newsletter-iframe-regular" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#" scrolling="no" title="Abbona fin-newsletter"></iframe>
+<iframe id="newsletter" class="newsletter-iframe-dark" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#|#201e1d|#908984|0|442093344ewr" scrolling="no" title="Abbona fin-newsletter"></iframe>
+<iframe id="newsletter" class="newsletter-iframe-contrast" src="https://aphroconfuso.mt/newsletter-redirect/subscription/form#|#000000|#ffffff|0|442093344ewr" scrolling="no" title="Abbona fin-newsletter"></iframe>
+
+					</section>
+				</div>
+			
+			<footer data-track-content data-content-name="Footer" data-content-piece="marzu-2026">
+	<nav class="footer-content">
+		<menu id="housekeeping">
+			<li class="header">Dwarna</li>
+			<li><a href="/kolofon/">Kolofon</a></li>
+			<li><a href="/proċess-editorjali/">Proċess</a></li>
+			<li><a href="/gwida-tal-istil/">Gwida tal-istil</a></li>
+			<li><a href="/cookies/">Cookies</a></li>
+			<li><a href="/privatezza/">Privatezza</a></li>
+			<li><a href="/aċċessibbiltà/">Aċċessibbiltà</a></li>
+			<li><a href="/podcast/">Podcast</a></li>
+			<li><a href="/newsletter/">Newsletter</a></li>
+			<li class="hide-tablet"><a href="/drittijiet/">Drittijiet</a></li>
+		</menu>
+		<menu id="media">
+			<li class="header">Midja</li>
+			<li><a href="/ar/" class="arabic">العربية</a></li>
+			<li><a href="/ca/">Català</a></li>
+			<li><a href="/de/">Deutsch</a></li>
+			<li><a href="/en/">English</a></li>
+			<li><a href="/es/">Español</a></li>
+			<li><a href="/fr/">Français</a></li>
+			<li><a href="/it/">Italiano</a></li>
+			<li><a href="/nl/">Nederlands</a></li>
+			<li class="hide-tablet"><a href="/ro/">Română</a></li>
+		</menu>
+		<menu id="socials">
+			<li class="header">Segwina</li>
+			<li><a href="https://facebook.com/aphroconfuso">Facebook</a></li>
+			<li><a href="https://instagram.com/aphroconfuso">Instagram</a></li>
+			
+			
+			<li><a href="https://whatsapp.com/channel/0029VaysAKP7z4kZHDKdZ71J" rel="me">WhatsApp</a></li>
+			<li><a href="https://aphroconfuso.bsky.social/">Bluesky</a></li>
+			<li><a href="https://youtube.com/@aphroconfuso">Youtube</a></li>
+			<li><a href="https://open.spotify.com/user/31rly4s75gfxs6li6bcxc5bqlgza">Spotify</a></li>
+		</menu>
+		<menu id="podcast">
+			<li class="header">Podcast</li>
+			<li><a href="https://podcasts.apple.com/us/podcast/aphroconfuso/id1686567243">Apple</a></li>
+			
+			<li><a href="https://feeds.acast.com/public/shows/aphroconfuso">RSS feed</a></li>
+			<li><a href="https://open.spotify.com/show/75Lt3UMvC1jE15SGrNFMww">Spotify</a></li>
+			
+		</menu>
+		<div id="logotype-container">
+			<a href="/"><img src="/img/logotype.svg" class="logotype" alt="logo: Aphroconfuso" /></a>
+		</div>
+		<div id="email">
+			<a href="mailto:l-edituri@aphroconfuso.mt" class="email">l-edituri@aphroconfuso.mt</a>
+		</div>
+		<div id="theme" class="hide-mobile choose-theme choose-theme-footer">
+			<a id="theme-regular-footer" role="button" tabindex="4">s</a>
+			<a id="theme-dark-footer" role="button" tabindex="5">m</a>
+			<a id="theme-contrast-footer" role="button" tabindex="6">c</a>
+			<a id="theme-system-footer" role="button" tabindex="7">p</a>
+		</div>
+		<div id="organisation"><p>Aphroconfuso huwa organizzazjoni mhux għall-profitt irreġistrata bin-numru <span class="sc">VO/2619</span>.</p></div>
+		<div id="copyright"><p><a href="/drittijiet/" class="copyright">&copy; 2023-2026 Aphroconfuso et al</a></p></div>
+		<div id="qrcode"><img src="/img/qr/marzu-2026.png" width="180" height="180" alt="QR code" /></div>
+		<div id="url">https://aphroconfuso.mt/marzu-2026/</div>
+	</nav>
+</footer>
+
+		</div>
+		<aside id="scroll-tools" class="monthly-outlined">
+			<p>
+				<span id="progress">
+					<!-- --></span></p>
+		</aside>
+	</body>
+</html>
