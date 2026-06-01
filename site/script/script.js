@@ -33,6 +33,12 @@ const getSelectionText = () => {
 	selection.insertNode(span);
 }
 
+const newsletterContainer = document.getElementById('newsletter-container-bottom');
+let newsletterPopupShow = true;
+if (!!getCookie('newsletter')) {
+	newsletterPopupShow = false;
+}
+
 const scrolling = () => {
   newScrollPosition = getScrollPosition();
   if (newScrollPosition < 120 || newScrollPosition < lastScrollPosition) {
@@ -54,6 +60,14 @@ const scrolling = () => {
 					percentageProgress = 100;
 				}
 				progressElement.textContent = percentageProgress > 0 && percentageProgress < 100 ? `${ Math.round(percentageProgress) }%` : '';
+				if (percentageProgress > 30 && newsletterPopupShow) {
+					newsletterContainer.classList.add('popup');
+					requestAnimationFrame(() => {
+						requestAnimationFrame(() => {
+							newsletterContainer.classList.add('show');
+						});
+					});
+				}
 			}
 		}
 		lastScrollPosition = newScrollPosition;
@@ -447,6 +461,26 @@ const initialiseMessage = () => {
 	}
 }
 
+const initialiseNewsletterPopup = () => {
+	const params = new URLSearchParams(window.location.search);
+	if (params.has('mtm_kwd') || params.has('mtm_keyword')) {
+		setCookie('newsletter', 'abbonat*');
+		window.history.replaceState({}, '', window.location.pathname);
+	}
+
+	document.getElementById('closeNewsletterPopup').addEventListener("click", () => {
+		closeNewsletterPopup();
+		newsletterPopupShow = false;
+		setCookie('newsletter', 'popupHide', 0.25);
+	});
+}
+
+const closeNewsletterPopup = () => {
+	newsletterContainer.classList.remove('show', 'popup');
+	// analytics(['trackEvent', 'Promo', `minn: ${ reportingTitle }`, `għal: ${ destinationTitle } (bookmark)`, roundedPercentage]);
+	// cookie
+}
+
 const initialiseAnchorEvents = () => {
 	document.querySelectorAll("#grid-body a[href^='\#']").forEach((anchor, index) => {
 		anchor.addEventListener("click", () => analytics(['trackEvent', 'A#', `${ reportingTitle }`, `# ${ anchor.textContent }`, index + 1]));
@@ -460,6 +494,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 	initialiseBookmarksList();
 	showFullBookmarkList();
 	initialiseAnchorEvents();
+	initialiseNewsletterPopup();
 	window.addEventListener('scroll', (event) => {
 		scrolling();
 	});
