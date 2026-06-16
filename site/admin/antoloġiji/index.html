@@ -1,0 +1,1729 @@
+<!doctype html>
+<html lang="mt" translate="no">
+	<head>
+		<meta charset="utf-8">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+		<meta content="width=device-width, initial-scale=1" name="viewport">
+		<meta content="width=device-width" initial-scale="1.0" maximum-scale="1.0" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="yes" name="mobile-web-app-capable">
+		<title>ADMIN</title>
+		<style>
+			@font-face {
+				font-family: "Alegreya Sans";
+				src: url("/fonts/AlegreyaSans-Regular.ttf") format("truetype");
+				font-style: normal;
+				font-weight: 400;
+			}
+			@font-face {
+				font-family: "Alegreya Sans";
+				src: url("/fonts/AlegreyaSans-Italic.ttf") format("truetype");
+				font-style: italic;
+				font-weight: 400;
+			}
+			body {
+				background-color: #f9f9f0;
+				color: black;
+				font-size: 1.2rem;
+				font-family: "Alegreya Sans", sans;
+				line-height: 1.4;
+			}
+			section {
+				padding: 1rem;
+			}
+			main {
+				margin: 0;
+				padding: 0;
+			}
+			.description {
+				display: none;
+				font-size: 1rem;
+			}
+			.toggle:checked ~ .description {
+				display: block;
+			}
+			input[type=checkbox] {
+				visibility: hidden;
+			}
+			.vocabulary {
+				columns: 4;
+			}
+			textarea {
+				background-color: #b63d43;
+				color: #f9f9f0;
+				font-size: 64px;
+				line-height: 1.4;
+				font-style: italic;
+				width: 100%;
+				height: 120vh;
+				padding: 100px 22px;
+				overflow: hidden;
+			}
+			body > header {
+				background-color: #d9ff00;
+				border-bottom: solid 1px #333;
+				padding: 2rem 0;
+			}
+			body > header ul li {
+				display: inline-block;
+				padding: 0 1rem;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<header>
+			<ul>
+				<li>APHROCONFUSO ADMIN</li>
+				<li><a href="/admin/abeċedarju-sħiħ/">abeċedarju sħiħ</a></li>
+				<li><a href="/admin/antoloġiji/">antoloġiji</a></li>
+				<li><a href="/admin/fittex/">fittex</a></li>
+				<li><a href="/admin/kalendarju/">kalendarju</a></li>
+				<li><a href="/admin/newsletters/">newsletters</a></li>
+				<li><a href="/admin/promos/">promos</a></li>
+				<li><a href="/admin/pronomi/">pronomi</a></li>
+				<li><a href="/admin/snippets/">snippets</a></li>
+				<li><a href="/admin/stampi/">stampi</a></li>
+				<li><a href="/admin/varjanti/">varjanti</a></li>
+				<li><a href="/admin/vokabolarju/">vokabolarju</a></li>
+			</ul>
+		</header>
+		
+  <main>
+    <section>
+      <ul>
+        
+          <li>
+            <strong>Antoloġija 3</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">48</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Nifs: Kaos u Poeżija</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">359</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Marta Marta</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">600</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Bur Mgħeż</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">430</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Ħbula <l-m>tal-Ħelsien</l-m></strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">131</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Il-Ġenna Ma Tridx Irġiel Bħal Tagħkom</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">760</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Invokazzjonijiet</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">59</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Invokazzjonijiet</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">22</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Invokazzjonijiet</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">21</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Pollakki ta’ Chełmno</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">2467</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>dal-ġisem <l-m>x’użu</l-m> għandu?</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">105</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>ulied <l-m>l-art</l-m> miċħuda </strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">129</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>sa ma <l-m>s-skiet</l-m> imut</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">137</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Invokazzjonijiet</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">42</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Invokazzjonijiet</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">33</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Invokazzjonijiet</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">51</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Nifs: Kaos u Poeżija</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">2662</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Is-Sovranità <l-m>tal-Ikel</l-m></strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">1135</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Murmurazzjoni</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">1206</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Ara Birkirkara <l-m>x’ħa</l-m> jiġu jagħmlu <l-m>t-turisti</l-m></strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">1352</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Invokazzjonijiet</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">30</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Invokazzjonijiet</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">35</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Invokazzjonijiet</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">35</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Travi taċ-Ċedru Saqaf taċ-Ċipress</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">222</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Nerġa’ Nżurha u Noħdilha Ritratt Ieħor</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">5779</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Murmurazzjoni</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">1039</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Niket <l-m>fil-Franka</l-m></strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">314</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Siġra <l-m>bil-Frott</l-m></strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">51</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Invokazzjonijiet</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">40</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Invokazzjonijiet</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">62</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Invokazzjonijiet</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">35</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Opportunità Mitlufa</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">944</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Distanzi Twal</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">3722</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Nifs: Kaos u Poeżija</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">2978</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Invokazzjonijiet</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">29</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Invokazzjonijiet</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">17</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Invokazzjonijiet</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">12</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Sal-Għasfur Isib Fejn Jgħammar</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">2089</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Jisimni Gianna</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">9061</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Invokazzjonijiet</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">27</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Invokazzjonijiet</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">35</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Invokazzjonijiet</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">19</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Leħen Ganado</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">5117</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Illejla Ħierġa b’Xagħri Mxarrab</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">11631</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Invokazzjonijiet</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">26</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Invokazzjonijiet</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">104</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Invokazzjonijiet</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">43</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Nifs: Kaos u Poeżija</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">2502</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Invokazzjonijiet</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">46</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Invokazzjonijiet</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">19</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Invokazzjonijiet</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">29</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Invokazzjonijiet</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">17</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Għalhekk Qed Nivvjaġġa <l-m>bil-Mod</l-m></strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">3162</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Minn Ħarstek Twila sa Boffa</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">2756</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Invokazzjonijiet</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">46</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Invokazzjonijiet</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">33</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Invokazzjonijiet</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">91</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Fejn Ħallejtha <l-m>r-Rota</l-m> Meta Ħrabt?</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">285</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Fejn Ħallejtha <l-m>r-Rota</l-m> Meta Ħrabt?</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">307</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Fejn Ħallejtha <l-m>r-Rota</l-m> Meta Ħrabt?</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">309</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Fejn Ħallejtha <l-m>r-Rota</l-m> Meta Ħrabt?</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">349</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Fejn Ħallejtha <l-m>r-Rota</l-m> Meta Ħrabt?</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">161</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Fejn Ħallejtha <l-m>r-Rota</l-m> Meta Ħrabt?</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">324</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Fejn Ħallejtha <l-m>r-Rota</l-m> Meta Ħrabt?</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">325</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Shaft <l-m>taż-Żibel</l-m> (silta)</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">924</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>#Amerkapost Tqila</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">1752</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Fejn Ħallejtha <l-m>r-Rota</l-m> Meta Ħrabt?</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">457</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Il-Lingwa <l-m>tal-Ewropa</l-m> Hija <l-m>l-Ipokrizija</l-m> u <l-m>l-Flus</l-m></strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">1263</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Invokazzjonijiet</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">65</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Invokazzjonijiet</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">48</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Invokazzjonijiet</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">21</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Ħanina</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">168</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Es Sidr</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">15850</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Invokazzjonijiet</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">37</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Invokazzjonijiet</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">28</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Invokazzjonijiet</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">37</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Awwissu</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">82</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Nifs: Kaos u Poeżija</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">4624</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Invokazzjonijiet</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">28</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Invokazzjonijiet</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">55</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Invokazzjonijiet</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">38</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Is-Sovranità <l-m>tal-Ikel</l-m></strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">1925</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Es Sidr</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">14845</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Invokazzjonijiet</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">9</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Invokazzjonijiet</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">25</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Invokazzjonijiet</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">24</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Inkejja</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">4404</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Es Sidr</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">13157</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>persefoni tmur tixtri <l-m>l-ħwejjeġ</l-m> secondhand</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">157</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>L-Għoxx Mera <l-m>tar-Ruħ</l-m></strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">6792</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Invokazzjonijiet</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">36</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Invokazzjonijiet</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">49</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Immissjajtha Xi Naqra lil Malta, Manuela?</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">10181</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Frammenti</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">187</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Qarn</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">417</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Is-Sovranità <l-m>tal-Ikel</l-m></strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">970</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Ilkoll Parti <l-m>mill-Istaġun</l-m> li Jmiss</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">6262</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Nifs: Kaos u Poeżija</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">1939</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Kullana ta’ Għanjiet Dwar <l-m>il-Ħolm</l-m></strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">74</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Kullana ta’ Għanjiet Dwar <l-m>il-Ħolm</l-m></strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">62</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Kullana ta’ Għanjiet Dwar <l-m>il-Ħolm</l-m></strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">56</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Aċtu <l-m>fl-Istonku</l-m></strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">1095</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Għalhekk Qed Nivvjaġġa <l-m>bil-Mod</l-m></strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">3013</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Kullana ta’ Għanjiet Dwar <l-m>il-Ħolm</l-m></strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">53</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Kullana ta’ Għanjiet Dwar <l-m>il-Ħolm</l-m></strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">41</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Kullana ta’ Għanjiet Dwar <l-m>il-Ħolm</l-m></strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">28</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Kullana ta’ Għanjiet Dwar <l-m>il-Ħolm</l-m></strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">41</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Kullana ta’ Għanjiet Dwar <l-m>il-Ħolm</l-m></strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">35</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Kullana ta’ Għanjiet Dwar <l-m>il-Ħolm</l-m></strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">46</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>il-ġentrifikazzjoni <l-m>tas-skiet</l-m></strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">230</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>nonfoħ <l-m>fil-kustilji</l-m> allużjonijiet ġodda</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">711</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Nifs: Kaos u Poeżija</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">1730</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>L-Aħħar Ballu <l-m>tas-Sinjorini</l-m></strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">8724</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Nibgħatlek Waqt Raxx <l-m>id-Dlam</l-m> tas-Sajf <l-m>fl-Iżvezja</l-m></strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">288</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Dwar sens ta’ ħarifa</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">4098</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Es Sidr</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">12955</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Biex Tara Kif Jgħixu <l-m>l-Oħrajn</l-m></strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">2982</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Nifs: Kaos u Poeżija</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">1485</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Il-Magna <l-m>tal-Qari</l-m></strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">3471</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Nifs: Kaos u Poeżija</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">1592</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Es Sidr</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">12901</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Sottomissjoni</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">3226</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Il-Kastell</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">104</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Nifs: Kaos u Poeżija</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">1255</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Nifs: Kaos u Poeżija</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">697</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Politika bla Nifs</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">2157</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>lil poeta li qalli li qed jikteb bħal wieħed vera xiħ dan <l-m>l-aħħar </l-m></strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">66</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>ġenealoġija ta’ bankina</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">697</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Bur Mgħeż</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">8137</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>General Strike</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">5311</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Persjani</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">4353</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Splużjonijiet</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">7003</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Likantropi</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">1800</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Kollox Iperpolitiku</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">5490</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Il-Mara <l-m>tas-Suldat</l-m></strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">4791</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Bur Mgħeż</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">10509</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Is-Solitudni <l-m>tal-Fotografu</l-m></strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">222</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Manifest Kontra <l-m>ż-Żmien</l-m></strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">2106</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Joey Tilbes, <l-m>it-Tabù</l-m> Tinża’</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">5707</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Flaming Fag</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">309</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Insalata</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">2628</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Bur Mgħeż</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">7562</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Marċ Maqbuż</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">99</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Wirja</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">104</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>-Na -I -Hom</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">235</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Qamar Aħmar</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">2923</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Kontra Tagħna Għaliex Magħna</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">8980</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Bur Mgħeż</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">7124</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Żerriegħa</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">5850</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Bur Mgħeż</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">7004</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Bil-Moħbi <l-m>fil-Beraħ</l-m></strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">5108</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>mona lisa | karnival ieħor</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">403</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Lejl u Nhar</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">2176</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Il-Lanza, <l-m>il-Labra</l-m>, <l-m>il-Qoffa</l-m>, <l-m>l-Azzarin</l-m></strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">7894</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Medusa</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">1448</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Ġilda</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">5642</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Ġismi Battikata</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">2849</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Qarn (silta)</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">7177</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Reċti <l-m>tal-Kbar</l-m>, Parties <l-m>tat-Tfal</l-m></strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">2462</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Nofs triq, dejjem nieqaf</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">497</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>It-Tipjip</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">6475</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Il-Kuxjenza <l-m>fit-Truf</l-m></strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">1582</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Gilgamex, Dak li Ra <l-m>l-Qiegħ</l-m></strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">6168</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Ħsieb <l-m>il-Ħamiema</l-m></strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">6072</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Noti Editorjali #11</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">108</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Qarn (taħdita)</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">51</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Tnedija ta’ Travi taċ-Ċedru Saqaf taċ-Ċipress</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">764</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Noti Editorjali #10</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">243</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Noti Editorjali #9</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">83</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Noti Editorjali #8</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">338</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Es Sidr (taħdita u siltiet)</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">746</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Noti Editorjali #7</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">224</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Antoloġija 2</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">86</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Es Sidr</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">301</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Djarju</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">1504</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Noti Editorjali #6</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">245</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>ego, superego, id</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">199</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>il-politika <l-m>tal-kura</l-m></strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">732</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>ħarsa/lemħa</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">189</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>ħu ħsieb</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">589</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>tpaxxa</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">330</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Djarju</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">1157</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Ħbiberija, Ħrejjef, Komunità (taħdita)</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">132</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Djarju</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">1887</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Il-Komunità <l-m>tal-Kitba</l-m></strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">76</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Antoloġija 1</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">484</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Djarju</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">1465</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Djarju</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">1779</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Djarju</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">931</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Djarju</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">432</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Djarju</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">1260</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Djarju</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">2711</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Djarju</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">2070</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Djarju</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">1499</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Djarju</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">2537</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Djarju</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">1118</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Djarju</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">1205</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Djarju</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">2963</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Djarju</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">1276</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Djarju</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">3398</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>abjad</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">2066</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Djarju</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">3229</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Djarju</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">2150</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>alterità</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">1199</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Noti Editorjali #5</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">1</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Djarju</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">881</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Djarju</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">992</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Djarju</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">1933</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Djarju</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">2268</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Djarju</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">853</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Il-Kliem <l-m>fit-Teorija</l-m></strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">189</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Djarju</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">3078</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Djarju</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">2272</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Djarju</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">2851</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Djarju</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">1668</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Noti Editorjali #4</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">228</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>xewqa/xenqa</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">1165</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>queer/kwir</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">1118</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Djarju</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">1987</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Djarju</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">2219</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Djarju</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">1853</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Djarju</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">2052</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Djarju</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">2806</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Noti Editorjali #3</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">34</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Noti Editorjali #2</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">122</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Kif Tgħidha f’Qalbek</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">131</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Djarju</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">2484</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Djarju</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">2044</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Noti Editorjali #1</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">35</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Djarju</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">1375</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Djarju</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">3057</span>
+          </li>
+        </li>
+      
+          <li>
+            <strong>Djarju</strong>
+            <span style="color:#999;font-family:monospace;font-size:14px">3719</span>
+          </li>
+        </li>
+      
+    </ul>
+    <p>
+      "Antoloġija 3", "Joe Gatt, Loranne Vella", "45", "2026-11-07T16:00:00.000Z"<br>
+        "Nifs: Kaos u Poeżija", "Franco &quot;Bifo&quot; Berardi", "363", "2026-11-06T06:00:00.000Z"<br>
+        "Marta Marta", "Loranne Vella", "604", "2026-11-01T16:00:00.000Z"<br>
+        "Bur Mgħeż", "Omar N’Shea", "432", "2026-06-26T17:00:00.000Z"<br>
+        "Ħbula tal-Ħelsien", "Luke Galea", "125", "2026-06-16T13:00:00.000Z"<br>
+        "Il-Ġenna Ma Tridx Irġiel Bħal Tagħkom", "Romeo Roxman Gatt", "672", "2026-06-15T05:00:00.000Z"<br>
+        "Invokazzjonijiet", "Beverly Agius", "60", "2026-06-07T05:03:00.000Z"<br>
+        "Invokazzjonijiet", "Beverly Agius", "21", "2026-06-07T05:02:00.000Z"<br>
+        "Invokazzjonijiet", "Beverly Agius", "21", "2026-06-07T05:00:00.000Z"<br>
+        "Pollakki ta’ Chełmno", "Glorianne Micallef", "2477", "2026-06-01T05:00:00.000Z"<br>
+        "dal-ġisem x’użu għandu?", "Ayrton Farrugia", "101", "2026-05-25T05:00:00.000Z"<br>
+        "ulied l-art miċħuda ", "Ayrton Farrugia", "127", "2026-05-25T05:00:00.000Z"<br>
+        "sa ma s-skiet imut", "Ayrton Farrugia", "137", "2026-05-25T05:00:00.000Z"<br>
+        "Invokazzjonijiet", "Beverly Agius", "41", "2026-05-11T05:02:00.000Z"<br>
+        "Invokazzjonijiet", "Beverly Agius", "33", "2026-05-11T05:01:00.000Z"<br>
+        "Invokazzjonijiet", "Beverly Agius", "52", "2026-05-11T05:00:00.000Z"<br>
+        "Nifs: Kaos u Poeżija", "Franco &quot;Bifo&quot; Berardi", "2659", "2026-05-04T05:00:00.000Z"<br>
+        "Is-Sovranità tal-Ikel", "Nicole Borg", "1141", "2026-04-30T19:00:00.000Z"<br>
+        "Murmurazzjoni", "Luke Joseph Buhagiar", "1210", "2026-04-30T19:00:00.000Z"<br>
+        "Ara Birkirkara x’ħa jiġu jagħmlu t-turisti", "Michaela Pia Camilleri", "1350", "2026-04-20T05:00:00.000Z"<br>
+        "Invokazzjonijiet", "Beverly Agius", "27", "2026-04-13T05:02:00.000Z"<br>
+        "Invokazzjonijiet", "Beverly Agius", "31", "2026-04-13T05:01:00.000Z"<br>
+        "Invokazzjonijiet", "Beverly Agius", "32", "2026-04-13T05:00:00.000Z"<br>
+        "Travi taċ-Ċedru Saqaf taċ-Ċipress", "Loranne Vella", "223", "2026-04-10T15:00:00.000Z"<br>
+        "Nerġa’ Nżurha u Noħdilha Ritratt Ieħor", "Manuela Zammit", "5838", "2026-04-06T05:00:00.000Z"<br>
+        "Murmurazzjoni", "Luke Joseph Buhagiar", "1042", "2026-03-30T05:00:00.000Z"<br>
+        "Niket fil-Franka", "Luke Galea", "296", "2026-03-22T06:00:00.000Z"<br>
+        "Siġra bil-Frott", "Nathan Anthony Pace", "50", "2026-03-22T06:00:00.000Z"<br>
+        "Invokazzjonijiet", "Beverly Agius", "40", "2026-03-13T07:02:00.000Z"<br>
+        "Invokazzjonijiet", "Beverly Agius", "64", "2026-03-13T07:01:00.000Z"<br>
+        "Invokazzjonijiet", "Beverly Agius", "36", "2026-03-13T07:00:00.000Z"<br>
+        "Opportunità Mitlufa", "André Vella", "948", "2026-03-13T07:00:00.000Z"<br>
+        "Distanzi Twal", "Jean Paul Borg", "3745", "2026-03-02T06:00:00.000Z"<br>
+        "Nifs: Kaos u Poeżija", "Franco &quot;Bifo&quot; Berardi", "2991", "2026-02-25T10:00:00.000Z"<br>
+        "Invokazzjonijiet", "Beverly Agius", "28", "2026-02-14T22:00:00.000Z"<br>
+        "Invokazzjonijiet", "Beverly Agius", "19", "2026-02-14T22:00:00.000Z"<br>
+        "Invokazzjonijiet", "Beverly Agius", "12", "2026-02-14T22:00:00.000Z"<br>
+        "Sal-Għasfur Isib Fejn Jgħammar", "Nathan Anthony Pace", "2104", "2026-02-07T06:00:00.000Z"<br>
+        "Jisimni Gianna", "Loranne Vella", "9108", "2026-02-02T06:00:00.000Z"<br>
+        "Invokazzjonijiet", "Beverly Agius", "27", "2026-01-18T18:00:00.000Z"<br>
+        "Invokazzjonijiet", "Beverly Agius", "35", "2026-01-18T18:00:00.000Z"<br>
+        "Invokazzjonijiet", "Beverly Agius", "18", "2026-01-18T18:00:00.000Z"<br>
+        "Leħen Ganado", "Joe Gatt", "5148", "2026-01-05T06:00:00.000Z"<br>
+        "Illejla Ħierġa b’Xagħri Mxarrab", "Omar N’Shea", "11673", "2025-12-22T06:00:00.000Z"<br>
+        "Invokazzjonijiet", "Beverly Agius", "24", "2025-12-07T14:00:00.000Z"<br>
+        "Invokazzjonijiet", "Beverly Agius", "95", "2025-12-07T14:00:00.000Z"<br>
+        "Invokazzjonijiet", "Beverly Agius", "43", "2025-12-07T14:00:00.000Z"<br>
+        "Nifs: Kaos u Poeżija", "Franco &quot;Bifo&quot; Berardi", "2513", "2025-12-01T06:00:00.000Z"<br>
+        "Invokazzjonijiet", "Beverly Agius", "46", "2025-11-23T10:00:00.000Z"<br>
+        "Invokazzjonijiet", "Beverly Agius", "19", "2025-11-23T10:00:00.000Z"<br>
+        "Invokazzjonijiet", "Beverly Agius", "29", "2025-11-23T10:00:00.000Z"<br>
+        "Invokazzjonijiet", "Beverly Agius", "17", "2025-11-23T10:00:00.000Z"<br>
+        "Għalhekk Qed Nivvjaġġa bil-Mod", "Kristina Borg", "3204", "2025-11-17T06:00:00.000Z"<br>
+        "Minn Ħarstek Twila sa Boffa", "Claudia Gauci", "2768", "2025-11-03T06:00:00.000Z"<br>
+        "Invokazzjonijiet", "Beverly Agius", "48", "2025-10-26T18:00:00.000Z"<br>
+        "Invokazzjonijiet", "Beverly Agius", "33", "2025-10-26T18:00:00.000Z"<br>
+        "Invokazzjonijiet", "Beverly Agius", "96", "2025-10-26T18:00:00.000Z"<br>
+        "Fejn Ħallejtha r-Rota Meta Ħrabt?", "Karl Schembri", "279", "2025-10-06T05:07:00.000Z"<br>
+        "Fejn Ħallejtha r-Rota Meta Ħrabt?", "Karl Schembri", "296", "2025-10-06T05:06:00.000Z"<br>
+        "Fejn Ħallejtha r-Rota Meta Ħrabt?", "Karl Schembri", "306", "2025-10-06T05:05:00.000Z"<br>
+        "Fejn Ħallejtha r-Rota Meta Ħrabt?", "Karl Schembri", "343", "2025-10-06T05:04:00.000Z"<br>
+        "Fejn Ħallejtha r-Rota Meta Ħrabt?", "Karl Schembri", "160", "2025-10-06T05:03:00.000Z"<br>
+        "Fejn Ħallejtha r-Rota Meta Ħrabt?", "Karl Schembri", "320", "2025-10-06T05:02:00.000Z"<br>
+        "Fejn Ħallejtha r-Rota Meta Ħrabt?", "Karl Schembri", "326", "2025-10-06T05:01:00.000Z"<br>
+        "Shaft taż-Żibel (silta)", "Iva Pezuashvili", "941", "2025-10-06T05:00:00.000Z"<br>
+        "#Amerkapost Tqila", "Lusine Kharatyan", "1748", "2025-10-06T05:00:00.000Z"<br>
+        "Fejn Ħallejtha r-Rota Meta Ħrabt?", "Karl Schembri", "461", "2025-10-06T05:00:00.000Z"<br>
+        "Il-Lingwa tal-Ewropa Hija l-Ipokrizija u l-Flus", "Ilija Đurović", "1274", "2025-10-06T05:00:00.000Z"<br>
+        "Invokazzjonijiet", "Beverly Agius", "65", "2025-09-15T17:00:00.000Z"<br>
+        "Invokazzjonijiet", "Beverly Agius", "48", "2025-09-15T17:00:00.000Z"<br>
+        "Invokazzjonijiet", "Beverly Agius", "21", "2025-09-15T17:00:00.000Z"<br>
+        "Ħanina", "Jasmine Bajada", "163", "2025-09-08T05:00:00.000Z"<br>
+        "Es Sidr", "Omar N’Shea", "15939", "2025-09-01T05:00:00.000Z"<br>
+        "Invokazzjonijiet", "Beverly Agius", "38", "2025-08-25T13:02:00.000Z"<br>
+        "Invokazzjonijiet", "Beverly Agius", "28", "2025-08-25T13:01:00.000Z"<br>
+        "Invokazzjonijiet", "Beverly Agius", "35", "2025-08-25T13:00:00.000Z"<br>
+        "Awwissu", "Luke Galea", "79", "2025-08-15T05:00:00.000Z"<br>
+        "Nifs: Kaos u Poeżija", "Franco &quot;Bifo&quot; Berardi", "4658", "2025-08-04T05:00:00.000Z"<br>
+        "Invokazzjonijiet", "Beverly Agius", "25", "2025-07-25T05:00:00.000Z"<br>
+        "Invokazzjonijiet", "Beverly Agius", "50", "2025-07-25T05:00:00.000Z"<br>
+        "Invokazzjonijiet", "Beverly Agius", "35", "2025-07-25T05:00:00.000Z"<br>
+        "Is-Sovranità tal-Ikel", "Nicole Borg", "1938", "2025-07-07T05:00:00.000Z"<br>
+        "Es Sidr", "Omar N’Shea", "14903", "2025-06-30T05:00:00.000Z"<br>
+        "Invokazzjonijiet", "Beverly Agius", "9", "2025-06-16T05:04:00.000Z"<br>
+        "Invokazzjonijiet", "Beverly Agius", "22", "2025-06-16T05:03:00.000Z"<br>
+        "Invokazzjonijiet", "Beverly Agius", "22", "2025-06-16T05:00:00.000Z"<br>
+        "Inkejja", "Ryan Falzon", "4437", "2025-06-02T05:00:00.000Z"<br>
+        "Es Sidr", "Omar N’Shea", "13164", "2025-05-19T05:00:00.000Z"<br>
+        "persefoni tmur tixtri l-ħwejjeġ secondhand", "Nathan Anthony Pace", "155", "2025-05-15T05:00:00.000Z"<br>
+        "L-Għoxx Mera tar-Ruħ", "Glorianne Micallef", "6853", "2025-05-05T05:00:00.000Z"<br>
+        "Invokazzjonijiet", "Beverly Agius", "37", "2025-04-28T05:01:00.000Z"<br>
+        "Invokazzjonijiet", "Beverly Agius", "48", "2025-04-28T05:00:00.000Z"<br>
+        "Immissjajtha Xi Naqra lil Malta, Manuela?", "Manuela Zammit", "10258", "2025-04-16T05:00:00.000Z"<br>
+        "Frammenti", "Leslie Vassallo", "153", "2025-04-13T05:00:00.000Z"<br>
+        "Qarn", "Romeo Roxman Gatt", "417", "2025-03-22T18:30:00.000Z"<br>
+        "Is-Sovranità tal-Ikel", "Nicole Borg", "983", "2025-03-22T06:00:00.000Z"<br>
+        "Ilkoll Parti mill-Istaġun li Jmiss", "Davinia Hamilton", "6361", "2025-03-13T11:00:00.000Z"<br>
+        "Nifs: Kaos u Poeżija", "Franco &quot;Bifo&quot; Berardi", "1951", "2025-02-24T06:00:00.000Z"<br>
+        "Kullana ta’ Għanjiet Dwar il-Ħolm", "Kris Polidano", "74", "2025-02-14T21:00:00.000Z"<br>
+        "Kullana ta’ Għanjiet Dwar il-Ħolm", "Kris Polidano", "64", "2025-02-14T21:00:00.000Z"<br>
+        "Kullana ta’ Għanjiet Dwar il-Ħolm", "Kris Polidano", "57", "2025-02-07T21:00:00.000Z"<br>
+        "Aċtu fl-Istonku", "Loranne Vella", "1103", "2025-02-06T06:00:00.000Z"<br>
+        "Għalhekk Qed Nivvjaġġa bil-Mod", "Kristina Borg", "3042", "2025-02-03T06:00:00.000Z"<br>
+        "Kullana ta’ Għanjiet Dwar il-Ħolm", "Kris Polidano", "51", "2025-01-31T21:01:00.000Z"<br>
+        "Kullana ta’ Għanjiet Dwar il-Ħolm", "Kris Polidano", "41", "2025-01-24T21:01:00.000Z"<br>
+        "Kullana ta’ Għanjiet Dwar il-Ħolm", "Kris Polidano", "28", "2025-01-24T21:00:00.000Z"<br>
+        "Kullana ta’ Għanjiet Dwar il-Ħolm", "Kris Polidano", "41", "2025-01-17T21:00:00.000Z"<br>
+        "Kullana ta’ Għanjiet Dwar il-Ħolm", "Kris Polidano", "35", "2025-01-10T21:01:00.000Z"<br>
+        "Kullana ta’ Għanjiet Dwar il-Ħolm", "Kris Polidano", "47", "2025-01-10T21:00:00.000Z"<br>
+        "il-ġentrifikazzjoni tas-skiet", "Nathan Anthony Pace", "229", "2024-12-26T06:01:00.000Z"<br>
+        "nonfoħ fil-kustilji allużjonijiet ġodda", "Nathan Anthony Pace", "720", "2024-12-26T06:00:00.000Z"<br>
+        "Nifs: Kaos u Poeżija", "Franco &quot;Bifo&quot; Berardi", "1735", "2024-12-13T06:00:00.000Z"<br>
+        "L-Aħħar Ballu tas-Sinjorini", "Omar N’Shea", "8783", "2024-12-02T06:00:00.000Z"<br>
+        "Nibgħatlek Waqt Raxx id-Dlam tas-Sajf fl-Iżvezja", "Maria Theuma", "290", "2024-11-04T06:00:00.000Z"<br>
+        "Dwar sens ta’ ħarifa", "Kurt Borg", "4119", "2024-10-21T05:00:00.000Z"<br>
+        "Es Sidr", "Omar N’Shea", "13008", "2024-10-16T05:00:00.000Z"<br>
+        "Biex Tara Kif Jgħixu l-Oħrajn", "Ryan Falzon", "3002", "2024-10-07T05:00:00.000Z"<br>
+        "Nifs: Kaos u Poeżija", "Franco &quot;Bifo&quot; Berardi", "1500", "2024-09-16T05:00:00.000Z"<br>
+        "Il-Magna tal-Qari", "Joe Gatt", "3507", "2024-09-02T05:00:00.000Z"<br>
+        "Nifs: Kaos u Poeżija", "Franco &quot;Bifo&quot; Berardi", "1604", "2024-08-18T05:00:00.000Z"<br>
+        "Es Sidr", "Omar N’Shea", "12939", "2024-08-05T05:00:00.000Z"<br>
+        "Sottomissjoni", "Glorianne Micallef", "3260", "2024-07-01T05:00:00.000Z"<br>
+        "Il-Kastell", "Leslie Vassallo", "105", "2024-06-06T05:00:00.000Z"<br>
+        "Nifs: Kaos u Poeżija", "Franco &quot;Bifo&quot; Berardi", "1251", "2024-06-03T05:00:00.000Z"<br>
+        "Nifs: Kaos u Poeżija", "Franco &quot;Bifo&quot; Berardi", "700", "2024-06-03T05:00:00.000Z"<br>
+        "Politika bla Nifs", "Karl Baldacchino", "2181", "2024-05-20T05:00:00.000Z"<br>
+        "lil poeta li qalli li qed jikteb bħal wieħed vera xiħ dan l-aħħar ", "Jasmine Bajada", "67", "2024-05-12T22:00:00.000Z"<br>
+        "ġenealoġija ta’ bankina", "fatima a.m.", "703", "2024-05-07T22:00:00.000Z"<br>
+        "Bur Mgħeż", "Omar N’Shea", "8192", "2024-05-06T05:00:00.000Z"<br>
+        "General Strike", "Joe Gatt", "5328", "2024-04-28T05:00:00.000Z"<br>
+        "Persjani", "Aaron Aquilina", "4430", "2024-04-08T05:00:00.000Z"<br>
+        "Splużjonijiet", "Jimmy Grima", "7215", "2024-04-01T05:00:00.000Z"<br>
+        "Likantropi", "Davinia Hamilton", "1816", "2024-03-04T06:00:00.000Z"<br>
+        "Kollox Iperpolitiku", "Anton Jäger", "5557", "2024-02-29T06:00:00.000Z"<br>
+        "Il-Mara tas-Suldat", "Jien_a", "4805", "2024-02-05T06:00:00.000Z"<br>
+        "Bur Mgħeż", "Omar N’Shea", "10568", "2024-01-31T06:00:00.000Z"<br>
+        "Is-Solitudni tal-Fotografu", "Antoine Cassar", "225", "2024-01-22T06:00:00.000Z"<br>
+        "Manifest Kontra ż-Żmien", "Kris Polidano", "2125", "2024-01-01T06:00:00.000Z"<br>
+        "Joey Tilbes, it-Tabù Tinża&#39;", "Omar N’Shea", "5730", "2023-12-21T06:00:00.000Z"<br>
+        "Flaming Fag", "Matteo Pullicino", "253", "2023-12-13T06:00:00.000Z"<br>
+        "Insalata", "Noah Fabri", "2655", "2023-12-03T23:00:00.000Z"<br>
+        "Bur Mgħeż", "Omar N’Shea", "7590", "2023-11-30T05:00:00.000Z"<br>
+        "Marċ Maqbuż", "Leslie Vassallo", "122", "2023-11-23T06:00:00.000Z"<br>
+        "Wirja", "Leslie Vassallo", "110", "2023-11-23T06:00:00.000Z"<br>
+        "-Na -I -Hom", "Kris Polidano", "237", "2023-11-20T06:00:00.000Z"<br>
+        "Qamar Aħmar", "Simon Bartolo", "2944", "2023-11-06T06:00:00.000Z"<br>
+        "Kontra Tagħna Għaliex Magħna", "Joe Gatt", "9067", "2023-10-19T05:00:00.000Z"<br>
+        "Bur Mgħeż", "Omar N’Shea", "7137", "2023-10-17T05:00:00.000Z"<br>
+        "Żerriegħa", "Davinia Hamilton", "5952", "2023-10-02T05:00:00.000Z"<br>
+        "Bur Mgħeż", "Omar N’Shea", "7051", "2023-09-04T05:00:00.000Z"<br>
+        "Bil-Moħbi fil-Beraħ", "Omar N’Shea", "5197", "2023-08-21T05:00:00.000Z"<br>
+        "mona lisa | karnival ieħor", "Matthew Schembri", "404", "2023-08-17T05:00:00.000Z"<br>
+        "Lejl u Nhar", "Miriam Galea", "2188", "2023-08-07T05:00:00.000Z"<br>
+        "Il-Lanza, il-Labra, il-Qoffa, l-Azzarin", "Loranne Vella", "8015", "2023-07-12T05:00:00.000Z"<br>
+        "Medusa", "Rowena Grech", "1466", "2023-07-03T05:00:00.000Z"<br>
+        "Ġilda", "Kurt Borg", "5667", "2023-06-14T05:00:00.000Z"<br>
+        "Ġismi Battikata", "Charlene Galea", "2891", "2023-06-05T05:00:00.000Z"<br>
+        "Qarn (silta)", "Romeo Roxman Gatt", "7238", "2023-05-01T05:00:00.000Z"<br>
+        "Reċti tal-Kbar, Parties tat-Tfal", "Ryan Falzon", "2484", "2023-05-01T05:00:00.000Z"<br>
+        "Nofs triq, dejjem nieqaf", "Maria Theuma", "503", "2023-05-01T05:00:00.000Z"<br>
+        "It-Tipjip", "Italo Svevo", "6534", "2023-05-01T05:00:00.000Z"<br>
+        "Il-Kuxjenza fit-Truf", "Joe Gatt", "1595", "2023-05-01T05:00:00.000Z"<br>
+        "Gilgamex, Dak li Ra l-Qiegħ", "Omar N’Shea", "6231", "2023-05-01T05:00:00.000Z"<br>
+        "Ħsieb il-Ħamiema", "Noah Fabri", "6123", "2023-05-01T05:00:00.000Z"<br>
+        "Noti Editorjali #11", "Jimmy Grima", "111", "2026-07-07T05:00:00.000Z"<br>
+        "Qarn (taħdita)", "Romeo Roxman Gatt, Kurt Borg, Omar N’Shea, Joe Gatt", "51", "2026-05-25T05:00:00.000Z"<br>
+        "Tnedija ta’ Travi taċ-Ċedru Saqaf taċ-Ċipress", "Loranne Vella, Beverly Agius", "768", "2026-04-16T12:00:00.000Z"<br>
+        "Noti Editorjali #10", "Nathan Anthony Pace", "245", "2026-01-28T16:00:00.000Z"<br>
+        "Noti Editorjali #9", "Miriam Galea", "83", "2026-01-22T10:00:00.000Z"<br>
+        "Noti Editorjali #8", "Nicole Borg", "339", "2026-01-13T10:00:00.000Z"<br>
+        "Es Sidr (taħdita u siltiet)", "Omar N’Shea", "748", "2025-12-14T12:00:00.000Z"<br>
+        "Noti Editorjali #7", "Kristina Borg", "225", "2025-12-04T22:00:00.000Z"<br>
+        "Antoloġija 2", "Warren Bartolo, Kurt Borg, Noah Fabri, Ryan Falzon, Joe Gatt, Davinia Hamilton, Omar N’Shea, Kris Polidano, Loranne Vella, Manuela Zammit", "82", "2025-11-08T18:01:00.000Z"<br>
+        "Es Sidr", "Omar N’Shea", "302", "2025-11-04T18:00:00.000Z"<br>
+        "Djarju", "Loranne Vella", "1501", "2025-09-18T05:00:00.000Z"<br>
+        "Noti Editorjali #6", "Ryan Falzon", "247", "2025-04-21T17:00:00.000Z"<br>
+        "ego, superego, id", "Joe Gatt", "197", "2025-04-06T05:00:00.000Z"<br>
+        "il-politika tal-kura", "Raylene Abdilla, Noah Fabri, Davinia Hamilton, Kurt Borg, Loranne Vella, Kristina Borg, Omar N’Shea", "729", "2025-04-06T05:00:00.000Z"<br>
+        "ħarsa/lemħa", "Kurt Borg, Omar N’Shea, Davinia Hamilton", "188", "2025-04-06T05:00:00.000Z"<br>
+        "ħu ħsieb", "Noah Fabri, Kurt Borg, Omar N’Shea, Raylene Abdilla", "587", "2025-04-06T05:00:00.000Z"<br>
+        "tpaxxa", "Davinia Hamilton, Kurt Borg, Omar N’Shea", "332", "2025-04-06T05:00:00.000Z"<br>
+        "Djarju", "Warren Bartolo", "1090", "2025-02-26T18:00:00.000Z"<br>
+        "Ħbiberija, Ħrejjef, Komunità (taħdita)", "Raylene Abdilla, Kurt Borg, Noah Fabri, Omar N’Shea", "129", "2025-01-29T06:45:00.000Z"<br>
+        "Djarju", "Loranne Vella", "1906", "2025-01-20T06:00:00.000Z"<br>
+        "Il-Komunità tal-Kitba", "Raylene Abdilla, Jasmine Bajada, Miriam Galea, Davinia Hamilton, Maria Theuma", "75", "2024-11-26T18:00:00.000Z"<br>
+        "Antoloġija 1", "Romeo Roxman Gatt, Aaron Aquilina, Karl Baldacchino, Simon Bartolo, Warren Bartolo, Kurt Borg, Antoine Cassar, Daniel Cossai, Leanne Ellul, Noah Fabri", "482", "2024-10-31T18:00:00.000Z"<br>
+        "Djarju", "Davinia Hamilton", "1459", "2025-07-21T05:00:00.000Z"<br>
+        "Djarju", "Warren Bartolo", "1758", "2024-12-16T06:00:00.000Z"<br>
+        "Djarju", "fatima a.m.", "934", "2025-01-13T06:00:00.000Z"<br>
+        "Djarju", "Warren Bartolo", "436", "2024-10-30T06:00:00.000Z"<br>
+        "Djarju", "Kurt Borg", "1263", "2025-06-23T05:00:00.000Z"<br>
+        "Djarju", "Kurt Borg", "2715", "2025-05-27T05:00:00.000Z"<br>
+        "Djarju", "Kurt Borg", "2087", "2025-04-23T17:00:00.000Z"<br>
+        "Djarju", "fatima a.m.", "1515", "2024-10-31T06:00:00.000Z"<br>
+        "Djarju", "Kurt Borg", "2562", "2025-02-13T18:00:00.000Z"<br>
+        "Djarju", "Warren Bartolo", "1128", "2024-09-24T05:00:00.000Z"<br>
+        "Djarju", "Davinia Hamilton", "1213", "2024-11-19T06:00:00.000Z"<br>
+        "Djarju", "Warren Bartolo", "2976", "2024-08-26T05:00:00.000Z"<br>
+        "Djarju", "fatima a.m.", "1296", "2024-08-12T05:00:00.000Z"<br>
+        "Djarju", "Loranne Vella", "3434", "2024-09-09T05:00:00.000Z"<br>
+        "abjad", "Omar N’Shea, Raylene Abdilla, Joe Gatt, Karl Baldacchino, fatima a.m.", "2079", "2024-06-11T05:00:00.000Z"<br>
+        "Djarju", "Warren Bartolo", "3248", "2024-07-22T05:00:00.000Z"<br>
+        "Djarju", "Davinia Hamilton", "2166", "2024-10-11T05:00:00.000Z"<br>
+        "alterità", "Omar N’Shea, Davinia Hamilton, Kurt Borg, Aaron Aquilina, Loranne Vella", "1200", "2024-05-27T05:00:00.000Z"<br>
+        "Noti Editorjali #5", "Noah Fabri", "1", "2024-05-11T17:00:00.000Z"<br>
+        "Djarju", "fatima a.m.", "889", "2024-07-08T05:00:00.000Z"<br>
+        "Djarju", "Warren Bartolo", "996", "2024-06-23T05:00:00.000Z"<br>
+        "Djarju", "Davinia Hamilton", "1942", "2024-08-15T05:00:00.000Z"<br>
+        "Djarju", "Loranne Vella", "2283", "2024-05-15T17:00:00.000Z"<br>
+        "Djarju", "Warren Bartolo", "857", "2024-05-27T05:00:00.000Z"<br>
+        "Il-Kliem fit-Teorija", "Aaron Aquilina, Noah Fabri, Omar N’Shea", "188", "2024-03-27T09:00:00.000Z"<br>
+        "Djarju", "Davinia Hamilton", "3106", "2024-06-17T05:00:00.000Z"<br>
+        "Djarju", "Warren Bartolo", "2279", "2024-04-15T05:00:00.000Z"<br>
+        "Djarju", "Loranne Vella", "2881", "2024-07-14T22:00:00.000Z"<br>
+        "Djarju", "Joe Gatt", "1691", "2025-04-08T05:00:00.000Z"<br>
+        "Noti Editorjali #4", "Kurt Borg", "234", "2024-02-23T18:00:00.000Z"<br>
+        "xewqa/xenqa", "Davinia Hamilton, Raylene Abdilla, Kurt Borg", "1170", "2024-03-19T06:00:00.000Z"<br>
+        "queer/kwir", "Omar N’Shea, Warren Bartolo, Noah Fabri, Aaron Aquilina", "1130", "2024-03-19T06:00:00.000Z"<br>
+        "Djarju", "Loranne Vella", "2000", "2024-03-25T06:00:00.000Z"<br>
+        "Djarju", "Warren Bartolo", "2223", "2024-03-11T06:00:00.000Z"<br>
+        "Djarju", "Warren Bartolo", "1851", "2024-02-12T06:00:00.000Z"<br>
+        "Djarju", "Joe Gatt", "2055", "2025-01-06T06:00:00.000Z"<br>
+        "Djarju", "Loranne Vella", "2858", "2024-01-17T06:00:00.000Z"<br>
+        "Noti Editorjali #3", "Davinia Hamilton", "34", "2024-02-23T18:00:00.000Z"<br>
+        "Noti Editorjali #2", "Omar N’Shea", "122", "2024-02-23T06:00:00.000Z"<br>
+        "Kif Tgħidha f’Qalbek", "Kurt Borg, Davinia Hamilton, Omar N’Shea", "133", "2024-01-22T06:00:00.000Z"<br>
+        "Djarju", "Warren Bartolo", "2484", "2024-01-09T06:00:00.000Z"<br>
+        "Djarju", "Loranne Vella", "2057", "2023-10-08T22:00:00.000Z"<br>
+        "Noti Editorjali #1", "Warren Bartolo", "34", "2024-02-23T06:00:00.000Z"<br>
+        "Djarju", "Loranne Vella", "1405", "2023-09-18T05:00:00.000Z"<br>
+        "Djarju", "Ira Melkonyan ma’ Noah Fabri", "3041", "2026-01-30T10:00:00.000Z"<br>
+        "Djarju", "Ira Melkonyan ma’ Noah Fabri", "3732", "2025-03-03T06:00:00.000Z"<br>
+        
+      </p>
+    </textarea>
+  </section>
+</main>
+	</body>
+</html>
