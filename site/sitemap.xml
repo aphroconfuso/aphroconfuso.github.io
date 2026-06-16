@@ -16,13 +16,6 @@
 	</url>
 	
 	<url>
-		<loc>https://aphroconfuso.mt/aċċessibbiltà/</loc>
-		<lastmod>2026-06-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-	</url>
-	
-	<url>
 		<loc>https://aphroconfuso.mt/werrej/</loc>
 		<lastmod>2026-06-16</lastmod>
     <changefreq>monthly</changefreq>
@@ -275,21 +268,7 @@
 	</url>
 	
 	<url>
-		<loc>https://aphroconfuso.mt/admin/kliem-mhux-suppost/</loc>
-		<lastmod>2026-06-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-	</url>
-	
-	<url>
 		<loc>https://aphroconfuso.mt/admin/kalendarju/</loc>
-		<lastmod>2026-06-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-	</url>
-	
-	<url>
-		<loc>https://aphroconfuso.mt/newsletter/</loc>
 		<lastmod>2026-06-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -2558,6 +2537,34 @@
 	
 	<url>
 		<loc>https://aphroconfuso.mt/gwida-tal-istil/</loc>
+		<lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/accessibility/</loc>
+		<lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/admin/newsletters-html-illum-ilkoll-pollakki/</loc>
+		<lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/admin/varjanti/</loc>
+		<lastmod>2026-06-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+	</url>
+	
+	<url>
+		<loc>https://aphroconfuso.mt/newsletter/</loc>
 		<lastmod>2026-06-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
