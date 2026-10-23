@@ -15,23 +15,23 @@ const fixReportingTitle = (storyType, sequenceEpisodeNumber, author, pageTitle) 
 
 const getScrollPosition = () => window.scrollY || document.documentElement.scrollTop;
 
-const getSelectionText = () => {
-  let text = "";
-	if (!!alreadyMarked) return;
-	alreadyMarked = true;
-	var selection = window.getSelection().getRangeAt(0);
-	var selectedText = selection.extractContents();
-	if (selectedText === "") return;
-	var span = document.createElement("mark");
-	span.appendChild(selectedText);
-	if (location.hostname !== 'abbozzi.aphroconfuso.mt') {
-		span.classList.add(window.location.host.split('.')[0]);
-		var credit = document.createElement("div");
-		credit.innerHTML = `<span>“${ pageTitle }”<br><span class="author">${ author }${ !!translator ? "<br>(tr " + translator + ")" : "" }</span></span>`
-		span.appendChild(credit);
-	}
-	selection.insertNode(span);
-}
+// const getSelectionText = () => {
+//   let text = "";
+// 	if (!!alreadyMarked) return;
+// 	alreadyMarked = true;
+// 	var selection = window.getSelection().getRangeAt(0);
+// 	var selectedText = selection.extractContents();
+// 	if (selectedText === "") return;
+// 	var span = document.createElement("mark");
+// 	span.appendChild(selectedText);
+// 	if (location.hostname !== 'abbozzi.aphroconfuso.mt') {
+// 		span.classList.add(window.location.host.split('.')[0]);
+// 		var credit = document.createElement("div");
+// 		credit.innerHTML = `<span>“${ pageTitle }”<br><span class="author">${ author }${ !!translator ? "<br>(tr " + translator + ")" : "" }</span></span>`
+// 		span.appendChild(credit);
+// 	}
+// 	selection.insertNode(span);
+// }
 
 const newsletterContainer = document.getElementById('newsletter-container-bottom');
 let newsletterPopupShow = true;
@@ -712,11 +712,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 	initialiseMessage();
 
 	// location.hostname !== 'localhost' &&
-	if (location.hostname !== 'aphroconfuso.mt' && !!storyId) {
-		document.addEventListener('selectionchange', function (event) {
-			setTimeout(getSelectionText, 10000);
-		});
-	}
+	// if (location.hostname !== 'aphroconfuso.mt' && !!storyId) {
+	// 	document.addEventListener('selectionchange', function (event) {
+	// 		setTimeout(getSelectionText, 10000);
+	// 	});
+	// }
 
 	//Almanac
 	const monthsInMaltese = ['Jannar', 'Frar', 'Marzu', 'April', 'Mejju', 'Ġunju', 'Lulju', 'Awwissu', 'Settembru', 'Ottubru', 'Novembru', 'Diċembru'];
